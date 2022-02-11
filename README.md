@@ -5,6 +5,7 @@ Create a LinkML model with as-is imported slots, imported but modified slots (vi
 - python 3.9
 - poetry
 - schemasheets and cogs
+- a Google Sheets server account credientials file
 
 ## setup
 - install the poetry **application** if necessary
