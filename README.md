@@ -1,5 +1,7 @@
 # sheets_and_friends
-Create a LinkML model with as-is imported slots, imported but modified slots (via yq), or newly minted slots (via schemasheets)
+Create a LinkML model with newly minted slots (via [schemasheets](https://github.com/linkml/schemasheets)), as-is imported slots (with [SchemaView](https://linkml.io/linkml/developers/manipulating-schemas.html)), or imported but modified slots (via [Mike Farah's yq](https://github.com/mikefarah/yq))
+
+When combined with [cidgoh/DataHarmonizer's linkml-datastructure branch](https://github.com/cidgoh/DataHarmonizer/tree/linkml-datastructure), this will largely replace [microbiomedata/DataHarmonizer](https://github.com/microbiomedata/DataHarmonizer)
 
 ## dependencies
 - python 3.9
@@ -11,7 +13,7 @@ Create a LinkML model with as-is imported slots, imported but modified slots (vi
   - update the `credentials_file` in the [Makefile](Makefile) if necessary
 
 ## setup
-- install the poetry **application** if necessary
+- [install the poetry **application**](https://python-poetry.org/docs/#installation) if necessary
 - `poetry install` (for installing **dependencies**)
 
 ## running
