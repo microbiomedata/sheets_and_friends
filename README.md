@@ -7,6 +7,8 @@ When combined with [cidgoh/DataHarmonizer's linkml-datastructure branch](https:/
 
 This will also provide better support for single LinkML files representing multiple DH iterfaces on a class-by-class basis. For example soil-emls-jgi-metagenimics vs water-jgi-metatranscriptomics.
 
+[Available on PyPI](https://pypi.org/project/sheets-and-friends/)
+
 ## dependencies
 - python 3.9
 - poetry
