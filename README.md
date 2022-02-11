@@ -20,6 +20,14 @@ This will also provide better support for single LinkML files representing multi
 - [install the poetry **application**](https://python-poetry.org/docs/#installation) if necessary
 - `poetry install` (for installing **dependencies**)
 
+This repo uses [turbomam/mixs-source](https://github.com/turbomam/mixs-source) and [microbiomedata/nmdc-schema](https://github.com/microbiomedata/nmdc-schema) as [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+one-time, post-cloning submodule steps:
+- `git submodule init`
+- `git submodule update`
+
+_TODO: how to keep these up to date?_
+
 ## running
 - `make all`
   - you should get a [`artifacts/soil_emls_jgi_mg_new.yaml`](artifacts/soil_emls_jgi_mg_new.yaml). In phase one, it just contains the EMSL and JGI terms.
