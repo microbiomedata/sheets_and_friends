@@ -5,6 +5,8 @@ The schemsheets content comes from [nmdc-dh-sheets](docs.google.com/spreadsheets
 
 When combined with [cidgoh/DataHarmonizer's linkml-datastructure branch](https://github.com/cidgoh/DataHarmonizer/tree/linkml-datastructure), this will largely replace [microbiomedata/DataHarmonizer](https://github.com/microbiomedata/DataHarmonizer)
 
+This will also provide better support find single LinkML files representing differnt DH iterfaces on a class-by-class basis. For example soil-emls-jgi-metagenimics vs water-jgi-metatranscriptomics 
+
 ## dependencies
 - python 3.9
 - poetry
