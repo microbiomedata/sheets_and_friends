@@ -1,175 +1,181 @@
-name: soil_emsl_jgi_mg
+name: mims_soil_biosample
 description: Schema for creating a Data Harmonizer interface about soil biosamples
-  based on MIxS, EMLS and the metagenomics standard from JGI
-id: https://example.com/soil_emsl_jgi_mg
+  based on the MIxS MIMS checklist
+see_also:
+- mixs.vocab:SoilMIMS
+id: https://example.com/mims_soil_biosample
 imports:
 - linkml:types
 prefixes:
-  soil_emsl_jgi_mg:
-    prefix_prefix: soil_emsl_jgi_mg
-    prefix_reference: https://example.com/soil_emsl_jgi_mg/
+  mims_soil_biosample:
+    prefix_prefix: mims_soil_biosample
+    prefix_reference: https://example.com/mims_soil_biosample/
   mixs.vocab:
     prefix_prefix: mixs.vocab
     prefix_reference: https://turbomam.github.io/mixs-source/
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
-default_prefix: soil_emsl_jgi_mg
+default_prefix: mims_soil_biosample
 default_range: string
 subsets:
   EMSL:
     name: EMSL
+    annotations:
+      dh_sect_ord: '3'
     description: EMSL biosample fields
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   JGI metagenomics:
     name: JGI metagenomics
+    annotations:
+      dh_sect_ord: '4'
     description: 'JGI fields: biosamples for metagenomics studies'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   JGI metatranscriptomics:
     name: JGI metatranscriptomics
+    annotations:
+      dh_sect_ord: '5'
     description: 'JGI fields: biosamples for metatranscriptomics studies'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
 slots:
   project_ID:
     name: project_ID
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   sample_type:
     name: sample_type
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   sample_shipped:
     name: sample_shipped
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   EMSL_store_temp:
     name: EMSL_store_temp
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   technical_reps:
     name: technical_reps
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   replicate_number:
     name: replicate_number
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_seq_project:
     name: dna_seq_project
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_seq_project_name:
     name: dna_seq_project_name
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_samp_ID:
     name: dna_samp_ID
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_sample_name:
     name: dna_sample_name
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_concentration:
     name: dna_concentration
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_volume:
     name: dna_volume
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_absorb1:
     name: dna_absorb1
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_absorb2:
     name: dna_absorb2
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_container_ID:
     name: dna_container_ID
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_cont_type:
     name: dna_cont_type
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_cont_well:
     name: dna_cont_well
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_sample_format:
     name: dna_sample_format
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_dnase:
     name: dna_dnase
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_organisms:
     name: dna_organisms
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_collect_site:
     name: dna_collect_site
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_isolate_meth:
     name: dna_isolate_meth
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_seq_project_PI:
     name: dna_seq_project_PI
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dna_project_contact:
     name: dna_project_contact
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   proposal_dna:
     name: proposal_dna
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_seq_project:
     name: rna_seq_project
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_seq_project_name:
     name: rna_seq_project_name
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_samp_ID:
     name: rna_samp_ID
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_sample_name:
     name: rna_sample_name
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_concentration:
     name: rna_concentration
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_volume:
     name: rna_volume
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_absorb1:
     name: rna_absorb1
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_absorb2:
     name: rna_absorb2
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_container_ID:
     name: rna_container_ID
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_cont_type:
     name: rna_cont_type
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_cont_well:
     name: rna_cont_well
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_sample_format:
     name: rna_sample_format
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   dnase_rna:
     name: dnase_rna
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_organisms:
     name: rna_organisms
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_collect_site:
     name: rna_collect_site
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_isolate_meth:
     name: rna_isolate_meth
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_seq_project_PI:
     name: rna_seq_project_PI
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   rna_project_contact:
     name: rna_project_contact
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   proposal_rna:
     name: proposal_rna
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
 classes:
-  mims_soil_biosample:
-    name: mims_soil_biosample
+  soil_emsl_jgi_mg:
+    name: soil_emsl_jgi_mg
     description: A soil biosample, with metadata in compliance with the MIxS MIMS
       standard for metagenomes
-    from_schema: https://example.com/soil_emsl_jgi_mg
-    see_also:
-    - mixs.vocab:SoilMIMS
+    from_schema: https://example.com/mims_soil_biosample
     slots:
     - project_ID
     - sample_type
@@ -234,8 +240,6 @@ classes:
         title: sample type
         comments:
         - This can vary from 'environmental package' if the sample is an extraction.
-        examples:
-        - water extracted soil
         in_subset:
         - EMSL
         string_serialization: enumeration
@@ -259,8 +263,6 @@ classes:
         title: EMSL Sample Storage Temperature, deg. C
         comments:
         - Enter a temperature in celsius. Numeric portion only.
-        examples:
-        - '-80'
         in_subset:
         - EMSL
         string_serialization: '{float}'
@@ -296,8 +298,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - '1191234'
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -310,8 +310,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - JGI Pond metagenomics
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -328,8 +326,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - '187654'
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -342,8 +338,6 @@ classes:
           names must be unique across all JGI projects and contain a-z, A-Z, 0-9,
           - and _ only.
         title: DNA Sample Name
-        examples:
-        - JGI_pond_041618
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -356,8 +350,6 @@ classes:
         comments:
         - Units must be in ng/uL. Enter the numerical part only. Must be calculated
           using a fluorometric method. Acceptable values are 0-2000.
-        examples:
-        - '100'
         in_subset:
         - JGI metagenomics
         string_serialization: '{float}'
@@ -372,8 +364,6 @@ classes:
         comments:
         - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
           <25 by special permission only.
-        examples:
-        - '25'
         in_subset:
         - JGI metagenomics
         string_serialization: '{float}'
@@ -388,8 +378,6 @@ classes:
         title: DNA Absorbance 260/280
         comments:
         - Recommended value is between 1 and 3.
-        examples:
-        - '2.02'
         in_subset:
         - JGI metagenomics
         string_serialization: '{float}'
@@ -402,8 +390,6 @@ classes:
         title: DNA Absorbance 260/230
         comments:
         - Recommended value is between 1 and 3.
-        examples:
-        - '2.02'
         in_subset:
         - JGI metagenomics
         string_serialization: '{float}'
@@ -416,8 +402,6 @@ classes:
         comments:
         - Must be unique across all tubes and plates, and <20 characters. All samples
           in a plate should have the same plate label.
-        examples:
-        - Pond_MT_041618
         in_subset:
         - JGI metagenomics
         string_serialization: '{text < 20 characters}'
@@ -428,8 +412,6 @@ classes:
           dh_col_ord: '10'
         description: Tube or plate (96-well)
         title: DNA Container Type
-        examples:
-        - plate
         in_subset:
         - JGI metagenomics
         string_serialization: enumeration
@@ -443,8 +425,6 @@ classes:
         - Required when 'plate' is selected for container type. Corner wells must
           be blank. For partial plates, fill by columns. Leave blank if the sample
           will be shipped in a tube.
-        examples:
-        - B2
         in_subset:
         - JGI metagenomics
         string_serialization: '{96 well plate pos}'
@@ -455,8 +435,6 @@ classes:
           dh_col_ord: '12'
         description: Solution in which the DNA sample has been suspended
         title: DNA Sample Format
-        examples:
-        - Water
         in_subset:
         - JGI metagenomics
         string_serialization: enumeration
@@ -468,8 +446,6 @@ classes:
         title: DNAse Treatment DNA
         comments:
         - Note DNAse treatment is required for all RNA samples.
-        examples:
-        - 'no'
         in_subset:
         - JGI metagenomics
         string_serialization: enumeration
@@ -481,9 +457,6 @@ classes:
         description: List any organisms known or suspected to grow in co-culture,
           as well as estimated % of the organism in that culture.
         title: DNA Expected Organisms
-        examples:
-        - expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
-          (1%)
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -495,8 +468,6 @@ classes:
         description: Provide information on the site your DNA sample was collected
           from
         title: DNA Collection Site
-        examples:
-        - untreated pond water
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -507,8 +478,6 @@ classes:
           dh_col_ord: '16'
         description: Describe the method/protocol/kit used to extract DNA/RNA.
         title: DNA Isolation Method
-        examples:
-        - phenol/chloroform extraction
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -521,8 +490,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - Jane Johnson
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -535,8 +502,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - John Jones
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -549,8 +514,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - '504000'
         in_subset:
         - JGI metagenomics
         string_serialization: '{text}'
@@ -563,8 +526,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - '1191234'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -577,8 +538,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - JGI Pond metatranscriptomics
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -591,8 +550,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - '187654'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -605,8 +562,6 @@ classes:
           names must be unique across all JGI projects and contain a-z, A-Z, 0-9,
           - and _ only.
         title: RNA Sample Name
-        examples:
-        - JGI_pond_041618
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -621,8 +576,6 @@ classes:
         comments:
         - Units must be in ng/uL. Enter the numerical part only. Must be calculated
           using a fluorometric method. Acceptable values are 0-2000.
-        examples:
-        - '100'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{float}'
@@ -637,8 +590,6 @@ classes:
         comments:
         - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
           <25 by special permission only.
-        examples:
-        - '25'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{float}'
@@ -651,8 +602,6 @@ classes:
         title: RNA Absorbance 260/280
         comments:
         - Recommended value is between 1 and 3.
-        examples:
-        - '2.02'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{float}'
@@ -665,8 +614,6 @@ classes:
         title: RNA Absorbance 260/230
         comments:
         - Recommended value is between 1 and 3.
-        examples:
-        - '2.02'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{float}'
@@ -679,8 +626,6 @@ classes:
         comments:
         - Must be unique across all tubes and plates, and <20 characters. All samples
           in a plate should have the same plate label.
-        examples:
-        - Pond_MT_041618
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -691,8 +636,6 @@ classes:
           dh_col_ord: '29'
         description: Tube or plate (96-well)
         title: RNA Container Type
-        examples:
-        - plate
         in_subset:
         - JGI metatranscriptomics
         string_serialization: enumeration
@@ -706,8 +649,6 @@ classes:
         - Required when 'plate' is selected for container type. Corner wells must
           be blank. For partial plates, fill by columns. Leave blank if the sample
           will be shipped in a tube.
-        examples:
-        - B2
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{96 well plate pos}'
@@ -718,8 +659,6 @@ classes:
           dh_col_ord: '31'
         description: Solution in which the RNA sample has been suspended
         title: RNA Sample Format
-        examples:
-        - Water
         in_subset:
         - JGI metatranscriptomics
         string_serialization: enumeration
@@ -731,8 +670,6 @@ classes:
         title: DNAse Treated
         comments:
         - Note DNAse treatment is required for all RNA samples.
-        examples:
-        - 'no'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: enumeration
@@ -744,9 +681,6 @@ classes:
         description: List any organisms known or suspected to grow in co-culture,
           as well as estimated % of the organism in that culture.
         title: RNA Expected Organisms
-        examples:
-        - expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
-          (1%)
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -758,8 +692,6 @@ classes:
         description: Provide information on the site your RNA sample was collected
           from
         title: RNA Collection Site
-        examples:
-        - untreated pond water
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -770,8 +702,6 @@ classes:
           dh_col_ord: '35'
         description: Describe the method/protocol/kit used to extract DNA/RNA.
         title: RNA Isolation Method
-        examples:
-        - phenol/chloroform extraction
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -784,8 +714,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - Jane Johnson
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -798,8 +726,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - John Jones
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -812,8 +738,6 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        examples:
-        - '504000'
         in_subset:
         - JGI metatranscriptomics
         string_serialization: '{text}'
@@ -821,12 +745,12 @@ classes:
   dh_section:
     name: dh_section
     description: A section (ie group if columns) within a DataHarmonizer interface
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
   Sample ID:
     name: Sample ID
     annotations:
       dh_sect_ord: '1'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   NMDC fields esp. GOLD paths:
     name: NMDC fields esp. GOLD paths
@@ -835,7 +759,7 @@ classes:
     comments:
     - historically GOLD assigns these? Scientist should enter path elements (EEF)?
       Five columns or one? Pulldown? Provide documentation. Terr, subset, subset
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   EMSL:
     name: EMSL
@@ -846,25 +770,25 @@ classes:
     name: JGI-Metagenomics
     annotations:
       dh_sect_ord: '4'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   JGI-Metatranscriptomics:
     name: JGI-Metatranscriptomics
     annotations:
       dh_sect_ord: '5'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   Metadata- MIxS Modified Required:
     name: Metadata- MIxS Modified Required
     annotations:
       dh_sect_ord: '6'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   Metadata- MIxS Required:
     name: Metadata- MIxS Required
     annotations:
       dh_sect_ord: '7'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   Metadata- MIxS Modified Required Where Applicable:
     name: Metadata- MIxS Modified Required Where Applicable
@@ -872,23 +796,23 @@ classes:
       dh_sect_ord: '8'
     comments:
     - '## Too long. Make shorter'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   Metadata- MIxS Required Where Applicable:
     name: Metadata- MIxS Required Where Applicable
     annotations:
       dh_sect_ord: '9'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   Metadata- MIxS Modified Optional:
     name: Metadata- MIxS Modified Optional
     annotations:
       dh_sect_ord: '10'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
   Metadata- MIxS Optional:
     name: Metadata- MIxS Optional
     annotations:
       dh_sect_ord: '11'
-    from_schema: https://example.com/soil_emsl_jgi_mg
+    from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
