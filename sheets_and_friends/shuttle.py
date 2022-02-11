@@ -98,5 +98,6 @@ class Shuttle:
             current_view = self.views_dict[k]
             for i in v['transactions']:
                 print(i)
+                # class_name = 'soil MIMS'
                 current_slot = current_view.induced_slot(slot_name=i['slot'], class_name=i['source class'])
                 print(current_slot)
