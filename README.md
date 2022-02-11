@@ -4,5 +4,5 @@ Create a LinkML model with as-is imported slots, imported but modified slots (vi
 ## dependencies
 - python 3.9
 - poetry
-- cogs
+- schemasheets and cogs
 
