@@ -14,7 +14,7 @@ This will also provide better support for single LinkML files representing multi
 - poetry
 - schemasheets and cogs (which are pulled durring `poetry install`)
 - a Google Sheets server account credientials file
-  - ask a friend
+  - ask a friend for `nmdc-dh-sheets-0b754bedc29d.json`
   - put it in `local/`
   - update the `credentials_file` in the [Makefile](Makefile) if necessary
 
