@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.9"
 schemasheets = "^0.1.7"
 click_log = "*"
+glom = "^22.1.0"
 
 [tool.poetry.dev-dependencies]
 
@@ -18,3 +19,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 do_shuttle = "sheets_and_friends.shuttle:do_shuttle"
+mod_by_path = "sheets_and_friends.mod_by_path:mod_by_path"

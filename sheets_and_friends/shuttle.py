@@ -1,5 +1,6 @@
 import logging
-import pprint
+
+from typing import List, Optional, Dict, Any
 
 import click
 import click_log
@@ -8,17 +9,13 @@ import pandas as pd
 
 from linkml_runtime.linkml_model import (
     SchemaDefinition,
-    # SlotDefinition,
-    # Example,
-    # EnumDefinition,
-    # PermissibleValue,
-    # Annotation
+    ClassDefinition,
 )
 
 from linkml_runtime.utils.schemaview import SchemaView
 
-# from linkml_runtime.dumpers import yaml_dumper
-
+from linkml_runtime.dumpers import yaml_dumper
+import pprint
 
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
@@ -26,25 +23,30 @@ click_log.basic_config(logger)
 
 @click.command()
 @click_log.simple_verbosity_option(logger)
-@click.option("--destination_model", type=click.Path(exists=True), required=True)
+@click.option("--recipient_model", type=click.Path(exists=True), required=True)
 @click.option("--config_tsv", type=click.Path(exists=True), required=True)
-def do_shuttle(destination_model, config_tsv):
+@click.option("--yaml_output", type=click.Path(), required=True)
+def do_shuttle(recipient_model: str, config_tsv: str, yaml_output: str):
     """
-    Gets slots, listed in config_tsv, from source_model and puts them in destination_model
-    :param destination_model:
+    Gets slots, listed in config_tsv, from source_model and puts them in recipient_model
+    :param recipient_model:
     :param config_tsv:
+    :param yaml_output:
     :return:
     """
 
     shuttle = Shuttle()
     shuttle.tsv_file = config_tsv
-    shuttle.destination_model = destination_model
+    shuttle.recipient_model_fp = recipient_model
     shuttle.get_slots_from_tsv()
     shuttle.prepare_dest_schema()
     shuttle.get_unique_source_files()
     shuttle.prep_transactions_dict()
     shuttle.prep_views_dict()
-    shuttle.confirm_slots()
+    shuttle.extract_dest_class_names()
+    shuttle.yaml_output = yaml_output
+    shuttle.shuttle_slots()
+    shuttle.write_schema()
 
 
 if __name__ == '__main__':
@@ -53,22 +55,24 @@ if __name__ == '__main__':
 
 class Shuttle:
     def __init__(self):
-        self.views_dict = {}
-        self.sources_first = {}
-        self.source_schema_files = None
-        self.destination_class_name = None
-        self.destination_schema: SchemaDefinition = None
-        self.destination_model = None
-        self.slots_lod = None
-        self.slots_frame: pd.DataFrame = None
-        self.tsv_file = None
+        self.yaml_output: Optional[str] = None
+        self.destination_class_names: Optional[List[str]] = None
+        self.recipient_model_fp: Optional[str] = None
+        self.destination_schema: Optional[SchemaDefinition] = None
+        self.slots_frame: Optional[pd.DataFrame] = None
+        self.slots_lod: Optional[List[Dict[str, Any]]] = None
+        self.source_schema_files: Optional[List[str]] = None
+        # todo MAM be more specific
+        self.sources_first: Optional[Dict[str, Any]] = {}
+        self.tsv_file: Optional[str] = None
+        self.views_dict: Optional[Dict[str, Any]] = {}
 
     def get_slots_from_tsv(self):
         slots_frame = pd.read_csv(self.tsv_file, sep="\t")
         self.slots_lod = slots_frame.to_dict(orient='records')
 
     def prepare_dest_schema(self):
-        current_view = SchemaView(self.destination_model)
+        current_view = SchemaView(self.recipient_model_fp)
         self.destination_schema = current_view.schema
 
     def get_unique_source_files(self):
@@ -92,12 +96,32 @@ class Shuttle:
             temp = SchemaView(k)
             self.views_dict[k] = temp
 
-    def confirm_slots(self):
+    def extract_dest_class_names(self):
+        destination_classes = self.destination_schema.classes
+        destination_class_names = list(destination_classes.keys())
+        destination_class_names.sort()
+        self.destination_class_names = destination_class_names
+
+    def shuttle_slots(self):
         for k, v in self.sources_first.items():
-            print(k)
+            logger.info(k)
             current_view = self.views_dict[k]
             for i in v['transactions']:
-                print(i)
-                # class_name = 'soil MIMS'
+                logger.info(i)
                 current_slot = current_view.induced_slot(slot_name=i['slot'], class_name=i['source class'])
-                print(current_slot)
+                # current_yaml = yaml_dumper.dumps(current_slot)
+                # print(current_yaml)
+                desired_class_name = i['destination class']
+                if desired_class_name not in self.destination_class_names:
+                    new_class = ClassDefinition(name=desired_class_name)
+                    self.destination_schema.classes[desired_class_name] = new_class
+
+                desired_slot_name = i['slot']
+
+                class_shortcut = self.destination_schema.classes[desired_class_name]
+                self.destination_schema.slots[desired_slot_name] = current_slot
+                class_shortcut.slots.append(desired_slot_name)
+                class_shortcut.slot_usage[desired_slot_name] = current_slot
+
+    def write_schema(self):
+        yaml_dumper.dump(self.destination_schema, to_file=self.yaml_output)
