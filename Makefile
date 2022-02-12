@@ -23,7 +23,7 @@ squeaky_clean: clean
 cogs_fetch: .cogs
 	poetry run cogs fetch
 
-artifacts/soil_emls_jgi_mg_new.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/new_terms.tsv .cogs/tracked/sections.tsv
+artifacts/soil_emls_jgi_mg_new.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/new_terms.tsv .cogs/tracked/sections.tsv .cogs/tracked/enums.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> target/sheets2linkml.log
 

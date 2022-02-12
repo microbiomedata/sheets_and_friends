@@ -43,6 +43,237 @@ subsets:
         value: '5'
     description: 'JGI fields: biosamples for metatranscriptomics studies'
     from_schema: https://example.com/mims_soil_biosample
+enums:
+  analysis_type_enum:
+    name: analysis_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      metabolomics:
+        text: metabolomics
+      metagenomics:
+        text: metagenomics
+      metaproteomics:
+        text: metaproteomics
+      metatranscriptomics:
+        text: metatranscriptomics
+      natural organic matter:
+        text: natural organic matter
+  dna_cont_type:
+    name: dna_cont_type
+    permissible_values:
+      plate:
+        text: plate
+      tube:
+        text: tube
+  dna_dnase:
+    name: dna_dnase
+    permissible_values:
+      'no':
+        text: 'no'
+      'yes':
+        text: 'yes'
+  dna_sample_format:
+    name: dna_sample_format
+    permissible_values:
+      10 mM Tris-HCl:
+        text: 10 mM Tris-HCl
+      DNAStable:
+        text: DNAStable
+      Ethanol:
+        text: Ethanol
+      Low EDTA TE:
+        text: Low EDTA TE
+      MDA reaction buffer:
+        text: MDA reaction buffer
+      PBS:
+        text: PBS
+      Pellet:
+        text: Pellet
+      RNAStable:
+        text: RNAStable
+      TE:
+        text: TE
+      Water:
+        text: Water
+  dnase_rna:
+    name: dnase_rna
+    permissible_values:
+      'no':
+        text: 'no'
+      'yes':
+        text: 'yes'
+  ecosystem_category_enum:
+    name: ecosystem_category_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Terrestrial:
+        text: Terrestrial
+  ecosystem_enum:
+    name: ecosystem_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Environmental:
+        text: Environmental
+  ecosystem_subtype_enum:
+    name: ecosystem_subtype_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Biocrust:
+        text: Biocrust
+      Biofilm:
+        text: Biofilm
+      Bulk soil:
+        text: Bulk soil
+      Clay:
+        text: Clay
+      Floodplain:
+        text: Floodplain
+      Fossil:
+        text: Fossil
+      Glacier:
+        text: Glacier
+      Loam:
+        text: Loam
+      Mineral horizon:
+        text: Mineral horizon
+      Nature reserve:
+        text: Nature reserve
+      Organic layer:
+        text: Organic layer
+      Paddy field/soil:
+        text: Paddy field/soil
+      Pasture:
+        text: Pasture
+      Peat:
+        text: Peat
+      Ranch:
+        text: Ranch
+      Sand:
+        text: Sand
+      Silt:
+        text: Silt
+      Soil crust:
+        text: Soil crust
+      Unclassified:
+        text: Unclassified
+      Watershed:
+        text: Watershed
+      Wetlands:
+        text: Wetlands
+  ecosystem_type_enum:
+    name: ecosystem_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Soil:
+        text: Soil
+  env_package:
+    name: env_package
+    permissible_values:
+      soil:
+        text: soil
+  growth_facility:
+    name: growth_facility
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      experimental_garden:
+        text: experimental_garden
+      field:
+        text: field
+      field_incubation:
+        text: field_incubation
+      glasshouse:
+        text: glasshouse
+      greenhouse:
+        text: greenhouse
+      growth_chamber:
+        text: growth_chamber
+      lab_incubation:
+        text: lab_incubation
+      open_top_chamber:
+        text: open_top_chamber
+      other:
+        text: other
+  oxygen_relationship:
+    name: oxygen_relationship
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      aerobe:
+        text: aerobe
+      anaerobe:
+        text: anaerobe
+      facultative:
+        text: facultative
+      microaerophilic:
+        text: microaerophilic
+      microanaerobe:
+        text: microanaerobe
+      obligate aerobe:
+        text: obligate aerobe
+      obligate anaerobe:
+        text: obligate anaerobe
+  rna_cont_type:
+    name: rna_cont_type
+    permissible_values:
+      plate:
+        text: plate
+      tube:
+        text: tube
+  rna_sample_format:
+    name: rna_sample_format
+    permissible_values:
+      10 mM Tris-HCl:
+        text: 10 mM Tris-HCl
+      DNAStable:
+        text: DNAStable
+      Ethanol:
+        text: Ethanol
+      Low EDTA TE:
+        text: Low EDTA TE
+      MDA reaction buffer:
+        text: MDA reaction buffer
+      PBS:
+        text: PBS
+      Pellet:
+        text: Pellet
+      RNAStable:
+        text: RNAStable
+      TE:
+        text: TE
+      Water:
+        text: Water
+  samp_biotic_relationship:
+    name: samp_biotic_relationship
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      commensalism:
+        text: commensalism
+      free living:
+        text: free living
+      mutualism:
+        text: mutualism
+      parasitism:
+        text: parasitism
+      symbiotic:
+        text: symbiotic
+  sample_type:
+    name: sample_type
+    permissible_values:
+      soil:
+        text: soil
+      water_extract_soil:
+        text: water_extract_soil
+  storage_condt:
+    name: storage_condt
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      fresh:
+        text: fresh
+      frozen:
+        text: frozen
+      lyophilized:
+        text: lyophilized
+      other:
+        text: other
 slots:
   project_ID:
     name: project_ID
@@ -176,47 +407,35 @@ slots:
   proposal_rna:
     name: proposal_rna
     from_schema: https://example.com/mims_soil_biosample
-  collection_date_inc:
-    name: collection_date_inc
-    from_schema: https://example.com/mims_soil_biosample
-  collection_time:
-    name: collection_time
-    from_schema: https://example.com/mims_soil_biosample
-  collection_time_inc:
-    name: collection_time_inc
-    from_schema: https://example.com/mims_soil_biosample
-  experimental_factor_other:
-    name: experimental_factor_other
-    from_schema: https://example.com/mims_soil_biosample
-  filter_method:
-    name: filter_method
-    from_schema: https://example.com/mims_soil_biosample
-  isotope_exposure:
-    name: isotope_exposure
-    from_schema: https://example.com/mims_soil_biosample
-  micro_biomass_C_meth:
-    name: micro_biomass_C_meth
-    from_schema: https://example.com/mims_soil_biosample
-  micro_biomass_N_meth:
-    name: micro_biomass_N_meth
-    from_schema: https://example.com/mims_soil_biosample
-  microbial_biomass_C:
-    name: microbial_biomass_C
-    from_schema: https://example.com/mims_soil_biosample
-  microbial_biomass_N:
-    name: microbial_biomass_N
-    from_schema: https://example.com/mims_soil_biosample
   non_microb_biomass:
     name: non_microb_biomass
     from_schema: https://example.com/mims_soil_biosample
   non_microb_biomass_method:
     name: non_microb_biomass_method
     from_schema: https://example.com/mims_soil_biosample
+  microbial_biomass_C:
+    name: microbial_biomass_C
+    from_schema: https://example.com/mims_soil_biosample
+  micro_biomass_C_meth:
+    name: micro_biomass_C_meth
+    from_schema: https://example.com/mims_soil_biosample
+  microbial_biomass_N:
+    name: microbial_biomass_N
+    from_schema: https://example.com/mims_soil_biosample
+  micro_biomass_N_meth:
+    name: micro_biomass_N_meth
+    from_schema: https://example.com/mims_soil_biosample
   org_nitro_method:
     name: org_nitro_method
     from_schema: https://example.com/mims_soil_biosample
-  other_treatment:
-    name: other_treatment
+  collection_time:
+    name: collection_time
+    from_schema: https://example.com/mims_soil_biosample
+  collection_date_inc:
+    name: collection_date_inc
+    from_schema: https://example.com/mims_soil_biosample
+  collection_time_inc:
+    name: collection_time_inc
     from_schema: https://example.com/mims_soil_biosample
   start_date_inc:
     name: start_date_inc
@@ -224,6 +443,100 @@ slots:
   start_time_inc:
     name: start_time_inc
     from_schema: https://example.com/mims_soil_biosample
+  filter_method:
+    name: filter_method
+    from_schema: https://example.com/mims_soil_biosample
+  experimental_factor_other:
+    name: experimental_factor_other
+    from_schema: https://example.com/mims_soil_biosample
+  other_treatment:
+    name: other_treatment
+    from_schema: https://example.com/mims_soil_biosample
+  isotope_exposure:
+    name: isotope_exposure
+    from_schema: https://example.com/mims_soil_biosample
+  unique_ID:
+    name: unique_ID
+    from_schema: https://example.com/mims_soil_biosample
+  sample_name:
+    name: sample_name
+    from_schema: https://example.com/mims_soil_biosample
+  env_package:
+    name: env_package
+    from_schema: https://example.com/mims_soil_biosample
+  analysis_type:
+    name: analysis_type
+    from_schema: https://example.com/mims_soil_biosample
+  sample_link:
+    name: sample_link
+    from_schema: https://example.com/mims_soil_biosample
+  ecosystem:
+    name: ecosystem
+    description: An ecosystem is a combination of a physical environment (abiotic
+      factors) and all the organisms (biotic factors) that interact with this environment.
+      Ecosystem is in position 1/5 in a GOLD path.
+    comments:
+    - The abiotic factors play a profound role on the type and composition of organisms
+      in a given environment. The GOLD Ecosystem at the top of the five-level classification
+      system is aimed at capturing the broader environment from which an organism
+      or environmental sample is collected. The three broad groups under Ecosystem
+      are Environmental, Host-associated, and Engineered. They represent samples collected
+      from a natural environment or from another organism or from engineered environments
+      like bioreactors respectively.
+    from_schema: https://microbiomedata/schema
+    see_also:
+    - https://gold.jgi.doe.gov/help
+    is_a: gold_path_field
+    owner: biosample
+    range: string
+  ecosystem_category:
+    name: ecosystem_category
+    description: Ecosystem categories represent divisions within the ecosystem based
+      on specific characteristics of the environment from where an organism or sample
+      is isolated. Ecosystem category is in position 2/5 in a GOLD path.
+    comments:
+    - The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial.
+      Ecosystem categories for Host-associated samples can be individual hosts or
+      phyla and for engineered samples it may be manipulated environments like bioreactors,
+      solid waste etc.
+    from_schema: https://microbiomedata/schema
+    see_also:
+    - https://gold.jgi.doe.gov/help
+    is_a: gold_path_field
+    owner: biosample
+    range: string
+  ecosystem_subtype:
+    name: ecosystem_subtype
+    description: Ecosystem subtypes represent further subdivision of Ecosystem types
+      into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD
+      path.
+    comments:
+    - Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided
+      (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in
+      the Ecosystem subtype category.
+    from_schema: https://microbiomedata/schema
+    see_also:
+    - https://gold.jgi.doe.gov/help
+    is_a: gold_path_field
+    owner: biosample
+    range: string
+  ecosystem_type:
+    name: ecosystem_type
+    description: Ecosystem types represent things having common characteristics within
+      the Ecosystem Category. These common characteristics based grouping is still
+      broad but specific to the characteristics of a given environment. Ecosystem
+      type is in position 3/5 in a GOLD path.
+    comments:
+    - The Aquatic ecosystem category (for example) may have ecosystem types like Marine
+      or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor
+      air as different Ecosystem Types. In the case of Host-associated samples, ecosystem
+      type can represent Respiratory system, Digestive system, Roots etc.
+    from_schema: https://microbiomedata/schema
+    see_also:
+    - https://gold.jgi.doe.gov/help
+    is_a: gold_path_field
+    owner: biosample
+    range: string
   specific_ecosystem:
     name: specific_ecosystem
     description: Specific ecosystems represent specific features of the environment
@@ -2332,22 +2645,31 @@ classes:
     - rna_seq_project_PI
     - rna_project_contact
     - proposal_rna
-    - collection_date_inc
-    - collection_time
-    - collection_time_inc
-    - experimental_factor_other
-    - filter_method
-    - isotope_exposure
-    - micro_biomass_C_meth
-    - micro_biomass_N_meth
-    - microbial_biomass_C
-    - microbial_biomass_N
     - non_microb_biomass
     - non_microb_biomass_method
+    - microbial_biomass_C
+    - micro_biomass_C_meth
+    - microbial_biomass_N
+    - micro_biomass_N_meth
     - org_nitro_method
-    - other_treatment
+    - collection_time
+    - collection_date_inc
+    - collection_time_inc
     - start_date_inc
     - start_time_inc
+    - filter_method
+    - experimental_factor_other
+    - other_treatment
+    - isotope_exposure
+    - unique_ID
+    - sample_name
+    - env_package
+    - analysis_type
+    - sample_link
+    - ecosystem
+    - ecosystem_category
+    - ecosystem_subtype
+    - ecosystem_type
     - specific_ecosystem
     - agrochem_addition
     - air_temp_regm
@@ -2437,6 +2759,10 @@ classes:
     slot_usage:
       project_ID:
         name: project_ID
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '1'
         description: Proposal IDs or names associated with dataset
         title: Project ID
         in_subset:
@@ -2445,6 +2771,10 @@ classes:
         required: true
       sample_type:
         name: sample_type
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '2'
         description: Type of sample being submitted
         title: sample type
         comments:
@@ -2455,6 +2785,10 @@ classes:
         required: true
       sample_shipped:
         name: sample_shipped
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '3'
         description: The total amount or size (volume (ml), mass (g) or area (m2)
           ) of sample sent to EMSL
         title: sample shipped amount
@@ -2464,6 +2798,10 @@ classes:
         required: true
       EMSL_store_temp:
         name: EMSL_store_temp
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '4'
         description: Temperature at which the sample sent to EMSL should be stored
         title: EMSL Sample Storage Temperature, deg. C
         comments:
@@ -2474,6 +2812,10 @@ classes:
         required: true
       technical_reps:
         name: technical_reps
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '5'
         description: If sending multiple technical replicates of the same sample,
           indicate how many replicates are being sent
         title: Number Technical Replicate
@@ -2483,6 +2825,10 @@ classes:
         recommended: true
       replicate_number:
         name: replicate_number
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '6'
         description: If sending biological replicates, indicate the rep number here.
         title: Replicate Number
         comments:
@@ -2493,6 +2839,10 @@ classes:
         recommended: true
       dna_seq_project:
         name: dna_seq_project
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '1'
         title: DNA Seq Project ID
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2503,6 +2853,10 @@ classes:
         required: true
       dna_seq_project_name:
         name: dna_seq_project_name
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '2'
         title: DNA Seq Project Name
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2513,6 +2867,10 @@ classes:
         required: true
       dna_samp_ID:
         name: dna_samp_ID
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '3'
         title: DNA Sample ID
         todos:
         - Removed identifier = TRUE from dna_samp_ID in JGI_sample_slots, as a class
@@ -2527,6 +2885,10 @@ classes:
         required: true
       dna_sample_name:
         name: dna_sample_name
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '4'
         description: Give the DNA sample a name that is meaningful to you. Sample
           names must be unique across all JGI projects and contain a-z, A-Z, 0-9,
           - and _ only.
@@ -2537,6 +2899,10 @@ classes:
         required: true
       dna_concentration:
         name: dna_concentration
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '5'
         title: DNA Concentration in ng/uL
         comments:
         - Units must be in ng/uL. Enter the numerical part only. Must be calculated
@@ -2549,6 +2915,10 @@ classes:
         maximum_value: 2000
       dna_volume:
         name: dna_volume
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '6'
         title: DNA Volume in uL
         comments:
         - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
@@ -2561,6 +2931,10 @@ classes:
         maximum_value: 1000
       dna_absorb1:
         name: dna_absorb1
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '7'
         description: 260/280 measurement of DNA sample purity
         title: DNA Absorbance 260/280
         comments:
@@ -2571,6 +2945,10 @@ classes:
         required: true
       dna_absorb2:
         name: dna_absorb2
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '8'
         description: 260/230 measurement of DNA sample purity
         title: DNA Absorbance 260/230
         comments:
@@ -2581,6 +2959,10 @@ classes:
         recommended: true
       dna_container_ID:
         name: dna_container_ID
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '9'
         title: DNA Container Label
         comments:
         - Must be unique across all tubes and plates, and <20 characters. All samples
@@ -2591,6 +2973,10 @@ classes:
         required: true
       dna_cont_type:
         name: dna_cont_type
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '10'
         description: Tube or plate (96-well)
         title: DNA Container Type
         in_subset:
@@ -2599,6 +2985,10 @@ classes:
         required: true
       dna_cont_well:
         name: dna_cont_well
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '11'
         title: DNA Well Number
         comments:
         - Required when 'plate' is selected for container type. Corner wells must
@@ -2610,6 +3000,10 @@ classes:
         required: true
       dna_sample_format:
         name: dna_sample_format
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '12'
         description: Solution in which the DNA sample has been suspended
         title: DNA Sample Format
         in_subset:
@@ -2618,6 +3012,10 @@ classes:
         required: true
       dna_dnase:
         name: dna_dnase
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '13'
         title: DNAse Treatment DNA
         comments:
         - Note DNAse treatment is required for all RNA samples.
@@ -2627,6 +3025,10 @@ classes:
         required: true
       dna_organisms:
         name: dna_organisms
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '14'
         description: List any organisms known or suspected to grow in co-culture,
           as well as estimated % of the organism in that culture.
         title: DNA Expected Organisms
@@ -2636,6 +3038,10 @@ classes:
         recommended: true
       dna_collect_site:
         name: dna_collect_site
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '15'
         description: Provide information on the site your DNA sample was collected
           from
         title: DNA Collection Site
@@ -2645,6 +3051,10 @@ classes:
         required: true
       dna_isolate_meth:
         name: dna_isolate_meth
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '16'
         description: Describe the method/protocol/kit used to extract DNA/RNA.
         title: DNA Isolation Method
         in_subset:
@@ -2653,6 +3063,10 @@ classes:
         required: true
       dna_seq_project_PI:
         name: dna_seq_project_PI
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '17'
         title: DNA Seq Project PI
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2663,6 +3077,10 @@ classes:
         required: true
       dna_project_contact:
         name: dna_project_contact
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '18'
         title: DNA Seq Project Contact
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2673,6 +3091,10 @@ classes:
         required: true
       proposal_dna:
         name: proposal_dna
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '19'
         title: DNA Proposal ID
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2683,6 +3105,10 @@ classes:
         required: true
       rna_seq_project:
         name: rna_seq_project
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '20'
         title: RNA Seq Project ID
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2693,6 +3119,10 @@ classes:
         required: true
       rna_seq_project_name:
         name: rna_seq_project_name
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '21'
         title: RNA Seq Project Name
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2703,6 +3133,10 @@ classes:
         required: true
       rna_samp_ID:
         name: rna_samp_ID
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '22'
         title: RNA Sample ID
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2713,6 +3147,10 @@ classes:
         required: true
       rna_sample_name:
         name: rna_sample_name
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '23'
         description: Give the RNA sample a name that is meaningful to you. Sample
           names must be unique across all JGI projects and contain a-z, A-Z, 0-9,
           - and _ only.
@@ -2725,6 +3163,10 @@ classes:
         maximum_value: 2000
       rna_concentration:
         name: rna_concentration
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '24'
         title: RNA Concentration in ng/uL
         comments:
         - Units must be in ng/uL. Enter the numerical part only. Must be calculated
@@ -2737,6 +3179,10 @@ classes:
         maximum_value: 1000
       rna_volume:
         name: rna_volume
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '25'
         title: RNA Volume in uL
         comments:
         - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
@@ -2747,6 +3193,10 @@ classes:
         required: true
       rna_absorb1:
         name: rna_absorb1
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '26'
         description: 260/280 measurement of RNA sample purity
         title: RNA Absorbance 260/280
         comments:
@@ -2757,6 +3207,10 @@ classes:
         required: true
       rna_absorb2:
         name: rna_absorb2
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '27'
         description: 260/230 measurement of RNA sample purity
         title: RNA Absorbance 260/230
         comments:
@@ -2767,6 +3221,10 @@ classes:
         recommended: true
       rna_container_ID:
         name: rna_container_ID
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '28'
         title: RNA Container Label
         comments:
         - Must be unique across all tubes and plates, and <20 characters. All samples
@@ -2777,6 +3235,10 @@ classes:
         required: true
       rna_cont_type:
         name: rna_cont_type
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '29'
         description: Tube or plate (96-well)
         title: RNA Container Type
         in_subset:
@@ -2785,6 +3247,10 @@ classes:
         required: true
       rna_cont_well:
         name: rna_cont_well
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '30'
         title: RNA Well Number
         comments:
         - Required when 'plate' is selected for container type. Corner wells must
@@ -2796,6 +3262,10 @@ classes:
         required: true
       rna_sample_format:
         name: rna_sample_format
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '31'
         description: Solution in which the RNA sample has been suspended
         title: RNA Sample Format
         in_subset:
@@ -2804,6 +3274,10 @@ classes:
         required: true
       dnase_rna:
         name: dnase_rna
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '32'
         title: DNAse Treated
         comments:
         - Note DNAse treatment is required for all RNA samples.
@@ -2813,6 +3287,10 @@ classes:
         required: true
       rna_organisms:
         name: rna_organisms
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '33'
         description: List any organisms known or suspected to grow in co-culture,
           as well as estimated % of the organism in that culture.
         title: RNA Expected Organisms
@@ -2822,6 +3300,10 @@ classes:
         recommended: true
       rna_collect_site:
         name: rna_collect_site
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '34'
         description: Provide information on the site your RNA sample was collected
           from
         title: RNA Collection Site
@@ -2831,6 +3313,10 @@ classes:
         required: true
       rna_isolate_meth:
         name: rna_isolate_meth
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '35'
         description: Describe the method/protocol/kit used to extract DNA/RNA.
         title: RNA Isolation Method
         in_subset:
@@ -2839,6 +3325,10 @@ classes:
         required: true
       rna_seq_project_PI:
         name: rna_seq_project_PI
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '36'
         title: RNA Seq Project PI
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2849,6 +3339,10 @@ classes:
         required: true
       rna_project_contact:
         name: rna_project_contact
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '37'
         title: RNA Seq Project Contact
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2859,6 +3353,10 @@ classes:
         required: true
       proposal_rna:
         name: proposal_rna
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '38'
         title: RNA Proposal ID
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
@@ -2867,160 +3365,12 @@ classes:
         - JGI metatranscriptomics
         string_serialization: '{text}'
         required: true
-      collection_date_inc:
-        name: collection_date_inc
-        description: Date the incubation was harvested/collected/ended. Only relevant
-          for incubation samples.
-        title: Incubation Collection Date
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
-          only
-        comments:
-        - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
-          2021 are all acceptable.
-        in_subset:
-        - MIxS Inspired Metadata, Required Where Applicable
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{date, arbitrary precision}'
-        recommended: true
-      collection_time:
-        name: collection_time
-        description: The time of sampling, either as an instance (single point) or
-          interval.
-        title: collection time, GMT
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
-          time only
-        comments:
-        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
-          https://www.worldtimebuddy.com/pst-to-gmt-converter'
-        in_subset:
-        - MIxS Inspired Metadata, Required Where Applicable
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{time, seconds optional}'
-        recommended: true
-      collection_time_inc:
-        name: collection_time_inc
-        description: Time the incubation was harvested/collected/ended. Only relevant
-          for incubation samples.
-        title: Incubation Collection Time, GMT
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
-          time only
-        comments:
-        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
-          https://www.worldtimebuddy.com/pst-to-gmt-converter'
-        in_subset:
-        - MIxS Inspired Metadata, Required Where Applicable
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{time, seconds optional}'
-        recommended: true
-      experimental_factor_other:
-        name: experimental_factor_other
-        annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: optional
-        description: Other details about your sample that you feel can't be accurately
-          represented in the available columns.
-        title: experimental factor- other
-        in_subset:
-        - MIxS Inspired Metadata, Required Where Applicable
-        see_also:
-        - MIxS:experimental_factor|additional_info
-        string_serialization: '{text}'
-        recommended: true
-      filter_method:
-        name: filter_method
-        description: Type of filter used or how the sample was filtered
-        title: Filter Method
-        in_subset:
-        - MIxS Inspired Metadata, Required Where Applicable
-        see_also:
-        - MIxS:filter_type
-        string_serialization: '{text}'
-        recommended: true
-      isotope_exposure:
-        name: isotope_exposure
-        annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: treatment
-        description: List isotope exposure or addition applied to your sample.
-        title: isotope exposure/addition
-        in_subset:
-        - MIxS Inspired Metadata, Required Where Applicable
-        see_also:
-        - MIxS:chem_administration
-        string_serialization: '{termLabel} {[termID]}; {timestamp}'
-        recommended: true
-      micro_biomass_C_meth:
-        name: micro_biomass_C_meth
-        annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: biogeochemistry
-        description: Reference or method used in determining microbial biomass
-        title: microbial biomass carbon method
-        comments:
-        - required if "microbial_biomass_C" is provided
-        in_subset:
-        - MIxS Inspired Metadata, Optional
-        see_also:
-        - MIxS:micro_biomass_meth
-        string_serialization: '{PMID}|{DOI}|{URL}'
-        recommended: true
-      micro_biomass_N_meth:
-        name: micro_biomass_N_meth
-        annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: biogeochemistry
-        description: Reference or method used in determining microbial biomass nitrogen
-        title: microbial biomass nitrogen method
-        comments:
-        - required if "microbial_biomass_N" is provided
-        in_subset:
-        - MIxS Inspired Metadata, Optional
-        see_also:
-        - MIxS:micro_biomass_meth
-        string_serialization: '{PMID}|{DOI}|{URL}'
-      microbial_biomass_C:
-        name: microbial_biomass_C
-        annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: biogeochemistry
-        description: The part of the organic matter in the soil that constitutes living
-          microorganisms smaller than 5-10 micrometer. If you keep this, you would
-          need to have correction factors used for conversion to the final units
-        title: microbial biomass carbon
-        in_subset:
-        - MIxS Inspired Metadata, Optional
-        see_also:
-        - MIxS:microbial_biomass
-        string_serialization: '{float} {unit}'
-      microbial_biomass_N:
-        name: microbial_biomass_N
-        annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: biogeochemistry
-        description: The part of the organic matter in the soil that constitutes living
-          microorganisms smaller than 5-10 micrometer. If you keep this, you would
-          need to have correction factors used for conversion to the final units
-        title: microbial biomass nitrogen
-        in_subset:
-        - MIxS Inspired Metadata, Optional
-        see_also:
-        - MIxS:microbial_biomass
-        string_serialization: '{float} {unit}'
       non_microb_biomass:
         name: non_microb_biomass
         annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '18'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3036,6 +3386,9 @@ classes:
       non_microb_biomass_method:
         name: non_microb_biomass_method
         annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '19'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3048,9 +3401,85 @@ classes:
         see_also:
         - MIxS:microbial_biomass
         string_serialization: '{PMID}|{DOI}|{URL}'
+      microbial_biomass_C:
+        name: microbial_biomass_C
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '20'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: biogeochemistry
+        description: The part of the organic matter in the soil that constitutes living
+          microorganisms smaller than 5-10 micrometer. If you keep this, you would
+          need to have correction factors used for conversion to the final units
+        title: microbial biomass carbon
+        in_subset:
+        - MIxS Inspired Metadata, Optional
+        see_also:
+        - MIxS:microbial_biomass
+        string_serialization: '{float} {unit}'
+      micro_biomass_C_meth:
+        name: micro_biomass_C_meth
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '21'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: biogeochemistry
+        description: Reference or method used in determining microbial biomass
+        title: microbial biomass carbon method
+        comments:
+        - required if "microbial_biomass_C" is provided
+        in_subset:
+        - MIxS Inspired Metadata, Optional
+        see_also:
+        - MIxS:micro_biomass_meth
+        string_serialization: '{PMID}|{DOI}|{URL}'
+        recommended: true
+      microbial_biomass_N:
+        name: microbial_biomass_N
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '22'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: biogeochemistry
+        description: The part of the organic matter in the soil that constitutes living
+          microorganisms smaller than 5-10 micrometer. If you keep this, you would
+          need to have correction factors used for conversion to the final units
+        title: microbial biomass nitrogen
+        in_subset:
+        - MIxS Inspired Metadata, Optional
+        see_also:
+        - MIxS:microbial_biomass
+        string_serialization: '{float} {unit}'
+      micro_biomass_N_meth:
+        name: micro_biomass_N_meth
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '23'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: biogeochemistry
+        description: Reference or method used in determining microbial biomass nitrogen
+        title: microbial biomass nitrogen method
+        comments:
+        - required if "microbial_biomass_N" is provided
+        in_subset:
+        - MIxS Inspired Metadata, Optional
+        see_also:
+        - MIxS:micro_biomass_meth
+        string_serialization: '{PMID}|{DOI}|{URL}'
       org_nitro_method:
         name: org_nitro_method
         annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '24'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3063,23 +3492,75 @@ classes:
         see_also:
         - MIxS:org_nitro|tot_nitro_cont_meth
         string_serialization: '{PMID}|{DOI}|{URL}'
-      other_treatment:
-        name: other_treatment
+      collection_time:
+        name: collection_time
         annotations:
-          categorical_subsection:
-            tag: categorical_subsection
-            value: treatment
-        description: Other treatments applied to your samples that are not applicable
-          to the provided fields
-        title: other treatments
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '4'
+        description: The time of sampling, either as an instance (single point) or
+          interval.
+        title: collection time, GMT
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
+          time only
+        comments:
+        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
+          https://www.worldtimebuddy.com/pst-to-gmt-converter'
         in_subset:
         - MIxS Inspired Metadata, Required Where Applicable
         see_also:
-        - MIxS:additional_info
-        string_serialization: '{text}'
+        - MIxS:collection_date
+        string_serialization: '{time, seconds optional}'
+        recommended: true
+      collection_date_inc:
+        name: collection_date_inc
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '5'
+        description: Date the incubation was harvested/collected/ended. Only relevant
+          for incubation samples.
+        title: Incubation Collection Date
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
+          only
+        comments:
+        - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
+          2021 are all acceptable.
+        in_subset:
+        - MIxS Inspired Metadata, Required Where Applicable
+        see_also:
+        - MIxS:collection_date
+        string_serialization: '{date, arbitrary precision}'
+        recommended: true
+      collection_time_inc:
+        name: collection_time_inc
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '6'
+        description: Time the incubation was harvested/collected/ended. Only relevant
+          for incubation samples.
+        title: Incubation Collection Time, GMT
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
+          time only
+        comments:
+        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
+          https://www.worldtimebuddy.com/pst-to-gmt-converter'
+        in_subset:
+        - MIxS Inspired Metadata, Required Where Applicable
+        see_also:
+        - MIxS:collection_date
+        string_serialization: '{time, seconds optional}'
         recommended: true
       start_date_inc:
         name: start_date_inc
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '7'
         description: Date the incubation was started. Only relevant for incubation
           samples.
         title: Incubation Start Date
@@ -3097,6 +3578,10 @@ classes:
         recommended: true
       start_time_inc:
         name: start_time_inc
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '8'
         description: Time the incubation was started. Only relevant for incubation
           samples.
         title: Incubation Start Time, GMT
@@ -3112,6 +3597,225 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
+      filter_method:
+        name: filter_method
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '13'
+        description: Type of filter used or how the sample was filtered
+        title: Filter Method
+        in_subset:
+        - MIxS Inspired Metadata, Required Where Applicable
+        see_also:
+        - MIxS:filter_type
+        string_serialization: '{text}'
+        recommended: true
+      experimental_factor_other:
+        name: experimental_factor_other
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '15'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: optional
+        description: Other details about your sample that you feel can't be accurately
+          represented in the available columns.
+        title: experimental factor- other
+        in_subset:
+        - MIxS Inspired Metadata, Required Where Applicable
+        see_also:
+        - MIxS:experimental_factor|additional_info
+        string_serialization: '{text}'
+        recommended: true
+      other_treatment:
+        name: other_treatment
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '25'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: treatment
+        description: Other treatments applied to your samples that are not applicable
+          to the provided fields
+        title: other treatments
+        in_subset:
+        - MIxS Inspired Metadata, Required Where Applicable
+        see_also:
+        - MIxS:additional_info
+        string_serialization: '{text}'
+        recommended: true
+      isotope_exposure:
+        name: isotope_exposure
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '26'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: treatment
+        description: List isotope exposure or addition applied to your sample.
+        title: isotope exposure/addition
+        in_subset:
+        - MIxS Inspired Metadata, Required Where Applicable
+        see_also:
+        - MIxS:chem_administration
+        string_serialization: '{termLabel} {[termID]}; {timestamp}'
+        recommended: true
+      unique_ID:
+        name: unique_ID
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '1'
+        description: A globally unique identifier assigned to the biological sample.
+        title: Globally Unique ID
+        comments:
+        - Identifiers must me prefixed. IGSNs (http://www.geosamples.org/getigsn)
+          are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally
+          unique but not FAIR. These IDs enable linking to derrived analytes and subsamples.
+        in_subset:
+        - Sample ID
+        see_also:
+        - NMDC:id
+        string_serialization: '{text}:{text}'
+        identifier: true
+        required: true
+      sample_name:
+        name: sample_name
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '2'
+        description: A local identifier or name that for the material sample collected.
+          Refers to the original material collected or to any derived sub-samples.
+        title: sample name
+        comments:
+        - It can have any format, but we suggest that you make it concise, unique
+          and consistent within your lab, and as informative as possible.
+        in_subset:
+        - Sample ID
+        see_also:
+        - MIxS:samp_name
+        string_serialization: '{text}'
+        required: true
+      env_package:
+        name: env_package
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '3'
+        description: Select the MIxS enviromental package that best describes the
+          environment from which your sample was collected.
+        title: environmental package
+        in_subset:
+        - Sample ID
+        string_serialization: enumeration
+        required: true
+      analysis_type:
+        name: analysis_type
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '4'
+        description: Select all the data types associated or available for this biosample
+        title: Analysis/Data Type
+        in_subset:
+        - Sample ID
+        see_also:
+        - MIxS:investigation_type
+        string_serialization: enumeration
+        multivalued: true
+        required: true
+      sample_link:
+        name: sample_link
+        annotations:
+          dh_col_ord:
+            tag: dh_col_ord
+            value: '5'
+        description: A unique identifier to assign parent-child, subsample, or sibling
+          samples. This is relevant when a sample or other material was used to generate
+          the new sample.
+        title: sample linkage
+        comments:
+        - 'This field allows multiple entries separated by ; (Examples: Soil collected
+          from the field will link with the soil used in an incubation. The soil a
+          plant was grown in links to the plant sample. An original culture sample
+          was transferred to a new vial and generated a new sample)'
+        in_subset:
+        - Sample ID
+        string_serialization: '{text}:{text}'
+        recommended: true
+      ecosystem:
+        name: ecosystem
+        description: An ecosystem is a combination of a physical environment (abiotic
+          factors) and all the organisms (biotic factors) that interact with this
+          environment. Ecosystem is in position 1/5 in a GOLD path.
+        comments:
+        - The abiotic factors play a profound role on the type and composition of
+          organisms in a given environment. The GOLD Ecosystem at the top of the five-level
+          classification system is aimed at capturing the broader environment from
+          which an organism or environmental sample is collected. The three broad
+          groups under Ecosystem are Environmental, Host-associated, and Engineered.
+          They represent samples collected from a natural environment or from another
+          organism or from engineered environments like bioreactors respectively.
+        from_schema: https://microbiomedata/schema
+        see_also:
+        - https://gold.jgi.doe.gov/help
+        is_a: gold_path_field
+        owner: biosample
+        range: ecosystem_enum
+      ecosystem_category:
+        name: ecosystem_category
+        description: Ecosystem categories represent divisions within the ecosystem
+          based on specific characteristics of the environment from where an organism
+          or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.
+        comments:
+        - The Environmental ecosystem (for example) is divided into Air, Aquatic and
+          Terrestrial. Ecosystem categories for Host-associated samples can be individual
+          hosts or phyla and for engineered samples it may be manipulated environments
+          like bioreactors, solid waste etc.
+        from_schema: https://microbiomedata/schema
+        see_also:
+        - https://gold.jgi.doe.gov/help
+        is_a: gold_path_field
+        owner: biosample
+        range: ecosystem_category_enum
+      ecosystem_subtype:
+        name: ecosystem_subtype
+        description: Ecosystem subtypes represent further subdivision of Ecosystem
+          types into more distinct subtypes. Ecosystem subtype is in position 4/5
+          in a GOLD path.
+        comments:
+        - Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided
+          (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc.
+          in the Ecosystem subtype category.
+        from_schema: https://microbiomedata/schema
+        see_also:
+        - https://gold.jgi.doe.gov/help
+        is_a: gold_path_field
+        owner: biosample
+        range: ecosystem_subtype_enum
+      ecosystem_type:
+        name: ecosystem_type
+        description: Ecosystem types represent things having common characteristics
+          within the Ecosystem Category. These common characteristics based grouping
+          is still broad but specific to the characteristics of a given environment.
+          Ecosystem type is in position 3/5 in a GOLD path.
+        comments:
+        - The Aquatic ecosystem category (for example) may have ecosystem types like
+          Marine or Thermal springs etc. Ecosystem category Air may have Indoor air
+          or Outdoor air as different Ecosystem Types. In the case of Host-associated
+          samples, ecosystem type can represent Respiratory system, Digestive system,
+          Roots etc.
+        from_schema: https://microbiomedata/schema
+        see_also:
+        - https://gold.jgi.doe.gov/help
+        is_a: gold_path_field
+        owner: biosample
+        range: ecosystem_type_enum
       specific_ecosystem:
         name: specific_ecosystem
         description: Specific ecosystems represent specific features of the environment
@@ -3125,7 +3829,7 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: string
+        range: specific_ecosystem_enum
       agrochem_addition:
         name: agrochem_addition
         aliases:
@@ -3379,6 +4083,8 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: biotic_relationship_enum
+        recommended: 'FALSE'
+        required: 'FALSE'
         string_serialization: enumeration
       carb_nitro_ratio:
         name: carb_nitro_ratio
@@ -3473,7 +4179,7 @@ classes:
             value: date and time
           column_order: '3'
           dh_section: Metadata- MIxS Modified Required
-          disposition: shuttle and modify
+          disposition: MAM changed new, skipped or "modified" to shuffle w or wo modification
           old_dh_slot: collection_date
         description: The date of sampling
         title: Collection Date
@@ -3486,7 +4192,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: date
-        required: true
+        required: 'TRUE'
         comments:
         - 2021-04-15, 2021-04 and 2021 are all acceptable.
         notes:
@@ -3609,7 +4315,7 @@ classes:
           categorical_subsection: required where applicable
           column_order: '9'
           dh_section: Metadata- MIxS Modified Required Where Applicable
-          disposition: shuttle and modify
+          disposition: MAM changed new, skipped or "modified" to shuffle w or wo modification
           old_dh_slot: depth
         description: The vertical distance below local surface, e.g. For sediment
           or soil samples depth is measured from sediment or soil surface, respectively.
@@ -3624,7 +4330,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        required: true
+        required: 'TRUE'
         comments:
         - All depths must be reported in meters. Provide the numerical portion only.
         notes:
@@ -3997,6 +4703,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
+        required: 'TRUE'
       heavy_metals:
         name: heavy_metals
         aliases:
@@ -4452,7 +5159,7 @@ classes:
           categorical_subsection: biogeochemistry
           column_order: '27'
           dh_section: Metadata- MIxS Modified Required Where Applicable
-          disposition: shuttle and modify
+          disposition: MAM changed new, skipped or "modified" to shuffle w or wo modification
           old_dh_slot: pH
         description: pH measurement of the sample, or liquid portion of sample, or
           aqueous phase of the fluid
@@ -4466,10 +5173,11 @@ classes:
         owner: soil MIMS
         range: double
         required: false
-        notes:
-        - Use modified term
         maximum_value: '14'
         minimum_value: '0.01'
+        notes:
+        - Use modified term
+        recommended: 'TRUE'
         string_serialization: '{float}'
       ph_meth:
         name: ph_meth
@@ -4537,6 +5245,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
+          column_order: '45'
           dh_section: Metadata- MIxS Optional
           disposition: initially shuttle as-is
         description: Reference or method used in determining previous land use and
@@ -4627,7 +5336,8 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: rel_to_oxygen_enum
-        required: false
+        required: 'FALSE'
+        recommended: 'FALSE'
         string_serialization: enumeration
       salinity:
         name: salinity
@@ -4714,7 +5424,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
+        recommended: 'TRUE'
         comments:
         - Report dimensions and details when applicable
       samp_collec_method:
@@ -4740,7 +5450,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
+        recommended: 'TRUE'
         comments:
         - This can be a citation or description
       samp_mat_process:
@@ -4768,7 +5478,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
+        recommended: 'TRUE'
       samp_size:
         name: samp_size
         aliases:
@@ -4797,7 +5507,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
+        recommended: 'TRUE'
         comments:
         - This refers to the TOTAL amount of sample collected from the experiment.
           NOT the amount sent to each institution or collected for a specific analysis.
@@ -5178,19 +5888,22 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-        description: Explain how and for how long the soil sample was stored before
-          DNA extraction (fresh/frozen/other).
+          column_order: '2'
+          dh_section: Metadata- MIxS Modified Required
+          disposition: shuttle and modify
+          old_dh_slot: storage_condt
+        description: Explain how the soil sample is stored (fresh/frozen/other).
         title: storage conditions
         examples:
         - value: -20 degree Celsius freezer;P2Y10D
         from_schema: http://w3id.org/mixs/terms
         is_a: core field
-        string_serialization: '{text};{duration}'
+        string_serialization: enumeration
         slot_uri: MIXS:0000327
         multivalued: false
         owner: soil MIMS
         range: string
-        required: false
+        required: 'TRUE'
       temp:
         name: temp
         aliases:
