@@ -1,7 +1,7 @@
 # sheets_and_friends
 Create a LinkML model with newly minted slots (via [schemasheets](https://github.com/linkml/schemasheets)), as-is imported slots (with [SchemaView](https://linkml.io/linkml/developers/manipulating-schemas.html)), or imported but modified slots (via [Mike Farah's yq](https://github.com/mikefarah/yq))
 
-The schemsheets content comes from [nmdc-dh-sheets](docs.google.com/spreadsheets/d/1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs) (as opposed to [Soil-NMDC-Template_Compiled](docs.google.com/spreadsheets/d/1pSmxX6XGOxmoA7S7rKyj5OaEl3PmAl4jAOlROuNHrU0))
+The schemsheets content comes from [nmdc-dh-sheets](https://docs.google.com/spreadsheets/d/1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs) (as opposed to [Soil-NMDC-Template_Compiled](docs.google.com/spreadsheets/d/1pSmxX6XGOxmoA7S7rKyj5OaEl3PmAl4jAOlROuNHrU0))
 
 When combined with [cidgoh/DataHarmonizer's linkml-datastructure branch](https://github.com/cidgoh/DataHarmonizer/tree/linkml-datastructure), this will largely replace [microbiomedata/DataHarmonizer](https://github.com/microbiomedata/DataHarmonizer)
 
