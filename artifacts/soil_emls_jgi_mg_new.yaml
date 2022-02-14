@@ -38,6 +38,44 @@ subsets:
     description: 'JGI fields: biosamples for metatranscriptomics studies'
     from_schema: https://example.com/mims_soil_biosample
 enums:
+  dna_dnase_enum:
+    name: dna_dnase_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      'no':
+        text: 'no'
+      'yes':
+        text: 'yes'
+  dnase_rna_enum:
+    name: dnase_rna_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      'no':
+        text: 'no'
+      'yes':
+        text: 'yes'
+  ecosystem_enum:
+    name: ecosystem_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Environmental:
+        text: Environmental
+  env_package_enum:
+    name: env_package_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      soil:
+        text: soil
+        notes:
+        - overriding mixs-source ?
+  sample_type_enum:
+    name: sample_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      soil:
+        text: soil
+      water_extract_soil:
+        text: water_extract_soil
   analysis_type_enum:
     name: analysis_type_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -52,22 +90,31 @@ enums:
         text: metatranscriptomics
       natural organic matter:
         text: natural organic matter
-  dna_cont_type:
-    name: dna_cont_type
+  dna_cont_type_enum:
+    name: dna_cont_type_enum
+    from_schema: https://example.com/mims_soil_biosample
     permissible_values:
       plate:
         text: plate
       tube:
         text: tube
-  dna_dnase:
-    name: dna_dnase
+  rna_cont_type_enum:
+    name: rna_cont_type_enum
+    from_schema: https://example.com/mims_soil_biosample
     permissible_values:
-      'no':
-        text: 'no'
-      'yes':
-        text: 'yes'
-  dna_sample_format:
-    name: dna_sample_format
+      plate:
+        text: plate
+      tube:
+        text: tube
+  ecosystem_type_enum:
+    name: ecosystem_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Soil:
+        text: Soil
+  dna_sample_format_enum:
+    name: dna_sample_format_enum
+    from_schema: https://example.com/mims_soil_biosample
     permissible_values:
       10 mM Tris-HCl:
         text: 10 mM Tris-HCl
@@ -89,25 +136,6 @@ enums:
         text: TE
       Water:
         text: Water
-  dnase_rna:
-    name: dnase_rna
-    permissible_values:
-      'no':
-        text: 'no'
-      'yes':
-        text: 'yes'
-  ecosystem_category_enum:
-    name: ecosystem_category_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Terrestrial:
-        text: Terrestrial
-  ecosystem_enum:
-    name: ecosystem_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Environmental:
-        text: Environmental
   ecosystem_subtype_enum:
     name: ecosystem_subtype_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -154,66 +182,9 @@ enums:
         text: Watershed
       Wetlands:
         text: Wetlands
-  ecosystem_type_enum:
-    name: ecosystem_type_enum
+  rna_sample_format_enum:
+    name: rna_sample_format_enum
     from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Soil:
-        text: Soil
-  env_package:
-    name: env_package
-    permissible_values:
-      soil:
-        text: soil
-  growth_facility:
-    name: growth_facility
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      experimental_garden:
-        text: experimental_garden
-      field:
-        text: field
-      field_incubation:
-        text: field_incubation
-      glasshouse:
-        text: glasshouse
-      greenhouse:
-        text: greenhouse
-      growth_chamber:
-        text: growth_chamber
-      lab_incubation:
-        text: lab_incubation
-      open_top_chamber:
-        text: open_top_chamber
-      other:
-        text: other
-  oxygen_relationship:
-    name: oxygen_relationship
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      aerobe:
-        text: aerobe
-      anaerobe:
-        text: anaerobe
-      facultative:
-        text: facultative
-      microaerophilic:
-        text: microaerophilic
-      microanaerobe:
-        text: microanaerobe
-      obligate aerobe:
-        text: obligate aerobe
-      obligate anaerobe:
-        text: obligate anaerobe
-  rna_cont_type:
-    name: rna_cont_type
-    permissible_values:
-      plate:
-        text: plate
-      tube:
-        text: tube
-  rna_sample_format:
-    name: rna_sample_format
     permissible_values:
       10 mM Tris-HCl:
         text: 10 mM Tris-HCl
@@ -235,12 +206,67 @@ enums:
         text: TE
       Water:
         text: Water
-  samp_biotic_relationship:
-    name: samp_biotic_relationship
+  ecosystem_category_enum:
+    name: ecosystem_category_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Terrestrial:
+        text: Terrestrial
+  growth_facil_enum:
+    name: growth_facil_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      experimental_garden:
+        text: experimental_garden
+        notes:
+        - 'see mixs growth_facil (string range according to mixs-source). old_dh_slot:
+          growth_facility'
+      field:
+        text: field
+      field_incubation:
+        text: field_incubation
+      glasshouse:
+        text: glasshouse
+      greenhouse:
+        text: greenhouse
+      growth_chamber:
+        text: growth_chamber
+      lab_incubation:
+        text: lab_incubation
+      open_top_chamber:
+        text: open_top_chamber
+      other:
+        text: other
+  rel_to_oxygen_enum:
+    name: rel_to_oxygen_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      aerobe:
+        text: aerobe
+        notes:
+        - 'rel_to_oxygen_enum: aerobe|anaerobe|facultative|microaerophilic|microanaerobe|obligate
+          aerobe|obligate anaerobe. old_dh_slot: oxygen_relationship'
+      anaerobe:
+        text: anaerobe
+      facultative:
+        text: facultative
+      microaerophilic:
+        text: microaerophilic
+      microanaerobe:
+        text: microanaerobe
+      obligate aerobe:
+        text: obligate aerobe
+      obligate anaerobe:
+        text: obligate anaerobe
+  biotic_relationship_enum:
+    name: biotic_relationship_enum
     from_schema: https://example.com/mims_soil_biosample
     permissible_values:
       commensalism:
         text: commensalism
+        notes:
+        - 'biotic_relationship_enum: free living|parasitism|commensalism|symbiotic|mutualism.
+          old_dh_slot: samp_biotic_relationship'
       free living:
         text: free living
       mutualism:
@@ -249,19 +275,15 @@ enums:
         text: parasitism
       symbiotic:
         text: symbiotic
-  sample_type:
-    name: sample_type
-    permissible_values:
-      soil:
-        text: soil
-      water_extract_soil:
-        text: water_extract_soil
-  storage_condt:
-    name: storage_condt
+  store_cond_enum:
+    name: store_cond_enum
     from_schema: https://example.com/mims_soil_biosample
     permissible_values:
       fresh:
         text: fresh
+        notes:
+        - 'see samp_store_dur, samp_store_loc, samp_store_temp and store_cond (which
+          takes a string range according to mixs-source). old_dh_slot: storage_condt'
       frozen:
         text: frozen
       lyophilized:
@@ -449,12 +471,6 @@ slots:
   isotope_exposure:
     name: isotope_exposure
     from_schema: https://example.com/mims_soil_biosample
-  unique_ID:
-    name: unique_ID
-    from_schema: https://example.com/mims_soil_biosample
-  sample_name:
-    name: sample_name
-    from_schema: https://example.com/mims_soil_biosample
   env_package:
     name: env_package
     from_schema: https://example.com/mims_soil_biosample
@@ -531,8 +547,6 @@ classes:
     - experimental_factor_other
     - other_treatment
     - isotope_exposure
-    - unique_ID
-    - sample_name
     - env_package
     - analysis_type
     - sample_link
@@ -730,6 +744,7 @@ classes:
         in_subset:
         - JGI metagenomics
         string_serialization: enumeration
+        range: dna_cont_type_enum
         required: true
       dna_cont_well:
         name: dna_cont_well
@@ -753,6 +768,7 @@ classes:
         in_subset:
         - JGI metagenomics
         string_serialization: enumeration
+        range: dna_sample_format_enum
         required: true
       dna_dnase:
         name: dna_dnase
@@ -764,6 +780,7 @@ classes:
         in_subset:
         - JGI metagenomics
         string_serialization: enumeration
+        range: dna_dnase_enum
         required: true
       dna_organisms:
         name: dna_organisms
@@ -954,6 +971,7 @@ classes:
         in_subset:
         - JGI metatranscriptomics
         string_serialization: enumeration
+        range: rna_cont_type_enum
         required: true
       rna_cont_well:
         name: rna_cont_well
@@ -988,6 +1006,7 @@ classes:
         in_subset:
         - JGI metatranscriptomics
         string_serialization: enumeration
+        range: dnase_rna_enum
         required: true
       rna_organisms:
         name: rna_organisms
@@ -1304,39 +1323,6 @@ classes:
         - MIxS:chem_administration
         string_serialization: '{termLabel} {[termID]}; {timestamp}'
         recommended: true
-      unique_ID:
-        name: unique_ID
-        annotations:
-          dh_col_ord: '1'
-        description: A globally unique identifier assigned to the biological sample.
-        title: Globally Unique ID
-        comments:
-        - Identifiers must me prefixed. IGSNs (http://www.geosamples.org/getigsn)
-          are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally
-          unique but not FAIR. These IDs enable linking to derrived analytes and subsamples.
-        in_subset:
-        - Sample ID
-        see_also:
-        - NMDC:id
-        string_serialization: '{text}:{text}'
-        identifier: true
-        required: true
-      sample_name:
-        name: sample_name
-        annotations:
-          dh_col_ord: '2'
-        description: A local identifier or name that for the material sample collected.
-          Refers to the original material collected or to any derived sub-samples.
-        title: sample name
-        comments:
-        - It can have any format, but we suggest that you make it concise, unique
-          and consistent within your lab, and as informative as possible.
-        in_subset:
-        - Sample ID
-        see_also:
-        - MIxS:samp_name
-        string_serialization: '{text}'
-        required: true
       env_package:
         name: env_package
         annotations:
@@ -1347,6 +1333,7 @@ classes:
         in_subset:
         - Sample ID
         string_serialization: enumeration
+        range: env_package_enum
         required: true
       analysis_type:
         name: analysis_type
@@ -1360,6 +1347,7 @@ classes:
         - MIxS:investigation_type
         string_serialization: enumeration
         multivalued: true
+        range: analysis_type_enum
         required: true
       sample_link:
         name: sample_link
