@@ -8,13 +8,6 @@ all: artifacts/soil_emls_jgi_mg_new.yaml
 .cogs:
 	poetry run cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
 
-clean:
-	rm -rf artifacts/*yaml
-	rm -rf target/*log
-
-squeaky_clean: clean
-	rm -rf .cogs
-
 # requires fetch step for satisfying dependencies?
 .cogs/tracked/%: .cogs
 	poetry run cogs add $(subst .tsv,,$(subst .cogs/tracked/,,$@))
@@ -23,11 +16,13 @@ squeaky_clean: clean
 cogs_fetch: .cogs
 	poetry run cogs fetch
 
-artifacts/soil_emls_jgi_mg_new.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/new_terms.tsv .cogs/tracked/sections.tsv .cogs/tracked/enums.tsv
+# .cogs/tracked/sections.tsv
+artifacts/soil_emls_jgi_mg_new.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/new_terms.tsv \
+  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> target/sheets2linkml.log
 
-artifacts/soil_emls_jgi_mg_new_shuttled.yaml: .cogs/tracked/imports_regardless.tsv artifacts/soil_emls_jgi_mg_new.yaml
+artifacts/soil_emls_jgi_mg_new_shuttled.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/soil_emls_jgi_mg_new.yaml
 	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2>> target/do_shuttle.log
 
 # clean? cogs_fetch?
@@ -36,3 +31,14 @@ artifacts/soil_emls_jgi_mg_new_shuttled_modified.yaml: .cogs/tracked/modificatio
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
 		--yaml_output $@  2>> target/mod_by_path.log
+
+clean:
+	rm -rf artifacts/*yaml
+	rm -rf target/*log
+
+squeaky_clean: clean
+	rm -rf .cogs
+
+# --exclude yaml
+project: clean artifacts/soil_emls_jgi_mg_new_shuttled_modified.yaml
+	poetry run gen-project --exclude shacl --exclude owl --dir $@ $(word 2,$^) 2>> target/project.log
