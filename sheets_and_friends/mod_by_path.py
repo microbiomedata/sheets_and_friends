@@ -11,6 +11,8 @@ import yaml
 from glom import glom, assign
 import glom.core as gc
 
+from linkml_runtime.utils.schemaview import SchemaView
+
 import pprint
 
 logger = logging.getLogger(__name__)
@@ -30,6 +32,11 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
     :return:
     """
 
+    # todo be defensive
+    # parameterize?
+
+    meta_view = SchemaView("https://w3id.org/linkml/meta")
+
     with open(yaml_input, 'r') as stream:
         try:
             schema_dict = yaml.safe_load(stream)
@@ -47,10 +54,20 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
             # update_path = None
             if i['action'] == "replace_attribute" and i['target'] != "" and i['target'] is not None:
                 update_path = i['target']
-                assign(obj=slot_usage_extract, path=update_path, val=i['value'])
+                fiddled_value = i['value']
+                from_meta = meta_view.get_slot(i['target'])
+                fm_range = from_meta.range
+                # update_path in ["identifier", "required", "recommended"]:
+                if fm_range == "boolean":
+                    fiddled_value = bool(i['value'])
+                assign(obj=slot_usage_extract, path=update_path, val=fiddled_value)
             elif i['action'] == "replace_annotation" and i['target'] != "" and i['target'] is not None:
-                update_path = f"annotations.{i['target']}"
-                assign(obj=slot_usage_extract, path=update_path, val=i['value'])
+                if "annotations" in slot_usage_extract:
+                    update_path = f"annotations.{i['target']}"
+                    assign(obj=slot_usage_extract, path=update_path, val=i['value'])
+                else:
+                    update_path = f"annotations"
+                    assign(obj=slot_usage_extract, path=update_path, val={i['target']: i['value']})
             elif i['action'] == "add_attribute" and i['target'] != "" and i['target'] is not None:
                 cv_path = i['target']
                 try:

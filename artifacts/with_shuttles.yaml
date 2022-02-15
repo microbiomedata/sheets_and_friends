@@ -50,6 +50,279 @@ enums:
         text: parasitism
       symbiotic:
         text: symbiotic
+  dna_cont_type_enum:
+    name: dna_cont_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      plate:
+        text: plate
+      tube:
+        text: tube
+  dna_dnase_enum:
+    name: dna_dnase_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      'no':
+        text: 'no'
+      'yes':
+        text: 'yes'
+  dna_sample_format_enum:
+    name: dna_sample_format_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      10 mM Tris-HCl:
+        text: 10 mM Tris-HCl
+      DNAStable:
+        text: DNAStable
+      Ethanol:
+        text: Ethanol
+      Low EDTA TE:
+        text: Low EDTA TE
+      MDA reaction buffer:
+        text: MDA reaction buffer
+      PBS:
+        text: PBS
+      Pellet:
+        text: Pellet
+      RNAStable:
+        text: RNAStable
+      TE:
+        text: TE
+      Water:
+        text: Water
+  dnase_rna_enum:
+    name: dnase_rna_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      'no':
+        text: 'no'
+      'yes':
+        text: 'yes'
+  ecosystem_category_enum:
+    name: ecosystem_category_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Terrestrial:
+        text: Terrestrial
+  ecosystem_enum:
+    name: ecosystem_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Environmental:
+        text: Environmental
+  ecosystem_subtype_enum:
+    name: ecosystem_subtype_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Biocrust:
+        text: Biocrust
+      Biofilm:
+        text: Biofilm
+      Bulk soil:
+        text: Bulk soil
+      Clay:
+        text: Clay
+      Floodplain:
+        text: Floodplain
+      Fossil:
+        text: Fossil
+      Glacier:
+        text: Glacier
+      Loam:
+        text: Loam
+      Mineral horizon:
+        text: Mineral horizon
+      Nature reserve:
+        text: Nature reserve
+      Organic layer:
+        text: Organic layer
+      Paddy field/soil:
+        text: Paddy field/soil
+      Pasture:
+        text: Pasture
+      Peat:
+        text: Peat
+      Ranch:
+        text: Ranch
+      Sand:
+        text: Sand
+      Silt:
+        text: Silt
+      Soil crust:
+        text: Soil crust
+      Unclassified:
+        text: Unclassified
+      Watershed:
+        text: Watershed
+      Wetlands:
+        text: Wetlands
+  ecosystem_type_enum:
+    name: ecosystem_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Soil:
+        text: Soil
+  env_package_enum:
+    name: env_package_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      soil:
+        text: soil
+        notes:
+        - overriding mixs-source ?
+  growth_facil_enum:
+    name: growth_facil_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      experimental_garden:
+        text: experimental_garden
+        notes:
+        - 'see mixs growth_facil (string range according to mixs-source). old_dh_slot:
+          growth_facility'
+      field:
+        text: field
+      field_incubation:
+        text: field_incubation
+      glasshouse:
+        text: glasshouse
+      greenhouse:
+        text: greenhouse
+      growth_chamber:
+        text: growth_chamber
+      lab_incubation:
+        text: lab_incubation
+      open_top_chamber:
+        text: open_top_chamber
+      other:
+        text: other
+  rel_to_oxygen_enum:
+    name: rel_to_oxygen_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      aerobe:
+        text: aerobe
+        notes:
+        - 'rel_to_oxygen_enum: aerobe|anaerobe|facultative|microaerophilic|microanaerobe|obligate
+          aerobe|obligate anaerobe. old_dh_slot: oxygen_relationship'
+      anaerobe:
+        text: anaerobe
+      facultative:
+        text: facultative
+      microaerophilic:
+        text: microaerophilic
+      microanaerobe:
+        text: microanaerobe
+      obligate aerobe:
+        text: obligate aerobe
+      obligate anaerobe:
+        text: obligate anaerobe
+  rna_cont_type_enum:
+    name: rna_cont_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      plate:
+        text: plate
+      tube:
+        text: tube
+  rna_sample_format_enum:
+    name: rna_sample_format_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      10 mM Tris-HCl:
+        text: 10 mM Tris-HCl
+      DNAStable:
+        text: DNAStable
+      Ethanol:
+        text: Ethanol
+      Low EDTA TE:
+        text: Low EDTA TE
+      MDA reaction buffer:
+        text: MDA reaction buffer
+      PBS:
+        text: PBS
+      Pellet:
+        text: Pellet
+      RNAStable:
+        text: RNAStable
+      TE:
+        text: TE
+      Water:
+        text: Water
+  sample_type_enum:
+    name: sample_type_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      soil:
+        text: soil
+      water_extract_soil:
+        text: water_extract_soil
+  specific_ecosystem_enum:
+    name: specific_ecosystem_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      Agricultural:
+        text: Agricultural
+      Agricultural land:
+        text: Agricultural land
+      Agricultural soil:
+        text: Agricultural soil
+      Alpine:
+        text: Alpine
+      Bog:
+        text: Bog
+      Boreal forest:
+        text: Boreal forest
+      Contaminated:
+        text: Contaminated
+      Desert:
+        text: Desert
+      Farm:
+        text: Farm
+      Forest soil:
+        text: Forest soil
+      Forest Soil:
+        text: Forest Soil
+      Grasslands:
+        text: Grasslands
+      Meadow:
+        text: Meadow
+      Mine:
+        text: Mine
+      Mine drainage:
+        text: Mine drainage
+      Oil-contaminated:
+        text: Oil-contaminated
+      Orchard soil:
+        text: Orchard soil
+      Permafrost:
+        text: Permafrost
+      Riparian soil:
+        text: Riparian soil
+      River:
+        text: River
+      Shrubland:
+        text: Shrubland
+      Tropical rainforest:
+        text: Tropical rainforest
+      Unclassified:
+        text: Unclassified
+      Uranium contaminated:
+        text: Uranium contaminated
+  store_cond_enum:
+    name: store_cond_enum
+    from_schema: https://example.com/mims_soil_biosample
+    permissible_values:
+      fresh:
+        text: fresh
+        notes:
+        - 'see samp_store_dur, samp_store_loc, samp_store_temp and store_cond (which
+          takes a string range according to mixs-source). old_dh_slot: storage_condt'
+      frozen:
+        text: frozen
+      lyophilized:
+        text: lyophilized
+      other:
+        text: other
   cur_land_use_enum:
     name: cur_land_use_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -195,54 +468,6 @@ enums:
         text: vine crops (grapes)
         notes:
         - placeholder for dependency
-  dna_cont_type_enum:
-    name: dna_cont_type_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      plate:
-        text: plate
-      tube:
-        text: tube
-  dna_dnase_enum:
-    name: dna_dnase_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      'no':
-        text: 'no'
-      'yes':
-        text: 'yes'
-  dna_sample_format_enum:
-    name: dna_sample_format_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      10 mM Tris-HCl:
-        text: 10 mM Tris-HCl
-      DNAStable:
-        text: DNAStable
-      Ethanol:
-        text: Ethanol
-      Low EDTA TE:
-        text: Low EDTA TE
-      MDA reaction buffer:
-        text: MDA reaction buffer
-      PBS:
-        text: PBS
-      Pellet:
-        text: Pellet
-      RNAStable:
-        text: RNAStable
-      TE:
-        text: TE
-      Water:
-        text: Water
-  dnase_rna_enum:
-    name: dnase_rna_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      'no':
-        text: 'no'
-      'yes':
-        text: 'yes'
   drainage_class_enum:
     name: drainage_class_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -271,78 +496,6 @@ enums:
         text: well
         notes:
         - placeholder for dependency
-  ecosystem_category_enum:
-    name: ecosystem_category_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Terrestrial:
-        text: Terrestrial
-  ecosystem_enum:
-    name: ecosystem_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Environmental:
-        text: Environmental
-  ecosystem_subtype_enum:
-    name: ecosystem_subtype_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Biocrust:
-        text: Biocrust
-      Biofilm:
-        text: Biofilm
-      Bulk soil:
-        text: Bulk soil
-      Clay:
-        text: Clay
-      Floodplain:
-        text: Floodplain
-      Fossil:
-        text: Fossil
-      Glacier:
-        text: Glacier
-      Loam:
-        text: Loam
-      Mineral horizon:
-        text: Mineral horizon
-      Nature reserve:
-        text: Nature reserve
-      Organic layer:
-        text: Organic layer
-      Paddy field/soil:
-        text: Paddy field/soil
-      Pasture:
-        text: Pasture
-      Peat:
-        text: Peat
-      Ranch:
-        text: Ranch
-      Sand:
-        text: Sand
-      Silt:
-        text: Silt
-      Soil crust:
-        text: Soil crust
-      Unclassified:
-        text: Unclassified
-      Watershed:
-        text: Watershed
-      Wetlands:
-        text: Wetlands
-  ecosystem_type_enum:
-    name: ecosystem_type_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Soil:
-        text: Soil
-  env_package_enum:
-    name: env_package_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      soil:
-        text: soil
-        notes:
-        - overriding mixs-source ?
   fao_class_enum:
     name: fao_class_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -451,31 +604,6 @@ enums:
         text: Yermosols
         notes:
         - placeholder for dependency
-  growth_facil_enum:
-    name: growth_facil_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      experimental_garden:
-        text: experimental_garden
-        notes:
-        - 'see mixs growth_facil (string range according to mixs-source). old_dh_slot:
-          growth_facility'
-      field:
-        text: field
-      field_incubation:
-        text: field_incubation
-      glasshouse:
-        text: glasshouse
-      greenhouse:
-        text: greenhouse
-      growth_chamber:
-        text: growth_chamber
-      lab_incubation:
-        text: lab_incubation
-      open_top_chamber:
-        text: open_top_chamber
-      other:
-        text: other
   oxy_stat_samp_enum:
     name: oxy_stat_samp_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -516,67 +644,6 @@ enums:
         text: toeslope
         notes:
         - placeholder for dependency
-  rel_to_oxygen_enum:
-    name: rel_to_oxygen_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      aerobe:
-        text: aerobe
-        notes:
-        - 'rel_to_oxygen_enum: aerobe|anaerobe|facultative|microaerophilic|microanaerobe|obligate
-          aerobe|obligate anaerobe. old_dh_slot: oxygen_relationship'
-      anaerobe:
-        text: anaerobe
-      facultative:
-        text: facultative
-      microaerophilic:
-        text: microaerophilic
-      microanaerobe:
-        text: microanaerobe
-      obligate aerobe:
-        text: obligate aerobe
-      obligate anaerobe:
-        text: obligate anaerobe
-  rna_cont_type_enum:
-    name: rna_cont_type_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      plate:
-        text: plate
-      tube:
-        text: tube
-  rna_sample_format_enum:
-    name: rna_sample_format_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      10 mM Tris-HCl:
-        text: 10 mM Tris-HCl
-      DNAStable:
-        text: DNAStable
-      Ethanol:
-        text: Ethanol
-      Low EDTA TE:
-        text: Low EDTA TE
-      MDA reaction buffer:
-        text: MDA reaction buffer
-      PBS:
-        text: PBS
-      Pellet:
-        text: Pellet
-      RNAStable:
-        text: RNAStable
-      TE:
-        text: TE
-      Water:
-        text: Water
-  sample_type_enum:
-    name: sample_type_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      soil:
-        text: soil
-      water_extract_soil:
-        text: water_extract_soil
   soil_horizon_enum:
     name: soil_horizon_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -609,73 +676,6 @@ enums:
         text: R layer
         notes:
         - placeholder for dependency
-  specific_ecosystem_enum:
-    name: specific_ecosystem_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      Agricultural:
-        text: Agricultural
-      Agricultural land:
-        text: Agricultural land
-      Agricultural soil:
-        text: Agricultural soil
-      Alpine:
-        text: Alpine
-      Bog:
-        text: Bog
-      Boreal forest:
-        text: Boreal forest
-      Contaminated:
-        text: Contaminated
-      Desert:
-        text: Desert
-      Farm:
-        text: Farm
-      Forest soil:
-        text: Forest soil
-      Forest Soil:
-        text: Forest Soil
-      Grasslands:
-        text: Grasslands
-      Meadow:
-        text: Meadow
-      Mine:
-        text: Mine
-      Mine drainage:
-        text: Mine drainage
-      Oil-contaminated:
-        text: Oil-contaminated
-      Orchard soil:
-        text: Orchard soil
-      Permafrost:
-        text: Permafrost
-      Riparian soil:
-        text: Riparian soil
-      River:
-        text: River
-      Shrubland:
-        text: Shrubland
-      Tropical rainforest:
-        text: Tropical rainforest
-      Unclassified:
-        text: Unclassified
-      Uranium contaminated:
-        text: Uranium contaminated
-  store_cond_enum:
-    name: store_cond_enum
-    from_schema: https://example.com/mims_soil_biosample
-    permissible_values:
-      fresh:
-        text: fresh
-        notes:
-        - 'see samp_store_dur, samp_store_loc, samp_store_temp and store_cond (which
-          takes a string range according to mixs-source). old_dh_slot: storage_condt'
-      frozen:
-        text: frozen
-      lyophilized:
-        text: lyophilized
-      other:
-        text: other
   tillage_enum:
     name: tillage_enum
     from_schema: https://example.com/mims_soil_biosample
@@ -905,6 +905,15 @@ slots:
     from_schema: https://example.com/mims_soil_biosample
   sample_link:
     name: sample_link
+    from_schema: https://example.com/mims_soil_biosample
+  has unit:
+    name: has unit
+    from_schema: https://example.com/mims_soil_biosample
+  has numeric value:
+    name: has numeric value
+    from_schema: https://example.com/mims_soil_biosample
+  has raw value:
+    name: has raw value
     from_schema: https://example.com/mims_soil_biosample
   ecosystem:
     name: ecosystem
@@ -6574,10 +6583,6 @@ classes:
     name: dh_section
     description: A section (ie group if columns) within a DataHarmonizer interface
     from_schema: https://example.com/mims_soil_biosample
-  quantity value:
-    name: quantity value
-    description: placeholder for dependency
-    from_schema: https://example.com/mims_soil_biosample
   Sample ID:
     name: Sample ID
     annotations:
@@ -6671,4 +6676,33 @@ classes:
         value: '11'
     from_schema: https://example.com/mims_soil_biosample
     is_a: dh_section
-source_file: artifacts/soil_emls_jgi_mg_new.yaml
+  quantity value:
+    name: quantity value
+    description: used to record a measurement
+    notes:
+    - placeholder for dependency
+    from_schema: https://example.com/mims_soil_biosample
+    slots:
+    - has unit
+    - has numeric value
+    - has raw value
+    slot_usage:
+      has unit:
+        name: has unit
+        description: Example "m"
+        notes:
+        - placeholder for dependency
+        from_schema: http://w3id.org/mixs/ranges
+      has numeric value:
+        name: has numeric value
+        notes:
+        - placeholder for dependency
+        from_schema: http://w3id.org/mixs/ranges
+        range: double
+      has raw value:
+        name: has raw value
+        notes:
+        - placeholder for dependency
+        from_schema: http://w3id.org/mixs/ranges
+        string_serialization: '{has numeric value} {has unit}'
+source_file: artifacts/from_sheets2linkml.yaml

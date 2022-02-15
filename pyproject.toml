@@ -10,6 +10,8 @@ python = "^3.9"
 schemasheets = "^0.1.7"
 click_log = "*"
 glom = "^22.1.0"
+pygsheets = "^2.0.5"
+pandasql = "^0.7.3"
 
 [tool.poetry.dev-dependencies]
 
@@ -20,3 +22,4 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 do_shuttle = "sheets_and_friends.shuttle:do_shuttle"
 mod_by_path = "sheets_and_friends.mod_by_path:mod_by_path"
+linkml2dataharmonizer = "sheets_and_friends.converters.commands:linkml2dataharmonizer"

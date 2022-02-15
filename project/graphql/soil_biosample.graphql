@@ -1,0 +1,220 @@
+type DhSection
+  {
+  }
+
+type EMSL
+  {
+  }
+
+type JGI-Metagenomics
+  {
+  }
+
+type JGI-Metatranscriptomics
+  {
+  }
+
+type Metadata-MIxSModifiedOptional
+  {
+  }
+
+type Metadata-MIxSModifiedRequired
+  {
+  }
+
+type Metadata-MIxSModifiedRequiredWhereApplicable
+  {
+  }
+
+type Metadata-MIxSOptional
+  {
+  }
+
+type Metadata-MIxSRequired
+  {
+  }
+
+type Metadata-MIxSRequiredWhereApplicable
+  {
+  }
+
+type NMDCFieldsEsp.GOLDPaths
+  {
+  }
+
+type QuantityValue
+  {
+    hasUnit: String
+    hasNumericValue: Double
+    hasRawValue: String
+  }
+
+type SampleID
+  {
+  }
+
+type SoilEmslJgiMg
+  {
+    projectID: String!
+    sampleType: String!
+    sampleShipped: String!
+    eMSLStoreTemp: String!
+    technicalReps: String
+    replicateNumber: String
+    dnaSeqProject: String!
+    dnaSeqProjectName: String!
+    dnaSampID: String!
+    dnaSampleName: String!
+    dnaConcentration: String!
+    dnaVolume: String!
+    dnaAbsorb1: String!
+    dnaAbsorb2: String
+    dnaContainerID: String!
+    dnaContType: DnaContTypeEnum!
+    dnaContWell: String!
+    dnaSampleFormat: DnaSampleFormatEnum!
+    dnaDnase: DnaDnaseEnum!
+    dnaOrganisms: String
+    dnaCollectSite: String!
+    dnaIsolateMeth: String!
+    dnaSeqProjectPI: String!
+    dnaProjectContact: String!
+    proposalDna: String!
+    rnaSeqProject: String!
+    rnaSeqProjectName: String!
+    rnaSampID: String!
+    rnaSampleName: String!
+    rnaConcentration: String!
+    rnaVolume: String!
+    rnaAbsorb1: String!
+    rnaAbsorb2: String
+    rnaContainerID: String!
+    rnaContType: RnaContTypeEnum!
+    rnaContWell: String!
+    rnaSampleFormat: String!
+    dnaseRna: DnaseRnaEnum!
+    rnaOrganisms: String
+    rnaCollectSite: String!
+    rnaIsolateMeth: String!
+    rnaSeqProjectPI: String!
+    rnaProjectContact: String!
+    proposalRna: String!
+    nonMicrobBiomass: String
+    nonMicrobBiomassMethod: String
+    microbialBiomassC: String
+    microBiomassCMeth: String
+    microbialBiomassN: String
+    microBiomassNMeth: String
+    orgNitroMethod: String
+    collectionTime: String
+    collectionDateInc: String
+    collectionTimeInc: String
+    startDateInc: String
+    startTimeInc: String
+    filterMethod: String
+    experimentalFactorOther: String
+    otherTreatment: String
+    isotopeExposure: String
+    envPackage: EnvPackageEnum!
+    analysisType: [AnalysisTypeEnum]!
+    sampleLink: String
+    ecosystem: String
+    ecosystemCategory: String
+    ecosystemSubtype: String
+    ecosystemType: String
+    specificEcosystem: String
+    goldPathField: String
+    environmentField: String
+    coreField: String
+    nucleicAcidSequenceSourceField: String
+    investigationField: String
+    agrochemAddition: [String]
+    airTempRegm: [String]
+    alSat: QuantityValue
+    alSatMeth: String
+    alt: QuantityValue
+    annualPrecpt: QuantityValue
+    annualTemp: QuantityValue
+    bioticRegm: String
+    bioticRelationship: BioticRelationshipEnum
+    carbNitroRatio: QuantityValue
+    chemAdministration: [String]
+    climateEnvironment: [String]
+    collectionDate: Date!
+    cropRotation: String
+    curLandUse: CurLandUseEnum
+    curVegetation: String
+    curVegetationMeth: String
+    depth: QuantityValue!
+    drainageClass: DrainageClassEnum
+    elev: QuantityValue!
+    envBroadScale: String!
+    envLocalScale: String!
+    envMedium: String!
+    experimentalFactor: String
+    extremeEvent: Date
+    faoClass: FaoClassEnum
+    fire: Date
+    flooding: Date
+    gaseousEnvironment: [String]
+    geoLocName: String!
+    growthFacil: String
+    heavyMetals: [String]
+    heavyMetalsMeth: String
+    horizonMeth: String
+    humidityRegm: [String]
+    latLon: String!
+    lightRegm: String
+    linkClassInfo: String
+    linkClimateInfo: String
+    localClass: String
+    localClassMeth: String
+    microBiomassMeth: String
+    microbialBiomass: QuantityValue
+    miscParam: [String]
+    orgMatter: QuantityValue
+    orgNitro: QuantityValue
+    oxyStatSamp: OxyStatSampEnum
+    ph: Double
+    phMeth: String
+    phosphate: QuantityValue
+    prevLandUseMeth: String
+    previousLandUse: String
+    profilePosition: ProfilePositionEnum
+    relToOxygen: RelToOxygenEnum
+    salinity: QuantityValue
+    salinityMeth: String
+    sampCollecDevice: String
+    sampCollecMethod: String
+    sampMatProcess: String
+    sampName: String!
+    sampSize: QuantityValue
+    sampStoreTemp: QuantityValue
+    seasonPrecpt: QuantityValue
+    seasonTemp: QuantityValue
+    sieving: String
+    sizeFracLow: QuantityValue
+    sizeFracUp: QuantityValue
+    slopeAspect: QuantityValue
+    slopeGradient: QuantityValue
+    soilHorizon: SoilHorizonEnum
+    soilTextMeasure: QuantityValue
+    soilTextureMeth: String
+    soilType: String
+    soilTypeMeth: String
+    sourceMatId: String
+    storeCond: String
+    temp: QuantityValue
+    tillage: [TillageEnum]
+    totCarb: QuantityValue
+    totNitroContMeth: String
+    totNitroContent: QuantityValue
+    totOrgCMeth: String
+    totOrgCarb: QuantityValue
+    totPhosp: QuantityValue
+    waterContSoilMeth: String
+    waterContent: QuantityValue
+    wateringRegm: [String]
+    attribute: String
+  }
+
