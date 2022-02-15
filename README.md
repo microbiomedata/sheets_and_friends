@@ -22,7 +22,7 @@ This will also provide better support for single LinkML files representing multi
 - [install the poetry **application**](https://python-poetry.org/docs/#installation) if necessary
 - `poetry install` (for installing **dependencies**)
 
-This repo uses [turbomam/mixs-source](https://github.com/turbomam/mixs-source) and [microbiomedata/nmdc-schema](https://github.com/microbiomedata/nmdc-schema) as [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+This repo uses [cidgoh/DataHarmonizer](https://github.com/cidgoh/DataHarmonizer), [turbomam/mixs-source](https://github.com/turbomam/mixs-source) and [microbiomedata/nmdc-schema](https://github.com/microbiomedata/nmdc-schema) as [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 one-time, post-cloning submodule steps:
 - `git submodule init`
@@ -33,7 +33,7 @@ _TODO: how to keep these up to date?_
 ## running
 - `make all`
 - Navigate to the `DataHarmonizer` directory and double-click on `main.html` to open it in your browser
-- Add `?template=soil_emsl_jgi_mg` to the right-hand side of the address bar and ht enter
+- Add `?template=soil_emsl_jgi_mg` to the right-hand side of the address bar and hit enter
 - Use File->Open in the DataHarmonizer menu to load `DataHarmonizer/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_export.tsv`
 - Click the Validate button
 - Play around with the example values and try validating again
