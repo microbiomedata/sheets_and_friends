@@ -232,6 +232,14 @@
          "title": "FaoClassEnum",
          "type": "string"
       },
+      "GOLDEcosystemPath": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {},
+         "required": [],
+         "title": "GOLDEcosystemPath",
+         "type": "object"
+      },
       "GrowthFacilEnum": {
          "description": "",
          "enum": [
@@ -312,14 +320,6 @@
          "title": "Metadata-MIxSRequiredWhereApplicable",
          "type": "object"
       },
-      "NMDCFieldsEsp.GOLDPaths": {
-         "additionalProperties": false,
-         "description": "",
-         "properties": {},
-         "required": [],
-         "title": "NMDCFieldsEsp.GOLDPaths",
-         "type": "object"
-      },
       "OxyStatSampEnum": {
          "description": "",
          "enum": [
@@ -329,6 +329,19 @@
          ],
          "title": "OxyStatSampEnum",
          "type": "string"
+      },
+      "PlaceholderClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "investigation_field": {
+               "description": "field describing aspect of the investigation/study to which the sample belongs",
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "PlaceholderClass",
+         "type": "object"
       },
       "ProfilePositionEnum": {
          "description": "",
@@ -467,10 +480,6 @@
                "$ref": "#/$defs/QuantityValue",
                "description": "Mean annual temperature"
             },
-            "attribute": {
-               "description": "A attribute of a biosample. Examples: depth, habitat, material. For NMDC, attributes SHOULD be mapped to terms within a MIxS template",
-               "type": "string"
-            },
             "biotic_regm": {
                "description": "Information about treatment(s) involving use of biotic factors, such as bacteria, viruses or fungi.",
                "type": "string"
@@ -512,10 +521,6 @@
             },
             "collection_time_inc": {
                "description": "Time the incubation was harvested/collected/ended. Only relevant for incubation samples.",
-               "type": "string"
-            },
-            "core_field": {
-               "description": "basic fields",
                "type": "string"
             },
             "crop_rotation": {
@@ -604,9 +609,6 @@
                "minimum": 0,
                "type": "string"
             },
-            "dnase_rna": {
-               "$ref": "#/$defs/DnaseRnaEnum"
-            },
             "drainage_class": {
                "$ref": "#/$defs/DrainageClassEnum",
                "description": "Drainage classification from a standard system such as the USDA system"
@@ -646,10 +648,6 @@
             "env_package": {
                "$ref": "#/$defs/EnvPackageEnum",
                "description": "Select the MIxS enviromental package that best describes the environment from which your sample was collected."
-            },
-            "environment_field": {
-               "description": "field describing environmental aspect of a sample",
-               "type": "string"
             },
             "experimental_factor": {
                "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI",
@@ -693,10 +691,6 @@
                "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
                "type": "string"
             },
-            "gold_path_field": {
-               "description": "This is a grouping for any of the gold path fields          ",
-               "type": "string"
-            },
             "growth_facil": {
                "description": "Type of facility where the sampled plant was grown; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field. Alternatively use Crop Ontology (CO) terms, see http://www.cropontology.org/ontology/CO_715/Crop%20Research",
                "type": "string"
@@ -722,10 +716,6 @@
                   "type": "string"
                },
                "type": "array"
-            },
-            "investigation_field": {
-               "description": "field describing aspect of the investigation/study to which the sample belongs",
-               "type": "string"
             },
             "isotope_exposure": {
                "description": "List isotope exposure or addition applied to your sample.",
@@ -794,9 +784,6 @@
                "description": "Reference or method used in determining biomass",
                "type": "string"
             },
-            "nucleic_acid_sequence_source_field": {
-               "type": "string"
-            },
             "org_matter": {
                "$ref": "#/$defs/QuantityValue",
                "description": "Concentration of organic matter"
@@ -848,78 +835,12 @@
             "proposal_dna": {
                "type": "string"
             },
-            "proposal_rna": {
-               "type": "string"
-            },
             "rel_to_oxygen": {
                "$ref": "#/$defs/RelToOxygenEnum",
                "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments"
             },
             "replicate_number": {
                "description": "If sending biological replicates, indicate the rep number here.",
-               "type": "string"
-            },
-            "rna_absorb1": {
-               "description": "260/280 measurement of RNA sample purity",
-               "type": "string"
-            },
-            "rna_absorb2": {
-               "description": "260/230 measurement of RNA sample purity",
-               "type": "string"
-            },
-            "rna_collect_site": {
-               "description": "Provide information on the site your RNA sample was collected from",
-               "type": "string"
-            },
-            "rna_concentration": {
-               "maximum": 1000,
-               "minimum": 0,
-               "type": "string"
-            },
-            "rna_cont_type": {
-               "$ref": "#/$defs/RnaContTypeEnum",
-               "description": "Tube or plate (96-well)"
-            },
-            "rna_cont_well": {
-               "type": "string"
-            },
-            "rna_container_ID": {
-               "type": "string"
-            },
-            "rna_isolate_meth": {
-               "description": "Describe the method/protocol/kit used to extract DNA/RNA.",
-               "type": "string"
-            },
-            "rna_organisms": {
-               "description": "List any organisms known or suspected to grow in co-culture, as well as estimated % of the organism in that culture.",
-               "type": "string"
-            },
-            "rna_project_contact": {
-               "type": "string"
-            },
-            "rna_samp_ID": {
-               "type": "string"
-            },
-            "rna_sample_format": {
-               "description": "Solution in which the RNA sample has been suspended",
-               "type": "string"
-            },
-            "rna_sample_name": {
-               "description": "Give the RNA sample a name that is meaningful to you. Sample names must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.",
-               "maximum": 2000,
-               "minimum": 0,
-               "type": "string"
-            },
-            "rna_seq_project": {
-               "type": "string"
-            },
-            "rna_seq_project_PI": {
-               "type": "string"
-            },
-            "rna_seq_project_name": {
-               "type": "string"
-            },
-            "rna_volume": {
                "type": "string"
             },
             "salinity": {
@@ -963,8 +884,8 @@
                "type": "string"
             },
             "sample_type": {
-               "description": "Type of sample being submitted",
-               "type": "string"
+               "$ref": "#/$defs/SampleTypeEnum",
+               "description": "Type of sample being submitted"
             },
             "season_precpt": {
                "$ref": "#/$defs/QuantityValue",
@@ -1090,46 +1011,29 @@
             }
          },
          "required": [
-            "project_ID",
-            "sample_type",
-            "sample_shipped",
+            "dna_cont_well",
             "EMSL_store_temp",
+            "dna_concentration",
+            "dna_volume",
+            "dna_absorb1",
+            "sample_shipped",
+            "dna_container_ID",
+            "project_ID",
             "dna_seq_project",
             "dna_seq_project_name",
             "dna_samp_ID",
             "dna_sample_name",
-            "dna_concentration",
-            "dna_volume",
-            "dna_absorb1",
-            "dna_container_ID",
-            "dna_cont_type",
-            "dna_cont_well",
-            "dna_sample_format",
-            "dna_dnase",
             "dna_collect_site",
             "dna_isolate_meth",
             "dna_seq_project_PI",
             "dna_project_contact",
             "proposal_dna",
-            "rna_seq_project",
-            "rna_seq_project_name",
-            "rna_samp_ID",
-            "rna_sample_name",
-            "rna_concentration",
-            "rna_volume",
-            "rna_absorb1",
-            "rna_container_ID",
-            "rna_cont_type",
-            "rna_cont_well",
-            "rna_sample_format",
-            "dnase_rna",
-            "rna_collect_site",
-            "rna_isolate_meth",
-            "rna_seq_project_PI",
-            "rna_project_contact",
-            "proposal_rna",
-            "env_package",
             "analysis_type",
+            "sample_type",
+            "dna_cont_type",
+            "dna_sample_format",
+            "dna_dnase",
+            "env_package",
             "collection_date",
             "depth",
             "elev",
@@ -1141,6 +1045,102 @@
             "samp_name"
          ],
          "title": "SoilEmslJgiMg",
+         "type": "object"
+      },
+      "SoilEmslJgiMt": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "dnase_rna": {
+               "$ref": "#/$defs/DnaseRnaEnum"
+            },
+            "proposal_rna": {
+               "type": "string"
+            },
+            "rna_absorb1": {
+               "description": "260/280 measurement of RNA sample purity",
+               "type": "string"
+            },
+            "rna_absorb2": {
+               "description": "260/230 measurement of RNA sample purity",
+               "type": "string"
+            },
+            "rna_collect_site": {
+               "description": "Provide information on the site your RNA sample was collected from",
+               "type": "string"
+            },
+            "rna_concentration": {
+               "maximum": 1000,
+               "minimum": 0,
+               "type": "string"
+            },
+            "rna_cont_type": {
+               "$ref": "#/$defs/RnaContTypeEnum",
+               "description": "Tube or plate (96-well)"
+            },
+            "rna_cont_well": {
+               "type": "string"
+            },
+            "rna_container_ID": {
+               "type": "string"
+            },
+            "rna_isolate_meth": {
+               "description": "Describe the method/protocol/kit used to extract DNA/RNA.",
+               "type": "string"
+            },
+            "rna_organisms": {
+               "description": "List any organisms known or suspected to grow in co-culture, as well as estimated % of the organism in that culture.",
+               "type": "string"
+            },
+            "rna_project_contact": {
+               "type": "string"
+            },
+            "rna_samp_ID": {
+               "type": "string"
+            },
+            "rna_sample_format": {
+               "$ref": "#/$defs/RnaSampleFormatEnum",
+               "description": "Solution in which the RNA sample has been suspended"
+            },
+            "rna_sample_name": {
+               "description": "Give the RNA sample a name that is meaningful to you. Sample names must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.",
+               "maximum": 2000,
+               "minimum": 0,
+               "type": "string"
+            },
+            "rna_seq_project": {
+               "type": "string"
+            },
+            "rna_seq_project_PI": {
+               "type": "string"
+            },
+            "rna_seq_project_name": {
+               "type": "string"
+            },
+            "rna_volume": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "rna_cont_well",
+            "rna_concentration",
+            "rna_volume",
+            "rna_absorb1",
+            "rna_seq_project",
+            "rna_seq_project_name",
+            "rna_samp_ID",
+            "rna_sample_name",
+            "rna_container_ID",
+            "rna_collect_site",
+            "rna_isolate_meth",
+            "rna_seq_project_PI",
+            "rna_project_contact",
+            "proposal_rna",
+            "rna_cont_type",
+            "rna_sample_format",
+            "dnase_rna"
+         ],
+         "title": "SoilEmslJgiMt",
          "type": "object"
       },
       "SoilHorizonEnum": {

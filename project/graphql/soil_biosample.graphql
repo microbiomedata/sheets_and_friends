@@ -6,6 +6,10 @@ type EMSL
   {
   }
 
+type GOLDEcosystemPath
+  {
+  }
+
 type JGI-Metagenomics
   {
   }
@@ -38,8 +42,9 @@ type Metadata-MIxSRequiredWhereApplicable
   {
   }
 
-type NMDCFieldsEsp.GOLDPaths
+type PlaceholderClass
   {
+    investigationField: String
   }
 
 type QuantityValue
@@ -55,79 +60,55 @@ type SampleID
 
 type SoilEmslJgiMg
   {
-    projectID: String!
-    sampleType: String!
-    sampleShipped: String!
+    dnaContWell: String!
+    collectionDateInc: String
+    startDateInc: String
     eMSLStoreTemp: String!
-    technicalReps: String
-    replicateNumber: String
-    dnaSeqProject: String!
-    dnaSeqProjectName: String!
-    dnaSampID: String!
-    dnaSampleName: String!
     dnaConcentration: String!
     dnaVolume: String!
     dnaAbsorb1: String!
     dnaAbsorb2: String
+    microbialBiomassC: String
+    microbialBiomassN: String
+    sampleShipped: String!
+    technicalReps: String
+    replicateNumber: String
+    orgNitroMethod: String
+    nonMicrobBiomassMethod: String
+    microBiomassCMeth: String
+    microBiomassNMeth: String
+    isotopeExposure: String
     dnaContainerID: String!
-    dnaContType: DnaContTypeEnum!
-    dnaContWell: String!
-    dnaSampleFormat: DnaSampleFormatEnum!
-    dnaDnase: DnaDnaseEnum!
+    filterMethod: String
+    experimentalFactorOther: String
+    otherTreatment: String
+    projectID: String!
+    dnaSeqProject: String!
+    dnaSeqProjectName: String!
+    dnaSampID: String!
+    dnaSampleName: String!
     dnaOrganisms: String
     dnaCollectSite: String!
     dnaIsolateMeth: String!
     dnaSeqProjectPI: String!
     dnaProjectContact: String!
     proposalDna: String!
-    rnaSeqProject: String!
-    rnaSeqProjectName: String!
-    rnaSampID: String!
-    rnaSampleName: String!
-    rnaConcentration: String!
-    rnaVolume: String!
-    rnaAbsorb1: String!
-    rnaAbsorb2: String
-    rnaContainerID: String!
-    rnaContType: RnaContTypeEnum!
-    rnaContWell: String!
-    rnaSampleFormat: String!
-    dnaseRna: DnaseRnaEnum!
-    rnaOrganisms: String
-    rnaCollectSite: String!
-    rnaIsolateMeth: String!
-    rnaSeqProjectPI: String!
-    rnaProjectContact: String!
-    proposalRna: String!
     nonMicrobBiomass: String
-    nonMicrobBiomassMethod: String
-    microbialBiomassC: String
-    microBiomassCMeth: String
-    microbialBiomassN: String
-    microBiomassNMeth: String
-    orgNitroMethod: String
-    collectionTime: String
-    collectionDateInc: String
-    collectionTimeInc: String
-    startDateInc: String
-    startTimeInc: String
-    filterMethod: String
-    experimentalFactorOther: String
-    otherTreatment: String
-    isotopeExposure: String
-    envPackage: EnvPackageEnum!
-    analysisType: [AnalysisTypeEnum]!
     sampleLink: String
+    collectionTime: String
+    collectionTimeInc: String
+    startTimeInc: String
+    analysisType: [AnalysisTypeEnum]!
+    sampleType: SampleTypeEnum!
+    dnaContType: DnaContTypeEnum!
+    dnaSampleFormat: DnaSampleFormatEnum!
+    dnaDnase: DnaDnaseEnum!
+    envPackage: EnvPackageEnum!
     ecosystem: String
     ecosystemCategory: String
     ecosystemSubtype: String
     ecosystemType: String
     specificEcosystem: String
-    goldPathField: String
-    environmentField: String
-    coreField: String
-    nucleicAcidSequenceSourceField: String
-    investigationField: String
     agrochemAddition: [String]
     airTempRegm: [String]
     alSat: QuantityValue
@@ -215,6 +196,28 @@ type SoilEmslJgiMg
     waterContSoilMeth: String
     waterContent: QuantityValue
     wateringRegm: [String]
-    attribute: String
+  }
+
+type SoilEmslJgiMt
+  {
+    rnaContWell: String!
+    rnaConcentration: String!
+    rnaVolume: String!
+    rnaAbsorb1: String!
+    rnaAbsorb2: String
+    rnaSeqProject: String!
+    rnaSeqProjectName: String!
+    rnaSampID: String!
+    rnaSampleName: String!
+    rnaContainerID: String!
+    rnaOrganisms: String
+    rnaCollectSite: String!
+    rnaIsolateMeth: String!
+    rnaSeqProjectPI: String!
+    rnaProjectContact: String!
+    proposalRna: String!
+    rnaContType: RnaContTypeEnum!
+    rnaSampleFormat: RnaSampleFormatEnum!
+    dnaseRna: DnaseRnaEnum!
   }
 

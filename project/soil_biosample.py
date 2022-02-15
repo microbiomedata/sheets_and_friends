@@ -1,5 +1,5 @@
 # Auto generated from soil_biosample.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-02-14T20:26:45
+# Generation date: 2022-02-15T00:01:22
 # Schema: mims_soil_biosample
 #
 # id: https://example.com/mims_soil_biosample
@@ -60,46 +60,29 @@ class SoilEmslJgiMg(YAMLRoot):
     class_name: ClassVar[str] = "soil_emsl_jgi_mg"
     class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.SoilEmslJgiMg
 
-    project_ID: str = None
-    sample_type: str = None
-    sample_shipped: str = None
+    dna_cont_well: str = None
     EMSL_store_temp: str = None
+    dna_concentration: str = None
+    dna_volume: str = None
+    dna_absorb1: str = None
+    sample_shipped: str = None
+    dna_container_ID: str = None
+    project_ID: str = None
     dna_seq_project: str = None
     dna_seq_project_name: str = None
     dna_samp_ID: str = None
     dna_sample_name: str = None
-    dna_concentration: str = None
-    dna_volume: str = None
-    dna_absorb1: str = None
-    dna_container_ID: str = None
-    dna_cont_type: Union[str, "DnaContTypeEnum"] = None
-    dna_cont_well: str = None
-    dna_sample_format: Union[str, "DnaSampleFormatEnum"] = None
-    dna_dnase: Union[str, "DnaDnaseEnum"] = None
     dna_collect_site: str = None
     dna_isolate_meth: str = None
     dna_seq_project_PI: str = None
     dna_project_contact: str = None
     proposal_dna: str = None
-    rna_seq_project: str = None
-    rna_seq_project_name: str = None
-    rna_samp_ID: str = None
-    rna_sample_name: str = None
-    rna_concentration: str = None
-    rna_volume: str = None
-    rna_absorb1: str = None
-    rna_container_ID: str = None
-    rna_cont_type: Union[str, "RnaContTypeEnum"] = None
-    rna_cont_well: str = None
-    rna_sample_format: str = None
-    dnase_rna: Union[str, "DnaseRnaEnum"] = None
-    rna_collect_site: str = None
-    rna_isolate_meth: str = None
-    rna_seq_project_PI: str = None
-    rna_project_contact: str = None
-    proposal_rna: str = None
-    env_package: Union[str, "EnvPackageEnum"] = None
     analysis_type: Union[Union[str, "AnalysisTypeEnum"], List[Union[str, "AnalysisTypeEnum"]]] = None
+    sample_type: Union[str, "SampleTypeEnum"] = None
+    dna_cont_type: Union[str, "DnaContTypeEnum"] = None
+    dna_sample_format: Union[str, "DnaSampleFormatEnum"] = None
+    dna_dnase: Union[str, "DnaDnaseEnum"] = None
+    env_package: Union[str, "EnvPackageEnum"] = None
     collection_date: Union[str, XSDDate] = None
     depth: Union[dict, "QuantityValue"] = None
     elev: Union[dict, "QuantityValue"] = None
@@ -109,39 +92,32 @@ class SoilEmslJgiMg(YAMLRoot):
     geo_loc_name: str = None
     lat_lon: str = None
     samp_name: str = None
+    collection_date_inc: Optional[str] = None
+    start_date_inc: Optional[str] = None
+    dna_absorb2: Optional[str] = None
+    microbial_biomass_C: Optional[str] = None
+    microbial_biomass_N: Optional[str] = None
     technical_reps: Optional[str] = None
     replicate_number: Optional[str] = None
-    dna_absorb2: Optional[str] = None
-    dna_organisms: Optional[str] = None
-    rna_absorb2: Optional[str] = None
-    rna_organisms: Optional[str] = None
-    non_microb_biomass: Optional[str] = None
-    non_microb_biomass_method: Optional[str] = None
-    microbial_biomass_C: Optional[str] = None
-    micro_biomass_C_meth: Optional[str] = None
-    microbial_biomass_N: Optional[str] = None
-    micro_biomass_N_meth: Optional[str] = None
     org_nitro_method: Optional[str] = None
-    collection_time: Optional[str] = None
-    collection_date_inc: Optional[str] = None
-    collection_time_inc: Optional[str] = None
-    start_date_inc: Optional[str] = None
-    start_time_inc: Optional[str] = None
+    non_microb_biomass_method: Optional[str] = None
+    micro_biomass_C_meth: Optional[str] = None
+    micro_biomass_N_meth: Optional[str] = None
+    isotope_exposure: Optional[str] = None
     filter_method: Optional[str] = None
     experimental_factor_other: Optional[str] = None
     other_treatment: Optional[str] = None
-    isotope_exposure: Optional[str] = None
+    dna_organisms: Optional[str] = None
+    non_microb_biomass: Optional[str] = None
     sample_link: Optional[str] = None
+    collection_time: Optional[str] = None
+    collection_time_inc: Optional[str] = None
+    start_time_inc: Optional[str] = None
     ecosystem: Optional[str] = None
     ecosystem_category: Optional[str] = None
     ecosystem_subtype: Optional[str] = None
     ecosystem_type: Optional[str] = None
     specific_ecosystem: Optional[str] = None
-    gold_path_field: Optional[str] = None
-    environment_field: Optional[str] = None
-    core_field: Optional[str] = None
-    nucleic_acid_sequence_source_field: Optional[str] = None
-    investigation_field: Optional[str] = None
     agrochem_addition: Optional[Union[str, List[str]]] = empty_list()
     air_temp_regm: Optional[Union[str, List[str]]] = empty_list()
     al_sat: Optional[Union[dict, "QuantityValue"]] = None
@@ -220,7 +196,6 @@ class SoilEmslJgiMg(YAMLRoot):
     water_cont_soil_meth: Optional[str] = None
     water_content: Optional[Union[dict, "QuantityValue"]] = None
     watering_regm: Optional[Union[str, List[str]]] = empty_list()
-    attribute: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.source_mat_id):
@@ -228,25 +203,45 @@ class SoilEmslJgiMg(YAMLRoot):
         if not isinstance(self.source_mat_id, SoilEmslJgiMgSourceMatId):
             self.source_mat_id = SoilEmslJgiMgSourceMatId(self.source_mat_id)
 
-        if self._is_empty(self.project_ID):
-            self.MissingRequiredField("project_ID")
-        if not isinstance(self.project_ID, str):
-            self.project_ID = str(self.project_ID)
+        if self._is_empty(self.dna_cont_well):
+            self.MissingRequiredField("dna_cont_well")
+        if not isinstance(self.dna_cont_well, str):
+            self.dna_cont_well = str(self.dna_cont_well)
 
-        if self._is_empty(self.sample_type):
-            self.MissingRequiredField("sample_type")
-        if not isinstance(self.sample_type, str):
-            self.sample_type = str(self.sample_type)
+        if self._is_empty(self.EMSL_store_temp):
+            self.MissingRequiredField("EMSL_store_temp")
+        if not isinstance(self.EMSL_store_temp, str):
+            self.EMSL_store_temp = str(self.EMSL_store_temp)
+
+        if self._is_empty(self.dna_concentration):
+            self.MissingRequiredField("dna_concentration")
+        if not isinstance(self.dna_concentration, str):
+            self.dna_concentration = str(self.dna_concentration)
+
+        if self._is_empty(self.dna_volume):
+            self.MissingRequiredField("dna_volume")
+        if not isinstance(self.dna_volume, str):
+            self.dna_volume = str(self.dna_volume)
+
+        if self._is_empty(self.dna_absorb1):
+            self.MissingRequiredField("dna_absorb1")
+        if not isinstance(self.dna_absorb1, str):
+            self.dna_absorb1 = str(self.dna_absorb1)
 
         if self._is_empty(self.sample_shipped):
             self.MissingRequiredField("sample_shipped")
         if not isinstance(self.sample_shipped, str):
             self.sample_shipped = str(self.sample_shipped)
 
-        if self._is_empty(self.EMSL_store_temp):
-            self.MissingRequiredField("EMSL_store_temp")
-        if not isinstance(self.EMSL_store_temp, str):
-            self.EMSL_store_temp = str(self.EMSL_store_temp)
+        if self._is_empty(self.dna_container_ID):
+            self.MissingRequiredField("dna_container_ID")
+        if not isinstance(self.dna_container_ID, str):
+            self.dna_container_ID = str(self.dna_container_ID)
+
+        if self._is_empty(self.project_ID):
+            self.MissingRequiredField("project_ID")
+        if not isinstance(self.project_ID, str):
+            self.project_ID = str(self.project_ID)
 
         if self._is_empty(self.dna_seq_project):
             self.MissingRequiredField("dna_seq_project")
@@ -267,46 +262,6 @@ class SoilEmslJgiMg(YAMLRoot):
             self.MissingRequiredField("dna_sample_name")
         if not isinstance(self.dna_sample_name, str):
             self.dna_sample_name = str(self.dna_sample_name)
-
-        if self._is_empty(self.dna_concentration):
-            self.MissingRequiredField("dna_concentration")
-        if not isinstance(self.dna_concentration, str):
-            self.dna_concentration = str(self.dna_concentration)
-
-        if self._is_empty(self.dna_volume):
-            self.MissingRequiredField("dna_volume")
-        if not isinstance(self.dna_volume, str):
-            self.dna_volume = str(self.dna_volume)
-
-        if self._is_empty(self.dna_absorb1):
-            self.MissingRequiredField("dna_absorb1")
-        if not isinstance(self.dna_absorb1, str):
-            self.dna_absorb1 = str(self.dna_absorb1)
-
-        if self._is_empty(self.dna_container_ID):
-            self.MissingRequiredField("dna_container_ID")
-        if not isinstance(self.dna_container_ID, str):
-            self.dna_container_ID = str(self.dna_container_ID)
-
-        if self._is_empty(self.dna_cont_type):
-            self.MissingRequiredField("dna_cont_type")
-        if not isinstance(self.dna_cont_type, DnaContTypeEnum):
-            self.dna_cont_type = DnaContTypeEnum(self.dna_cont_type)
-
-        if self._is_empty(self.dna_cont_well):
-            self.MissingRequiredField("dna_cont_well")
-        if not isinstance(self.dna_cont_well, str):
-            self.dna_cont_well = str(self.dna_cont_well)
-
-        if self._is_empty(self.dna_sample_format):
-            self.MissingRequiredField("dna_sample_format")
-        if not isinstance(self.dna_sample_format, DnaSampleFormatEnum):
-            self.dna_sample_format = DnaSampleFormatEnum(self.dna_sample_format)
-
-        if self._is_empty(self.dna_dnase):
-            self.MissingRequiredField("dna_dnase")
-        if not isinstance(self.dna_dnase, DnaDnaseEnum):
-            self.dna_dnase = DnaDnaseEnum(self.dna_dnase)
 
         if self._is_empty(self.dna_collect_site):
             self.MissingRequiredField("dna_collect_site")
@@ -333,101 +288,36 @@ class SoilEmslJgiMg(YAMLRoot):
         if not isinstance(self.proposal_dna, str):
             self.proposal_dna = str(self.proposal_dna)
 
-        if self._is_empty(self.rna_seq_project):
-            self.MissingRequiredField("rna_seq_project")
-        if not isinstance(self.rna_seq_project, str):
-            self.rna_seq_project = str(self.rna_seq_project)
-
-        if self._is_empty(self.rna_seq_project_name):
-            self.MissingRequiredField("rna_seq_project_name")
-        if not isinstance(self.rna_seq_project_name, str):
-            self.rna_seq_project_name = str(self.rna_seq_project_name)
-
-        if self._is_empty(self.rna_samp_ID):
-            self.MissingRequiredField("rna_samp_ID")
-        if not isinstance(self.rna_samp_ID, str):
-            self.rna_samp_ID = str(self.rna_samp_ID)
-
-        if self._is_empty(self.rna_sample_name):
-            self.MissingRequiredField("rna_sample_name")
-        if not isinstance(self.rna_sample_name, str):
-            self.rna_sample_name = str(self.rna_sample_name)
-
-        if self._is_empty(self.rna_concentration):
-            self.MissingRequiredField("rna_concentration")
-        if not isinstance(self.rna_concentration, str):
-            self.rna_concentration = str(self.rna_concentration)
-
-        if self._is_empty(self.rna_volume):
-            self.MissingRequiredField("rna_volume")
-        if not isinstance(self.rna_volume, str):
-            self.rna_volume = str(self.rna_volume)
-
-        if self._is_empty(self.rna_absorb1):
-            self.MissingRequiredField("rna_absorb1")
-        if not isinstance(self.rna_absorb1, str):
-            self.rna_absorb1 = str(self.rna_absorb1)
-
-        if self._is_empty(self.rna_container_ID):
-            self.MissingRequiredField("rna_container_ID")
-        if not isinstance(self.rna_container_ID, str):
-            self.rna_container_ID = str(self.rna_container_ID)
-
-        if self._is_empty(self.rna_cont_type):
-            self.MissingRequiredField("rna_cont_type")
-        if not isinstance(self.rna_cont_type, RnaContTypeEnum):
-            self.rna_cont_type = RnaContTypeEnum(self.rna_cont_type)
-
-        if self._is_empty(self.rna_cont_well):
-            self.MissingRequiredField("rna_cont_well")
-        if not isinstance(self.rna_cont_well, str):
-            self.rna_cont_well = str(self.rna_cont_well)
-
-        if self._is_empty(self.rna_sample_format):
-            self.MissingRequiredField("rna_sample_format")
-        if not isinstance(self.rna_sample_format, str):
-            self.rna_sample_format = str(self.rna_sample_format)
-
-        if self._is_empty(self.dnase_rna):
-            self.MissingRequiredField("dnase_rna")
-        if not isinstance(self.dnase_rna, DnaseRnaEnum):
-            self.dnase_rna = DnaseRnaEnum(self.dnase_rna)
-
-        if self._is_empty(self.rna_collect_site):
-            self.MissingRequiredField("rna_collect_site")
-        if not isinstance(self.rna_collect_site, str):
-            self.rna_collect_site = str(self.rna_collect_site)
-
-        if self._is_empty(self.rna_isolate_meth):
-            self.MissingRequiredField("rna_isolate_meth")
-        if not isinstance(self.rna_isolate_meth, str):
-            self.rna_isolate_meth = str(self.rna_isolate_meth)
-
-        if self._is_empty(self.rna_seq_project_PI):
-            self.MissingRequiredField("rna_seq_project_PI")
-        if not isinstance(self.rna_seq_project_PI, str):
-            self.rna_seq_project_PI = str(self.rna_seq_project_PI)
-
-        if self._is_empty(self.rna_project_contact):
-            self.MissingRequiredField("rna_project_contact")
-        if not isinstance(self.rna_project_contact, str):
-            self.rna_project_contact = str(self.rna_project_contact)
-
-        if self._is_empty(self.proposal_rna):
-            self.MissingRequiredField("proposal_rna")
-        if not isinstance(self.proposal_rna, str):
-            self.proposal_rna = str(self.proposal_rna)
-
-        if self._is_empty(self.env_package):
-            self.MissingRequiredField("env_package")
-        if not isinstance(self.env_package, EnvPackageEnum):
-            self.env_package = EnvPackageEnum(self.env_package)
-
         if self._is_empty(self.analysis_type):
             self.MissingRequiredField("analysis_type")
         if not isinstance(self.analysis_type, list):
             self.analysis_type = [self.analysis_type] if self.analysis_type is not None else []
         self.analysis_type = [v if isinstance(v, AnalysisTypeEnum) else AnalysisTypeEnum(v) for v in self.analysis_type]
+
+        if self._is_empty(self.sample_type):
+            self.MissingRequiredField("sample_type")
+        if not isinstance(self.sample_type, SampleTypeEnum):
+            self.sample_type = SampleTypeEnum(self.sample_type)
+
+        if self._is_empty(self.dna_cont_type):
+            self.MissingRequiredField("dna_cont_type")
+        if not isinstance(self.dna_cont_type, DnaContTypeEnum):
+            self.dna_cont_type = DnaContTypeEnum(self.dna_cont_type)
+
+        if self._is_empty(self.dna_sample_format):
+            self.MissingRequiredField("dna_sample_format")
+        if not isinstance(self.dna_sample_format, DnaSampleFormatEnum):
+            self.dna_sample_format = DnaSampleFormatEnum(self.dna_sample_format)
+
+        if self._is_empty(self.dna_dnase):
+            self.MissingRequiredField("dna_dnase")
+        if not isinstance(self.dna_dnase, DnaDnaseEnum):
+            self.dna_dnase = DnaDnaseEnum(self.dna_dnase)
+
+        if self._is_empty(self.env_package):
+            self.MissingRequiredField("env_package")
+        if not isinstance(self.env_package, EnvPackageEnum):
+            self.env_package = EnvPackageEnum(self.env_package)
 
         if self._is_empty(self.collection_date):
             self.MissingRequiredField("collection_date")
@@ -481,13 +371,13 @@ class SoilEmslJgiMg(YAMLRoot):
 
         if self._is_empty(self.collection_date):
             self.MissingRequiredField("collection_date")
-        if not isinstance(self.collection_date, XSDDate):
-            self.collection_date = XSDDate(self.collection_date)
+        if not isinstance(self.collection_date, str):
+            self.collection_date = str(self.collection_date)
 
         if self._is_empty(self.depth):
             self.MissingRequiredField("depth")
-        if not isinstance(self.depth, QuantityValue):
-            self.depth = QuantityValue(**as_dict(self.depth))
+        if not isinstance(self.depth, str):
+            self.depth = str(self.depth)
 
         if self._is_empty(self.elev):
             self.MissingRequiredField("elev")
@@ -534,10 +424,30 @@ class SoilEmslJgiMg(YAMLRoot):
         if not isinstance(self.samp_name, str):
             self.samp_name = str(self.samp_name)
 
+        if self._is_empty(self.samp_store_temp):
+            self.MissingRequiredField("samp_store_temp")
+        if not isinstance(self.samp_store_temp, QuantityValue):
+            self.samp_store_temp = QuantityValue(**as_dict(self.samp_store_temp))
+
         if self._is_empty(self.store_cond):
             self.MissingRequiredField("store_cond")
         if not isinstance(self.store_cond, StoreCondEnum):
             self.store_cond = StoreCondEnum(self.store_cond)
+
+        if self.collection_date_inc is not None and not isinstance(self.collection_date_inc, str):
+            self.collection_date_inc = str(self.collection_date_inc)
+
+        if self.start_date_inc is not None and not isinstance(self.start_date_inc, str):
+            self.start_date_inc = str(self.start_date_inc)
+
+        if self.dna_absorb2 is not None and not isinstance(self.dna_absorb2, str):
+            self.dna_absorb2 = str(self.dna_absorb2)
+
+        if self.microbial_biomass_C is not None and not isinstance(self.microbial_biomass_C, str):
+            self.microbial_biomass_C = str(self.microbial_biomass_C)
+
+        if self.microbial_biomass_N is not None and not isinstance(self.microbial_biomass_N, str):
+            self.microbial_biomass_N = str(self.microbial_biomass_N)
 
         if self.technical_reps is not None and not isinstance(self.technical_reps, str):
             self.technical_reps = str(self.technical_reps)
@@ -545,53 +455,20 @@ class SoilEmslJgiMg(YAMLRoot):
         if self.replicate_number is not None and not isinstance(self.replicate_number, str):
             self.replicate_number = str(self.replicate_number)
 
-        if self.dna_absorb2 is not None and not isinstance(self.dna_absorb2, str):
-            self.dna_absorb2 = str(self.dna_absorb2)
-
-        if self.dna_organisms is not None and not isinstance(self.dna_organisms, str):
-            self.dna_organisms = str(self.dna_organisms)
-
-        if self.rna_absorb2 is not None and not isinstance(self.rna_absorb2, str):
-            self.rna_absorb2 = str(self.rna_absorb2)
-
-        if self.rna_organisms is not None and not isinstance(self.rna_organisms, str):
-            self.rna_organisms = str(self.rna_organisms)
-
-        if self.non_microb_biomass is not None and not isinstance(self.non_microb_biomass, str):
-            self.non_microb_biomass = str(self.non_microb_biomass)
+        if self.org_nitro_method is not None and not isinstance(self.org_nitro_method, str):
+            self.org_nitro_method = str(self.org_nitro_method)
 
         if self.non_microb_biomass_method is not None and not isinstance(self.non_microb_biomass_method, str):
             self.non_microb_biomass_method = str(self.non_microb_biomass_method)
 
-        if self.microbial_biomass_C is not None and not isinstance(self.microbial_biomass_C, str):
-            self.microbial_biomass_C = str(self.microbial_biomass_C)
-
         if self.micro_biomass_C_meth is not None and not isinstance(self.micro_biomass_C_meth, str):
             self.micro_biomass_C_meth = str(self.micro_biomass_C_meth)
-
-        if self.microbial_biomass_N is not None and not isinstance(self.microbial_biomass_N, str):
-            self.microbial_biomass_N = str(self.microbial_biomass_N)
 
         if self.micro_biomass_N_meth is not None and not isinstance(self.micro_biomass_N_meth, str):
             self.micro_biomass_N_meth = str(self.micro_biomass_N_meth)
 
-        if self.org_nitro_method is not None and not isinstance(self.org_nitro_method, str):
-            self.org_nitro_method = str(self.org_nitro_method)
-
-        if self.collection_time is not None and not isinstance(self.collection_time, str):
-            self.collection_time = str(self.collection_time)
-
-        if self.collection_date_inc is not None and not isinstance(self.collection_date_inc, str):
-            self.collection_date_inc = str(self.collection_date_inc)
-
-        if self.collection_time_inc is not None and not isinstance(self.collection_time_inc, str):
-            self.collection_time_inc = str(self.collection_time_inc)
-
-        if self.start_date_inc is not None and not isinstance(self.start_date_inc, str):
-            self.start_date_inc = str(self.start_date_inc)
-
-        if self.start_time_inc is not None and not isinstance(self.start_time_inc, str):
-            self.start_time_inc = str(self.start_time_inc)
+        if self.isotope_exposure is not None and not isinstance(self.isotope_exposure, str):
+            self.isotope_exposure = str(self.isotope_exposure)
 
         if self.filter_method is not None and not isinstance(self.filter_method, str):
             self.filter_method = str(self.filter_method)
@@ -602,11 +479,23 @@ class SoilEmslJgiMg(YAMLRoot):
         if self.other_treatment is not None and not isinstance(self.other_treatment, str):
             self.other_treatment = str(self.other_treatment)
 
-        if self.isotope_exposure is not None and not isinstance(self.isotope_exposure, str):
-            self.isotope_exposure = str(self.isotope_exposure)
+        if self.dna_organisms is not None and not isinstance(self.dna_organisms, str):
+            self.dna_organisms = str(self.dna_organisms)
+
+        if self.non_microb_biomass is not None and not isinstance(self.non_microb_biomass, str):
+            self.non_microb_biomass = str(self.non_microb_biomass)
 
         if self.sample_link is not None and not isinstance(self.sample_link, str):
             self.sample_link = str(self.sample_link)
+
+        if self.collection_time is not None and not isinstance(self.collection_time, str):
+            self.collection_time = str(self.collection_time)
+
+        if self.collection_time_inc is not None and not isinstance(self.collection_time_inc, str):
+            self.collection_time_inc = str(self.collection_time_inc)
+
+        if self.start_time_inc is not None and not isinstance(self.start_time_inc, str):
+            self.start_time_inc = str(self.start_time_inc)
 
         if self.ecosystem is not None and not isinstance(self.ecosystem, str):
             self.ecosystem = str(self.ecosystem)
@@ -622,24 +511,6 @@ class SoilEmslJgiMg(YAMLRoot):
 
         if self.specific_ecosystem is not None and not isinstance(self.specific_ecosystem, str):
             self.specific_ecosystem = str(self.specific_ecosystem)
-
-        if self.ecosystem is not None and not isinstance(self.ecosystem, EcosystemEnum):
-            self.ecosystem = EcosystemEnum(self.ecosystem)
-
-        if self.gold_path_field is not None and not isinstance(self.gold_path_field, str):
-            self.gold_path_field = str(self.gold_path_field)
-
-        if self.environment_field is not None and not isinstance(self.environment_field, str):
-            self.environment_field = str(self.environment_field)
-
-        if self.core_field is not None and not isinstance(self.core_field, str):
-            self.core_field = str(self.core_field)
-
-        if self.nucleic_acid_sequence_source_field is not None and not isinstance(self.nucleic_acid_sequence_source_field, str):
-            self.nucleic_acid_sequence_source_field = str(self.nucleic_acid_sequence_source_field)
-
-        if self.investigation_field is not None and not isinstance(self.investigation_field, str):
-            self.investigation_field = str(self.investigation_field)
 
         if not isinstance(self.agrochem_addition, list):
             self.agrochem_addition = [self.agrochem_addition] if self.agrochem_addition is not None else []
@@ -885,6 +756,9 @@ class SoilEmslJgiMg(YAMLRoot):
             self.watering_regm = [self.watering_regm] if self.watering_regm is not None else []
         self.watering_regm = [v if isinstance(v, str) else str(v) for v in self.watering_regm]
 
+        if self.ecosystem is not None and not isinstance(self.ecosystem, EcosystemEnum):
+            self.ecosystem = EcosystemEnum(self.ecosystem)
+
         if self.ecosystem_category is not None and not isinstance(self.ecosystem_category, EcosystemCategoryEnum):
             self.ecosystem_category = EcosystemCategoryEnum(self.ecosystem_category)
 
@@ -896,9 +770,6 @@ class SoilEmslJgiMg(YAMLRoot):
 
         if self.specific_ecosystem is not None and not isinstance(self.specific_ecosystem, SpecificEcosystemEnum):
             self.specific_ecosystem = SpecificEcosystemEnum(self.specific_ecosystem)
-
-        if self.attribute is not None and not isinstance(self.attribute, str):
-            self.attribute = str(self.attribute)
 
         if not isinstance(self.agrochem_addition, list):
             self.agrochem_addition = [self.agrochem_addition] if self.agrochem_addition is not None else []
@@ -1019,8 +890,8 @@ class SoilEmslJgiMg(YAMLRoot):
         if self.oxy_stat_samp is not None and not isinstance(self.oxy_stat_samp, OxyStatSampEnum):
             self.oxy_stat_samp = OxyStatSampEnum(self.oxy_stat_samp)
 
-        if self.ph is not None and not isinstance(self.ph, float):
-            self.ph = float(self.ph)
+        if self.ph is not None and not isinstance(self.ph, str):
+            self.ph = str(self.ph)
 
         if self.ph_meth is not None and not isinstance(self.ph_meth, str):
             self.ph_meth = str(self.ph_meth)
@@ -1052,11 +923,8 @@ class SoilEmslJgiMg(YAMLRoot):
         if self.samp_mat_process is not None and not isinstance(self.samp_mat_process, str):
             self.samp_mat_process = str(self.samp_mat_process)
 
-        if self.samp_size is not None and not isinstance(self.samp_size, QuantityValue):
-            self.samp_size = QuantityValue(**as_dict(self.samp_size))
-
-        if self.samp_store_temp is not None and not isinstance(self.samp_store_temp, QuantityValue):
-            self.samp_store_temp = QuantityValue(**as_dict(self.samp_store_temp))
+        if self.samp_size is not None and not isinstance(self.samp_size, str):
+            self.samp_size = str(self.samp_size)
 
         if self.season_precpt is not None and not isinstance(self.season_precpt, QuantityValue):
             self.season_precpt = QuantityValue(**as_dict(self.season_precpt))
@@ -1144,6 +1012,130 @@ class DhSection(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.DhSection
 
 
+@dataclass
+class SoilEmslJgiMt(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.SoilEmslJgiMt
+    class_class_curie: ClassVar[str] = "mims_soil_biosample:SoilEmslJgiMt"
+    class_name: ClassVar[str] = "soil_emsl_jgi_mt"
+    class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.SoilEmslJgiMt
+
+    rna_cont_well: str = None
+    rna_concentration: str = None
+    rna_volume: str = None
+    rna_absorb1: str = None
+    rna_seq_project: str = None
+    rna_seq_project_name: str = None
+    rna_samp_ID: str = None
+    rna_sample_name: str = None
+    rna_container_ID: str = None
+    rna_collect_site: str = None
+    rna_isolate_meth: str = None
+    rna_seq_project_PI: str = None
+    rna_project_contact: str = None
+    proposal_rna: str = None
+    rna_cont_type: Union[str, "RnaContTypeEnum"] = None
+    rna_sample_format: Union[str, "RnaSampleFormatEnum"] = None
+    dnase_rna: Union[str, "DnaseRnaEnum"] = None
+    rna_absorb2: Optional[str] = None
+    rna_organisms: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.rna_cont_well):
+            self.MissingRequiredField("rna_cont_well")
+        if not isinstance(self.rna_cont_well, str):
+            self.rna_cont_well = str(self.rna_cont_well)
+
+        if self._is_empty(self.rna_concentration):
+            self.MissingRequiredField("rna_concentration")
+        if not isinstance(self.rna_concentration, str):
+            self.rna_concentration = str(self.rna_concentration)
+
+        if self._is_empty(self.rna_volume):
+            self.MissingRequiredField("rna_volume")
+        if not isinstance(self.rna_volume, str):
+            self.rna_volume = str(self.rna_volume)
+
+        if self._is_empty(self.rna_absorb1):
+            self.MissingRequiredField("rna_absorb1")
+        if not isinstance(self.rna_absorb1, str):
+            self.rna_absorb1 = str(self.rna_absorb1)
+
+        if self._is_empty(self.rna_seq_project):
+            self.MissingRequiredField("rna_seq_project")
+        if not isinstance(self.rna_seq_project, str):
+            self.rna_seq_project = str(self.rna_seq_project)
+
+        if self._is_empty(self.rna_seq_project_name):
+            self.MissingRequiredField("rna_seq_project_name")
+        if not isinstance(self.rna_seq_project_name, str):
+            self.rna_seq_project_name = str(self.rna_seq_project_name)
+
+        if self._is_empty(self.rna_samp_ID):
+            self.MissingRequiredField("rna_samp_ID")
+        if not isinstance(self.rna_samp_ID, str):
+            self.rna_samp_ID = str(self.rna_samp_ID)
+
+        if self._is_empty(self.rna_sample_name):
+            self.MissingRequiredField("rna_sample_name")
+        if not isinstance(self.rna_sample_name, str):
+            self.rna_sample_name = str(self.rna_sample_name)
+
+        if self._is_empty(self.rna_container_ID):
+            self.MissingRequiredField("rna_container_ID")
+        if not isinstance(self.rna_container_ID, str):
+            self.rna_container_ID = str(self.rna_container_ID)
+
+        if self._is_empty(self.rna_collect_site):
+            self.MissingRequiredField("rna_collect_site")
+        if not isinstance(self.rna_collect_site, str):
+            self.rna_collect_site = str(self.rna_collect_site)
+
+        if self._is_empty(self.rna_isolate_meth):
+            self.MissingRequiredField("rna_isolate_meth")
+        if not isinstance(self.rna_isolate_meth, str):
+            self.rna_isolate_meth = str(self.rna_isolate_meth)
+
+        if self._is_empty(self.rna_seq_project_PI):
+            self.MissingRequiredField("rna_seq_project_PI")
+        if not isinstance(self.rna_seq_project_PI, str):
+            self.rna_seq_project_PI = str(self.rna_seq_project_PI)
+
+        if self._is_empty(self.rna_project_contact):
+            self.MissingRequiredField("rna_project_contact")
+        if not isinstance(self.rna_project_contact, str):
+            self.rna_project_contact = str(self.rna_project_contact)
+
+        if self._is_empty(self.proposal_rna):
+            self.MissingRequiredField("proposal_rna")
+        if not isinstance(self.proposal_rna, str):
+            self.proposal_rna = str(self.proposal_rna)
+
+        if self._is_empty(self.rna_cont_type):
+            self.MissingRequiredField("rna_cont_type")
+        if not isinstance(self.rna_cont_type, RnaContTypeEnum):
+            self.rna_cont_type = RnaContTypeEnum(self.rna_cont_type)
+
+        if self._is_empty(self.rna_sample_format):
+            self.MissingRequiredField("rna_sample_format")
+        if not isinstance(self.rna_sample_format, RnaSampleFormatEnum):
+            self.rna_sample_format = RnaSampleFormatEnum(self.rna_sample_format)
+
+        if self._is_empty(self.dnase_rna):
+            self.MissingRequiredField("dnase_rna")
+        if not isinstance(self.dnase_rna, DnaseRnaEnum):
+            self.dnase_rna = DnaseRnaEnum(self.dnase_rna)
+
+        if self.rna_absorb2 is not None and not isinstance(self.rna_absorb2, str):
+            self.rna_absorb2 = str(self.rna_absorb2)
+
+        if self.rna_organisms is not None and not isinstance(self.rna_organisms, str):
+            self.rna_organisms = str(self.rna_organisms)
+
+        super().__post_init__(**kwargs)
+
+
 class SampleID(DhSection):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -1153,13 +1145,13 @@ class SampleID(DhSection):
     class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.SampleID
 
 
-class NMDCFieldsEsp.GOLDPaths(DhSection):
+class GOLDEcosystemPath(DhSection):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE["NMDCFieldsEsp.GOLDPaths"]
-    class_class_curie: ClassVar[str] = "mims_soil_biosample:NMDCFieldsEsp.GOLDPaths"
-    class_name: ClassVar[str] = "NMDC fields esp. GOLD paths"
-    class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.NMDCFieldsEsp.GOLDPaths
+    class_class_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.GOLDEcosystemPath
+    class_class_curie: ClassVar[str] = "mims_soil_biosample:GOLDEcosystemPath"
+    class_name: ClassVar[str] = "GOLD ecosystem path"
+    class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.GOLDEcosystemPath
 
 
 class EMSL(DhSection):
@@ -1268,6 +1260,24 @@ class QuantityValue(YAMLRoot):
 
         if self.has_raw_value is not None and not isinstance(self.has_raw_value, str):
             self.has_raw_value = str(self.has_raw_value)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class PlaceholderClass(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.PlaceholderClass
+    class_class_curie: ClassVar[str] = "mims_soil_biosample:PlaceholderClass"
+    class_name: ClassVar[str] = "placeholder_class"
+    class_model_uri: ClassVar[URIRef] = MIMS_SOIL_BIOSAMPLE.PlaceholderClass
+
+    investigation_field: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self.investigation_field is not None and not isinstance(self.investigation_field, str):
+            self.investigation_field = str(self.investigation_field)
 
         super().__post_init__(**kwargs)
 
@@ -1753,35 +1763,20 @@ class TillageEnum(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.project_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.project_ID, name="project_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('project_ID'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.project_ID, domain=None, range=Optional[str])
+slots.dna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_well, name="dna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_well'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_cont_well, domain=None, range=Optional[str])
 
-slots.sample_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_type, name="sample_type", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_type'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.sample_type, domain=None, range=Optional[str])
+slots.rna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_well, name="rna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_well'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_cont_well, domain=None, range=Optional[str])
 
-slots.sample_shipped = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_shipped, name="sample_shipped", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_shipped'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.sample_shipped, domain=None, range=Optional[str])
+slots.collection_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_date_inc, name="collection_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_date_inc'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.collection_date_inc, domain=None, range=Optional[str])
+
+slots.start_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.start_date_inc, name="start_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('start_date_inc'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.start_date_inc, domain=None, range=Optional[str])
 
 slots.EMSL_store_temp = Slot(uri=MIMS_SOIL_BIOSAMPLE.EMSL_store_temp, name="EMSL_store_temp", curie=MIMS_SOIL_BIOSAMPLE.curie('EMSL_store_temp'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.EMSL_store_temp, domain=None, range=Optional[str])
-
-slots.technical_reps = Slot(uri=MIMS_SOIL_BIOSAMPLE.technical_reps, name="technical_reps", curie=MIMS_SOIL_BIOSAMPLE.curie('technical_reps'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.technical_reps, domain=None, range=Optional[str])
-
-slots.replicate_number = Slot(uri=MIMS_SOIL_BIOSAMPLE.replicate_number, name="replicate_number", curie=MIMS_SOIL_BIOSAMPLE.curie('replicate_number'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.replicate_number, domain=None, range=Optional[str])
-
-slots.dna_seq_project = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project, name="dna_seq_project", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project, domain=None, range=Optional[str])
-
-slots.dna_seq_project_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project_name, name="dna_seq_project_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project_name'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project_name, domain=None, range=Optional[str])
-
-slots.dna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_samp_ID, name="dna_samp_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_samp_ID'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_samp_ID, domain=None, range=Optional[str])
-
-slots.dna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_name, name="dna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_name'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_sample_name, domain=None, range=Optional[str])
 
 slots.dna_concentration = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_concentration, name="dna_concentration", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_concentration'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.dna_concentration, domain=None, range=Optional[str])
@@ -1795,20 +1790,74 @@ slots.dna_absorb1 = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_absorb1, name="dna_absorb1"
 slots.dna_absorb2 = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_absorb2, name="dna_absorb2", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_absorb2'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.dna_absorb2, domain=None, range=Optional[str])
 
+slots.rna_concentration = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_concentration, name="rna_concentration", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_concentration'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_concentration, domain=None, range=Optional[str])
+
+slots.rna_volume = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_volume, name="rna_volume", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_volume'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_volume, domain=None, range=Optional[str])
+
+slots.rna_absorb1 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb1, name="rna_absorb1", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb1'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_absorb1, domain=None, range=Optional[str])
+
+slots.rna_absorb2 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb2, name="rna_absorb2", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb2'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_absorb2, domain=None, range=Optional[str])
+
+slots.microbial_biomass_C = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_C, name="microbial_biomass_C", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_C'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_C, domain=None, range=Optional[str])
+
+slots.microbial_biomass_N = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_N, name="microbial_biomass_N", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_N'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_N, domain=None, range=Optional[str])
+
+slots.sample_shipped = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_shipped, name="sample_shipped", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_shipped'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.sample_shipped, domain=None, range=Optional[str])
+
+slots.technical_reps = Slot(uri=MIMS_SOIL_BIOSAMPLE.technical_reps, name="technical_reps", curie=MIMS_SOIL_BIOSAMPLE.curie('technical_reps'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.technical_reps, domain=None, range=Optional[str])
+
+slots.replicate_number = Slot(uri=MIMS_SOIL_BIOSAMPLE.replicate_number, name="replicate_number", curie=MIMS_SOIL_BIOSAMPLE.curie('replicate_number'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.replicate_number, domain=None, range=Optional[str])
+
+slots.org_nitro_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.org_nitro_method, name="org_nitro_method", curie=MIMS_SOIL_BIOSAMPLE.curie('org_nitro_method'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.org_nitro_method, domain=None, range=Optional[str])
+
+slots.non_microb_biomass_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass_method, name="non_microb_biomass_method", curie=MIMS_SOIL_BIOSAMPLE.curie('non_microb_biomass_method'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass_method, domain=None, range=Optional[str])
+
+slots.micro_biomass_C_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_C_meth, name="micro_biomass_C_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_C_meth'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_C_meth, domain=None, range=Optional[str])
+
+slots.micro_biomass_N_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_N_meth, name="micro_biomass_N_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_N_meth'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_N_meth, domain=None, range=Optional[str])
+
+slots.isotope_exposure = Slot(uri=MIMS_SOIL_BIOSAMPLE.isotope_exposure, name="isotope_exposure", curie=MIMS_SOIL_BIOSAMPLE.curie('isotope_exposure'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.isotope_exposure, domain=None, range=Optional[str])
+
 slots.dna_container_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_container_ID, name="dna_container_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_container_ID'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.dna_container_ID, domain=None, range=Optional[str])
 
-slots.dna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_type, name="dna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_type'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_cont_type, domain=None, range=Optional[str])
+slots.filter_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.filter_method, name="filter_method", curie=MIMS_SOIL_BIOSAMPLE.curie('filter_method'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.filter_method, domain=None, range=Optional[str])
 
-slots.dna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_well, name="dna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_well'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_cont_well, domain=None, range=Optional[str])
+slots.experimental_factor_other = Slot(uri=MIMS_SOIL_BIOSAMPLE.experimental_factor_other, name="experimental_factor_other", curie=MIMS_SOIL_BIOSAMPLE.curie('experimental_factor_other'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.experimental_factor_other, domain=None, range=Optional[str])
 
-slots.dna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_format, name="dna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_format'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_sample_format, domain=None, range=Optional[str])
+slots.other_treatment = Slot(uri=MIMS_SOIL_BIOSAMPLE.other_treatment, name="other_treatment", curie=MIMS_SOIL_BIOSAMPLE.curie('other_treatment'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.other_treatment, domain=None, range=Optional[str])
 
-slots.dna_dnase = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_dnase, name="dna_dnase", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_dnase'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_dnase, domain=None, range=Optional[str])
+slots.project_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.project_ID, name="project_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('project_ID'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.project_ID, domain=None, range=Optional[str])
+
+slots.dna_seq_project = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project, name="dna_seq_project", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project, domain=None, range=Optional[str])
+
+slots.dna_seq_project_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project_name, name="dna_seq_project_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project_name'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project_name, domain=None, range=Optional[str])
+
+slots.dna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_samp_ID, name="dna_samp_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_samp_ID'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_samp_ID, domain=None, range=Optional[str])
+
+slots.dna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_name, name="dna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_name'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_sample_name, domain=None, range=Optional[str])
 
 slots.dna_organisms = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_organisms, name="dna_organisms", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_organisms'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.dna_organisms, domain=None, range=Optional[str])
@@ -1840,32 +1889,8 @@ slots.rna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_samp_ID, name="rna_samp_ID"
 slots.rna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_name, name="rna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_name'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.rna_sample_name, domain=None, range=Optional[str])
 
-slots.rna_concentration = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_concentration, name="rna_concentration", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_concentration'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_concentration, domain=None, range=Optional[str])
-
-slots.rna_volume = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_volume, name="rna_volume", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_volume'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_volume, domain=None, range=Optional[str])
-
-slots.rna_absorb1 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb1, name="rna_absorb1", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb1'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_absorb1, domain=None, range=Optional[str])
-
-slots.rna_absorb2 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb2, name="rna_absorb2", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb2'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_absorb2, domain=None, range=Optional[str])
-
 slots.rna_container_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_container_ID, name="rna_container_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_container_ID'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.rna_container_ID, domain=None, range=Optional[str])
-
-slots.rna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_type, name="rna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_type'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_cont_type, domain=None, range=Optional[str])
-
-slots.rna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_well, name="rna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_well'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_cont_well, domain=None, range=Optional[str])
-
-slots.rna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_format, name="rna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_format'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_sample_format, domain=None, range=Optional[str])
-
-slots.dnase_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.dnase_rna, name="dnase_rna", curie=MIMS_SOIL_BIOSAMPLE.curie('dnase_rna'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.dnase_rna, domain=None, range=Optional[str])
 
 slots.rna_organisms = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_organisms, name="rna_organisms", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_organisms'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.rna_organisms, domain=None, range=Optional[str])
@@ -1888,59 +1913,44 @@ slots.proposal_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.proposal_rna, name="proposal_r
 slots.non_microb_biomass = Slot(uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass, name="non_microb_biomass", curie=MIMS_SOIL_BIOSAMPLE.curie('non_microb_biomass'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass, domain=None, range=Optional[str])
 
-slots.non_microb_biomass_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass_method, name="non_microb_biomass_method", curie=MIMS_SOIL_BIOSAMPLE.curie('non_microb_biomass_method'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass_method, domain=None, range=Optional[str])
-
-slots.microbial_biomass_C = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_C, name="microbial_biomass_C", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_C'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_C, domain=None, range=Optional[str])
-
-slots.micro_biomass_C_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_C_meth, name="micro_biomass_C_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_C_meth'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_C_meth, domain=None, range=Optional[str])
-
-slots.microbial_biomass_N = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_N, name="microbial_biomass_N", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_N'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_N, domain=None, range=Optional[str])
-
-slots.micro_biomass_N_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_N_meth, name="micro_biomass_N_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_N_meth'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_N_meth, domain=None, range=Optional[str])
-
-slots.org_nitro_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.org_nitro_method, name="org_nitro_method", curie=MIMS_SOIL_BIOSAMPLE.curie('org_nitro_method'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.org_nitro_method, domain=None, range=Optional[str])
+slots.sample_link = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_link, name="sample_link", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_link'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.sample_link, domain=None, range=Optional[str])
 
 slots.collection_time = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_time, name="collection_time", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_time'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.collection_time, domain=None, range=Optional[str])
 
-slots.collection_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_date_inc, name="collection_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_date_inc'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.collection_date_inc, domain=None, range=Optional[str])
-
 slots.collection_time_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_time_inc, name="collection_time_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_time_inc'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.collection_time_inc, domain=None, range=Optional[str])
-
-slots.start_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.start_date_inc, name="start_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('start_date_inc'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.start_date_inc, domain=None, range=Optional[str])
 
 slots.start_time_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.start_time_inc, name="start_time_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('start_time_inc'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.start_time_inc, domain=None, range=Optional[str])
 
-slots.filter_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.filter_method, name="filter_method", curie=MIMS_SOIL_BIOSAMPLE.curie('filter_method'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.filter_method, domain=None, range=Optional[str])
-
-slots.experimental_factor_other = Slot(uri=MIMS_SOIL_BIOSAMPLE.experimental_factor_other, name="experimental_factor_other", curie=MIMS_SOIL_BIOSAMPLE.curie('experimental_factor_other'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.experimental_factor_other, domain=None, range=Optional[str])
-
-slots.other_treatment = Slot(uri=MIMS_SOIL_BIOSAMPLE.other_treatment, name="other_treatment", curie=MIMS_SOIL_BIOSAMPLE.curie('other_treatment'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.other_treatment, domain=None, range=Optional[str])
-
-slots.isotope_exposure = Slot(uri=MIMS_SOIL_BIOSAMPLE.isotope_exposure, name="isotope_exposure", curie=MIMS_SOIL_BIOSAMPLE.curie('isotope_exposure'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.isotope_exposure, domain=None, range=Optional[str])
-
-slots.env_package = Slot(uri=MIMS_SOIL_BIOSAMPLE.env_package, name="env_package", curie=MIMS_SOIL_BIOSAMPLE.curie('env_package'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.env_package, domain=None, range=Optional[str])
-
 slots.analysis_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.analysis_type, name="analysis_type", curie=MIMS_SOIL_BIOSAMPLE.curie('analysis_type'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.analysis_type, domain=None, range=Optional[str])
 
-slots.sample_link = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_link, name="sample_link", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_link'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.sample_link, domain=None, range=Optional[str])
+slots.sample_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_type, name="sample_type", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_type'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.sample_type, domain=None, range=Optional[str])
+
+slots.dna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_type, name="dna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_type'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_cont_type, domain=None, range=Optional[str])
+
+slots.dna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_format, name="dna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_format'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_sample_format, domain=None, range=Optional[str])
+
+slots.dna_dnase = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_dnase, name="dna_dnase", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_dnase'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dna_dnase, domain=None, range=Optional[str])
+
+slots.rna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_type, name="rna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_type'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_cont_type, domain=None, range=Optional[str])
+
+slots.rna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_format, name="rna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_format'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.rna_sample_format, domain=None, range=Optional[str])
+
+slots.dnase_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.dnase_rna, name="dnase_rna", curie=MIMS_SOIL_BIOSAMPLE.curie('dnase_rna'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.dnase_rna, domain=None, range=Optional[str])
+
+slots.env_package = Slot(uri=MIMS_SOIL_BIOSAMPLE.env_package, name="env_package", curie=MIMS_SOIL_BIOSAMPLE.curie('env_package'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.env_package, domain=None, range=Optional[str])
 
 slots.has_unit = Slot(uri=MIMS_SOIL_BIOSAMPLE.has_unit, name="has unit", curie=MIMS_SOIL_BIOSAMPLE.curie('has_unit'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.has_unit, domain=None, range=Optional[str])
@@ -2245,35 +2255,17 @@ slots.water_content = Slot(uri=MIXS['0000185'], name="water_content", curie=MIXS
 slots.watering_regm = Slot(uri=MIXS['0000591'], name="watering_regm", curie=MIXS.curie('0000591'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.watering_regm, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.soil_emsl_jgi_mg_project_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.project_ID, name="soil_emsl_jgi_mg_project_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('project_ID'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_project_ID, domain=SoilEmslJgiMg, range=str)
+slots.soil_emsl_jgi_mg_dna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_well, name="soil_emsl_jgi_mg_dna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_well'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_cont_well, domain=SoilEmslJgiMg, range=str)
 
-slots.soil_emsl_jgi_mg_sample_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_type, name="soil_emsl_jgi_mg_sample_type", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_type'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_sample_type, domain=SoilEmslJgiMg, range=str)
+slots.soil_emsl_jgi_mg_collection_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_date_inc, name="soil_emsl_jgi_mg_collection_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_date_inc'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_collection_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_sample_shipped = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_shipped, name="soil_emsl_jgi_mg_sample_shipped", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_shipped'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_sample_shipped, domain=SoilEmslJgiMg, range=str)
+slots.soil_emsl_jgi_mg_start_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.start_date_inc, name="soil_emsl_jgi_mg_start_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('start_date_inc'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_start_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_EMSL_store_temp = Slot(uri=MIMS_SOIL_BIOSAMPLE.EMSL_store_temp, name="soil_emsl_jgi_mg_EMSL_store_temp", curie=MIMS_SOIL_BIOSAMPLE.curie('EMSL_store_temp'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_EMSL_store_temp, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_technical_reps = Slot(uri=MIMS_SOIL_BIOSAMPLE.technical_reps, name="soil_emsl_jgi_mg_technical_reps", curie=MIMS_SOIL_BIOSAMPLE.curie('technical_reps'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_technical_reps, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_replicate_number = Slot(uri=MIMS_SOIL_BIOSAMPLE.replicate_number, name="soil_emsl_jgi_mg_replicate_number", curie=MIMS_SOIL_BIOSAMPLE.curie('replicate_number'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_replicate_number, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_dna_seq_project = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project, name="soil_emsl_jgi_mg_dna_seq_project", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_seq_project, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_dna_seq_project_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project_name, name="soil_emsl_jgi_mg_dna_seq_project_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project_name'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_seq_project_name, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_dna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_samp_ID, name="soil_emsl_jgi_mg_dna_samp_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_samp_ID'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_samp_ID, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_dna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_name, name="soil_emsl_jgi_mg_dna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_name'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_sample_name, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_dna_concentration = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_concentration, name="soil_emsl_jgi_mg_dna_concentration", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_concentration'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_concentration, domain=SoilEmslJgiMg, range=str)
@@ -2287,20 +2279,62 @@ slots.soil_emsl_jgi_mg_dna_absorb1 = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_absorb1, n
 slots.soil_emsl_jgi_mg_dna_absorb2 = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_absorb2, name="soil_emsl_jgi_mg_dna_absorb2", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_absorb2'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_absorb2, domain=SoilEmslJgiMg, range=Optional[str])
 
+slots.soil_emsl_jgi_mg_microbial_biomass_C = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_C, name="soil_emsl_jgi_mg_microbial_biomass_C", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_C'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_microbial_biomass_C, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_microbial_biomass_N = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_N, name="soil_emsl_jgi_mg_microbial_biomass_N", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_N'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_microbial_biomass_N, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_sample_shipped = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_shipped, name="soil_emsl_jgi_mg_sample_shipped", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_shipped'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_sample_shipped, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_technical_reps = Slot(uri=MIMS_SOIL_BIOSAMPLE.technical_reps, name="soil_emsl_jgi_mg_technical_reps", curie=MIMS_SOIL_BIOSAMPLE.curie('technical_reps'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_technical_reps, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_replicate_number = Slot(uri=MIMS_SOIL_BIOSAMPLE.replicate_number, name="soil_emsl_jgi_mg_replicate_number", curie=MIMS_SOIL_BIOSAMPLE.curie('replicate_number'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_replicate_number, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_org_nitro_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.org_nitro_method, name="soil_emsl_jgi_mg_org_nitro_method", curie=MIMS_SOIL_BIOSAMPLE.curie('org_nitro_method'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_org_nitro_method, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_non_microb_biomass_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass_method, name="soil_emsl_jgi_mg_non_microb_biomass_method", curie=MIMS_SOIL_BIOSAMPLE.curie('non_microb_biomass_method'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_non_microb_biomass_method, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_micro_biomass_C_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_C_meth, name="soil_emsl_jgi_mg_micro_biomass_C_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_C_meth'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_micro_biomass_C_meth, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_micro_biomass_N_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_N_meth, name="soil_emsl_jgi_mg_micro_biomass_N_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_N_meth'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_micro_biomass_N_meth, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_isotope_exposure = Slot(uri=MIMS_SOIL_BIOSAMPLE.isotope_exposure, name="soil_emsl_jgi_mg_isotope_exposure", curie=MIMS_SOIL_BIOSAMPLE.curie('isotope_exposure'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_isotope_exposure, domain=SoilEmslJgiMg, range=Optional[str])
+
 slots.soil_emsl_jgi_mg_dna_container_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_container_ID, name="soil_emsl_jgi_mg_dna_container_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_container_ID'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_container_ID, domain=SoilEmslJgiMg, range=str)
 
-slots.soil_emsl_jgi_mg_dna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_type, name="soil_emsl_jgi_mg_dna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_type'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_cont_type, domain=SoilEmslJgiMg, range=Union[str, "DnaContTypeEnum"])
+slots.soil_emsl_jgi_mg_filter_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.filter_method, name="soil_emsl_jgi_mg_filter_method", curie=MIMS_SOIL_BIOSAMPLE.curie('filter_method'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_filter_method, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_dna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_well, name="soil_emsl_jgi_mg_dna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_well'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_cont_well, domain=SoilEmslJgiMg, range=str)
+slots.soil_emsl_jgi_mg_experimental_factor_other = Slot(uri=MIMS_SOIL_BIOSAMPLE.experimental_factor_other, name="soil_emsl_jgi_mg_experimental_factor_other", curie=MIMS_SOIL_BIOSAMPLE.curie('experimental_factor_other'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_experimental_factor_other, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_dna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_format, name="soil_emsl_jgi_mg_dna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_format'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_sample_format, domain=SoilEmslJgiMg, range=Union[str, "DnaSampleFormatEnum"])
+slots.soil_emsl_jgi_mg_other_treatment = Slot(uri=MIMS_SOIL_BIOSAMPLE.other_treatment, name="soil_emsl_jgi_mg_other_treatment", curie=MIMS_SOIL_BIOSAMPLE.curie('other_treatment'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_other_treatment, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_dna_dnase = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_dnase, name="soil_emsl_jgi_mg_dna_dnase", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_dnase'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_dnase, domain=SoilEmslJgiMg, range=Union[str, "DnaDnaseEnum"])
+slots.soil_emsl_jgi_mg_project_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.project_ID, name="soil_emsl_jgi_mg_project_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('project_ID'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_project_ID, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_dna_seq_project = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project, name="soil_emsl_jgi_mg_dna_seq_project", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_seq_project, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_dna_seq_project_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_seq_project_name, name="soil_emsl_jgi_mg_dna_seq_project_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_seq_project_name'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_seq_project_name, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_dna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_samp_ID, name="soil_emsl_jgi_mg_dna_samp_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_samp_ID'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_samp_ID, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_dna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_name, name="soil_emsl_jgi_mg_dna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_name'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_sample_name, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_dna_organisms = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_organisms, name="soil_emsl_jgi_mg_dna_organisms", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_organisms'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_organisms, domain=SoilEmslJgiMg, range=Optional[str])
@@ -2320,119 +2354,38 @@ slots.soil_emsl_jgi_mg_dna_project_contact = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_pr
 slots.soil_emsl_jgi_mg_proposal_dna = Slot(uri=MIMS_SOIL_BIOSAMPLE.proposal_dna, name="soil_emsl_jgi_mg_proposal_dna", curie=MIMS_SOIL_BIOSAMPLE.curie('proposal_dna'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_proposal_dna, domain=SoilEmslJgiMg, range=str)
 
-slots.soil_emsl_jgi_mg_rna_seq_project = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_seq_project, name="soil_emsl_jgi_mg_rna_seq_project", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_seq_project'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_seq_project, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_seq_project_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_seq_project_name, name="soil_emsl_jgi_mg_rna_seq_project_name", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_seq_project_name'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_seq_project_name, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_samp_ID, name="soil_emsl_jgi_mg_rna_samp_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_samp_ID'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_samp_ID, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_name, name="soil_emsl_jgi_mg_rna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_name'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_sample_name, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_concentration = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_concentration, name="soil_emsl_jgi_mg_rna_concentration", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_concentration'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_concentration, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_volume = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_volume, name="soil_emsl_jgi_mg_rna_volume", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_volume'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_volume, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_absorb1 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb1, name="soil_emsl_jgi_mg_rna_absorb1", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb1'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_absorb1, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_absorb2 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb2, name="soil_emsl_jgi_mg_rna_absorb2", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb2'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_absorb2, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_rna_container_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_container_ID, name="soil_emsl_jgi_mg_rna_container_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_container_ID'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_container_ID, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_type, name="soil_emsl_jgi_mg_rna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_type'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_cont_type, domain=SoilEmslJgiMg, range=Union[str, "RnaContTypeEnum"])
-
-slots.soil_emsl_jgi_mg_rna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_well, name="soil_emsl_jgi_mg_rna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_well'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_cont_well, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_format, name="soil_emsl_jgi_mg_rna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_format'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_sample_format, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_dnase_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.dnase_rna, name="soil_emsl_jgi_mg_dnase_rna", curie=MIMS_SOIL_BIOSAMPLE.curie('dnase_rna'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dnase_rna, domain=SoilEmslJgiMg, range=Union[str, "DnaseRnaEnum"])
-
-slots.soil_emsl_jgi_mg_rna_organisms = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_organisms, name="soil_emsl_jgi_mg_rna_organisms", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_organisms'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_organisms, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_rna_collect_site = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_collect_site, name="soil_emsl_jgi_mg_rna_collect_site", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_collect_site'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_collect_site, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_isolate_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_isolate_meth, name="soil_emsl_jgi_mg_rna_isolate_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_isolate_meth'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_isolate_meth, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_seq_project_PI = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_seq_project_PI, name="soil_emsl_jgi_mg_rna_seq_project_PI", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_seq_project_PI'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_seq_project_PI, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_rna_project_contact = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_project_contact, name="soil_emsl_jgi_mg_rna_project_contact", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_project_contact'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_rna_project_contact, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_proposal_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.proposal_rna, name="soil_emsl_jgi_mg_proposal_rna", curie=MIMS_SOIL_BIOSAMPLE.curie('proposal_rna'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_proposal_rna, domain=SoilEmslJgiMg, range=str)
-
 slots.soil_emsl_jgi_mg_non_microb_biomass = Slot(uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass, name="soil_emsl_jgi_mg_non_microb_biomass", curie=MIMS_SOIL_BIOSAMPLE.curie('non_microb_biomass'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_non_microb_biomass, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_non_microb_biomass_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.non_microb_biomass_method, name="soil_emsl_jgi_mg_non_microb_biomass_method", curie=MIMS_SOIL_BIOSAMPLE.curie('non_microb_biomass_method'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_non_microb_biomass_method, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_microbial_biomass_C = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_C, name="soil_emsl_jgi_mg_microbial_biomass_C", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_C'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_microbial_biomass_C, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_micro_biomass_C_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_C_meth, name="soil_emsl_jgi_mg_micro_biomass_C_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_C_meth'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_micro_biomass_C_meth, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_microbial_biomass_N = Slot(uri=MIMS_SOIL_BIOSAMPLE.microbial_biomass_N, name="soil_emsl_jgi_mg_microbial_biomass_N", curie=MIMS_SOIL_BIOSAMPLE.curie('microbial_biomass_N'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_microbial_biomass_N, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_micro_biomass_N_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.micro_biomass_N_meth, name="soil_emsl_jgi_mg_micro_biomass_N_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('micro_biomass_N_meth'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_micro_biomass_N_meth, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_org_nitro_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.org_nitro_method, name="soil_emsl_jgi_mg_org_nitro_method", curie=MIMS_SOIL_BIOSAMPLE.curie('org_nitro_method'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_org_nitro_method, domain=SoilEmslJgiMg, range=Optional[str])
+slots.soil_emsl_jgi_mg_sample_link = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_link, name="soil_emsl_jgi_mg_sample_link", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_link'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_sample_link, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_collection_time = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_time, name="soil_emsl_jgi_mg_collection_time", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_time'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_collection_time, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_collection_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_date_inc, name="soil_emsl_jgi_mg_collection_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_date_inc'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_collection_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
-
 slots.soil_emsl_jgi_mg_collection_time_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.collection_time_inc, name="soil_emsl_jgi_mg_collection_time_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('collection_time_inc'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_collection_time_inc, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_start_date_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.start_date_inc, name="soil_emsl_jgi_mg_start_date_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('start_date_inc'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_start_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_start_time_inc = Slot(uri=MIMS_SOIL_BIOSAMPLE.start_time_inc, name="soil_emsl_jgi_mg_start_time_inc", curie=MIMS_SOIL_BIOSAMPLE.curie('start_time_inc'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_start_time_inc, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_filter_method = Slot(uri=MIMS_SOIL_BIOSAMPLE.filter_method, name="soil_emsl_jgi_mg_filter_method", curie=MIMS_SOIL_BIOSAMPLE.curie('filter_method'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_filter_method, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_experimental_factor_other = Slot(uri=MIMS_SOIL_BIOSAMPLE.experimental_factor_other, name="soil_emsl_jgi_mg_experimental_factor_other", curie=MIMS_SOIL_BIOSAMPLE.curie('experimental_factor_other'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_experimental_factor_other, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_other_treatment = Slot(uri=MIMS_SOIL_BIOSAMPLE.other_treatment, name="soil_emsl_jgi_mg_other_treatment", curie=MIMS_SOIL_BIOSAMPLE.curie('other_treatment'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_other_treatment, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_isotope_exposure = Slot(uri=MIMS_SOIL_BIOSAMPLE.isotope_exposure, name="soil_emsl_jgi_mg_isotope_exposure", curie=MIMS_SOIL_BIOSAMPLE.curie('isotope_exposure'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_isotope_exposure, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_env_package = Slot(uri=MIMS_SOIL_BIOSAMPLE.env_package, name="soil_emsl_jgi_mg_env_package", curie=MIMS_SOIL_BIOSAMPLE.curie('env_package'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_env_package, domain=SoilEmslJgiMg, range=Union[str, "EnvPackageEnum"])
-
 slots.soil_emsl_jgi_mg_analysis_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.analysis_type, name="soil_emsl_jgi_mg_analysis_type", curie=MIMS_SOIL_BIOSAMPLE.curie('analysis_type'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_analysis_type, domain=SoilEmslJgiMg, range=Union[Union[str, "AnalysisTypeEnum"], List[Union[str, "AnalysisTypeEnum"]]])
 
-slots.soil_emsl_jgi_mg_sample_link = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_link, name="soil_emsl_jgi_mg_sample_link", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_link'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_sample_link, domain=SoilEmslJgiMg, range=Optional[str])
+slots.soil_emsl_jgi_mg_sample_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.sample_type, name="soil_emsl_jgi_mg_sample_type", curie=MIMS_SOIL_BIOSAMPLE.curie('sample_type'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_sample_type, domain=SoilEmslJgiMg, range=Union[str, "SampleTypeEnum"])
+
+slots.soil_emsl_jgi_mg_dna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_cont_type, name="soil_emsl_jgi_mg_dna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_cont_type'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_cont_type, domain=SoilEmslJgiMg, range=Union[str, "DnaContTypeEnum"])
+
+slots.soil_emsl_jgi_mg_dna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_sample_format, name="soil_emsl_jgi_mg_dna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_sample_format'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_sample_format, domain=SoilEmslJgiMg, range=Union[str, "DnaSampleFormatEnum"])
+
+slots.soil_emsl_jgi_mg_dna_dnase = Slot(uri=MIMS_SOIL_BIOSAMPLE.dna_dnase, name="soil_emsl_jgi_mg_dna_dnase", curie=MIMS_SOIL_BIOSAMPLE.curie('dna_dnase'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_dna_dnase, domain=SoilEmslJgiMg, range=Union[str, "DnaDnaseEnum"])
+
+slots.soil_emsl_jgi_mg_env_package = Slot(uri=MIMS_SOIL_BIOSAMPLE.env_package, name="soil_emsl_jgi_mg_env_package", curie=MIMS_SOIL_BIOSAMPLE.curie('env_package'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_env_package, domain=SoilEmslJgiMg, range=Union[str, "EnvPackageEnum"])
 
 slots.soil_emsl_jgi_mg_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem", curie=None,
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_ecosystem, domain=SoilEmslJgiMg, range=Optional[Union[str, "EcosystemEnum"]])
@@ -2448,24 +2401,6 @@ slots.soil_emsl_jgi_mg_ecosystem_type = Slot(uri="str(uriorcurie)", name="soil_e
 
 slots.soil_emsl_jgi_mg_specific_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_specific_ecosystem", curie=None,
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_specific_ecosystem, domain=SoilEmslJgiMg, range=Optional[Union[str, "SpecificEcosystemEnum"]])
-
-slots.soil_emsl_jgi_mg_gold_path_field = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_gold_path_field", curie=None,
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_gold_path_field, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_attribute = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_attribute", curie=None,
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_attribute, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_environment_field = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_environment field", curie=None,
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_environment_field, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_core_field = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_core field", curie=None,
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_core_field, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_nucleic_acid_sequence_source_field = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_nucleic acid sequence source field", curie=None,
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_nucleic_acid_sequence_source_field, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_investigation_field = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_investigation field", curie=None,
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_investigation_field, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_agrochem_addition = Slot(uri=MIXS['0000639'], name="soil_emsl_jgi_mg_agrochem_addition", curie=MIXS.curie('0000639'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_agrochem_addition, domain=SoilEmslJgiMg, range=Optional[Union[str, List[str]]])
@@ -2504,7 +2439,7 @@ slots.soil_emsl_jgi_mg_climate_environment = Slot(uri=MIXS['0001040'], name="soi
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_climate_environment, domain=SoilEmslJgiMg, range=Optional[Union[str, List[str]]])
 
 slots.soil_emsl_jgi_mg_collection_date = Slot(uri=MIXS['0000011'], name="soil_emsl_jgi_mg_collection_date", curie=MIXS.curie('0000011'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_collection_date, domain=SoilEmslJgiMg, range=Union[str, XSDDate])
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_collection_date, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_crop_rotation = Slot(uri=MIXS['0000318'], name="soil_emsl_jgi_mg_crop_rotation", curie=MIXS.curie('0000318'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_crop_rotation, domain=SoilEmslJgiMg, range=Optional[str])
@@ -2519,7 +2454,7 @@ slots.soil_emsl_jgi_mg_cur_vegetation_meth = Slot(uri=MIXS['0000314'], name="soi
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_cur_vegetation_meth, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_depth = Slot(uri=MIXS['0000018'], name="soil_emsl_jgi_mg_depth", curie=MIXS.curie('0000018'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_depth, domain=SoilEmslJgiMg, range=Union[dict, "QuantityValue"])
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_depth, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_drainage_class = Slot(uri=MIXS['0001085'], name="soil_emsl_jgi_mg_drainage_class", curie=MIXS.curie('0001085'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_drainage_class, domain=SoilEmslJgiMg, range=Optional[Union[str, "DrainageClassEnum"]])
@@ -2609,7 +2544,7 @@ slots.soil_emsl_jgi_mg_oxy_stat_samp = Slot(uri=MIXS['0000753'], name="soil_emsl
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_oxy_stat_samp, domain=SoilEmslJgiMg, range=Optional[Union[str, "OxyStatSampEnum"]])
 
 slots.soil_emsl_jgi_mg_ph = Slot(uri=MIXS['0001001'], name="soil_emsl_jgi_mg_ph", curie=MIXS.curie('0001001'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_ph, domain=SoilEmslJgiMg, range=Optional[float])
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_ph, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_ph_meth = Slot(uri=MIXS['0001106'], name="soil_emsl_jgi_mg_ph_meth", curie=MIXS.curie('0001106'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_ph_meth, domain=SoilEmslJgiMg, range=Optional[str])
@@ -2648,10 +2583,10 @@ slots.soil_emsl_jgi_mg_samp_name = Slot(uri=MIXS['0001107'], name="soil_emsl_jgi
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_samp_name, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_samp_size = Slot(uri=MIXS['0000001'], name="soil_emsl_jgi_mg_samp_size", curie=MIXS.curie('0000001'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_samp_size, domain=SoilEmslJgiMg, range=Optional[Union[dict, "QuantityValue"]])
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_samp_size, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_samp_store_temp = Slot(uri=MIXS['0000110'], name="soil_emsl_jgi_mg_samp_store_temp", curie=MIXS.curie('0000110'),
-                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_samp_store_temp, domain=SoilEmslJgiMg, range=Optional[Union[dict, "QuantityValue"]])
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_samp_store_temp, domain=SoilEmslJgiMg, range=Union[dict, "QuantityValue"])
 
 slots.soil_emsl_jgi_mg_season_precpt = Slot(uri=MIXS['0000645'], name="soil_emsl_jgi_mg_season_precpt", curie=MIXS.curie('0000645'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_season_precpt, domain=SoilEmslJgiMg, range=Optional[Union[dict, "QuantityValue"]])
@@ -2728,6 +2663,63 @@ slots.soil_emsl_jgi_mg_water_content = Slot(uri=MIXS['0000185'], name="soil_emsl
 slots.soil_emsl_jgi_mg_watering_regm = Slot(uri=MIXS['0000591'], name="soil_emsl_jgi_mg_watering_regm", curie=MIXS.curie('0000591'),
                    model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mg_watering_regm, domain=SoilEmslJgiMg, range=Optional[Union[str, List[str]]])
 
+slots.soil_emsl_jgi_mt_rna_cont_well = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_well, name="soil_emsl_jgi_mt_rna_cont_well", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_well'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_cont_well, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_concentration = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_concentration, name="soil_emsl_jgi_mt_rna_concentration", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_concentration'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_concentration, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_volume = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_volume, name="soil_emsl_jgi_mt_rna_volume", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_volume'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_volume, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_absorb1 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb1, name="soil_emsl_jgi_mt_rna_absorb1", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb1'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_absorb1, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_absorb2 = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_absorb2, name="soil_emsl_jgi_mt_rna_absorb2", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_absorb2'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_absorb2, domain=SoilEmslJgiMt, range=Optional[str])
+
+slots.soil_emsl_jgi_mt_rna_seq_project = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_seq_project, name="soil_emsl_jgi_mt_rna_seq_project", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_seq_project'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_seq_project, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_seq_project_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_seq_project_name, name="soil_emsl_jgi_mt_rna_seq_project_name", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_seq_project_name'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_seq_project_name, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_samp_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_samp_ID, name="soil_emsl_jgi_mt_rna_samp_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_samp_ID'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_samp_ID, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_sample_name = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_name, name="soil_emsl_jgi_mt_rna_sample_name", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_name'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_sample_name, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_container_ID = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_container_ID, name="soil_emsl_jgi_mt_rna_container_ID", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_container_ID'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_container_ID, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_organisms = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_organisms, name="soil_emsl_jgi_mt_rna_organisms", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_organisms'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_organisms, domain=SoilEmslJgiMt, range=Optional[str])
+
+slots.soil_emsl_jgi_mt_rna_collect_site = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_collect_site, name="soil_emsl_jgi_mt_rna_collect_site", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_collect_site'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_collect_site, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_isolate_meth = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_isolate_meth, name="soil_emsl_jgi_mt_rna_isolate_meth", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_isolate_meth'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_isolate_meth, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_seq_project_PI = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_seq_project_PI, name="soil_emsl_jgi_mt_rna_seq_project_PI", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_seq_project_PI'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_seq_project_PI, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_project_contact = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_project_contact, name="soil_emsl_jgi_mt_rna_project_contact", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_project_contact'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_project_contact, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_proposal_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.proposal_rna, name="soil_emsl_jgi_mt_proposal_rna", curie=MIMS_SOIL_BIOSAMPLE.curie('proposal_rna'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_proposal_rna, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_cont_type = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_cont_type, name="soil_emsl_jgi_mt_rna_cont_type", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_cont_type'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_cont_type, domain=SoilEmslJgiMt, range=Union[str, "RnaContTypeEnum"])
+
+slots.soil_emsl_jgi_mt_rna_sample_format = Slot(uri=MIMS_SOIL_BIOSAMPLE.rna_sample_format, name="soil_emsl_jgi_mt_rna_sample_format", curie=MIMS_SOIL_BIOSAMPLE.curie('rna_sample_format'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_rna_sample_format, domain=SoilEmslJgiMt, range=Union[str, "RnaSampleFormatEnum"])
+
+slots.soil_emsl_jgi_mt_dnase_rna = Slot(uri=MIMS_SOIL_BIOSAMPLE.dnase_rna, name="soil_emsl_jgi_mt_dnase_rna", curie=MIMS_SOIL_BIOSAMPLE.curie('dnase_rna'),
+                   model_uri=MIMS_SOIL_BIOSAMPLE.soil_emsl_jgi_mt_dnase_rna, domain=SoilEmslJgiMt, range=Union[str, "DnaseRnaEnum"])
+
 slots.quantity_value_has_unit = Slot(uri="str(uriorcurie)", name="quantity value_has unit", curie=None,
                    model_uri=MIMS_SOIL_BIOSAMPLE.quantity_value_has_unit, domain=QuantityValue, range=Optional[str])
 
@@ -2736,3 +2728,6 @@ slots.quantity_value_has_numeric_value = Slot(uri="str(uriorcurie)", name="quant
 
 slots.quantity_value_has_raw_value = Slot(uri="str(uriorcurie)", name="quantity value_has raw value", curie=None,
                    model_uri=MIMS_SOIL_BIOSAMPLE.quantity_value_has_raw_value, domain=QuantityValue, range=Optional[str])
+
+slots.placeholder_class_investigation_field = Slot(uri="str(uriorcurie)", name="placeholder_class_investigation field", curie=None,
+                   model_uri=MIMS_SOIL_BIOSAMPLE.placeholder_class_investigation_field, domain=PlaceholderClass, range=Optional[str])

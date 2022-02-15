@@ -7,6 +7,8 @@ from typing import Any, Dict, List
 import pandas as pd
 from linkml_runtime.utils.schemaview import SchemaView
 
+import pprint
+
 logger = logging.getLogger(__name__)
 
 
@@ -25,7 +27,6 @@ class ValidationConverter:
 
         sc_frame = raw[selected_cols]
         vc_lod = sc_frame.to_dict(orient="records")
-        logger.warning(vc_lod)
         self.vc_dod = {i["from_val"]: i for i in vc_lod}
 
 
@@ -209,7 +210,7 @@ class LinkML2DataHarmonizer:
                     current_sd.annotations._get("dh:column_number").value
                 )
             except AttributeError:
-                logger.debug(f"No annotations associated with slot {current_sd.name}")
+                logger.info(f"No annotations associated with slot {current_sd.name}")
                 pass
 
             # guidance: I have moved slot used in...  out of the MIxS comments
@@ -311,7 +312,10 @@ class LinkML2DataHarmonizer:
                 for pvk in pv_keys:
                     pv_row = blank_row.copy()
                     pv_row["label"] = pvk
-                    pv_row["parent class"] = current_sd.title
+                    if current_sd.title:
+                        pv_row["parent class"] = current_sd.title
+                    else:
+                        pv_row["parent class"] = current_sd.name
                     # use term meaning as ontology ID if possible
                     pv_row["Ontology ID"] = pvs_obj[pvk].meaning
                     pv_list.append(pv_row)
@@ -362,6 +366,7 @@ class LinkML2DataHarmonizer:
         tltf_sorted = tl_temp_frame.groupby("parent class").apply(
             pd.DataFrame.sort_values, "column_number"
         )
+
         term_list = tltf_sorted.to_dict(orient='records')
 
         sl_temp_frame = pd.DataFrame(section_list)
@@ -375,23 +380,18 @@ class LinkML2DataHarmonizer:
         section_frame = pd.DataFrame(section_record_list)
 
         sections_with_orders = sl_temp_frame.merge(right=section_frame, how="left", left_on="label", right_on="section")
-        sections_with_orders['order'] = sections_with_orders['order'].fillna(999)
-        sections_with_orders['order'] = sections_with_orders['order'].astype(int)
-        sections_with_orders.sort_values('order', inplace=True)
-        section_list = sections_with_orders.to_dict(orient='records')
 
-        sections_with_orders = sl_temp_frame.merge(right=section_frame, how="left", left_on="label", right_on="section")
-        # todo: we are generating placeholder section names for mixs and nmdc as-is terms
-        # need to assign the annotations during schema creation
         sections_with_orders['order'] = sections_with_orders['order'].fillna(999)
         sections_with_orders['order'] = sections_with_orders['order'].astype(int)
         sections_with_orders.sort_values('order', inplace=True)
         section_list = sections_with_orders.to_dict(orient='records')
 
         final_list = section_list + term_list + pv_list
-        needs_reordering = pd.DataFrame(final_list)
+        final_frame = pd.DataFrame(final_list)
 
-        reunited = needs_reordering
+        final_frame.drop(['section', 'order', 'title', 'column_number'], axis=1, inplace=True)
+
+        final_frame.to_csv("final_frame.tsv", sep="\t")
 
         self.log_tally(
             self.range_tally,
@@ -402,4 +402,4 @@ class LinkML2DataHarmonizer:
             "TABULATION OF STRING SERIALIZATIONS, for prioritizing serialization->regex conversion",
         )
 
-        return reunited
+        return final_frame

@@ -55,8 +55,8 @@ squeaky_clean: clean
 
 # --exclude yaml
 project: clean artifacts/soil_biosample.yaml
-	poetry run gen-project --exclude shacl --exclude owl --dir $@ $(word 2,$^) 2>> target/project.log
+	poetry run gen-project --exclude shacl --exclude owl --dir $@ $(word 2,$^) 2>> target/gen-project.log
 
 selected_class = soil_emsl_jgi_mg
 target/data.tsv: artifacts/soil_biosample.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class $(selected_class) 2> target/linkml_to_dh_light.log
+	poetry run linkml2dataharmonizer --model_file $< --selected_class $(selected_class) 2> target/linkml2dataharmonizer.log
