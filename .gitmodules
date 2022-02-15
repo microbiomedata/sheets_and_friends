@@ -4,3 +4,6 @@
 [submodule "nmdc-schema"]
 	path = nmdc-schema
 	url = git@github.com:microbiomedata/nmdc-schema.git
+[submodule "DataHarmonizer"]
+	path = DataHarmonizer
+	url = git@github.com:cidgoh/DataHarmonizer.git
