@@ -12,8 +12,8 @@ This will also provide better support for single LinkML files representing multi
 ## dependencies
 - python 3.9
 - poetry
-- schemasheets and cogs (which are pulled durring `poetry install`)
-- a Google Sheets server account credientials file
+- schemasheets and cogs (which are pulled during `poetry install`)
+- a Google Sheets server account credentials file
   - ask a friend for `nmdc-dh-sheets-0b754bedc29d.json`
   - put it in `local/`
   - update the `credentials_file` in the [Makefile](Makefile) if necessary
@@ -32,9 +32,12 @@ _TODO: how to keep these up to date?_
 
 ## running
 - `make all`
-  - you should get a [`artifacts/soil_emls_jgi_mg_new.yaml`](artifacts/soil_emls_jgi_mg_new.yaml). In phase one, it just contains the EMSL and JGI terms.
+- Navigate to the `DataHarmonizer` directory and double-click on `main.html` to open it in your browser
+- Add `?template=soil_emsl_jgi_mg` to the right-hand side of the address bar and ht enter
+- Use File->Open in the DataHarmonizer menu to load `DataHarmonizer/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_export.tsv`
+- Click the Validate button
+- Play around with the example values and try validating again
+- Double-click on a column header for information about the validation requirements
+- Create an issue if something isn't behaving the way you expect
+- Try the `Save as...` and `Export to...` options from the DataHarmonizer File menu. Note the differences in teh column headers.
 
-## Development phases
-1. define EMSL, JGI (and general biosample idnetification?) terms via schemasheets
-2. import any terms from other schemas like mixs-source and nmdc-schema
-3. override some imported terms with yq

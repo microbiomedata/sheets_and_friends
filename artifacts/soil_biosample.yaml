@@ -3304,6 +3304,8 @@ classes:
           will be shipped in a tube.
         string_serialization: '{96 well plate pos}'
         required: true
+        examples:
+        - value: B2
       collection_date_inc:
         name: collection_date_inc
         annotations:
@@ -3326,6 +3328,8 @@ classes:
         - MIxS:collection_date
         string_serialization: '{date, arbitrary precision}'
         recommended: true
+        examples:
+        - value: 2021-04-15; 2021-04; 2021
       start_date_inc:
         name: start_date_inc
         annotations:
@@ -3348,6 +3352,8 @@ classes:
         - MIxS:collection_date
         string_serialization: '{date, arbitrary precision}'
         recommended: true
+        examples:
+        - value: 2021-04-15; 2021-04; 2021
       EMSL_store_temp:
         name: EMSL_store_temp
         annotations:
@@ -3363,6 +3369,8 @@ classes:
         - Enter a temperature in celsius. Numeric portion only.
         string_serialization: '{float}'
         required: true
+        examples:
+        - value: '-80'
       dna_concentration:
         name: dna_concentration
         annotations:
@@ -3380,6 +3388,8 @@ classes:
         required: true
         minimum_value: 0
         maximum_value: 2000
+        examples:
+        - value: '100'
       dna_volume:
         name: dna_volume
         annotations:
@@ -3397,6 +3407,8 @@ classes:
         required: true
         minimum_value: 0
         maximum_value: 1000
+        examples:
+        - value: '25'
       dna_absorb1:
         name: dna_absorb1
         annotations:
@@ -3412,6 +3424,8 @@ classes:
         - Recommended value is between 1 and 3.
         string_serialization: '{float}'
         required: true
+        examples:
+        - value: '2.02'
       dna_absorb2:
         name: dna_absorb2
         annotations:
@@ -3427,6 +3441,8 @@ classes:
         - Recommended value is between 1 and 3.
         string_serialization: '{float}'
         recommended: true
+        examples:
+        - value: '2.02'
       microbial_biomass_C:
         name: microbial_biomass_C
         annotations:
@@ -3618,6 +3634,8 @@ classes:
           in a plate should have the same plate label.
         string_serialization: '{text < 20 characters}'
         required: true
+        examples:
+        - value: Pond_MT_041618
       filter_method:
         name: filter_method
         annotations:
@@ -3699,6 +3717,8 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: '1191234'
       dna_seq_project_name:
         name: dna_seq_project_name
         annotations:
@@ -3714,6 +3734,8 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: JGI Pond metagenomics
       dna_samp_ID:
         name: dna_samp_ID
         annotations:
@@ -3733,6 +3755,8 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: '187654'
       dna_sample_name:
         name: dna_sample_name
         annotations:
@@ -3748,6 +3772,8 @@ classes:
         title: DNA Sample Name
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: JGI_pond_041618
       dna_organisms:
         name: dna_organisms
         annotations:
@@ -3762,6 +3788,9 @@ classes:
         title: DNA Expected Organisms
         string_serialization: '{text}'
         recommended: true
+        examples:
+        - value: expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles
+            (1%)
       dna_collect_site:
         name: dna_collect_site
         annotations:
@@ -3776,6 +3805,8 @@ classes:
         title: DNA Collection Site
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: untreated pond water
       dna_isolate_meth:
         name: dna_isolate_meth
         annotations:
@@ -3789,6 +3820,8 @@ classes:
         title: DNA Isolation Method
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: phenol/chloroform extraction
       dna_seq_project_PI:
         name: dna_seq_project_PI
         annotations:
@@ -3804,6 +3837,8 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: Jane Johnson
       dna_project_contact:
         name: dna_project_contact
         annotations:
@@ -3819,6 +3854,8 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: John Jones
       proposal_dna:
         name: proposal_dna
         annotations:
@@ -3834,6 +3871,8 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
+        examples:
+        - value: '504000'
       non_microb_biomass:
         name: non_microb_biomass
         annotations:
@@ -3873,6 +3912,8 @@ classes:
           was transferred to a new vial and generated a new sample)'
         string_serialization: '{text}:{text}'
         recommended: true
+        examples:
+        - value: IGSN:DSJ0284
       collection_time:
         name: collection_time
         annotations:
@@ -3895,6 +3936,8 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
+        examples:
+        - value: 13:33; 13:33:55
       collection_time_inc:
         name: collection_time_inc
         annotations:
@@ -3917,6 +3960,8 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
+        examples:
+        - value: 13:33; 13:33:55
       start_time_inc:
         name: start_time_inc
         annotations:
@@ -3939,6 +3984,8 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
+        examples:
+        - value: 13:33; 13:33:55
       analysis_type:
         name: analysis_type
         annotations:
@@ -3955,6 +4002,8 @@ classes:
         multivalued: true
         range: analysis_type_enum
         required: true
+        examples:
+        - value: metagenomics; metabolomics; proteomics
       sample_type:
         name: sample_type
         annotations:
@@ -3970,6 +4019,8 @@ classes:
         - This can vary from 'environmental package' if the sample is an extraction.
         range: sample_type_enum
         required: true
+        examples:
+        - value: water extracted soil
       dna_cont_type:
         name: dna_cont_type
         annotations:
@@ -3983,6 +4034,8 @@ classes:
         title: DNA Container Type
         range: dna_cont_type_enum
         required: true
+        examples:
+        - value: plate
       dna_sample_format:
         name: dna_sample_format
         annotations:
@@ -3996,6 +4049,8 @@ classes:
         title: DNA Sample Format
         range: dna_sample_format_enum
         required: true
+        examples:
+        - value: Water
       dna_dnase:
         name: dna_dnase
         annotations:
@@ -4010,6 +4065,8 @@ classes:
         - Note DNAse treatment is required for all RNA samples.
         range: dna_dnase_enum
         required: true
+        examples:
+        - value: 'no'
       env_package:
         name: env_package
         annotations:
@@ -4024,6 +4081,8 @@ classes:
         title: environmental package
         range: env_package_enum
         required: true
+        examples:
+        - value: soil
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -4474,7 +4533,7 @@ classes:
         description: The date of sampling
         title: Collection Date
         examples:
-        - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
+        - value: 2021-04-15; 2021-04; 2021
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000011
@@ -4482,8 +4541,6 @@ classes:
         owner: soil MIMS
         range: string
         required: true
-        comments:
-        - 2021-04-15, 2021-04 and 2021 are all acceptable.
         notes:
         - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
           only
@@ -4610,7 +4667,7 @@ classes:
           Depth can be reported as an interval for subsurface samples.
         title: depth, meters
         examples:
-        - value: 0-0.1 OR 1
+        - value: 0-0.1; 1
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000018
