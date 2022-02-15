@@ -4834,7 +4834,7 @@ classes:
         description: The date of sampling
         title: Collection Date
         examples:
-        - value: 2018-05-11T10:00:00+01:00; 2018-05-11
+        - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000011
@@ -4971,7 +4971,7 @@ classes:
           Depth can be reported as an interval for subsurface samples.
         title: depth, meters
         examples:
-        - value: 10 meter
+        - value: 0-0.1 OR 1
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000018
@@ -6143,7 +6143,7 @@ classes:
           Refers to the original material collected or to any derived sub-samples.
         title: sample name
         examples:
-        - value: ISDsoil1
+        - value: Rock core CB1178(5-6) from NSW
         from_schema: http://w3id.org/mixs/terms
         is_a: investigation field
         string_serialization: '{text}'
@@ -6175,7 +6175,7 @@ classes:
           ) of sample collected.
         title: amount or size of sample collected
         examples:
-        - value: 5 liter
+        - value: 5 grams; 10 mL
         from_schema: http://w3id.org/mixs/terms
         is_a: nucleic acid sequence source field
         slot_uri: MIXS:0000001
@@ -6568,7 +6568,7 @@ classes:
         description: A globally unique identifier assigned to the biological sample.
         title: Globally Unique ID
         examples:
-        - value: MPI012345
+        - value: IGSN:AU1243
         from_schema: http://w3id.org/mixs/terms
         is_a: nucleic acid sequence source field
         string_serialization: '{text}:{text}'

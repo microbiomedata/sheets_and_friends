@@ -46,6 +46,7 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
     mod_rule_frame = pd.read_csv(config_tsv, sep="\t")
     mod_rule_lod = mod_rule_frame.to_dict(orient='records')
 
+    # todo break out overwrites first
     for i in mod_rule_lod:
         base_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
         try:
@@ -68,6 +69,22 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
                 else:
                     update_path = f"annotations"
                     assign(obj=slot_usage_extract, path=update_path, val={i['target']: i['value']})
+            # todo refactor
+            elif i['action'] == "add_example" and i['target'] == "examples":
+                cv_path = i['target']
+                try:
+                    current_value = glom(slot_usage_extract, cv_path)
+                    current_type = type(current_value)
+                    if current_type != list:
+                        current_value = list(current_value)
+                    current_value.append({'value': i['value']})
+                    logger.info(current_value)
+                except gc.PathAccessError as e:
+                    logger.info(e)
+                    current_value = [{'value': i['value']}]
+                assign(obj=slot_usage_extract, path=i['target'], val=current_value)
+            elif i['action'] == "overwrite_examples" and i['target'] == "examples":
+                assign(obj=slot_usage_extract, path=i['target'], val=[{'value': i['value']}])
             elif i['action'] == "add_attribute" and i['target'] != "" and i['target'] is not None:
                 cv_path = i['target']
                 try:

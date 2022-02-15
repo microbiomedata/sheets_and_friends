@@ -9177,7 +9177,7 @@
       ],
       "examples": [
         {
-          "value": "2018-05-11T10:00:00+01:00; 2018-05-11",
+          "value": "2021-04-15, 2021-04 and 2021 are all acceptable.",
           "@type": "Example"
         }
       ],
@@ -9483,7 +9483,7 @@
       ],
       "examples": [
         {
-          "value": "10 meter",
+          "value": "0-0.1 OR 1",
           "@type": "Example"
         }
       ],
@@ -12083,7 +12083,7 @@
       ],
       "examples": [
         {
-          "value": "ISDsoil1",
+          "value": "Rock core CB1178(5-6) from NSW",
           "@type": "Example"
         }
       ],
@@ -12156,7 +12156,7 @@
       ],
       "examples": [
         {
-          "value": "5 liter",
+          "value": "5 grams; 10 mL",
           "@type": "Example"
         }
       ],
@@ -13024,7 +13024,7 @@
       ],
       "examples": [
         {
-          "value": "MPI012345",
+          "value": "IGSN:AU1243",
           "@type": "Example"
         }
       ],
@@ -14375,9 +14375,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "soil_biosample.yaml",
-  "source_file_date": "2022-02-14T19:20:40",
-  "source_file_size": 231189,
-  "generation_date": "2022-02-14T19:20:47",
+  "source_file_date": "2022-02-14T20:26:32",
+  "source_file_size": 231233,
+  "generation_date": "2022-02-14T20:26:37",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/soil_biosample.context.jsonld",

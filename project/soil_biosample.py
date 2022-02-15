@@ -1,5 +1,5 @@
 # Auto generated from soil_biosample.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-02-14T19:20:56
+# Generation date: 2022-02-14T20:26:45
 # Schema: mims_soil_biosample
 #
 # id: https://example.com/mims_soil_biosample
