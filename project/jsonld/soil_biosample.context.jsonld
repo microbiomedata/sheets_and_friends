@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from soil_biosample.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-02-17T12:09:09\n    Schema: mims_soil_biosample\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://example.com/mims_soil_biosample\n    description: Schema for creating a Data Harmonizer interface about soil biosamples based on the MIxS MIMS checklist\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from soil_biosample.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-02-17T12:36:45\n    Schema: mims_soil_biosample\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://example.com/mims_soil_biosample\n    description: Schema for creating a Data Harmonizer interface about soil biosamples based on the MIxS MIMS checklist\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "MIXS": "http://example.org/UNKNOWN/MIXS/",
       "linkml": "https://w3id.org/linkml/",

@@ -155,6 +155,7 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 	# move artifacts, including the example valid data file into the docs directory (monitored by GH pages)
 	# cp -r artifacts docs
 	# remove DH stuff that's not relevant to interacting with the NMDC interface
+	rm -rf docs/README.md
 	rm -rf docs/images
 	rm -rf docs/requirements.txt
 	rm -rf docs/script/make_data.py
