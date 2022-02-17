@@ -8,9 +8,13 @@ all: clean project docs/template/soil_emsl_jgi_mg/data.js
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
-bin/robot.jar:
-	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -o $@ -i -
-# cut -d : -f 2,3 tr -d \" wget -i -
+bin/robot.jar: clean
+	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -O $@ -i -
+	java -jar bin/robot.jar --help
+
+downloads/envo.owl:
+	# --location (-L) pursues redirects
+	curl --location http://purl.obolibrary.org/obo/envo.owl -o $@
 
 .cogs:
 	poetry run cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
@@ -59,6 +63,7 @@ clean:
 	rm -rf target/*tsv
 	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
 	rm -rf docs/*
+	rm -rf bin/*
 
 squeaky_clean: clean
 	rm -rf .cogs

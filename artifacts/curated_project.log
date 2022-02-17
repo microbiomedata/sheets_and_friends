@@ -1,0 +1,183 @@
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000001: ['samp_size', 'soil_emsl_jgi_mg_samp_size']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000002: ['samp_collec_device', 'soil_emsl_jgi_mg_samp_collec_device']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000008: ['experimental_factor', 'soil_emsl_jgi_mg_experimental_factor']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000009: ['lat_lon', 'soil_emsl_jgi_mg_lat_lon']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000010: ['geo_loc_name', 'soil_emsl_jgi_mg_geo_loc_name']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000011: ['collection_date', 'soil_emsl_jgi_mg_collection_date']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000012: ['env_broad_scale', 'soil_emsl_jgi_mg_env_broad_scale']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000013: ['env_local_scale', 'soil_emsl_jgi_mg_env_local_scale']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000014: ['env_medium', 'soil_emsl_jgi_mg_env_medium']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000015: ['rel_to_oxygen', 'soil_emsl_jgi_mg_rel_to_oxygen']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000016: ['samp_mat_process', 'soil_emsl_jgi_mg_samp_mat_process']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000018: ['depth', 'soil_emsl_jgi_mg_depth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000026: ['source_mat_id', 'soil_emsl_jgi_mg_source_mat_id']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000028: ['biotic_relationship', 'soil_emsl_jgi_mg_biotic_relationship']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000093: ['elev', 'soil_emsl_jgi_mg_elev']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000094: ['alt', 'soil_emsl_jgi_mg_alt']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000110: ['samp_store_temp', 'soil_emsl_jgi_mg_samp_store_temp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000113: ['temp', 'soil_emsl_jgi_mg_temp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000117: ['tot_phosp', 'soil_emsl_jgi_mg_tot_phosp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000183: ['salinity', 'soil_emsl_jgi_mg_salinity']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000185: ['water_content', 'soil_emsl_jgi_mg_water_content']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000204: ['org_matter', 'soil_emsl_jgi_mg_org_matter']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000205: ['org_nitro', 'soil_emsl_jgi_mg_org_nitro']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000310: ['carb_nitro_ratio', 'soil_emsl_jgi_mg_carb_nitro_ratio']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000312: ['cur_vegetation', 'soil_emsl_jgi_mg_cur_vegetation']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000314: ['cur_vegetation_meth', 'soil_emsl_jgi_mg_cur_vegetation_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000315: ['previous_land_use', 'soil_emsl_jgi_mg_previous_land_use']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000316: ['prev_land_use_meth', 'soil_emsl_jgi_mg_prev_land_use_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000318: ['crop_rotation', 'soil_emsl_jgi_mg_crop_rotation']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000319: ['flooding', 'soil_emsl_jgi_mg_flooding']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000320: ['extreme_event', 'soil_emsl_jgi_mg_extreme_event']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000321: ['horizon_meth', 'soil_emsl_jgi_mg_horizon_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000322: ['sieving', 'soil_emsl_jgi_mg_sieving']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000323: ['water_cont_soil_meth', 'soil_emsl_jgi_mg_water_cont_soil_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000324: ['al_sat_meth', 'soil_emsl_jgi_mg_al_sat_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000327: ['store_cond', 'soil_emsl_jgi_mg_store_cond']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000328: ['link_climate_info', 'soil_emsl_jgi_mg_link_climate_info']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000329: ['link_class_info', 'soil_emsl_jgi_mg_link_class_info']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000330: ['local_class', 'soil_emsl_jgi_mg_local_class']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000331: ['local_class_meth', 'soil_emsl_jgi_mg_local_class_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000332: ['soil_type', 'soil_emsl_jgi_mg_soil_type']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000334: ['soil_type_meth', 'soil_emsl_jgi_mg_soil_type_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000335: ['soil_text_measure', 'soil_emsl_jgi_mg_soil_text_measure']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000336: ['soil_texture_meth', 'soil_emsl_jgi_mg_soil_texture_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000337: ['tot_org_c_meth', 'soil_emsl_jgi_mg_tot_org_c_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000338: ['tot_nitro_cont_meth', 'soil_emsl_jgi_mg_tot_nitro_cont_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000339: ['micro_biomass_meth', 'soil_emsl_jgi_mg_micro_biomass_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000341: ['salinity_meth', 'soil_emsl_jgi_mg_salinity_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000343: ['heavy_metals_meth', 'soil_emsl_jgi_mg_heavy_metals_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000505: ['phosphate', 'soil_emsl_jgi_mg_phosphate']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000525: ['tot_carb', 'soil_emsl_jgi_mg_tot_carb']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000530: ['tot_nitro_content', 'soil_emsl_jgi_mg_tot_nitro_content']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000533: ['tot_org_carb', 'soil_emsl_jgi_mg_tot_org_carb']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000551: ['air_temp_regm', 'soil_emsl_jgi_mg_air_temp_regm']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000558: ['gaseous_environment', 'soil_emsl_jgi_mg_gaseous_environment']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000568: ['humidity_regm', 'soil_emsl_jgi_mg_humidity_regm']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000569: ['light_regm', 'soil_emsl_jgi_mg_light_regm']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000591: ['watering_regm', 'soil_emsl_jgi_mg_watering_regm']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000607: ['al_sat', 'soil_emsl_jgi_mg_al_sat']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000639: ['agrochem_addition', 'soil_emsl_jgi_mg_agrochem_addition']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000642: ['annual_temp', 'soil_emsl_jgi_mg_annual_temp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000643: ['season_temp', 'soil_emsl_jgi_mg_season_temp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000644: ['annual_precpt', 'soil_emsl_jgi_mg_annual_precpt']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000645: ['season_precpt', 'soil_emsl_jgi_mg_season_precpt']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000646: ['slope_gradient', 'soil_emsl_jgi_mg_slope_gradient']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000647: ['slope_aspect', 'soil_emsl_jgi_mg_slope_aspect']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000650: ['microbial_biomass', 'soil_emsl_jgi_mg_microbial_biomass']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000652: ['heavy_metals', 'soil_emsl_jgi_mg_heavy_metals']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000735: ['size_frac_low', 'soil_emsl_jgi_mg_size_frac_low']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000736: ['size_frac_up', 'soil_emsl_jgi_mg_size_frac_up']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000751: ['chem_administration', 'soil_emsl_jgi_mg_chem_administration']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000752: ['misc_param', 'soil_emsl_jgi_mg_misc_param']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0000753: ['oxy_stat_samp', 'soil_emsl_jgi_mg_oxy_stat_samp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001001: ['ph', 'soil_emsl_jgi_mg_ph']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001038: ['biotic_regm', 'soil_emsl_jgi_mg_biotic_regm']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001040: ['climate_environment', 'soil_emsl_jgi_mg_climate_environment']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001043: ['growth_facil', 'soil_emsl_jgi_mg_growth_facil']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001080: ['cur_land_use', 'soil_emsl_jgi_mg_cur_land_use']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001081: ['tillage', 'soil_emsl_jgi_mg_tillage']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001082: ['soil_horizon', 'soil_emsl_jgi_mg_soil_horizon']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001083: ['fao_class', 'soil_emsl_jgi_mg_fao_class']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001084: ['profile_position', 'soil_emsl_jgi_mg_profile_position']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001085: ['drainage_class', 'soil_emsl_jgi_mg_drainage_class']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001086: ['fire', 'soil_emsl_jgi_mg_fire']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001106: ['ph_meth', 'soil_emsl_jgi_mg_ph_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001107: ['samp_name', 'soil_emsl_jgi_mg_samp_name']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: http://example.org/UNKNOWN/MIXS/0001225: ['samp_collec_method', 'soil_emsl_jgi_mg_samp_collec_method']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/EMSL_store_temp: ['EMSL_store_temp', 'soil_emsl_jgi_mg_EMSL_store_temp']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/analysis_type: ['analysis_type', 'soil_emsl_jgi_mg_analysis_type']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/collection_date_inc: ['collection_date_inc', 'soil_emsl_jgi_mg_collection_date_inc']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/collection_time: ['collection_time', 'soil_emsl_jgi_mg_collection_time']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/collection_time_inc: ['collection_time_inc', 'soil_emsl_jgi_mg_collection_time_inc']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_absorb1: ['dna_absorb1', 'soil_emsl_jgi_mg_dna_absorb1']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_absorb2: ['dna_absorb2', 'soil_emsl_jgi_mg_dna_absorb2']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_collect_site: ['dna_collect_site', 'soil_emsl_jgi_mg_dna_collect_site']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_concentration: ['dna_concentration', 'soil_emsl_jgi_mg_dna_concentration']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_cont_type: ['dna_cont_type', 'soil_emsl_jgi_mg_dna_cont_type']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_cont_well: ['dna_cont_well', 'soil_emsl_jgi_mg_dna_cont_well']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_container_ID: ['dna_container_ID', 'soil_emsl_jgi_mg_dna_container_ID']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_dnase: ['dna_dnase', 'soil_emsl_jgi_mg_dna_dnase']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_isolate_meth: ['dna_isolate_meth', 'soil_emsl_jgi_mg_dna_isolate_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_organisms: ['dna_organisms', 'soil_emsl_jgi_mg_dna_organisms']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_project_contact: ['dna_project_contact', 'soil_emsl_jgi_mg_dna_project_contact']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_samp_ID: ['dna_samp_ID', 'soil_emsl_jgi_mg_dna_samp_ID']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_sample_format: ['dna_sample_format', 'soil_emsl_jgi_mg_dna_sample_format']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_sample_name: ['dna_sample_name', 'soil_emsl_jgi_mg_dna_sample_name']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_seq_project: ['dna_seq_project', 'soil_emsl_jgi_mg_dna_seq_project']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_seq_project_PI: ['dna_seq_project_PI', 'soil_emsl_jgi_mg_dna_seq_project_PI']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_seq_project_name: ['dna_seq_project_name', 'soil_emsl_jgi_mg_dna_seq_project_name']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dna_volume: ['dna_volume', 'soil_emsl_jgi_mg_dna_volume']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/dnase_rna: ['dnase_rna', 'soil_emsl_jgi_mg_dnase_rna']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/env_package: ['env_package', 'soil_emsl_jgi_mg_env_package']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/experimental_factor_other: ['experimental_factor_other', 'soil_emsl_jgi_mg_experimental_factor_other']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/filter_method: ['filter_method', 'soil_emsl_jgi_mg_filter_method']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/isotope_exposure: ['isotope_exposure', 'soil_emsl_jgi_mg_isotope_exposure']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/micro_biomass_C_meth: ['micro_biomass_C_meth', 'soil_emsl_jgi_mg_micro_biomass_C_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/micro_biomass_N_meth: ['micro_biomass_N_meth', 'soil_emsl_jgi_mg_micro_biomass_N_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/microbial_biomass_C: ['microbial_biomass_C', 'soil_emsl_jgi_mg_microbial_biomass_C']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/microbial_biomass_N: ['microbial_biomass_N', 'soil_emsl_jgi_mg_microbial_biomass_N']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/non_microb_biomass: ['non_microb_biomass', 'soil_emsl_jgi_mg_non_microb_biomass']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/non_microb_biomass_method: ['non_microb_biomass_method', 'soil_emsl_jgi_mg_non_microb_biomass_method']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/org_nitro_method: ['org_nitro_method', 'soil_emsl_jgi_mg_org_nitro_method']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/other_treatment: ['other_treatment', 'soil_emsl_jgi_mg_other_treatment']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/project_ID: ['project_ID', 'soil_emsl_jgi_mg_project_ID']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/proposal_dna: ['proposal_dna', 'soil_emsl_jgi_mg_proposal_dna']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/proposal_rna: ['proposal_rna', 'soil_emsl_jgi_mg_proposal_rna']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/replicate_number: ['replicate_number', 'soil_emsl_jgi_mg_replicate_number']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_absorb1: ['rna_absorb1', 'soil_emsl_jgi_mg_rna_absorb1']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_absorb2: ['rna_absorb2', 'soil_emsl_jgi_mg_rna_absorb2']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_collect_site: ['rna_collect_site', 'soil_emsl_jgi_mg_rna_collect_site']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_concentration: ['rna_concentration', 'soil_emsl_jgi_mg_rna_concentration']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_cont_type: ['rna_cont_type', 'soil_emsl_jgi_mg_rna_cont_type']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_cont_well: ['rna_cont_well', 'soil_emsl_jgi_mg_rna_cont_well']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_container_ID: ['rna_container_ID', 'soil_emsl_jgi_mg_rna_container_ID']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_isolate_meth: ['rna_isolate_meth', 'soil_emsl_jgi_mg_rna_isolate_meth']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_organisms: ['rna_organisms', 'soil_emsl_jgi_mg_rna_organisms']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_project_contact: ['rna_project_contact', 'soil_emsl_jgi_mg_rna_project_contact']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_samp_ID: ['rna_samp_ID', 'soil_emsl_jgi_mg_rna_samp_ID']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_sample_format: ['rna_sample_format', 'soil_emsl_jgi_mg_rna_sample_format']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_sample_name: ['rna_sample_name', 'soil_emsl_jgi_mg_rna_sample_name']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_seq_project: ['rna_seq_project', 'soil_emsl_jgi_mg_rna_seq_project']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_seq_project_PI: ['rna_seq_project_PI', 'soil_emsl_jgi_mg_rna_seq_project_PI']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_seq_project_name: ['rna_seq_project_name', 'soil_emsl_jgi_mg_rna_seq_project_name']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/rna_volume: ['rna_volume', 'soil_emsl_jgi_mg_rna_volume']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/sample_link: ['sample_link', 'soil_emsl_jgi_mg_sample_link']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/sample_shipped: ['sample_shipped', 'soil_emsl_jgi_mg_sample_shipped']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/sample_type: ['sample_type', 'soil_emsl_jgi_mg_sample_type']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/start_date_inc: ['start_date_inc', 'soil_emsl_jgi_mg_start_date_inc']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/start_time_inc: ['start_time_inc', 'soil_emsl_jgi_mg_start_time_inc']; consider giving each a unique slot_uri
+ERROR:root:Multiple slots with URI: https://example.com/mims_soil_biosample/technical_reps: ['technical_reps', 'soil_emsl_jgi_mg_technical_reps']; consider giving each a unique slot_uri
+
+ERROR:root:No PK for quantity_value
+
+INFO:root:  WRITING TO: project/excel/soil_emls_jgi_mg_new_shuttled.xlsx
+INFO:root:  WRITING TO: project/graphql/soil_emls_jgi_mg_new_shuttled.graphql
+INFO:root:  WRITING TO: project/java/soil_emls_jgi_mg_new_shuttled.sql
+INFO:root:  WRITING TO: project/jsonld/soil_emls_jgi_mg_new_shuttled.context.jsonld
+INFO:root:  WRITING TO: project/jsonld/soil_emls_jgi_mg_new_shuttled.jsonld
+INFO:root:  WRITING TO: project/jsonschema/soil_emls_jgi_mg_new_shuttled.schema.json
+INFO:root:  WRITING TO: project/owl/soil_emls_jgi_mg_new_shuttled.owl.ttl
+INFO:root:  WRITING TO: project/prefixmap/soil_emls_jgi_mg_new_shuttled.yaml
+INFO:root:  WRITING TO: project/protobuf/soil_emls_jgi_mg_new_shuttled.proto
+INFO:root:  WRITING TO: project/shex/soil_emls_jgi_mg_new_shuttled.shex
+INFO:root:  WRITING TO: project/soil_emls_jgi_mg_new_shuttled.py
+INFO:root:  WRITING TO: project/sqlschema/soil_emls_jgi_mg_new_shuttled.sql
+
+INFO:root:Skipping shacl as it is in exclusion list
+# no similar INFO for yaml
+
+WARNING:PythonGenerator:No namespace defined for URI: http://w3id.org/mixs/terms/core_field
+WARNING:PythonGenerator:No namespace defined for URI: http://w3id.org/mixs/terms/environment_field
+WARNING:PythonGenerator:No namespace defined for URI: http://w3id.org/mixs/terms/investigation_field
+WARNING:PythonGenerator:No namespace defined for URI: http://w3id.org/mixs/terms/nucleic_acid_sequence_source_field
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/core/attribute
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/ecosystem
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/ecosystem_category
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/ecosystem_subtype
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/ecosystem_type
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/gold_path_field
+WARNING:PythonGenerator:No namespace defined for URI: https://microbiomedata/schema/specific_ecosystem
+
+Overlapping subset and class names: EMSL, Sample ID
+Unrecognized prefix: MIXS
