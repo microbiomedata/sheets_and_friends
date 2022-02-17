@@ -55,8 +55,6 @@ def linkml2dataharmonizer(
         section_list, term_list, pv_list, selected_class, default_section
     )
 
-    consolidated_list.to_csv("consolidated_list.tsv", sep="\t")
-
     if output_file:
         consolidated_list.to_csv(output_file, sep="\t", index=False)
     else:

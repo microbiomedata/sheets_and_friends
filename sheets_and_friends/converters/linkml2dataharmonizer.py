@@ -391,8 +391,6 @@ class LinkML2DataHarmonizer:
 
         final_frame.drop(['section', 'order', 'title', 'column_number'], axis=1, inplace=True)
 
-        final_frame.to_csv("final_frame.tsv", sep="\t")
-
         self.log_tally(
             self.range_tally,
             "TABULATION OF SLOT RANGES, for prioritizing range->regex conversion",
