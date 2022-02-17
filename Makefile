@@ -3,7 +3,14 @@ credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 .PHONY: all clean cogs_fetch
 
-all: clean project DataHarmonizer/template/soil_emsl_jgi_mg/data.js
+all: clean project docs/template/soil_emsl_jgi_mg/data.js
+
+# https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
+# https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
+# https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
+bin/robot.jar:
+	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -o $@ -i -
+# cut -d : -f 2,3 tr -d \" wget -i -
 
 .cogs:
 	poetry run cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
@@ -118,31 +125,43 @@ target/soil-env_medium-indented.tsv
 
 # this converts data.tsv to a data harmonizer main.html + main.js etc.
 DataHarmonizer/template/soil_emsl_jgi_mg/data.js: target/data_promoted.tsv
-	-mkdir -p DataHarmonizer/template/soil_emsl_jgi_mg
+	-mkdir -p $(subst /data.js,,$@)
+	# copy target/data_promoted.tsv to DataHarmonizer/template/soil_emsl_jgi_mg/data.tsv
+	# so we can generate the data.js in it's canonical place
 	cp $< $(subst .js,.tsv,$@)
+	# copy other files required by make_data.py
+	cp -r artifacts/for_data_harmonizer_template/* $(subst /data.js,,$@)
+	# generate DataHarmonizer/template/soil_emsl_jgi_mg/data.js
 	cd DataHarmonizer/template/soil_emsl_jgi_mg && poetry run python ../../script/make_data.py 2> make_data.log && cd -
 
 docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg/data.js
+	# move all of the DataHarmonizer submodule into docs/, for GH pages to see
 	cp -r DataHarmonizer/* docs
+	# restore the DataHarmonizer submodule to "the way we found it"
+	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
+	# move in the main.js that Brandon and Mark have modified vs https://github.com/cidgoh/DataHarmonizer/blob/master/script/main.js
 	cp -r artifacts/for_data_harmonizer_scripts/* docs/script
-	cp -r artifacts docs
+	# move artifacts, including the example valid data file into the docs directory (monitored by GH pages)
+	# cp -r artifacts docs
+	# remove DH stuff that's not relevant to interacting with the NMDC interface
 	rm -rf docs/images
+	rm -rf docs/requirements.txt
+	rm -rf docs/script/make_data.py
 	rm -rf docs/template/canada_covid19
+	rm -rf docs/template/export.js
 	rm -rf docs/template/gisaid
 	rm -rf docs/template/grdi
 	rm -rf docs/template/pha4ge
 	rm -rf docs/template/phac_dexa
-	rm -rf docs/template/export.js
 	rm -rf docs/template/reference_template.html
-	rm -rf docs/requirements.txt
 	rm -rf docs/template/soil_emsl_jgi_mg/reference_template.html
-	rm -rf docs/script/make_data.py
-	rm -rf docs/script/exampleInput docs/script/reference_template.html # how are these getting in there?
+	#
+	# rm -rf docs/script/exampleInput docs/script/reference_template.html # how are these getting in there?
 
 
-#  stage in the docs folder which will be exposed via GH pages?
+#  stage in the docs directory which will be exposed via GH pages?
 # do we want the LinkML generated docs to go in GH pages?
 #	# add, commit, push and merge main (with GH pages enabled) so that people can see the results at
 #	#   https://turbomam.github.io/DataHarmonizer/main.html
 #	#   go to the GH pages setup screen eg https://github.com/org/repo/settings/pages
-#	#     ensure that the pages are being built from the docs folder in the master/main branch
+#	#     ensure that the pages are being built from the docs directory in the master/main branch

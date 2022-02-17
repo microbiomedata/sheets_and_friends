@@ -1,0 +1,316 @@
+BASE <https://example.com/mims_soil_biosample/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX MIXS: <http://example.org/UNKNOWN/MIXS/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:Uriorcurie IRI
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<DhSection>  (
+    CLOSED {
+       (  $<DhSection_tes> rdf:type . * ;
+          rdf:type [ <DhSection> ] ?
+       )
+    } OR @<EMSL> OR @<GOLDEcosystemPath> OR @<JGI-Metagenomics> OR @<JGI-Metatranscriptomics> OR @<Metadata-MIxSModifiedOptional>
+    OR @<Metadata-MIxSModifiedRequired> OR @<Metadata-MIxSModifiedRequiredWhereApplicable> OR @<Metadata-MIxSOptional> OR
+    @<Metadata-MIxSRequired> OR @<Metadata-MIxSRequiredWhereApplicable> OR @<SampleID>
+)
+
+<EMSL> CLOSED {
+    (  $<EMSL_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <EMSL> ] ?
+    )
+}
+
+<GOLDEcosystemPath> CLOSED {
+    (  $<GOLDEcosystemPath_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <GOLDEcosystemPath> ] ?
+    )
+}
+
+<JGI-Metagenomics> CLOSED {
+    (  $<JGI-Metagenomics_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <JGI-Metagenomics> ] ?
+    )
+}
+
+<JGI-Metatranscriptomics> CLOSED {
+    (  $<JGI-Metatranscriptomics_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <JGI-Metatranscriptomics> ] ?
+    )
+}
+
+<Metadata-MIxSModifiedOptional> CLOSED {
+    (  $<Metadata-MIxSModifiedOptional_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <Metadata-MIxSModifiedOptional> ] ?
+    )
+}
+
+<Metadata-MIxSModifiedRequired> CLOSED {
+    (  $<Metadata-MIxSModifiedRequired_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <Metadata-MIxSModifiedRequired> ] ?
+    )
+}
+
+<Metadata-MIxSModifiedRequiredWhereApplicable> CLOSED {
+    (  $<Metadata-MIxSModifiedRequiredWhereApplicable_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <Metadata-MIxSModifiedRequiredWhereApplicable> ] ?
+    )
+}
+
+<Metadata-MIxSOptional> CLOSED {
+    (  $<Metadata-MIxSOptional_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <Metadata-MIxSOptional> ] ?
+    )
+}
+
+<Metadata-MIxSRequired> CLOSED {
+    (  $<Metadata-MIxSRequired_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <Metadata-MIxSRequired> ] ?
+    )
+}
+
+<Metadata-MIxSRequiredWhereApplicable> CLOSED {
+    (  $<Metadata-MIxSRequiredWhereApplicable_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <Metadata-MIxSRequiredWhereApplicable> ] ?
+    )
+}
+
+<PlaceholderClass> CLOSED {
+    (  $<PlaceholderClass_tes> rdf:type . * ;
+       rdf:type [ <PlaceholderClass> ] ?
+    )
+}
+
+<QuantityValue> CLOSED {
+    (  $<QuantityValue_tes> (  <http://w3id.org/mixs/ranges/has_unit> @linkml:String ? ;
+          <http://w3id.org/mixs/ranges/has_numeric_value> @linkml:Double ? ;
+          <http://w3id.org/mixs/ranges/has_raw_value> @linkml:String ?
+       ) ;
+       rdf:type [ <QuantityValue> ] ?
+    )
+}
+
+<SampleID> CLOSED {
+    (  $<SampleID_tes> (  &<DhSection_tes> ;
+          rdf:type [ <DhSection> ] ?
+       ) ;
+       rdf:type [ <SampleID> ] ?
+    )
+}
+
+<SoilEmslJgiMg> CLOSED {
+    (  $<SoilEmslJgiMg_tes> (  <dna_cont_well> @linkml:String ;
+          <collection_date_inc> @linkml:String ? ;
+          <start_date_inc> @linkml:String ? ;
+          <EMSL_store_temp> @linkml:String ;
+          <dna_concentration> @linkml:String ;
+          <dna_volume> @linkml:String ;
+          <dna_absorb1> @linkml:String ;
+          <dna_absorb2> @linkml:String ? ;
+          <microbial_biomass_C> @linkml:String ? ;
+          <microbial_biomass_N> @linkml:String ? ;
+          <sample_shipped> @linkml:String ;
+          <technical_reps> @linkml:String ? ;
+          <replicate_number> @linkml:String ? ;
+          <org_nitro_method> @linkml:String ? ;
+          <non_microb_biomass_method> @linkml:String ? ;
+          <micro_biomass_C_meth> @linkml:String ? ;
+          <micro_biomass_N_meth> @linkml:String ? ;
+          <isotope_exposure> @linkml:String ? ;
+          <dna_container_ID> @linkml:String ;
+          <filter_method> @linkml:String ? ;
+          <experimental_factor_other> @linkml:String ? ;
+          <other_treatment> @linkml:String ? ;
+          <project_ID> @linkml:String ;
+          <dna_seq_project> @linkml:String ;
+          <dna_seq_project_name> @linkml:String ;
+          <dna_samp_ID> @linkml:String ;
+          <dna_sample_name> @linkml:String ;
+          <dna_organisms> @linkml:String ? ;
+          <dna_collect_site> @linkml:String ;
+          <dna_isolate_meth> @linkml:String ;
+          <dna_seq_project_PI> @linkml:String ;
+          <dna_project_contact> @linkml:String ;
+          <proposal_dna> @linkml:String ;
+          <non_microb_biomass> @linkml:String ? ;
+          <sample_link> @linkml:String ? ;
+          <collection_time> @linkml:String ? ;
+          <collection_time_inc> @linkml:String ? ;
+          <start_time_inc> @linkml:String ? ;
+          <analysis_type> @<AnalysisTypeEnum> + ;
+          <sample_type> @<SampleTypeEnum> ;
+          <dna_cont_type> @<DnaContTypeEnum> ;
+          <dna_sample_format> @<DnaSampleFormatEnum> ;
+          <dna_dnase> @<DnaDnaseEnum> ;
+          <env_package> @<EnvPackageEnum> ;
+          <ecosystem> @linkml:String ? ;
+          <ecosystem_category> @linkml:String ? ;
+          <ecosystem_subtype> @linkml:String ? ;
+          <ecosystem_type> @linkml:String ? ;
+          <specific_ecosystem> @linkml:String ? ;
+          MIXS:0000639 @linkml:String * ;
+          MIXS:0000551 @linkml:String * ;
+          MIXS:0000607 @<QuantityValue> ? ;
+          MIXS:0000324 @linkml:String ? ;
+          MIXS:0000094 @<QuantityValue> ? ;
+          MIXS:0000644 @<QuantityValue> ? ;
+          MIXS:0000642 @<QuantityValue> ? ;
+          MIXS:0001038 @linkml:String ? ;
+          MIXS:0000028 @<BioticRelationshipEnum> ? ;
+          MIXS:0000310 @<QuantityValue> ? ;
+          MIXS:0000751 @linkml:String * ;
+          MIXS:0001040 @linkml:String * ;
+          MIXS:0000011 @linkml:Date ;
+          MIXS:0000318 @linkml:String ? ;
+          MIXS:0001080 @<CurLandUseEnum> ? ;
+          MIXS:0000312 @linkml:String ? ;
+          MIXS:0000314 @linkml:String ? ;
+          MIXS:0000018 @<QuantityValue> ;
+          MIXS:0001085 @<DrainageClassEnum> ? ;
+          MIXS:0000093 @<QuantityValue> ;
+          MIXS:0000012 @linkml:String ;
+          MIXS:0000013 @linkml:String ;
+          MIXS:0000014 @linkml:String ;
+          MIXS:0000008 @linkml:String ? ;
+          MIXS:0000320 @linkml:Date ? ;
+          MIXS:0001083 @<FaoClassEnum> ? ;
+          MIXS:0001086 @linkml:Date ? ;
+          MIXS:0000319 @linkml:Date ? ;
+          MIXS:0000558 @linkml:String * ;
+          MIXS:0000010 @linkml:String ;
+          MIXS:0001043 @linkml:String ? ;
+          MIXS:0000652 @linkml:String * ;
+          MIXS:0000343 @linkml:String ? ;
+          MIXS:0000321 @linkml:String ? ;
+          MIXS:0000568 @linkml:String * ;
+          MIXS:0000009 @linkml:String ;
+          MIXS:0000569 @linkml:String ? ;
+          MIXS:0000329 @linkml:String ? ;
+          MIXS:0000328 @linkml:String ? ;
+          MIXS:0000330 @linkml:String ? ;
+          MIXS:0000331 @linkml:String ? ;
+          MIXS:0000339 @linkml:String ? ;
+          MIXS:0000650 @<QuantityValue> ? ;
+          MIXS:0000752 @linkml:String * ;
+          MIXS:0000204 @<QuantityValue> ? ;
+          MIXS:0000205 @<QuantityValue> ? ;
+          MIXS:0000753 @<OxyStatSampEnum> ? ;
+          MIXS:0001001 @linkml:Double ? ;
+          MIXS:0001106 @linkml:String ? ;
+          MIXS:0000505 @<QuantityValue> ? ;
+          MIXS:0000316 @linkml:String ? ;
+          MIXS:0000315 @linkml:String ? ;
+          MIXS:0001084 @<ProfilePositionEnum> ? ;
+          MIXS:0000015 @<RelToOxygenEnum> ? ;
+          MIXS:0000183 @<QuantityValue> ? ;
+          MIXS:0000341 @linkml:String ? ;
+          MIXS:0000002 @linkml:String ? ;
+          MIXS:0001225 @linkml:String ? ;
+          MIXS:0000016 @linkml:String ? ;
+          MIXS:0001107 @linkml:String ;
+          MIXS:0000001 @<QuantityValue> ? ;
+          MIXS:0000110 @<QuantityValue> ? ;
+          MIXS:0000645 @<QuantityValue> ? ;
+          MIXS:0000643 @<QuantityValue> ? ;
+          MIXS:0000322 @linkml:String ? ;
+          MIXS:0000735 @<QuantityValue> ? ;
+          MIXS:0000736 @<QuantityValue> ? ;
+          MIXS:0000647 @<QuantityValue> ? ;
+          MIXS:0000646 @<QuantityValue> ? ;
+          MIXS:0001082 @<SoilHorizonEnum> ? ;
+          MIXS:0000335 @<QuantityValue> ? ;
+          MIXS:0000336 @linkml:String ? ;
+          MIXS:0000332 @linkml:String ? ;
+          MIXS:0000334 @linkml:String ? ;
+          MIXS:0000026 @linkml:String ? ;
+          MIXS:0000327 @linkml:String ? ;
+          MIXS:0000113 @<QuantityValue> ? ;
+          MIXS:0001081 @<TillageEnum> * ;
+          MIXS:0000525 @<QuantityValue> ? ;
+          MIXS:0000338 @linkml:String ? ;
+          MIXS:0000530 @<QuantityValue> ? ;
+          MIXS:0000337 @linkml:String ? ;
+          MIXS:0000533 @<QuantityValue> ? ;
+          MIXS:0000117 @<QuantityValue> ? ;
+          MIXS:0000323 @linkml:String ? ;
+          MIXS:0000185 @<QuantityValue> ? ;
+          MIXS:0000591 @linkml:String *
+       ) ;
+       rdf:type [ <SoilEmslJgiMg> ]
+    )
+}
+
+<SoilEmslJgiMt> CLOSED {
+    (  $<SoilEmslJgiMt_tes> (  <rna_cont_well> @linkml:String ;
+          <rna_concentration> @linkml:String ;
+          <rna_volume> @linkml:String ;
+          <rna_absorb1> @linkml:String ;
+          <rna_absorb2> @linkml:String ? ;
+          <rna_seq_project> @linkml:String ;
+          <rna_seq_project_name> @linkml:String ;
+          <rna_samp_ID> @linkml:String ;
+          <rna_sample_name> @linkml:String ;
+          <rna_container_ID> @linkml:String ;
+          <rna_organisms> @linkml:String ? ;
+          <rna_collect_site> @linkml:String ;
+          <rna_isolate_meth> @linkml:String ;
+          <rna_seq_project_PI> @linkml:String ;
+          <rna_project_contact> @linkml:String ;
+          <proposal_rna> @linkml:String ;
+          <rna_cont_type> @<RnaContTypeEnum> ;
+          <rna_sample_format> @<RnaSampleFormatEnum> ;
+          <dnase_rna> @<DnaseRnaEnum>
+       ) ;
+       rdf:type [ <SoilEmslJgiMt> ] ?
+    )
+}
+
+

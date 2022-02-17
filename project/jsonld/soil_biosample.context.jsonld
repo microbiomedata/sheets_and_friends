@@ -1,0 +1,358 @@
+{
+   "_comments": "Auto generated from soil_biosample.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-02-17T11:09:52\n    Schema: mims_soil_biosample\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://example.com/mims_soil_biosample\n    description: Schema for creating a Data Harmonizer interface about soil biosamples based on the MIxS MIMS checklist\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "MIXS": "http://example.org/UNKNOWN/MIXS/",
+      "linkml": "https://w3id.org/linkml/",
+      "mims_soil_biosample": "https://example.com/mims_soil_biosample/",
+      "mixs.vocab": "https://turbomam.github.io/mixs-source/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://example.com/mims_soil_biosample/",
+      "agrochem_addition": {
+         "@id": "MIXS:0000639"
+      },
+      "air_temp_regm": {
+         "@id": "MIXS:0000551"
+      },
+      "al_sat": {
+         "@type": "@id",
+         "@id": "MIXS:0000607"
+      },
+      "al_sat_meth": {
+         "@id": "MIXS:0000324"
+      },
+      "alt": {
+         "@type": "@id",
+         "@id": "MIXS:0000094"
+      },
+      "annual_precpt": {
+         "@type": "@id",
+         "@id": "MIXS:0000644"
+      },
+      "annual_temp": {
+         "@type": "@id",
+         "@id": "MIXS:0000642"
+      },
+      "biotic_regm": {
+         "@id": "MIXS:0001038"
+      },
+      "biotic_relationship": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0000028"
+      },
+      "carb_nitro_ratio": {
+         "@type": "@id",
+         "@id": "MIXS:0000310"
+      },
+      "chem_administration": {
+         "@id": "MIXS:0000751"
+      },
+      "climate_environment": {
+         "@id": "MIXS:0001040"
+      },
+      "collection_date": {
+         "@type": "xsd:date",
+         "@id": "MIXS:0000011"
+      },
+      "crop_rotation": {
+         "@id": "MIXS:0000318"
+      },
+      "cur_land_use": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0001080"
+      },
+      "cur_vegetation": {
+         "@id": "MIXS:0000312"
+      },
+      "cur_vegetation_meth": {
+         "@id": "MIXS:0000314"
+      },
+      "depth": {
+         "@type": "@id",
+         "@id": "MIXS:0000018"
+      },
+      "drainage_class": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0001085"
+      },
+      "elev": {
+         "@type": "@id",
+         "@id": "MIXS:0000093"
+      },
+      "env_broad_scale": {
+         "@id": "MIXS:0000012"
+      },
+      "env_local_scale": {
+         "@id": "MIXS:0000013"
+      },
+      "env_medium": {
+         "@id": "MIXS:0000014"
+      },
+      "experimental_factor": {
+         "@id": "MIXS:0000008"
+      },
+      "extreme_event": {
+         "@type": "xsd:date",
+         "@id": "MIXS:0000320"
+      },
+      "fao_class": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0001083"
+      },
+      "fire": {
+         "@type": "xsd:date",
+         "@id": "MIXS:0001086"
+      },
+      "flooding": {
+         "@type": "xsd:date",
+         "@id": "MIXS:0000319"
+      },
+      "gaseous_environment": {
+         "@id": "MIXS:0000558"
+      },
+      "geo_loc_name": {
+         "@id": "MIXS:0000010"
+      },
+      "growth_facil": {
+         "@id": "MIXS:0001043"
+      },
+      "heavy_metals": {
+         "@id": "MIXS:0000652"
+      },
+      "heavy_metals_meth": {
+         "@id": "MIXS:0000343"
+      },
+      "horizon_meth": {
+         "@id": "MIXS:0000321"
+      },
+      "humidity_regm": {
+         "@id": "MIXS:0000568"
+      },
+      "lat_lon": {
+         "@id": "MIXS:0000009"
+      },
+      "light_regm": {
+         "@id": "MIXS:0000569"
+      },
+      "link_class_info": {
+         "@id": "MIXS:0000329"
+      },
+      "link_climate_info": {
+         "@id": "MIXS:0000328"
+      },
+      "local_class": {
+         "@id": "MIXS:0000330"
+      },
+      "local_class_meth": {
+         "@id": "MIXS:0000331"
+      },
+      "micro_biomass_meth": {
+         "@id": "MIXS:0000339"
+      },
+      "microbial_biomass": {
+         "@type": "@id",
+         "@id": "MIXS:0000650"
+      },
+      "misc_param": {
+         "@id": "MIXS:0000752"
+      },
+      "org_matter": {
+         "@type": "@id",
+         "@id": "MIXS:0000204"
+      },
+      "org_nitro": {
+         "@type": "@id",
+         "@id": "MIXS:0000205"
+      },
+      "oxy_stat_samp": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0000753"
+      },
+      "ph": {
+         "@type": "xsd:double",
+         "@id": "MIXS:0001001"
+      },
+      "ph_meth": {
+         "@id": "MIXS:0001106"
+      },
+      "phosphate": {
+         "@type": "@id",
+         "@id": "MIXS:0000505"
+      },
+      "prev_land_use_meth": {
+         "@id": "MIXS:0000316"
+      },
+      "previous_land_use": {
+         "@id": "MIXS:0000315"
+      },
+      "profile_position": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0001084"
+      },
+      "rel_to_oxygen": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0000015"
+      },
+      "salinity": {
+         "@type": "@id",
+         "@id": "MIXS:0000183"
+      },
+      "salinity_meth": {
+         "@id": "MIXS:0000341"
+      },
+      "samp_collec_device": {
+         "@id": "MIXS:0000002"
+      },
+      "samp_collec_method": {
+         "@id": "MIXS:0001225"
+      },
+      "samp_mat_process": {
+         "@id": "MIXS:0000016"
+      },
+      "samp_name": {
+         "@id": "MIXS:0001107"
+      },
+      "samp_size": {
+         "@type": "@id",
+         "@id": "MIXS:0000001"
+      },
+      "samp_store_temp": {
+         "@type": "@id",
+         "@id": "MIXS:0000110"
+      },
+      "season_precpt": {
+         "@type": "@id",
+         "@id": "MIXS:0000645"
+      },
+      "season_temp": {
+         "@type": "@id",
+         "@id": "MIXS:0000643"
+      },
+      "sieving": {
+         "@id": "MIXS:0000322"
+      },
+      "size_frac_low": {
+         "@type": "@id",
+         "@id": "MIXS:0000735"
+      },
+      "size_frac_up": {
+         "@type": "@id",
+         "@id": "MIXS:0000736"
+      },
+      "slope_aspect": {
+         "@type": "@id",
+         "@id": "MIXS:0000647"
+      },
+      "slope_gradient": {
+         "@type": "@id",
+         "@id": "MIXS:0000646"
+      },
+      "source_mat_id": {
+         "@id": "MIXS:0000026"
+      },
+      "soil_horizon": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0001082"
+      },
+      "soil_text_measure": {
+         "@type": "@id",
+         "@id": "MIXS:0000335"
+      },
+      "soil_texture_meth": {
+         "@id": "MIXS:0000336"
+      },
+      "soil_type": {
+         "@id": "MIXS:0000332"
+      },
+      "soil_type_meth": {
+         "@id": "MIXS:0000334"
+      },
+      "store_cond": {
+         "@id": "MIXS:0000327"
+      },
+      "temp": {
+         "@type": "@id",
+         "@id": "MIXS:0000113"
+      },
+      "tillage": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "MIXS:0001081"
+      },
+      "tot_carb": {
+         "@type": "@id",
+         "@id": "MIXS:0000525"
+      },
+      "tot_nitro_cont_meth": {
+         "@id": "MIXS:0000338"
+      },
+      "tot_nitro_content": {
+         "@type": "@id",
+         "@id": "MIXS:0000530"
+      },
+      "tot_org_c_meth": {
+         "@id": "MIXS:0000337"
+      },
+      "tot_org_carb": {
+         "@type": "@id",
+         "@id": "MIXS:0000533"
+      },
+      "tot_phosp": {
+         "@type": "@id",
+         "@id": "MIXS:0000117"
+      },
+      "water_cont_soil_meth": {
+         "@id": "MIXS:0000323"
+      },
+      "water_content": {
+         "@type": "@id",
+         "@id": "MIXS:0000185"
+      },
+      "watering_regm": {
+         "@id": "MIXS:0000591"
+      }
+   }
+}
