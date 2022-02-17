@@ -372,7 +372,7 @@ class LinkML2DataHarmonizer:
         sl_temp_frame = pd.DataFrame(section_list)
 
         section_record_list = []
-        dh_section_name = self.model_sv.class_children('dh_section')
+        dh_section_name = self.model_sv.class_children('nmdc_dh_section')
         for current_dhs in dh_section_name:
             current_dhs_obj = self.model_sv.get_class(current_dhs)
             sect_ord_anno = current_dhs_obj.annotations['dh_sect_ord'].value

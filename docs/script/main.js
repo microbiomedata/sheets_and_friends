@@ -14,7 +14,7 @@
 const VERSION = '0.15.1';
 const VERSION_TEXT = 'DataHarmonizer provenance: v' + VERSION;
 const TEMPLATES = {
-  'Soil biosamples for NMDC, EMSL and JGI (metagenimics)': {'folder': 'soil_emsl_jgi_mg', 'status': 'published'}
+  'Soil biosamples for NMDC, EMSL and JGI (metagenomics)': {'folder': 'soil_emsl_jgi_mg', 'status': 'published'}
 };
 // Currently selected cell range[row,col,row2,col2]
 CURRENT_SELECTION = [null,null,null,null];
@@ -1385,7 +1385,7 @@ $(document).ready(() => {
   setupMessageInterface();
 
   // Default template
-  let template_label = 'Soil biosamples for NMDC, EMSL and JGI (metagenimics)';
+  let template_label = 'Soil biosamples for NMDC, EMSL and JGI (metagenomics)';
   let template_folder = TEMPLATES[template_label].folder;
 
   // Allow URL parameter ?template=xxx_yyy to select template on page load.

@@ -1,7 +1,3 @@
-type DhSection
-  {
-  }
-
 type EMSL
   {
   }
@@ -39,6 +35,14 @@ type Metadata-MIxSRequired
   }
 
 type Metadata-MIxSRequiredWhereApplicable
+  {
+  }
+
+type NmdcDhInterface
+  {
+  }
+
+type NmdcDhSection
   {
   }
 

@@ -9,7 +9,7 @@ message QuantityValue
   optional hasNumericValue Double = 2
   optional hasRawValue String = 3
  }
-// A soil biosample, with metadata in compliance with the MIxS MIMS standard for metagenomes, EMSL biosample expectations, and JGI expectations for JGI metagenomics studies
+// A nmdc_dh_section, with metadata in compliance with the MIxS MIMS standard for metagenomes, EMSL biosample expectations, and JGI expectations for JGI metagenomics studies
 message SoilEmslJgiMg
  {
   dnaContWell String = 1

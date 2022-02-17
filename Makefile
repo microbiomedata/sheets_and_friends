@@ -37,21 +37,22 @@ cogs_fetch: .cogs
 artifacts/from_sheets2linkml.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/new_terms.tsv \
   .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/placeholders_awaiting_auto_imp.tsv
 	poetry run cogs fetch
-	poetry run sheets2linkml -o $@ $^ 2>> target/sheets2linkml.log
+	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
 
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
-	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2>> target/do_shuttle.log
+	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2>> logs/do_shuttle.log
 
 # clean? cogs_fetch?
-artifacts/soil_biosample.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shuttles.yaml
+artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shuttles.yaml
 	poetry run mod_by_path \
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
-		--yaml_output $@  2>> target/mod_by_path.log
+		--yaml_output $@  2>> logs/mod_by_path.log
 
 clean:
 	rm -rf artifacts/*yaml
 	rm -rf target/*log
+	rm -rf logs/*log
 	rm -rf project/docs/*
 	rm -rf project/excel/*
 	rm -rf project/graphql/*
@@ -74,11 +75,11 @@ clean:
 squeaky_clean: clean
 	rm -rf .cogs
 
-project: artifacts/soil_biosample.yaml
-	poetry run gen-project --exclude shacl --exclude owl --dir $@ $< 2>> target/gen-project.log
+project: artifacts/nmdc_dh.yaml
+	poetry run gen-project --exclude shacl --exclude owl --dir $@ $< 2>> logs/gen-project.log
 
-target/data.tsv: artifacts/soil_biosample.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> target/linkml2dataharmonizer.log
+target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
+	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
 	rm -rf artifacts/with_shuttles.yaml
 
@@ -177,3 +178,12 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 #	#   https://turbomam.github.io/DataHarmonizer/main.html
 #	#   go to the GH pages setup screen eg https://github.com/org/repo/settings/pages
 #	#     ensure that the pages are being built from the docs directory in the master/main branch
+
+# todo switch left to artifacts/nmdc_dh.yaml when it's ready
+# todo add enum_name when ready
+compare_enums:
+	poetry run compare_enums \
+		--left_model artifacts/soil_biosample.yaml \
+		--right_model mixs-source/model/schema/mixs.yaml \
+		--yaml_output target/compare_enums.yaml
+

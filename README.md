@@ -1,9 +1,9 @@
 # sheets_and_friends
 Create a LinkML model with newly minted slots (via [schemasheets](https://github.com/linkml/schemasheets)), as-is imported slots (with [SchemaView](https://linkml.io/linkml/developers/manipulating-schemas.html)), or imported but modified slots (via [glom](https://glom.readthedocs.io/en/latest/index.html))
 
-The schemsheets content comes from [nmdc-dh-sheets](https://docs.google.com/spreadsheets/d/1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs) (as opposed to [Soil-NMDC-Template_Compiled](docs.google.com/spreadsheets/d/1pSmxX6XGOxmoA7S7rKyj5OaEl3PmAl4jAOlROuNHrU0)) and is intended to replace [microbiomedata/DataHarmonizer](https://github.com/microbiomedata/DataHarmonizer).
+The schemsheets content comes from [nmdc-dh-sheets](https://docs.google.com/spreadsheets/d/1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs) (as opposed to [Soil-NMDC-Template_Compiled](https://docs.google.com/spreadsheets/d/1pSmxX6XGOxmoA7S7rKyj5OaEl3PmAl4jAOlROuNHrU0)) and is intended to replace [microbiomedata/DataHarmonizer](https://github.com/microbiomedata/DataHarmonizer).
 
-This will also provide better support for single LinkML files representing multiple DH iterfaces on a class-by-class basis. For example soil-emls-jgi-metagenimics vs water-jgi-metatranscriptomics.
+This will also provide better support for single LinkML files representing multiple DH interfaces on a class-by-class basis. For example soil-emls-jgi-metagenomics vs water-jgi-metatranscriptomics.
 
 Also
 - provides better distinction between new terms, imports (regardless of modifications) and modifications themselves
@@ -11,7 +11,7 @@ Also
 - provides a direct solution for making terms in a "required" section required/yellow
 - makes programmatic access to the Google Sheet easier by using [cogs](https://github.com/ontodev/cogs) 
 - is smaller
-- is more object oriented and hopefully follows better software engineering principles
+- is more object-oriented and hopefully follows better software engineering principles
 
 Future:
 - use [cidgoh/DataHarmonizer's linkml-datastructure branch](https://github.com/cidgoh/DataHarmonizer/tree/linkml-datastructure) instead of [sheets_and_friends/converters/linkml2dataharmonizer.py](sheets_and_friends/converters/linkml2dataharmonizer.py)
@@ -46,10 +46,13 @@ _TODO: how to keep these up to date?_
 - `make all`
 - Navigate to the `DataHarmonizer` directory and double-click on `main.html` to open it in your browser
 - Add `?template=soil_emsl_jgi_mg` to the right-hand side of the address bar and hit enter
-- Use File->Open in the DataHarmonizer menu to load `DataHarmonizer/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_export.tsv`
+- Get a valid data file to start with, either
+  - https://microbiomedata.github.io/sheets_and_friends/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_example_data.tsv
+  - `DataHarmonizer/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_export.tsv`
+- Use File->Open in the DataHarmonizer menu to load the valid data
 - Click the Validate button
 - Play around with the example values and try validating again
 - Double-click on a column header for information about the validation requirements
-- Create an issue if something isn't behaving the way you expect
-- Try the `Save as...` and `Export to...` options from the DataHarmonizer File menu. Note the differences in teh column headers.
+- Create an [issue](https://github.com/microbiomedata/sheets_and_friends/issues) if something isn't behaving the way you expect
+- Try the `Save as...` and `Export to...` options from the DataHarmonizer File menu. Note the differences in the column headers.
 

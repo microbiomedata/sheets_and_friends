@@ -1,27 +1,27 @@
-name: mims_soil_biosample
-description: Schema for creating a Data Harmonizer interface about soil biosamples
-  based on the MIxS MIMS checklist
+name: nmdc_dh
+description: Schema for creating Data Harmonizer interfaces for biosamples based on
+  MIxS and other standards
 see_also:
 - mixs.vocab:SoilMIMS
-id: https://example.com/mims_soil_biosample
+id: https://example.com/nmdc_dh
 imports:
 - linkml:types
 prefixes:
-  mims_soil_biosample:
-    prefix_prefix: mims_soil_biosample
-    prefix_reference: https://example.com/mims_soil_biosample/
+  nmdc_dh:
+    prefix_prefix: nmdc_dh
+    prefix_reference: https://example.com/nmdc_dh/
   mixs.vocab:
     prefix_prefix: mixs.vocab
-    prefix_reference: https://turbomam.github.io/mixs-source/
+    prefix_reference: https://genomicsstandardsconsortium.github.io/mixs/
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
-default_prefix: mims_soil_biosample
+default_prefix: nmdc_dh
 default_range: string
 enums:
   analysis_type_enum:
     name: analysis_type_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       metabolomics:
         text: metabolomics
@@ -35,13 +35,18 @@ enums:
         text: natural organic matter
   biotic_relationship_enum:
     name: biotic_relationship_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       commensalism:
         text: commensalism
+        annotations:
+          sntc_name:
+            tag: sntc_name
+            value: samp_biotic_relationship
         notes:
-        - 'biotic_relationship_enum: free living|parasitism|commensalism|symbiotic|mutualism.
-          old_dh_slot: samp_biotic_relationship'
+        - 'biotic_relationship_enum: free living|parasitism|commensalism|symbiotic|mutualism'
+        see_also:
+        - https://genomicsstandardsconsortium.github.io/mixs/biotic_relationship_enum/
       free living:
         text: free living
       mutualism:
@@ -52,7 +57,7 @@ enums:
         text: symbiotic
   dna_cont_type_enum:
     name: dna_cont_type_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       plate:
         text: plate
@@ -60,7 +65,7 @@ enums:
         text: tube
   dna_dnase_enum:
     name: dna_dnase_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       'no':
         text: 'no'
@@ -68,7 +73,7 @@ enums:
         text: 'yes'
   dna_sample_format_enum:
     name: dna_sample_format_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       10 mM Tris-HCl:
         text: 10 mM Tris-HCl
@@ -92,7 +97,7 @@ enums:
         text: Water
   dnase_rna_enum:
     name: dnase_rna_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       'no':
         text: 'no'
@@ -100,19 +105,21 @@ enums:
         text: 'yes'
   ecosystem_category_enum:
     name: ecosystem_category_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       Terrestrial:
         text: Terrestrial
+        see_also:
+        - https://github.com/microbiomedata/sheets_and_friends/issues/22
   ecosystem_enum:
     name: ecosystem_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       Environmental:
         text: Environmental
   ecosystem_subtype_enum:
     name: ecosystem_subtype_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       Biocrust:
         text: Biocrust
@@ -158,27 +165,33 @@ enums:
         text: Wetlands
   ecosystem_type_enum:
     name: ecosystem_type_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       Soil:
         text: Soil
   env_package_enum:
     name: env_package_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       soil:
         text: soil
         notes:
-        - overriding mixs-source ?
+        - I don't think this is a MIxS term anymore, so it make sense to define it
+          here
   growth_facil_enum:
     name: growth_facil_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       experimental_garden:
         text: experimental_garden
+        annotations:
+          sntc_name:
+            tag: sntc_name
+            value: growth_facility
         notes:
-        - 'see mixs growth_facil (string range according to mixs-source). old_dh_slot:
-          growth_facility'
+        - string range according to MIxS
+        see_also:
+        - https://genomicsstandardsconsortium.github.io/mixs/growth_facil/
       field:
         text: field
       field_incubation:
@@ -197,13 +210,16 @@ enums:
         text: other
   rel_to_oxygen_enum:
     name: rel_to_oxygen_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       aerobe:
         text: aerobe
-        notes:
-        - 'rel_to_oxygen_enum: aerobe|anaerobe|facultative|microaerophilic|microanaerobe|obligate
-          aerobe|obligate anaerobe. old_dh_slot: oxygen_relationship'
+        annotations:
+          sntc_name:
+            tag: sntc_name
+            value: oxygen_relationship
+        see_also:
+        - https://genomicsstandardsconsortium.github.io/mixs/rel_to_oxygen_enum/
       anaerobe:
         text: anaerobe
       facultative:
@@ -218,7 +234,7 @@ enums:
         text: obligate anaerobe
   rna_cont_type_enum:
     name: rna_cont_type_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       plate:
         text: plate
@@ -226,7 +242,7 @@ enums:
         text: tube
   rna_sample_format_enum:
     name: rna_sample_format_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       10 mM Tris-HCl:
         text: 10 mM Tris-HCl
@@ -250,7 +266,7 @@ enums:
         text: Water
   sample_type_enum:
     name: sample_type_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       soil:
         text: soil
@@ -258,7 +274,7 @@ enums:
         text: water_extract_soil
   specific_ecosystem_enum:
     name: specific_ecosystem_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       Agricultural:
         text: Agricultural
@@ -310,13 +326,17 @@ enums:
         text: Uranium contaminated
   store_cond_enum:
     name: store_cond_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       fresh:
         text: fresh
+        annotations:
+          sntc_name:
+            tag: sntc_name
+            value: storage_condt
         notes:
-        - 'see samp_store_dur, samp_store_loc, samp_store_temp and store_cond (which
-          takes a string range according to mixs-source). old_dh_slot: storage_condt'
+        - see samp_store_dur, samp_store_loc, samp_store_temp and store_cond (which
+          takes a string range according to mixs-source).
       frozen:
         text: frozen
       lyophilized:
@@ -325,7 +345,7 @@ enums:
         text: other
   cur_land_use_enum:
     name: cur_land_use_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       badlands:
         text: badlands
@@ -470,7 +490,7 @@ enums:
         - placeholder for dependency
   drainage_class_enum:
     name: drainage_class_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       excessively drained:
         text: excessively drained
@@ -498,7 +518,7 @@ enums:
         - placeholder for dependency
   fao_class_enum:
     name: fao_class_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       Acrisols:
         text: Acrisols
@@ -606,7 +626,7 @@ enums:
         - placeholder for dependency
   oxy_stat_samp_enum:
     name: oxy_stat_samp_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       aerobic:
         text: aerobic
@@ -622,7 +642,7 @@ enums:
         - placeholder for dependency
   profile_position_enum:
     name: profile_position_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       backslope:
         text: backslope
@@ -646,7 +666,7 @@ enums:
         - placeholder for dependency
   soil_horizon_enum:
     name: soil_horizon_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       A horizon:
         text: A horizon
@@ -678,7 +698,7 @@ enums:
         - placeholder for dependency
   tillage_enum:
     name: tillage_enum
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     permissible_values:
       chisel:
         text: chisel
@@ -719,202 +739,202 @@ enums:
 slots:
   dna_cont_well:
     name: dna_cont_well
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_cont_well:
     name: rna_cont_well
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   collection_date_inc:
     name: collection_date_inc
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   start_date_inc:
     name: start_date_inc
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   EMSL_store_temp:
     name: EMSL_store_temp
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_concentration:
     name: dna_concentration
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_volume:
     name: dna_volume
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_absorb1:
     name: dna_absorb1
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_absorb2:
     name: dna_absorb2
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_concentration:
     name: rna_concentration
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_volume:
     name: rna_volume
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_absorb1:
     name: rna_absorb1
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_absorb2:
     name: rna_absorb2
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   microbial_biomass_C:
     name: microbial_biomass_C
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   microbial_biomass_N:
     name: microbial_biomass_N
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   sample_shipped:
     name: sample_shipped
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   technical_reps:
     name: technical_reps
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   replicate_number:
     name: replicate_number
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   org_nitro_method:
     name: org_nitro_method
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   non_microb_biomass_method:
     name: non_microb_biomass_method
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   micro_biomass_C_meth:
     name: micro_biomass_C_meth
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   micro_biomass_N_meth:
     name: micro_biomass_N_meth
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   isotope_exposure:
     name: isotope_exposure
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_container_ID:
     name: dna_container_ID
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   filter_method:
     name: filter_method
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   experimental_factor_other:
     name: experimental_factor_other
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   other_treatment:
     name: other_treatment
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   project_ID:
     name: project_ID
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_seq_project:
     name: dna_seq_project
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_seq_project_name:
     name: dna_seq_project_name
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_samp_ID:
     name: dna_samp_ID
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_sample_name:
     name: dna_sample_name
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_organisms:
     name: dna_organisms
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_collect_site:
     name: dna_collect_site
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_isolate_meth:
     name: dna_isolate_meth
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_seq_project_PI:
     name: dna_seq_project_PI
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_project_contact:
     name: dna_project_contact
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   proposal_dna:
     name: proposal_dna
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_seq_project:
     name: rna_seq_project
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_seq_project_name:
     name: rna_seq_project_name
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_samp_ID:
     name: rna_samp_ID
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_sample_name:
     name: rna_sample_name
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_container_ID:
     name: rna_container_ID
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_organisms:
     name: rna_organisms
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_collect_site:
     name: rna_collect_site
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_isolate_meth:
     name: rna_isolate_meth
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_seq_project_PI:
     name: rna_seq_project_PI
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_project_contact:
     name: rna_project_contact
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   proposal_rna:
     name: proposal_rna
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   non_microb_biomass:
     name: non_microb_biomass
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   sample_link:
     name: sample_link
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   collection_time:
     name: collection_time
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   collection_time_inc:
     name: collection_time_inc
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   start_time_inc:
     name: start_time_inc
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   analysis_type:
     name: analysis_type
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   sample_type:
     name: sample_type
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_cont_type:
     name: dna_cont_type
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_sample_format:
     name: dna_sample_format
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dna_dnase:
     name: dna_dnase
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_cont_type:
     name: rna_cont_type
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   rna_sample_format:
     name: rna_sample_format
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   dnase_rna:
     name: dnase_rna
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   env_package:
     name: env_package
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   has unit:
     name: has unit
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   has numeric value:
     name: has numeric value
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   has raw value:
     name: has raw value
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
   ecosystem:
     name: ecosystem
     description: An ecosystem is a combination of a physical environment (abiotic
@@ -3146,10 +3166,11 @@ slots:
 classes:
   soil_emsl_jgi_mg:
     name: soil_emsl_jgi_mg
-    description: A soil biosample, with metadata in compliance with the MIxS MIMS
+    description: A nmdc_dh_section, with metadata in compliance with the MIxS MIMS
       standard for metagenomes, EMSL biosample expectations, and JGI expectations
       for JGI metagenomics studies
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_interface
     slots:
     - dna_cont_well
     - collection_date_inc
@@ -6616,13 +6637,19 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-  dh_section:
-    name: dh_section
+  nmdc_dh_section:
+    name: nmdc_dh_section
     description: A section (ie group if columns) within a DataHarmonizer interface
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
+  nmdc_dh_interface:
+    name: nmdc_dh_interface
+    description: One DataHarmonizer interface, for the specified combination of a
+      checklist, enviornmental_package, and various standards, user facilities or
+      analysis types
+    from_schema: https://example.com/nmdc_dh
   soil_emsl_jgi_mt:
     name: soil_emsl_jgi_mt
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     slots:
     - rna_cont_well
     - rna_concentration
@@ -6931,8 +6958,8 @@ classes:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '1'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   GOLD ecosystem path:
     name: GOLD ecosystem path
     annotations:
@@ -6942,48 +6969,48 @@ classes:
     comments:
     - historically GOLD assigns these? Scientist should enter path elements (EEF)?
       Five columns or one? Pulldown? Provide documentation. Terr, subset, subset
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   EMSL:
     name: EMSL
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '3'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   JGI-Metagenomics:
     name: JGI-Metagenomics
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '4'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   JGI-Metatranscriptomics:
     name: JGI-Metatranscriptomics
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '5'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   Metadata- MIxS Modified Required:
     name: Metadata- MIxS Modified Required
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '6'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   Metadata- MIxS Required:
     name: Metadata- MIxS Required
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '7'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   Metadata- MIxS Modified Required Where Applicable:
     name: Metadata- MIxS Modified Required Where Applicable
     annotations:
@@ -6992,38 +7019,38 @@ classes:
         value: '8'
     comments:
     - '## Too long. Make shorter'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   Metadata- MIxS Required Where Applicable:
     name: Metadata- MIxS Required Where Applicable
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '9'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   Metadata- MIxS Modified Optional:
     name: Metadata- MIxS Modified Optional
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '10'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   Metadata- MIxS Optional:
     name: Metadata- MIxS Optional
     annotations:
       dh_sect_ord:
         tag: dh_sect_ord
         value: '11'
-    from_schema: https://example.com/mims_soil_biosample
-    is_a: dh_section
+    from_schema: https://example.com/nmdc_dh
+    is_a: nmdc_dh_section
   quantity value:
     name: quantity value
     description: used to record a measurement
     notes:
     - placeholder for dependency
-    from_schema: https://example.com/mims_soil_biosample
+    from_schema: https://example.com/nmdc_dh
     slots:
     - has unit
     - has numeric value

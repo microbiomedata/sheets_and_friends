@@ -1,4 +1,4 @@
-BASE <https://example.com/mims_soil_biosample/>
+BASE <https://example.com/nmdc_dh/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
@@ -33,95 +33,103 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<DhSection>  (
-    CLOSED {
-       (  $<DhSection_tes> rdf:type . * ;
-          rdf:type [ <DhSection> ] ?
-       )
-    } OR @<EMSL> OR @<GOLDEcosystemPath> OR @<JGI-Metagenomics> OR @<JGI-Metatranscriptomics> OR @<Metadata-MIxSModifiedOptional>
-    OR @<Metadata-MIxSModifiedRequired> OR @<Metadata-MIxSModifiedRequiredWhereApplicable> OR @<Metadata-MIxSOptional> OR
-    @<Metadata-MIxSRequired> OR @<Metadata-MIxSRequiredWhereApplicable> OR @<SampleID>
-)
-
 <EMSL> CLOSED {
-    (  $<EMSL_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<EMSL_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <EMSL> ] ?
     )
 }
 
 <GOLDEcosystemPath> CLOSED {
-    (  $<GOLDEcosystemPath_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<GOLDEcosystemPath_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <GOLDEcosystemPath> ] ?
     )
 }
 
 <JGI-Metagenomics> CLOSED {
-    (  $<JGI-Metagenomics_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<JGI-Metagenomics_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <JGI-Metagenomics> ] ?
     )
 }
 
 <JGI-Metatranscriptomics> CLOSED {
-    (  $<JGI-Metatranscriptomics_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<JGI-Metatranscriptomics_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <JGI-Metatranscriptomics> ] ?
     )
 }
 
 <Metadata-MIxSModifiedOptional> CLOSED {
-    (  $<Metadata-MIxSModifiedOptional_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<Metadata-MIxSModifiedOptional_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <Metadata-MIxSModifiedOptional> ] ?
     )
 }
 
 <Metadata-MIxSModifiedRequired> CLOSED {
-    (  $<Metadata-MIxSModifiedRequired_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<Metadata-MIxSModifiedRequired_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <Metadata-MIxSModifiedRequired> ] ?
     )
 }
 
 <Metadata-MIxSModifiedRequiredWhereApplicable> CLOSED {
-    (  $<Metadata-MIxSModifiedRequiredWhereApplicable_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<Metadata-MIxSModifiedRequiredWhereApplicable_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <Metadata-MIxSModifiedRequiredWhereApplicable> ] ?
     )
 }
 
 <Metadata-MIxSOptional> CLOSED {
-    (  $<Metadata-MIxSOptional_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<Metadata-MIxSOptional_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <Metadata-MIxSOptional> ] ?
     )
 }
 
 <Metadata-MIxSRequired> CLOSED {
-    (  $<Metadata-MIxSRequired_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<Metadata-MIxSRequired_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <Metadata-MIxSRequired> ] ?
     )
 }
 
 <Metadata-MIxSRequiredWhereApplicable> CLOSED {
-    (  $<Metadata-MIxSRequiredWhereApplicable_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<Metadata-MIxSRequiredWhereApplicable_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <Metadata-MIxSRequiredWhereApplicable> ] ?
     )
 }
+
+<NmdcDhInterface>  (
+    CLOSED {
+       (  $<NmdcDhInterface_tes> rdf:type . * ;
+          rdf:type [ <NmdcDhInterface> ] ?
+       )
+    } OR @<SoilEmslJgiMg>
+)
+
+<NmdcDhSection>  (
+    CLOSED {
+       (  $<NmdcDhSection_tes> rdf:type . * ;
+          rdf:type [ <NmdcDhSection> ] ?
+       )
+    } OR @<EMSL> OR @<GOLDEcosystemPath> OR @<JGI-Metagenomics> OR @<JGI-Metatranscriptomics> OR @<Metadata-MIxSModifiedOptional>
+    OR @<Metadata-MIxSModifiedRequired> OR @<Metadata-MIxSModifiedRequiredWhereApplicable> OR @<Metadata-MIxSOptional> OR
+    @<Metadata-MIxSRequired> OR @<Metadata-MIxSRequiredWhereApplicable> OR @<SampleID>
+)
 
 <PlaceholderClass> CLOSED {
     (  $<PlaceholderClass_tes> rdf:type . * ;
@@ -139,15 +147,17 @@ linkml:Nodeidentifier NONLITERAL
 }
 
 <SampleID> CLOSED {
-    (  $<SampleID_tes> (  &<DhSection_tes> ;
-          rdf:type [ <DhSection> ] ?
+    (  $<SampleID_tes> (  &<NmdcDhSection_tes> ;
+          rdf:type [ <NmdcDhSection> ] ?
        ) ;
        rdf:type [ <SampleID> ] ?
     )
 }
 
 <SoilEmslJgiMg> CLOSED {
-    (  $<SoilEmslJgiMg_tes> (  <dna_cont_well> @linkml:String ;
+    (  $<SoilEmslJgiMg_tes> (  &<NmdcDhInterface_tes> ;
+          rdf:type [ <NmdcDhInterface> ] ? ;
+          <dna_cont_well> @linkml:String ;
           <collection_date_inc> @linkml:String ? ;
           <start_date_inc> @linkml:String ? ;
           <EMSL_store_temp> @linkml:String ;

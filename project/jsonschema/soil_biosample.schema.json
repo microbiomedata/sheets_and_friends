@@ -66,14 +66,6 @@
          "title": "CurLandUseEnum",
          "type": "string"
       },
-      "DhSection": {
-         "additionalProperties": false,
-         "description": "A section (ie group if columns) within a DataHarmonizer interface",
-         "properties": {},
-         "required": [],
-         "title": "DhSection",
-         "type": "object"
-      },
       "DnaContTypeEnum": {
          "description": "",
          "enum": [
@@ -320,6 +312,22 @@
          "title": "Metadata-MIxSRequiredWhereApplicable",
          "type": "object"
       },
+      "NmdcDhInterface": {
+         "additionalProperties": false,
+         "description": "One DataHarmonizer interface, for the specified combination of a checklist, enviornmental_package, and various standards, user facilities or analysis types",
+         "properties": {},
+         "required": [],
+         "title": "NmdcDhInterface",
+         "type": "object"
+      },
+      "NmdcDhSection": {
+         "additionalProperties": false,
+         "description": "A section (ie group if columns) within a DataHarmonizer interface",
+         "properties": {},
+         "required": [],
+         "title": "NmdcDhSection",
+         "type": "object"
+      },
       "OxyStatSampEnum": {
          "description": "",
          "enum": [
@@ -433,7 +441,7 @@
       },
       "SoilEmslJgiMg": {
          "additionalProperties": false,
-         "description": "A soil biosample, with metadata in compliance with the MIxS MIMS standard for metagenomes, EMSL biosample expectations, and JGI expectations for JGI metagenomics studies",
+         "description": "A nmdc_dh_section, with metadata in compliance with the MIxS MIMS standard for metagenomes, EMSL biosample expectations, and JGI expectations for JGI metagenomics studies",
          "properties": {
             "EMSL_store_temp": {
                "description": "Temperature at which the sample sent to EMSL should be stored",
@@ -1216,13 +1224,13 @@
          "type": "string"
       }
    },
-   "$id": "https://example.com/mims_soil_biosample",
+   "$id": "https://example.com/nmdc_dh",
    "$schema": "http://json-schema.org/draft-07/schema#",
    "additionalProperties": true,
    "metamodel_version": "1.7.0",
    "properties": {},
    "required": [],
-   "title": "mims_soil_biosample",
+   "title": "nmdc_dh",
    "type": "object",
    "version": null
 }
