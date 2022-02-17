@@ -1,0 +1,6 @@
+{
+   "MIXS": "http://example.org/UNKNOWN/MIXS/",
+   "linkml": "https://w3id.org/linkml/",
+   "mims_soil_biosample": "https://example.com/mims_soil_biosample/",
+   "mixs.vocab": "https://turbomam.github.io/mixs-source/"
+}

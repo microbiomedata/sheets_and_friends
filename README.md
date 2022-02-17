@@ -22,11 +22,13 @@ Future:
 ## dependencies
 - python 3.9
 - poetry
+- java
+  - I'm using `OpenJDK 64-Bit Server VM AdoptOpenJDK (build 14.0.2+12, mixed mode, sharing)`
 - schemasheets and cogs (which are pulled during `poetry install`)
-- a Google Sheets server account credentials file
+- a Google Sheets service account credentials file
   - ask a friend for `nmdc-dh-sheets-0b754bedc29d.json`
   - put it in `local/`
-  - update the `credentials_file` in the [Makefile](Makefile) if necessary
+  - update the `credentials_file` in the [Makefile](Makefile) _if necessary_
 
 ## setup
 - [install the poetry **application**](https://python-poetry.org/docs/#installation) if necessary

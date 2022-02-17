@@ -8,13 +8,19 @@ all: clean project docs/template/soil_emsl_jgi_mg/data.js
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
-bin/robot.jar: clean
+bin/robot.jar:
 	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -O $@ -i -
-	java -jar bin/robot.jar --help
 
 downloads/envo.owl:
 	# --location (-L) pursues redirects
 	curl --location http://purl.obolibrary.org/obo/envo.owl -o $@
+
+# patternize
+target/envo_sco.tsv: downloads/envo.owl bin/robot.jar
+	java -jar bin/robot.jar query --input $< --query sparql/sco.sparql $@
+
+target/envo_labs.tsv: downloads/envo.owl bin/robot.jar
+	java -jar bin/robot.jar query --input $< --query sparql/labels.sparql $@
 
 .cogs:
 	poetry run cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
@@ -83,31 +89,31 @@ target/%-extracted_list.txt: .cogs/tracked/envo_terms_for_mixs_env_triad.tsv
 	grep $(word 2,$(subst -, ,$(subst -extracted_list.txt,,$(subst target/,,$@)))) $< | grep $(word 1,$(subst -, ,$(subst -extracted_list.txt,,$(subst target/,,$@)))) | cut -f2 > $@
 
 
-# TEMPLATE THESE!
-target/soil-env_broad_scale-indented.tsv: target/soil-env_broad_scale-extracted_list.txt
+# patternize/TEMPLATE THESE!
+target/soil-env_broad_scale-indented.tsv: target/soil-env_broad_scale-extracted_list.txt target/envo_sco.tsv target/envo_labs.tsv
 	poetry run hident \
-		--sco_tab_file_name artifacts/envo_sco.tsv \
-		--lab_tab_file_name artifacts/envo_labs.tsv \
+		--sco_tab_file_name $(word 2,$^) \
+		--lab_tab_file_name $(word 3,$^) \
 		--curie_file_name $< \
 		--pad_char _ \
 		--pad_count 2 \
 		--parent_term 'broad-scale environmental context' \
 		--indented_tsv $@
 
-target/soil-env_local_scale-indented.tsv: target/soil-env_local_scale-extracted_list.txt
+target/soil-env_local_scale-indented.tsv: target/soil-env_local_scale-extracted_list.txt target/envo_sco.tsv target/envo_labs.tsv
 	poetry run hident \
-		--sco_tab_file_name artifacts/envo_sco.tsv \
-		--lab_tab_file_name artifacts/envo_labs.tsv \
+		--sco_tab_file_name $(word 2,$^) \
+		--lab_tab_file_name $(word 3,$^) \
 		--curie_file_name $< \
 		--pad_char _ \
 		--pad_count 2 \
 		--parent_term 'local environmental context' \
 		--indented_tsv $@
 
-target/soil-env_medium-indented.tsv: target/soil-env_medium-extracted_list.txt
+target/soil-env_medium-indented.tsv: target/soil-env_medium-extracted_list.txt target/envo_sco.tsv target/envo_labs.tsv
 	poetry run hident \
-		--sco_tab_file_name artifacts/envo_sco.tsv \
-		--lab_tab_file_name artifacts/envo_labs.tsv \
+		--sco_tab_file_name $(word 2,$^) \
+		--lab_tab_file_name $(word 3,$^) \
 		--curie_file_name $< \
 		--pad_char _ \
 		--pad_count 2 \
