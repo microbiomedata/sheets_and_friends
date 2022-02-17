@@ -51,6 +51,7 @@ clean:
 	rm -rf target/*txt
 	rm -rf target/*tsv
 	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
+	rm -rf docs/*
 
 squeaky_clean: clean
 	rm -rf .cogs
@@ -119,12 +120,12 @@ target/soil-env_medium-indented.tsv
 DataHarmonizer/template/soil_emsl_jgi_mg/data.js: target/data_promoted.tsv
 	-mkdir -p DataHarmonizer/template/soil_emsl_jgi_mg
 	cp $< $(subst .js,.tsv,$@)
-	cp -r artifacts/for_data_harmonizer_template/* DataHarmonizer/template/soil_emsl_jgi_mg
 	cd DataHarmonizer/template/soil_emsl_jgi_mg && poetry run python ../../script/make_data.py 2> make_data.log && cd -
-	cp -r DataHarmonizer/* docs
 
 docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg/data.js
 	cp -r DataHarmonizer/* docs
+	cp -r artifacts/for_data_harmonizer_scripts/* docs/script
+	cp -r artifacts docs
 	rm -rf docs/images
 	rm -rf docs/template/canada_covid19
 	rm -rf docs/template/gisaid
@@ -133,18 +134,14 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 	rm -rf docs/template/phac_dexa
 	rm -rf docs/template/export.js
 	rm -rf docs/template/reference_template.html
-	rm -rf docs/template/canada_covid19
+	rm -rf docs/requirements.txt
+	rm -rf docs/template/soil_emsl_jgi_mg/reference_template.html
+	rm -rf docs/script/make_data.py
+	rm -rf docs/script/exampleInput docs/script/reference_template.html # how are these getting in there?
 
-
-
-
-#	cp -r libraries docs
-#	cp -r script docs
-#	cp -r template docs
-#	cp main.css main.html docs
 
 #  stage in the docs folder which will be exposed via GH pages?
-# or do we want the LinkML generated docs to go in GH pages?
+# do we want the LinkML generated docs to go in GH pages?
 #	# add, commit, push and merge main (with GH pages enabled) so that people can see the results at
 #	#   https://turbomam.github.io/DataHarmonizer/main.html
 #	#   go to the GH pages setup screen eg https://github.com/org/repo/settings/pages
