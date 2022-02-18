@@ -3,7 +3,7 @@ credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 .PHONY: all clean cogs_fetch
 
-all: clean project docs/template/soil_emsl_jgi_mg/data.js
+all: clean project docs/template/soil_emsl_jgi_mg/data.js compare_enums
 
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
@@ -179,11 +179,10 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 #	#   go to the GH pages setup screen eg https://github.com/org/repo/settings/pages
 #	#     ensure that the pages are being built from the docs directory in the master/main branch
 
-# todo switch left to artifacts/nmdc_dh.yaml when it's ready
 # todo add enum_name when ready
 compare_enums:
 	poetry run compare_enums \
-		--left_model artifacts/soil_biosample.yaml \
+		--left_model artifacts/nmdc_dh.yaml \
 		--right_model mixs-source/model/schema/mixs.yaml \
 		--yaml_output target/compare_enums.yaml
 

@@ -852,1542 +852,7 @@ var DATA = [
     ]
   },
   {
-    "fieldName": "Metadata- MIxS Modified Required",
-    "children": [
-      {
-        "fieldName": "growth facility",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001043",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.",
-        "guidance": "Pattern hint: {text}|{termLabel} {[termID]}",
-        "examples": "Growth chamber [CO_715:0000189]",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "growth_facil"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "experimental_garden": {},
-          "field": {},
-          "field_incubation": {},
-          "glasshouse": {},
-          "greenhouse": {},
-          "growth_chamber": {},
-          "lab_incubation": {},
-          "open_top_chamber": {},
-          "other": {}
-        }
-      },
-      {
-        "fieldName": "storage conditions",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000327",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Explain how the soil sample is stored (fresh/frozen/other).",
-        "guidance": "Pattern hint: {text};{duration}",
-        "examples": "-20 degree Celsius freezer;P2Y10D",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "store_cond"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "fresh": {},
-          "frozen": {},
-          "lyophilized": {},
-          "other": {}
-        }
-      },
-      {
-        "fieldName": "Collection Date",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000011",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The date of sampling",
-        "guidance": "Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15; 2021-04; 2021",
-        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "collection_date"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "fieldName": "Metadata- MIxS Required",
-    "children": [
-      {
-        "fieldName": "broad-scale environmental context",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000012",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS",
-        "guidance": "Pattern hint: {termLabel} {[termID]}",
-        "examples": "oceanic epipelagic zone biome [ENVO:01000033] for annotating a water sample from the photic zone in middle of the Atlantic Ocean",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "env_broad_scale"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "alpine biome [ENVO:01001835]": {
-            "ontology_id": "ENVO:01001835"
-          },
-          "__alpine tundra biome [ENVO:01001505]": {
-            "ontology_id": "ENVO:01001505"
-          },
-          "anthropogenic terrestrial biome [ENVO:01000219]": {
-            "ontology_id": "ENVO:01000219"
-          },
-          "__rangeland biome [ENVO:01000247]": {
-            "ontology_id": "ENVO:01000247"
-          },
-          "__village biome [ENVO:01000246]": {
-            "ontology_id": "ENVO:01000246"
-          },
-          "arid biome [ENVO:01001838]": {
-            "ontology_id": "ENVO:01001838"
-          },
-          "mangrove biome [ENVO:01000181]": {
-            "ontology_id": "ENVO:01000181"
-          },
-          "montane biome [ENVO:01001836]": {
-            "ontology_id": "ENVO:01001836"
-          },
-          "__montane savanna biome [ENVO:01000223]": {
-            "ontology_id": "ENVO:01000223"
-          },
-          "__montane shrubland biome [ENVO:01000216]": {
-            "ontology_id": "ENVO:01000216"
-          },
-          "polar biome [ENVO:01000339]": {
-            "ontology_id": "ENVO:01000339"
-          },
-          "shrubland biome [ENVO:01000176]": {
-            "ontology_id": "ENVO:01000176"
-          },
-          "__subtropical shrubland biome [ENVO:01000213]": {
-            "ontology_id": "ENVO:01000213"
-          },
-          "____mediterranean shrubland biome [ENVO:01000217]": {
-            "ontology_id": "ENVO:01000217"
-          },
-          "__temperate shrubland biome [ENVO:01000215]": {
-            "ontology_id": "ENVO:01000215"
-          },
-          "__tropical shrubland biome [ENVO:01000214]": {
-            "ontology_id": "ENVO:01000214"
-          },
-          "subalpine biome [ENVO:01001837]": {
-            "ontology_id": "ENVO:01001837"
-          },
-          "subpolar biome [ENVO:01001834]": {
-            "ontology_id": "ENVO:01001834"
-          },
-          "subtropical biome [ENVO:01001832]": {
-            "ontology_id": "ENVO:01001832"
-          },
-          "__mediterranean biome [ENVO:01001833]": {
-            "ontology_id": "ENVO:01001833"
-          },
-          "____mediterranean savanna biome [ENVO:01000229]": {
-            "ontology_id": "ENVO:01000229"
-          },
-          "____mediterranean woodland biome [ENVO:01000208]": {
-            "ontology_id": "ENVO:01000208"
-          },
-          "__subtropical savanna biome [ENVO:01000187]": {
-            "ontology_id": "ENVO:01000187"
-          },
-          "__subtropical woodland biome [ENVO:01000222]": {
-            "ontology_id": "ENVO:01000222"
-          },
-          "temperate biome [ENVO:01001831]": {
-            "ontology_id": "ENVO:01001831"
-          },
-          "__temperate savanna biome [ENVO:01000189]": {
-            "ontology_id": "ENVO:01000189"
-          },
-          "__temperate woodland biome [ENVO:01000221]": {
-            "ontology_id": "ENVO:01000221"
-          },
-          "tropical biome [ENVO:01001830]": {
-            "ontology_id": "ENVO:01001830"
-          },
-          "__tropical savanna biome [ENVO:01000188]": {
-            "ontology_id": "ENVO:01000188"
-          },
-          "__tropical woodland biome [ENVO:01000220]": {
-            "ontology_id": "ENVO:01000220"
-          },
-          "tundra biome [ENVO:01000180]": {
-            "ontology_id": "ENVO:01000180"
-          },
-          "urban biome [ENVO:01000249]": {
-            "ontology_id": "ENVO:01000249"
-          },
-          "woodland biome [ENVO:01000175]": {
-            "ontology_id": "ENVO:01000175"
-          },
-          "__savanna biome [ENVO:01000178]": {
-            "ontology_id": "ENVO:01000178"
-          },
-          "____flooded savanna biome [ENVO:01000190]": {
-            "ontology_id": "ENVO:01000190"
-          },
-          "____montane savanna biome [ENVO:01000223]": {
-            "ontology_id": "ENVO:01000223"
-          },
-          "____subtropical savanna biome [ENVO:01000187]": {
-            "ontology_id": "ENVO:01000187"
-          },
-          "______mediterranean savanna biome [ENVO:01000229]": {
-            "ontology_id": "ENVO:01000229"
-          },
-          "____temperate savanna biome [ENVO:01000189]": {
-            "ontology_id": "ENVO:01000189"
-          },
-          "____tropical savanna biome [ENVO:01000188]": {
-            "ontology_id": "ENVO:01000188"
-          }
-        }
-      },
-      {
-        "fieldName": "local environmental context",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000013",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
-        "guidance": "Pattern hint: {termLabel} {[termID]}",
-        "examples": "litter layer [ENVO:01000338]; Annotating a pooled sample taken from various vegetation layers in a forest consider: canopy [ENVO:00000047]|herb and fern layer [ENVO:01000337]|litter layer [ENVO:01000338]|understory [01000335]|shrub layer [ENVO:01000336].",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "env_local_scale"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "active geological fault [ENVO:01000669]": {
-            "ontology_id": "ENVO:01000669"
-          },
-          "agricultural field [ENVO:00000114]": {
-            "ontology_id": "ENVO:00000114"
-          },
-          "beach [ENVO:00000091]": {
-            "ontology_id": "ENVO:00000091"
-          },
-          "cave [ENVO:00000067]": {
-            "ontology_id": "ENVO:00000067"
-          },
-          "channel [ENVO:03000117]": {
-            "ontology_id": "ENVO:03000117"
-          },
-          "__tunnel [ENVO:00000068]": {
-            "ontology_id": "ENVO:00000068"
-          },
-          "coast [ENVO:01000687]": {
-            "ontology_id": "ENVO:01000687"
-          },
-          "dry lake [ENVO:00000277]": {
-            "ontology_id": "ENVO:00000277"
-          },
-          "dry river [ENVO:01000995]": {
-            "ontology_id": "ENVO:01000995"
-          },
-          "garden [ENVO:00000011]": {
-            "ontology_id": "ENVO:00000011"
-          },
-          "hill [ENVO:00000083]": {
-            "ontology_id": "ENVO:00000083"
-          },
-          "__dune [ENVO:00000170]": {
-            "ontology_id": "ENVO:00000170"
-          },
-          "hummock [ENVO:00000516]": {
-            "ontology_id": "ENVO:00000516"
-          },
-          "impact crater [ENVO:01001071]": {
-            "ontology_id": "ENVO:01001071"
-          },
-          "isthmus [ENVO:00000174]": {
-            "ontology_id": "ENVO:00000174"
-          },
-          "karst [ENVO:00000175]": {
-            "ontology_id": "ENVO:00000175"
-          },
-          "lake shore [ENVO:00000382]": {
-            "ontology_id": "ENVO:00000382"
-          },
-          "lava field [ENVO:01000437]": {
-            "ontology_id": "ENVO:01000437"
-          },
-          "mesa [ENVO:00000179]": {
-            "ontology_id": "ENVO:00000179"
-          },
-          "mountain [ENVO:00000081]": {
-            "ontology_id": "ENVO:00000081"
-          },
-          "peninsula [ENVO:00000305]": {
-            "ontology_id": "ENVO:00000305"
-          },
-          "plain [ENVO:00000086]": {
-            "ontology_id": "ENVO:00000086"
-          },
-          "plateau [ENVO:00000182]": {
-            "ontology_id": "ENVO:00000182"
-          },
-          "ridge [ENVO:00000283]": {
-            "ontology_id": "ENVO:00000283"
-          },
-          "slope [ENVO:00002000]": {
-            "ontology_id": "ENVO:00002000"
-          },
-          "__cliff [ENVO:00000087]": {
-            "ontology_id": "ENVO:00000087"
-          },
-          "__hillside [ENVO:01000333]": {
-            "ontology_id": "ENVO:01000333"
-          },
-          "snow field [ENVO:00000146]": {
-            "ontology_id": "ENVO:00000146"
-          },
-          "tombolo [ENVO:00000420]": {
-            "ontology_id": "ENVO:00000420"
-          },
-          "tuff cone [ENVO:01000664]": {
-            "ontology_id": "ENVO:01000664"
-          },
-          "valley [ENVO:00000100]": {
-            "ontology_id": "ENVO:00000100"
-          },
-          "__canyon [ENVO:00000169]": {
-            "ontology_id": "ENVO:00000169"
-          },
-          "__dry valley [ENVO:00000128]": {
-            "ontology_id": "ENVO:00000128"
-          },
-          "__glacial valley [ENVO:00000248]": {
-            "ontology_id": "ENVO:00000248"
-          },
-          "vein [ENVO:01000670]": {
-            "ontology_id": "ENVO:01000670"
-          },
-          "volcano [ENVO:00000247]": {
-            "ontology_id": "ENVO:00000247"
-          },
-          "woodland clearing [ENVO:00000444]": {
-            "ontology_id": "ENVO:00000444"
-          }
-        }
-      },
-      {
-        "fieldName": "environmental medium",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000014",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
-        "guidance": "Pattern hint: {termLabel} {[termID]}",
-        "examples": "soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "env_medium"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "agricultural soil [ENVO:00002259]": {
-            "ontology_id": "ENVO:00002259"
-          },
-          "__bluegrass field soil [ENVO:00005789]": {
-            "ontology_id": "ENVO:00005789"
-          },
-          "__paddy field soil [ENVO:00005740]": {
-            "ontology_id": "ENVO:00005740"
-          },
-          "____peaty paddy field soil [ENVO:00005776]": {
-            "ontology_id": "ENVO:00005776"
-          },
-          "__rubber plantation soil [ENVO:00005788]": {
-            "ontology_id": "ENVO:00005788"
-          },
-          "albeluvisol [ENVO:00002233]": {
-            "ontology_id": "ENVO:00002233"
-          },
-          "alisol [ENVO:00002231]": {
-            "ontology_id": "ENVO:00002231"
-          },
-          "alluvial soil [ENVO:00002871]": {
-            "ontology_id": "ENVO:00002871"
-          },
-          "__alluvial swamp soil [ENVO:00005758]": {
-            "ontology_id": "ENVO:00005758"
-          },
-          "alpine soil [ENVO:00005741]": {
-            "ontology_id": "ENVO:00005741"
-          },
-          "andosol [ENVO:00002232]": {
-            "ontology_id": "ENVO:00002232"
-          },
-          "__volcanic soil [ENVO:01001841]": {
-            "ontology_id": "ENVO:01001841"
-          },
-          "anthrosol [ENVO:00002230]": {
-            "ontology_id": "ENVO:00002230"
-          },
-          "arenosol [ENVO:00002229]": {
-            "ontology_id": "ENVO:00002229"
-          },
-          "bare soil [ENVO:01001616]": {
-            "ontology_id": "ENVO:01001616"
-          },
-          "burned soil [ENVO:00005760]": {
-            "ontology_id": "ENVO:00005760"
-          },
-          "calcisol [ENVO:00002239]": {
-            "ontology_id": "ENVO:00002239"
-          },
-          "cambisol [ENVO:00002235]": {
-            "ontology_id": "ENVO:00002235"
-          },
-          "carbon nanotube enriched soil [ENVO:01000427]": {
-            "ontology_id": "ENVO:01000427"
-          },
-          "chernozem [ENVO:00002237]": {
-            "ontology_id": "ENVO:00002237"
-          },
-          "compost soil [ENVO:00005747]": {
-            "ontology_id": "ENVO:00005747"
-          },
-          "__frozen compost soil [ENVO:00005765]": {
-            "ontology_id": "ENVO:00005765"
-          },
-          "contaminated soil [ENVO:00002116]": {
-            "ontology_id": "ENVO:00002116"
-          },
-          "__xylene contaminated soil [ENVO:00002146]": {
-            "ontology_id": "ENVO:00002146"
-          },
-          "dune soil [ENVO:00002260]": {
-            "ontology_id": "ENVO:00002260"
-          },
-          "durisol [ENVO:00002238]": {
-            "ontology_id": "ENVO:00002238"
-          },
-          "ferralsol [ENVO:00002246]": {
-            "ontology_id": "ENVO:00002246"
-          },
-          "fluvisol [ENVO:00002273]": {
-            "ontology_id": "ENVO:00002273"
-          },
-          "forest soil [ENVO:00002261]": {
-            "ontology_id": "ENVO:00002261"
-          },
-          "__beech forest soil [ENVO:00005770]": {
-            "ontology_id": "ENVO:00005770"
-          },
-          "__eucalyptus forest soil [ENVO:00005787]": {
-            "ontology_id": "ENVO:00005787"
-          },
-          "__mountain forest soil [ENVO:00005769]": {
-            "ontology_id": "ENVO:00005769"
-          },
-          "frost-susceptible soil [ENVO:01001638]": {
-            "ontology_id": "ENVO:01001638"
-          },
-          "frozen soil [ENVO:01001526]": {
-            "ontology_id": "ENVO:01001526"
-          },
-          "__cryosol [ENVO:00002236]": {
-            "ontology_id": "ENVO:00002236"
-          },
-          "__friable-frozen soil [ENVO:01001528]": {
-            "ontology_id": "ENVO:01001528"
-          },
-          "__plastic-frozen soil [ENVO:01001527]": {
-            "ontology_id": "ENVO:01001527"
-          },
-          "gleysol [ENVO:00002244]": {
-            "ontology_id": "ENVO:00002244"
-          },
-          "grassland soil [ENVO:00005750]": {
-            "ontology_id": "ENVO:00005750"
-          },
-          "__savanna soil [ENVO:00005746]": {
-            "ontology_id": "ENVO:00005746"
-          },
-          "__steppe soil [ENVO:00005777]": {
-            "ontology_id": "ENVO:00005777"
-          },
-          "greenhouse soil [ENVO:00005780]": {
-            "ontology_id": "ENVO:00005780"
-          },
-          "gypsisol [ENVO:00002245]": {
-            "ontology_id": "ENVO:00002245"
-          },
-          "histosol [ENVO:00002243]": {
-            "ontology_id": "ENVO:00002243"
-          },
-          "humus-rich acidic ash soil [ENVO:00005763]": {
-            "ontology_id": "ENVO:00005763"
-          },
-          "jungle soil [ENVO:00005751]": {
-            "ontology_id": "ENVO:00005751"
-          },
-          "kastanozem [ENVO:00002240]": {
-            "ontology_id": "ENVO:00002240"
-          },
-          "leptosol [ENVO:00002241]": {
-            "ontology_id": "ENVO:00002241"
-          },
-          "limed soil [ENVO:00005766]": {
-            "ontology_id": "ENVO:00005766"
-          },
-          "lixisol [ENVO:00002242]": {
-            "ontology_id": "ENVO:00002242"
-          },
-          "loam [ENVO:00002258]": {
-            "ontology_id": "ENVO:00002258"
-          },
-          "luvisol [ENVO:00002248]": {
-            "ontology_id": "ENVO:00002248"
-          },
-          "manured soil [ENVO:00005767]": {
-            "ontology_id": "ENVO:00005767"
-          },
-          "meadow soil [ENVO:00005761]": {
-            "ontology_id": "ENVO:00005761"
-          },
-          "muddy soil [ENVO:00005771]": {
-            "ontology_id": "ENVO:00005771"
-          },
-          "nitisol [ENVO:00002247]": {
-            "ontology_id": "ENVO:00002247"
-          },
-          "orchard soil [ENVO:00005772]": {
-            "ontology_id": "ENVO:00005772"
-          },
-          "ornithogenic soil [ENVO:00005782]": {
-            "ontology_id": "ENVO:00005782"
-          },
-          "pantothenate enriched soil [ENVO:00003088]": {
-            "ontology_id": "ENVO:00003088"
-          },
-          "pasture soil [ENVO:00005773]": {
-            "ontology_id": "ENVO:00005773"
-          },
-          "peat soil [ENVO:00005774]": {
-            "ontology_id": "ENVO:00005774"
-          },
-          "phaeozem [ENVO:00002249]": {
-            "ontology_id": "ENVO:00002249"
-          },
-          "planosol [ENVO:00002251]": {
-            "ontology_id": "ENVO:00002251"
-          },
-          "plinthosol [ENVO:00002250]": {
-            "ontology_id": "ENVO:00002250"
-          },
-          "podzol [ENVO:00002257]": {
-            "ontology_id": "ENVO:00002257"
-          },
-          "poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]": {
-            "ontology_id": "ENVO:00003093"
-          },
-          "pond soil [ENVO:00005764]": {
-            "ontology_id": "ENVO:00005764"
-          },
-          "quinate enriched soil [ENVO:00003095]": {
-            "ontology_id": "ENVO:00003095"
-          },
-          "regosol [ENVO:00002256]": {
-            "ontology_id": "ENVO:00002256"
-          },
-          "sarcosine enriched soil [ENVO:00003083]": {
-            "ontology_id": "ENVO:00003083"
-          },
-          "skatole enriched soil [ENVO:00003085]": {
-            "ontology_id": "ENVO:00003085"
-          },
-          "solonchak [ENVO:00002252]": {
-            "ontology_id": "ENVO:00002252"
-          },
-          "solonetz [ENVO:00002255]": {
-            "ontology_id": "ENVO:00002255"
-          },
-          "stagnosol [ENVO:00002274]": {
-            "ontology_id": "ENVO:00002274"
-          },
-          "surface soil [ENVO:02000059]": {
-            "ontology_id": "ENVO:02000059"
-          },
-          "technosol [ENVO:00002275]": {
-            "ontology_id": "ENVO:00002275"
-          },
-          "threonine enriched soil [ENVO:00003091]": {
-            "ontology_id": "ENVO:00003091"
-          },
-          "trimethylamine enriched soil [ENVO:00003084]": {
-            "ontology_id": "ENVO:00003084"
-          },
-          "tropical soil [ENVO:00005778]": {
-            "ontology_id": "ENVO:00005778"
-          },
-          "ultisol [ENVO:01001397]": {
-            "ontology_id": "ENVO:01001397"
-          },
-          "__acrisol [ENVO:00002234]": {
-            "ontology_id": "ENVO:00002234"
-          },
-          "umbrisol [ENVO:00002253]": {
-            "ontology_id": "ENVO:00002253"
-          },
-          "upland soil [ENVO:00005786]": {
-            "ontology_id": "ENVO:00005786"
-          },
-          "urea enriched soil [ENVO:00005753]": {
-            "ontology_id": "ENVO:00005753"
-          },
-          "vertisol [ENVO:00002254]": {
-            "ontology_id": "ENVO:00002254"
-          }
-        }
-      },
-      {
-        "fieldName": "geographic location (country and/or sea,region)",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000010",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
-        "guidance": "Pattern hint: {term}: {term}, {text}",
-        "examples": "USA: Maryland, Bethesda",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "geo_loc_name"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "geographic location (latitude and longitude)",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000009",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The geographical origin of the sample as defined by latitude and longitude. The values should be reported in decimal degrees and in WGS84 system",
-        "guidance": "Pattern hint: (lat lon}",
-        "examples": "50.586825 6.408977",
-        "pattern": "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?)\\s[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "lat_lon"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "elevation",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000093",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Elevation of the sampling site is its height above a fixed reference point, most commonly the mean sea level. Elevation is mainly used when referring to points on the earth's surface, while altitude is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit.",
-        "guidance": "",
-        "examples": "100 meter",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "elev"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "sample storage temperature",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000110",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Temperature at which sample was stored, e.g. -80 degree Celsius",
-        "guidance": "",
-        "examples": "-80 degree Celsius",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_store_temp"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "fieldName": "Metadata- MIxS Modified Required Where Applicable",
-    "children": [
-      {
-        "fieldName": "collection time, GMT",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "The time of sampling, either as an instance (single point) or interval.",
-        "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33; 13:33:55",
-        "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "collection_time"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "Incubation Collection Date",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Date the incubation was harvested/collected/ended. Only relevant for incubation samples.",
-        "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15; 2021-04; 2021",
-        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "collection_date_inc"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "Incubation Collection Time, GMT",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Time the incubation was harvested/collected/ended. Only relevant for incubation samples.",
-        "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33; 13:33:55",
-        "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "collection_time_inc"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "Incubation Start Date",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Date the incubation was started. Only relevant for incubation samples.",
-        "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15; 2021-04; 2021",
-        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "start_date_inc"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "Incubation Start Time, GMT",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Time the incubation was started. Only relevant for incubation samples.",
-        "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33; 13:33:55",
-        "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "start_time_inc"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "depth, meters",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000018",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The vertical distance below local surface, e.g. For sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
-        "guidance": "All depths must be reported in meters. Provide the numerical portion only. | Pattern hint: {float}|{float}-{float}",
-        "examples": "0-0.1; 1",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$|^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?-[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "depth"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "sample material processing",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000016",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
-        "guidance": "Pattern hint: {text}",
-        "examples": "filtering of seawater, storing samples in ethanol",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_mat_process"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "sample collection device",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000002",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "The device used to collect an environmental sample. This field accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO). This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).",
-        "guidance": "Report dimensions and details when applicable | Pattern hint: {termLabel} {[termID]}|{text}",
-        "examples": "swab, biopsy, niskin bottle, push core, drag swab [GENEPIO:0002713]",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_collec_device"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "sample collection method",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001225",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "The method employed for collecting the sample.",
-        "guidance": "This can be a citation or description | Pattern hint: {PMID}|{DOI}|{URL}|{text}",
-        "examples": "swabbing",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_collec_method"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "Filter Method",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Type of filter used or how the sample was filtered",
-        "guidance": "Pattern hint: {text}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "filter_method"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "amount or size of sample collected",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000001",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
-        "guidance": "This refers to the TOTAL amount of sample collected from the experiment. NOT the amount sent to each institution or collected for a specific analysis. | Pattern hint: {float} {unit}",
-        "examples": "5 grams; 10 mL",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_size"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "experimental factor- other",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Other details about your sample that you feel can't be accurately represented in the available columns.",
-        "guidance": "Pattern hint: {text}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "experimental_factor_other"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "other treatments",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Other treatments applied to your samples that are not applicable to the provided fields",
-        "guidance": "Pattern hint: {text}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "other_treatment"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "isotope exposure/addition",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "List isotope exposure or addition applied to your sample.",
-        "guidance": "Pattern hint: {termLabel} {[termID]}; {timestamp}",
-        "examples": "",
-        "pattern": "^\\S+.*\\S+ \\[ENVO:\\d+\\]; ([\\+-]?\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "isotope_exposure"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "pH",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001001",
-        "datatype": "xs:decimal",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "0.0",
-        "xs:maxInclusive": "14.0",
-        "requirement": "recommended",
-        "description": "pH measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid",
-        "guidance": "Pattern hint: {float}",
-        "examples": "7.2",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "ph"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "fieldName": "Metadata- MIxS Required Where Applicable",
-    "children": [
-      {
-        "fieldName": "composite design/sieving",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000322",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Collection design of pooled samples and/or sieve size and amount of sample sieved",
-        "guidance": "Pattern hint: {{text}|{float} {unit}};{float} {unit}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "sieving"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "size-fraction lower threshold",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000735",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample",
-        "guidance": "",
-        "examples": "0.2 micrometer",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "size_frac_low"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "size-fraction upper threshold",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000736",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample",
-        "guidance": "",
-        "examples": "20 micrometer",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "size_frac_up"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "biotic regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001038",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Information about treatment(s) involving use of biotic factors, such as bacteria, viruses or fungi.",
-        "guidance": "Pattern hint: {text}",
-        "examples": "sample inoculated with Rhizobium spp. Culture",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "biotic_regm"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "air temperature regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000551",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Information about treatment involving an exposure to varying temperatures; should include the temperature, treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include different temperature regimens",
-        "guidance": "Pattern hint: {float} {unit};{Rn/start_time/end_time/duration}",
-        "examples": "25 degree Celsius;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "air_temp_regm"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "chemical administration",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000751",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "List of chemical compounds administered to the host or site where sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter); can include multiple compounds. For chemical entities of biological interest ontology (chebi) (v 163), http://purl.bioontology.org/ontology/chebi",
-        "guidance": "Pattern hint: {termLabel} {[termID]};{timestamp}",
-        "examples": "agar [CHEBI:2509];2018-05-11T20:00Z",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "chem_administration"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "climate environment",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001040",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates",
-        "guidance": "Pattern hint: {text};{Rn/start_time/end_time/duration}",
-        "examples": "tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "climate_environment"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "gaseous environment",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000558",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Use of conditions with differing gaseous environments; should include the name of gaseous compound, amount administered, treatment duration, interval and total experimental duration; can include multiple gaseous environment regimens",
-        "guidance": "Pattern hint: {text};{float} {unit};{Rn/start_time/end_time/duration}",
-        "examples": "nitric oxide;0.5 micromole per liter;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "gaseous_environment"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "humidity regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000568",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Information about treatment involving an exposure to varying degree of humidity; information about treatment involving use of growth hormones; should include amount of humidity administered, treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple regimens",
-        "guidance": "Pattern hint: {float} {unit};{Rn/start_time/end_time/duration}",
-        "examples": "25 gram per cubic meter;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "humidity_regm"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "light regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000569",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Information about treatment(s) involving exposure to light, including both light intensity and quality.",
-        "guidance": "Pattern hint: {text};{float} {unit};{float} {unit}",
-        "examples": "incandescant light;10 lux;450 nanometer",
-        "pattern": "^\\S+.*\\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "light_regm"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "watering regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000591",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Information about treatment involving an exposure to watering frequencies, treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple regimens",
-        "guidance": "Pattern hint: {float} {unit};{Rn/start_time/end_time/duration}",
-        "examples": "1 liter;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "watering_regm"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "altitude",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000094",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Altitude is a term used to identify heights of objects such as airplanes, space shuttles, rockets, atmospheric balloons and heights of places such as atmospheric layers and clouds. It is used to measure the height of an object which is above the earth's surface. In this context, the altitude measurement is the vertical distance between the earth's surface above sea level and the sampled position in the air",
-        "guidance": "",
-        "examples": "100 meter",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "alt"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "fieldName": "Metadata- MIxS Modified Optional",
-    "children": [
-      {
-        "fieldName": "observed biotic relationship",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000028",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object",
-        "guidance": "",
-        "examples": "free living",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "biotic_relationship"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "commensalism": {},
-          "free living": {},
-          "mutualism": {},
-          "parasitism": {},
-          "symbiotic": {}
-        }
-      },
-      {
-        "fieldName": "relationship to oxygen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000015",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
-        "guidance": "",
-        "examples": "aerobe",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "rel_to_oxygen"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "aerobe": {},
-          "anaerobe": {},
-          "facultative": {},
-          "microaerophilic": {},
-          "microanaerobe": {},
-          "obligate aerobe": {},
-          "obligate anaerobe": {}
-        }
-      },
-      {
-        "fieldName": "non-microbial biomass",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Amount of biomass; should include the name for the part of biomass measured, e.g.insect, plant, total. Can include multiple measurements separated by ;",
-        "guidance": "Pattern hint: {text};{float} {unit}",
-        "examples": "",
-        "pattern": "^\\S*;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "non_microb_biomass"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "non-microbial biomass method",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Reference or method used in determining biomass",
-        "guidance": "required if \"non-microbial biomass\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "non_microb_biomass_method"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "microbial biomass carbon",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
-        "guidance": "Pattern hint: {float} {unit}",
-        "examples": "",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "microbial_biomass_C"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "microbial biomass carbon method",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Reference or method used in determining microbial biomass",
-        "guidance": "required if \"microbial_biomass_C\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "micro_biomass_C_meth"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "microbial biomass nitrogen",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
-        "guidance": "Pattern hint: {float} {unit}",
-        "examples": "",
-        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "microbial_biomass_N"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "microbial biomass nitrogen method",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Reference or method used in determining microbial biomass nitrogen",
-        "guidance": "required if \"microbial_biomass_N\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "micro_biomass_N_meth"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "organic nitrogen method",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "",
-        "description": "Method used for obtaining organic nitrogen",
-        "guidance": "required if \"org_nitro\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "org_nitro_method"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "fieldName": "Metadata- MIxS Optional",
+    "fieldName": "MIxS",
     "children": [
       {
         "fieldName": "slope aspect",
@@ -3670,6 +2135,1526 @@ var DATA = [
           "soil_emsl_jgi_mg": [
             {
               "field": "salinity_meth"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "fieldName": "MIxS (modified)",
+    "children": [
+      {
+        "fieldName": "growth facility",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001043",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.",
+        "guidance": "Pattern hint: {text}|{termLabel} {[termID]}",
+        "examples": "Growth chamber [CO_715:0000189]",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "growth_facil"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "experimental_garden": {},
+          "field": {},
+          "field_incubation": {},
+          "glasshouse": {},
+          "greenhouse": {},
+          "growth_chamber": {},
+          "lab_incubation": {},
+          "open_top_chamber": {},
+          "other": {}
+        }
+      },
+      {
+        "fieldName": "broad-scale environmental context",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000012",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS",
+        "guidance": "Pattern hint: {termLabel} {[termID]}",
+        "examples": "oceanic epipelagic zone biome [ENVO:01000033] for annotating a water sample from the photic zone in middle of the Atlantic Ocean",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "env_broad_scale"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "alpine biome [ENVO:01001835]": {
+            "ontology_id": "ENVO:01001835"
+          },
+          "__alpine tundra biome [ENVO:01001505]": {
+            "ontology_id": "ENVO:01001505"
+          },
+          "anthropogenic terrestrial biome [ENVO:01000219]": {
+            "ontology_id": "ENVO:01000219"
+          },
+          "__rangeland biome [ENVO:01000247]": {
+            "ontology_id": "ENVO:01000247"
+          },
+          "__village biome [ENVO:01000246]": {
+            "ontology_id": "ENVO:01000246"
+          },
+          "arid biome [ENVO:01001838]": {
+            "ontology_id": "ENVO:01001838"
+          },
+          "mangrove biome [ENVO:01000181]": {
+            "ontology_id": "ENVO:01000181"
+          },
+          "montane biome [ENVO:01001836]": {
+            "ontology_id": "ENVO:01001836"
+          },
+          "__montane savanna biome [ENVO:01000223]": {
+            "ontology_id": "ENVO:01000223"
+          },
+          "__montane shrubland biome [ENVO:01000216]": {
+            "ontology_id": "ENVO:01000216"
+          },
+          "polar biome [ENVO:01000339]": {
+            "ontology_id": "ENVO:01000339"
+          },
+          "shrubland biome [ENVO:01000176]": {
+            "ontology_id": "ENVO:01000176"
+          },
+          "__subtropical shrubland biome [ENVO:01000213]": {
+            "ontology_id": "ENVO:01000213"
+          },
+          "____mediterranean shrubland biome [ENVO:01000217]": {
+            "ontology_id": "ENVO:01000217"
+          },
+          "__temperate shrubland biome [ENVO:01000215]": {
+            "ontology_id": "ENVO:01000215"
+          },
+          "__tropical shrubland biome [ENVO:01000214]": {
+            "ontology_id": "ENVO:01000214"
+          },
+          "subalpine biome [ENVO:01001837]": {
+            "ontology_id": "ENVO:01001837"
+          },
+          "subpolar biome [ENVO:01001834]": {
+            "ontology_id": "ENVO:01001834"
+          },
+          "subtropical biome [ENVO:01001832]": {
+            "ontology_id": "ENVO:01001832"
+          },
+          "__mediterranean biome [ENVO:01001833]": {
+            "ontology_id": "ENVO:01001833"
+          },
+          "____mediterranean savanna biome [ENVO:01000229]": {
+            "ontology_id": "ENVO:01000229"
+          },
+          "____mediterranean woodland biome [ENVO:01000208]": {
+            "ontology_id": "ENVO:01000208"
+          },
+          "__subtropical savanna biome [ENVO:01000187]": {
+            "ontology_id": "ENVO:01000187"
+          },
+          "__subtropical woodland biome [ENVO:01000222]": {
+            "ontology_id": "ENVO:01000222"
+          },
+          "temperate biome [ENVO:01001831]": {
+            "ontology_id": "ENVO:01001831"
+          },
+          "__temperate savanna biome [ENVO:01000189]": {
+            "ontology_id": "ENVO:01000189"
+          },
+          "__temperate woodland biome [ENVO:01000221]": {
+            "ontology_id": "ENVO:01000221"
+          },
+          "tropical biome [ENVO:01001830]": {
+            "ontology_id": "ENVO:01001830"
+          },
+          "__tropical savanna biome [ENVO:01000188]": {
+            "ontology_id": "ENVO:01000188"
+          },
+          "__tropical woodland biome [ENVO:01000220]": {
+            "ontology_id": "ENVO:01000220"
+          },
+          "tundra biome [ENVO:01000180]": {
+            "ontology_id": "ENVO:01000180"
+          },
+          "urban biome [ENVO:01000249]": {
+            "ontology_id": "ENVO:01000249"
+          },
+          "woodland biome [ENVO:01000175]": {
+            "ontology_id": "ENVO:01000175"
+          },
+          "__savanna biome [ENVO:01000178]": {
+            "ontology_id": "ENVO:01000178"
+          },
+          "____flooded savanna biome [ENVO:01000190]": {
+            "ontology_id": "ENVO:01000190"
+          },
+          "____montane savanna biome [ENVO:01000223]": {
+            "ontology_id": "ENVO:01000223"
+          },
+          "____subtropical savanna biome [ENVO:01000187]": {
+            "ontology_id": "ENVO:01000187"
+          },
+          "______mediterranean savanna biome [ENVO:01000229]": {
+            "ontology_id": "ENVO:01000229"
+          },
+          "____temperate savanna biome [ENVO:01000189]": {
+            "ontology_id": "ENVO:01000189"
+          },
+          "____tropical savanna biome [ENVO:01000188]": {
+            "ontology_id": "ENVO:01000188"
+          }
+        }
+      },
+      {
+        "fieldName": "storage conditions",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000327",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Explain how the soil sample is stored (fresh/frozen/other).",
+        "guidance": "Pattern hint: {text};{duration}",
+        "examples": "-20 degree Celsius freezer;P2Y10D",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "store_cond"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "fresh": {},
+          "frozen": {},
+          "lyophilized": {},
+          "other": {}
+        }
+      },
+      {
+        "fieldName": "local environmental context",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000013",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
+        "guidance": "Pattern hint: {termLabel} {[termID]}",
+        "examples": "litter layer [ENVO:01000338]; Annotating a pooled sample taken from various vegetation layers in a forest consider: canopy [ENVO:00000047]|herb and fern layer [ENVO:01000337]|litter layer [ENVO:01000338]|understory [01000335]|shrub layer [ENVO:01000336].",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "env_local_scale"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "active geological fault [ENVO:01000669]": {
+            "ontology_id": "ENVO:01000669"
+          },
+          "agricultural field [ENVO:00000114]": {
+            "ontology_id": "ENVO:00000114"
+          },
+          "beach [ENVO:00000091]": {
+            "ontology_id": "ENVO:00000091"
+          },
+          "cave [ENVO:00000067]": {
+            "ontology_id": "ENVO:00000067"
+          },
+          "channel [ENVO:03000117]": {
+            "ontology_id": "ENVO:03000117"
+          },
+          "__tunnel [ENVO:00000068]": {
+            "ontology_id": "ENVO:00000068"
+          },
+          "coast [ENVO:01000687]": {
+            "ontology_id": "ENVO:01000687"
+          },
+          "dry lake [ENVO:00000277]": {
+            "ontology_id": "ENVO:00000277"
+          },
+          "dry river [ENVO:01000995]": {
+            "ontology_id": "ENVO:01000995"
+          },
+          "garden [ENVO:00000011]": {
+            "ontology_id": "ENVO:00000011"
+          },
+          "hill [ENVO:00000083]": {
+            "ontology_id": "ENVO:00000083"
+          },
+          "__dune [ENVO:00000170]": {
+            "ontology_id": "ENVO:00000170"
+          },
+          "hummock [ENVO:00000516]": {
+            "ontology_id": "ENVO:00000516"
+          },
+          "impact crater [ENVO:01001071]": {
+            "ontology_id": "ENVO:01001071"
+          },
+          "isthmus [ENVO:00000174]": {
+            "ontology_id": "ENVO:00000174"
+          },
+          "karst [ENVO:00000175]": {
+            "ontology_id": "ENVO:00000175"
+          },
+          "lake shore [ENVO:00000382]": {
+            "ontology_id": "ENVO:00000382"
+          },
+          "lava field [ENVO:01000437]": {
+            "ontology_id": "ENVO:01000437"
+          },
+          "mesa [ENVO:00000179]": {
+            "ontology_id": "ENVO:00000179"
+          },
+          "mountain [ENVO:00000081]": {
+            "ontology_id": "ENVO:00000081"
+          },
+          "peninsula [ENVO:00000305]": {
+            "ontology_id": "ENVO:00000305"
+          },
+          "plain [ENVO:00000086]": {
+            "ontology_id": "ENVO:00000086"
+          },
+          "plateau [ENVO:00000182]": {
+            "ontology_id": "ENVO:00000182"
+          },
+          "ridge [ENVO:00000283]": {
+            "ontology_id": "ENVO:00000283"
+          },
+          "slope [ENVO:00002000]": {
+            "ontology_id": "ENVO:00002000"
+          },
+          "__cliff [ENVO:00000087]": {
+            "ontology_id": "ENVO:00000087"
+          },
+          "__hillside [ENVO:01000333]": {
+            "ontology_id": "ENVO:01000333"
+          },
+          "snow field [ENVO:00000146]": {
+            "ontology_id": "ENVO:00000146"
+          },
+          "tombolo [ENVO:00000420]": {
+            "ontology_id": "ENVO:00000420"
+          },
+          "tuff cone [ENVO:01000664]": {
+            "ontology_id": "ENVO:01000664"
+          },
+          "valley [ENVO:00000100]": {
+            "ontology_id": "ENVO:00000100"
+          },
+          "__canyon [ENVO:00000169]": {
+            "ontology_id": "ENVO:00000169"
+          },
+          "__dry valley [ENVO:00000128]": {
+            "ontology_id": "ENVO:00000128"
+          },
+          "__glacial valley [ENVO:00000248]": {
+            "ontology_id": "ENVO:00000248"
+          },
+          "vein [ENVO:01000670]": {
+            "ontology_id": "ENVO:01000670"
+          },
+          "volcano [ENVO:00000247]": {
+            "ontology_id": "ENVO:00000247"
+          },
+          "woodland clearing [ENVO:00000444]": {
+            "ontology_id": "ENVO:00000444"
+          }
+        }
+      },
+      {
+        "fieldName": "environmental medium",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000014",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
+        "guidance": "Pattern hint: {termLabel} {[termID]}",
+        "examples": "soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "env_medium"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "agricultural soil [ENVO:00002259]": {
+            "ontology_id": "ENVO:00002259"
+          },
+          "__bluegrass field soil [ENVO:00005789]": {
+            "ontology_id": "ENVO:00005789"
+          },
+          "__paddy field soil [ENVO:00005740]": {
+            "ontology_id": "ENVO:00005740"
+          },
+          "____peaty paddy field soil [ENVO:00005776]": {
+            "ontology_id": "ENVO:00005776"
+          },
+          "__rubber plantation soil [ENVO:00005788]": {
+            "ontology_id": "ENVO:00005788"
+          },
+          "albeluvisol [ENVO:00002233]": {
+            "ontology_id": "ENVO:00002233"
+          },
+          "alisol [ENVO:00002231]": {
+            "ontology_id": "ENVO:00002231"
+          },
+          "alluvial soil [ENVO:00002871]": {
+            "ontology_id": "ENVO:00002871"
+          },
+          "__alluvial swamp soil [ENVO:00005758]": {
+            "ontology_id": "ENVO:00005758"
+          },
+          "alpine soil [ENVO:00005741]": {
+            "ontology_id": "ENVO:00005741"
+          },
+          "andosol [ENVO:00002232]": {
+            "ontology_id": "ENVO:00002232"
+          },
+          "__volcanic soil [ENVO:01001841]": {
+            "ontology_id": "ENVO:01001841"
+          },
+          "anthrosol [ENVO:00002230]": {
+            "ontology_id": "ENVO:00002230"
+          },
+          "arenosol [ENVO:00002229]": {
+            "ontology_id": "ENVO:00002229"
+          },
+          "bare soil [ENVO:01001616]": {
+            "ontology_id": "ENVO:01001616"
+          },
+          "burned soil [ENVO:00005760]": {
+            "ontology_id": "ENVO:00005760"
+          },
+          "calcisol [ENVO:00002239]": {
+            "ontology_id": "ENVO:00002239"
+          },
+          "cambisol [ENVO:00002235]": {
+            "ontology_id": "ENVO:00002235"
+          },
+          "carbon nanotube enriched soil [ENVO:01000427]": {
+            "ontology_id": "ENVO:01000427"
+          },
+          "chernozem [ENVO:00002237]": {
+            "ontology_id": "ENVO:00002237"
+          },
+          "compost soil [ENVO:00005747]": {
+            "ontology_id": "ENVO:00005747"
+          },
+          "__frozen compost soil [ENVO:00005765]": {
+            "ontology_id": "ENVO:00005765"
+          },
+          "contaminated soil [ENVO:00002116]": {
+            "ontology_id": "ENVO:00002116"
+          },
+          "__xylene contaminated soil [ENVO:00002146]": {
+            "ontology_id": "ENVO:00002146"
+          },
+          "dune soil [ENVO:00002260]": {
+            "ontology_id": "ENVO:00002260"
+          },
+          "durisol [ENVO:00002238]": {
+            "ontology_id": "ENVO:00002238"
+          },
+          "ferralsol [ENVO:00002246]": {
+            "ontology_id": "ENVO:00002246"
+          },
+          "fluvisol [ENVO:00002273]": {
+            "ontology_id": "ENVO:00002273"
+          },
+          "forest soil [ENVO:00002261]": {
+            "ontology_id": "ENVO:00002261"
+          },
+          "__beech forest soil [ENVO:00005770]": {
+            "ontology_id": "ENVO:00005770"
+          },
+          "__eucalyptus forest soil [ENVO:00005787]": {
+            "ontology_id": "ENVO:00005787"
+          },
+          "__mountain forest soil [ENVO:00005769]": {
+            "ontology_id": "ENVO:00005769"
+          },
+          "frost-susceptible soil [ENVO:01001638]": {
+            "ontology_id": "ENVO:01001638"
+          },
+          "frozen soil [ENVO:01001526]": {
+            "ontology_id": "ENVO:01001526"
+          },
+          "__cryosol [ENVO:00002236]": {
+            "ontology_id": "ENVO:00002236"
+          },
+          "__friable-frozen soil [ENVO:01001528]": {
+            "ontology_id": "ENVO:01001528"
+          },
+          "__plastic-frozen soil [ENVO:01001527]": {
+            "ontology_id": "ENVO:01001527"
+          },
+          "gleysol [ENVO:00002244]": {
+            "ontology_id": "ENVO:00002244"
+          },
+          "grassland soil [ENVO:00005750]": {
+            "ontology_id": "ENVO:00005750"
+          },
+          "__savanna soil [ENVO:00005746]": {
+            "ontology_id": "ENVO:00005746"
+          },
+          "__steppe soil [ENVO:00005777]": {
+            "ontology_id": "ENVO:00005777"
+          },
+          "greenhouse soil [ENVO:00005780]": {
+            "ontology_id": "ENVO:00005780"
+          },
+          "gypsisol [ENVO:00002245]": {
+            "ontology_id": "ENVO:00002245"
+          },
+          "histosol [ENVO:00002243]": {
+            "ontology_id": "ENVO:00002243"
+          },
+          "humus-rich acidic ash soil [ENVO:00005763]": {
+            "ontology_id": "ENVO:00005763"
+          },
+          "jungle soil [ENVO:00005751]": {
+            "ontology_id": "ENVO:00005751"
+          },
+          "kastanozem [ENVO:00002240]": {
+            "ontology_id": "ENVO:00002240"
+          },
+          "leptosol [ENVO:00002241]": {
+            "ontology_id": "ENVO:00002241"
+          },
+          "limed soil [ENVO:00005766]": {
+            "ontology_id": "ENVO:00005766"
+          },
+          "lixisol [ENVO:00002242]": {
+            "ontology_id": "ENVO:00002242"
+          },
+          "loam [ENVO:00002258]": {
+            "ontology_id": "ENVO:00002258"
+          },
+          "luvisol [ENVO:00002248]": {
+            "ontology_id": "ENVO:00002248"
+          },
+          "manured soil [ENVO:00005767]": {
+            "ontology_id": "ENVO:00005767"
+          },
+          "meadow soil [ENVO:00005761]": {
+            "ontology_id": "ENVO:00005761"
+          },
+          "muddy soil [ENVO:00005771]": {
+            "ontology_id": "ENVO:00005771"
+          },
+          "nitisol [ENVO:00002247]": {
+            "ontology_id": "ENVO:00002247"
+          },
+          "orchard soil [ENVO:00005772]": {
+            "ontology_id": "ENVO:00005772"
+          },
+          "ornithogenic soil [ENVO:00005782]": {
+            "ontology_id": "ENVO:00005782"
+          },
+          "pantothenate enriched soil [ENVO:00003088]": {
+            "ontology_id": "ENVO:00003088"
+          },
+          "pasture soil [ENVO:00005773]": {
+            "ontology_id": "ENVO:00005773"
+          },
+          "peat soil [ENVO:00005774]": {
+            "ontology_id": "ENVO:00005774"
+          },
+          "phaeozem [ENVO:00002249]": {
+            "ontology_id": "ENVO:00002249"
+          },
+          "planosol [ENVO:00002251]": {
+            "ontology_id": "ENVO:00002251"
+          },
+          "plinthosol [ENVO:00002250]": {
+            "ontology_id": "ENVO:00002250"
+          },
+          "podzol [ENVO:00002257]": {
+            "ontology_id": "ENVO:00002257"
+          },
+          "poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]": {
+            "ontology_id": "ENVO:00003093"
+          },
+          "pond soil [ENVO:00005764]": {
+            "ontology_id": "ENVO:00005764"
+          },
+          "quinate enriched soil [ENVO:00003095]": {
+            "ontology_id": "ENVO:00003095"
+          },
+          "regosol [ENVO:00002256]": {
+            "ontology_id": "ENVO:00002256"
+          },
+          "sarcosine enriched soil [ENVO:00003083]": {
+            "ontology_id": "ENVO:00003083"
+          },
+          "skatole enriched soil [ENVO:00003085]": {
+            "ontology_id": "ENVO:00003085"
+          },
+          "solonchak [ENVO:00002252]": {
+            "ontology_id": "ENVO:00002252"
+          },
+          "solonetz [ENVO:00002255]": {
+            "ontology_id": "ENVO:00002255"
+          },
+          "stagnosol [ENVO:00002274]": {
+            "ontology_id": "ENVO:00002274"
+          },
+          "surface soil [ENVO:02000059]": {
+            "ontology_id": "ENVO:02000059"
+          },
+          "technosol [ENVO:00002275]": {
+            "ontology_id": "ENVO:00002275"
+          },
+          "threonine enriched soil [ENVO:00003091]": {
+            "ontology_id": "ENVO:00003091"
+          },
+          "trimethylamine enriched soil [ENVO:00003084]": {
+            "ontology_id": "ENVO:00003084"
+          },
+          "tropical soil [ENVO:00005778]": {
+            "ontology_id": "ENVO:00005778"
+          },
+          "ultisol [ENVO:01001397]": {
+            "ontology_id": "ENVO:01001397"
+          },
+          "__acrisol [ENVO:00002234]": {
+            "ontology_id": "ENVO:00002234"
+          },
+          "umbrisol [ENVO:00002253]": {
+            "ontology_id": "ENVO:00002253"
+          },
+          "upland soil [ENVO:00005786]": {
+            "ontology_id": "ENVO:00005786"
+          },
+          "urea enriched soil [ENVO:00005753]": {
+            "ontology_id": "ENVO:00005753"
+          },
+          "vertisol [ENVO:00002254]": {
+            "ontology_id": "ENVO:00002254"
+          }
+        }
+      },
+      {
+        "fieldName": "Collection Date",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000011",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The date of sampling",
+        "guidance": "Pattern hint: {date, arbitrary precision}",
+        "examples": "2021-04-15; 2021-04; 2021",
+        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "collection_date"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "geographic location (country and/or sea,region)",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000010",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
+        "guidance": "Pattern hint: {term}: {term}, {text}",
+        "examples": "USA: Maryland, Bethesda",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "geo_loc_name"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "geographic location (latitude and longitude)",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000009",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The geographical origin of the sample as defined by latitude and longitude. The values should be reported in decimal degrees and in WGS84 system",
+        "guidance": "Pattern hint: (lat lon}",
+        "examples": "50.586825 6.408977",
+        "pattern": "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?)\\s[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "lat_lon"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "elevation",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000093",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Elevation of the sampling site is its height above a fixed reference point, most commonly the mean sea level. Elevation is mainly used when referring to points on the earth's surface, while altitude is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit.",
+        "guidance": "",
+        "examples": "100 meter",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "elev"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "sample storage temperature",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000110",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Temperature at which sample was stored, e.g. -80 degree Celsius",
+        "guidance": "",
+        "examples": "-80 degree Celsius",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_store_temp"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "composite design/sieving",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000322",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Collection design of pooled samples and/or sieve size and amount of sample sieved",
+        "guidance": "Pattern hint: {{text}|{float} {unit}};{float} {unit}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "sieving"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "size-fraction lower threshold",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000735",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample",
+        "guidance": "",
+        "examples": "0.2 micrometer",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "size_frac_low"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "depth, meters",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000018",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The vertical distance below local surface, e.g. For sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+        "guidance": "All depths must be reported in meters. Provide the numerical portion only. | Pattern hint: {float}|{float}-{float}",
+        "examples": "0-0.1; 1",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$|^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?-[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "depth"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "sample material processing",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000016",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
+        "guidance": "Pattern hint: {text}",
+        "examples": "filtering of seawater, storing samples in ethanol",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_mat_process"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "size-fraction upper threshold",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000736",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample",
+        "guidance": "",
+        "examples": "20 micrometer",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "size_frac_up"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "biotic regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001038",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment(s) involving use of biotic factors, such as bacteria, viruses or fungi.",
+        "guidance": "Pattern hint: {text}",
+        "examples": "sample inoculated with Rhizobium spp. Culture",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "biotic_regm"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "sample collection device",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000002",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "The device used to collect an environmental sample. This field accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO). This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).",
+        "guidance": "Report dimensions and details when applicable | Pattern hint: {termLabel} {[termID]}|{text}",
+        "examples": "swab, biopsy, niskin bottle, push core, drag swab [GENEPIO:0002713]",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_collec_device"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "sample collection method",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001225",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "The method employed for collecting the sample.",
+        "guidance": "This can be a citation or description | Pattern hint: {PMID}|{DOI}|{URL}|{text}",
+        "examples": "swabbing",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_collec_method"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "air temperature regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000551",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment involving an exposure to varying temperatures; should include the temperature, treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include different temperature regimens",
+        "guidance": "Pattern hint: {float} {unit};{Rn/start_time/end_time/duration}",
+        "examples": "25 degree Celsius;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "air_temp_regm"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "chemical administration",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000751",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "List of chemical compounds administered to the host or site where sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter); can include multiple compounds. For chemical entities of biological interest ontology (chebi) (v 163), http://purl.bioontology.org/ontology/chebi",
+        "guidance": "Pattern hint: {termLabel} {[termID]};{timestamp}",
+        "examples": "agar [CHEBI:2509];2018-05-11T20:00Z",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "chem_administration"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "amount or size of sample collected",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000001",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.",
+        "guidance": "This refers to the TOTAL amount of sample collected from the experiment. NOT the amount sent to each institution or collected for a specific analysis. | Pattern hint: {float} {unit}",
+        "examples": "5 grams; 10 mL",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_size"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "climate environment",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001040",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates",
+        "guidance": "Pattern hint: {text};{Rn/start_time/end_time/duration}",
+        "examples": "tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "climate_environment"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "gaseous environment",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000558",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Use of conditions with differing gaseous environments; should include the name of gaseous compound, amount administered, treatment duration, interval and total experimental duration; can include multiple gaseous environment regimens",
+        "guidance": "Pattern hint: {text};{float} {unit};{Rn/start_time/end_time/duration}",
+        "examples": "nitric oxide;0.5 micromole per liter;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "gaseous_environment"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "humidity regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000568",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment involving an exposure to varying degree of humidity; information about treatment involving use of growth hormones; should include amount of humidity administered, treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple regimens",
+        "guidance": "Pattern hint: {float} {unit};{Rn/start_time/end_time/duration}",
+        "examples": "25 gram per cubic meter;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "humidity_regm"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "observed biotic relationship",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000028",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object",
+        "guidance": "",
+        "examples": "free living",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "biotic_relationship"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "commensalism": {},
+          "free living": {},
+          "mutualism": {},
+          "parasitism": {},
+          "symbiotic": {}
+        }
+      },
+      {
+        "fieldName": "relationship to oxygen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000015",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
+        "guidance": "",
+        "examples": "aerobe",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "rel_to_oxygen"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "aerobe": {},
+          "anaerobe": {},
+          "facultative": {},
+          "microaerophilic": {},
+          "microanaerobe": {},
+          "obligate aerobe": {},
+          "obligate anaerobe": {}
+        }
+      },
+      {
+        "fieldName": "light regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000569",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment(s) involving exposure to light, including both light intensity and quality.",
+        "guidance": "Pattern hint: {text};{float} {unit};{float} {unit}",
+        "examples": "incandescant light;10 lux;450 nanometer",
+        "pattern": "^\\S+.*\\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "light_regm"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "watering regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000591",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment involving an exposure to watering frequencies, treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple regimens",
+        "guidance": "Pattern hint: {float} {unit};{Rn/start_time/end_time/duration}",
+        "examples": "1 liter;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "watering_regm"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "altitude",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000094",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Altitude is a term used to identify heights of objects such as airplanes, space shuttles, rockets, atmospheric balloons and heights of places such as atmospheric layers and clouds. It is used to measure the height of an object which is above the earth's surface. In this context, the altitude measurement is the vertical distance between the earth's surface above sea level and the sampled position in the air",
+        "guidance": "",
+        "examples": "100 meter",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "alt"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "pH",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001001",
+        "datatype": "xs:decimal",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "0.0",
+        "xs:maxInclusive": "14.0",
+        "requirement": "recommended",
+        "description": "pH measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid",
+        "guidance": "Pattern hint: {float}",
+        "examples": "7.2",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "ph"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "fieldName": "MIxS Inspired",
+    "children": [
+      {
+        "fieldName": "collection time, GMT",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "The time of sampling, either as an instance (single point) or interval.",
+        "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
+        "examples": "13:33; 13:33:55",
+        "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "collection_time"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "Incubation Collection Date",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Date the incubation was harvested/collected/ended. Only relevant for incubation samples.",
+        "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
+        "examples": "2021-04-15; 2021-04; 2021",
+        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "collection_date_inc"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "Incubation Collection Time, GMT",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Time the incubation was harvested/collected/ended. Only relevant for incubation samples.",
+        "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
+        "examples": "13:33; 13:33:55",
+        "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "collection_time_inc"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "Incubation Start Date",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Date the incubation was started. Only relevant for incubation samples.",
+        "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
+        "examples": "2021-04-15; 2021-04; 2021",
+        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "start_date_inc"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "Incubation Start Time, GMT",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Time the incubation was started. Only relevant for incubation samples.",
+        "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
+        "examples": "13:33; 13:33:55",
+        "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "start_time_inc"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "Filter Method",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Type of filter used or how the sample was filtered",
+        "guidance": "Pattern hint: {text}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "filter_method"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "experimental factor- other",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Other details about your sample that you feel can't be accurately represented in the available columns.",
+        "guidance": "Pattern hint: {text}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "experimental_factor_other"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "non-microbial biomass",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "",
+        "description": "Amount of biomass; should include the name for the part of biomass measured, e.g.insect, plant, total. Can include multiple measurements separated by ;",
+        "guidance": "Pattern hint: {text};{float} {unit}",
+        "examples": "",
+        "pattern": "^\\S*;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "non_microb_biomass"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "non-microbial biomass method",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "",
+        "description": "Reference or method used in determining biomass",
+        "guidance": "required if \"non-microbial biomass\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "non_microb_biomass_method"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "microbial biomass carbon",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "",
+        "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
+        "guidance": "Pattern hint: {float} {unit}",
+        "examples": "",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "microbial_biomass_C"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "microbial biomass carbon method",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Reference or method used in determining microbial biomass",
+        "guidance": "required if \"microbial_biomass_C\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "micro_biomass_C_meth"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "microbial biomass nitrogen",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "",
+        "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
+        "guidance": "Pattern hint: {float} {unit}",
+        "examples": "",
+        "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "microbial_biomass_N"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "microbial biomass nitrogen method",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "",
+        "description": "Reference or method used in determining microbial biomass nitrogen",
+        "guidance": "required if \"microbial_biomass_N\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "micro_biomass_N_meth"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "organic nitrogen method",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "",
+        "description": "Method used for obtaining organic nitrogen",
+        "guidance": "required if \"org_nitro\" is provided | Pattern hint: {PMID}|{DOI}|{URL}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "org_nitro_method"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "other treatments",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Other treatments applied to your samples that are not applicable to the provided fields",
+        "guidance": "Pattern hint: {text}",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "other_treatment"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "isotope exposure/addition",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "List isotope exposure or addition applied to your sample.",
+        "guidance": "Pattern hint: {termLabel} {[termID]}; {timestamp}",
+        "examples": "",
+        "pattern": "^\\S+.*\\S+ \\[ENVO:\\d+\\]; ([\\+-]?\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "isotope_exposure"
             }
           ]
         }
