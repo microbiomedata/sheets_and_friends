@@ -6,14 +6,15 @@ authors = ["Mark Andrew Miller <MAM@lbl.gov>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
+black = "*"
+click_log = "*"
+dpath = "^2.0.6"
+glom = "^22.1.0"
+hident = "^0.1.7"
+pandasql = "^0.7.3"
+pygsheets = "^2.0.5"
 python = "^3.9"
 schemasheets = "^0.1.7"
-click_log = "*"
-glom = "^22.1.0"
-pygsheets = "^2.0.5"
-pandasql = "^0.7.3"
-hident = "^0.1.7"
-dpath = "^2.0.6"
 
 [tool.poetry.dev-dependencies]
 

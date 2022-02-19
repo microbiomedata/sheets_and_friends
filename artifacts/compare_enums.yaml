@@ -1,0 +1,305 @@
+disjoint_enums:
+  mixs_only:
+  - add_recov_method_enum
+  - animal_body_cond_enum
+  - animal_sex_enum
+  - arch_struc_enum
+  - assembly_qual_enum
+  - assembly_software_enum
+  - bin_param_enum
+  - biol_stat_enum
+  - build_docs_enum
+  - build_occup_type_enum
+  - building_setting_enum
+  - ceil_cond_enum
+  - ceil_finish_mat_enum
+  - ceil_texture_enum
+  - ceil_type_enum
+  - compl_appr_enum
+  - compl_score_enum
+  - contam_screen_param_enum
+  - cult_result_enum
+  - decontam_software_enum
+  - depos_env_enum
+  - dominant_hand_enum
+  - door_comp_type_enum
+  - door_cond_enum
+  - door_direct_enum
+  - door_loc_enum
+  - door_mat_enum
+  - door_move_enum
+  - door_type_enum
+  - door_type_metal_enum
+  - door_type_wood_enum
+  - drawings_enum
+  - drug_usage_enum
+  - ext_wall_orient_enum
+  - ext_window_orient_enum
+  - extr_weather_event_enum
+  - facility_type_enum
+  - farm_water_source_enum
+  - filter_type_enum
+  - floor_cond_enum
+  - floor_finish_mat_enum
+  - floor_struc_enum
+  - floor_water_mold_enum
+  - food_clean_proc_enum
+  - food_quality_date_enum
+  - food_trace_list_enum
+  - freq_clean_enum
+  - furniture_enum
+  - gender_restroom_enum
+  - growth_habit_enum
+  - handidness_enum
+  - hc_produced_enum
+  - hcr_enum
+  - hcr_geol_age_enum
+  - heat_cool_type_enum
+  - heat_deliv_loc_enum
+  - horizon_enum
+  - host_cellular_loc_enum
+  - host_pred_appr_enum
+  - host_sex_enum
+  - host_specificity_enum
+  - indoor_space_enum
+  - indoor_surf_enum
+  - int_wall_cond_enum
+  - lib_layout_enum
+  - light_type_enum
+  - lithology_enum
+  - mag_cov_software_enum
+  - mech_struc_enum
+  - microb_start_count_enum
+  - mode_transmission_enum
+  - neg_cont_type_enum
+  - occup_document_enum
+  - organism_count_enum
+  - plant_growth_med_enum
+  - plant_reprod_crop_enum
+  - plant_sex_enum
+  - pred_genome_struc_enum
+  - pred_genome_type_enum
+  - pres_animal_insect_enum
+  - quad_pos_enum
+  - rel_samp_loc_enum
+  - room_condt_enum
+  - room_connected_enum
+  - room_loc_enum
+  - room_samp_pos_enum
+  - room_type_enum
+  - route_transmission_enum
+  - samp_capt_status_enum
+  - samp_collect_point_enum
+  - samp_dis_stage_enum
+  - samp_floor_enum
+  - samp_loc_condition_enum
+  - samp_md_enum
+  - samp_purpose_enum
+  - samp_subtype_enum
+  - samp_surf_moisture_enum
+  - samp_transport_cont_enum
+  - samp_weather_enum
+  - season_use_enum
+  - sediment_type_enum
+  - shading_device_cond_enum
+  - shading_device_type_enum
+  - single_cell_lysis_appr_enum
+  - soil_texture_class_enum
+  - sort_tech_enum
+  - source_uvig_enum
+  - special_diet_enum
+  - specific_enum
+  - spikein_count_enum
+  - sr_dep_env_enum
+  - sr_geol_age_enum
+  - sr_kerog_type_enum
+  - sr_lithology_enum
+  - study_complt_stat_enum
+  - substructure_type_enum
+  - surf_air_cont_enum
+  - surf_material_enum
+  - symbiont_host_role_enum
+  - tax_ident_enum
+  - tidal_stage_enum
+  - train_line_enum
+  - train_stat_loc_enum
+  - train_stop_loc_enum
+  - trophic_level_enum
+  - type_of_symbiosis_enum
+  - virus_enrich_appr_enum
+  - vis_media_enum
+  - wall_const_type_enum
+  - wall_finish_mat_enum
+  - wall_loc_enum
+  - wall_surf_treatment_enum
+  - wall_texture_enum
+  - water_feat_type_enum
+  - water_source_shared_enum
+  - weekday_enum
+  - window_cond_enum
+  - window_cover_enum
+  - window_horiz_pos_enum
+  - window_loc_enum
+  - window_mat_enum
+  - window_type_enum
+  - window_vert_pos_enum
+  nmdc_dh_only:
+  - analysis_type_enum
+  - dna_cont_type_enum
+  - dna_dnase_enum
+  - dna_sample_format_enum
+  - dnase_rna_enum
+  - ecosystem_category_enum
+  - ecosystem_enum
+  - ecosystem_subtype_enum
+  - ecosystem_type_enum
+  - env_package_enum
+  - growth_facil_enum
+  - rna_cont_type_enum
+  - rna_sample_format_enum
+  - sample_type_enum
+  - specific_ecosystem_enum
+  - store_cond_enum
+shared_enums:
+  biotic_relationship_enum:
+    intersection:
+    - free living
+    mixs_only:
+    - commensal
+    - parasite
+    - symbiont
+    nmdc_dh_only:
+    - commensalism
+    - mutualism
+    - parasitism
+    - symbiotic
+  cur_land_use_enum:
+    intersection:
+    - badlands
+    - cities
+    - conifers (e.g. pine,spruce,fir,cypress)
+    - crop trees (nuts,fruit,christmas trees,nursery trees)
+    - farmstead
+    - gravel
+    - hardwoods (e.g. oak,hickory,elm,aspen)
+    - hayland
+    - horticultural plants (e.g. tulips)
+    - industrial areas
+    - intermixed hardwood and conifers
+    - marshlands (grass,sedges,rushes)
+    - meadows (grasses,alfalfa,fescue,bromegrass,timothy)
+    - mines/quarries
+    - mudflats
+    - oil waste areas
+    - pastureland (grasslands used for livestock grazing)
+    - permanent snow or ice
+    - rainforest (evergreen forest receiving >406 cm annual rainfall)
+    - rangeland
+    - roads/railroads
+    - rock
+    - row crops
+    - saline seeps
+    - salt flats
+    - sand
+    - shrub crops (blueberries,nursery ornamentals,filberts)
+    - shrub land (e.g. mesquite,sage-brush,creosote bush,shrub oak,eucalyptus)
+    - small grains
+    - successional shrub land (tree saplings,hazels,sumacs,chokecherry,shrub dogwoods,blackberries)
+    - swamp (permanent or semi-permanent water body dominated by woody plants)
+    - tropical (e.g. mangrove,palms)
+    - tundra (mosses,lichens)
+    - vegetable crops
+    - vine crops (grapes)
+    mixs_only: []
+    nmdc_dh_only: []
+  drainage_class_enum:
+    intersection:
+    - excessively drained
+    - moderately well
+    - poorly
+    - somewhat poorly
+    - very poorly
+    - well
+    mixs_only: []
+    nmdc_dh_only: []
+  fao_class_enum:
+    intersection:
+    - Acrisols
+    - Andosols
+    - Arenosols
+    - Cambisols
+    - Chernozems
+    - Ferralsols
+    - Fluvisols
+    - Gleysols
+    - Greyzems
+    - Gypsisols
+    - Histosols
+    - Kastanozems
+    - Lithosols
+    - Luvisols
+    - Nitosols
+    - Phaeozems
+    - Planosols
+    - Podzols
+    - Podzoluvisols
+    - Rankers
+    - Regosols
+    - Rendzinas
+    - Solonchaks
+    - Solonetz
+    - Vertisols
+    - Yermosols
+    mixs_only: []
+    nmdc_dh_only: []
+  oxy_stat_samp_enum:
+    intersection:
+    - aerobic
+    - anaerobic
+    - other
+    mixs_only: []
+    nmdc_dh_only: []
+  profile_position_enum:
+    intersection:
+    - backslope
+    - footslope
+    - shoulder
+    - summit
+    - toeslope
+    mixs_only: []
+    nmdc_dh_only: []
+  rel_to_oxygen_enum:
+    intersection:
+    - aerobe
+    - anaerobe
+    - facultative
+    - microaerophilic
+    - microanaerobe
+    - obligate aerobe
+    - obligate anaerobe
+    mixs_only: []
+    nmdc_dh_only: []
+  soil_horizon_enum:
+    intersection:
+    - A horizon
+    - B horizon
+    - C horizon
+    - E horizon
+    - O horizon
+    - Permafrost
+    - R layer
+    mixs_only: []
+    nmdc_dh_only: []
+  tillage_enum:
+    intersection:
+    - chisel
+    - cutting disc
+    - disc plough
+    - drill
+    - mouldboard
+    - ridge till
+    - strip tillage
+    - tined
+    - zonal tillage
+    mixs_only: []
+    nmdc_dh_only: []

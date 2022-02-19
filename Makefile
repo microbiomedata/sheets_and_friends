@@ -50,9 +50,12 @@ artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shut
 		--yaml_output $@  2>> logs/mod_by_path.log
 
 clean:
+	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
 	rm -rf artifacts/*yaml
-	rm -rf target/*log
+	rm -rf bin/*
+	rm -rf docs/*
 	rm -rf logs/*log
+	rm -rf project/*py
 	rm -rf project/docs/*
 	rm -rf project/excel/*
 	rm -rf project/graphql/*
@@ -65,12 +68,9 @@ clean:
 	rm -rf project/shacl/*
 	rm -rf project/shex/*
 	rm -rf project/sqlschema/*
-	rm -rf project/*py
-	rm -rf target/*txt
+	rm -rf target/*log
 	rm -rf target/*tsv
-	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
-	rm -rf docs/*
-	rm -rf bin/*
+	rm -rf target/*txt
 
 squeaky_clean: clean
 	rm -rf .cogs
@@ -184,5 +184,5 @@ compare_enums:
 	poetry run compare_enums \
 		--left_model artifacts/nmdc_dh.yaml \
 		--right_model mixs-source/model/schema/mixs.yaml \
-		--yaml_output target/compare_enums.yaml
+		--yaml_output artifacts/compare_enums.yaml
 

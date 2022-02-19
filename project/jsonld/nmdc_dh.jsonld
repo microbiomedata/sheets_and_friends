@@ -14048,9 +14048,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-02-18T12:44:55",
+  "source_file_date": "2022-02-18T13:32:20",
   "source_file_size": 224360,
-  "generation_date": "2022-02-18T12:45:01",
+  "generation_date": "2022-02-18T13:32:28",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",
