@@ -4124,8 +4124,8 @@ classes:
         owner: biosample
         range: ecosystem_enum
         annotations:
-          dh:section_name: GOLD ecosystem path
           dh:column_number: '1'
+          dh:section_name: GOLD ecosystem path
       ecosystem_category:
         name: ecosystem_category
         description: Ecosystem categories represent divisions within the ecosystem
@@ -4143,8 +4143,8 @@ classes:
         owner: biosample
         range: ecosystem_category_enum
         annotations:
-          dh:section_name: GOLD ecosystem path
           dh:column_number: '2'
+          dh:section_name: GOLD ecosystem path
       ecosystem_subtype:
         name: ecosystem_subtype
         description: Ecosystem subtypes represent further subdivision of Ecosystem
@@ -4161,8 +4161,8 @@ classes:
         owner: biosample
         range: ecosystem_subtype_enum
         annotations:
-          dh:section_name: GOLD ecosystem path
           dh:column_number: '4'
+          dh:section_name: GOLD ecosystem path
       ecosystem_type:
         name: ecosystem_type
         description: Ecosystem types represent things having common characteristics
@@ -4182,8 +4182,8 @@ classes:
         owner: biosample
         range: ecosystem_type_enum
         annotations:
-          dh:section_name: GOLD ecosystem path
           dh:column_number: '3'
+          dh:section_name: GOLD ecosystem path
       specific_ecosystem:
         name: specific_ecosystem
         description: Specific ecosystems represent specific features of the environment
@@ -4199,8 +4199,8 @@ classes:
         owner: biosample
         range: specific_ecosystem_enum
         annotations:
-          dh:section_name: GOLD ecosystem path
           dh:column_number: '5'
+          dh:section_name: GOLD ecosystem path
       agrochem_addition:
         name: agrochem_addition
         aliases:
@@ -4215,8 +4215,8 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS
           dh:column_number: '20'
+          dh:section_name: MIxS
         description: Addition of fertilizers, pesticides, etc. - amount and time of
           applications
         title: history/agrochemical additions
@@ -4244,9 +4244,9 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '12'
+          dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to varying
           temperatures; should include the temperature, treatment regimen including
           how many times the treatment was repeated, how long each treatment lasted,
@@ -4277,8 +4277,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '21'
+          dh:section_name: MIxS
         description: Aluminum saturation (esp. For tropical soils)
         title: extreme_unusual_properties/Al saturation
         examples:
@@ -4301,8 +4301,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '22'
+          dh:section_name: MIxS
         description: Reference or method used in determining Al saturation
         title: extreme_unusual_properties/Al saturation method
         examples:
@@ -4323,8 +4323,8 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:section_name: MIxS (modified)
           dh:column_number: '23'
+          dh:section_name: MIxS (modified)
         description: Altitude is a term used to identify heights of objects such as
           airplanes, space shuttles, rockets, atmospheric balloons and heights of
           places such as atmospheric layers and clouds. It is used to measure the
@@ -4355,8 +4355,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '24'
+          dh:section_name: MIxS
         description: The average of all annual precipitation values known, or an estimated
           equivalent value derived by such methods as regional indexes or Isohyetal
           maps.
@@ -4384,8 +4384,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '25'
+          dh:section_name: MIxS
         description: Mean annual temperature
         title: mean annual temperature
         examples:
@@ -4408,9 +4408,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '11'
+          dh:section_name: MIxS (modified)
         description: Information about treatment(s) involving use of biotic factors,
           such as bacteria, viruses or fungi.
         title: biotic regimen
@@ -4432,8 +4432,8 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-          dh:section_name: MIxS (modified)
           dh:column_number: '16'
+          dh:section_name: MIxS (modified)
           sntc_slot: samp_biotic_relationship
         description: Description of relationship(s) between the subject organism and
           other organism(s) it is associated with. E.g., parasite on species X; mutualist
@@ -4461,9 +4461,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '64'
+          dh:section_name: MIxS
         description: Ratio of amount or concentrations of carbon to nitrogen
         title: carbon/nitrogen ratio
         examples:
@@ -4485,9 +4485,9 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '13'
+          dh:section_name: MIxS (modified)
         description: List of chemical compounds administered to the host or site where
           sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter);
           can include multiple compounds. For chemical entities of biological interest
@@ -4514,9 +4514,9 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '14'
+          dh:section_name: MIxS (modified)
         description: Treatment involving an exposure to a particular climate; treatment
           regimen including how many times the treatment was repeated, how long each
           treatment lasted, and the start and end time of the entire treatment; can
@@ -4540,8 +4540,8 @@ classes:
           expected_value:
             tag: expected_value
             value: date and time
-          dh:section_name: MIxS (modified)
           dh:column_number: '3'
+          dh:section_name: MIxS (modified)
           sntc_slot: collection_date
         description: The date of sampling
         title: Collection Date
@@ -4570,8 +4570,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '26'
+          dh:section_name: MIxS
         description: Whether or not crop is rotated, and if yes, rotation schedule
         title: history/crop rotation
         examples:
@@ -4595,8 +4595,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '27'
+          dh:section_name: MIxS
         description: Present state of sample site
         title: current land use
         examples:
@@ -4619,8 +4619,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '28'
+          dh:section_name: MIxS
         description: Vegetation classification from one or more standard classification
           systems, or agricultural crop
         title: current vegetation
@@ -4645,8 +4645,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '29'
+          dh:section_name: MIxS
         description: Reference or method used in vegetation classification
         title: current vegetation method
         examples:
@@ -4667,9 +4667,9 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:section_name: MIxS (modified)
           categorical_subsection: required where applicable
           dh:column_number: '9'
+          dh:section_name: MIxS (modified)
         description: The vertical distance below local surface, e.g. For sediment
           or soil samples depth is measured from sediment or soil surface, respectively.
           Depth can be reported as an interval for subsurface samples.
@@ -4699,8 +4699,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '30'
+          dh:section_name: MIxS
         description: Drainage classification from a standard system such as the USDA
           system
         title: drainage classification
@@ -4721,8 +4721,8 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:section_name: MIxS (modified)
           dh:column_number: '6'
+          dh:section_name: MIxS (modified)
         description: Elevation of the sampling site is its height above a fixed reference
           point, most commonly the mean sea level. Elevation is mainly used when referring
           to points on the earth's surface, while altitude is used for points above
@@ -4747,9 +4747,9 @@ classes:
             value: The major environment type(s) where the sample was collected. Recommend
               subclasses of biome [ENVO:00000428]. Multiple terms can be separated
               by one or more pipes.
-          dh:section_name: MIxS (modified)
           categorical_subsection: sample identification
           dh:column_number: '1'
+          dh:section_name: MIxS (modified)
         description: "Report the major environmental system the sample or specimen\
           \ came from. The system(s) identified should have a coarse spatial grain,\
           \ to provide the general environmental context of where the sampling was\
@@ -4777,9 +4777,9 @@ classes:
             tag: expected_value
             value: Environmental entities having causal influences upon the entity
               at time of sampling.
-          dh:section_name: MIxS (modified)
           categorical_subsection: sample identification
           dh:column_number: '2'
+          dh:section_name: MIxS (modified)
         description: "Report the entity or entities which are in the sample or specimen\u2019\
           s local vicinity and which you believe have significant causal influences\
           \ on your sample or specimen. We recommend using EnvO terms which are of\
@@ -4810,9 +4810,9 @@ classes:
             tag: expected_value
             value: The material displaced by the entity at time of sampling. Recommend
               subclasses of environmental material [ENVO:00010483].
-          dh:section_name: MIxS (modified)
           categorical_subsection: sample identification
           dh:column_number: '3'
+          dh:section_name: MIxS (modified)
         description: 'Report the environmental material(s) immediately surrounding
           the sample or specimen at the time of sampling. We recommend using subclasses
           of ''environmental material'' (http://purl.obolibrary.org/obo/ENVO_00010483).
@@ -4841,8 +4841,8 @@ classes:
           expected_value:
             tag: expected_value
             value: text or EFO and/or OBI
-          dh:section_name: MIxS
           dh:column_number: '31'
+          dh:section_name: MIxS
         description: Experimental factors are essentially the variable aspects of
           an experiment design which can be used to describe an experiment, or set
           of experiments, in an increasingly detailed manner. This field accepts ontology
@@ -4871,8 +4871,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '32'
+          dh:section_name: MIxS
         description: Unusual physical events that may have affected microbial populations
         title: history/extreme events
         examples:
@@ -4895,8 +4895,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '33'
+          dh:section_name: MIxS
         description: Soil classification from the FAO World Reference Database for
           Soil Resources. The list can be found at http://www.fao.org/nr/land/sols/soil/wrb-soil-maps/reference-groups
         title: soil_taxonomic/FAO classification
@@ -4920,8 +4920,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '34'
+          dh:section_name: MIxS
         description: Historical and/or physical evidence of fire
         title: history/fire
         examples:
@@ -4944,8 +4944,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '35'
+          dh:section_name: MIxS
         description: Historical and/or physical evidence of flooding
         title: history/flooding
         examples:
@@ -4972,9 +4972,9 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '15'
+          dh:section_name: MIxS (modified)
         description: Use of conditions with differing gaseous environments; should
           include the name of gaseous compound, amount administered, treatment duration,
           interval and total experimental duration; can include multiple gaseous environment
@@ -4999,8 +4999,8 @@ classes:
             tag: expected_value
             value: 'country or sea name (INSDC or GAZ): region(GAZ), specific location
               name'
-          dh:section_name: MIxS (modified)
           dh:column_number: '4'
+          dh:section_name: MIxS (modified)
         description: The geographical origin of the sample as defined by the country
           or sea name followed by specific region name. Country or sea names should
           be chosen from the INSDC country list (http://insdc.org/country.html), or
@@ -5027,8 +5027,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           dh:column_number: '1'
+          dh:section_name: MIxS (modified)
           sntc_slot: growth_facility
         description: 'Type of facility/location where the sample was harvested; controlled
           vocabulary: growth chamber, open top chamber, glasshouse, experimental garden,
@@ -5058,8 +5058,8 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS
           dh:column_number: '36'
+          dh:section_name: MIxS
         description: Heavy metals present in the sequenced sample and their concentrations.
           For multiple heavy metals and concentrations, add multiple copies of this
           field.
@@ -5085,8 +5085,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '37'
+          dh:section_name: MIxS
         description: Reference or method used in determining heavy metals
         title: extreme_unusual_properties/heavy metals method
         examples:
@@ -5110,8 +5110,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '38'
+          dh:section_name: MIxS
         description: Reference or method used in determining the horizon
         title: horizon method
         examples:
@@ -5138,9 +5138,9 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '16'
+          dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to varying
           degree of humidity; information about treatment involving use of growth
           hormones; should include amount of humidity administered, treatment regimen
@@ -5166,8 +5166,8 @@ classes:
           expected_value:
             tag: expected_value
             value: decimal degrees,  limit to 8 decimal points
-          dh:section_name: MIxS (modified)
           dh:column_number: '5'
+          dh:section_name: MIxS (modified)
         description: The geographical origin of the sample as defined by latitude
           and longitude. The values should be reported in decimal degrees and in WGS84
           system
@@ -5196,9 +5196,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '17'
+          dh:section_name: MIxS (modified)
         description: Information about treatment(s) involving exposure to light, including
           both light intensity and quality.
         title: light regimen
@@ -5223,8 +5223,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '39'
+          dh:section_name: MIxS
         description: Link to digitized soil maps or other soil classification information
         title: link to classification information
         examples:
@@ -5248,8 +5248,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '40'
+          dh:section_name: MIxS
         description: Link to climate resource
         title: link to climate information
         examples:
@@ -5273,8 +5273,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '41'
+          dh:section_name: MIxS
         description: Soil classification based on local soil classification system
         title: soil_taxonomic/local classification
         examples:
@@ -5298,8 +5298,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '42'
+          dh:section_name: MIxS
         description: Reference or method used in determining the local soil classification
         title: soil_taxonomic/local classification method
         examples:
@@ -5323,9 +5323,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '63'
+          dh:section_name: MIxS
         description: Reference or method used in determining microbial biomass
         title: microbial biomass method
         examples:
@@ -5352,9 +5352,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '62'
+          dh:section_name: MIxS
         description: The part of the organic matter in the soil that constitutes living
           microorganisms smaller than 5-10 micrometer. If you keep this, you would
           need to have correction factors used for conversion to the final units
@@ -5379,8 +5379,8 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS
           dh:column_number: '43'
+          dh:section_name: MIxS
         description: Any other measurement performed or parameter collected, that
           is not listed here
         title: miscellaneous parameter
@@ -5408,9 +5408,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '65'
+          dh:section_name: MIxS
         description: Concentration of organic matter
         title: organic matter
         examples:
@@ -5435,9 +5435,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '66'
+          dh:section_name: MIxS
         description: Concentration of organic nitrogen
         title: organic nitrogen
         examples:
@@ -5459,8 +5459,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '44'
+          dh:section_name: MIxS
         description: Oxygenation status of sample
         title: oxygenation status of sample
         examples:
@@ -5482,9 +5482,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           categorical_subsection: biogeochemistry
           dh:column_number: '27'
+          dh:section_name: MIxS (modified)
           sntc_slot: pH
         description: pH measurement of the sample, or liquid portion of sample, or
           aqueous phase of the fluid
@@ -5498,8 +5498,8 @@ classes:
         owner: soil MIMS
         range: string
         required: false
-        minimum_value: '0'
         maximum_value: '14'
+        minimum_value: '0'
         notes:
         - Use modified term
         recommended: true
@@ -5515,9 +5515,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '61'
+          dh:section_name: MIxS
         description: Reference or method used in determining ph
         title: pH method
         examples:
@@ -5544,9 +5544,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '73'
+          dh:section_name: MIxS
         description: Concentration of phosphate
         title: phosphate
         examples:
@@ -5568,8 +5568,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '45'
+          dh:section_name: MIxS
         description: Reference or method used in determining previous land use and
           dates
         title: history/previous land use method
@@ -5594,8 +5594,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '46'
+          dh:section_name: MIxS
         description: Previous land use and dates
         title: history/previous land use
         examples:
@@ -5619,8 +5619,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '47'
+          dh:section_name: MIxS
         description: Cross-sectional position in the hillslope where sample was collected.sample
           area position in relation to surrounding areas
         title: profile position
@@ -5641,8 +5641,8 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-          dh:section_name: MIxS (modified)
           dh:column_number: '17'
+          dh:section_name: MIxS (modified)
           sntc_slot: oxygen_relationship
         description: Is this organism an aerobe, anaerobe? Please note that aerobic
           and anaerobic are valid descriptors for microbial environments
@@ -5671,9 +5671,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '74'
+          dh:section_name: MIxS
         description: The total concentration of all dissolved salts in a liquid or
           solid sample. While salinity can be measured by a complete chemical analysis,
           this method is difficult and time consuming. More often, it is instead derived
@@ -5700,9 +5700,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '75'
+          dh:section_name: MIxS
         description: Reference or method used in determining salinity
         title: salinity method
         examples:
@@ -5723,8 +5723,8 @@ classes:
           expected_value:
             tag: expected_value
             value: device name
-          dh:section_name: MIxS (modified)
           dh:column_number: '11'
+          dh:section_name: MIxS (modified)
           sntc_slot: sample_collection_dev
         description: The device used to collect an environmental sample. This field
           accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO).
@@ -5750,8 +5750,8 @@ classes:
           expected_value:
             tag: expected_value
             value: PMID,DOI,url , or text
-          dh:section_name: MIxS (modified)
           dh:column_number: '12'
+          dh:section_name: MIxS (modified)
           sntc_slot: sample_collection_method
         description: The method employed for collecting the sample.
         title: sample collection method
@@ -5775,8 +5775,8 @@ classes:
           expected_value:
             tag: expected_value
             value: text
-          dh:section_name: MIxS (modified)
           dh:column_number: '10'
+          dh:section_name: MIxS (modified)
           sntc_slot: sample_processing
         description: A brief description of any processing applied to the sample during
           or after retrieving the sample from environment, or a link to the relevant
@@ -5800,8 +5800,8 @@ classes:
           expected_value:
             tag: expected_value
             value: text
-          dh:section_name: Sample ID
           dh:column_number: '2'
+          dh:section_name: Sample ID
           sntc_slot: sample_name
         description: A local identifier or name that for the material sample collected.
           Refers to the original material collected or to any derived sub-samples.
@@ -5830,9 +5830,9 @@ classes:
           preferred_unit:
             tag: preferred_unit
             value: millliter, gram, milligram, liter
-          dh:section_name: MIxS (modified)
           categorical_subsection: optional
           dh:column_number: '14'
+          dh:section_name: MIxS (modified)
           sntc_slot: sample_collected
         description: The total amount or size (volume (ml), mass (g) or area (m2)
           ) of sample collected.
@@ -5864,8 +5864,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           dh:column_number: '7'
+          dh:section_name: MIxS (modified)
         description: Temperature at which sample was stored, e.g. -80 degree Celsius
         title: sample storage temperature
         examples:
@@ -5891,8 +5891,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '48'
+          dh:section_name: MIxS
         description: The average of all seasonal precipitation values known, or an
           estimated equivalent value derived by such methods as regional indexes or
           Isohyetal maps.
@@ -5920,8 +5920,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '49'
+          dh:section_name: MIxS
         description: Mean seasonal temperature
         title: mean seasonal temperature
         examples:
@@ -5944,8 +5944,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           dh:column_number: '8'
+          dh:section_name: MIxS (modified)
         description: Collection design of pooled samples and/or sieve size and amount
           of sample sieved
         title: composite design/sieving
@@ -5974,8 +5974,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           dh:column_number: '9'
+          dh:section_name: MIxS (modified)
         description: Refers to the mesh/pore size used to pre-filter/pre-sort the
           sample. Materials larger than the size threshold are excluded from the sample
         title: size-fraction lower threshold
@@ -6002,8 +6002,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           dh:column_number: '10'
+          dh:section_name: MIxS (modified)
         description: Refers to the mesh/pore size used to retain the sample. Materials
           smaller than the size threshold are excluded from the sample
         title: size-fraction upper threshold
@@ -6030,8 +6030,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '19'
+          dh:section_name: MIxS
         description: The direction a slope faces. While looking down a slope use a
           compass to record the direction you are facing (direction or degrees); e.g.,
           nw or 315 degrees. This measure provides an indication of sun and wind exposure
@@ -6060,8 +6060,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '50'
+          dh:section_name: MIxS
         description: Commonly called 'slope'. The angle between ground surface and
           a horizontal line (in percent). This is the direction that overland water
           would flow. This measure is usually taken with a hand level meter or clinometer
@@ -6086,8 +6086,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '51'
+          dh:section_name: MIxS
         description: Specific layer in the land area which measures parallel to the
           soil surface and possesses physical characteristics which differ from the
           layers above and beneath
@@ -6112,8 +6112,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '52'
+          dh:section_name: MIxS
         description: The relative proportion of different grain sizes of mineral particles
           in a soil, as described using a standard system; express as % sand (50 um
           to 2 mm), silt (2 um to 50 um), and clay (<2 um) with textural name (e.g.,
@@ -6139,8 +6139,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '53'
+          dh:section_name: MIxS
         description: Reference or method used in determining soil texture
         title: soil texture method
         examples:
@@ -6164,8 +6164,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '54'
+          dh:section_name: MIxS
         description: Description of the soil type or classification. This field accepts
           terms under soil (http://purl.obolibrary.org/obo/ENVO_00001998).  Multiple
           terms can be separated by pipes.
@@ -6191,8 +6191,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           dh:column_number: '55'
+          dh:section_name: MIxS
         description: Reference or method used in determining soil series name or other
           lower-level classification
         title: soil type method
@@ -6215,8 +6215,8 @@ classes:
             tag: expected_value
             value: 'for cultures of microorganisms: identifiers for two culture collections;
               for other material a unique arbitrary identifer'
-          dh:section_name: Sample ID
           dh:column_number: '1'
+          dh:section_name: Sample ID
           sntc_slot: unique_ID
         description: A globally unique identifier assigned to the biological sample.
         title: Globally Unique ID
@@ -6249,8 +6249,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
           dh:column_number: '2'
+          dh:section_name: MIxS (modified)
           sntc_slot: storage_condt
         description: Explain how the soil sample is stored (fresh/frozen/other).
         title: storage conditions
@@ -6275,8 +6275,8 @@ classes:
           preferred_unit:
             tag: preferred_unit
             value: degree Celsius
-          dh:section_name: MIxS
           dh:column_number: '56'
+          dh:section_name: MIxS
         description: Temperature of the sample at the time of sampling.
         title: temperature
         examples:
@@ -6298,8 +6298,8 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS
           dh:column_number: '57'
+          dh:section_name: MIxS
         description: Note method(s) used for tilling
         title: history/tillage
         examples:
@@ -6325,9 +6325,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '67'
+          dh:section_name: MIxS
         description: Total carbon content
         title: total carbon
         examples:
@@ -6349,9 +6349,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '69'
+          dh:section_name: MIxS
         description: Reference or method used in determining the total nitrogen
         title: total nitrogen content method
         examples:
@@ -6378,9 +6378,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '68'
+          dh:section_name: MIxS
         description: Total nitrogen content of the sample
         title: total nitrogen content
         examples:
@@ -6403,9 +6403,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '71'
+          dh:section_name: MIxS
         description: Reference or method used in determining total organic carbon
         title: total organic carbon method
         examples:
@@ -6432,9 +6432,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '70'
+          dh:section_name: MIxS
         description: 'Definition for soil: total organic carbon content of the soil,
           definition otherwise: total organic carbon content'
         title: total organic carbon
@@ -6461,9 +6461,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '72'
+          dh:section_name: MIxS
         description: 'Total phosphorus concentration in the sample, calculated by:
           total phosphorus = total dissolved phosphorus + particulate phosphorus'
         title: total phosphorus
@@ -6486,9 +6486,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '59'
+          dh:section_name: MIxS
         description: Reference or method used in determining the water content of
           soil
         title: water content method
@@ -6516,9 +6516,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS
           categorical_subsection: biogeochemistry
           dh:column_number: '58'
+          dh:section_name: MIxS
         description: Water content measurement
         title: water content
         examples:
@@ -6544,9 +6544,9 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:section_name: MIxS (modified)
           categorical_subsection: treatment
           dh:column_number: '18'
+          dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to watering
           frequencies, treatment regimen including how many times the treatment was
           repeated, how long each treatment lasted, and the start and end time of

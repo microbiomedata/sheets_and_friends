@@ -7603,13 +7603,13 @@
       "definition_uri": "https://example.com/nmdc_dh/ecosystem",
       "annotations": [
         {
-          "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "tag": "dh:column_number",
+          "value": "1",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "1",
+          "tag": "dh:section_name",
+          "value": "GOLD ecosystem path",
           "@type": "Annotation"
         }
       ],
@@ -7639,13 +7639,13 @@
       "definition_uri": "https://example.com/nmdc_dh/ecosystem_category",
       "annotations": [
         {
-          "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "tag": "dh:column_number",
+          "value": "2",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "2",
+          "tag": "dh:section_name",
+          "value": "GOLD ecosystem path",
           "@type": "Annotation"
         }
       ],
@@ -7675,13 +7675,13 @@
       "definition_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
       "annotations": [
         {
-          "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "tag": "dh:column_number",
+          "value": "4",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "4",
+          "tag": "dh:section_name",
+          "value": "GOLD ecosystem path",
           "@type": "Annotation"
         }
       ],
@@ -7711,13 +7711,13 @@
       "definition_uri": "https://example.com/nmdc_dh/ecosystem_type",
       "annotations": [
         {
-          "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "tag": "dh:column_number",
+          "value": "3",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "3",
+          "tag": "dh:section_name",
+          "value": "GOLD ecosystem path",
           "@type": "Annotation"
         }
       ],
@@ -7747,13 +7747,13 @@
       "definition_uri": "https://example.com/nmdc_dh/specific_ecosystem",
       "annotations": [
         {
-          "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "tag": "dh:column_number",
+          "value": "5",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "5",
+          "tag": "dh:section_name",
+          "value": "GOLD ecosystem path",
           "@type": "Annotation"
         }
       ],
@@ -7804,13 +7804,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "20",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "20",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -7864,11 +7864,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -7876,6 +7871,11 @@
         {
           "tag": "dh:column_number",
           "value": "12",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -7930,13 +7930,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "21",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "21",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -7984,13 +7984,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "22",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "22",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8033,13 +8033,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "23",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "23",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8093,13 +8093,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "24",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "24",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8152,13 +8152,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "25",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "25",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8206,11 +8206,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -8218,6 +8213,11 @@
         {
           "tag": "dh:column_number",
           "value": "11",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8261,13 +8261,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "16",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "16",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -8321,11 +8321,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -8333,6 +8328,11 @@
         {
           "tag": "dh:column_number",
           "value": "64",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8380,11 +8380,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -8392,6 +8387,11 @@
         {
           "tag": "dh:column_number",
           "value": "13",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8441,11 +8441,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -8453,6 +8448,11 @@
         {
           "tag": "dh:column_number",
           "value": "14",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8497,13 +8497,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "3",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "3",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -8561,13 +8561,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "26",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "26",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8615,13 +8615,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "27",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "27",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8668,13 +8668,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "28",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "28",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8722,13 +8722,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "29",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "29",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8771,11 +8771,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "required where applicable",
           "@type": "Annotation"
@@ -8783,6 +8778,11 @@
         {
           "tag": "dh:column_number",
           "value": "9",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8837,13 +8837,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "30",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "30",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -8885,13 +8885,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "6",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "6",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8935,11 +8935,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "sample identification",
           "@type": "Annotation"
@@ -8947,6 +8942,11 @@
         {
           "tag": "dh:column_number",
           "value": "1",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -8990,11 +8990,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "sample identification",
           "@type": "Annotation"
@@ -9002,6 +8997,11 @@
         {
           "tag": "dh:column_number",
           "value": "2",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9045,11 +9045,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "sample identification",
           "@type": "Annotation"
@@ -9057,6 +9052,11 @@
         {
           "tag": "dh:column_number",
           "value": "3",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9100,13 +9100,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "31",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "31",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9155,13 +9155,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "32",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "32",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9208,13 +9208,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "33",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "33",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9261,13 +9261,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "34",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "34",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9314,13 +9314,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "35",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "35",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9372,11 +9372,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -9384,6 +9379,11 @@
         {
           "tag": "dh:column_number",
           "value": "15",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9428,13 +9428,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "4",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "4",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9483,13 +9483,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "1",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "1",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -9548,13 +9548,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "36",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "36",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9603,13 +9603,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "37",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "37",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9657,13 +9657,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "38",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "38",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9716,11 +9716,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -9728,6 +9723,11 @@
         {
           "tag": "dh:column_number",
           "value": "16",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9772,13 +9772,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "5",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "5",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9832,11 +9832,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -9844,6 +9839,11 @@
         {
           "tag": "dh:column_number",
           "value": "17",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9892,13 +9892,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "39",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "39",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -9946,13 +9946,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "40",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "40",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10000,13 +10000,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "41",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "41",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10054,13 +10054,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "42",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "42",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10108,11 +10108,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10120,6 +10115,11 @@
         {
           "tag": "dh:column_number",
           "value": "63",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10172,11 +10172,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10184,6 +10179,11 @@
         {
           "tag": "dh:column_number",
           "value": "62",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10231,13 +10231,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "43",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "43",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10291,11 +10291,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10303,6 +10298,11 @@
         {
           "tag": "dh:column_number",
           "value": "65",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10355,11 +10355,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10367,6 +10362,11 @@
         {
           "tag": "dh:column_number",
           "value": "66",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10414,13 +10414,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "44",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "44",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10467,11 +10467,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10479,6 +10474,11 @@
         {
           "tag": "dh:column_number",
           "value": "27",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -10537,11 +10537,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10549,6 +10544,11 @@
         {
           "tag": "dh:column_number",
           "value": "61",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10601,11 +10601,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10613,6 +10608,11 @@
         {
           "tag": "dh:column_number",
           "value": "73",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10660,13 +10660,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "45",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "45",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10714,13 +10714,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "46",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "46",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10768,13 +10768,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "47",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "47",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10816,13 +10816,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "17",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "17",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -10881,11 +10881,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10893,6 +10888,11 @@
         {
           "tag": "dh:column_number",
           "value": "74",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10940,11 +10940,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -10952,6 +10947,11 @@
         {
           "tag": "dh:column_number",
           "value": "75",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -10994,13 +10994,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "11",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "11",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -11052,13 +11052,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "12",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "12",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -11110,13 +11110,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "10",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "10",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -11165,13 +11165,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
+          "tag": "dh:column_number",
+          "value": "2",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "2",
+          "tag": "dh:section_name",
+          "value": "Sample ID",
           "@type": "Annotation"
         },
         {
@@ -11228,11 +11228,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "optional",
           "@type": "Annotation"
@@ -11240,6 +11235,11 @@
         {
           "tag": "dh:column_number",
           "value": "14",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -11301,13 +11301,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "7",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "7",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -11361,13 +11361,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "48",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "48",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11420,13 +11420,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "49",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "49",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11474,13 +11474,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "8",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "8",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -11534,13 +11534,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "9",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "9",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -11594,13 +11594,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "10",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "10",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -11654,13 +11654,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "19",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "19",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11713,13 +11713,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "50",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "50",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11767,13 +11767,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "51",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "51",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11820,13 +11820,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "52",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "52",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11874,13 +11874,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "53",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "53",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11928,13 +11928,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "54",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "54",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -11982,13 +11982,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "55",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "55",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12031,13 +12031,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
+          "tag": "dh:column_number",
+          "value": "1",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "1",
+          "tag": "dh:section_name",
+          "value": "Sample ID",
           "@type": "Annotation"
         },
         {
@@ -12099,13 +12099,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "tag": "dh:column_number",
+          "value": "2",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "2",
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         },
         {
@@ -12159,13 +12159,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "56",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "56",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12213,13 +12213,13 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
+          "tag": "dh:column_number",
+          "value": "57",
           "@type": "Annotation"
         },
         {
-          "tag": "dh:column_number",
-          "value": "57",
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12272,11 +12272,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12284,6 +12279,11 @@
         {
           "tag": "dh:column_number",
           "value": "67",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12331,11 +12331,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12343,6 +12338,11 @@
         {
           "tag": "dh:column_number",
           "value": "69",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12395,11 +12395,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12407,6 +12402,11 @@
         {
           "tag": "dh:column_number",
           "value": "68",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12454,11 +12454,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12466,6 +12461,11 @@
         {
           "tag": "dh:column_number",
           "value": "71",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12518,11 +12518,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12530,6 +12525,11 @@
         {
           "tag": "dh:column_number",
           "value": "70",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12582,11 +12582,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12594,6 +12589,11 @@
         {
           "tag": "dh:column_number",
           "value": "72",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12641,11 +12641,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12653,6 +12648,11 @@
         {
           "tag": "dh:column_number",
           "value": "59",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12705,11 +12705,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "biogeochemistry",
           "@type": "Annotation"
@@ -12717,6 +12712,11 @@
         {
           "tag": "dh:column_number",
           "value": "58",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12769,11 +12769,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "dh:section_name",
-          "value": "MIxS (modified)",
-          "@type": "Annotation"
-        },
-        {
           "tag": "categorical_subsection",
           "value": "treatment",
           "@type": "Annotation"
@@ -12781,6 +12776,11 @@
         {
           "tag": "dh:column_number",
           "value": "18",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -14048,9 +14048,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-02-18T13:32:20",
+  "source_file_date": "2022-02-21T14:54:14",
   "source_file_size": 224360,
-  "generation_date": "2022-02-18T13:32:28",
+  "generation_date": "2022-02-21T14:54:21",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",
