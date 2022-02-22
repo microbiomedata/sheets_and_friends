@@ -1382,6 +1382,7 @@ const templateOptions = () =>  {
 $(document).ready(() => {
 
   setupTriggers();
+  setupMessageInterface();
 
   // Default template
   let template_label = 'Soil biosamples for NMDC, EMSL and JGI (metagenomics)';
@@ -1407,7 +1408,6 @@ $(document).ready(() => {
   // Here template not found in TEMPLATES, so it doesn't have a name
   $('#template_name_display').text(template_folder);
   setupTemplate (template_folder);
-  setupMessageInterface();
 });
 
 /**
