@@ -4072,7 +4072,7 @@ classes:
             value: Sample ID
           dh:column_number:
             tag: dh:column_number
-            value: '4'
+            value: '3'
         description: Select all the data types associated or available for this biosample
         title: Analysis/Data Type
         see_also:
@@ -4090,7 +4090,7 @@ classes:
             value: Sample ID
           dh:column_number:
             tag: dh:column_number
-            value: '5'
+            value: '4'
         description: A unique identifier to assign parent-child, subsample, or sibling
           samples. This is relevant when a sample or other material was used to generate
           the new sample.
@@ -4124,7 +4124,7 @@ classes:
         owner: biosample
         range: ecosystem_enum
         annotations:
-          dh:column_number: '1'
+          dh:column_number: '9'
           dh:section_name: Sample ID
         required: true
       ecosystem_category:
@@ -4144,7 +4144,7 @@ classes:
         owner: biosample
         range: ecosystem_category_enum
         annotations:
-          dh:column_number: '2'
+          dh:column_number: '10'
           dh:section_name: Sample ID
         required: true
       ecosystem_subtype:
@@ -4163,7 +4163,7 @@ classes:
         owner: biosample
         range: ecosystem_subtype_enum
         annotations:
-          dh:column_number: '4'
+          dh:column_number: '12'
           dh:section_name: Sample ID
         required: true
       ecosystem_type:
@@ -4185,7 +4185,7 @@ classes:
         owner: biosample
         range: ecosystem_type_enum
         annotations:
-          dh:column_number: '3'
+          dh:column_number: '11'
           dh:section_name: Sample ID
         required: true
       specific_ecosystem:
@@ -4203,7 +4203,7 @@ classes:
         owner: biosample
         range: specific_ecosystem_enum
         annotations:
-          dh:column_number: '5'
+          dh:column_number: '13'
           dh:section_name: Sample ID
         required: true
       agrochem_addition:
@@ -4753,7 +4753,7 @@ classes:
               subclasses of biome [ENVO:00000428]. Multiple terms can be separated
               by one or more pipes.
           categorical_subsection: sample identification
-          dh:column_number: '1'
+          dh:column_number: '6'
           dh:section_name: Sample ID
         description: "Report the major environmental system the sample or specimen\
           \ came from. The system(s) identified should have a coarse spatial grain,\
@@ -4783,7 +4783,7 @@ classes:
             value: Environmental entities having causal influences upon the entity
               at time of sampling.
           categorical_subsection: sample identification
-          dh:column_number: '2'
+          dh:column_number: '7'
           dh:section_name: Sample ID
         description: "Report the entity or entities which are in the sample or specimen\u2019\
           s local vicinity and which you believe have significant causal influences\
@@ -4816,7 +4816,7 @@ classes:
             value: The material displaced by the entity at time of sampling. Recommend
               subclasses of environmental material [ENVO:00010483].
           categorical_subsection: sample identification
-          dh:column_number: '3'
+          dh:column_number: '8'
           dh:section_name: Sample ID
         description: 'Report the environmental material(s) immediately surrounding
           the sample or specimen at the time of sampling. We recommend using subclasses

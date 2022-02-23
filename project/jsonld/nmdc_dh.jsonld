@@ -7525,7 +7525,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "4",
+          "value": "3",
           "@type": "Annotation"
         }
       ],
@@ -7567,7 +7567,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "5",
+          "value": "4",
           "@type": "Annotation"
         }
       ],
@@ -7604,7 +7604,7 @@
       "annotations": [
         {
           "tag": "dh:column_number",
-          "value": "1",
+          "value": "9",
           "@type": "Annotation"
         },
         {
@@ -7641,7 +7641,7 @@
       "annotations": [
         {
           "tag": "dh:column_number",
-          "value": "2",
+          "value": "10",
           "@type": "Annotation"
         },
         {
@@ -7678,7 +7678,7 @@
       "annotations": [
         {
           "tag": "dh:column_number",
-          "value": "4",
+          "value": "12",
           "@type": "Annotation"
         },
         {
@@ -7715,7 +7715,7 @@
       "annotations": [
         {
           "tag": "dh:column_number",
-          "value": "3",
+          "value": "11",
           "@type": "Annotation"
         },
         {
@@ -7752,7 +7752,7 @@
       "annotations": [
         {
           "tag": "dh:column_number",
-          "value": "5",
+          "value": "13",
           "@type": "Annotation"
         },
         {
@@ -8946,7 +8946,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "1",
+          "value": "6",
           "@type": "Annotation"
         },
         {
@@ -9001,7 +9001,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "2",
+          "value": "7",
           "@type": "Annotation"
         },
         {
@@ -9056,7 +9056,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "3",
+          "value": "8",
           "@type": "Annotation"
         },
         {
@@ -14053,9 +14053,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-02-23T16:36:55",
-  "source_file_size": 224402,
-  "generation_date": "2022-02-23T16:37:01",
+  "source_file_date": "2022-02-23T16:52:41",
+  "source_file_size": 224406,
+  "generation_date": "2022-02-23T16:52:47",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",

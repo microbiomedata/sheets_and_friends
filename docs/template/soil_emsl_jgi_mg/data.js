@@ -3,7 +3,78 @@ var DATA = [
     "fieldName": "Sample ID",
     "children": [
       {
-        "fieldName": "ecosystem",
+        "fieldName": "Globally Unique ID",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000026",
+        "datatype": "xs:unique",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "A globally unique identifier assigned to the biological sample.",
+        "guidance": "Identifiers must be prefixed. IGSNs (http://www.geosamples.org/getigsn) are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally unique but not FAIR. These IDs enable linking to derrived analytes and subsamples. | Pattern hint: {text}:{text}",
+        "examples": "IGSN:AU1243",
+        "pattern": "[^\\:\\n\\r]+\\:[^\\:\\n\\r]+",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "source_mat_id"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "sample name",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001107",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "A local identifier or name that for the material sample collected. Refers to the original material collected or to any derived sub-samples.",
+        "guidance": "It can have any format, but we suggest that you make it concise, unique and consistent within your lab, and as informative as possible. | Pattern hint: {text}",
+        "examples": "Rock core CB1178(5-6) from NSW",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_name"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "Analysis/Data Type",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "multiple",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Select all the data types associated or available for this biosample",
+        "guidance": "",
+        "examples": "metagenomics; metabolomics; proteomics",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "analysis_type"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "metabolomics": {},
+          "metagenomics": {},
+          "metaproteomics": {},
+          "metatranscriptomics": {},
+          "natural organic matter": {}
+        }
+      },
+      {
+        "fieldName": "environmental package",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "select",
@@ -12,18 +83,40 @@ var DATA = [
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
         "requirement": "required",
-        "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
-        "guidance": "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.",
-        "examples": "",
+        "description": "Select the MIxS enviromental package that best describes the environment from which your sample was collected.",
+        "guidance": "",
+        "examples": "soil",
         "exportField": {
           "soil_emsl_jgi_mg": [
             {
-              "field": "ecosystem"
+              "field": "env_package"
             }
           ]
         },
         "schema:ItemList": {
-          "Environmental": {}
+          "soil": {}
+        }
+      },
+      {
+        "fieldName": "sample linkage",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "A unique identifier to assign parent-child, subsample, or sibling samples. This is relevant when a sample or other material was used to generate the new sample.",
+        "guidance": "This field allows multiple entries separated by ; (Examples: Soil collected from the field will link with the soil used in an incubation. The soil a plant was grown in links to the plant sample. An original culture sample was transferred to a new vial and generated a new sample) | Pattern hint: {text}:{text}",
+        "examples": "IGSN:DSJ0284",
+        "pattern": "[^\\:\\n\\r]+\\:[^\\:\\n\\r]+",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "sample_link"
+            }
+          ]
         }
       },
       {
@@ -170,52 +263,6 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Globally Unique ID",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000026",
-        "datatype": "xs:unique",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "A globally unique identifier assigned to the biological sample.",
-        "guidance": "Identifiers must be prefixed. IGSNs (http://www.geosamples.org/getigsn) are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally unique but not FAIR. These IDs enable linking to derrived analytes and subsamples. | Pattern hint: {text}:{text}",
-        "examples": "IGSN:AU1243",
-        "pattern": "[^\\:\\n\\r]+\\:[^\\:\\n\\r]+",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "source_mat_id"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "ecosystem_category",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
-        "guidance": "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "ecosystem_category"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "Terrestrial": {}
-        }
-      },
-      {
         "fieldName": "local environmental context",
         "capitalize": "",
         "ontology_id": "MIXS:0000013",
@@ -347,51 +394,6 @@ var DATA = [
           "woodland clearing [ENVO:00000444]": {
             "ontology_id": "ENVO:00000444"
           }
-        }
-      },
-      {
-        "fieldName": "sample name",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001107",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "A local identifier or name that for the material sample collected. Refers to the original material collected or to any derived sub-samples.",
-        "guidance": "It can have any format, but we suggest that you make it concise, unique and consistent within your lab, and as informative as possible. | Pattern hint: {text}",
-        "examples": "Rock core CB1178(5-6) from NSW",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_name"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "ecosystem_type",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
-        "guidance": "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "ecosystem_type"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "Soil": {}
         }
       },
       {
@@ -673,7 +675,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "environmental package",
+        "fieldName": "ecosystem",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "select",
@@ -682,46 +684,66 @@ var DATA = [
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
         "requirement": "required",
-        "description": "Select the MIxS enviromental package that best describes the environment from which your sample was collected.",
-        "guidance": "",
-        "examples": "soil",
+        "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
+        "guidance": "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.",
+        "examples": "",
         "exportField": {
           "soil_emsl_jgi_mg": [
             {
-              "field": "env_package"
+              "field": "ecosystem"
             }
           ]
         },
         "schema:ItemList": {
-          "soil": {}
+          "Environmental": {}
         }
       },
       {
-        "fieldName": "Analysis/Data Type",
+        "fieldName": "ecosystem_category",
         "capitalize": "",
         "ontology_id": "",
-        "datatype": "multiple",
+        "datatype": "select",
         "source": "",
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
         "requirement": "required",
-        "description": "Select all the data types associated or available for this biosample",
-        "guidance": "",
-        "examples": "metagenomics; metabolomics; proteomics",
+        "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
+        "guidance": "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.",
+        "examples": "",
         "exportField": {
           "soil_emsl_jgi_mg": [
             {
-              "field": "analysis_type"
+              "field": "ecosystem_category"
             }
           ]
         },
         "schema:ItemList": {
-          "metabolomics": {},
-          "metagenomics": {},
-          "metaproteomics": {},
-          "metatranscriptomics": {},
-          "natural organic matter": {}
+          "Terrestrial": {}
+        }
+      },
+      {
+        "fieldName": "ecosystem_type",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
+        "guidance": "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "ecosystem_type"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "Soil": {}
         }
       },
       {
@@ -766,28 +788,6 @@ var DATA = [
           "Unclassified": {},
           "Watershed": {},
           "Wetlands": {}
-        }
-      },
-      {
-        "fieldName": "sample linkage",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "A unique identifier to assign parent-child, subsample, or sibling samples. This is relevant when a sample or other material was used to generate the new sample.",
-        "guidance": "This field allows multiple entries separated by ; (Examples: Soil collected from the field will link with the soil used in an incubation. The soil a plant was grown in links to the plant sample. An original culture sample was transferred to a new vial and generated a new sample) | Pattern hint: {text}:{text}",
-        "examples": "IGSN:DSJ0284",
-        "pattern": "[^\\:\\n\\r]+\\:[^\\:\\n\\r]+",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "sample_link"
-            }
-          ]
         }
       },
       {
