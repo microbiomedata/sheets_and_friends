@@ -24,7 +24,7 @@ message SoilEmslJgiMg
   dnaSampleName String = 10
   dnaConcentration String = 11
   dnaVolume String = 12
-  dnaAbsorb1 String = 13
+  optional dnaAbsorb1 String = 13
   optional dnaAbsorb2 String = 14
   dnaContainerID String = 15
   dnaContType DnaContTypeEnum = 16
@@ -157,7 +157,7 @@ message SoilEmslJgiMt
   rnaSampleName String = 4
   rnaConcentration String = 5
   rnaVolume String = 6
-  rnaAbsorb1 String = 7
+  optional rnaAbsorb1 String = 7
   optional rnaAbsorb2 String = 8
   rnaContainerID String = 9
   rnaContType RnaContTypeEnum = 10

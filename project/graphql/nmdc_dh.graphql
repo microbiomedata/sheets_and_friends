@@ -76,7 +76,7 @@ type SoilEmslJgiMg
     dnaSampleName: String!
     dnaConcentration: String!
     dnaVolume: String!
-    dnaAbsorb1: String!
+    dnaAbsorb1: String
     dnaAbsorb2: String
     dnaContainerID: String!
     dnaContType: DnaContTypeEnum!
@@ -210,7 +210,7 @@ type SoilEmslJgiMt
     rnaSampleName: String!
     rnaConcentration: String!
     rnaVolume: String!
-    rnaAbsorb1: String!
+    rnaAbsorb1: String
     rnaAbsorb2: String
     rnaContainerID: String!
     rnaContType: RnaContTypeEnum!

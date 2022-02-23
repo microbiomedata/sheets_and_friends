@@ -169,7 +169,7 @@ linkml:Nodeidentifier NONLITERAL
           <dna_sample_name> @linkml:String ;
           <dna_concentration> @linkml:String ;
           <dna_volume> @linkml:String ;
-          <dna_absorb1> @linkml:String ;
+          <dna_absorb1> @linkml:String ? ;
           <dna_absorb2> @linkml:String ? ;
           <dna_container_ID> @linkml:String ;
           <dna_cont_type> @<DnaContTypeEnum> ;
@@ -305,7 +305,7 @@ linkml:Nodeidentifier NONLITERAL
           <rna_sample_name> @linkml:String ;
           <rna_concentration> @linkml:String ;
           <rna_volume> @linkml:String ;
-          <rna_absorb1> @linkml:String ;
+          <rna_absorb1> @linkml:String ? ;
           <rna_absorb2> @linkml:String ? ;
           <rna_container_ID> @linkml:String ;
           <rna_cont_type> @<RnaContTypeEnum> ;

@@ -3,6 +3,173 @@ var DATA = [
     "fieldName": "Sample ID",
     "children": [
       {
+        "fieldName": "ecosystem",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
+        "guidance": "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "ecosystem"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "Environmental": {}
+        }
+      },
+      {
+        "fieldName": "broad-scale environmental context",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000012",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS",
+        "guidance": "Pattern hint: {termLabel} {[termID]}",
+        "examples": "oceanic epipelagic zone biome [ENVO:01000033] for annotating a water sample from the photic zone in middle of the Atlantic Ocean",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "env_broad_scale"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "alpine biome [ENVO:01001835]": {
+            "ontology_id": "ENVO:01001835"
+          },
+          "__alpine tundra biome [ENVO:01001505]": {
+            "ontology_id": "ENVO:01001505"
+          },
+          "anthropogenic terrestrial biome [ENVO:01000219]": {
+            "ontology_id": "ENVO:01000219"
+          },
+          "__rangeland biome [ENVO:01000247]": {
+            "ontology_id": "ENVO:01000247"
+          },
+          "__village biome [ENVO:01000246]": {
+            "ontology_id": "ENVO:01000246"
+          },
+          "arid biome [ENVO:01001838]": {
+            "ontology_id": "ENVO:01001838"
+          },
+          "mangrove biome [ENVO:01000181]": {
+            "ontology_id": "ENVO:01000181"
+          },
+          "montane biome [ENVO:01001836]": {
+            "ontology_id": "ENVO:01001836"
+          },
+          "__montane savanna biome [ENVO:01000223]": {
+            "ontology_id": "ENVO:01000223"
+          },
+          "__montane shrubland biome [ENVO:01000216]": {
+            "ontology_id": "ENVO:01000216"
+          },
+          "polar biome [ENVO:01000339]": {
+            "ontology_id": "ENVO:01000339"
+          },
+          "shrubland biome [ENVO:01000176]": {
+            "ontology_id": "ENVO:01000176"
+          },
+          "__subtropical shrubland biome [ENVO:01000213]": {
+            "ontology_id": "ENVO:01000213"
+          },
+          "____mediterranean shrubland biome [ENVO:01000217]": {
+            "ontology_id": "ENVO:01000217"
+          },
+          "__temperate shrubland biome [ENVO:01000215]": {
+            "ontology_id": "ENVO:01000215"
+          },
+          "__tropical shrubland biome [ENVO:01000214]": {
+            "ontology_id": "ENVO:01000214"
+          },
+          "subalpine biome [ENVO:01001837]": {
+            "ontology_id": "ENVO:01001837"
+          },
+          "subpolar biome [ENVO:01001834]": {
+            "ontology_id": "ENVO:01001834"
+          },
+          "subtropical biome [ENVO:01001832]": {
+            "ontology_id": "ENVO:01001832"
+          },
+          "__mediterranean biome [ENVO:01001833]": {
+            "ontology_id": "ENVO:01001833"
+          },
+          "____mediterranean savanna biome [ENVO:01000229]": {
+            "ontology_id": "ENVO:01000229"
+          },
+          "____mediterranean woodland biome [ENVO:01000208]": {
+            "ontology_id": "ENVO:01000208"
+          },
+          "__subtropical savanna biome [ENVO:01000187]": {
+            "ontology_id": "ENVO:01000187"
+          },
+          "__subtropical woodland biome [ENVO:01000222]": {
+            "ontology_id": "ENVO:01000222"
+          },
+          "temperate biome [ENVO:01001831]": {
+            "ontology_id": "ENVO:01001831"
+          },
+          "__temperate savanna biome [ENVO:01000189]": {
+            "ontology_id": "ENVO:01000189"
+          },
+          "__temperate woodland biome [ENVO:01000221]": {
+            "ontology_id": "ENVO:01000221"
+          },
+          "tropical biome [ENVO:01001830]": {
+            "ontology_id": "ENVO:01001830"
+          },
+          "__tropical savanna biome [ENVO:01000188]": {
+            "ontology_id": "ENVO:01000188"
+          },
+          "__tropical woodland biome [ENVO:01000220]": {
+            "ontology_id": "ENVO:01000220"
+          },
+          "tundra biome [ENVO:01000180]": {
+            "ontology_id": "ENVO:01000180"
+          },
+          "urban biome [ENVO:01000249]": {
+            "ontology_id": "ENVO:01000249"
+          },
+          "woodland biome [ENVO:01000175]": {
+            "ontology_id": "ENVO:01000175"
+          },
+          "__savanna biome [ENVO:01000178]": {
+            "ontology_id": "ENVO:01000178"
+          },
+          "____flooded savanna biome [ENVO:01000190]": {
+            "ontology_id": "ENVO:01000190"
+          },
+          "____montane savanna biome [ENVO:01000223]": {
+            "ontology_id": "ENVO:01000223"
+          },
+          "____subtropical savanna biome [ENVO:01000187]": {
+            "ontology_id": "ENVO:01000187"
+          },
+          "______mediterranean savanna biome [ENVO:01000229]": {
+            "ontology_id": "ENVO:01000229"
+          },
+          "____temperate savanna biome [ENVO:01000189]": {
+            "ontology_id": "ENVO:01000189"
+          },
+          "____tropical savanna biome [ENVO:01000188]": {
+            "ontology_id": "ENVO:01000188"
+          }
+        }
+      },
+      {
         "fieldName": "Globally Unique ID",
         "capitalize": "",
         "ontology_id": "MIXS:0000026",
@@ -25,6 +192,164 @@ var DATA = [
         }
       },
       {
+        "fieldName": "ecosystem_category",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
+        "guidance": "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "ecosystem_category"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "Terrestrial": {}
+        }
+      },
+      {
+        "fieldName": "local environmental context",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000013",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
+        "guidance": "Pattern hint: {termLabel} {[termID]}",
+        "examples": "litter layer [ENVO:01000338]; Annotating a pooled sample taken from various vegetation layers in a forest consider: canopy [ENVO:00000047]|herb and fern layer [ENVO:01000337]|litter layer [ENVO:01000338]|understory [01000335]|shrub layer [ENVO:01000336].",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "env_local_scale"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "active geological fault [ENVO:01000669]": {
+            "ontology_id": "ENVO:01000669"
+          },
+          "agricultural field [ENVO:00000114]": {
+            "ontology_id": "ENVO:00000114"
+          },
+          "beach [ENVO:00000091]": {
+            "ontology_id": "ENVO:00000091"
+          },
+          "cave [ENVO:00000067]": {
+            "ontology_id": "ENVO:00000067"
+          },
+          "channel [ENVO:03000117]": {
+            "ontology_id": "ENVO:03000117"
+          },
+          "__tunnel [ENVO:00000068]": {
+            "ontology_id": "ENVO:00000068"
+          },
+          "coast [ENVO:01000687]": {
+            "ontology_id": "ENVO:01000687"
+          },
+          "dry lake [ENVO:00000277]": {
+            "ontology_id": "ENVO:00000277"
+          },
+          "dry river [ENVO:01000995]": {
+            "ontology_id": "ENVO:01000995"
+          },
+          "garden [ENVO:00000011]": {
+            "ontology_id": "ENVO:00000011"
+          },
+          "hill [ENVO:00000083]": {
+            "ontology_id": "ENVO:00000083"
+          },
+          "__dune [ENVO:00000170]": {
+            "ontology_id": "ENVO:00000170"
+          },
+          "hummock [ENVO:00000516]": {
+            "ontology_id": "ENVO:00000516"
+          },
+          "impact crater [ENVO:01001071]": {
+            "ontology_id": "ENVO:01001071"
+          },
+          "isthmus [ENVO:00000174]": {
+            "ontology_id": "ENVO:00000174"
+          },
+          "karst [ENVO:00000175]": {
+            "ontology_id": "ENVO:00000175"
+          },
+          "lake shore [ENVO:00000382]": {
+            "ontology_id": "ENVO:00000382"
+          },
+          "lava field [ENVO:01000437]": {
+            "ontology_id": "ENVO:01000437"
+          },
+          "mesa [ENVO:00000179]": {
+            "ontology_id": "ENVO:00000179"
+          },
+          "mountain [ENVO:00000081]": {
+            "ontology_id": "ENVO:00000081"
+          },
+          "peninsula [ENVO:00000305]": {
+            "ontology_id": "ENVO:00000305"
+          },
+          "plain [ENVO:00000086]": {
+            "ontology_id": "ENVO:00000086"
+          },
+          "plateau [ENVO:00000182]": {
+            "ontology_id": "ENVO:00000182"
+          },
+          "ridge [ENVO:00000283]": {
+            "ontology_id": "ENVO:00000283"
+          },
+          "slope [ENVO:00002000]": {
+            "ontology_id": "ENVO:00002000"
+          },
+          "__cliff [ENVO:00000087]": {
+            "ontology_id": "ENVO:00000087"
+          },
+          "__hillside [ENVO:01000333]": {
+            "ontology_id": "ENVO:01000333"
+          },
+          "snow field [ENVO:00000146]": {
+            "ontology_id": "ENVO:00000146"
+          },
+          "tombolo [ENVO:00000420]": {
+            "ontology_id": "ENVO:00000420"
+          },
+          "tuff cone [ENVO:01000664]": {
+            "ontology_id": "ENVO:01000664"
+          },
+          "valley [ENVO:00000100]": {
+            "ontology_id": "ENVO:00000100"
+          },
+          "__canyon [ENVO:00000169]": {
+            "ontology_id": "ENVO:00000169"
+          },
+          "__dry valley [ENVO:00000128]": {
+            "ontology_id": "ENVO:00000128"
+          },
+          "__glacial valley [ENVO:00000248]": {
+            "ontology_id": "ENVO:00000248"
+          },
+          "vein [ENVO:01000670]": {
+            "ontology_id": "ENVO:01000670"
+          },
+          "volcano [ENVO:00000247]": {
+            "ontology_id": "ENVO:00000247"
+          },
+          "woodland clearing [ENVO:00000444]": {
+            "ontology_id": "ENVO:00000444"
+          }
+        }
+      },
+      {
         "fieldName": "sample name",
         "capitalize": "",
         "ontology_id": "MIXS:0001107",
@@ -43,6 +368,308 @@ var DATA = [
               "field": "samp_name"
             }
           ]
+        }
+      },
+      {
+        "fieldName": "ecosystem_type",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
+        "guidance": "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.",
+        "examples": "",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "ecosystem_type"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "Soil": {}
+        }
+      },
+      {
+        "fieldName": "environmental medium",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000014",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
+        "guidance": "Pattern hint: {termLabel} {[termID]}",
+        "examples": "soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "env_medium"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "agricultural soil [ENVO:00002259]": {
+            "ontology_id": "ENVO:00002259"
+          },
+          "__bluegrass field soil [ENVO:00005789]": {
+            "ontology_id": "ENVO:00005789"
+          },
+          "__paddy field soil [ENVO:00005740]": {
+            "ontology_id": "ENVO:00005740"
+          },
+          "____peaty paddy field soil [ENVO:00005776]": {
+            "ontology_id": "ENVO:00005776"
+          },
+          "__rubber plantation soil [ENVO:00005788]": {
+            "ontology_id": "ENVO:00005788"
+          },
+          "albeluvisol [ENVO:00002233]": {
+            "ontology_id": "ENVO:00002233"
+          },
+          "alisol [ENVO:00002231]": {
+            "ontology_id": "ENVO:00002231"
+          },
+          "alluvial soil [ENVO:00002871]": {
+            "ontology_id": "ENVO:00002871"
+          },
+          "__alluvial swamp soil [ENVO:00005758]": {
+            "ontology_id": "ENVO:00005758"
+          },
+          "alpine soil [ENVO:00005741]": {
+            "ontology_id": "ENVO:00005741"
+          },
+          "andosol [ENVO:00002232]": {
+            "ontology_id": "ENVO:00002232"
+          },
+          "__volcanic soil [ENVO:01001841]": {
+            "ontology_id": "ENVO:01001841"
+          },
+          "anthrosol [ENVO:00002230]": {
+            "ontology_id": "ENVO:00002230"
+          },
+          "arenosol [ENVO:00002229]": {
+            "ontology_id": "ENVO:00002229"
+          },
+          "bare soil [ENVO:01001616]": {
+            "ontology_id": "ENVO:01001616"
+          },
+          "burned soil [ENVO:00005760]": {
+            "ontology_id": "ENVO:00005760"
+          },
+          "calcisol [ENVO:00002239]": {
+            "ontology_id": "ENVO:00002239"
+          },
+          "cambisol [ENVO:00002235]": {
+            "ontology_id": "ENVO:00002235"
+          },
+          "carbon nanotube enriched soil [ENVO:01000427]": {
+            "ontology_id": "ENVO:01000427"
+          },
+          "chernozem [ENVO:00002237]": {
+            "ontology_id": "ENVO:00002237"
+          },
+          "compost soil [ENVO:00005747]": {
+            "ontology_id": "ENVO:00005747"
+          },
+          "__frozen compost soil [ENVO:00005765]": {
+            "ontology_id": "ENVO:00005765"
+          },
+          "contaminated soil [ENVO:00002116]": {
+            "ontology_id": "ENVO:00002116"
+          },
+          "__xylene contaminated soil [ENVO:00002146]": {
+            "ontology_id": "ENVO:00002146"
+          },
+          "dune soil [ENVO:00002260]": {
+            "ontology_id": "ENVO:00002260"
+          },
+          "durisol [ENVO:00002238]": {
+            "ontology_id": "ENVO:00002238"
+          },
+          "ferralsol [ENVO:00002246]": {
+            "ontology_id": "ENVO:00002246"
+          },
+          "fluvisol [ENVO:00002273]": {
+            "ontology_id": "ENVO:00002273"
+          },
+          "forest soil [ENVO:00002261]": {
+            "ontology_id": "ENVO:00002261"
+          },
+          "__beech forest soil [ENVO:00005770]": {
+            "ontology_id": "ENVO:00005770"
+          },
+          "__eucalyptus forest soil [ENVO:00005787]": {
+            "ontology_id": "ENVO:00005787"
+          },
+          "__mountain forest soil [ENVO:00005769]": {
+            "ontology_id": "ENVO:00005769"
+          },
+          "frost-susceptible soil [ENVO:01001638]": {
+            "ontology_id": "ENVO:01001638"
+          },
+          "frozen soil [ENVO:01001526]": {
+            "ontology_id": "ENVO:01001526"
+          },
+          "__cryosol [ENVO:00002236]": {
+            "ontology_id": "ENVO:00002236"
+          },
+          "__friable-frozen soil [ENVO:01001528]": {
+            "ontology_id": "ENVO:01001528"
+          },
+          "__plastic-frozen soil [ENVO:01001527]": {
+            "ontology_id": "ENVO:01001527"
+          },
+          "gleysol [ENVO:00002244]": {
+            "ontology_id": "ENVO:00002244"
+          },
+          "grassland soil [ENVO:00005750]": {
+            "ontology_id": "ENVO:00005750"
+          },
+          "__savanna soil [ENVO:00005746]": {
+            "ontology_id": "ENVO:00005746"
+          },
+          "__steppe soil [ENVO:00005777]": {
+            "ontology_id": "ENVO:00005777"
+          },
+          "greenhouse soil [ENVO:00005780]": {
+            "ontology_id": "ENVO:00005780"
+          },
+          "gypsisol [ENVO:00002245]": {
+            "ontology_id": "ENVO:00002245"
+          },
+          "histosol [ENVO:00002243]": {
+            "ontology_id": "ENVO:00002243"
+          },
+          "humus-rich acidic ash soil [ENVO:00005763]": {
+            "ontology_id": "ENVO:00005763"
+          },
+          "jungle soil [ENVO:00005751]": {
+            "ontology_id": "ENVO:00005751"
+          },
+          "kastanozem [ENVO:00002240]": {
+            "ontology_id": "ENVO:00002240"
+          },
+          "leptosol [ENVO:00002241]": {
+            "ontology_id": "ENVO:00002241"
+          },
+          "limed soil [ENVO:00005766]": {
+            "ontology_id": "ENVO:00005766"
+          },
+          "lixisol [ENVO:00002242]": {
+            "ontology_id": "ENVO:00002242"
+          },
+          "loam [ENVO:00002258]": {
+            "ontology_id": "ENVO:00002258"
+          },
+          "luvisol [ENVO:00002248]": {
+            "ontology_id": "ENVO:00002248"
+          },
+          "manured soil [ENVO:00005767]": {
+            "ontology_id": "ENVO:00005767"
+          },
+          "meadow soil [ENVO:00005761]": {
+            "ontology_id": "ENVO:00005761"
+          },
+          "muddy soil [ENVO:00005771]": {
+            "ontology_id": "ENVO:00005771"
+          },
+          "nitisol [ENVO:00002247]": {
+            "ontology_id": "ENVO:00002247"
+          },
+          "orchard soil [ENVO:00005772]": {
+            "ontology_id": "ENVO:00005772"
+          },
+          "ornithogenic soil [ENVO:00005782]": {
+            "ontology_id": "ENVO:00005782"
+          },
+          "pantothenate enriched soil [ENVO:00003088]": {
+            "ontology_id": "ENVO:00003088"
+          },
+          "pasture soil [ENVO:00005773]": {
+            "ontology_id": "ENVO:00005773"
+          },
+          "peat soil [ENVO:00005774]": {
+            "ontology_id": "ENVO:00005774"
+          },
+          "phaeozem [ENVO:00002249]": {
+            "ontology_id": "ENVO:00002249"
+          },
+          "planosol [ENVO:00002251]": {
+            "ontology_id": "ENVO:00002251"
+          },
+          "plinthosol [ENVO:00002250]": {
+            "ontology_id": "ENVO:00002250"
+          },
+          "podzol [ENVO:00002257]": {
+            "ontology_id": "ENVO:00002257"
+          },
+          "poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]": {
+            "ontology_id": "ENVO:00003093"
+          },
+          "pond soil [ENVO:00005764]": {
+            "ontology_id": "ENVO:00005764"
+          },
+          "quinate enriched soil [ENVO:00003095]": {
+            "ontology_id": "ENVO:00003095"
+          },
+          "regosol [ENVO:00002256]": {
+            "ontology_id": "ENVO:00002256"
+          },
+          "sarcosine enriched soil [ENVO:00003083]": {
+            "ontology_id": "ENVO:00003083"
+          },
+          "skatole enriched soil [ENVO:00003085]": {
+            "ontology_id": "ENVO:00003085"
+          },
+          "solonchak [ENVO:00002252]": {
+            "ontology_id": "ENVO:00002252"
+          },
+          "solonetz [ENVO:00002255]": {
+            "ontology_id": "ENVO:00002255"
+          },
+          "stagnosol [ENVO:00002274]": {
+            "ontology_id": "ENVO:00002274"
+          },
+          "surface soil [ENVO:02000059]": {
+            "ontology_id": "ENVO:02000059"
+          },
+          "technosol [ENVO:00002275]": {
+            "ontology_id": "ENVO:00002275"
+          },
+          "threonine enriched soil [ENVO:00003091]": {
+            "ontology_id": "ENVO:00003091"
+          },
+          "trimethylamine enriched soil [ENVO:00003084]": {
+            "ontology_id": "ENVO:00003084"
+          },
+          "tropical soil [ENVO:00005778]": {
+            "ontology_id": "ENVO:00005778"
+          },
+          "ultisol [ENVO:01001397]": {
+            "ontology_id": "ENVO:01001397"
+          },
+          "__acrisol [ENVO:00002234]": {
+            "ontology_id": "ENVO:00002234"
+          },
+          "umbrisol [ENVO:00002253]": {
+            "ontology_id": "ENVO:00002253"
+          },
+          "upland soil [ENVO:00005786]": {
+            "ontology_id": "ENVO:00005786"
+          },
+          "urea enriched soil [ENVO:00005753]": {
+            "ontology_id": "ENVO:00005753"
+          },
+          "vertisol [ENVO:00002254]": {
+            "ontology_id": "ENVO:00002254"
+          }
         }
       },
       {
@@ -98,105 +725,6 @@ var DATA = [
         }
       },
       {
-        "fieldName": "sample linkage",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "A unique identifier to assign parent-child, subsample, or sibling samples. This is relevant when a sample or other material was used to generate the new sample.",
-        "guidance": "This field allows multiple entries separated by ; (Examples: Soil collected from the field will link with the soil used in an incubation. The soil a plant was grown in links to the plant sample. An original culture sample was transferred to a new vial and generated a new sample) | Pattern hint: {text}:{text}",
-        "examples": "IGSN:DSJ0284",
-        "pattern": "[^\\:\\n\\r]+\\:[^\\:\\n\\r]+",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "sample_link"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "fieldName": "GOLD ecosystem path",
-    "children": [
-      {
-        "fieldName": "ecosystem",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
-        "guidance": "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "ecosystem"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "Environmental": {}
-        }
-      },
-      {
-        "fieldName": "ecosystem_category",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
-        "guidance": "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "ecosystem_category"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "Terrestrial": {}
-        }
-      },
-      {
-        "fieldName": "ecosystem_type",
-        "capitalize": "",
-        "ontology_id": "",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
-        "guidance": "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.",
-        "examples": "",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "ecosystem_type"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "Soil": {}
-        }
-      },
-      {
         "fieldName": "ecosystem_subtype",
         "capitalize": "",
         "ontology_id": "",
@@ -238,6 +766,28 @@ var DATA = [
           "Unclassified": {},
           "Watershed": {},
           "Wetlands": {}
+        }
+      },
+      {
+        "fieldName": "sample linkage",
+        "capitalize": "",
+        "ontology_id": "",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "A unique identifier to assign parent-child, subsample, or sibling samples. This is relevant when a sample or other material was used to generate the new sample.",
+        "guidance": "This field allows multiple entries separated by ; (Examples: Soil collected from the field will link with the soil used in an incubation. The soil a plant was grown in links to the plant sample. An original culture sample was transferred to a new vial and generated a new sample) | Pattern hint: {text}:{text}",
+        "examples": "IGSN:DSJ0284",
+        "pattern": "[^\\:\\n\\r]+\\:[^\\:\\n\\r]+",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "sample_link"
+            }
+          ]
         }
       },
       {
@@ -563,7 +1113,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "required",
+        "requirement": "recommended",
         "description": "260/280 measurement of DNA sample purity",
         "guidance": "Recommended value is between 1 and 3. | Pattern hint: {float}",
         "examples": "2.02",
@@ -2166,149 +2716,6 @@ var DATA = [
     "fieldName": "MIxS (modified)",
     "children": [
       {
-        "fieldName": "broad-scale environmental context",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000012",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO\u2019s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS",
-        "guidance": "Pattern hint: {termLabel} {[termID]}",
-        "examples": "oceanic epipelagic zone biome [ENVO:01000033] for annotating a water sample from the photic zone in middle of the Atlantic Ocean",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "env_broad_scale"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "alpine biome [ENVO:01001835]": {
-            "ontology_id": "ENVO:01001835"
-          },
-          "__alpine tundra biome [ENVO:01001505]": {
-            "ontology_id": "ENVO:01001505"
-          },
-          "anthropogenic terrestrial biome [ENVO:01000219]": {
-            "ontology_id": "ENVO:01000219"
-          },
-          "__rangeland biome [ENVO:01000247]": {
-            "ontology_id": "ENVO:01000247"
-          },
-          "__village biome [ENVO:01000246]": {
-            "ontology_id": "ENVO:01000246"
-          },
-          "arid biome [ENVO:01001838]": {
-            "ontology_id": "ENVO:01001838"
-          },
-          "mangrove biome [ENVO:01000181]": {
-            "ontology_id": "ENVO:01000181"
-          },
-          "montane biome [ENVO:01001836]": {
-            "ontology_id": "ENVO:01001836"
-          },
-          "__montane savanna biome [ENVO:01000223]": {
-            "ontology_id": "ENVO:01000223"
-          },
-          "__montane shrubland biome [ENVO:01000216]": {
-            "ontology_id": "ENVO:01000216"
-          },
-          "polar biome [ENVO:01000339]": {
-            "ontology_id": "ENVO:01000339"
-          },
-          "shrubland biome [ENVO:01000176]": {
-            "ontology_id": "ENVO:01000176"
-          },
-          "__subtropical shrubland biome [ENVO:01000213]": {
-            "ontology_id": "ENVO:01000213"
-          },
-          "____mediterranean shrubland biome [ENVO:01000217]": {
-            "ontology_id": "ENVO:01000217"
-          },
-          "__temperate shrubland biome [ENVO:01000215]": {
-            "ontology_id": "ENVO:01000215"
-          },
-          "__tropical shrubland biome [ENVO:01000214]": {
-            "ontology_id": "ENVO:01000214"
-          },
-          "subalpine biome [ENVO:01001837]": {
-            "ontology_id": "ENVO:01001837"
-          },
-          "subpolar biome [ENVO:01001834]": {
-            "ontology_id": "ENVO:01001834"
-          },
-          "subtropical biome [ENVO:01001832]": {
-            "ontology_id": "ENVO:01001832"
-          },
-          "__mediterranean biome [ENVO:01001833]": {
-            "ontology_id": "ENVO:01001833"
-          },
-          "____mediterranean savanna biome [ENVO:01000229]": {
-            "ontology_id": "ENVO:01000229"
-          },
-          "____mediterranean woodland biome [ENVO:01000208]": {
-            "ontology_id": "ENVO:01000208"
-          },
-          "__subtropical savanna biome [ENVO:01000187]": {
-            "ontology_id": "ENVO:01000187"
-          },
-          "__subtropical woodland biome [ENVO:01000222]": {
-            "ontology_id": "ENVO:01000222"
-          },
-          "temperate biome [ENVO:01001831]": {
-            "ontology_id": "ENVO:01001831"
-          },
-          "__temperate savanna biome [ENVO:01000189]": {
-            "ontology_id": "ENVO:01000189"
-          },
-          "__temperate woodland biome [ENVO:01000221]": {
-            "ontology_id": "ENVO:01000221"
-          },
-          "tropical biome [ENVO:01001830]": {
-            "ontology_id": "ENVO:01001830"
-          },
-          "__tropical savanna biome [ENVO:01000188]": {
-            "ontology_id": "ENVO:01000188"
-          },
-          "__tropical woodland biome [ENVO:01000220]": {
-            "ontology_id": "ENVO:01000220"
-          },
-          "tundra biome [ENVO:01000180]": {
-            "ontology_id": "ENVO:01000180"
-          },
-          "urban biome [ENVO:01000249]": {
-            "ontology_id": "ENVO:01000249"
-          },
-          "woodland biome [ENVO:01000175]": {
-            "ontology_id": "ENVO:01000175"
-          },
-          "__savanna biome [ENVO:01000178]": {
-            "ontology_id": "ENVO:01000178"
-          },
-          "____flooded savanna biome [ENVO:01000190]": {
-            "ontology_id": "ENVO:01000190"
-          },
-          "____montane savanna biome [ENVO:01000223]": {
-            "ontology_id": "ENVO:01000223"
-          },
-          "____subtropical savanna biome [ENVO:01000187]": {
-            "ontology_id": "ENVO:01000187"
-          },
-          "______mediterranean savanna biome [ENVO:01000229]": {
-            "ontology_id": "ENVO:01000229"
-          },
-          "____temperate savanna biome [ENVO:01000189]": {
-            "ontology_id": "ENVO:01000189"
-          },
-          "____tropical savanna biome [ENVO:01000188]": {
-            "ontology_id": "ENVO:01000188"
-          }
-        }
-      },
-      {
         "fieldName": "growth facility",
         "capitalize": "",
         "ontology_id": "MIXS:0001043",
@@ -2338,140 +2745,6 @@ var DATA = [
           "lab_incubation": {},
           "open_top_chamber": {},
           "other": {}
-        }
-      },
-      {
-        "fieldName": "local environmental context",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000013",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Report the entity or entities which are in the sample or specimen\u2019s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.",
-        "guidance": "Pattern hint: {termLabel} {[termID]}",
-        "examples": "litter layer [ENVO:01000338]; Annotating a pooled sample taken from various vegetation layers in a forest consider: canopy [ENVO:00000047]|herb and fern layer [ENVO:01000337]|litter layer [ENVO:01000338]|understory [01000335]|shrub layer [ENVO:01000336].",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "env_local_scale"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "active geological fault [ENVO:01000669]": {
-            "ontology_id": "ENVO:01000669"
-          },
-          "agricultural field [ENVO:00000114]": {
-            "ontology_id": "ENVO:00000114"
-          },
-          "beach [ENVO:00000091]": {
-            "ontology_id": "ENVO:00000091"
-          },
-          "cave [ENVO:00000067]": {
-            "ontology_id": "ENVO:00000067"
-          },
-          "channel [ENVO:03000117]": {
-            "ontology_id": "ENVO:03000117"
-          },
-          "__tunnel [ENVO:00000068]": {
-            "ontology_id": "ENVO:00000068"
-          },
-          "coast [ENVO:01000687]": {
-            "ontology_id": "ENVO:01000687"
-          },
-          "dry lake [ENVO:00000277]": {
-            "ontology_id": "ENVO:00000277"
-          },
-          "dry river [ENVO:01000995]": {
-            "ontology_id": "ENVO:01000995"
-          },
-          "garden [ENVO:00000011]": {
-            "ontology_id": "ENVO:00000011"
-          },
-          "hill [ENVO:00000083]": {
-            "ontology_id": "ENVO:00000083"
-          },
-          "__dune [ENVO:00000170]": {
-            "ontology_id": "ENVO:00000170"
-          },
-          "hummock [ENVO:00000516]": {
-            "ontology_id": "ENVO:00000516"
-          },
-          "impact crater [ENVO:01001071]": {
-            "ontology_id": "ENVO:01001071"
-          },
-          "isthmus [ENVO:00000174]": {
-            "ontology_id": "ENVO:00000174"
-          },
-          "karst [ENVO:00000175]": {
-            "ontology_id": "ENVO:00000175"
-          },
-          "lake shore [ENVO:00000382]": {
-            "ontology_id": "ENVO:00000382"
-          },
-          "lava field [ENVO:01000437]": {
-            "ontology_id": "ENVO:01000437"
-          },
-          "mesa [ENVO:00000179]": {
-            "ontology_id": "ENVO:00000179"
-          },
-          "mountain [ENVO:00000081]": {
-            "ontology_id": "ENVO:00000081"
-          },
-          "peninsula [ENVO:00000305]": {
-            "ontology_id": "ENVO:00000305"
-          },
-          "plain [ENVO:00000086]": {
-            "ontology_id": "ENVO:00000086"
-          },
-          "plateau [ENVO:00000182]": {
-            "ontology_id": "ENVO:00000182"
-          },
-          "ridge [ENVO:00000283]": {
-            "ontology_id": "ENVO:00000283"
-          },
-          "slope [ENVO:00002000]": {
-            "ontology_id": "ENVO:00002000"
-          },
-          "__cliff [ENVO:00000087]": {
-            "ontology_id": "ENVO:00000087"
-          },
-          "__hillside [ENVO:01000333]": {
-            "ontology_id": "ENVO:01000333"
-          },
-          "snow field [ENVO:00000146]": {
-            "ontology_id": "ENVO:00000146"
-          },
-          "tombolo [ENVO:00000420]": {
-            "ontology_id": "ENVO:00000420"
-          },
-          "tuff cone [ENVO:01000664]": {
-            "ontology_id": "ENVO:01000664"
-          },
-          "valley [ENVO:00000100]": {
-            "ontology_id": "ENVO:00000100"
-          },
-          "__canyon [ENVO:00000169]": {
-            "ontology_id": "ENVO:00000169"
-          },
-          "__dry valley [ENVO:00000128]": {
-            "ontology_id": "ENVO:00000128"
-          },
-          "__glacial valley [ENVO:00000248]": {
-            "ontology_id": "ENVO:00000248"
-          },
-          "vein [ENVO:01000670]": {
-            "ontology_id": "ENVO:01000670"
-          },
-          "volcano [ENVO:00000247]": {
-            "ontology_id": "ENVO:00000247"
-          },
-          "woodland clearing [ENVO:00000444]": {
-            "ontology_id": "ENVO:00000444"
-          }
         }
       },
       {
@@ -2521,284 +2794,6 @@ var DATA = [
               "field": "collection_date"
             }
           ]
-        }
-      },
-      {
-        "fieldName": "environmental medium",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000014",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).",
-        "guidance": "Pattern hint: {termLabel} {[termID]}",
-        "examples": "soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "env_medium"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "agricultural soil [ENVO:00002259]": {
-            "ontology_id": "ENVO:00002259"
-          },
-          "__bluegrass field soil [ENVO:00005789]": {
-            "ontology_id": "ENVO:00005789"
-          },
-          "__paddy field soil [ENVO:00005740]": {
-            "ontology_id": "ENVO:00005740"
-          },
-          "____peaty paddy field soil [ENVO:00005776]": {
-            "ontology_id": "ENVO:00005776"
-          },
-          "__rubber plantation soil [ENVO:00005788]": {
-            "ontology_id": "ENVO:00005788"
-          },
-          "albeluvisol [ENVO:00002233]": {
-            "ontology_id": "ENVO:00002233"
-          },
-          "alisol [ENVO:00002231]": {
-            "ontology_id": "ENVO:00002231"
-          },
-          "alluvial soil [ENVO:00002871]": {
-            "ontology_id": "ENVO:00002871"
-          },
-          "__alluvial swamp soil [ENVO:00005758]": {
-            "ontology_id": "ENVO:00005758"
-          },
-          "alpine soil [ENVO:00005741]": {
-            "ontology_id": "ENVO:00005741"
-          },
-          "andosol [ENVO:00002232]": {
-            "ontology_id": "ENVO:00002232"
-          },
-          "__volcanic soil [ENVO:01001841]": {
-            "ontology_id": "ENVO:01001841"
-          },
-          "anthrosol [ENVO:00002230]": {
-            "ontology_id": "ENVO:00002230"
-          },
-          "arenosol [ENVO:00002229]": {
-            "ontology_id": "ENVO:00002229"
-          },
-          "bare soil [ENVO:01001616]": {
-            "ontology_id": "ENVO:01001616"
-          },
-          "burned soil [ENVO:00005760]": {
-            "ontology_id": "ENVO:00005760"
-          },
-          "calcisol [ENVO:00002239]": {
-            "ontology_id": "ENVO:00002239"
-          },
-          "cambisol [ENVO:00002235]": {
-            "ontology_id": "ENVO:00002235"
-          },
-          "carbon nanotube enriched soil [ENVO:01000427]": {
-            "ontology_id": "ENVO:01000427"
-          },
-          "chernozem [ENVO:00002237]": {
-            "ontology_id": "ENVO:00002237"
-          },
-          "compost soil [ENVO:00005747]": {
-            "ontology_id": "ENVO:00005747"
-          },
-          "__frozen compost soil [ENVO:00005765]": {
-            "ontology_id": "ENVO:00005765"
-          },
-          "contaminated soil [ENVO:00002116]": {
-            "ontology_id": "ENVO:00002116"
-          },
-          "__xylene contaminated soil [ENVO:00002146]": {
-            "ontology_id": "ENVO:00002146"
-          },
-          "dune soil [ENVO:00002260]": {
-            "ontology_id": "ENVO:00002260"
-          },
-          "durisol [ENVO:00002238]": {
-            "ontology_id": "ENVO:00002238"
-          },
-          "ferralsol [ENVO:00002246]": {
-            "ontology_id": "ENVO:00002246"
-          },
-          "fluvisol [ENVO:00002273]": {
-            "ontology_id": "ENVO:00002273"
-          },
-          "forest soil [ENVO:00002261]": {
-            "ontology_id": "ENVO:00002261"
-          },
-          "__beech forest soil [ENVO:00005770]": {
-            "ontology_id": "ENVO:00005770"
-          },
-          "__eucalyptus forest soil [ENVO:00005787]": {
-            "ontology_id": "ENVO:00005787"
-          },
-          "__mountain forest soil [ENVO:00005769]": {
-            "ontology_id": "ENVO:00005769"
-          },
-          "frost-susceptible soil [ENVO:01001638]": {
-            "ontology_id": "ENVO:01001638"
-          },
-          "frozen soil [ENVO:01001526]": {
-            "ontology_id": "ENVO:01001526"
-          },
-          "__cryosol [ENVO:00002236]": {
-            "ontology_id": "ENVO:00002236"
-          },
-          "__friable-frozen soil [ENVO:01001528]": {
-            "ontology_id": "ENVO:01001528"
-          },
-          "__plastic-frozen soil [ENVO:01001527]": {
-            "ontology_id": "ENVO:01001527"
-          },
-          "gleysol [ENVO:00002244]": {
-            "ontology_id": "ENVO:00002244"
-          },
-          "grassland soil [ENVO:00005750]": {
-            "ontology_id": "ENVO:00005750"
-          },
-          "__savanna soil [ENVO:00005746]": {
-            "ontology_id": "ENVO:00005746"
-          },
-          "__steppe soil [ENVO:00005777]": {
-            "ontology_id": "ENVO:00005777"
-          },
-          "greenhouse soil [ENVO:00005780]": {
-            "ontology_id": "ENVO:00005780"
-          },
-          "gypsisol [ENVO:00002245]": {
-            "ontology_id": "ENVO:00002245"
-          },
-          "histosol [ENVO:00002243]": {
-            "ontology_id": "ENVO:00002243"
-          },
-          "humus-rich acidic ash soil [ENVO:00005763]": {
-            "ontology_id": "ENVO:00005763"
-          },
-          "jungle soil [ENVO:00005751]": {
-            "ontology_id": "ENVO:00005751"
-          },
-          "kastanozem [ENVO:00002240]": {
-            "ontology_id": "ENVO:00002240"
-          },
-          "leptosol [ENVO:00002241]": {
-            "ontology_id": "ENVO:00002241"
-          },
-          "limed soil [ENVO:00005766]": {
-            "ontology_id": "ENVO:00005766"
-          },
-          "lixisol [ENVO:00002242]": {
-            "ontology_id": "ENVO:00002242"
-          },
-          "loam [ENVO:00002258]": {
-            "ontology_id": "ENVO:00002258"
-          },
-          "luvisol [ENVO:00002248]": {
-            "ontology_id": "ENVO:00002248"
-          },
-          "manured soil [ENVO:00005767]": {
-            "ontology_id": "ENVO:00005767"
-          },
-          "meadow soil [ENVO:00005761]": {
-            "ontology_id": "ENVO:00005761"
-          },
-          "muddy soil [ENVO:00005771]": {
-            "ontology_id": "ENVO:00005771"
-          },
-          "nitisol [ENVO:00002247]": {
-            "ontology_id": "ENVO:00002247"
-          },
-          "orchard soil [ENVO:00005772]": {
-            "ontology_id": "ENVO:00005772"
-          },
-          "ornithogenic soil [ENVO:00005782]": {
-            "ontology_id": "ENVO:00005782"
-          },
-          "pantothenate enriched soil [ENVO:00003088]": {
-            "ontology_id": "ENVO:00003088"
-          },
-          "pasture soil [ENVO:00005773]": {
-            "ontology_id": "ENVO:00005773"
-          },
-          "peat soil [ENVO:00005774]": {
-            "ontology_id": "ENVO:00005774"
-          },
-          "phaeozem [ENVO:00002249]": {
-            "ontology_id": "ENVO:00002249"
-          },
-          "planosol [ENVO:00002251]": {
-            "ontology_id": "ENVO:00002251"
-          },
-          "plinthosol [ENVO:00002250]": {
-            "ontology_id": "ENVO:00002250"
-          },
-          "podzol [ENVO:00002257]": {
-            "ontology_id": "ENVO:00002257"
-          },
-          "poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]": {
-            "ontology_id": "ENVO:00003093"
-          },
-          "pond soil [ENVO:00005764]": {
-            "ontology_id": "ENVO:00005764"
-          },
-          "quinate enriched soil [ENVO:00003095]": {
-            "ontology_id": "ENVO:00003095"
-          },
-          "regosol [ENVO:00002256]": {
-            "ontology_id": "ENVO:00002256"
-          },
-          "sarcosine enriched soil [ENVO:00003083]": {
-            "ontology_id": "ENVO:00003083"
-          },
-          "skatole enriched soil [ENVO:00003085]": {
-            "ontology_id": "ENVO:00003085"
-          },
-          "solonchak [ENVO:00002252]": {
-            "ontology_id": "ENVO:00002252"
-          },
-          "solonetz [ENVO:00002255]": {
-            "ontology_id": "ENVO:00002255"
-          },
-          "stagnosol [ENVO:00002274]": {
-            "ontology_id": "ENVO:00002274"
-          },
-          "surface soil [ENVO:02000059]": {
-            "ontology_id": "ENVO:02000059"
-          },
-          "technosol [ENVO:00002275]": {
-            "ontology_id": "ENVO:00002275"
-          },
-          "threonine enriched soil [ENVO:00003091]": {
-            "ontology_id": "ENVO:00003091"
-          },
-          "trimethylamine enriched soil [ENVO:00003084]": {
-            "ontology_id": "ENVO:00003084"
-          },
-          "tropical soil [ENVO:00005778]": {
-            "ontology_id": "ENVO:00005778"
-          },
-          "ultisol [ENVO:01001397]": {
-            "ontology_id": "ENVO:01001397"
-          },
-          "__acrisol [ENVO:00002234]": {
-            "ontology_id": "ENVO:00002234"
-          },
-          "umbrisol [ENVO:00002253]": {
-            "ontology_id": "ENVO:00002253"
-          },
-          "upland soil [ENVO:00005786]": {
-            "ontology_id": "ENVO:00005786"
-          },
-          "urea enriched soil [ENVO:00005753]": {
-            "ontology_id": "ENVO:00005753"
-          },
-          "vertisol [ENVO:00002254]": {
-            "ontology_id": "ENVO:00002254"
-          }
         }
       },
       {
@@ -2933,27 +2928,6 @@ var DATA = [
         }
       },
       {
-        "fieldName": "sample material processing",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000016",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
-        "guidance": "Pattern hint: {text}",
-        "examples": "filtering of seawater, storing samples in ethanol",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "samp_mat_process"
-            }
-          ]
-        }
-      },
-      {
         "fieldName": "size-fraction upper threshold",
         "capitalize": "",
         "ontology_id": "MIXS:0000736",
@@ -2971,6 +2945,27 @@ var DATA = [
           "soil_emsl_jgi_mg": [
             {
               "field": "size_frac_up"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "sample material processing",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000016",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.",
+        "guidance": "Pattern hint: {text}",
+        "examples": "filtering of seawater, storing samples in ethanol",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "samp_mat_process"
             }
           ]
         }
@@ -3081,27 +3076,6 @@ var DATA = [
         }
       },
       {
-        "fieldName": "climate environment",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001040",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates",
-        "guidance": "Pattern hint: {text};{Rn/start_time/end_time/duration}",
-        "examples": "tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "climate_environment"
-            }
-          ]
-        }
-      },
-      {
         "fieldName": "amount or size of sample collected",
         "capitalize": "",
         "ontology_id": "MIXS:0000001",
@@ -3119,6 +3093,27 @@ var DATA = [
           "soil_emsl_jgi_mg": [
             {
               "field": "samp_size"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "climate environment",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001040",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates",
+        "guidance": "Pattern hint: {text};{Rn/start_time/end_time/duration}",
+        "examples": "tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "climate_environment"
             }
           ]
         }
@@ -3194,28 +3189,6 @@ var DATA = [
         }
       },
       {
-        "fieldName": "light regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000569",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Information about treatment(s) involving exposure to light, including both light intensity and quality.",
-        "guidance": "Pattern hint: {text};{float} {unit};{float} {unit}",
-        "examples": "incandescant light;10 lux;450 nanometer",
-        "pattern": "^\\S+.*\\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "light_regm"
-            }
-          ]
-        }
-      },
-      {
         "fieldName": "relationship to oxygen",
         "capitalize": "",
         "ontology_id": "MIXS:0000015",
@@ -3243,6 +3216,28 @@ var DATA = [
           "microanaerobe": {},
           "obligate aerobe": {},
           "obligate anaerobe": {}
+        }
+      },
+      {
+        "fieldName": "light regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000569",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment(s) involving exposure to light, including both light intensity and quality.",
+        "guidance": "Pattern hint: {text};{float} {unit};{float} {unit}",
+        "examples": "incandescant light;10 lux;450 nanometer",
+        "pattern": "^\\S+.*\\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "light_regm"
+            }
+          ]
         }
       },
       {

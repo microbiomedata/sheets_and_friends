@@ -6301,7 +6301,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "dna_absorb1",
       "range": "string",
-      "required": true,
+      "recommended": true,
       "@type": "SlotDefinition"
     },
     {
@@ -7609,7 +7609,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -7646,7 +7646,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -7683,7 +7683,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -7720,7 +7720,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -7757,7 +7757,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "GOLD ecosystem path",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -8951,7 +8951,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -9006,7 +9006,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -9061,7 +9061,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "value": "Sample ID",
           "@type": "Annotation"
         }
       ],
@@ -13059,7 +13059,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "rna_absorb1",
       "range": "string",
-      "required": true,
+      "recommended": true,
       "@type": "SlotDefinition"
     },
     {
@@ -14053,9 +14053,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-02-22T19:04:39",
-  "source_file_size": 224464,
-  "generation_date": "2022-02-22T19:04:44",
+  "source_file_date": "2022-02-23T16:36:55",
+  "source_file_size": 224402,
+  "generation_date": "2022-02-23T16:37:01",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",

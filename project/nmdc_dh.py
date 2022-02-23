@@ -1,5 +1,5 @@
 # Auto generated from nmdc_dh.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-02-22T19:04:51
+# Generation date: 2022-02-23T16:37:10
 # Schema: nmdc_dh
 #
 # id: https://example.com/nmdc_dh
@@ -94,7 +94,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
     dna_sample_name: str = None
     dna_concentration: str = None
     dna_volume: str = None
-    dna_absorb1: str = None
     dna_container_ID: str = None
     dna_cont_type: Union[str, "DnaContTypeEnum"] = None
     dna_cont_well: str = None
@@ -118,6 +117,7 @@ class SoilEmslJgiMg(NmdcDhInterface):
     samp_name: str = None
     technical_reps: Optional[str] = None
     replicate_number: Optional[str] = None
+    dna_absorb1: Optional[str] = None
     dna_absorb2: Optional[str] = None
     dna_organisms: Optional[str] = None
     collection_time: Optional[str] = None
@@ -276,11 +276,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
             self.MissingRequiredField("dna_volume")
         if not isinstance(self.dna_volume, str):
             self.dna_volume = str(self.dna_volume)
-
-        if self._is_empty(self.dna_absorb1):
-            self.MissingRequiredField("dna_absorb1")
-        if not isinstance(self.dna_absorb1, str):
-            self.dna_absorb1 = str(self.dna_absorb1)
 
         if self._is_empty(self.dna_container_ID):
             self.MissingRequiredField("dna_container_ID")
@@ -488,6 +483,9 @@ class SoilEmslJgiMg(NmdcDhInterface):
 
         if self.replicate_number is not None and not isinstance(self.replicate_number, str):
             self.replicate_number = str(self.replicate_number)
+
+        if self.dna_absorb1 is not None and not isinstance(self.dna_absorb1, str):
+            self.dna_absorb1 = str(self.dna_absorb1)
 
         if self.dna_absorb2 is not None and not isinstance(self.dna_absorb2, str):
             self.dna_absorb2 = str(self.dna_absorb2)
@@ -1049,7 +1047,6 @@ class SoilEmslJgiMt(YAMLRoot):
     rna_sample_name: str = None
     rna_concentration: str = None
     rna_volume: str = None
-    rna_absorb1: str = None
     rna_container_ID: str = None
     rna_cont_type: Union[str, "RnaContTypeEnum"] = None
     rna_cont_well: str = None
@@ -1060,6 +1057,7 @@ class SoilEmslJgiMt(YAMLRoot):
     rna_seq_project_PI: str = None
     rna_project_contact: str = None
     proposal_rna: str = None
+    rna_absorb1: Optional[str] = None
     rna_absorb2: Optional[str] = None
     rna_organisms: Optional[str] = None
 
@@ -1093,11 +1091,6 @@ class SoilEmslJgiMt(YAMLRoot):
             self.MissingRequiredField("rna_volume")
         if not isinstance(self.rna_volume, str):
             self.rna_volume = str(self.rna_volume)
-
-        if self._is_empty(self.rna_absorb1):
-            self.MissingRequiredField("rna_absorb1")
-        if not isinstance(self.rna_absorb1, str):
-            self.rna_absorb1 = str(self.rna_absorb1)
 
         if self._is_empty(self.rna_container_ID):
             self.MissingRequiredField("rna_container_ID")
@@ -1148,6 +1141,9 @@ class SoilEmslJgiMt(YAMLRoot):
             self.MissingRequiredField("proposal_rna")
         if not isinstance(self.proposal_rna, str):
             self.proposal_rna = str(self.proposal_rna)
+
+        if self.rna_absorb1 is not None and not isinstance(self.rna_absorb1, str):
+            self.rna_absorb1 = str(self.rna_absorb1)
 
         if self.rna_absorb2 is not None and not isinstance(self.rna_absorb2, str):
             self.rna_absorb2 = str(self.rna_absorb2)
@@ -2314,7 +2310,7 @@ slots.soil_emsl_jgi_mg_dna_volume = Slot(uri=NMDC_DH.dna_volume, name="soil_emsl
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_volume, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_dna_absorb1 = Slot(uri=NMDC_DH.dna_absorb1, name="soil_emsl_jgi_mg_dna_absorb1", curie=NMDC_DH.curie('dna_absorb1'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_absorb1, domain=SoilEmslJgiMg, range=str)
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_absorb1, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_dna_absorb2 = Slot(uri=NMDC_DH.dna_absorb2, name="soil_emsl_jgi_mg_dna_absorb2", curie=NMDC_DH.curie('dna_absorb2'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_absorb2, domain=SoilEmslJgiMg, range=Optional[str])
@@ -2704,7 +2700,7 @@ slots.soil_emsl_jgi_mt_rna_volume = Slot(uri=NMDC_DH.rna_volume, name="soil_emsl
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_volume, domain=SoilEmslJgiMt, range=str)
 
 slots.soil_emsl_jgi_mt_rna_absorb1 = Slot(uri=NMDC_DH.rna_absorb1, name="soil_emsl_jgi_mt_rna_absorb1", curie=NMDC_DH.curie('rna_absorb1'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_absorb1, domain=SoilEmslJgiMt, range=str)
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_absorb1, domain=SoilEmslJgiMt, range=Optional[str])
 
 slots.soil_emsl_jgi_mt_rna_absorb2 = Slot(uri=NMDC_DH.rna_absorb2, name="soil_emsl_jgi_mt_rna_absorb2", curie=NMDC_DH.curie('rna_absorb2'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_absorb2, domain=SoilEmslJgiMt, range=Optional[str])

@@ -35,10 +35,6 @@
 						</tr>
 						
 						<tr class="section">
-							<td colspan="5"><h3>GOLD ecosystem path</h3></td>
-						</tr>
-						
-						<tr class="section">
 							<td colspan="5"><h3>EMSL</h3></td>
 						</tr>
 						
@@ -107,51 +103,6 @@
 							<td class="label">Replicate Number</td>
 							<td>If sending biological replicates, indicate the rep number here.</td>
 							<td>This will guide staff in ensuring your samples are block & randomized correctly | Pattern hint: {integer}</td>
-							<td></td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">ecosystem</td>
-							<td>An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.</td>
-							<td>The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.</td>
-							<td></td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">ecosystem_category</td>
-							<td>Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.</td>
-							<td>The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.</td>
-							<td></td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">ecosystem_type</td>
-							<td>Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.</td>
-							<td>The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.</td>
-							<td></td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">ecosystem_subtype</td>
-							<td>Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.</td>
-							<td>Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category.</td>
-							<td></td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">specific_ecosystem</td>
-							<td>Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.</td>
-							<td>Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system.</td>
 							<td></td>
 							<td>None</td>
 						</tr>
@@ -833,28 +784,10 @@
 
 						
 						<tr>
-							<td class="label">broad-scale environmental context</td>
-							<td>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS</td>
-							<td>Pattern hint: {termLabel} {[termID]}</td>
-							<td>oceanic epipelagic zone biome [ENVO:01000033] for annotating a water sample from the photic zone in middle of the Atlantic Ocean</td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
 							<td class="label">growth facility</td>
 							<td>Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.</td>
 							<td>Pattern hint: {text}|{termLabel} {[termID]}</td>
 							<td>Growth chamber [CO_715:0000189]</td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">local environmental context</td>
-							<td>Report the entity or entities which are in the sample or specimen’s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.</td>
-							<td>Pattern hint: {termLabel} {[termID]}</td>
-							<td>litter layer [ENVO:01000338]; Annotating a pooled sample taken from various vegetation layers in a forest consider: canopy [ENVO:00000047]|herb and fern layer [ENVO:01000337]|litter layer [ENVO:01000338]|understory [01000335]|shrub layer [ENVO:01000336].</td>
 							<td>None</td>
 						</tr>
 
@@ -873,15 +806,6 @@
 							<td>The date of sampling</td>
 							<td>Pattern hint: {date, arbitrary precision}</td>
 							<td>2021-04-15; 2021-04; 2021</td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
-							<td class="label">environmental medium</td>
-							<td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
-							<td>Pattern hint: {termLabel} {[termID]}</td>
-							<td>soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]</td>
 							<td>None</td>
 						</tr>
 
@@ -941,19 +865,19 @@
 
 						
 						<tr>
-							<td class="label">sample material processing</td>
-							<td>A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.</td>
-							<td>Pattern hint: {text}</td>
-							<td>filtering of seawater, storing samples in ethanol</td>
+							<td class="label">size-fraction upper threshold</td>
+							<td>Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample</td>
+							<td></td>
+							<td>20 micrometer</td>
 							<td>None</td>
 						</tr>
 
 						
 						<tr>
-							<td class="label">size-fraction upper threshold</td>
-							<td>Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample</td>
-							<td></td>
-							<td>20 micrometer</td>
+							<td class="label">sample material processing</td>
+							<td>A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.</td>
+							<td>Pattern hint: {text}</td>
+							<td>filtering of seawater, storing samples in ethanol</td>
 							<td>None</td>
 						</tr>
 
@@ -1004,19 +928,19 @@
 
 						
 						<tr>
-							<td class="label">climate environment</td>
-							<td>Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates</td>
-							<td>Pattern hint: {text};{Rn/start_time/end_time/duration}</td>
-							<td>tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M</td>
+							<td class="label">amount or size of sample collected</td>
+							<td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
+							<td>This refers to the TOTAL amount of sample collected from the experiment. NOT the amount sent to each institution or collected for a specific analysis. | Pattern hint: {float} {unit}</td>
+							<td>5 grams; 10 mL</td>
 							<td>None</td>
 						</tr>
 
 						
 						<tr>
-							<td class="label">amount or size of sample collected</td>
-							<td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
-							<td>This refers to the TOTAL amount of sample collected from the experiment. NOT the amount sent to each institution or collected for a specific analysis. | Pattern hint: {float} {unit}</td>
-							<td>5 grams; 10 mL</td>
+							<td class="label">climate environment</td>
+							<td>Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates</td>
+							<td>Pattern hint: {text};{Rn/start_time/end_time/duration}</td>
+							<td>tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M</td>
 							<td>None</td>
 						</tr>
 
@@ -1049,19 +973,19 @@
 
 						
 						<tr>
-							<td class="label">light regimen</td>
-							<td>Information about treatment(s) involving exposure to light, including both light intensity and quality.</td>
-							<td>Pattern hint: {text};{float} {unit};{float} {unit}</td>
-							<td>incandescant light;10 lux;450 nanometer</td>
+							<td class="label">relationship to oxygen</td>
+							<td>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments</td>
+							<td></td>
+							<td>aerobe</td>
 							<td>None</td>
 						</tr>
 
 						
 						<tr>
-							<td class="label">relationship to oxygen</td>
-							<td>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments</td>
-							<td></td>
-							<td>aerobe</td>
+							<td class="label">light regimen</td>
+							<td>Information about treatment(s) involving exposure to light, including both light intensity and quality.</td>
+							<td>Pattern hint: {text};{float} {unit};{float} {unit}</td>
+							<td>incandescant light;10 lux;450 nanometer</td>
 							<td>None</td>
 						</tr>
 
@@ -1238,6 +1162,24 @@
 
 						
 						<tr>
+							<td class="label">ecosystem</td>
+							<td>An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.</td>
+							<td>The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.</td>
+							<td></td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
+							<td class="label">broad-scale environmental context</td>
+							<td>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS</td>
+							<td>Pattern hint: {termLabel} {[termID]}</td>
+							<td>oceanic epipelagic zone biome [ENVO:01000033] for annotating a water sample from the photic zone in middle of the Atlantic Ocean</td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
 							<td class="label">Globally Unique ID</td>
 							<td>A globally unique identifier assigned to the biological sample.</td>
 							<td>Identifiers must be prefixed. IGSNs (http://www.geosamples.org/getigsn) are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally unique but not FAIR. These IDs enable linking to derrived analytes and subsamples. | Pattern hint: {text}:{text}</td>
@@ -1247,10 +1189,46 @@
 
 						
 						<tr>
+							<td class="label">ecosystem_category</td>
+							<td>Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.</td>
+							<td>The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.</td>
+							<td></td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
+							<td class="label">local environmental context</td>
+							<td>Report the entity or entities which are in the sample or specimen’s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.</td>
+							<td>Pattern hint: {termLabel} {[termID]}</td>
+							<td>litter layer [ENVO:01000338]; Annotating a pooled sample taken from various vegetation layers in a forest consider: canopy [ENVO:00000047]|herb and fern layer [ENVO:01000337]|litter layer [ENVO:01000338]|understory [01000335]|shrub layer [ENVO:01000336].</td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
 							<td class="label">sample name</td>
 							<td>A local identifier or name that for the material sample collected. Refers to the original material collected or to any derived sub-samples.</td>
 							<td>It can have any format, but we suggest that you make it concise, unique and consistent within your lab, and as informative as possible. | Pattern hint: {text}</td>
 							<td>Rock core CB1178(5-6) from NSW</td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
+							<td class="label">ecosystem_type</td>
+							<td>Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.</td>
+							<td>The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.</td>
+							<td></td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
+							<td class="label">environmental medium</td>
+							<td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
+							<td>Pattern hint: {termLabel} {[termID]}</td>
+							<td>soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]</td>
 							<td>None</td>
 						</tr>
 
@@ -1274,10 +1252,28 @@
 
 						
 						<tr>
+							<td class="label">ecosystem_subtype</td>
+							<td>Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.</td>
+							<td>Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category.</td>
+							<td></td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
 							<td class="label">sample linkage</td>
 							<td>A unique identifier to assign parent-child, subsample, or sibling samples. This is relevant when a sample or other material was used to generate the new sample.</td>
 							<td>This field allows multiple entries separated by ; (Examples: Soil collected from the field will link with the soil used in an incubation. The soil a plant was grown in links to the plant sample. An original culture sample was transferred to a new vial and generated a new sample) | Pattern hint: {text}:{text}</td>
 							<td>IGSN:DSJ0284</td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
+							<td class="label">specific_ecosystem</td>
+							<td>Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.</td>
+							<td>Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system.</td>
+							<td></td>
 							<td>None</td>
 						</tr>
 

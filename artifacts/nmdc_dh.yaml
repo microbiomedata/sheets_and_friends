@@ -3523,7 +3523,7 @@ classes:
         comments:
         - Recommended value is between 1 and 3.
         string_serialization: '{float}'
-        required: true
+        recommended: true
         examples:
         - value: '2.02'
       dna_absorb2:
@@ -4125,7 +4125,7 @@ classes:
         range: ecosystem_enum
         annotations:
           dh:column_number: '1'
-          dh:section_name: GOLD ecosystem path
+          dh:section_name: Sample ID
         required: true
       ecosystem_category:
         name: ecosystem_category
@@ -4145,7 +4145,7 @@ classes:
         range: ecosystem_category_enum
         annotations:
           dh:column_number: '2'
-          dh:section_name: GOLD ecosystem path
+          dh:section_name: Sample ID
         required: true
       ecosystem_subtype:
         name: ecosystem_subtype
@@ -4164,7 +4164,7 @@ classes:
         range: ecosystem_subtype_enum
         annotations:
           dh:column_number: '4'
-          dh:section_name: GOLD ecosystem path
+          dh:section_name: Sample ID
         required: true
       ecosystem_type:
         name: ecosystem_type
@@ -4186,7 +4186,7 @@ classes:
         range: ecosystem_type_enum
         annotations:
           dh:column_number: '3'
-          dh:section_name: GOLD ecosystem path
+          dh:section_name: Sample ID
         required: true
       specific_ecosystem:
         name: specific_ecosystem
@@ -4204,7 +4204,7 @@ classes:
         range: specific_ecosystem_enum
         annotations:
           dh:column_number: '5'
-          dh:section_name: GOLD ecosystem path
+          dh:section_name: Sample ID
         required: true
       agrochem_addition:
         name: agrochem_addition
@@ -4754,7 +4754,7 @@ classes:
               by one or more pipes.
           categorical_subsection: sample identification
           dh:column_number: '1'
-          dh:section_name: MIxS (modified)
+          dh:section_name: Sample ID
         description: "Report the major environmental system the sample or specimen\
           \ came from. The system(s) identified should have a coarse spatial grain,\
           \ to provide the general environmental context of where the sampling was\
@@ -4784,7 +4784,7 @@ classes:
               at time of sampling.
           categorical_subsection: sample identification
           dh:column_number: '2'
-          dh:section_name: MIxS (modified)
+          dh:section_name: Sample ID
         description: "Report the entity or entities which are in the sample or specimen\u2019\
           s local vicinity and which you believe have significant causal influences\
           \ on your sample or specimen. We recommend using EnvO terms which are of\
@@ -4817,7 +4817,7 @@ classes:
               subclasses of environmental material [ENVO:00010483].
           categorical_subsection: sample identification
           dh:column_number: '3'
-          dh:section_name: MIxS (modified)
+          dh:section_name: Sample ID
         description: 'Report the environmental material(s) immediately surrounding
           the sample or specimen at the time of sampling. We recommend using subclasses
           of ''environmental material'' (http://purl.obolibrary.org/obo/ENVO_00010483).
@@ -6709,7 +6709,7 @@ classes:
         comments:
         - Recommended value is between 1 and 3.
         string_serialization: '{float}'
-        required: true
+        recommended: true
       rna_absorb2:
         name: rna_absorb2
         annotations:
