@@ -329,6 +329,15 @@
 
 						
 						<tr>
+							<td class="label">geographic location (country and/or sea,region)</td>
+							<td>The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)</td>
+							<td>Pattern hint: {term}: {term}, {text}</td>
+							<td>USA: Maryland, Bethesda</td>
+							<td>None</td>
+						</tr>
+
+						
+						<tr>
 							<td class="label">slope aspect</td>
 							<td>The direction a slope faces. While looking down a slope use a compass to record the direction you are facing (direction or degrees); e.g., nw or 315 degrees. This measure provides an indication of sun and wind exposure that will influence soil temperature and evapotranspiration.</td>
 							<td></td>
@@ -824,15 +833,6 @@
 
 						
 						<tr>
-							<td class="label">growth facility</td>
-							<td>Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.</td>
-							<td>Pattern hint: {text}|{termLabel} {[termID]}</td>
-							<td>Growth chamber [CO_715:0000189]</td>
-							<td>None</td>
-						</tr>
-
-						
-						<tr>
 							<td class="label">broad-scale environmental context</td>
 							<td>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS</td>
 							<td>Pattern hint: {termLabel} {[termID]}</td>
@@ -842,10 +842,10 @@
 
 						
 						<tr>
-							<td class="label">storage conditions</td>
-							<td>Explain how the soil sample is stored (fresh/frozen/other).</td>
-							<td>Pattern hint: {text};{duration}</td>
-							<td>-20 degree Celsius freezer;P2Y10D</td>
+							<td class="label">growth facility</td>
+							<td>Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.</td>
+							<td>Pattern hint: {text}|{termLabel} {[termID]}</td>
+							<td>Growth chamber [CO_715:0000189]</td>
 							<td>None</td>
 						</tr>
 
@@ -860,10 +860,10 @@
 
 						
 						<tr>
-							<td class="label">environmental medium</td>
-							<td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
-							<td>Pattern hint: {termLabel} {[termID]}</td>
-							<td>soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]</td>
+							<td class="label">storage conditions</td>
+							<td>Explain how the soil sample is stored (fresh/frozen/other).</td>
+							<td>Pattern hint: {text};{duration}</td>
+							<td>-20 degree Celsius freezer;P2Y10D</td>
 							<td>None</td>
 						</tr>
 
@@ -878,10 +878,10 @@
 
 						
 						<tr>
-							<td class="label">geographic location (country and/or sea,region)</td>
-							<td>The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)</td>
-							<td>Pattern hint: {term}: {term}, {text}</td>
-							<td>USA: Maryland, Bethesda</td>
+							<td class="label">environmental medium</td>
+							<td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
+							<td>Pattern hint: {termLabel} {[termID]}</td>
+							<td>soil [ENVO:00001998]; Annotating a fish swimming in the upper 100 m of the Atlantic Ocean, consider: ocean water [ENVO:00002151]. Example: Annotating a duck on a pond consider: pond water [ENVO:00002228]|air [ENVO_00002005]</td>
 							<td>None</td>
 						</tr>
 
@@ -1004,19 +1004,19 @@
 
 						
 						<tr>
-							<td class="label">amount or size of sample collected</td>
-							<td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
-							<td>This refers to the TOTAL amount of sample collected from the experiment. NOT the amount sent to each institution or collected for a specific analysis. | Pattern hint: {float} {unit}</td>
-							<td>5 grams; 10 mL</td>
+							<td class="label">climate environment</td>
+							<td>Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates</td>
+							<td>Pattern hint: {text};{Rn/start_time/end_time/duration}</td>
+							<td>tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M</td>
 							<td>None</td>
 						</tr>
 
 						
 						<tr>
-							<td class="label">climate environment</td>
-							<td>Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates</td>
-							<td>Pattern hint: {text};{Rn/start_time/end_time/duration}</td>
-							<td>tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M</td>
+							<td class="label">amount or size of sample collected</td>
+							<td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
+							<td>This refers to the TOTAL amount of sample collected from the experiment. NOT the amount sent to each institution or collected for a specific analysis. | Pattern hint: {float} {unit}</td>
+							<td>5 grams; 10 mL</td>
 							<td>None</td>
 						</tr>
 
@@ -1049,19 +1049,19 @@
 
 						
 						<tr>
-							<td class="label">relationship to oxygen</td>
-							<td>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments</td>
-							<td></td>
-							<td>aerobe</td>
+							<td class="label">light regimen</td>
+							<td>Information about treatment(s) involving exposure to light, including both light intensity and quality.</td>
+							<td>Pattern hint: {text};{float} {unit};{float} {unit}</td>
+							<td>incandescant light;10 lux;450 nanometer</td>
 							<td>None</td>
 						</tr>
 
 						
 						<tr>
-							<td class="label">light regimen</td>
-							<td>Information about treatment(s) involving exposure to light, including both light intensity and quality.</td>
-							<td>Pattern hint: {text};{float} {unit};{float} {unit}</td>
-							<td>incandescant light;10 lux;450 nanometer</td>
+							<td class="label">relationship to oxygen</td>
+							<td>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments</td>
+							<td></td>
+							<td>aerobe</td>
 							<td>None</td>
 						</tr>
 

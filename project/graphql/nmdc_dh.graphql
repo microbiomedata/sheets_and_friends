@@ -64,49 +64,49 @@ type SampleID
 
 type SoilEmslJgiMg
   {
-    eMSLStoreTemp: String!
     projectID: String!
-    replicateNumber: String
-    sampleShipped: String!
     sampleType: SampleTypeEnum!
+    sampleShipped: String!
+    eMSLStoreTemp: String!
     technicalReps: String
-    dnaAbsorb1: String!
-    dnaAbsorb2: String
-    dnaCollectSite: String!
-    dnaConcentration: String!
-    dnaContType: DnaContTypeEnum!
-    dnaContWell: String!
-    dnaContainerID: String!
-    dnaDnase: DnaDnaseEnum!
-    dnaIsolateMeth: String!
-    dnaOrganisms: String
-    dnaProjectContact: String!
-    dnaSampID: String!
-    dnaSampleFormat: DnaSampleFormatEnum!
-    dnaSampleName: String!
+    replicateNumber: String
     dnaSeqProject: String!
     dnaSeqProjectName: String!
-    dnaSeqProjectPI: String!
+    dnaSampID: String!
+    dnaSampleName: String!
+    dnaConcentration: String!
     dnaVolume: String!
+    dnaAbsorb1: String!
+    dnaAbsorb2: String
+    dnaContainerID: String!
+    dnaContType: DnaContTypeEnum!
+    dnaContWell: String!
+    dnaSampleFormat: DnaSampleFormatEnum!
+    dnaDnase: DnaDnaseEnum!
+    dnaOrganisms: String
+    dnaCollectSite: String!
+    dnaIsolateMeth: String!
+    dnaSeqProjectPI: String!
+    dnaProjectContact: String!
     proposalDna: String!
-    microBiomassCMeth: String
-    microBiomassNMeth: String
-    microbialBiomassC: String
-    microbialBiomassN: String
-    nonMicrobBiomass: String
-    nonMicrobBiomassMethod: String
-    orgNitroMethod: String
-    collectionDateInc: String
     collectionTime: String
+    collectionDateInc: String
     collectionTimeInc: String
-    experimentalFactorOther: String
-    filterMethod: String
-    isotopeExposure: String
-    otherTreatment: String
     startDateInc: String
     startTimeInc: String
-    analysisType: [AnalysisTypeEnum]!
+    filterMethod: String
+    experimentalFactorOther: String
+    nonMicrobBiomass: String
+    nonMicrobBiomassMethod: String
+    microbialBiomassC: String
+    microBiomassCMeth: String
+    microbialBiomassN: String
+    microBiomassNMeth: String
+    orgNitroMethod: String
+    otherTreatment: String
+    isotopeExposure: String
     envPackage: EnvPackageEnum!
+    analysisType: [AnalysisTypeEnum]!
     sampleLink: String
     ecosystem: String
     ecosystemCategory: String
@@ -204,24 +204,24 @@ type SoilEmslJgiMg
 
 type SoilEmslJgiMt
   {
-    dnaseRna: DnaseRnaEnum!
-    proposalRna: String!
-    rnaAbsorb1: String!
-    rnaAbsorb2: String
-    rnaCollectSite: String!
-    rnaConcentration: String!
-    rnaContType: RnaContTypeEnum!
-    rnaContWell: String!
-    rnaContainerID: String!
-    rnaIsolateMeth: String!
-    rnaOrganisms: String
-    rnaProjectContact: String!
-    rnaSampID: String!
-    rnaSampleFormat: RnaSampleFormatEnum!
-    rnaSampleName: String!
     rnaSeqProject: String!
     rnaSeqProjectName: String!
-    rnaSeqProjectPI: String!
+    rnaSampID: String!
+    rnaSampleName: String!
+    rnaConcentration: String!
     rnaVolume: String!
+    rnaAbsorb1: String!
+    rnaAbsorb2: String
+    rnaContainerID: String!
+    rnaContType: RnaContTypeEnum!
+    rnaContWell: String!
+    rnaSampleFormat: RnaSampleFormatEnum!
+    dnaseRna: DnaseRnaEnum!
+    rnaOrganisms: String
+    rnaCollectSite: String!
+    rnaIsolateMeth: String!
+    rnaSeqProjectPI: String!
+    rnaProjectContact: String!
+    proposalRna: String!
   }
 

@@ -1285,46 +1285,10 @@
   ],
   "slots": [
     {
-      "name": "EMSL_store_temp",
-      "definition_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "project_ID",
       "definition_uri": "https://example.com/nmdc_dh/project_ID",
       "from_schema": "https://example.com/nmdc_dh",
       "slot_uri": "https://example.com/nmdc_dh/project_ID",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "replicate_number",
-      "definition_uri": "https://example.com/nmdc_dh/replicate_number",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/replicate_number",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "sample_shipped",
-      "definition_uri": "https://example.com/nmdc_dh/sample_shipped",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/sample_shipped",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -1345,6 +1309,30 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "sample_shipped",
+      "definition_uri": "https://example.com/nmdc_dh/sample_shipped",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/sample_shipped",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "EMSL_store_temp",
+      "definition_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "technical_reps",
       "definition_uri": "https://example.com/nmdc_dh/technical_reps",
       "from_schema": "https://example.com/nmdc_dh",
@@ -1357,166 +1345,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dna_absorb1",
-      "definition_uri": "https://example.com/nmdc_dh/dna_absorb1",
+      "name": "replicate_number",
+      "definition_uri": "https://example.com/nmdc_dh/replicate_number",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_absorb1",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_absorb2",
-      "definition_uri": "https://example.com/nmdc_dh/dna_absorb2",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_absorb2",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_collect_site",
-      "definition_uri": "https://example.com/nmdc_dh/dna_collect_site",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_collect_site",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_concentration",
-      "definition_uri": "https://example.com/nmdc_dh/dna_concentration",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_concentration",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_cont_type",
-      "definition_uri": "https://example.com/nmdc_dh/dna_cont_type",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_cont_type",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_cont_well",
-      "definition_uri": "https://example.com/nmdc_dh/dna_cont_well",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_cont_well",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_container_ID",
-      "definition_uri": "https://example.com/nmdc_dh/dna_container_ID",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_container_ID",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_dnase",
-      "definition_uri": "https://example.com/nmdc_dh/dna_dnase",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_dnase",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_isolate_meth",
-      "definition_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_organisms",
-      "definition_uri": "https://example.com/nmdc_dh/dna_organisms",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_organisms",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_project_contact",
-      "definition_uri": "https://example.com/nmdc_dh/dna_project_contact",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_project_contact",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_samp_ID",
-      "definition_uri": "https://example.com/nmdc_dh/dna_samp_ID",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_samp_ID",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_sample_format",
-      "definition_uri": "https://example.com/nmdc_dh/dna_sample_format",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_sample_format",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dna_sample_name",
-      "definition_uri": "https://example.com/nmdc_dh/dna_sample_name",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_sample_name",
+      "slot_uri": "https://example.com/nmdc_dh/replicate_number",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -1549,10 +1381,34 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dna_seq_project_PI",
-      "definition_uri": "https://example.com/nmdc_dh/dna_seq_project_PI",
+      "name": "dna_samp_ID",
+      "definition_uri": "https://example.com/nmdc_dh/dna_samp_ID",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dna_seq_project_PI",
+      "slot_uri": "https://example.com/nmdc_dh/dna_samp_ID",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_sample_name",
+      "definition_uri": "https://example.com/nmdc_dh/dna_sample_name",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_sample_name",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_concentration",
+      "definition_uri": "https://example.com/nmdc_dh/dna_concentration",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_concentration",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -1573,6 +1429,150 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "dna_absorb1",
+      "definition_uri": "https://example.com/nmdc_dh/dna_absorb1",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_absorb1",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_absorb2",
+      "definition_uri": "https://example.com/nmdc_dh/dna_absorb2",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_absorb2",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_container_ID",
+      "definition_uri": "https://example.com/nmdc_dh/dna_container_ID",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_container_ID",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_cont_type",
+      "definition_uri": "https://example.com/nmdc_dh/dna_cont_type",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_cont_type",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_cont_well",
+      "definition_uri": "https://example.com/nmdc_dh/dna_cont_well",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_cont_well",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_sample_format",
+      "definition_uri": "https://example.com/nmdc_dh/dna_sample_format",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_sample_format",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_dnase",
+      "definition_uri": "https://example.com/nmdc_dh/dna_dnase",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_dnase",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_organisms",
+      "definition_uri": "https://example.com/nmdc_dh/dna_organisms",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_organisms",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_collect_site",
+      "definition_uri": "https://example.com/nmdc_dh/dna_collect_site",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_collect_site",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_isolate_meth",
+      "definition_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_seq_project_PI",
+      "definition_uri": "https://example.com/nmdc_dh/dna_seq_project_PI",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_seq_project_PI",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dna_project_contact",
+      "definition_uri": "https://example.com/nmdc_dh/dna_project_contact",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/dna_project_contact",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "proposal_dna",
       "definition_uri": "https://example.com/nmdc_dh/proposal_dna",
       "from_schema": "https://example.com/nmdc_dh",
@@ -1585,10 +1585,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dnase_rna",
-      "definition_uri": "https://example.com/nmdc_dh/dnase_rna",
+      "name": "rna_seq_project",
+      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/dnase_rna",
+      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1597,10 +1597,58 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "proposal_rna",
-      "definition_uri": "https://example.com/nmdc_dh/proposal_rna",
+      "name": "rna_seq_project_name",
+      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/proposal_rna",
+      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rna_samp_ID",
+      "definition_uri": "https://example.com/nmdc_dh/rna_samp_ID",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/rna_samp_ID",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rna_sample_name",
+      "definition_uri": "https://example.com/nmdc_dh/rna_sample_name",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/rna_sample_name",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rna_concentration",
+      "definition_uri": "https://example.com/nmdc_dh/rna_concentration",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/rna_concentration",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rna_volume",
+      "definition_uri": "https://example.com/nmdc_dh/rna_volume",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/rna_volume",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1633,22 +1681,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "rna_collect_site",
-      "definition_uri": "https://example.com/nmdc_dh/rna_collect_site",
+      "name": "rna_container_ID",
+      "definition_uri": "https://example.com/nmdc_dh/rna_container_ID",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_collect_site",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "rna_concentration",
-      "definition_uri": "https://example.com/nmdc_dh/rna_concentration",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_concentration",
+      "slot_uri": "https://example.com/nmdc_dh/rna_container_ID",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1681,10 +1717,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "rna_container_ID",
-      "definition_uri": "https://example.com/nmdc_dh/rna_container_ID",
+      "name": "rna_sample_format",
+      "definition_uri": "https://example.com/nmdc_dh/rna_sample_format",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_container_ID",
+      "slot_uri": "https://example.com/nmdc_dh/rna_sample_format",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1693,10 +1729,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "rna_isolate_meth",
-      "definition_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
+      "name": "dnase_rna",
+      "definition_uri": "https://example.com/nmdc_dh/dnase_rna",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
+      "slot_uri": "https://example.com/nmdc_dh/dnase_rna",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1717,10 +1753,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "rna_project_contact",
-      "definition_uri": "https://example.com/nmdc_dh/rna_project_contact",
+      "name": "rna_collect_site",
+      "definition_uri": "https://example.com/nmdc_dh/rna_collect_site",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_project_contact",
+      "slot_uri": "https://example.com/nmdc_dh/rna_collect_site",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1729,58 +1765,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "rna_samp_ID",
-      "definition_uri": "https://example.com/nmdc_dh/rna_samp_ID",
+      "name": "rna_isolate_meth",
+      "definition_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_samp_ID",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "rna_sample_format",
-      "definition_uri": "https://example.com/nmdc_dh/rna_sample_format",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_sample_format",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "rna_sample_name",
-      "definition_uri": "https://example.com/nmdc_dh/rna_sample_name",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_sample_name",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "rna_seq_project",
-      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "rna_seq_project_name",
-      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
+      "slot_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1801,10 +1789,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "rna_volume",
-      "definition_uri": "https://example.com/nmdc_dh/rna_volume",
+      "name": "rna_project_contact",
+      "definition_uri": "https://example.com/nmdc_dh/rna_project_contact",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/rna_volume",
+      "slot_uri": "https://example.com/nmdc_dh/rna_project_contact",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
@@ -1813,82 +1801,22 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "micro_biomass_C_meth",
-      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
+      "name": "proposal_rna",
+      "definition_uri": "https://example.com/nmdc_dh/proposal_rna",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
-      "owner": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/proposal_rna",
+      "owner": "SoilEmslJgiMt",
       "domain_of": [
-        "SoilEmslJgiMg"
+        "SoilEmslJgiMt"
       ],
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "micro_biomass_N_meth",
-      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
+      "name": "collection_time",
+      "definition_uri": "https://example.com/nmdc_dh/collection_time",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "microbial_biomass_C",
-      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "microbial_biomass_N",
-      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "non_microb_biomass",
-      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "non_microb_biomass_method",
-      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "org_nitro_method",
-      "definition_uri": "https://example.com/nmdc_dh/org_nitro_method",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/org_nitro_method",
+      "slot_uri": "https://example.com/nmdc_dh/collection_time",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -1909,70 +1837,10 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "collection_time",
-      "definition_uri": "https://example.com/nmdc_dh/collection_time",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/collection_time",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "collection_time_inc",
       "definition_uri": "https://example.com/nmdc_dh/collection_time_inc",
       "from_schema": "https://example.com/nmdc_dh",
       "slot_uri": "https://example.com/nmdc_dh/collection_time_inc",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "experimental_factor_other",
-      "definition_uri": "https://example.com/nmdc_dh/experimental_factor_other",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/experimental_factor_other",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "filter_method",
-      "definition_uri": "https://example.com/nmdc_dh/filter_method",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/filter_method",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "isotope_exposure",
-      "definition_uri": "https://example.com/nmdc_dh/isotope_exposure",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/isotope_exposure",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "other_treatment",
-      "definition_uri": "https://example.com/nmdc_dh/other_treatment",
-      "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/other_treatment",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -2005,10 +1873,130 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "analysis_type",
-      "definition_uri": "https://example.com/nmdc_dh/analysis_type",
+      "name": "filter_method",
+      "definition_uri": "https://example.com/nmdc_dh/filter_method",
       "from_schema": "https://example.com/nmdc_dh",
-      "slot_uri": "https://example.com/nmdc_dh/analysis_type",
+      "slot_uri": "https://example.com/nmdc_dh/filter_method",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "experimental_factor_other",
+      "definition_uri": "https://example.com/nmdc_dh/experimental_factor_other",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/experimental_factor_other",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "non_microb_biomass",
+      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "non_microb_biomass_method",
+      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "microbial_biomass_C",
+      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "micro_biomass_C_meth",
+      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "microbial_biomass_N",
+      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "micro_biomass_N_meth",
+      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "org_nitro_method",
+      "definition_uri": "https://example.com/nmdc_dh/org_nitro_method",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/org_nitro_method",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "other_treatment",
+      "definition_uri": "https://example.com/nmdc_dh/other_treatment",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/other_treatment",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isotope_exposure",
+      "definition_uri": "https://example.com/nmdc_dh/isotope_exposure",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/isotope_exposure",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -2021,6 +2009,18 @@
       "definition_uri": "https://example.com/nmdc_dh/env_package",
       "from_schema": "https://example.com/nmdc_dh",
       "slot_uri": "https://example.com/nmdc_dh/env_package",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "analysis_type",
+      "definition_uri": "https://example.com/nmdc_dh/analysis_type",
+      "from_schema": "https://example.com/nmdc_dh",
+      "slot_uri": "https://example.com/nmdc_dh/analysis_type",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -5794,48 +5794,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_EMSL_store_temp",
-      "definition_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "EMSL",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "4",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Temperature at which the sample sent to EMSL should be stored",
-      "title": "EMSL Sample Storage Temperature, deg. C",
-      "comments": [
-        "Enter a temperature in celsius. Numeric portion only."
-      ],
-      "examples": [
-        {
-          "value": "-80",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "EMSL_store_temp",
-      "string_serialization": "{float}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
-      "alias": "EMSL_store_temp",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "EMSL_store_temp",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "soil_emsl_jgi_mg_project_ID",
       "definition_uri": "https://example.com/nmdc_dh/project_ID",
       "annotations": [
@@ -5864,75 +5822,6 @@
       ],
       "is_usage_slot": true,
       "usage_slot_name": "project_ID",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_replicate_number",
-      "definition_uri": "https://example.com/nmdc_dh/replicate_number",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "EMSL",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "6",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "If sending biological replicates, indicate the rep number here.",
-      "title": "Replicate Number",
-      "comments": [
-        "This will guide staff in ensuring your samples are block & randomized correctly"
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "replicate_number",
-      "string_serialization": "{integer}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/replicate_number",
-      "alias": "replicate_number",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "replicate_number",
-      "range": "string",
-      "recommended": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_sample_shipped",
-      "definition_uri": "https://example.com/nmdc_dh/sample_shipped",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "EMSL",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "3",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample sent to EMSL",
-      "title": "sample shipped amount",
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "sample_shipped",
-      "string_serialization": "{float} {unit}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/sample_shipped",
-      "alias": "sample_shipped",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "sample_shipped",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
@@ -5979,6 +5868,81 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "soil_emsl_jgi_mg_sample_shipped",
+      "definition_uri": "https://example.com/nmdc_dh/sample_shipped",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "EMSL",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "3",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "The total amount or size (volume (ml), mass (g) or area (m2) ) of sample sent to EMSL",
+      "title": "sample shipped amount",
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "sample_shipped",
+      "string_serialization": "{float} {unit}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/sample_shipped",
+      "alias": "sample_shipped",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "sample_shipped",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_EMSL_store_temp",
+      "definition_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "EMSL",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "4",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Temperature at which the sample sent to EMSL should be stored",
+      "title": "EMSL Sample Storage Temperature, deg. C",
+      "comments": [
+        "Enter a temperature in celsius. Numeric portion only."
+      ],
+      "examples": [
+        {
+          "value": "-80",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "EMSL_store_temp",
+      "string_serialization": "{float}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/EMSL_store_temp",
+      "alias": "EMSL_store_temp",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "EMSL_store_temp",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "soil_emsl_jgi_mg_technical_reps",
       "definition_uri": "https://example.com/nmdc_dh/technical_reps",
       "annotations": [
@@ -6009,6 +5973,293 @@
       "usage_slot_name": "technical_reps",
       "range": "string",
       "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_replicate_number",
+      "definition_uri": "https://example.com/nmdc_dh/replicate_number",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "EMSL",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "6",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "If sending biological replicates, indicate the rep number here.",
+      "title": "Replicate Number",
+      "comments": [
+        "This will guide staff in ensuring your samples are block & randomized correctly"
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "replicate_number",
+      "string_serialization": "{integer}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/replicate_number",
+      "alias": "replicate_number",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "replicate_number",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_dna_seq_project",
+      "definition_uri": "https://example.com/nmdc_dh/dna_seq_project",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metagenomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "1",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "DNA Seq Project ID",
+      "comments": [
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
+      ],
+      "examples": [
+        {
+          "value": "1191234",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "dna_seq_project",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/dna_seq_project",
+      "alias": "dna_seq_project",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dna_seq_project",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_dna_seq_project_name",
+      "definition_uri": "https://example.com/nmdc_dh/dna_seq_project_name",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metagenomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "2",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "DNA Seq Project Name",
+      "comments": [
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
+      ],
+      "examples": [
+        {
+          "value": "JGI Pond metagenomics",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "dna_seq_project_name",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/dna_seq_project_name",
+      "alias": "dna_seq_project_name",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dna_seq_project_name",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_dna_samp_ID",
+      "definition_uri": "https://example.com/nmdc_dh/dna_samp_ID",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metagenomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "3",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "DNA Sample ID",
+      "todos": [
+        "Removed identifier = TRUE from dna_samp_ID in JGI_sample_slots, as a class can't have two identifiers. How to force uniqueness? Moot because that column will be prefilled?"
+      ],
+      "comments": [
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
+      ],
+      "examples": [
+        {
+          "value": "187654",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "dna_samp_ID",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/dna_samp_ID",
+      "alias": "dna_samp_ID",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dna_samp_ID",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_dna_sample_name",
+      "definition_uri": "https://example.com/nmdc_dh/dna_sample_name",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metagenomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "4",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Give the DNA sample a name that is meaningful to you. Sample names must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.",
+      "title": "DNA Sample Name",
+      "examples": [
+        {
+          "value": "JGI_pond_041618",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "dna_sample_name",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/dna_sample_name",
+      "alias": "dna_sample_name",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dna_sample_name",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_dna_concentration",
+      "definition_uri": "https://example.com/nmdc_dh/dna_concentration",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metagenomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "5",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "DNA Concentration in ng/uL",
+      "comments": [
+        "Units must be in ng/uL. Enter the numerical part only. Must be calculated using a fluorometric method. Acceptable values are 0-2000."
+      ],
+      "examples": [
+        {
+          "value": "100",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "dna_concentration",
+      "string_serialization": "{float}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/dna_concentration",
+      "alias": "dna_concentration",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dna_concentration",
+      "range": "string",
+      "required": true,
+      "minimum_value": 0,
+      "maximum_value": 2000,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_dna_volume",
+      "definition_uri": "https://example.com/nmdc_dh/dna_volume",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metagenomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "6",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "DNA Volume in uL",
+      "comments": [
+        "Units must be in uL. Enter the numerical part only. Value must 0-1000. Values <25 by special permission only."
+      ],
+      "examples": [
+        {
+          "value": "25",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "dna_volume",
+      "string_serialization": "{float}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/dna_volume",
+      "alias": "dna_volume",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "dna_volume",
+      "range": "string",
+      "required": true,
+      "minimum_value": 0,
+      "maximum_value": 1000,
       "@type": "SlotDefinition"
     },
     {
@@ -6096,8 +6347,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_dna_collect_site",
-      "definition_uri": "https://example.com/nmdc_dh/dna_collect_site",
+      "name": "soil_emsl_jgi_mg_dna_container_ID",
+      "definition_uri": "https://example.com/nmdc_dh/dna_container_ID",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -6106,75 +6357,34 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "15",
+          "value": "9",
           "@type": "Annotation"
         }
       ],
-      "description": "Provide information on the site your DNA sample was collected from",
-      "title": "DNA Collection Site",
-      "examples": [
-        {
-          "value": "untreated pond water",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_collect_site",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_collect_site",
-      "alias": "dna_collect_site",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dna_collect_site",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_dna_concentration",
-      "definition_uri": "https://example.com/nmdc_dh/dna_concentration",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metagenomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "5",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "DNA Concentration in ng/uL",
+      "title": "DNA Container Label",
       "comments": [
-        "Units must be in ng/uL. Enter the numerical part only. Must be calculated using a fluorometric method. Acceptable values are 0-2000."
+        "Must be unique across all tubes and plates, and <20 characters. All samples in a plate should have the same plate label."
       ],
       "examples": [
         {
-          "value": "100",
+          "value": "Pond_MT_041618",
           "@type": "Example"
         }
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_concentration",
-      "string_serialization": "{float}",
+      "is_a": "dna_container_ID",
+      "string_serialization": "{text < 20 characters}",
       "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_concentration",
-      "alias": "dna_concentration",
+      "slot_uri": "https://example.com/nmdc_dh/dna_container_ID",
+      "alias": "dna_container_ID",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "dna_concentration",
+      "usage_slot_name": "dna_container_ID",
       "range": "string",
       "required": true,
-      "minimum_value": 0,
-      "maximum_value": 2000,
       "@type": "SlotDefinition"
     },
     {
@@ -6257,8 +6467,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_dna_container_ID",
-      "definition_uri": "https://example.com/nmdc_dh/dna_container_ID",
+      "name": "soil_emsl_jgi_mg_dna_sample_format",
+      "definition_uri": "https://example.com/nmdc_dh/dna_sample_format",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -6267,33 +6477,30 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "9",
+          "value": "12",
           "@type": "Annotation"
         }
       ],
-      "title": "DNA Container Label",
-      "comments": [
-        "Must be unique across all tubes and plates, and <20 characters. All samples in a plate should have the same plate label."
-      ],
+      "description": "Solution in which the DNA sample has been suspended",
+      "title": "DNA Sample Format",
       "examples": [
         {
-          "value": "Pond_MT_041618",
+          "value": "Water",
           "@type": "Example"
         }
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_container_ID",
-      "string_serialization": "{text < 20 characters}",
+      "is_a": "dna_sample_format",
       "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_container_ID",
-      "alias": "dna_container_ID",
+      "slot_uri": "https://example.com/nmdc_dh/dna_sample_format",
+      "alias": "dna_sample_format",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "dna_container_ID",
-      "range": "string",
+      "usage_slot_name": "dna_sample_format",
+      "range": "dna_sample_format_enum",
       "required": true,
       "@type": "SlotDefinition"
     },
@@ -6338,45 +6545,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_dna_isolate_meth",
-      "definition_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metagenomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "16",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Describe the method/protocol/kit used to extract DNA/RNA.",
-      "title": "DNA Isolation Method",
-      "examples": [
-        {
-          "value": "phenol/chloroform extraction",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_isolate_meth",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
-      "alias": "dna_isolate_meth",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dna_isolate_meth",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "soil_emsl_jgi_mg_dna_organisms",
       "definition_uri": "https://example.com/nmdc_dh/dna_organisms",
       "annotations": [
@@ -6416,8 +6584,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_dna_project_contact",
-      "definition_uri": "https://example.com/nmdc_dh/dna_project_contact",
+      "name": "soil_emsl_jgi_mg_dna_collect_site",
+      "definition_uri": "https://example.com/nmdc_dh/dna_collect_site",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -6426,39 +6594,37 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "18",
+          "value": "15",
           "@type": "Annotation"
         }
       ],
-      "title": "DNA Seq Project Contact",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
+      "description": "Provide information on the site your DNA sample was collected from",
+      "title": "DNA Collection Site",
       "examples": [
         {
-          "value": "John Jones",
+          "value": "untreated pond water",
           "@type": "Example"
         }
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_project_contact",
+      "is_a": "dna_collect_site",
       "string_serialization": "{text}",
       "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_project_contact",
-      "alias": "dna_project_contact",
+      "slot_uri": "https://example.com/nmdc_dh/dna_collect_site",
+      "alias": "dna_collect_site",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "dna_project_contact",
+      "usage_slot_name": "dna_collect_site",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_dna_samp_ID",
-      "definition_uri": "https://example.com/nmdc_dh/dna_samp_ID",
+      "name": "soil_emsl_jgi_mg_dna_isolate_meth",
+      "definition_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -6467,194 +6633,30 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "3",
+          "value": "16",
           "@type": "Annotation"
         }
       ],
-      "title": "DNA Sample ID",
-      "todos": [
-        "Removed identifier = TRUE from dna_samp_ID in JGI_sample_slots, as a class can't have two identifiers. How to force uniqueness? Moot because that column will be prefilled?"
-      ],
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
+      "description": "Describe the method/protocol/kit used to extract DNA/RNA.",
+      "title": "DNA Isolation Method",
       "examples": [
         {
-          "value": "187654",
+          "value": "phenol/chloroform extraction",
           "@type": "Example"
         }
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_samp_ID",
+      "is_a": "dna_isolate_meth",
       "string_serialization": "{text}",
       "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_samp_ID",
-      "alias": "dna_samp_ID",
+      "slot_uri": "https://example.com/nmdc_dh/dna_isolate_meth",
+      "alias": "dna_isolate_meth",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "dna_samp_ID",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_dna_sample_format",
-      "definition_uri": "https://example.com/nmdc_dh/dna_sample_format",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metagenomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "12",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Solution in which the DNA sample has been suspended",
-      "title": "DNA Sample Format",
-      "examples": [
-        {
-          "value": "Water",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_sample_format",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_sample_format",
-      "alias": "dna_sample_format",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dna_sample_format",
-      "range": "dna_sample_format_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_dna_sample_name",
-      "definition_uri": "https://example.com/nmdc_dh/dna_sample_name",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metagenomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "4",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Give the DNA sample a name that is meaningful to you. Sample names must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.",
-      "title": "DNA Sample Name",
-      "examples": [
-        {
-          "value": "JGI_pond_041618",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_sample_name",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_sample_name",
-      "alias": "dna_sample_name",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dna_sample_name",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_dna_seq_project",
-      "definition_uri": "https://example.com/nmdc_dh/dna_seq_project",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metagenomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "1",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "DNA Seq Project ID",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
-      "examples": [
-        {
-          "value": "1191234",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_seq_project",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_seq_project",
-      "alias": "dna_seq_project",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dna_seq_project",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_dna_seq_project_name",
-      "definition_uri": "https://example.com/nmdc_dh/dna_seq_project_name",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metagenomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "2",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "DNA Seq Project Name",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
-      "examples": [
-        {
-          "value": "JGI Pond metagenomics",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_seq_project_name",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_seq_project_name",
-      "alias": "dna_seq_project_name",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dna_seq_project_name",
+      "usage_slot_name": "dna_isolate_meth",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
@@ -6701,8 +6703,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_dna_volume",
-      "definition_uri": "https://example.com/nmdc_dh/dna_volume",
+      "name": "soil_emsl_jgi_mg_dna_project_contact",
+      "definition_uri": "https://example.com/nmdc_dh/dna_project_contact",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -6711,36 +6713,34 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "6",
+          "value": "18",
           "@type": "Annotation"
         }
       ],
-      "title": "DNA Volume in uL",
+      "title": "DNA Seq Project Contact",
       "comments": [
-        "Units must be in uL. Enter the numerical part only. Value must 0-1000. Values <25 by special permission only."
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
       ],
       "examples": [
         {
-          "value": "25",
+          "value": "John Jones",
           "@type": "Example"
         }
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dna_volume",
-      "string_serialization": "{float}",
+      "is_a": "dna_project_contact",
+      "string_serialization": "{text}",
       "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/dna_volume",
-      "alias": "dna_volume",
+      "slot_uri": "https://example.com/nmdc_dh/dna_project_contact",
+      "alias": "dna_project_contact",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "dna_volume",
+      "usage_slot_name": "dna_project_contact",
       "range": "string",
       "required": true,
-      "minimum_value": 0,
-      "maximum_value": 1000,
       "@type": "SlotDefinition"
     },
     {
@@ -6782,347 +6782,6 @@
       "usage_slot_name": "proposal_dna",
       "range": "string",
       "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_micro_biomass_C_meth",
-      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "21",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Reference or method used in determining microbial biomass",
-      "title": "microbial biomass carbon method",
-      "comments": [
-        "required if \"microbial_biomass_C\" is provided"
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:micro_biomass_meth"
-      ],
-      "is_a": "micro_biomass_C_meth",
-      "string_serialization": "{PMID}|{DOI}|{URL}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
-      "alias": "micro_biomass_C_meth",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "micro_biomass_C_meth",
-      "range": "string",
-      "recommended": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_micro_biomass_N_meth",
-      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "23",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Reference or method used in determining microbial biomass nitrogen",
-      "title": "microbial biomass nitrogen method",
-      "comments": [
-        "required if \"microbial_biomass_N\" is provided"
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:micro_biomass_meth"
-      ],
-      "is_a": "micro_biomass_N_meth",
-      "string_serialization": "{PMID}|{DOI}|{URL}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
-      "alias": "micro_biomass_N_meth",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "micro_biomass_N_meth",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_microbial_biomass_C",
-      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "20",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
-      "title": "microbial biomass carbon",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:microbial_biomass"
-      ],
-      "is_a": "microbial_biomass_C",
-      "string_serialization": "{float} {unit}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
-      "alias": "microbial_biomass_C",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "microbial_biomass_C",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_microbial_biomass_N",
-      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "22",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
-      "title": "microbial biomass nitrogen",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:microbial_biomass"
-      ],
-      "is_a": "microbial_biomass_N",
-      "string_serialization": "{float} {unit}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
-      "alias": "microbial_biomass_N",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "microbial_biomass_N",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_non_microb_biomass",
-      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "18",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Amount of biomass; should include the name for the part of biomass measured, e.g.insect, plant, total. Can include multiple measurements separated by ;",
-      "title": "non-microbial biomass",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:biomass|microbial_biomass"
-      ],
-      "is_a": "non_microb_biomass",
-      "string_serialization": "{text};{float} {unit}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass",
-      "alias": "non_microb_biomass",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "non_microb_biomass",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_non_microb_biomass_method",
-      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "19",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Reference or method used in determining biomass",
-      "title": "non-microbial biomass method",
-      "comments": [
-        "required if \"non-microbial biomass\" is provided"
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:microbial_biomass"
-      ],
-      "is_a": "non_microb_biomass_method",
-      "string_serialization": "{PMID}|{DOI}|{URL}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
-      "alias": "non_microb_biomass_method",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "non_microb_biomass_method",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_org_nitro_method",
-      "definition_uri": "https://example.com/nmdc_dh/org_nitro_method",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "24",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Method used for obtaining organic nitrogen",
-      "title": "organic nitrogen method",
-      "comments": [
-        "required if \"org_nitro\" is provided"
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:org_nitro|tot_nitro_cont_meth"
-      ],
-      "is_a": "org_nitro_method",
-      "string_serialization": "{PMID}|{DOI}|{URL}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/org_nitro_method",
-      "alias": "org_nitro_method",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "org_nitro_method",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_collection_date_inc",
-      "definition_uri": "https://example.com/nmdc_dh/collection_date_inc",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "5",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Date the incubation was harvested/collected/ended. Only relevant for incubation samples.",
-      "title": "Incubation Collection Date",
-      "notes": [
-        "MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date only"
-      ],
-      "comments": [
-        "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable."
-      ],
-      "examples": [
-        {
-          "value": "2021-04-15; 2021-04; 2021",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:collection_date"
-      ],
-      "is_a": "collection_date_inc",
-      "string_serialization": "{date, arbitrary precision}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/collection_date_inc",
-      "alias": "collection_date_inc",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "collection_date_inc",
-      "range": "string",
-      "recommended": true,
       "@type": "SlotDefinition"
     },
     {
@@ -7174,6 +6833,54 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "soil_emsl_jgi_mg_collection_date_inc",
+      "definition_uri": "https://example.com/nmdc_dh/collection_date_inc",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "5",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Date the incubation was harvested/collected/ended. Only relevant for incubation samples.",
+      "title": "Incubation Collection Date",
+      "notes": [
+        "MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date only"
+      ],
+      "comments": [
+        "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable."
+      ],
+      "examples": [
+        {
+          "value": "2021-04-15; 2021-04; 2021",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:collection_date"
+      ],
+      "is_a": "collection_date_inc",
+      "string_serialization": "{date, arbitrary precision}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/collection_date_inc",
+      "alias": "collection_date_inc",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "collection_date_inc",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "soil_emsl_jgi_mg_collection_time_inc",
       "definition_uri": "https://example.com/nmdc_dh/collection_time_inc",
       "annotations": [
@@ -7217,165 +6924,6 @@
       ],
       "is_usage_slot": true,
       "usage_slot_name": "collection_time_inc",
-      "range": "string",
-      "recommended": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_experimental_factor_other",
-      "definition_uri": "https://example.com/nmdc_dh/experimental_factor_other",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "15",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "optional",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Other details about your sample that you feel can't be accurately represented in the available columns.",
-      "title": "experimental factor- other",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:experimental_factor|additional_info"
-      ],
-      "is_a": "experimental_factor_other",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/experimental_factor_other",
-      "alias": "experimental_factor_other",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "experimental_factor_other",
-      "range": "string",
-      "recommended": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_filter_method",
-      "definition_uri": "https://example.com/nmdc_dh/filter_method",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "13",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Type of filter used or how the sample was filtered",
-      "title": "Filter Method",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:filter_type"
-      ],
-      "is_a": "filter_method",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/filter_method",
-      "alias": "filter_method",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "filter_method",
-      "range": "string",
-      "recommended": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_isotope_exposure",
-      "definition_uri": "https://example.com/nmdc_dh/isotope_exposure",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "26",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "List isotope exposure or addition applied to your sample.",
-      "title": "isotope exposure/addition",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:chem_administration"
-      ],
-      "is_a": "isotope_exposure",
-      "string_serialization": "{termLabel} {[termID]}; {timestamp}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/isotope_exposure",
-      "alias": "isotope_exposure",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "isotope_exposure",
-      "range": "string",
-      "recommended": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_other_treatment",
-      "definition_uri": "https://example.com/nmdc_dh/other_treatment",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "MIxS Inspired",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "25",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Other treatments applied to your samples that are not applicable to the provided fields",
-      "title": "other treatments",
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "MIxS:additional_info"
-      ],
-      "is_a": "other_treatment",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/other_treatment",
-      "alias": "other_treatment",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "other_treatment",
       "range": "string",
       "recommended": true,
       "@type": "SlotDefinition"
@@ -7477,6 +7025,496 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "soil_emsl_jgi_mg_filter_method",
+      "definition_uri": "https://example.com/nmdc_dh/filter_method",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "13",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Type of filter used or how the sample was filtered",
+      "title": "Filter Method",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:filter_type"
+      ],
+      "is_a": "filter_method",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/filter_method",
+      "alias": "filter_method",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "filter_method",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_experimental_factor_other",
+      "definition_uri": "https://example.com/nmdc_dh/experimental_factor_other",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "15",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "optional",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Other details about your sample that you feel can't be accurately represented in the available columns.",
+      "title": "experimental factor- other",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:experimental_factor|additional_info"
+      ],
+      "is_a": "experimental_factor_other",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/experimental_factor_other",
+      "alias": "experimental_factor_other",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "experimental_factor_other",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_non_microb_biomass",
+      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "18",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Amount of biomass; should include the name for the part of biomass measured, e.g.insect, plant, total. Can include multiple measurements separated by ;",
+      "title": "non-microbial biomass",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:biomass|microbial_biomass"
+      ],
+      "is_a": "non_microb_biomass",
+      "string_serialization": "{text};{float} {unit}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass",
+      "alias": "non_microb_biomass",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "non_microb_biomass",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_non_microb_biomass_method",
+      "definition_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "19",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Reference or method used in determining biomass",
+      "title": "non-microbial biomass method",
+      "comments": [
+        "required if \"non-microbial biomass\" is provided"
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:microbial_biomass"
+      ],
+      "is_a": "non_microb_biomass_method",
+      "string_serialization": "{PMID}|{DOI}|{URL}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/non_microb_biomass_method",
+      "alias": "non_microb_biomass_method",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "non_microb_biomass_method",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_microbial_biomass_C",
+      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "20",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
+      "title": "microbial biomass carbon",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:microbial_biomass"
+      ],
+      "is_a": "microbial_biomass_C",
+      "string_serialization": "{float} {unit}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_C",
+      "alias": "microbial_biomass_C",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "microbial_biomass_C",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_micro_biomass_C_meth",
+      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "21",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Reference or method used in determining microbial biomass",
+      "title": "microbial biomass carbon method",
+      "comments": [
+        "required if \"microbial_biomass_C\" is provided"
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:micro_biomass_meth"
+      ],
+      "is_a": "micro_biomass_C_meth",
+      "string_serialization": "{PMID}|{DOI}|{URL}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_C_meth",
+      "alias": "micro_biomass_C_meth",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "micro_biomass_C_meth",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_microbial_biomass_N",
+      "definition_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "22",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "The part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units",
+      "title": "microbial biomass nitrogen",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:microbial_biomass"
+      ],
+      "is_a": "microbial_biomass_N",
+      "string_serialization": "{float} {unit}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/microbial_biomass_N",
+      "alias": "microbial_biomass_N",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "microbial_biomass_N",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_micro_biomass_N_meth",
+      "definition_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "23",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Reference or method used in determining microbial biomass nitrogen",
+      "title": "microbial biomass nitrogen method",
+      "comments": [
+        "required if \"microbial_biomass_N\" is provided"
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:micro_biomass_meth"
+      ],
+      "is_a": "micro_biomass_N_meth",
+      "string_serialization": "{PMID}|{DOI}|{URL}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/micro_biomass_N_meth",
+      "alias": "micro_biomass_N_meth",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "micro_biomass_N_meth",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_org_nitro_method",
+      "definition_uri": "https://example.com/nmdc_dh/org_nitro_method",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "24",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "biogeochemistry",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Method used for obtaining organic nitrogen",
+      "title": "organic nitrogen method",
+      "comments": [
+        "required if \"org_nitro\" is provided"
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:org_nitro|tot_nitro_cont_meth"
+      ],
+      "is_a": "org_nitro_method",
+      "string_serialization": "{PMID}|{DOI}|{URL}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/org_nitro_method",
+      "alias": "org_nitro_method",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "org_nitro_method",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_other_treatment",
+      "definition_uri": "https://example.com/nmdc_dh/other_treatment",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "25",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "treatment",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Other treatments applied to your samples that are not applicable to the provided fields",
+      "title": "other treatments",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:additional_info"
+      ],
+      "is_a": "other_treatment",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/other_treatment",
+      "alias": "other_treatment",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "other_treatment",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_isotope_exposure",
+      "definition_uri": "https://example.com/nmdc_dh/isotope_exposure",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "MIxS Inspired",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "26",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "categorical_subsection",
+          "value": "treatment",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "List isotope exposure or addition applied to your sample.",
+      "title": "isotope exposure/addition",
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "MIxS:chem_administration"
+      ],
+      "is_a": "isotope_exposure",
+      "string_serialization": "{termLabel} {[termID]}; {timestamp}",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/isotope_exposure",
+      "alias": "isotope_exposure",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "isotope_exposure",
+      "range": "string",
+      "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_env_package",
+      "definition_uri": "https://example.com/nmdc_dh/env_package",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "Sample ID",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "3",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Select the MIxS enviromental package that best describes the environment from which your sample was collected.",
+      "title": "environmental package",
+      "examples": [
+        {
+          "value": "soil",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "env_package",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://example.com/nmdc_dh/env_package",
+      "alias": "env_package",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "env_package",
+      "range": "env_package_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "soil_emsl_jgi_mg_analysis_type",
       "definition_uri": "https://example.com/nmdc_dh/analysis_type",
       "annotations": [
@@ -7515,44 +7553,6 @@
       "is_usage_slot": true,
       "usage_slot_name": "analysis_type",
       "range": "analysis_type_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_env_package",
-      "definition_uri": "https://example.com/nmdc_dh/env_package",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "3",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Select the MIxS enviromental package that best describes the environment from which your sample was collected.",
-      "title": "environmental package",
-      "examples": [
-        {
-          "value": "soil",
-          "@type": "Example"
-        }
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "env_package",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://example.com/nmdc_dh/env_package",
-      "alias": "env_package",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "env_package",
-      "range": "env_package_enum",
       "required": true,
       "@type": "SlotDefinition"
     },
@@ -7632,6 +7632,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "ecosystem",
       "range": "ecosystem_enum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -7668,6 +7669,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "ecosystem_category",
       "range": "ecosystem_category_enum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -7704,6 +7706,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "ecosystem_subtype",
       "range": "ecosystem_subtype_enum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -7740,6 +7743,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "ecosystem_type",
       "range": "ecosystem_type_enum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -7776,6 +7780,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "specific_ecosystem",
       "range": "specific_ecosystem_enum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -9434,7 +9439,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "MIxS (modified)",
+          "value": "MIxS",
           "@type": "Annotation"
         }
       ],
@@ -12810,8 +12815,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_dnase_rna",
-      "definition_uri": "https://example.com/nmdc_dh/dnase_rna",
+      "name": "soil_emsl_jgi_mt_rna_seq_project",
+      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -12820,60 +12825,203 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "32",
+          "value": "20",
           "@type": "Annotation"
         }
       ],
-      "title": "DNAse Treated",
-      "comments": [
-        "Note DNAse treatment is required for all RNA samples."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "dnase_rna",
-      "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/dnase_rna",
-      "alias": "dnase_rna",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "dnase_rna",
-      "range": "dnase_rna_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mt_proposal_rna",
-      "definition_uri": "https://example.com/nmdc_dh/proposal_rna",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metatranscriptomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "38",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "RNA Proposal ID",
+      "title": "RNA Seq Project ID",
       "comments": [
         "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "proposal_rna",
+      "is_a": "rna_seq_project",
       "string_serialization": "{text}",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/proposal_rna",
-      "alias": "proposal_rna",
+      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project",
+      "alias": "rna_seq_project",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "proposal_rna",
+      "usage_slot_name": "rna_seq_project",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mt_rna_seq_project_name",
+      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metatranscriptomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "21",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "RNA Seq Project Name",
+      "comments": [
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "rna_seq_project_name",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMt",
+      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
+      "alias": "rna_seq_project_name",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "rna_seq_project_name",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mt_rna_samp_ID",
+      "definition_uri": "https://example.com/nmdc_dh/rna_samp_ID",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metatranscriptomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "22",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "RNA Sample ID",
+      "comments": [
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "rna_samp_ID",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMt",
+      "slot_uri": "https://example.com/nmdc_dh/rna_samp_ID",
+      "alias": "rna_samp_ID",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "rna_samp_ID",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mt_rna_sample_name",
+      "definition_uri": "https://example.com/nmdc_dh/rna_sample_name",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metatranscriptomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "23",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Give the RNA sample a name that is meaningful to you. Sample names must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.",
+      "title": "RNA Sample Name",
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "rna_sample_name",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMt",
+      "slot_uri": "https://example.com/nmdc_dh/rna_sample_name",
+      "alias": "rna_sample_name",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "rna_sample_name",
+      "range": "string",
+      "required": true,
+      "minimum_value": 0,
+      "maximum_value": 2000,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mt_rna_concentration",
+      "definition_uri": "https://example.com/nmdc_dh/rna_concentration",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metatranscriptomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "24",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "RNA Concentration in ng/uL",
+      "comments": [
+        "Units must be in ng/uL. Enter the numerical part only. Must be calculated using a fluorometric method. Acceptable values are 0-2000."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "rna_concentration",
+      "string_serialization": "{float}",
+      "domain": "SoilEmslJgiMt",
+      "slot_uri": "https://example.com/nmdc_dh/rna_concentration",
+      "alias": "rna_concentration",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "rna_concentration",
+      "range": "string",
+      "required": true,
+      "minimum_value": 0,
+      "maximum_value": 1000,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mt_rna_volume",
+      "definition_uri": "https://example.com/nmdc_dh/rna_volume",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metatranscriptomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "25",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "RNA Volume in uL",
+      "comments": [
+        "Units must be in uL. Enter the numerical part only. Value must 0-1000. Values <25 by special permission only."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "rna_volume",
+      "string_serialization": "{float}",
+      "domain": "SoilEmslJgiMt",
+      "slot_uri": "https://example.com/nmdc_dh/rna_volume",
+      "alias": "rna_volume",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "rna_volume",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
@@ -12951,8 +13099,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_rna_collect_site",
-      "definition_uri": "https://example.com/nmdc_dh/rna_collect_site",
+      "name": "soil_emsl_jgi_mt_rna_container_ID",
+      "definition_uri": "https://example.com/nmdc_dh/rna_container_ID",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -12961,63 +13109,28 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "34",
+          "value": "28",
           "@type": "Annotation"
         }
       ],
-      "description": "Provide information on the site your RNA sample was collected from",
-      "title": "RNA Collection Site",
+      "title": "RNA Container Label",
+      "comments": [
+        "Must be unique across all tubes and plates, and <20 characters. All samples in a plate should have the same plate label."
+      ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_collect_site",
+      "is_a": "rna_container_ID",
       "string_serialization": "{text}",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_collect_site",
-      "alias": "rna_collect_site",
+      "slot_uri": "https://example.com/nmdc_dh/rna_container_ID",
+      "alias": "rna_container_ID",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "rna_collect_site",
+      "usage_slot_name": "rna_container_ID",
       "range": "string",
       "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mt_rna_concentration",
-      "definition_uri": "https://example.com/nmdc_dh/rna_concentration",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metatranscriptomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "24",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "RNA Concentration in ng/uL",
-      "comments": [
-        "Units must be in ng/uL. Enter the numerical part only. Must be calculated using a fluorometric method. Acceptable values are 0-2000."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_concentration",
-      "string_serialization": "{float}",
-      "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_concentration",
-      "alias": "rna_concentration",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "rna_concentration",
-      "range": "string",
-      "required": true,
-      "minimum_value": 0,
-      "maximum_value": 1000,
       "@type": "SlotDefinition"
     },
     {
@@ -13088,8 +13201,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_rna_container_ID",
-      "definition_uri": "https://example.com/nmdc_dh/rna_container_ID",
+      "name": "soil_emsl_jgi_mt_rna_sample_format",
+      "definition_uri": "https://example.com/nmdc_dh/rna_sample_format",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -13098,33 +13211,30 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "28",
+          "value": "31",
           "@type": "Annotation"
         }
       ],
-      "title": "RNA Container Label",
-      "comments": [
-        "Must be unique across all tubes and plates, and <20 characters. All samples in a plate should have the same plate label."
-      ],
+      "description": "Solution in which the RNA sample has been suspended",
+      "title": "RNA Sample Format",
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_container_ID",
-      "string_serialization": "{text}",
+      "is_a": "rna_sample_format",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_container_ID",
-      "alias": "rna_container_ID",
+      "slot_uri": "https://example.com/nmdc_dh/rna_sample_format",
+      "alias": "rna_sample_format",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "rna_container_ID",
-      "range": "string",
+      "usage_slot_name": "rna_sample_format",
+      "range": "rna_sample_format_enum",
       "required": true,
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_rna_isolate_meth",
-      "definition_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
+      "name": "soil_emsl_jgi_mt_dnase_rna",
+      "definition_uri": "https://example.com/nmdc_dh/dnase_rna",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -13133,25 +13243,26 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "35",
+          "value": "32",
           "@type": "Annotation"
         }
       ],
-      "description": "Describe the method/protocol/kit used to extract DNA/RNA.",
-      "title": "RNA Isolation Method",
+      "title": "DNAse Treated",
+      "comments": [
+        "Note DNAse treatment is required for all RNA samples."
+      ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_isolate_meth",
-      "string_serialization": "{text}",
+      "is_a": "dnase_rna",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
-      "alias": "rna_isolate_meth",
+      "slot_uri": "https://example.com/nmdc_dh/dnase_rna",
+      "alias": "dnase_rna",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "rna_isolate_meth",
-      "range": "string",
+      "usage_slot_name": "dnase_rna",
+      "range": "dnase_rna_enum",
       "required": true,
       "@type": "SlotDefinition"
     },
@@ -13189,8 +13300,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_rna_project_contact",
-      "definition_uri": "https://example.com/nmdc_dh/rna_project_contact",
+      "name": "soil_emsl_jgi_mt_rna_collect_site",
+      "definition_uri": "https://example.com/nmdc_dh/rna_collect_site",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -13199,33 +13310,31 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "37",
+          "value": "34",
           "@type": "Annotation"
         }
       ],
-      "title": "RNA Seq Project Contact",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
+      "description": "Provide information on the site your RNA sample was collected from",
+      "title": "RNA Collection Site",
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_project_contact",
+      "is_a": "rna_collect_site",
       "string_serialization": "{text}",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_project_contact",
-      "alias": "rna_project_contact",
+      "slot_uri": "https://example.com/nmdc_dh/rna_collect_site",
+      "alias": "rna_collect_site",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "rna_project_contact",
+      "usage_slot_name": "rna_collect_site",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_rna_samp_ID",
-      "definition_uri": "https://example.com/nmdc_dh/rna_samp_ID",
+      "name": "soil_emsl_jgi_mt_rna_isolate_meth",
+      "definition_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -13234,163 +13343,24 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "22",
+          "value": "35",
           "@type": "Annotation"
         }
       ],
-      "title": "RNA Sample ID",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
+      "description": "Describe the method/protocol/kit used to extract DNA/RNA.",
+      "title": "RNA Isolation Method",
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_samp_ID",
+      "is_a": "rna_isolate_meth",
       "string_serialization": "{text}",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_samp_ID",
-      "alias": "rna_samp_ID",
+      "slot_uri": "https://example.com/nmdc_dh/rna_isolate_meth",
+      "alias": "rna_isolate_meth",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "rna_samp_ID",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mt_rna_sample_format",
-      "definition_uri": "https://example.com/nmdc_dh/rna_sample_format",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metatranscriptomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "31",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Solution in which the RNA sample has been suspended",
-      "title": "RNA Sample Format",
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_sample_format",
-      "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_sample_format",
-      "alias": "rna_sample_format",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "rna_sample_format",
-      "range": "rna_sample_format_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mt_rna_sample_name",
-      "definition_uri": "https://example.com/nmdc_dh/rna_sample_name",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metatranscriptomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "23",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Give the RNA sample a name that is meaningful to you. Sample names must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.",
-      "title": "RNA Sample Name",
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_sample_name",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_sample_name",
-      "alias": "rna_sample_name",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "rna_sample_name",
-      "range": "string",
-      "required": true,
-      "minimum_value": 0,
-      "maximum_value": 2000,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mt_rna_seq_project",
-      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metatranscriptomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "20",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "RNA Seq Project ID",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_seq_project",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project",
-      "alias": "rna_seq_project",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "rna_seq_project",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mt_rna_seq_project_name",
-      "definition_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
-      "annotations": [
-        {
-          "tag": "dh:section_name",
-          "value": "JGI-Metatranscriptomics",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:column_number",
-          "value": "21",
-          "@type": "Annotation"
-        }
-      ],
-      "title": "RNA Seq Project Name",
-      "comments": [
-        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_seq_project_name",
-      "string_serialization": "{text}",
-      "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_seq_project_name",
-      "alias": "rna_seq_project_name",
-      "owner": "SoilEmslJgiMt",
-      "domain_of": [
-        "SoilEmslJgiMt"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "rna_seq_project_name",
+      "usage_slot_name": "rna_isolate_meth",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
@@ -13431,8 +13401,8 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mt_rna_volume",
-      "definition_uri": "https://example.com/nmdc_dh/rna_volume",
+      "name": "soil_emsl_jgi_mt_rna_project_contact",
+      "definition_uri": "https://example.com/nmdc_dh/rna_project_contact",
       "annotations": [
         {
           "tag": "dh:section_name",
@@ -13441,26 +13411,61 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "25",
+          "value": "37",
           "@type": "Annotation"
         }
       ],
-      "title": "RNA Volume in uL",
+      "title": "RNA Seq Project Contact",
       "comments": [
-        "Units must be in uL. Enter the numerical part only. Value must 0-1000. Values <25 by special permission only."
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
       ],
       "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "rna_volume",
-      "string_serialization": "{float}",
+      "is_a": "rna_project_contact",
+      "string_serialization": "{text}",
       "domain": "SoilEmslJgiMt",
-      "slot_uri": "https://example.com/nmdc_dh/rna_volume",
-      "alias": "rna_volume",
+      "slot_uri": "https://example.com/nmdc_dh/rna_project_contact",
+      "alias": "rna_project_contact",
       "owner": "SoilEmslJgiMt",
       "domain_of": [
         "SoilEmslJgiMt"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "rna_volume",
+      "usage_slot_name": "rna_project_contact",
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mt_proposal_rna",
+      "definition_uri": "https://example.com/nmdc_dh/proposal_rna",
+      "annotations": [
+        {
+          "tag": "dh:section_name",
+          "value": "JGI-Metatranscriptomics",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:column_number",
+          "value": "38",
+          "@type": "Annotation"
+        }
+      ],
+      "title": "RNA Proposal ID",
+      "comments": [
+        "Do not edit these values. A template will be provided by NMDC in which these values have been pre-filled."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "proposal_rna",
+      "string_serialization": "{text}",
+      "domain": "SoilEmslJgiMt",
+      "slot_uri": "https://example.com/nmdc_dh/proposal_rna",
+      "alias": "proposal_rna",
+      "owner": "SoilEmslJgiMt",
+      "domain_of": [
+        "SoilEmslJgiMt"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "proposal_rna",
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
@@ -13555,49 +13560,49 @@
       "from_schema": "https://example.com/nmdc_dh",
       "is_a": "NmdcDhInterface",
       "slots": [
-        "soil_emsl_jgi_mg_EMSL_store_temp",
         "soil_emsl_jgi_mg_project_ID",
-        "soil_emsl_jgi_mg_replicate_number",
-        "soil_emsl_jgi_mg_sample_shipped",
         "soil_emsl_jgi_mg_sample_type",
+        "soil_emsl_jgi_mg_sample_shipped",
+        "soil_emsl_jgi_mg_EMSL_store_temp",
         "soil_emsl_jgi_mg_technical_reps",
-        "soil_emsl_jgi_mg_dna_absorb1",
-        "soil_emsl_jgi_mg_dna_absorb2",
-        "soil_emsl_jgi_mg_dna_collect_site",
-        "soil_emsl_jgi_mg_dna_concentration",
-        "soil_emsl_jgi_mg_dna_cont_type",
-        "soil_emsl_jgi_mg_dna_cont_well",
-        "soil_emsl_jgi_mg_dna_container_ID",
-        "soil_emsl_jgi_mg_dna_dnase",
-        "soil_emsl_jgi_mg_dna_isolate_meth",
-        "soil_emsl_jgi_mg_dna_organisms",
-        "soil_emsl_jgi_mg_dna_project_contact",
-        "soil_emsl_jgi_mg_dna_samp_ID",
-        "soil_emsl_jgi_mg_dna_sample_format",
-        "soil_emsl_jgi_mg_dna_sample_name",
+        "soil_emsl_jgi_mg_replicate_number",
         "soil_emsl_jgi_mg_dna_seq_project",
         "soil_emsl_jgi_mg_dna_seq_project_name",
-        "soil_emsl_jgi_mg_dna_seq_project_PI",
+        "soil_emsl_jgi_mg_dna_samp_ID",
+        "soil_emsl_jgi_mg_dna_sample_name",
+        "soil_emsl_jgi_mg_dna_concentration",
         "soil_emsl_jgi_mg_dna_volume",
+        "soil_emsl_jgi_mg_dna_absorb1",
+        "soil_emsl_jgi_mg_dna_absorb2",
+        "soil_emsl_jgi_mg_dna_container_ID",
+        "soil_emsl_jgi_mg_dna_cont_type",
+        "soil_emsl_jgi_mg_dna_cont_well",
+        "soil_emsl_jgi_mg_dna_sample_format",
+        "soil_emsl_jgi_mg_dna_dnase",
+        "soil_emsl_jgi_mg_dna_organisms",
+        "soil_emsl_jgi_mg_dna_collect_site",
+        "soil_emsl_jgi_mg_dna_isolate_meth",
+        "soil_emsl_jgi_mg_dna_seq_project_PI",
+        "soil_emsl_jgi_mg_dna_project_contact",
         "soil_emsl_jgi_mg_proposal_dna",
-        "soil_emsl_jgi_mg_micro_biomass_C_meth",
-        "soil_emsl_jgi_mg_micro_biomass_N_meth",
-        "soil_emsl_jgi_mg_microbial_biomass_C",
-        "soil_emsl_jgi_mg_microbial_biomass_N",
-        "soil_emsl_jgi_mg_non_microb_biomass",
-        "soil_emsl_jgi_mg_non_microb_biomass_method",
-        "soil_emsl_jgi_mg_org_nitro_method",
-        "soil_emsl_jgi_mg_collection_date_inc",
         "soil_emsl_jgi_mg_collection_time",
+        "soil_emsl_jgi_mg_collection_date_inc",
         "soil_emsl_jgi_mg_collection_time_inc",
-        "soil_emsl_jgi_mg_experimental_factor_other",
-        "soil_emsl_jgi_mg_filter_method",
-        "soil_emsl_jgi_mg_isotope_exposure",
-        "soil_emsl_jgi_mg_other_treatment",
         "soil_emsl_jgi_mg_start_date_inc",
         "soil_emsl_jgi_mg_start_time_inc",
-        "soil_emsl_jgi_mg_analysis_type",
+        "soil_emsl_jgi_mg_filter_method",
+        "soil_emsl_jgi_mg_experimental_factor_other",
+        "soil_emsl_jgi_mg_non_microb_biomass",
+        "soil_emsl_jgi_mg_non_microb_biomass_method",
+        "soil_emsl_jgi_mg_microbial_biomass_C",
+        "soil_emsl_jgi_mg_micro_biomass_C_meth",
+        "soil_emsl_jgi_mg_microbial_biomass_N",
+        "soil_emsl_jgi_mg_micro_biomass_N_meth",
+        "soil_emsl_jgi_mg_org_nitro_method",
+        "soil_emsl_jgi_mg_other_treatment",
+        "soil_emsl_jgi_mg_isotope_exposure",
         "soil_emsl_jgi_mg_env_package",
+        "soil_emsl_jgi_mg_analysis_type",
         "soil_emsl_jgi_mg_sample_link",
         "ecosystem",
         "ecosystem_category",
@@ -13811,25 +13816,25 @@
       "definition_uri": "https://example.com/nmdc_dh/SoilEmslJgiMt",
       "from_schema": "https://example.com/nmdc_dh",
       "slots": [
-        "soil_emsl_jgi_mt_dnase_rna",
-        "soil_emsl_jgi_mt_proposal_rna",
-        "soil_emsl_jgi_mt_rna_absorb1",
-        "soil_emsl_jgi_mt_rna_absorb2",
-        "soil_emsl_jgi_mt_rna_collect_site",
-        "soil_emsl_jgi_mt_rna_concentration",
-        "soil_emsl_jgi_mt_rna_cont_type",
-        "soil_emsl_jgi_mt_rna_cont_well",
-        "soil_emsl_jgi_mt_rna_container_ID",
-        "soil_emsl_jgi_mt_rna_isolate_meth",
-        "soil_emsl_jgi_mt_rna_organisms",
-        "soil_emsl_jgi_mt_rna_project_contact",
-        "soil_emsl_jgi_mt_rna_samp_ID",
-        "soil_emsl_jgi_mt_rna_sample_format",
-        "soil_emsl_jgi_mt_rna_sample_name",
         "soil_emsl_jgi_mt_rna_seq_project",
         "soil_emsl_jgi_mt_rna_seq_project_name",
+        "soil_emsl_jgi_mt_rna_samp_ID",
+        "soil_emsl_jgi_mt_rna_sample_name",
+        "soil_emsl_jgi_mt_rna_concentration",
+        "soil_emsl_jgi_mt_rna_volume",
+        "soil_emsl_jgi_mt_rna_absorb1",
+        "soil_emsl_jgi_mt_rna_absorb2",
+        "soil_emsl_jgi_mt_rna_container_ID",
+        "soil_emsl_jgi_mt_rna_cont_type",
+        "soil_emsl_jgi_mt_rna_cont_well",
+        "soil_emsl_jgi_mt_rna_sample_format",
+        "soil_emsl_jgi_mt_dnase_rna",
+        "soil_emsl_jgi_mt_rna_organisms",
+        "soil_emsl_jgi_mt_rna_collect_site",
+        "soil_emsl_jgi_mt_rna_isolate_meth",
         "soil_emsl_jgi_mt_rna_seq_project_PI",
-        "soil_emsl_jgi_mt_rna_volume"
+        "soil_emsl_jgi_mt_rna_project_contact",
+        "soil_emsl_jgi_mt_proposal_rna"
       ],
       "slot_usage": {},
       "class_uri": "https://example.com/nmdc_dh/SoilEmslJgiMt",
@@ -14048,9 +14053,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-02-22T15:38:39",
-  "source_file_size": 224360,
-  "generation_date": "2022-02-22T15:38:43",
+  "source_file_date": "2022-02-22T19:04:39",
+  "source_file_size": 224464,
+  "generation_date": "2022-02-22T19:04:44",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",

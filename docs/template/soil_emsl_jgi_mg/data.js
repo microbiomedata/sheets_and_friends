@@ -133,7 +133,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "",
+        "requirement": "required",
         "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
         "guidance": "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively.",
         "examples": "",
@@ -157,7 +157,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "",
+        "requirement": "required",
         "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
         "guidance": "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc.",
         "examples": "",
@@ -181,7 +181,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "",
+        "requirement": "required",
         "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
         "guidance": "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc.",
         "examples": "",
@@ -205,7 +205,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "",
+        "requirement": "required",
         "description": "Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.",
         "guidance": "Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category.",
         "examples": "",
@@ -249,7 +249,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "",
+        "requirement": "required",
         "description": "Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.",
         "guidance": "Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system.",
         "examples": "",
@@ -854,6 +854,27 @@ var DATA = [
   {
     "fieldName": "MIxS",
     "children": [
+      {
+        "fieldName": "geographic location (country and/or sea,region)",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000010",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
+        "guidance": "Pattern hint: {term}: {term}, {text}",
+        "examples": "USA: Maryland, Bethesda",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "geo_loc_name"
+            }
+          ]
+        }
+      },
       {
         "fieldName": "slope aspect",
         "capitalize": "",
@@ -2145,38 +2166,6 @@ var DATA = [
     "fieldName": "MIxS (modified)",
     "children": [
       {
-        "fieldName": "growth facility",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001043",
-        "datatype": "select",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.",
-        "guidance": "Pattern hint: {text}|{termLabel} {[termID]}",
-        "examples": "Growth chamber [CO_715:0000189]",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "growth_facil"
-            }
-          ]
-        },
-        "schema:ItemList": {
-          "experimental_garden": {},
-          "field": {},
-          "field_incubation": {},
-          "glasshouse": {},
-          "greenhouse": {},
-          "growth_chamber": {},
-          "lab_incubation": {},
-          "open_top_chamber": {},
-          "other": {}
-        }
-      },
-      {
         "fieldName": "broad-scale environmental context",
         "capitalize": "",
         "ontology_id": "MIXS:0000012",
@@ -2320,29 +2309,34 @@ var DATA = [
         }
       },
       {
-        "fieldName": "storage conditions",
+        "fieldName": "growth facility",
         "capitalize": "",
-        "ontology_id": "MIXS:0000327",
+        "ontology_id": "MIXS:0001043",
         "datatype": "select",
         "source": "",
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
         "requirement": "required",
-        "description": "Explain how the soil sample is stored (fresh/frozen/other).",
-        "guidance": "Pattern hint: {text};{duration}",
-        "examples": "-20 degree Celsius freezer;P2Y10D",
+        "description": "Type of facility/location where the sample was harvested; controlled vocabulary: growth chamber, open top chamber, glasshouse, experimental garden, field.",
+        "guidance": "Pattern hint: {text}|{termLabel} {[termID]}",
+        "examples": "Growth chamber [CO_715:0000189]",
         "exportField": {
           "soil_emsl_jgi_mg": [
             {
-              "field": "store_cond"
+              "field": "growth_facil"
             }
           ]
         },
         "schema:ItemList": {
-          "fresh": {},
-          "frozen": {},
-          "lyophilized": {},
+          "experimental_garden": {},
+          "field": {},
+          "field_incubation": {},
+          "glasshouse": {},
+          "greenhouse": {},
+          "growth_chamber": {},
+          "lab_incubation": {},
+          "open_top_chamber": {},
           "other": {}
         }
       },
@@ -2478,6 +2472,55 @@ var DATA = [
           "woodland clearing [ENVO:00000444]": {
             "ontology_id": "ENVO:00000444"
           }
+        }
+      },
+      {
+        "fieldName": "storage conditions",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000327",
+        "datatype": "select",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "Explain how the soil sample is stored (fresh/frozen/other).",
+        "guidance": "Pattern hint: {text};{duration}",
+        "examples": "-20 degree Celsius freezer;P2Y10D",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "store_cond"
+            }
+          ]
+        },
+        "schema:ItemList": {
+          "fresh": {},
+          "frozen": {},
+          "lyophilized": {},
+          "other": {}
+        }
+      },
+      {
+        "fieldName": "Collection Date",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000011",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The date of sampling",
+        "guidance": "Pattern hint: {date, arbitrary precision}",
+        "examples": "2021-04-15; 2021-04; 2021",
+        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "collection_date"
+            }
+          ]
         }
       },
       {
@@ -2756,49 +2799,6 @@ var DATA = [
           "vertisol [ENVO:00002254]": {
             "ontology_id": "ENVO:00002254"
           }
-        }
-      },
-      {
-        "fieldName": "Collection Date",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000011",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The date of sampling",
-        "guidance": "Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15; 2021-04; 2021",
-        "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "collection_date"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "geographic location (country and/or sea,region)",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000010",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
-        "guidance": "Pattern hint: {term}: {term}, {text}",
-        "examples": "USA: Maryland, Bethesda",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "geo_loc_name"
-            }
-          ]
         }
       },
       {
@@ -3081,6 +3081,27 @@ var DATA = [
         }
       },
       {
+        "fieldName": "climate environment",
+        "capitalize": "",
+        "ontology_id": "MIXS:0001040",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates",
+        "guidance": "Pattern hint: {text};{Rn/start_time/end_time/duration}",
+        "examples": "tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "climate_environment"
+            }
+          ]
+        }
+      },
+      {
         "fieldName": "amount or size of sample collected",
         "capitalize": "",
         "ontology_id": "MIXS:0000001",
@@ -3098,27 +3119,6 @@ var DATA = [
           "soil_emsl_jgi_mg": [
             {
               "field": "samp_size"
-            }
-          ]
-        }
-      },
-      {
-        "fieldName": "climate environment",
-        "capitalize": "",
-        "ontology_id": "MIXS:0001040",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Treatment involving an exposure to a particular climate; treatment regimen including how many times the treatment was repeated, how long each treatment lasted, and the start and end time of the entire treatment; can include multiple climates",
-        "guidance": "Pattern hint: {text};{Rn/start_time/end_time/duration}",
-        "examples": "tropical climate;R2/2018-05-11T14:30/2018-05-11T19:30/P1H30M",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "climate_environment"
             }
           ]
         }
@@ -3194,6 +3194,28 @@ var DATA = [
         }
       },
       {
+        "fieldName": "light regimen",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000569",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "recommended",
+        "description": "Information about treatment(s) involving exposure to light, including both light intensity and quality.",
+        "guidance": "Pattern hint: {text};{float} {unit};{float} {unit}",
+        "examples": "incandescant light;10 lux;450 nanometer",
+        "pattern": "^\\S+.*\\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "light_regm"
+            }
+          ]
+        }
+      },
+      {
         "fieldName": "relationship to oxygen",
         "capitalize": "",
         "ontology_id": "MIXS:0000015",
@@ -3221,28 +3243,6 @@ var DATA = [
           "microanaerobe": {},
           "obligate aerobe": {},
           "obligate anaerobe": {}
-        }
-      },
-      {
-        "fieldName": "light regimen",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000569",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "recommended",
-        "description": "Information about treatment(s) involving exposure to light, including both light intensity and quality.",
-        "guidance": "Pattern hint: {text};{float} {unit};{float} {unit}",
-        "examples": "incandescant light;10 lux;450 nanometer",
-        "pattern": "^\\S+.*\\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+;[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)? \\S+$",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "light_regm"
-            }
-          ]
         }
       },
       {
