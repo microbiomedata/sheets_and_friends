@@ -3337,8 +3337,6 @@ classes:
         - This can vary from 'environmental package' if the sample is an extraction.
         range: sample_type_enum
         required: true
-        examples:
-        - value: water extracted soil
       sample_shipped:
         name: sample_shipped
         annotations:
@@ -3368,8 +3366,6 @@ classes:
         - Enter a temperature in celsius. Numeric portion only.
         string_serialization: '{float}'
         required: true
-        examples:
-        - value: '-80'
       technical_reps:
         name: technical_reps
         annotations:
@@ -3414,8 +3410,6 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: '1191234'
       dna_seq_project_name:
         name: dna_seq_project_name
         annotations:
@@ -3431,8 +3425,6 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: JGI Pond metagenomics
       dna_samp_ID:
         name: dna_samp_ID
         annotations:
@@ -3452,8 +3444,6 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: '187654'
       dna_sample_name:
         name: dna_sample_name
         annotations:
@@ -3469,8 +3459,6 @@ classes:
         title: DNA Sample Name
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: JGI_pond_041618
       dna_concentration:
         name: dna_concentration
         annotations:
@@ -3488,8 +3476,6 @@ classes:
         required: true
         minimum_value: 0
         maximum_value: 2000
-        examples:
-        - value: '100'
       dna_volume:
         name: dna_volume
         annotations:
@@ -3507,8 +3493,6 @@ classes:
         required: true
         minimum_value: 0
         maximum_value: 1000
-        examples:
-        - value: '25'
       dna_absorb1:
         name: dna_absorb1
         annotations:
@@ -3524,8 +3508,6 @@ classes:
         - Recommended value is between 1 and 3.
         string_serialization: '{float}'
         recommended: true
-        examples:
-        - value: '2.02'
       dna_absorb2:
         name: dna_absorb2
         annotations:
@@ -3541,8 +3523,6 @@ classes:
         - Recommended value is between 1 and 3.
         string_serialization: '{float}'
         recommended: true
-        examples:
-        - value: '2.02'
       dna_container_ID:
         name: dna_container_ID
         annotations:
@@ -3558,8 +3538,6 @@ classes:
           in a plate should have the same plate label.
         string_serialization: '{text < 20 characters}'
         required: true
-        examples:
-        - value: Pond_MT_041618
       dna_cont_type:
         name: dna_cont_type
         annotations:
@@ -3573,8 +3551,6 @@ classes:
         title: DNA Container Type
         range: dna_cont_type_enum
         required: true
-        examples:
-        - value: plate
       dna_cont_well:
         name: dna_cont_well
         annotations:
@@ -3591,8 +3567,6 @@ classes:
           will be shipped in a tube.
         string_serialization: '{96 well plate pos}'
         required: true
-        examples:
-        - value: B2
       dna_sample_format:
         name: dna_sample_format
         annotations:
@@ -3606,8 +3580,6 @@ classes:
         title: DNA Sample Format
         range: dna_sample_format_enum
         required: true
-        examples:
-        - value: Water
       dna_dnase:
         name: dna_dnase
         annotations:
@@ -3622,8 +3594,6 @@ classes:
         - Note DNAse treatment is required for all RNA samples.
         range: dna_dnase_enum
         required: true
-        examples:
-        - value: 'no'
       dna_organisms:
         name: dna_organisms
         annotations:
@@ -3638,9 +3608,6 @@ classes:
         title: DNA Expected Organisms
         string_serialization: '{text}'
         recommended: true
-        examples:
-        - value: expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles
-            (1%)
       dna_collect_site:
         name: dna_collect_site
         annotations:
@@ -3655,8 +3622,6 @@ classes:
         title: DNA Collection Site
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: untreated pond water
       dna_isolate_meth:
         name: dna_isolate_meth
         annotations:
@@ -3670,8 +3635,6 @@ classes:
         title: DNA Isolation Method
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: phenol/chloroform extraction
       dna_seq_project_PI:
         name: dna_seq_project_PI
         annotations:
@@ -3687,8 +3650,6 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: Jane Johnson
       dna_project_contact:
         name: dna_project_contact
         annotations:
@@ -3704,8 +3665,6 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: John Jones
       proposal_dna:
         name: proposal_dna
         annotations:
@@ -3721,8 +3680,6 @@ classes:
           values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: '504000'
       collection_time:
         name: collection_time
         annotations:
@@ -3745,8 +3702,6 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
-        examples:
-        - value: 13:33; 13:33:55
       collection_date_inc:
         name: collection_date_inc
         annotations:
@@ -3769,8 +3724,6 @@ classes:
         - MIxS:collection_date
         string_serialization: '{date, arbitrary precision}'
         recommended: true
-        examples:
-        - value: 2021-04-15; 2021-04; 2021
       collection_time_inc:
         name: collection_time_inc
         annotations:
@@ -3793,8 +3746,6 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
-        examples:
-        - value: 13:33; 13:33:55
       start_date_inc:
         name: start_date_inc
         annotations:
@@ -3817,8 +3768,6 @@ classes:
         - MIxS:collection_date
         string_serialization: '{date, arbitrary precision}'
         recommended: true
-        examples:
-        - value: 2021-04-15; 2021-04; 2021
       start_time_inc:
         name: start_time_inc
         annotations:
@@ -3841,8 +3790,6 @@ classes:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
-        examples:
-        - value: 13:33; 13:33:55
       filter_method:
         name: filter_method
         annotations:
@@ -4062,8 +4009,6 @@ classes:
         title: environmental package
         range: env_package_enum
         required: true
-        examples:
-        - value: soil
       analysis_type:
         name: analysis_type
         annotations:
@@ -4080,8 +4025,6 @@ classes:
         multivalued: true
         range: analysis_type_enum
         required: true
-        examples:
-        - value: metagenomics; metabolomics; proteomics
       sample_link:
         name: sample_link
         annotations:
@@ -4102,8 +4045,6 @@ classes:
           was transferred to a new vial and generated a new sample)'
         string_serialization: '{text}:{text}'
         recommended: true
-        examples:
-        - value: IGSN:DSJ0284
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -4122,11 +4063,10 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_enum
+        range: string
         annotations:
           dh:column_number: '9'
           dh:section_name: Sample ID
-        required: true
       ecosystem_category:
         name: ecosystem_category
         description: Ecosystem categories represent divisions within the ecosystem
@@ -4142,11 +4082,10 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_category_enum
+        range: string
         annotations:
           dh:column_number: '10'
           dh:section_name: Sample ID
-        required: true
       ecosystem_subtype:
         name: ecosystem_subtype
         description: Ecosystem subtypes represent further subdivision of Ecosystem
@@ -4161,11 +4100,10 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_subtype_enum
+        range: string
         annotations:
           dh:column_number: '12'
           dh:section_name: Sample ID
-        required: true
       ecosystem_type:
         name: ecosystem_type
         description: Ecosystem types represent things having common characteristics
@@ -4183,11 +4121,10 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_type_enum
+        range: string
         annotations:
           dh:column_number: '11'
           dh:section_name: Sample ID
-        required: true
       specific_ecosystem:
         name: specific_ecosystem
         description: Specific ecosystems represent specific features of the environment
@@ -4201,11 +4138,10 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: specific_ecosystem_enum
+        range: string
         annotations:
           dh:column_number: '13'
           dh:section_name: Sample ID
-        required: true
       agrochem_addition:
         name: agrochem_addition
         aliases:
@@ -4266,7 +4202,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       al_sat:
         name: al_sat
         aliases:
@@ -4344,7 +4279,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
       annual_precpt:
         name: annual_precpt
         aliases:
@@ -4426,7 +4360,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
       biotic_relationship:
         name: biotic_relationship
         aliases:
@@ -4437,7 +4370,6 @@ classes:
             value: enumeration
           dh:column_number: '16'
           dh:section_name: MIxS (modified)
-          sntc_slot: samp_biotic_relationship
         description: Description of relationship(s) between the subject organism and
           other organism(s) it is associated with. E.g., parasite on species X; mutualist
           with species Y. The target organism is the subject of the relationship,
@@ -4451,8 +4383,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: biotic_relationship_enum
-        recommended: true
-        required: true
       carb_nitro_ratio:
         name: carb_nitro_ratio
         aliases:
@@ -4503,7 +4433,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       climate_environment:
         name: climate_environment
         aliases:
@@ -4531,7 +4460,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       collection_date:
         name: collection_date
         aliases:
@@ -4542,23 +4470,21 @@ classes:
             value: date and time
           dh:column_number: '3'
           dh:section_name: MIxS (modified)
-          sntc_slot: collection_date
-        description: The date of sampling
-        title: Collection Date
+        description: 'The time of sampling, either as an instance (single point in
+          time) or interval. In case no exact time is available, the date/time can
+          be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00;
+          2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all
+          are ISO8601 compliant'
+        title: collection date
         examples:
-        - value: 2021-04-15; 2021-04; 2021
+        - value: 2018-05-11T10:00:00+01:00; 2018-05-11
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000011
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: date
         required: true
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
-          only
-        - Use modified term (amended definition)
-        string_serialization: '{date, arbitrary precision}'
       crop_rotation:
         name: crop_rotation
         aliases:
@@ -4669,24 +4595,19 @@ classes:
             value: measurement value
           dh:column_number: '9'
           dh:section_name: MIxS (modified)
-        description: The vertical distance below local surface, e.g. For sediment
+        description: The vertical distance below local surface, e.g. for sediment
           or soil samples depth is measured from sediment or soil surface, respectively.
           Depth can be reported as an interval for subsurface samples.
-        title: depth, meters
+        title: depth
         examples:
-        - value: 0-0.1; 1
+        - value: 10 meter
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000018
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: quantity value
         required: true
-        comments:
-        - All depths must be reported in meters. Provide the numerical portion only.
-        notes:
-        - Use modified term
-        string_serialization: '{float}|{float}-{float}'
       drainage_class:
         name: drainage_class
         aliases:
@@ -4984,7 +4905,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       geo_loc_name:
         name: geo_loc_name
         aliases:
@@ -5005,7 +4925,7 @@ classes:
         - value: 'USA: Maryland, Bethesda'
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
-        string_serialization: '{text}: {text}, {text}'
+        string_serialization: '{term}: {term}, {text}'
         slot_uri: MIXS:0000010
         multivalued: false
         owner: soil MIMS
@@ -5024,10 +4944,9 @@ classes:
             value: '1'
           dh:column_number: '1'
           dh:section_name: MIxS (modified)
-          sntc_slot: growth_facility
-        description: 'Type of facility/location where the sample was harvested; controlled
+        description: 'Type of facility where the sampled plant was grown; controlled
           vocabulary: growth chamber, open top chamber, glasshouse, experimental garden,
-          field.'
+          field. Alternatively use Crop Ontology (CO) terms, see http://www.cropontology.org/ontology/CO_715/Crop%20Research'
         title: growth facility
         examples:
         - value: Growth chamber [CO_715:0000189]
@@ -5037,8 +4956,7 @@ classes:
         slot_uri: MIXS:0001043
         multivalued: false
         owner: soil MIMS
-        range: growth_facil_enum
-        required: true
+        range: string
       heavy_metals:
         name: heavy_metals
         aliases:
@@ -5151,7 +5069,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       lat_lon:
         name: lat_lon
         aliases:
@@ -5170,7 +5087,7 @@ classes:
         - value: 50.586825 6.408977
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
-        string_serialization: (lat lon}
+        string_serialization: '{float} {float}'
         slot_uri: MIXS:0000009
         multivalued: false
         owner: soil MIMS
@@ -5204,7 +5121,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
       link_class_info:
         name: link_class_info
         aliases:
@@ -5473,8 +5389,7 @@ classes:
             value: '1'
           dh:column_number: '27'
           dh:section_name: MIxS (modified)
-          sntc_slot: pH
-        description: pH measurement of the sample, or liquid portion of sample, or
+        description: Ph measurement of the sample, or liquid portion of sample, or
           aqueous phase of the fluid
         title: pH
         examples:
@@ -5484,14 +5399,8 @@ classes:
         slot_uri: MIXS:0001001
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: double
         required: false
-        maximum_value: '14'
-        minimum_value: '0'
-        notes:
-        - Use modified term
-        recommended: true
-        string_serialization: '{float}'
       ph_meth:
         name: ph_meth
         aliases:
@@ -5629,7 +5538,6 @@ classes:
             value: enumeration
           dh:column_number: '17'
           dh:section_name: MIxS (modified)
-          sntc_slot: oxygen_relationship
         description: Is this organism an aerobe, anaerobe? Please note that aerobic
           and anaerobic are valid descriptors for microbial environments
         title: relationship to oxygen
@@ -5641,8 +5549,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: rel_to_oxygen_enum
-        required: true
-        recommended: true
+        required: false
       salinity:
         name: salinity
         aliases:
@@ -5709,7 +5616,6 @@ classes:
             value: device name
           dh:column_number: '11'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_collection_dev
         description: The device used to collect an environmental sample. This field
           accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO).
           This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).
@@ -5724,8 +5630,6 @@ classes:
         owner: soil MIMS
         range: string
         recommended: true
-        comments:
-        - Report dimensions and details when applicable
       samp_collec_method:
         name: samp_collec_method
         aliases:
@@ -5736,7 +5640,6 @@ classes:
             value: PMID,DOI,url , or text
           dh:column_number: '12'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_collection_method
         description: The method employed for collecting the sample.
         title: sample collection method
         examples:
@@ -5749,8 +5652,6 @@ classes:
         owner: soil MIMS
         range: string
         recommended: true
-        comments:
-        - This can be a citation or description
       samp_mat_process:
         name: samp_mat_process
         aliases:
@@ -5761,7 +5662,6 @@ classes:
             value: text
           dh:column_number: '10'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_processing
         description: A brief description of any processing applied to the sample during
           or after retrieving the sample from environment, or a link to the relevant
           protocol(s) performed.
@@ -5786,12 +5686,16 @@ classes:
             value: text
           dh:column_number: '2'
           dh:section_name: Sample ID
-          sntc_slot: sample_name
-        description: A local identifier or name that for the material sample collected.
-          Refers to the original material collected or to any derived sub-samples.
+        description: A local identifier or name that for the material sample used
+          for extracting nucleic acids, and subsequent sequencing. It can refer either
+          to the original material collected or to any derived sub-samples. It can
+          have any format, but we suggest that you make it concise, unique and consistent
+          within your lab, and as informative as possible. INSDC requires every sample
+          name from a single Submitter to be unique. Use of a globally unique identifier
+          for the field source_mat_id is recommended in addition to sample_name.
         title: sample name
         examples:
-        - value: Rock core CB1178(5-6) from NSW
+        - value: ISDsoil1
         from_schema: http://w3id.org/mixs/terms
         is_a: investigation field
         string_serialization: '{text}'
@@ -5800,9 +5704,6 @@ classes:
         owner: soil MIMS
         range: string
         required: true
-        comments:
-        - It can have any format, but we suggest that you make it concise, unique
-          and consistent within your lab, and as informative as possible.
       samp_size:
         name: samp_size
         aliases:
@@ -5816,23 +5717,18 @@ classes:
             value: millliter, gram, milligram, liter
           dh:column_number: '14'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_collected
         description: The total amount or size (volume (ml), mass (g) or area (m2)
           ) of sample collected.
         title: amount or size of sample collected
         examples:
-        - value: 5 grams; 10 mL
+        - value: 5 liter
         from_schema: http://w3id.org/mixs/terms
         is_a: nucleic acid sequence source field
         slot_uri: MIXS:0000001
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: quantity value
         recommended: true
-        comments:
-        - This refers to the TOTAL amount of sample collected from the experiment.
-          NOT the amount sent to each institution or collected for a specific analysis.
-        string_serialization: '{float} {unit}'
       samp_store_temp:
         name: samp_store_temp
         aliases:
@@ -5859,7 +5755,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        required: true
       season_precpt:
         name: season_precpt
         aliases:
@@ -5942,7 +5837,6 @@ classes:
         owner: soil MIMS
         range: string
         required: false
-        recommended: true
       size_frac_low:
         name: size_frac_low
         aliases:
@@ -5970,7 +5864,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
       size_frac_up:
         name: size_frac_up
         aliases:
@@ -5998,7 +5891,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
       slope_aspect:
         name: slope_aspect
         aliases:
@@ -6200,27 +6092,30 @@ classes:
               for other material a unique arbitrary identifer'
           dh:column_number: '1'
           dh:section_name: Sample ID
-          sntc_slot: unique_ID
-        description: A globally unique identifier assigned to the biological sample.
-        title: Globally Unique ID
+        description: A unique identifier assigned to a material sample (as defined
+          by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular
+          digital record of a material sample) used for extracting nucleic acids,
+          and subsequent sequencing. The identifier can refer either to the original
+          material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher,
+          /bio_material, or /culture_collection may or may not share the same value
+          as the source_mat_id field. For instance, the /specimen_voucher qualifier
+          and source_mat_id may both contain 'UAM:Herps:14' , referring to both the
+          specimen voucher and sampled tissue with the same identifier. However, the
+          /culture_collection qualifier may refer to a value from an initial culture
+          (e.g. ATCC:11775) while source_mat_id would refer to an identifier from
+          some derived culture from which the nucleic acids were extracted (e.g. xatc123
+          or ark:/2154/R2).
+        title: source material identifiers
         examples:
-        - value: IGSN:AU1243
+        - value: MPI012345
         from_schema: http://w3id.org/mixs/terms
         is_a: nucleic acid sequence source field
-        string_serialization: '{text}:{text}'
+        string_serialization: '{text}'
         slot_uri: MIXS:0000026
         multivalued: false
         owner: soil MIMS
         range: string
         recommended: true
-        comments:
-        - Identifiers must be prefixed. IGSNs (http://www.geosamples.org/getigsn)
-          are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally
-          unique but not FAIR. These IDs enable linking to derrived analytes and subsamples.
-        identifier: true
-        notes:
-        - The source material IS the Globally Unique ID
-        required: true
       store_cond:
         name: store_cond
         aliases:
@@ -6234,8 +6129,8 @@ classes:
             value: '1'
           dh:column_number: '2'
           dh:section_name: MIxS (modified)
-          sntc_slot: storage_condt
-        description: Explain how the soil sample is stored (fresh/frozen/other).
+        description: Explain how and for how long the soil sample was stored before
+          DNA extraction (fresh/frozen/other).
         title: storage conditions
         examples:
         - value: -20 degree Celsius freezer;P2Y10D
@@ -6245,8 +6140,8 @@ classes:
         slot_uri: MIXS:0000327
         multivalued: false
         owner: soil MIMS
-        range: store_cond_enum
-        required: true
+        range: string
+        required: false
       temp:
         name: temp
         aliases:
@@ -6535,7 +6430,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
   nmdc_dh_section:
     name: nmdc_dh_section
     description: A section (ie group if columns) within a DataHarmonizer interface

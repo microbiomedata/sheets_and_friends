@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from nmdc_dh.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-02-23T16:52:45\n    Schema: nmdc_dh\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://example.com/nmdc_dh\n    description: Schema for creating Data Harmonizer interfaces for biosamples based on MIxS and other standards\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from nmdc_dh.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-02-24T14:17:48\n    Schema: nmdc_dh\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://example.com/nmdc_dh\n    description: Schema for creating Data Harmonizer interfaces for biosamples based on MIxS and other standards\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "MIXS": "http://example.org/UNKNOWN/MIXS/",
       "linkml": "https://w3id.org/linkml/",

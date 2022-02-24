@@ -3,7 +3,7 @@ credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 .PHONY: all clean cogs_fetch
 
-all: clean project docs/template/soil_emsl_jgi_mg/data.js compare_enums
+all: clean project docs/template/soil_emsl_jgi_mg/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
 
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
@@ -34,7 +34,7 @@ cogs_fetch: .cogs
 	poetry run cogs fetch
 
 # .cogs/tracked/sections.tsv
-artifacts/from_sheets2linkml.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/new_terms.tsv \
+artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/new_terms.tsv \
   .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/placeholders_awaiting_auto_imp.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
@@ -42,8 +42,15 @@ artifacts/from_sheets2linkml.yaml: .cogs/tracked/cornerstone.tsv .cogs/tracked/n
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
 	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2>> logs/do_shuttle.log
 
+artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
+	poetry run mod_by_path \
+		--config_tsv $< \
+		--yaml_input $(word 2,$^) \
+		--yaml_output $@  2>> logs/mod_by_path.log
+
+
 # clean? cogs_fetch?
-artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shuttles.yaml
+artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_sections_etc.yaml
 	poetry run mod_by_path \
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
@@ -180,9 +187,9 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 #	#     ensure that the pages are being built from the docs directory in the master/main branch
 
 # todo add enum_name when ready
-compare_enums:
+artifacts/nmdc_dh_vs_mixs_enums.yaml: artifacts/nmdc_dh.yaml
 	poetry run compare_enums \
-		--left_model artifacts/nmdc_dh.yaml \
+		--left_model $< \
 		--right_model mixs-source/model/schema/mixs.yaml \
-		--yaml_output artifacts/compare_enums.yaml
+		--yaml_output $@
 

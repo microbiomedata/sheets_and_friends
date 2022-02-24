@@ -7487,7 +7487,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "3",
+          "value": "4",
           "@type": "Annotation"
         }
       ],
@@ -7567,7 +7567,7 @@
         },
         {
           "tag": "dh:column_number",
-          "value": "4",
+          "value": "5",
           "@type": "Annotation"
         }
       ],
@@ -7866,11 +7866,6 @@
         {
           "tag": "occurrence",
           "value": "m",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
           "@type": "Annotation"
         },
         {
@@ -8211,11 +8206,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "treatment",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "11",
           "@type": "Annotation"
@@ -8326,11 +8316,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "64",
           "@type": "Annotation"
@@ -8382,11 +8367,6 @@
         {
           "tag": "occurrence",
           "value": "m",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
           "@type": "Annotation"
         },
         {
@@ -8443,11 +8423,6 @@
         {
           "tag": "occurrence",
           "value": "m",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
           "@type": "Annotation"
         },
         {
@@ -8776,11 +8751,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "required where applicable",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "9",
           "@type": "Annotation"
@@ -8940,11 +8910,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "sample identification",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "6",
           "@type": "Annotation"
@@ -8995,11 +8960,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "sample identification",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "7",
           "@type": "Annotation"
@@ -9047,11 +9007,6 @@
         {
           "tag": "expected_value",
           "value": "The material displaced by the entity at time of sampling. Recommend subclasses of environmental material [ENVO:00010483].",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "sample identification",
           "@type": "Annotation"
         },
         {
@@ -9377,11 +9332,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "treatment",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "15",
           "@type": "Annotation"
@@ -9439,7 +9389,7 @@
         },
         {
           "tag": "dh:section_name",
-          "value": "MIxS",
+          "value": "MIxS (modified)",
           "@type": "Annotation"
         }
       ],
@@ -9453,7 +9403,7 @@
       ],
       "from_schema": "http://w3id.org/mixs/terms",
       "is_a": "environment_field",
-      "string_serialization": "{term}: {term}, {text}",
+      "string_serialization": "{text}: {text}, {text}",
       "domain": "SoilEmslJgiMg",
       "slot_uri": "http://example.org/UNKNOWN/MIXS/0000010",
       "alias": "geo_loc_name",
@@ -9721,11 +9671,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "treatment",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "16",
           "@type": "Annotation"
@@ -9834,11 +9779,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
           "@type": "Annotation"
         },
         {
@@ -10113,11 +10053,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "63",
           "@type": "Annotation"
@@ -10174,11 +10109,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -10296,11 +10226,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "65",
           "@type": "Annotation"
@@ -10357,11 +10282,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -10472,11 +10392,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "27",
           "@type": "Annotation"
@@ -10542,11 +10457,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "61",
           "@type": "Annotation"
@@ -10603,11 +10513,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -10886,11 +10791,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "74",
           "@type": "Annotation"
@@ -10942,11 +10842,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -11230,11 +11125,6 @@
         {
           "tag": "preferred_unit",
           "value": "millliter, gram, milligram, liter",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "optional",
           "@type": "Annotation"
         },
         {
@@ -12277,11 +12167,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "67",
           "@type": "Annotation"
@@ -12333,11 +12218,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -12400,11 +12280,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "68",
           "@type": "Annotation"
@@ -12456,11 +12331,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -12523,11 +12393,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "70",
           "@type": "Annotation"
@@ -12587,11 +12452,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "72",
           "@type": "Annotation"
@@ -12643,11 +12503,6 @@
         {
           "tag": "occurrence",
           "value": "1",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
           "@type": "Annotation"
         },
         {
@@ -12710,11 +12565,6 @@
           "@type": "Annotation"
         },
         {
-          "tag": "categorical_subsection",
-          "value": "biogeochemistry",
-          "@type": "Annotation"
-        },
-        {
           "tag": "dh:column_number",
           "value": "58",
           "@type": "Annotation"
@@ -12771,11 +12621,6 @@
         {
           "tag": "occurrence",
           "value": "m",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "categorical_subsection",
-          "value": "treatment",
           "@type": "Annotation"
         },
         {
@@ -14053,9 +13898,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-02-23T16:52:41",
-  "source_file_size": 224406,
-  "generation_date": "2022-02-23T16:52:47",
+  "source_file_date": "2022-02-24T14:17:45",
+  "source_file_size": 222894,
+  "generation_date": "2022-02-24T14:17:49",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",

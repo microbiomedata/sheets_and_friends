@@ -1405,27 +1405,6 @@ var DATA = [
     "fieldName": "MIxS",
     "children": [
       {
-        "fieldName": "geographic location (country and/or sea,region)",
-        "capitalize": "",
-        "ontology_id": "MIXS:0000010",
-        "datatype": "xs:token",
-        "source": "",
-        "dataStatus": null,
-        "xs:minInclusive": "",
-        "xs:maxInclusive": "",
-        "requirement": "required",
-        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
-        "guidance": "Pattern hint: {term}: {term}, {text}",
-        "examples": "USA: Maryland, Bethesda",
-        "exportField": {
-          "soil_emsl_jgi_mg": [
-            {
-              "field": "geo_loc_name"
-            }
-          ]
-        }
-      },
-      {
         "fieldName": "slope aspect",
         "capitalize": "",
         "ontology_id": "MIXS:0000647",
@@ -2792,6 +2771,28 @@ var DATA = [
           "soil_emsl_jgi_mg": [
             {
               "field": "collection_date"
+            }
+          ]
+        }
+      },
+      {
+        "fieldName": "geographic location (country and/or sea,region)",
+        "capitalize": "",
+        "ontology_id": "MIXS:0000010",
+        "datatype": "xs:token",
+        "source": "",
+        "dataStatus": null,
+        "xs:minInclusive": "",
+        "xs:maxInclusive": "",
+        "requirement": "required",
+        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)",
+        "guidance": "Pattern hint: {text}: {text}, {text}",
+        "examples": "USA: Maryland, Bethesda",
+        "pattern": "^[^:, ][^:]*: [^:, ][^,]*, [^:, ].*$",
+        "exportField": {
+          "soil_emsl_jgi_mg": [
+            {
+              "field": "geo_loc_name"
             }
           ]
         }
