@@ -3,7 +3,7 @@ var DATA = [
     "fieldName": "Sample ID",
     "children": [
       {
-        "fieldName": "Globally Unique ID",
+        "fieldName": "globally unique ID",
         "capitalize": "",
         "ontology_id": "MIXS:0000026",
         "datatype": "xs:unique",
@@ -46,7 +46,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Analysis/Data Type",
+        "fieldName": "analysis/data type",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "multiple",
@@ -843,7 +843,7 @@ var DATA = [
     "fieldName": "EMSL",
     "children": [
       {
-        "fieldName": "Project ID",
+        "fieldName": "project ID",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -911,7 +911,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "EMSL Sample Storage Temperature, deg. C",
+        "fieldName": "EMSL sample storage temperature, deg. C",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:decimal",
@@ -932,7 +932,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Number Technical Replicate",
+        "fieldName": "number technical replicate",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:nonNegativeInteger",
@@ -953,7 +953,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Replicate Number",
+        "fieldName": "replicate number",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:nonNegativeInteger",
@@ -979,7 +979,7 @@ var DATA = [
     "fieldName": "JGI-Metagenomics",
     "children": [
       {
-        "fieldName": "DNA Seq Project ID",
+        "fieldName": "DNA seq project ID",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1000,7 +1000,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Seq Project Name",
+        "fieldName": "DNA seq project name",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1021,7 +1021,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Sample ID",
+        "fieldName": "DNA sample ID",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1042,7 +1042,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Sample Name",
+        "fieldName": "DNA sample name",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1063,7 +1063,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Concentration in ng/uL",
+        "fieldName": "DNA concentration in ng/ul",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:decimal",
@@ -1084,7 +1084,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Volume in uL",
+        "fieldName": "DNA volume in ul",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:decimal",
@@ -1105,7 +1105,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Absorbance 260/280",
+        "fieldName": "DNA absorbance 260/280",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:decimal",
@@ -1126,7 +1126,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Absorbance 260/230",
+        "fieldName": "DNA absorbance 260/230",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:decimal",
@@ -1147,7 +1147,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Container Label",
+        "fieldName": "DNA container label",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1169,7 +1169,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Container Type",
+        "fieldName": "DNA container type",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "select",
@@ -1194,7 +1194,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Well Number",
+        "fieldName": "DNA well number",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1216,7 +1216,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Sample Format",
+        "fieldName": "DNA sample format",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "select",
@@ -1249,7 +1249,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNAse Treatment DNA",
+        "fieldName": "DNase treatment DNA",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "select",
@@ -1274,7 +1274,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Expected Organisms",
+        "fieldName": "DNA expected organisms",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1295,7 +1295,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Collection Site",
+        "fieldName": "DNA collection site",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1316,7 +1316,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Isolation Method",
+        "fieldName": "DNA isolation method",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1337,7 +1337,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Seq Project PI",
+        "fieldName": "DNA seq project PI",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1358,7 +1358,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Seq Project Contact",
+        "fieldName": "DNA seq project contact",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -1379,7 +1379,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "DNA Proposal ID",
+        "fieldName": "DNA proposal ID",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -2754,7 +2754,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Collection Date",
+        "fieldName": "collection date",
         "capitalize": "",
         "ontology_id": "MIXS:0000011",
         "datatype": "xs:token",
@@ -3333,7 +3333,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Incubation Collection Date",
+        "fieldName": "incubation collection date",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -3355,7 +3355,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Incubation Collection Time, GMT",
+        "fieldName": "incubation collection time, GMT",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -3377,7 +3377,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Incubation Start Date",
+        "fieldName": "incubation start date",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -3399,7 +3399,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Incubation Start Time, GMT",
+        "fieldName": "incubation start time, GMT",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
@@ -3421,7 +3421,7 @@ var DATA = [
         }
       },
       {
-        "fieldName": "Filter Method",
+        "fieldName": "filter method",
         "capitalize": "",
         "ontology_id": "",
         "datatype": "xs:token",
