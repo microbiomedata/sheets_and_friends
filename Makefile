@@ -193,3 +193,8 @@ artifacts/nmdc_dh_vs_mixs_enums.yaml: artifacts/nmdc_dh.yaml
 		--right_model mixs-source/model/schema/mixs.yaml \
 		--yaml_output $@
 
+target/mods_lw.tsv:
+	poetry run python sheets_and_friends/mods_lw.py
+
+target/helped_valid.tsv:
+	poetry run python sheets_and_friends/column_update.py
