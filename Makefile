@@ -8,8 +8,12 @@ all: clean project docs/template/soil_emsl_jgi_mg/data.js artifacts/nmdc_dh_vs_m
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
-bin/robot.jar:
+bin/robot.jar: bin
 	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -O $@ -i -
+
+# create new directory called bin if it doesn't already exist
+bin:
+	mkdir -p $@
 
 downloads/envo.owl:
 	# --location (-L) pursues redirects
