@@ -1213,7 +1213,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "schemasheets"
-version = "0.1.7"
+version = "0.1.8"
 description = "Package to author schemas using spreadsheets"
 category = "main"
 optional = false
@@ -1556,7 +1556,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "88539d9c181bc988b319ee68476c575ee06caa925c92dd526b6df1660473c7b3"
+content-hash = "2a989426769b721b0c273a058d556fb7c42ad97a325ec003b3ea254179ac4997"
 
 [metadata.files]
 alabaster = [
@@ -2233,8 +2233,8 @@ rsa = [
     {file = "ruamel.yaml.clib-0.2.6.tar.gz", hash = "sha256:4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"},
 ]
 schemasheets = [
-    {file = "schemasheets-0.1.7-py3-none-any.whl", hash = "sha256:6aab855b45474ea577361cf7746a16fe155b1c62759baf8468dd6cd4cfd926ff"},
-    {file = "schemasheets-0.1.7.tar.gz", hash = "sha256:6226d578e0dac78e3ce4d70b6d9ce43c5a021a3ecdd9295f9a7d674692fefe0c"},
+    {file = "schemasheets-0.1.8-py3-none-any.whl", hash = "sha256:e2e7cd0a93ed8e77c4bb6589d894ab6f1cf49bbc94eb6360f269f50d4f0fedf8"},
+    {file = "schemasheets-0.1.8.tar.gz", hash = "sha256:13fcb66195a66200e8e9e0920c4af9a896755897406eb73d157e0c5a331a4e00"},
 ]
 shexjsg = [
     {file = "ShExJSG-0.8.1-py2.py3-none-any.whl", hash = "sha256:33749e8c90a30cca2cb6e23f94268bed5217a6f7c04d584e64fcb6869b60972b"},

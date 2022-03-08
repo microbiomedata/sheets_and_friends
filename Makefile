@@ -1,5 +1,7 @@
-nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
-#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox
+#nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
+#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for sujay
+nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's sandbox
+
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 .PHONY: all clean cogs_fetch

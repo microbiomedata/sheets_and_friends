@@ -64,50 +64,50 @@ type SampleID
 
 type SoilEmslJgiMg
   {
-    projectID: String!
-    sampleType: SampleTypeEnum!
-    sampleShipped: String!
-    eMSLStoreTemp: String!
-    technicalReps: String
-    replicateNumber: String
-    dnaSeqProject: String!
-    dnaSeqProjectName: String!
-    dnaSampID: String!
-    dnaSampleName: String!
-    dnaConcentration: String!
-    dnaVolume: String!
+    analysisType: [AnalysisTypeEnum]!
+    collectionDateInc: String
+    collectionTime: String
+    collectionTimeInc: String
     dnaAbsorb1: String
     dnaAbsorb2: String
-    dnaContainerID: String!
+    dnaCollectSite: String!
+    dnaConcentration: String!
     dnaContType: DnaContTypeEnum!
     dnaContWell: String!
-    dnaSampleFormat: DnaSampleFormatEnum!
+    dnaContainerID: String!
     dnaDnase: DnaDnaseEnum!
-    dnaOrganisms: String
-    dnaCollectSite: String!
     dnaIsolateMeth: String!
-    dnaSeqProjectPI: String!
+    dnaOrganisms: String
     dnaProjectContact: String!
-    proposalDna: String!
-    collectionTime: String
-    collectionDateInc: String
-    collectionTimeInc: String
-    startDateInc: String
-    startTimeInc: String
-    filterMethod: String
+    dnaSampID: String!
+    dnaSampleFormat: DnaSampleFormatEnum!
+    dnaSampleName: String!
+    dnaSeqProject: String!
+    dnaSeqProjectName: String!
+    dnaSeqProjectPI: String!
+    dnaVolume: String!
+    eMSLStoreTemp: String!
+    envPackage: EnvPackageEnum!
     experimentalFactorOther: String
+    filterMethod: String
+    isotopeExposure: String
+    microBiomassCMeth: String
+    microBiomassNMeth: String
+    microbialBiomassC: String
+    microbialBiomassN: String
     nonMicrobBiomass: String
     nonMicrobBiomassMethod: String
-    microbialBiomassC: String
-    microBiomassCMeth: String
-    microbialBiomassN: String
-    microBiomassNMeth: String
     orgNitroMethod: String
     otherTreatment: String
-    isotopeExposure: String
-    analysisType: [AnalysisTypeEnum]!
-    envPackage: EnvPackageEnum!
+    projectID: String!
+    proposalDna: String!
+    replicateNumber: String
     sampleLink: String
+    sampleShipped: String!
+    sampleType: SampleTypeEnum!
+    startDateInc: String
+    startTimeInc: String
+    technicalReps: String
     ecosystem: String
     ecosystemCategory: String
     ecosystemSubtype: String
@@ -204,24 +204,24 @@ type SoilEmslJgiMg
 
 type SoilEmslJgiMt
   {
-    rnaSeqProject: String!
-    rnaSeqProjectName: String!
-    rnaSampID: String!
-    rnaSampleName: String!
-    rnaConcentration: String!
-    rnaVolume: String!
+    dnaseRna: DnaseRnaEnum!
+    proposalRna: String!
     rnaAbsorb1: String
     rnaAbsorb2: String
-    rnaContainerID: String!
+    rnaCollectSite: String!
+    rnaConcentration: String!
     rnaContType: RnaContTypeEnum!
     rnaContWell: String!
-    rnaSampleFormat: RnaSampleFormatEnum!
-    dnaseRna: DnaseRnaEnum!
-    rnaOrganisms: String
-    rnaCollectSite: String!
+    rnaContainerID: String!
     rnaIsolateMeth: String!
-    rnaSeqProjectPI: String!
+    rnaOrganisms: String
     rnaProjectContact: String!
-    proposalRna: String!
+    rnaSampID: String!
+    rnaSampleFormat: RnaSampleFormatEnum!
+    rnaSampleName: String!
+    rnaSeqProject: String!
+    rnaSeqProjectName: String!
+    rnaSeqProjectPI: String!
+    rnaVolume: String!
   }
 
