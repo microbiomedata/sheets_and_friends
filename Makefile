@@ -88,7 +88,12 @@ squeaky_clean: clean
 	rm -rf .cogs
 
 project: artifacts/nmdc_dh.yaml
-	poetry run gen-project --exclude shacl --exclude owl --dir $@ $< 2>> logs/gen-project.log
+	poetry run gen-project \
+		--exclude shacl \
+		--exclude owl \
+		--exclude excel \
+		--exclude java \
+		--dir $@ $< 2>> logs/gen-project.log
 
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
 	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
