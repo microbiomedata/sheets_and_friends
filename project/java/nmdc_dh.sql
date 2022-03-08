@@ -1,8 +1,8 @@
 
 
 CREATE TABLE placeholder_class (
-	gold_path_field TEXT, 
-	PRIMARY KEY (gold_path_field)
+	investigation_field TEXT, 
+	PRIMARY KEY (investigation_field)
 );
 
 CREATE TABLE quantity_value (
@@ -57,6 +57,11 @@ CREATE TABLE soil_emsl_jgi_mg (
 	analysis_type VARCHAR(22) NOT NULL, 
 	env_package VARCHAR(4) NOT NULL, 
 	sample_link TEXT, 
+	ecosystem TEXT, 
+	ecosystem_category TEXT, 
+	ecosystem_subtype TEXT, 
+	ecosystem_type TEXT, 
+	specific_ecosystem TEXT, 
 	agrochem_addition TEXT, 
 	air_temp_regm TEXT, 
 	al_sat TEXT, 
@@ -144,12 +149,7 @@ CREATE TABLE soil_emsl_jgi_mg (
 	water_cont_soil_meth TEXT, 
 	water_content TEXT, 
 	watering_regm TEXT, 
-	ecosystem TEXT, 
-	ecosystem_category TEXT, 
-	ecosystem_subtype TEXT, 
-	ecosystem_type TEXT, 
-	specific_ecosystem TEXT, 
-	PRIMARY KEY ("project_ID", sample_type, sample_shipped, "EMSL_store_temp", technical_reps, replicate_number, dna_seq_project, dna_seq_project_name, "dna_samp_ID", dna_sample_name, dna_concentration, dna_volume, dna_absorb1, dna_absorb2, "dna_container_ID", dna_cont_type, dna_cont_well, dna_sample_format, dna_dnase, dna_organisms, dna_collect_site, dna_isolate_meth, "dna_seq_project_PI", dna_project_contact, proposal_dna, collection_time, collection_date_inc, collection_time_inc, start_date_inc, start_time_inc, filter_method, experimental_factor_other, non_microb_biomass, non_microb_biomass_method, "microbial_biomass_C", "micro_biomass_C_meth", "microbial_biomass_N", "micro_biomass_N_meth", org_nitro_method, other_treatment, isotope_exposure, analysis_type, env_package, sample_link, agrochem_addition, air_temp_regm, al_sat, al_sat_meth, alt, annual_precpt, annual_temp, biotic_regm, biotic_relationship, carb_nitro_ratio, chem_administration, climate_environment, collection_date, crop_rotation, cur_land_use, cur_vegetation, cur_vegetation_meth, depth, drainage_class, elev, env_broad_scale, env_local_scale, env_medium, experimental_factor, extreme_event, fao_class, fire, flooding, gaseous_environment, geo_loc_name, growth_facil, heavy_metals, heavy_metals_meth, horizon_meth, humidity_regm, lat_lon, light_regm, link_class_info, link_climate_info, local_class, local_class_meth, micro_biomass_meth, microbial_biomass, misc_param, org_matter, org_nitro, oxy_stat_samp, ph, ph_meth, phosphate, prev_land_use_meth, previous_land_use, profile_position, rel_to_oxygen, salinity, salinity_meth, samp_collec_device, samp_collec_method, samp_mat_process, samp_name, samp_size, samp_store_temp, season_precpt, season_temp, sieving, size_frac_low, size_frac_up, slope_aspect, slope_gradient, soil_horizon, soil_text_measure, soil_texture_meth, soil_type, soil_type_meth, source_mat_id, store_cond, "temp", tillage, tot_carb, tot_nitro_cont_meth, tot_nitro_content, tot_org_c_meth, tot_org_carb, tot_phosp, water_cont_soil_meth, water_content, watering_regm, ecosystem, ecosystem_category, ecosystem_subtype, ecosystem_type, specific_ecosystem)
+	PRIMARY KEY ("project_ID", sample_type, sample_shipped, "EMSL_store_temp", technical_reps, replicate_number, dna_seq_project, dna_seq_project_name, "dna_samp_ID", dna_sample_name, dna_concentration, dna_volume, dna_absorb1, dna_absorb2, "dna_container_ID", dna_cont_type, dna_cont_well, dna_sample_format, dna_dnase, dna_organisms, dna_collect_site, dna_isolate_meth, "dna_seq_project_PI", dna_project_contact, proposal_dna, collection_time, collection_date_inc, collection_time_inc, start_date_inc, start_time_inc, filter_method, experimental_factor_other, non_microb_biomass, non_microb_biomass_method, "microbial_biomass_C", "micro_biomass_C_meth", "microbial_biomass_N", "micro_biomass_N_meth", org_nitro_method, other_treatment, isotope_exposure, analysis_type, env_package, sample_link, ecosystem, ecosystem_category, ecosystem_subtype, ecosystem_type, specific_ecosystem, agrochem_addition, air_temp_regm, al_sat, al_sat_meth, alt, annual_precpt, annual_temp, biotic_regm, biotic_relationship, carb_nitro_ratio, chem_administration, climate_environment, collection_date, crop_rotation, cur_land_use, cur_vegetation, cur_vegetation_meth, depth, drainage_class, elev, env_broad_scale, env_local_scale, env_medium, experimental_factor, extreme_event, fao_class, fire, flooding, gaseous_environment, geo_loc_name, growth_facil, heavy_metals, heavy_metals_meth, horizon_meth, humidity_regm, lat_lon, light_regm, link_class_info, link_climate_info, local_class, local_class_meth, micro_biomass_meth, microbial_biomass, misc_param, org_matter, org_nitro, oxy_stat_samp, ph, ph_meth, phosphate, prev_land_use_meth, previous_land_use, profile_position, rel_to_oxygen, salinity, salinity_meth, samp_collec_device, samp_collec_method, samp_mat_process, samp_name, samp_size, samp_store_temp, season_precpt, season_temp, sieving, size_frac_low, size_frac_up, slope_aspect, slope_gradient, soil_horizon, soil_text_measure, soil_texture_meth, soil_type, soil_type_meth, source_mat_id, store_cond, "temp", tillage, tot_carb, tot_nitro_cont_meth, tot_nitro_content, tot_org_c_meth, tot_org_carb, tot_phosp, water_cont_soil_meth, water_content, watering_regm)
 );
 
 CREATE TABLE soil_emsl_jgi_mt (

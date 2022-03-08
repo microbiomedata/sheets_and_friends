@@ -48,7 +48,7 @@ type NmdcDhSection
 
 type PlaceholderClass
   {
-    goldPathField: String
+    investigationField: String
   }
 
 type QuantityValue
@@ -108,6 +108,11 @@ type SoilEmslJgiMg
     analysisType: [AnalysisTypeEnum]!
     envPackage: EnvPackageEnum!
     sampleLink: String
+    ecosystem: String
+    ecosystemCategory: String
+    ecosystemSubtype: String
+    ecosystemType: String
+    specificEcosystem: String
     agrochemAddition: [String]
     airTempRegm: [String]
     alSat: QuantityValue
@@ -195,11 +200,6 @@ type SoilEmslJgiMg
     waterContSoilMeth: String
     waterContent: QuantityValue
     wateringRegm: [String]
-    ecosystem: String
-    ecosystemCategory: String
-    ecosystemSubtype: String
-    ecosystemType: String
-    specificEcosystem: String
   }
 
 type SoilEmslJgiMt

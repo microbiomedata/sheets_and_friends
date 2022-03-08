@@ -342,8 +342,8 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "gold_path_field": {
-               "description": "This is a grouping for any of the gold path fields          ",
+            "investigation_field": {
+               "description": "field describing aspect of the investigation/study to which the sample belongs",
                "type": "string"
             }
          },

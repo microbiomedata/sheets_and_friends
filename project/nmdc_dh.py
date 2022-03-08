@@ -1,5 +1,5 @@
 # Auto generated from nmdc_dh.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-03-08T12:46:13
+# Generation date: 2022-03-08T15:01:00
 # Schema: nmdc_dh
 #
 # id: https://example.com/nmdc_dh
@@ -137,6 +137,11 @@ class SoilEmslJgiMg(NmdcDhInterface):
     other_treatment: Optional[str] = None
     isotope_exposure: Optional[str] = None
     sample_link: Optional[str] = None
+    ecosystem: Optional[str] = None
+    ecosystem_category: Optional[str] = None
+    ecosystem_subtype: Optional[str] = None
+    ecosystem_type: Optional[str] = None
+    specific_ecosystem: Optional[str] = None
     agrochem_addition: Optional[Union[str, List[str]]] = empty_list()
     air_temp_regm: Optional[Union[str, List[str]]] = empty_list()
     al_sat: Optional[Union[dict, "QuantityValue"]] = None
@@ -215,11 +220,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
     water_cont_soil_meth: Optional[str] = None
     water_content: Optional[Union[dict, "QuantityValue"]] = None
     watering_regm: Optional[Union[str, List[str]]] = empty_list()
-    ecosystem: Optional[str] = None
-    ecosystem_category: Optional[str] = None
-    ecosystem_subtype: Optional[str] = None
-    ecosystem_type: Optional[str] = None
-    specific_ecosystem: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.source_mat_id):
@@ -383,6 +383,31 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.samp_name, str):
             self.samp_name = str(self.samp_name)
 
+        if self._is_empty(self.ecosystem):
+            self.MissingRequiredField("ecosystem")
+        if not isinstance(self.ecosystem, EcosystemEnum):
+            self.ecosystem = EcosystemEnum(self.ecosystem)
+
+        if self._is_empty(self.ecosystem_category):
+            self.MissingRequiredField("ecosystem_category")
+        if not isinstance(self.ecosystem_category, EcosystemCategoryEnum):
+            self.ecosystem_category = EcosystemCategoryEnum(self.ecosystem_category)
+
+        if self._is_empty(self.ecosystem_subtype):
+            self.MissingRequiredField("ecosystem_subtype")
+        if not isinstance(self.ecosystem_subtype, EcosystemSubtypeEnum):
+            self.ecosystem_subtype = EcosystemSubtypeEnum(self.ecosystem_subtype)
+
+        if self._is_empty(self.ecosystem_type):
+            self.MissingRequiredField("ecosystem_type")
+        if not isinstance(self.ecosystem_type, EcosystemTypeEnum):
+            self.ecosystem_type = EcosystemTypeEnum(self.ecosystem_type)
+
+        if self._is_empty(self.specific_ecosystem):
+            self.MissingRequiredField("specific_ecosystem")
+        if not isinstance(self.specific_ecosystem, SpecificEcosystemEnum):
+            self.specific_ecosystem = SpecificEcosystemEnum(self.specific_ecosystem)
+
         if self._is_empty(self.collection_date):
             self.MissingRequiredField("collection_date")
         if not isinstance(self.collection_date, str):
@@ -442,31 +467,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
             self.MissingRequiredField("store_cond")
         if not isinstance(self.store_cond, StoreCondEnum):
             self.store_cond = StoreCondEnum(self.store_cond)
-
-        if self._is_empty(self.ecosystem):
-            self.MissingRequiredField("ecosystem")
-        if not isinstance(self.ecosystem, EcosystemEnum):
-            self.ecosystem = EcosystemEnum(self.ecosystem)
-
-        if self._is_empty(self.ecosystem_category):
-            self.MissingRequiredField("ecosystem_category")
-        if not isinstance(self.ecosystem_category, EcosystemCategoryEnum):
-            self.ecosystem_category = EcosystemCategoryEnum(self.ecosystem_category)
-
-        if self._is_empty(self.ecosystem_subtype):
-            self.MissingRequiredField("ecosystem_subtype")
-        if not isinstance(self.ecosystem_subtype, EcosystemSubtypeEnum):
-            self.ecosystem_subtype = EcosystemSubtypeEnum(self.ecosystem_subtype)
-
-        if self._is_empty(self.ecosystem_type):
-            self.MissingRequiredField("ecosystem_type")
-        if not isinstance(self.ecosystem_type, EcosystemTypeEnum):
-            self.ecosystem_type = EcosystemTypeEnum(self.ecosystem_type)
-
-        if self._is_empty(self.specific_ecosystem):
-            self.MissingRequiredField("specific_ecosystem")
-        if not isinstance(self.specific_ecosystem, SpecificEcosystemEnum):
-            self.specific_ecosystem = SpecificEcosystemEnum(self.specific_ecosystem)
 
         if self.technical_reps is not None and not isinstance(self.technical_reps, str):
             self.technical_reps = str(self.technical_reps)
@@ -533,6 +533,21 @@ class SoilEmslJgiMg(NmdcDhInterface):
 
         if self.sample_link is not None and not isinstance(self.sample_link, str):
             self.sample_link = str(self.sample_link)
+
+        if self.ecosystem is not None and not isinstance(self.ecosystem, str):
+            self.ecosystem = str(self.ecosystem)
+
+        if self.ecosystem_category is not None and not isinstance(self.ecosystem_category, str):
+            self.ecosystem_category = str(self.ecosystem_category)
+
+        if self.ecosystem_subtype is not None and not isinstance(self.ecosystem_subtype, str):
+            self.ecosystem_subtype = str(self.ecosystem_subtype)
+
+        if self.ecosystem_type is not None and not isinstance(self.ecosystem_type, str):
+            self.ecosystem_type = str(self.ecosystem_type)
+
+        if self.specific_ecosystem is not None and not isinstance(self.specific_ecosystem, str):
+            self.specific_ecosystem = str(self.specific_ecosystem)
 
         if not isinstance(self.agrochem_addition, list):
             self.agrochem_addition = [self.agrochem_addition] if self.agrochem_addition is not None else []
@@ -777,21 +792,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.watering_regm, list):
             self.watering_regm = [self.watering_regm] if self.watering_regm is not None else []
         self.watering_regm = [v if isinstance(v, str) else str(v) for v in self.watering_regm]
-
-        if self.ecosystem is not None and not isinstance(self.ecosystem, str):
-            self.ecosystem = str(self.ecosystem)
-
-        if self.ecosystem_category is not None and not isinstance(self.ecosystem_category, str):
-            self.ecosystem_category = str(self.ecosystem_category)
-
-        if self.ecosystem_subtype is not None and not isinstance(self.ecosystem_subtype, str):
-            self.ecosystem_subtype = str(self.ecosystem_subtype)
-
-        if self.ecosystem_type is not None and not isinstance(self.ecosystem_type, str):
-            self.ecosystem_type = str(self.ecosystem_type)
-
-        if self.specific_ecosystem is not None and not isinstance(self.specific_ecosystem, str):
-            self.specific_ecosystem = str(self.specific_ecosystem)
 
         if not isinstance(self.agrochem_addition, list):
             self.agrochem_addition = [self.agrochem_addition] if self.agrochem_addition is not None else []
@@ -1287,14 +1287,11 @@ class PlaceholderClass(YAMLRoot):
     class_name: ClassVar[str] = "placeholder_class"
     class_model_uri: ClassVar[URIRef] = NMDC_DH.PlaceholderClass
 
-    gold_path_field: Optional[str] = None
+    investigation_field: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self.gold_path_field is not None and not isinstance(self.gold_path_field, str):
-            self.gold_path_field = str(self.gold_path_field)
-
-        if self.gold_path_field is not None and not isinstance(self.gold_path_field, str):
-            self.gold_path_field = str(self.gold_path_field)
+        if self.investigation_field is not None and not isinstance(self.investigation_field, str):
+            self.investigation_field = str(self.investigation_field)
 
         super().__post_init__(**kwargs)
 
@@ -1978,6 +1975,39 @@ slots.has_numeric_value = Slot(uri=NMDC_DH.has_numeric_value, name="has numeric 
 slots.has_raw_value = Slot(uri=NMDC_DH.has_raw_value, name="has raw value", curie=NMDC_DH.curie('has_raw_value'),
                    model_uri=NMDC_DH.has_raw_value, domain=None, range=Optional[str])
 
+slots.ecosystem = Slot(uri=NMDC_DH.ecosystem, name="ecosystem", curie=NMDC_DH.curie('ecosystem'),
+                   model_uri=NMDC_DH.ecosystem, domain=None, range=Optional[str])
+
+slots.ecosystem_category = Slot(uri=NMDC_DH.ecosystem_category, name="ecosystem_category", curie=NMDC_DH.curie('ecosystem_category'),
+                   model_uri=NMDC_DH.ecosystem_category, domain=None, range=Optional[str])
+
+slots.ecosystem_subtype = Slot(uri=NMDC_DH.ecosystem_subtype, name="ecosystem_subtype", curie=NMDC_DH.curie('ecosystem_subtype'),
+                   model_uri=NMDC_DH.ecosystem_subtype, domain=None, range=Optional[str])
+
+slots.ecosystem_type = Slot(uri=NMDC_DH.ecosystem_type, name="ecosystem_type", curie=NMDC_DH.curie('ecosystem_type'),
+                   model_uri=NMDC_DH.ecosystem_type, domain=None, range=Optional[str])
+
+slots.specific_ecosystem = Slot(uri=NMDC_DH.specific_ecosystem, name="specific_ecosystem", curie=NMDC_DH.curie('specific_ecosystem'),
+                   model_uri=NMDC_DH.specific_ecosystem, domain=None, range=Optional[str])
+
+slots.gold_path_field = Slot(uri=NMDC_DH.gold_path_field, name="gold_path_field", curie=NMDC_DH.curie('gold_path_field'),
+                   model_uri=NMDC_DH.gold_path_field, domain=None, range=Optional[str])
+
+slots.attribute = Slot(uri=NMDC_DH.attribute, name="attribute", curie=NMDC_DH.curie('attribute'),
+                   model_uri=NMDC_DH.attribute, domain=None, range=Optional[str])
+
+slots.environment_field = Slot(uri=NMDC_DH.environment_field, name="environment field", curie=NMDC_DH.curie('environment_field'),
+                   model_uri=NMDC_DH.environment_field, domain=None, range=Optional[str])
+
+slots.core_field = Slot(uri=NMDC_DH.core_field, name="core field", curie=NMDC_DH.curie('core_field'),
+                   model_uri=NMDC_DH.core_field, domain=None, range=Optional[str])
+
+slots.nucleic_acid_sequence_source_field = Slot(uri=NMDC_DH.nucleic_acid_sequence_source_field, name="nucleic acid sequence source field", curie=NMDC_DH.curie('nucleic_acid_sequence_source_field'),
+                   model_uri=NMDC_DH.nucleic_acid_sequence_source_field, domain=None, range=Optional[str])
+
+slots.investigation_field = Slot(uri=NMDC_DH.investigation_field, name="investigation field", curie=NMDC_DH.curie('investigation_field'),
+                   model_uri=NMDC_DH.investigation_field, domain=None, range=Optional[str])
+
 slots.agrochem_addition = Slot(uri=MIXS['0000639'], name="agrochem_addition", curie=MIXS.curie('0000639'),
                    model_uri=NMDC_DH.agrochem_addition, domain=None, range=Optional[Union[str, List[str]]])
 
@@ -2017,9 +2047,6 @@ slots.climate_environment = Slot(uri=MIXS['0001040'], name="climate_environment"
 slots.collection_date = Slot(uri=MIXS['0000011'], name="collection_date", curie=MIXS.curie('0000011'),
                    model_uri=NMDC_DH.collection_date, domain=None, range=Union[str, XSDDate])
 
-slots.core_field = Slot(uri=NMDC_DH.core_field, name="core field", curie=NMDC_DH.curie('core_field'),
-                   model_uri=NMDC_DH.core_field, domain=None, range=Optional[str])
-
 slots.crop_rotation = Slot(uri=MIXS['0000318'], name="crop_rotation", curie=MIXS.curie('0000318'),
                    model_uri=NMDC_DH.crop_rotation, domain=None, range=Optional[str])
 
@@ -2049,9 +2076,6 @@ slots.env_local_scale = Slot(uri=MIXS['0000013'], name="env_local_scale", curie=
 
 slots.env_medium = Slot(uri=MIXS['0000014'], name="env_medium", curie=MIXS.curie('0000014'),
                    model_uri=NMDC_DH.env_medium, domain=None, range=str)
-
-slots.environment_field = Slot(uri=NMDC_DH.environment_field, name="environment field", curie=NMDC_DH.curie('environment_field'),
-                   model_uri=NMDC_DH.environment_field, domain=None, range=Optional[str])
 
 slots.experimental_factor = Slot(uri=MIXS['0000008'], name="experimental_factor", curie=MIXS.curie('0000008'),
                    model_uri=NMDC_DH.experimental_factor, domain=None, range=Optional[str])
@@ -2089,9 +2113,6 @@ slots.horizon_meth = Slot(uri=MIXS['0000321'], name="horizon_meth", curie=MIXS.c
 slots.humidity_regm = Slot(uri=MIXS['0000568'], name="humidity_regm", curie=MIXS.curie('0000568'),
                    model_uri=NMDC_DH.humidity_regm, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.investigation_field = Slot(uri=NMDC_DH.investigation_field, name="investigation field", curie=NMDC_DH.curie('investigation_field'),
-                   model_uri=NMDC_DH.investigation_field, domain=None, range=Optional[str])
-
 slots.lat_lon = Slot(uri=MIXS['0000009'], name="lat_lon", curie=MIXS.curie('0000009'),
                    model_uri=NMDC_DH.lat_lon, domain=None, range=str)
 
@@ -2118,9 +2139,6 @@ slots.microbial_biomass = Slot(uri=MIXS['0000650'], name="microbial_biomass", cu
 
 slots.misc_param = Slot(uri=MIXS['0000752'], name="misc_param", curie=MIXS.curie('0000752'),
                    model_uri=NMDC_DH.misc_param, domain=None, range=Optional[Union[str, List[str]]])
-
-slots.nucleic_acid_sequence_source_field = Slot(uri=NMDC_DH.nucleic_acid_sequence_source_field, name="nucleic acid sequence source field", curie=NMDC_DH.curie('nucleic_acid_sequence_source_field'),
-                   model_uri=NMDC_DH.nucleic_acid_sequence_source_field, domain=None, range=Optional[str])
 
 slots.org_matter = Slot(uri=MIXS['0000204'], name="org_matter", curie=MIXS.curie('0000204'),
                    model_uri=NMDC_DH.org_matter, domain=None, range=Optional[Union[dict, QuantityValue]])
@@ -2250,27 +2268,6 @@ slots.water_content = Slot(uri=MIXS['0000185'], name="water_content", curie=MIXS
 
 slots.watering_regm = Slot(uri=MIXS['0000591'], name="watering_regm", curie=MIXS.curie('0000591'),
                    model_uri=NMDC_DH.watering_regm, domain=None, range=Optional[Union[str, List[str]]])
-
-slots.attribute = Slot(uri=NMDC_DH.attribute, name="attribute", curie=NMDC_DH.curie('attribute'),
-                   model_uri=NMDC_DH.attribute, domain=None, range=Optional[str])
-
-slots.ecosystem = Slot(uri=NMDC_DH.ecosystem, name="ecosystem", curie=NMDC_DH.curie('ecosystem'),
-                   model_uri=NMDC_DH.ecosystem, domain=None, range=Optional[str])
-
-slots.ecosystem_category = Slot(uri=NMDC_DH.ecosystem_category, name="ecosystem_category", curie=NMDC_DH.curie('ecosystem_category'),
-                   model_uri=NMDC_DH.ecosystem_category, domain=None, range=Optional[str])
-
-slots.ecosystem_subtype = Slot(uri=NMDC_DH.ecosystem_subtype, name="ecosystem_subtype", curie=NMDC_DH.curie('ecosystem_subtype'),
-                   model_uri=NMDC_DH.ecosystem_subtype, domain=None, range=Optional[str])
-
-slots.ecosystem_type = Slot(uri=NMDC_DH.ecosystem_type, name="ecosystem_type", curie=NMDC_DH.curie('ecosystem_type'),
-                   model_uri=NMDC_DH.ecosystem_type, domain=None, range=Optional[str])
-
-slots.gold_path_field = Slot(uri=NMDC_DH.gold_path_field, name="gold_path_field", curie=NMDC_DH.curie('gold_path_field'),
-                   model_uri=NMDC_DH.gold_path_field, domain=None, range=Optional[str])
-
-slots.specific_ecosystem = Slot(uri=NMDC_DH.specific_ecosystem, name="specific_ecosystem", curie=NMDC_DH.curie('specific_ecosystem'),
-                   model_uri=NMDC_DH.specific_ecosystem, domain=None, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_project_ID = Slot(uri=NMDC_DH.project_ID, name="soil_emsl_jgi_mg_project_ID", curie=NMDC_DH.curie('project_ID'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_project_ID, domain=SoilEmslJgiMg, range=str)
@@ -2403,6 +2400,21 @@ slots.soil_emsl_jgi_mg_env_package = Slot(uri=NMDC_DH.env_package, name="soil_em
 
 slots.soil_emsl_jgi_mg_sample_link = Slot(uri=NMDC_DH.sample_link, name="soil_emsl_jgi_mg_sample_link", curie=NMDC_DH.curie('sample_link'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_sample_link, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem", curie=None,
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem, domain=SoilEmslJgiMg, range=Union[str, "EcosystemEnum"])
+
+slots.soil_emsl_jgi_mg_ecosystem_category = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem_category", curie=None,
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem_category, domain=SoilEmslJgiMg, range=Union[str, "EcosystemCategoryEnum"])
+
+slots.soil_emsl_jgi_mg_ecosystem_subtype = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem_subtype", curie=None,
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem_subtype, domain=SoilEmslJgiMg, range=Union[str, "EcosystemSubtypeEnum"])
+
+slots.soil_emsl_jgi_mg_ecosystem_type = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem_type", curie=None,
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem_type, domain=SoilEmslJgiMg, range=Union[str, "EcosystemTypeEnum"])
+
+slots.soil_emsl_jgi_mg_specific_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_specific_ecosystem", curie=None,
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_specific_ecosystem, domain=SoilEmslJgiMg, range=Union[str, "SpecificEcosystemEnum"])
 
 slots.soil_emsl_jgi_mg_agrochem_addition = Slot(uri=MIXS['0000639'], name="soil_emsl_jgi_mg_agrochem_addition", curie=MIXS.curie('0000639'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_agrochem_addition, domain=SoilEmslJgiMg, range=Optional[Union[str, List[str]]])
@@ -2665,21 +2677,6 @@ slots.soil_emsl_jgi_mg_water_content = Slot(uri=MIXS['0000185'], name="soil_emsl
 slots.soil_emsl_jgi_mg_watering_regm = Slot(uri=MIXS['0000591'], name="soil_emsl_jgi_mg_watering_regm", curie=MIXS.curie('0000591'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_watering_regm, domain=SoilEmslJgiMg, range=Optional[Union[str, List[str]]])
 
-slots.soil_emsl_jgi_mg_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem", curie=None,
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem, domain=SoilEmslJgiMg, range=Union[str, "EcosystemEnum"])
-
-slots.soil_emsl_jgi_mg_ecosystem_category = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem_category", curie=None,
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem_category, domain=SoilEmslJgiMg, range=Union[str, "EcosystemCategoryEnum"])
-
-slots.soil_emsl_jgi_mg_ecosystem_subtype = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem_subtype", curie=None,
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem_subtype, domain=SoilEmslJgiMg, range=Union[str, "EcosystemSubtypeEnum"])
-
-slots.soil_emsl_jgi_mg_ecosystem_type = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem_type", curie=None,
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem_type, domain=SoilEmslJgiMg, range=Union[str, "EcosystemTypeEnum"])
-
-slots.soil_emsl_jgi_mg_specific_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_specific_ecosystem", curie=None,
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_specific_ecosystem, domain=SoilEmslJgiMg, range=Union[str, "SpecificEcosystemEnum"])
-
 slots.soil_emsl_jgi_mt_rna_seq_project = Slot(uri=NMDC_DH.rna_seq_project, name="soil_emsl_jgi_mt_rna_seq_project", curie=NMDC_DH.curie('rna_seq_project'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_seq_project, domain=SoilEmslJgiMt, range=str)
 
@@ -2746,5 +2743,5 @@ slots.quantity_value_has_numeric_value = Slot(uri="str(uriorcurie)", name="quant
 slots.quantity_value_has_raw_value = Slot(uri="str(uriorcurie)", name="quantity value_has raw value", curie=None,
                    model_uri=NMDC_DH.quantity_value_has_raw_value, domain=QuantityValue, range=Optional[str])
 
-slots.placeholder_class_gold_path_field = Slot(uri="str(uriorcurie)", name="placeholder_class_gold_path_field", curie=None,
-                   model_uri=NMDC_DH.placeholder_class_gold_path_field, domain=PlaceholderClass, range=Optional[str])
+slots.placeholder_class_investigation_field = Slot(uri="str(uriorcurie)", name="placeholder_class_investigation field", curie=None,
+                   model_uri=NMDC_DH.placeholder_class_investigation_field, domain=PlaceholderClass, range=Optional[str])

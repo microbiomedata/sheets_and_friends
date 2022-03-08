@@ -15,6 +15,8 @@ pandasql = "^0.7.3"
 pygsheets = "^2.0.5"
 python = "^3.9"
 schemasheets = "^0.1.7"
+## using submodule while waiting for schemasheets examples fix to be merged and published
+#linkml = "*"
 
 [tool.poetry.dev-dependencies]
 

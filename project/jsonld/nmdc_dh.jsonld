@@ -2077,6 +2077,182 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "ecosystem",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem",
+      "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
+      "comments": [
+        "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "slot_uri": "https://example.com/nmdc_dh/ecosystem",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ecosystem_category",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem_category",
+      "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
+      "comments": [
+        "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "slot_uri": "https://example.com/nmdc_dh/ecosystem_category",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ecosystem_subtype",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
+      "description": "Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.",
+      "comments": [
+        "Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "slot_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ecosystem_type",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem_type",
+      "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
+      "comments": [
+        "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "slot_uri": "https://example.com/nmdc_dh/ecosystem_type",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "specific_ecosystem",
+      "definition_uri": "https://example.com/nmdc_dh/specific_ecosystem",
+      "description": "Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.",
+      "comments": [
+        "Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system."
+      ],
+      "from_schema": "https://example.com/nmdc_dh",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "slot_uri": "https://example.com/nmdc_dh/specific_ecosystem",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "gold_path_field",
+      "definition_uri": "https://example.com/nmdc_dh/gold_path_field",
+      "description": "This is a grouping for any of the gold path fields          ",
+      "from_schema": "https://example.com/nmdc_dh",
+      "is_a": "attribute",
+      "abstract": true,
+      "slot_uri": "https://example.com/nmdc_dh/gold_path_field",
+      "owner": "biosample",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "attribute",
+      "definition_uri": "https://example.com/nmdc_dh/attribute",
+      "aliases": [
+        "field",
+        "property",
+        "template field",
+        "key",
+        "characteristic"
+      ],
+      "description": "A attribute of a biosample. Examples: depth, habitat, material. For NMDC, attributes SHOULD be mapped to terms within a MIxS template",
+      "from_schema": "https://example.com/nmdc_dh",
+      "abstract": true,
+      "slot_uri": "https://example.com/nmdc_dh/attribute",
+      "owner": "biosample",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "environment_field",
+      "definition_uri": "https://example.com/nmdc_dh/environment_field",
+      "description": "field describing environmental aspect of a sample",
+      "from_schema": "https://example.com/nmdc_dh",
+      "abstract": true,
+      "slot_uri": "https://example.com/nmdc_dh/environment_field",
+      "owner": "soil MIMS",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "core_field",
+      "definition_uri": "https://example.com/nmdc_dh/core_field",
+      "description": "basic fields",
+      "from_schema": "https://example.com/nmdc_dh",
+      "abstract": true,
+      "slot_uri": "https://example.com/nmdc_dh/core_field",
+      "owner": "soil MIMS",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nucleic_acid_sequence_source_field",
+      "definition_uri": "https://example.com/nmdc_dh/nucleic_acid_sequence_source_field",
+      "from_schema": "https://example.com/nmdc_dh",
+      "abstract": true,
+      "slot_uri": "https://example.com/nmdc_dh/nucleic_acid_sequence_source_field",
+      "owner": "soil MIMS",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "investigation_field",
+      "definition_uri": "https://example.com/nmdc_dh/investigation_field",
+      "description": "field describing aspect of the investigation/study to which the sample belongs",
+      "from_schema": "https://example.com/nmdc_dh",
+      "abstract": true,
+      "slot_uri": "https://example.com/nmdc_dh/investigation_field",
+      "owner": "PlaceholderClass",
+      "domain_of": [
+        "PlaceholderClass"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "agrochem_addition",
       "definition_uri": "https://example.com/nmdc_dh/agrochem_addition",
       "aliases": [
@@ -2610,17 +2786,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "core_field",
-      "definition_uri": "https://example.com/nmdc_dh/core_field",
-      "description": "basic fields",
-      "from_schema": "https://example.com/nmdc_dh",
-      "abstract": true,
-      "slot_uri": "https://example.com/nmdc_dh/core_field",
-      "owner": "soil MIMS",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "crop_rotation",
       "definition_uri": "https://example.com/nmdc_dh/crop_rotation",
       "aliases": [
@@ -2996,17 +3161,6 @@
       ],
       "range": "string",
       "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "environment_field",
-      "definition_uri": "https://example.com/nmdc_dh/environment_field",
-      "description": "field describing environmental aspect of a sample",
-      "from_schema": "https://example.com/nmdc_dh",
-      "abstract": true,
-      "slot_uri": "https://example.com/nmdc_dh/environment_field",
-      "owner": "soil MIMS",
-      "range": "string",
       "@type": "SlotDefinition"
     },
     {
@@ -3496,17 +3650,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "investigation_field",
-      "definition_uri": "https://example.com/nmdc_dh/investigation_field",
-      "description": "field describing aspect of the investigation/study to which the sample belongs",
-      "from_schema": "https://example.com/nmdc_dh",
-      "abstract": true,
-      "slot_uri": "https://example.com/nmdc_dh/investigation_field",
-      "owner": "soil MIMS",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "lat_lon",
       "definition_uri": "https://example.com/nmdc_dh/lat_lon",
       "aliases": [
@@ -3870,16 +4013,6 @@
       "domain_of": [
         "SoilEmslJgiMg"
       ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "nucleic_acid_sequence_source_field",
-      "definition_uri": "https://example.com/nmdc_dh/nucleic_acid_sequence_source_field",
-      "from_schema": "https://example.com/nmdc_dh",
-      "abstract": true,
-      "slot_uri": "https://example.com/nmdc_dh/nucleic_acid_sequence_source_field",
-      "owner": "soil MIMS",
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -5653,139 +5786,6 @@
       "string_serialization": "{float} {unit};{Rn/start_time/end_time/duration}",
       "slot_uri": "http://example.org/UNKNOWN/MIXS/0000591",
       "multivalued": true,
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "attribute",
-      "definition_uri": "https://example.com/nmdc_dh/attribute",
-      "aliases": [
-        "field",
-        "property",
-        "template field",
-        "key",
-        "characteristic"
-      ],
-      "description": "A attribute of a biosample. Examples: depth, habitat, material. For NMDC, attributes SHOULD be mapped to terms within a MIxS template",
-      "from_schema": "https://example.com/nmdc_dh",
-      "abstract": true,
-      "slot_uri": "https://example.com/nmdc_dh/attribute",
-      "owner": "biosample",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "ecosystem",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem",
-      "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
-      "comments": [
-        "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "slot_uri": "https://example.com/nmdc_dh/ecosystem",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "ecosystem_category",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem_category",
-      "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
-      "comments": [
-        "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "slot_uri": "https://example.com/nmdc_dh/ecosystem_category",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "ecosystem_subtype",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
-      "description": "Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.",
-      "comments": [
-        "Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "slot_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "ecosystem_type",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem_type",
-      "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
-      "comments": [
-        "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "slot_uri": "https://example.com/nmdc_dh/ecosystem_type",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "gold_path_field",
-      "definition_uri": "https://example.com/nmdc_dh/gold_path_field",
-      "description": "This is a grouping for any of the gold path fields          ",
-      "from_schema": "https://example.com/nmdc_dh",
-      "is_a": "attribute",
-      "abstract": true,
-      "slot_uri": "https://example.com/nmdc_dh/gold_path_field",
-      "owner": "PlaceholderClass",
-      "domain_of": [
-        "PlaceholderClass"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "specific_ecosystem",
-      "definition_uri": "https://example.com/nmdc_dh/specific_ecosystem",
-      "description": "Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.",
-      "comments": [
-        "Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system."
-      ],
-      "from_schema": "https://example.com/nmdc_dh",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "slot_uri": "https://example.com/nmdc_dh/specific_ecosystem",
       "owner": "SoilEmslJgiMg",
       "domain_of": [
         "SoilEmslJgiMg"
@@ -7596,6 +7596,191 @@
       "usage_slot_name": "sample_link",
       "range": "string",
       "recommended": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_ecosystem",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem",
+      "annotations": [
+        {
+          "tag": "dh:column_number",
+          "value": "9",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "Sample ID",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
+      "comments": [
+        "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively."
+      ],
+      "from_schema": "https://microbiomedata/schema",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://microbiomedata/schema/ecosystem",
+      "alias": "ecosystem",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "ecosystem",
+      "range": "ecosystem_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_ecosystem_category",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem_category",
+      "annotations": [
+        {
+          "tag": "dh:column_number",
+          "value": "10",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "Sample ID",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
+      "comments": [
+        "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc."
+      ],
+      "from_schema": "https://microbiomedata/schema",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://microbiomedata/schema/ecosystem_category",
+      "alias": "ecosystem_category",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "ecosystem_category",
+      "range": "ecosystem_category_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_ecosystem_subtype",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
+      "annotations": [
+        {
+          "tag": "dh:column_number",
+          "value": "12",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "Sample ID",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.",
+      "comments": [
+        "Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category."
+      ],
+      "from_schema": "https://microbiomedata/schema",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://microbiomedata/schema/ecosystem_subtype",
+      "alias": "ecosystem_subtype",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "ecosystem_subtype",
+      "range": "ecosystem_subtype_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_ecosystem_type",
+      "definition_uri": "https://example.com/nmdc_dh/ecosystem_type",
+      "annotations": [
+        {
+          "tag": "dh:column_number",
+          "value": "11",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "Sample ID",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
+      "comments": [
+        "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc."
+      ],
+      "from_schema": "https://microbiomedata/schema",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://microbiomedata/schema/ecosystem_type",
+      "alias": "ecosystem_type",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "ecosystem_type",
+      "range": "ecosystem_type_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "soil_emsl_jgi_mg_specific_ecosystem",
+      "definition_uri": "https://example.com/nmdc_dh/specific_ecosystem",
+      "annotations": [
+        {
+          "tag": "dh:column_number",
+          "value": "13",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "dh:section_name",
+          "value": "Sample ID",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.",
+      "comments": [
+        "Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system."
+      ],
+      "from_schema": "https://microbiomedata/schema",
+      "see_also": [
+        "https://gold.jgi.doe.gov/help"
+      ],
+      "is_a": "gold_path_field",
+      "domain": "SoilEmslJgiMg",
+      "slot_uri": "https://microbiomedata/schema/specific_ecosystem",
+      "alias": "specific_ecosystem",
+      "owner": "SoilEmslJgiMg",
+      "domain_of": [
+        "SoilEmslJgiMg"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "specific_ecosystem",
+      "range": "specific_ecosystem_enum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -12423,191 +12608,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "soil_emsl_jgi_mg_ecosystem",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem",
-      "annotations": [
-        {
-          "tag": "dh:column_number",
-          "value": "9",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "An ecosystem is a combination of a physical environment (abiotic factors) and all the organisms (biotic factors) that interact with this environment. Ecosystem is in position 1/5 in a GOLD path.",
-      "comments": [
-        "The abiotic factors play a profound role on the type and composition of organisms in a given environment. The GOLD Ecosystem at the top of the five-level classification system is aimed at capturing the broader environment from which an organism or environmental sample is collected. The three broad groups under Ecosystem are Environmental, Host-associated, and Engineered. They represent samples collected from a natural environment or from another organism or from engineered environments like bioreactors respectively."
-      ],
-      "from_schema": "https://microbiomedata/schema",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://microbiomedata/schema/ecosystem",
-      "alias": "ecosystem",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "ecosystem",
-      "range": "ecosystem_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_ecosystem_category",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem_category",
-      "annotations": [
-        {
-          "tag": "dh:column_number",
-          "value": "10",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Ecosystem categories represent divisions within the ecosystem based on specific characteristics of the environment from where an organism or sample is isolated. Ecosystem category is in position 2/5 in a GOLD path.",
-      "comments": [
-        "The Environmental ecosystem (for example) is divided into Air, Aquatic and Terrestrial. Ecosystem categories for Host-associated samples can be individual hosts or phyla and for engineered samples it may be manipulated environments like bioreactors, solid waste etc."
-      ],
-      "from_schema": "https://microbiomedata/schema",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://microbiomedata/schema/ecosystem_category",
-      "alias": "ecosystem_category",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "ecosystem_category",
-      "range": "ecosystem_category_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_ecosystem_subtype",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem_subtype",
-      "annotations": [
-        {
-          "tag": "dh:column_number",
-          "value": "12",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Ecosystem subtypes represent further subdivision of Ecosystem types into more distinct subtypes. Ecosystem subtype is in position 4/5 in a GOLD path.",
-      "comments": [
-        "Ecosystem Type Marine (Environmental -> Aquatic -> Marine) is further divided (for example) into Intertidal zone, Coastal, Pelagic, Intertidal zone etc. in the Ecosystem subtype category."
-      ],
-      "from_schema": "https://microbiomedata/schema",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://microbiomedata/schema/ecosystem_subtype",
-      "alias": "ecosystem_subtype",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "ecosystem_subtype",
-      "range": "ecosystem_subtype_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_ecosystem_type",
-      "definition_uri": "https://example.com/nmdc_dh/ecosystem_type",
-      "annotations": [
-        {
-          "tag": "dh:column_number",
-          "value": "11",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Ecosystem types represent things having common characteristics within the Ecosystem Category. These common characteristics based grouping is still broad but specific to the characteristics of a given environment. Ecosystem type is in position 3/5 in a GOLD path.",
-      "comments": [
-        "The Aquatic ecosystem category (for example) may have ecosystem types like Marine or Thermal springs etc. Ecosystem category Air may have Indoor air or Outdoor air as different Ecosystem Types. In the case of Host-associated samples, ecosystem type can represent Respiratory system, Digestive system, Roots etc."
-      ],
-      "from_schema": "https://microbiomedata/schema",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://microbiomedata/schema/ecosystem_type",
-      "alias": "ecosystem_type",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "ecosystem_type",
-      "range": "ecosystem_type_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "soil_emsl_jgi_mg_specific_ecosystem",
-      "definition_uri": "https://example.com/nmdc_dh/specific_ecosystem",
-      "annotations": [
-        {
-          "tag": "dh:column_number",
-          "value": "13",
-          "@type": "Annotation"
-        },
-        {
-          "tag": "dh:section_name",
-          "value": "Sample ID",
-          "@type": "Annotation"
-        }
-      ],
-      "description": "Specific ecosystems represent specific features of the environment like aphotic zone in an ocean or gastric mucosa within a host digestive system. Specific ecosystem is in position 5/5 in a GOLD path.",
-      "comments": [
-        "Specific ecosystems help to define samples based on very specific characteristics of an environment under the five-level classification system."
-      ],
-      "from_schema": "https://microbiomedata/schema",
-      "see_also": [
-        "https://gold.jgi.doe.gov/help"
-      ],
-      "is_a": "gold_path_field",
-      "domain": "SoilEmslJgiMg",
-      "slot_uri": "https://microbiomedata/schema/specific_ecosystem",
-      "alias": "specific_ecosystem",
-      "owner": "SoilEmslJgiMg",
-      "domain_of": [
-        "SoilEmslJgiMg"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "specific_ecosystem",
-      "range": "specific_ecosystem_enum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "soil_emsl_jgi_mt_rna_seq_project",
       "definition_uri": "https://example.com/nmdc_dh/rna_seq_project",
       "annotations": [
@@ -13326,21 +13326,21 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "placeholder_class_gold_path_field",
-      "definition_uri": "https://example.com/nmdc_dh/gold_path_field",
-      "description": "This is a grouping for any of the gold path fields          ",
-      "from_schema": "https://microbiomedata/schema",
-      "is_a": "attribute",
+      "name": "placeholder_class_investigation_field",
+      "definition_uri": "https://example.com/nmdc_dh/investigation_field",
+      "description": "field describing aspect of the investigation/study to which the sample belongs",
+      "from_schema": "http://w3id.org/mixs/terms",
+      "is_a": "investigation_field",
       "abstract": true,
       "domain": "PlaceholderClass",
-      "slot_uri": "https://microbiomedata/schema/gold_path_field",
-      "alias": "gold_path_field",
+      "slot_uri": "http://w3id.org/mixs/terms/investigation_field",
+      "alias": "investigation field",
       "owner": "PlaceholderClass",
       "domain_of": [
         "PlaceholderClass"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "gold_path_field",
+      "usage_slot_name": "investigation field",
       "range": "string",
       "@type": "SlotDefinition"
     }
@@ -13397,6 +13397,11 @@
         "soil_emsl_jgi_mg_analysis_type",
         "soil_emsl_jgi_mg_env_package",
         "soil_emsl_jgi_mg_sample_link",
+        "ecosystem",
+        "ecosystem_category",
+        "ecosystem_subtype",
+        "ecosystem_type",
+        "specific_ecosystem",
         "agrochem_addition",
         "air_temp_regm",
         "al_sat",
@@ -13484,11 +13489,11 @@
         "water_cont_soil_meth",
         "water_content",
         "watering_regm",
-        "ecosystem",
-        "ecosystem_category",
-        "ecosystem_subtype",
-        "ecosystem_type",
-        "specific_ecosystem",
+        "soil_emsl_jgi_mg_ecosystem",
+        "soil_emsl_jgi_mg_ecosystem_category",
+        "soil_emsl_jgi_mg_ecosystem_subtype",
+        "soil_emsl_jgi_mg_ecosystem_type",
+        "soil_emsl_jgi_mg_specific_ecosystem",
         "soil_emsl_jgi_mg_agrochem_addition",
         "soil_emsl_jgi_mg_air_temp_regm",
         "soil_emsl_jgi_mg_al_sat",
@@ -13575,12 +13580,7 @@
         "soil_emsl_jgi_mg_tot_phosp",
         "soil_emsl_jgi_mg_water_cont_soil_meth",
         "soil_emsl_jgi_mg_water_content",
-        "soil_emsl_jgi_mg_watering_regm",
-        "soil_emsl_jgi_mg_ecosystem",
-        "soil_emsl_jgi_mg_ecosystem_category",
-        "soil_emsl_jgi_mg_ecosystem_subtype",
-        "soil_emsl_jgi_mg_ecosystem_type",
-        "soil_emsl_jgi_mg_specific_ecosystem"
+        "soil_emsl_jgi_mg_watering_regm"
       ],
       "slot_usage": {},
       "class_uri": "https://example.com/nmdc_dh/SoilEmslJgiMg",
@@ -13837,8 +13837,7 @@
       "definition_uri": "https://example.com/nmdc_dh/PlaceholderClass",
       "from_schema": "https://example.com/nmdc_dh",
       "slots": [
-        "gold_path_field",
-        "placeholder_class_gold_path_field"
+        "placeholder_class_investigation_field"
       ],
       "slot_usage": {},
       "class_uri": "https://example.com/nmdc_dh/PlaceholderClass",
@@ -13847,9 +13846,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "nmdc_dh.yaml",
-  "source_file_date": "2022-03-08T12:46:01",
-  "source_file_size": 222797,
-  "generation_date": "2022-03-08T12:46:05",
+  "source_file_date": "2022-03-08T15:00:49",
+  "source_file_size": 222786,
+  "generation_date": "2022-03-08T15:00:53",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/nmdc_dh.context.jsonld",

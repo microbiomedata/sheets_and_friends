@@ -201,6 +201,11 @@ linkml:Nodeidentifier NONLITERAL
           <analysis_type> @<AnalysisTypeEnum> + ;
           <env_package> @<EnvPackageEnum> ;
           <sample_link> @linkml:String ? ;
+          <ecosystem> @linkml:String ? ;
+          <ecosystem_category> @linkml:String ? ;
+          <ecosystem_subtype> @linkml:String ? ;
+          <ecosystem_type> @linkml:String ? ;
+          <specific_ecosystem> @linkml:String ? ;
           MIXS:0000639 @linkml:String * ;
           MIXS:0000551 @linkml:String * ;
           MIXS:0000607 @<QuantityValue> ? ;
@@ -287,12 +292,7 @@ linkml:Nodeidentifier NONLITERAL
           MIXS:0000117 @<QuantityValue> ? ;
           MIXS:0000323 @linkml:String ? ;
           MIXS:0000185 @<QuantityValue> ? ;
-          MIXS:0000591 @linkml:String * ;
-          <ecosystem> @linkml:String ? ;
-          <ecosystem_category> @linkml:String ? ;
-          <ecosystem_subtype> @linkml:String ? ;
-          <ecosystem_type> @linkml:String ? ;
-          <specific_ecosystem> @linkml:String ?
+          MIXS:0000591 @linkml:String *
        ) ;
        rdf:type [ <SoilEmslJgiMg> ]
     )
