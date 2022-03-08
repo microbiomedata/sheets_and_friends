@@ -48,7 +48,7 @@ type NmdcDhSection
 
 type PlaceholderClass
   {
-    investigationField: String
+    goldPathField: String
   }
 
 type QuantityValue
@@ -64,55 +64,50 @@ type SampleID
 
 type SoilEmslJgiMg
   {
-    analysisType: [AnalysisTypeEnum]!
-    collectionTime: String
-    dnaAbsorb2: String
-    dnaAbsorb1: String
-    dnaCollectSite: String!
-    dnaConcentration: String!
-    dnaContainerID: String!
-    dnaContType: DnaContTypeEnum!
-    dnaOrganisms: String
-    dnaIsolateMeth: String!
-    proposalDna: String!
-    dnaSampleFormat: DnaSampleFormatEnum!
-    dnaSampID: String!
-    dnaSampleName: String!
-    dnaProjectContact: String!
+    projectID: String!
+    sampleType: SampleTypeEnum!
+    sampleShipped: String!
+    eMSLStoreTemp: String!
+    technicalReps: String
+    replicateNumber: String
     dnaSeqProject: String!
     dnaSeqProjectName: String!
-    dnaSeqProjectPI: String!
+    dnaSampID: String!
+    dnaSampleName: String!
+    dnaConcentration: String!
     dnaVolume: String!
+    dnaAbsorb1: String
+    dnaAbsorb2: String
+    dnaContainerID: String!
+    dnaContType: DnaContTypeEnum!
     dnaContWell: String!
+    dnaSampleFormat: DnaSampleFormatEnum!
     dnaDnase: DnaDnaseEnum!
-    eMSLStoreTemp: String!
-    envPackage: EnvPackageEnum!
-    experimentalFactorOther: String
-    filterMethod: String
+    dnaOrganisms: String
+    dnaCollectSite: String!
+    dnaIsolateMeth: String!
+    dnaSeqProjectPI: String!
+    dnaProjectContact: String!
+    proposalDna: String!
+    collectionTime: String
     collectionDateInc: String
     collectionTimeInc: String
     startDateInc: String
     startTimeInc: String
-    isotopeExposure: String
+    filterMethod: String
+    experimentalFactorOther: String
+    nonMicrobBiomass: String
+    nonMicrobBiomassMethod: String
     microbialBiomassC: String
     microBiomassCMeth: String
     microbialBiomassN: String
     microBiomassNMeth: String
-    nonMicrobBiomass: String
-    nonMicrobBiomassMethod: String
-    technicalReps: String
     orgNitroMethod: String
     otherTreatment: String
-    projectID: String!
-    replicateNumber: String
+    isotopeExposure: String
+    analysisType: [AnalysisTypeEnum]!
+    envPackage: EnvPackageEnum!
     sampleLink: String
-    sampleShipped: String!
-    sampleType: SampleTypeEnum!
-    ecosystem: String
-    ecosystemCategory: String
-    ecosystemSubtype: String
-    ecosystemType: String
-    specificEcosystem: String
     agrochemAddition: [String]
     airTempRegm: [String]
     alSat: QuantityValue
@@ -200,28 +195,33 @@ type SoilEmslJgiMg
     waterContSoilMeth: String
     waterContent: QuantityValue
     wateringRegm: [String]
+    ecosystem: String
+    ecosystemCategory: String
+    ecosystemSubtype: String
+    ecosystemType: String
+    specificEcosystem: String
   }
 
 type SoilEmslJgiMt
   {
-    dnaseRna: DnaseRnaEnum!
-    rnaAbsorb2: String
-    rnaAbsorb1: String
-    rnaCollectSite: String!
-    rnaConcentration: String!
-    rnaContainerID: String!
-    rnaContType: RnaContTypeEnum!
-    rnaOrganisms: String
-    rnaIsolateMeth: String!
-    proposalRna: String!
-    rnaSampleFormat: RnaSampleFormatEnum!
-    rnaSampID: String!
-    rnaSampleName: String!
-    rnaProjectContact: String!
     rnaSeqProject: String!
     rnaSeqProjectName: String!
-    rnaSeqProjectPI: String!
+    rnaSampID: String!
+    rnaSampleName: String!
+    rnaConcentration: String!
     rnaVolume: String!
+    rnaAbsorb1: String
+    rnaAbsorb2: String
+    rnaContainerID: String!
+    rnaContType: RnaContTypeEnum!
     rnaContWell: String!
+    rnaSampleFormat: RnaSampleFormatEnum!
+    dnaseRna: DnaseRnaEnum!
+    rnaOrganisms: String
+    rnaCollectSite: String!
+    rnaIsolateMeth: String!
+    rnaSeqProjectPI: String!
+    rnaProjectContact: String!
+    proposalRna: String!
   }
 

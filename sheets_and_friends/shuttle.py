@@ -109,8 +109,12 @@ class Shuttle:
             for i in v['transactions']:
                 logger.info(i)
                 current_slot = current_view.induced_slot(slot_name=i['slot'], class_name=i['source class'])
+
+                # https://github.com/microbiomedata/sheets_and_friends/issues/72
+                del current_slot['alias']
                 # current_yaml = yaml_dumper.dumps(current_slot)
                 # print(current_yaml)
+
                 desired_class_name = i['destination class']
                 if desired_class_name not in self.destination_class_names:
                     new_class = ClassDefinition(name=desired_class_name)

@@ -157,55 +157,50 @@ linkml:Nodeidentifier NONLITERAL
 <SoilEmslJgiMg> CLOSED {
     (  $<SoilEmslJgiMg_tes> (  &<NmdcDhInterface_tes> ;
           rdf:type [ <NmdcDhInterface> ] ? ;
-          <analysis_type> @<AnalysisTypeEnum> + ;
-          <collection_time> @linkml:String ? ;
-          <dna_absorb2> @linkml:String ? ;
-          <dna_absorb1> @linkml:String ? ;
-          <dna_collect_site> @linkml:String ;
-          <dna_concentration> @linkml:String ;
-          <dna_container_ID> @linkml:String ;
-          <dna_cont_type> @<DnaContTypeEnum> ;
-          <dna_organisms> @linkml:String ? ;
-          <dna_isolate_meth> @linkml:String ;
-          <proposal_dna> @linkml:String ;
-          <dna_sample_format> @<DnaSampleFormatEnum> ;
-          <dna_samp_ID> @linkml:String ;
-          <dna_sample_name> @linkml:String ;
-          <dna_project_contact> @linkml:String ;
+          <project_ID> @linkml:String ;
+          <sample_type> @<SampleTypeEnum> ;
+          <sample_shipped> @linkml:String ;
+          <EMSL_store_temp> @linkml:String ;
+          <technical_reps> @linkml:String ? ;
+          <replicate_number> @linkml:String ? ;
           <dna_seq_project> @linkml:String ;
           <dna_seq_project_name> @linkml:String ;
-          <dna_seq_project_PI> @linkml:String ;
+          <dna_samp_ID> @linkml:String ;
+          <dna_sample_name> @linkml:String ;
+          <dna_concentration> @linkml:String ;
           <dna_volume> @linkml:String ;
+          <dna_absorb1> @linkml:String ? ;
+          <dna_absorb2> @linkml:String ? ;
+          <dna_container_ID> @linkml:String ;
+          <dna_cont_type> @<DnaContTypeEnum> ;
           <dna_cont_well> @linkml:String ;
+          <dna_sample_format> @<DnaSampleFormatEnum> ;
           <dna_dnase> @<DnaDnaseEnum> ;
-          <EMSL_store_temp> @linkml:String ;
-          <env_package> @<EnvPackageEnum> ;
-          <experimental_factor_other> @linkml:String ? ;
-          <filter_method> @linkml:String ? ;
+          <dna_organisms> @linkml:String ? ;
+          <dna_collect_site> @linkml:String ;
+          <dna_isolate_meth> @linkml:String ;
+          <dna_seq_project_PI> @linkml:String ;
+          <dna_project_contact> @linkml:String ;
+          <proposal_dna> @linkml:String ;
+          <collection_time> @linkml:String ? ;
           <collection_date_inc> @linkml:String ? ;
           <collection_time_inc> @linkml:String ? ;
           <start_date_inc> @linkml:String ? ;
           <start_time_inc> @linkml:String ? ;
-          <isotope_exposure> @linkml:String ? ;
+          <filter_method> @linkml:String ? ;
+          <experimental_factor_other> @linkml:String ? ;
+          <non_microb_biomass> @linkml:String ? ;
+          <non_microb_biomass_method> @linkml:String ? ;
           <microbial_biomass_C> @linkml:String ? ;
           <micro_biomass_C_meth> @linkml:String ? ;
           <microbial_biomass_N> @linkml:String ? ;
           <micro_biomass_N_meth> @linkml:String ? ;
-          <non_microb_biomass> @linkml:String ? ;
-          <non_microb_biomass_method> @linkml:String ? ;
-          <technical_reps> @linkml:String ? ;
           <org_nitro_method> @linkml:String ? ;
           <other_treatment> @linkml:String ? ;
-          <project_ID> @linkml:String ;
-          <replicate_number> @linkml:String ? ;
+          <isotope_exposure> @linkml:String ? ;
+          <analysis_type> @<AnalysisTypeEnum> + ;
+          <env_package> @<EnvPackageEnum> ;
           <sample_link> @linkml:String ? ;
-          <sample_shipped> @linkml:String ;
-          <sample_type> @<SampleTypeEnum> ;
-          <ecosystem> @linkml:String ? ;
-          <ecosystem_category> @linkml:String ? ;
-          <ecosystem_subtype> @linkml:String ? ;
-          <ecosystem_type> @linkml:String ? ;
-          <specific_ecosystem> @linkml:String ? ;
           MIXS:0000639 @linkml:String * ;
           MIXS:0000551 @linkml:String * ;
           MIXS:0000607 @<QuantityValue> ? ;
@@ -292,32 +287,37 @@ linkml:Nodeidentifier NONLITERAL
           MIXS:0000117 @<QuantityValue> ? ;
           MIXS:0000323 @linkml:String ? ;
           MIXS:0000185 @<QuantityValue> ? ;
-          MIXS:0000591 @linkml:String *
+          MIXS:0000591 @linkml:String * ;
+          <ecosystem> @linkml:String ? ;
+          <ecosystem_category> @linkml:String ? ;
+          <ecosystem_subtype> @linkml:String ? ;
+          <ecosystem_type> @linkml:String ? ;
+          <specific_ecosystem> @linkml:String ?
        ) ;
        rdf:type [ <SoilEmslJgiMg> ]
     )
 }
 
 <SoilEmslJgiMt> CLOSED {
-    (  $<SoilEmslJgiMt_tes> (  <dnase_rna> @<DnaseRnaEnum> ;
-          <rna_absorb2> @linkml:String ? ;
-          <rna_absorb1> @linkml:String ? ;
-          <rna_collect_site> @linkml:String ;
-          <rna_concentration> @linkml:String ;
-          <rna_container_ID> @linkml:String ;
-          <rna_cont_type> @<RnaContTypeEnum> ;
-          <rna_organisms> @linkml:String ? ;
-          <rna_isolate_meth> @linkml:String ;
-          <proposal_rna> @linkml:String ;
-          <rna_sample_format> @<RnaSampleFormatEnum> ;
+    (  $<SoilEmslJgiMt_tes> (  <rna_seq_project> @linkml:String ;
+          <rna_seq_project_name> @linkml:String ;
           <rna_samp_ID> @linkml:String ;
           <rna_sample_name> @linkml:String ;
-          <rna_project_contact> @linkml:String ;
-          <rna_seq_project> @linkml:String ;
-          <rna_seq_project_name> @linkml:String ;
-          <rna_seq_project_PI> @linkml:String ;
+          <rna_concentration> @linkml:String ;
           <rna_volume> @linkml:String ;
-          <rna_cont_well> @linkml:String
+          <rna_absorb1> @linkml:String ? ;
+          <rna_absorb2> @linkml:String ? ;
+          <rna_container_ID> @linkml:String ;
+          <rna_cont_type> @<RnaContTypeEnum> ;
+          <rna_cont_well> @linkml:String ;
+          <rna_sample_format> @<RnaSampleFormatEnum> ;
+          <dnase_rna> @<DnaseRnaEnum> ;
+          <rna_organisms> @linkml:String ? ;
+          <rna_collect_site> @linkml:String ;
+          <rna_isolate_meth> @linkml:String ;
+          <rna_seq_project_PI> @linkml:String ;
+          <rna_project_contact> @linkml:String ;
+          <proposal_rna> @linkml:String
        ) ;
        rdf:type [ <SoilEmslJgiMt> ] ?
     )
