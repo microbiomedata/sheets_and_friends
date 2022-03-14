@@ -1,5 +1,5 @@
 # Auto generated from nmdc_dh.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-02-24T17:21:32
+# Generation date: 2022-03-08T16:52:10
 # Schema: nmdc_dh
 #
 # id: https://example.com/nmdc_dh
@@ -87,23 +87,23 @@ class SoilEmslJgiMg(NmdcDhInterface):
     analysis_type: Union[Union[str, "AnalysisTypeEnum"], List[Union[str, "AnalysisTypeEnum"]]] = None
     dna_collect_site: str = None
     dna_concentration: str = None
-    dna_container_ID: str = None
     dna_cont_type: Union[str, "DnaContTypeEnum"] = None
+    dna_cont_well: str = None
+    dna_container_ID: str = None
+    dna_dnase: Union[str, "DnaDnaseEnum"] = None
     dna_isolate_meth: str = None
-    proposal_dna: str = None
-    dna_sample_format: Union[str, "DnaSampleFormatEnum"] = None
-    dna_samp_ID: str = None
-    dna_sample_name: str = None
     dna_project_contact: str = None
+    dna_samp_ID: str = None
+    dna_sample_format: Union[str, "DnaSampleFormatEnum"] = None
+    dna_sample_name: str = None
     dna_seq_project: str = None
     dna_seq_project_name: str = None
     dna_seq_project_PI: str = None
     dna_volume: str = None
-    dna_cont_well: str = None
-    dna_dnase: Union[str, "DnaDnaseEnum"] = None
     EMSL_store_temp: str = None
     env_package: Union[str, "EnvPackageEnum"] = None
     project_ID: str = None
+    proposal_dna: str = None
     sample_shipped: str = None
     sample_type: Union[str, "SampleTypeEnum"] = None
     collection_date: Union[str, XSDDate] = None
@@ -115,28 +115,28 @@ class SoilEmslJgiMg(NmdcDhInterface):
     geo_loc_name: str = None
     lat_lon: str = None
     samp_name: str = None
+    collection_date_inc: Optional[str] = None
     collection_time: Optional[str] = None
-    dna_absorb2: Optional[str] = None
+    collection_time_inc: Optional[str] = None
     dna_absorb1: Optional[str] = None
+    dna_absorb2: Optional[str] = None
     dna_organisms: Optional[str] = None
     experimental_factor_other: Optional[str] = None
     filter_method: Optional[str] = None
-    collection_date_inc: Optional[str] = None
-    collection_time_inc: Optional[str] = None
-    start_date_inc: Optional[str] = None
-    start_time_inc: Optional[str] = None
     isotope_exposure: Optional[str] = None
-    microbial_biomass_C: Optional[str] = None
     micro_biomass_C_meth: Optional[str] = None
-    microbial_biomass_N: Optional[str] = None
     micro_biomass_N_meth: Optional[str] = None
+    microbial_biomass_C: Optional[str] = None
+    microbial_biomass_N: Optional[str] = None
     non_microb_biomass: Optional[str] = None
     non_microb_biomass_method: Optional[str] = None
-    technical_reps: Optional[str] = None
     org_nitro_method: Optional[str] = None
     other_treatment: Optional[str] = None
     replicate_number: Optional[str] = None
     sample_link: Optional[str] = None
+    start_date_inc: Optional[str] = None
+    start_time_inc: Optional[str] = None
+    technical_reps: Optional[str] = None
     ecosystem: Optional[str] = None
     ecosystem_category: Optional[str] = None
     ecosystem_subtype: Optional[str] = None
@@ -243,45 +243,50 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.dna_concentration, str):
             self.dna_concentration = str(self.dna_concentration)
 
+        if self._is_empty(self.dna_cont_type):
+            self.MissingRequiredField("dna_cont_type")
+        if not isinstance(self.dna_cont_type, DnaContTypeEnum):
+            self.dna_cont_type = DnaContTypeEnum(self.dna_cont_type)
+
+        if self._is_empty(self.dna_cont_well):
+            self.MissingRequiredField("dna_cont_well")
+        if not isinstance(self.dna_cont_well, str):
+            self.dna_cont_well = str(self.dna_cont_well)
+
         if self._is_empty(self.dna_container_ID):
             self.MissingRequiredField("dna_container_ID")
         if not isinstance(self.dna_container_ID, str):
             self.dna_container_ID = str(self.dna_container_ID)
 
-        if self._is_empty(self.dna_cont_type):
-            self.MissingRequiredField("dna_cont_type")
-        if not isinstance(self.dna_cont_type, DnaContTypeEnum):
-            self.dna_cont_type = DnaContTypeEnum(self.dna_cont_type)
+        if self._is_empty(self.dna_dnase):
+            self.MissingRequiredField("dna_dnase")
+        if not isinstance(self.dna_dnase, DnaDnaseEnum):
+            self.dna_dnase = DnaDnaseEnum(self.dna_dnase)
 
         if self._is_empty(self.dna_isolate_meth):
             self.MissingRequiredField("dna_isolate_meth")
         if not isinstance(self.dna_isolate_meth, str):
             self.dna_isolate_meth = str(self.dna_isolate_meth)
 
-        if self._is_empty(self.proposal_dna):
-            self.MissingRequiredField("proposal_dna")
-        if not isinstance(self.proposal_dna, str):
-            self.proposal_dna = str(self.proposal_dna)
-
-        if self._is_empty(self.dna_sample_format):
-            self.MissingRequiredField("dna_sample_format")
-        if not isinstance(self.dna_sample_format, DnaSampleFormatEnum):
-            self.dna_sample_format = DnaSampleFormatEnum(self.dna_sample_format)
+        if self._is_empty(self.dna_project_contact):
+            self.MissingRequiredField("dna_project_contact")
+        if not isinstance(self.dna_project_contact, str):
+            self.dna_project_contact = str(self.dna_project_contact)
 
         if self._is_empty(self.dna_samp_ID):
             self.MissingRequiredField("dna_samp_ID")
         if not isinstance(self.dna_samp_ID, str):
             self.dna_samp_ID = str(self.dna_samp_ID)
 
+        if self._is_empty(self.dna_sample_format):
+            self.MissingRequiredField("dna_sample_format")
+        if not isinstance(self.dna_sample_format, DnaSampleFormatEnum):
+            self.dna_sample_format = DnaSampleFormatEnum(self.dna_sample_format)
+
         if self._is_empty(self.dna_sample_name):
             self.MissingRequiredField("dna_sample_name")
         if not isinstance(self.dna_sample_name, str):
             self.dna_sample_name = str(self.dna_sample_name)
-
-        if self._is_empty(self.dna_project_contact):
-            self.MissingRequiredField("dna_project_contact")
-        if not isinstance(self.dna_project_contact, str):
-            self.dna_project_contact = str(self.dna_project_contact)
 
         if self._is_empty(self.dna_seq_project):
             self.MissingRequiredField("dna_seq_project")
@@ -303,16 +308,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.dna_volume, str):
             self.dna_volume = str(self.dna_volume)
 
-        if self._is_empty(self.dna_cont_well):
-            self.MissingRequiredField("dna_cont_well")
-        if not isinstance(self.dna_cont_well, str):
-            self.dna_cont_well = str(self.dna_cont_well)
-
-        if self._is_empty(self.dna_dnase):
-            self.MissingRequiredField("dna_dnase")
-        if not isinstance(self.dna_dnase, DnaDnaseEnum):
-            self.dna_dnase = DnaDnaseEnum(self.dna_dnase)
-
         if self._is_empty(self.EMSL_store_temp):
             self.MissingRequiredField("EMSL_store_temp")
         if not isinstance(self.EMSL_store_temp, str):
@@ -327,6 +322,11 @@ class SoilEmslJgiMg(NmdcDhInterface):
             self.MissingRequiredField("project_ID")
         if not isinstance(self.project_ID, str):
             self.project_ID = str(self.project_ID)
+
+        if self._is_empty(self.proposal_dna):
+            self.MissingRequiredField("proposal_dna")
+        if not isinstance(self.proposal_dna, str):
+            self.proposal_dna = str(self.proposal_dna)
 
         if self._is_empty(self.sample_shipped):
             self.MissingRequiredField("sample_shipped")
@@ -408,11 +408,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.specific_ecosystem, SpecificEcosystemEnum):
             self.specific_ecosystem = SpecificEcosystemEnum(self.specific_ecosystem)
 
-        if self._is_empty(self.biotic_relationship):
-            self.MissingRequiredField("biotic_relationship")
-        if not isinstance(self.biotic_relationship, BioticRelationshipEnum):
-            self.biotic_relationship = BioticRelationshipEnum(self.biotic_relationship)
-
         if self._is_empty(self.collection_date):
             self.MissingRequiredField("collection_date")
         if not isinstance(self.collection_date, str):
@@ -458,11 +453,6 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.lat_lon, str):
             self.lat_lon = str(self.lat_lon)
 
-        if self._is_empty(self.rel_to_oxygen):
-            self.MissingRequiredField("rel_to_oxygen")
-        if not isinstance(self.rel_to_oxygen, RelToOxygenEnum):
-            self.rel_to_oxygen = RelToOxygenEnum(self.rel_to_oxygen)
-
         if self._is_empty(self.samp_name):
             self.MissingRequiredField("samp_name")
         if not isinstance(self.samp_name, str):
@@ -478,14 +468,20 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if not isinstance(self.store_cond, StoreCondEnum):
             self.store_cond = StoreCondEnum(self.store_cond)
 
+        if self.collection_date_inc is not None and not isinstance(self.collection_date_inc, str):
+            self.collection_date_inc = str(self.collection_date_inc)
+
         if self.collection_time is not None and not isinstance(self.collection_time, str):
             self.collection_time = str(self.collection_time)
 
-        if self.dna_absorb2 is not None and not isinstance(self.dna_absorb2, str):
-            self.dna_absorb2 = str(self.dna_absorb2)
+        if self.collection_time_inc is not None and not isinstance(self.collection_time_inc, str):
+            self.collection_time_inc = str(self.collection_time_inc)
 
         if self.dna_absorb1 is not None and not isinstance(self.dna_absorb1, str):
             self.dna_absorb1 = str(self.dna_absorb1)
+
+        if self.dna_absorb2 is not None and not isinstance(self.dna_absorb2, str):
+            self.dna_absorb2 = str(self.dna_absorb2)
 
         if self.dna_organisms is not None and not isinstance(self.dna_organisms, str):
             self.dna_organisms = str(self.dna_organisms)
@@ -496,41 +492,26 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if self.filter_method is not None and not isinstance(self.filter_method, str):
             self.filter_method = str(self.filter_method)
 
-        if self.collection_date_inc is not None and not isinstance(self.collection_date_inc, str):
-            self.collection_date_inc = str(self.collection_date_inc)
-
-        if self.collection_time_inc is not None and not isinstance(self.collection_time_inc, str):
-            self.collection_time_inc = str(self.collection_time_inc)
-
-        if self.start_date_inc is not None and not isinstance(self.start_date_inc, str):
-            self.start_date_inc = str(self.start_date_inc)
-
-        if self.start_time_inc is not None and not isinstance(self.start_time_inc, str):
-            self.start_time_inc = str(self.start_time_inc)
-
         if self.isotope_exposure is not None and not isinstance(self.isotope_exposure, str):
             self.isotope_exposure = str(self.isotope_exposure)
-
-        if self.microbial_biomass_C is not None and not isinstance(self.microbial_biomass_C, str):
-            self.microbial_biomass_C = str(self.microbial_biomass_C)
 
         if self.micro_biomass_C_meth is not None and not isinstance(self.micro_biomass_C_meth, str):
             self.micro_biomass_C_meth = str(self.micro_biomass_C_meth)
 
-        if self.microbial_biomass_N is not None and not isinstance(self.microbial_biomass_N, str):
-            self.microbial_biomass_N = str(self.microbial_biomass_N)
-
         if self.micro_biomass_N_meth is not None and not isinstance(self.micro_biomass_N_meth, str):
             self.micro_biomass_N_meth = str(self.micro_biomass_N_meth)
+
+        if self.microbial_biomass_C is not None and not isinstance(self.microbial_biomass_C, str):
+            self.microbial_biomass_C = str(self.microbial_biomass_C)
+
+        if self.microbial_biomass_N is not None and not isinstance(self.microbial_biomass_N, str):
+            self.microbial_biomass_N = str(self.microbial_biomass_N)
 
         if self.non_microb_biomass is not None and not isinstance(self.non_microb_biomass, str):
             self.non_microb_biomass = str(self.non_microb_biomass)
 
         if self.non_microb_biomass_method is not None and not isinstance(self.non_microb_biomass_method, str):
             self.non_microb_biomass_method = str(self.non_microb_biomass_method)
-
-        if self.technical_reps is not None and not isinstance(self.technical_reps, str):
-            self.technical_reps = str(self.technical_reps)
 
         if self.org_nitro_method is not None and not isinstance(self.org_nitro_method, str):
             self.org_nitro_method = str(self.org_nitro_method)
@@ -543,6 +524,15 @@ class SoilEmslJgiMg(NmdcDhInterface):
 
         if self.sample_link is not None and not isinstance(self.sample_link, str):
             self.sample_link = str(self.sample_link)
+
+        if self.start_date_inc is not None and not isinstance(self.start_date_inc, str):
+            self.start_date_inc = str(self.start_date_inc)
+
+        if self.start_time_inc is not None and not isinstance(self.start_time_inc, str):
+            self.start_time_inc = str(self.start_time_inc)
+
+        if self.technical_reps is not None and not isinstance(self.technical_reps, str):
+            self.technical_reps = str(self.technical_reps)
 
         if self.ecosystem is not None and not isinstance(self.ecosystem, str):
             self.ecosystem = str(self.ecosystem)
@@ -829,6 +819,9 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if self.biotic_regm is not None and not isinstance(self.biotic_regm, str):
             self.biotic_regm = str(self.biotic_regm)
 
+        if self.biotic_relationship is not None and not isinstance(self.biotic_relationship, BioticRelationshipEnum):
+            self.biotic_relationship = BioticRelationshipEnum(self.biotic_relationship)
+
         if self.carb_nitro_ratio is not None and not isinstance(self.carb_nitro_ratio, QuantityValue):
             self.carb_nitro_ratio = QuantityValue(**as_dict(self.carb_nitro_ratio))
 
@@ -940,6 +933,9 @@ class SoilEmslJgiMg(NmdcDhInterface):
         if self.profile_position is not None and not isinstance(self.profile_position, ProfilePositionEnum):
             self.profile_position = ProfilePositionEnum(self.profile_position)
 
+        if self.rel_to_oxygen is not None and not isinstance(self.rel_to_oxygen, RelToOxygenEnum):
+            self.rel_to_oxygen = RelToOxygenEnum(self.rel_to_oxygen)
+
         if self.salinity is not None and not isinstance(self.salinity, QuantityValue):
             self.salinity = QuantityValue(**as_dict(self.salinity))
 
@@ -1042,23 +1038,23 @@ class SoilEmslJgiMt(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = NMDC_DH.SoilEmslJgiMt
 
     dnase_rna: Union[str, "DnaseRnaEnum"] = None
+    proposal_rna: str = None
     rna_collect_site: str = None
     rna_concentration: str = None
-    rna_container_ID: str = None
     rna_cont_type: Union[str, "RnaContTypeEnum"] = None
+    rna_cont_well: str = None
+    rna_container_ID: str = None
     rna_isolate_meth: str = None
-    proposal_rna: str = None
-    rna_sample_format: Union[str, "RnaSampleFormatEnum"] = None
-    rna_samp_ID: str = None
-    rna_sample_name: str = None
     rna_project_contact: str = None
+    rna_samp_ID: str = None
+    rna_sample_format: Union[str, "RnaSampleFormatEnum"] = None
+    rna_sample_name: str = None
     rna_seq_project: str = None
     rna_seq_project_name: str = None
     rna_seq_project_PI: str = None
     rna_volume: str = None
-    rna_cont_well: str = None
-    rna_absorb2: Optional[str] = None
     rna_absorb1: Optional[str] = None
+    rna_absorb2: Optional[str] = None
     rna_organisms: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -1066,6 +1062,11 @@ class SoilEmslJgiMt(YAMLRoot):
             self.MissingRequiredField("dnase_rna")
         if not isinstance(self.dnase_rna, DnaseRnaEnum):
             self.dnase_rna = DnaseRnaEnum(self.dnase_rna)
+
+        if self._is_empty(self.proposal_rna):
+            self.MissingRequiredField("proposal_rna")
+        if not isinstance(self.proposal_rna, str):
+            self.proposal_rna = str(self.proposal_rna)
 
         if self._is_empty(self.rna_collect_site):
             self.MissingRequiredField("rna_collect_site")
@@ -1077,45 +1078,45 @@ class SoilEmslJgiMt(YAMLRoot):
         if not isinstance(self.rna_concentration, str):
             self.rna_concentration = str(self.rna_concentration)
 
-        if self._is_empty(self.rna_container_ID):
-            self.MissingRequiredField("rna_container_ID")
-        if not isinstance(self.rna_container_ID, str):
-            self.rna_container_ID = str(self.rna_container_ID)
-
         if self._is_empty(self.rna_cont_type):
             self.MissingRequiredField("rna_cont_type")
         if not isinstance(self.rna_cont_type, RnaContTypeEnum):
             self.rna_cont_type = RnaContTypeEnum(self.rna_cont_type)
+
+        if self._is_empty(self.rna_cont_well):
+            self.MissingRequiredField("rna_cont_well")
+        if not isinstance(self.rna_cont_well, str):
+            self.rna_cont_well = str(self.rna_cont_well)
+
+        if self._is_empty(self.rna_container_ID):
+            self.MissingRequiredField("rna_container_ID")
+        if not isinstance(self.rna_container_ID, str):
+            self.rna_container_ID = str(self.rna_container_ID)
 
         if self._is_empty(self.rna_isolate_meth):
             self.MissingRequiredField("rna_isolate_meth")
         if not isinstance(self.rna_isolate_meth, str):
             self.rna_isolate_meth = str(self.rna_isolate_meth)
 
-        if self._is_empty(self.proposal_rna):
-            self.MissingRequiredField("proposal_rna")
-        if not isinstance(self.proposal_rna, str):
-            self.proposal_rna = str(self.proposal_rna)
-
-        if self._is_empty(self.rna_sample_format):
-            self.MissingRequiredField("rna_sample_format")
-        if not isinstance(self.rna_sample_format, RnaSampleFormatEnum):
-            self.rna_sample_format = RnaSampleFormatEnum(self.rna_sample_format)
+        if self._is_empty(self.rna_project_contact):
+            self.MissingRequiredField("rna_project_contact")
+        if not isinstance(self.rna_project_contact, str):
+            self.rna_project_contact = str(self.rna_project_contact)
 
         if self._is_empty(self.rna_samp_ID):
             self.MissingRequiredField("rna_samp_ID")
         if not isinstance(self.rna_samp_ID, str):
             self.rna_samp_ID = str(self.rna_samp_ID)
 
+        if self._is_empty(self.rna_sample_format):
+            self.MissingRequiredField("rna_sample_format")
+        if not isinstance(self.rna_sample_format, RnaSampleFormatEnum):
+            self.rna_sample_format = RnaSampleFormatEnum(self.rna_sample_format)
+
         if self._is_empty(self.rna_sample_name):
             self.MissingRequiredField("rna_sample_name")
         if not isinstance(self.rna_sample_name, str):
             self.rna_sample_name = str(self.rna_sample_name)
-
-        if self._is_empty(self.rna_project_contact):
-            self.MissingRequiredField("rna_project_contact")
-        if not isinstance(self.rna_project_contact, str):
-            self.rna_project_contact = str(self.rna_project_contact)
 
         if self._is_empty(self.rna_seq_project):
             self.MissingRequiredField("rna_seq_project")
@@ -1137,16 +1138,11 @@ class SoilEmslJgiMt(YAMLRoot):
         if not isinstance(self.rna_volume, str):
             self.rna_volume = str(self.rna_volume)
 
-        if self._is_empty(self.rna_cont_well):
-            self.MissingRequiredField("rna_cont_well")
-        if not isinstance(self.rna_cont_well, str):
-            self.rna_cont_well = str(self.rna_cont_well)
+        if self.rna_absorb1 is not None and not isinstance(self.rna_absorb1, str):
+            self.rna_absorb1 = str(self.rna_absorb1)
 
         if self.rna_absorb2 is not None and not isinstance(self.rna_absorb2, str):
             self.rna_absorb2 = str(self.rna_absorb2)
-
-        if self.rna_absorb1 is not None and not isinstance(self.rna_absorb1, str):
-            self.rna_absorb1 = str(self.rna_absorb1)
 
         if self.rna_organisms is not None and not isinstance(self.rna_organisms, str):
             self.rna_organisms = str(self.rna_organisms)
@@ -1784,14 +1780,20 @@ class slots:
 slots.analysis_type = Slot(uri=NMDC_DH.analysis_type, name="analysis_type", curie=NMDC_DH.curie('analysis_type'),
                    model_uri=NMDC_DH.analysis_type, domain=None, range=Optional[str])
 
+slots.collection_date_inc = Slot(uri=NMDC_DH.collection_date_inc, name="collection_date_inc", curie=NMDC_DH.curie('collection_date_inc'),
+                   model_uri=NMDC_DH.collection_date_inc, domain=None, range=Optional[str])
+
 slots.collection_time = Slot(uri=NMDC_DH.collection_time, name="collection_time", curie=NMDC_DH.curie('collection_time'),
                    model_uri=NMDC_DH.collection_time, domain=None, range=Optional[str])
 
-slots.dna_absorb2 = Slot(uri=NMDC_DH.dna_absorb2, name="dna_absorb2", curie=NMDC_DH.curie('dna_absorb2'),
-                   model_uri=NMDC_DH.dna_absorb2, domain=None, range=Optional[str])
+slots.collection_time_inc = Slot(uri=NMDC_DH.collection_time_inc, name="collection_time_inc", curie=NMDC_DH.curie('collection_time_inc'),
+                   model_uri=NMDC_DH.collection_time_inc, domain=None, range=Optional[str])
 
 slots.dna_absorb1 = Slot(uri=NMDC_DH.dna_absorb1, name="dna_absorb1", curie=NMDC_DH.curie('dna_absorb1'),
                    model_uri=NMDC_DH.dna_absorb1, domain=None, range=Optional[str])
+
+slots.dna_absorb2 = Slot(uri=NMDC_DH.dna_absorb2, name="dna_absorb2", curie=NMDC_DH.curie('dna_absorb2'),
+                   model_uri=NMDC_DH.dna_absorb2, domain=None, range=Optional[str])
 
 slots.dna_collect_site = Slot(uri=NMDC_DH.dna_collect_site, name="dna_collect_site", curie=NMDC_DH.curie('dna_collect_site'),
                    model_uri=NMDC_DH.dna_collect_site, domain=None, range=Optional[str])
@@ -1799,32 +1801,35 @@ slots.dna_collect_site = Slot(uri=NMDC_DH.dna_collect_site, name="dna_collect_si
 slots.dna_concentration = Slot(uri=NMDC_DH.dna_concentration, name="dna_concentration", curie=NMDC_DH.curie('dna_concentration'),
                    model_uri=NMDC_DH.dna_concentration, domain=None, range=Optional[str])
 
-slots.dna_container_ID = Slot(uri=NMDC_DH.dna_container_ID, name="dna_container_ID", curie=NMDC_DH.curie('dna_container_ID'),
-                   model_uri=NMDC_DH.dna_container_ID, domain=None, range=Optional[str])
-
 slots.dna_cont_type = Slot(uri=NMDC_DH.dna_cont_type, name="dna_cont_type", curie=NMDC_DH.curie('dna_cont_type'),
                    model_uri=NMDC_DH.dna_cont_type, domain=None, range=Optional[str])
 
-slots.dna_organisms = Slot(uri=NMDC_DH.dna_organisms, name="dna_organisms", curie=NMDC_DH.curie('dna_organisms'),
-                   model_uri=NMDC_DH.dna_organisms, domain=None, range=Optional[str])
+slots.dna_cont_well = Slot(uri=NMDC_DH.dna_cont_well, name="dna_cont_well", curie=NMDC_DH.curie('dna_cont_well'),
+                   model_uri=NMDC_DH.dna_cont_well, domain=None, range=Optional[str])
+
+slots.dna_container_ID = Slot(uri=NMDC_DH.dna_container_ID, name="dna_container_ID", curie=NMDC_DH.curie('dna_container_ID'),
+                   model_uri=NMDC_DH.dna_container_ID, domain=None, range=Optional[str])
+
+slots.dna_dnase = Slot(uri=NMDC_DH.dna_dnase, name="dna_dnase", curie=NMDC_DH.curie('dna_dnase'),
+                   model_uri=NMDC_DH.dna_dnase, domain=None, range=Optional[str])
 
 slots.dna_isolate_meth = Slot(uri=NMDC_DH.dna_isolate_meth, name="dna_isolate_meth", curie=NMDC_DH.curie('dna_isolate_meth'),
                    model_uri=NMDC_DH.dna_isolate_meth, domain=None, range=Optional[str])
 
-slots.proposal_dna = Slot(uri=NMDC_DH.proposal_dna, name="proposal_dna", curie=NMDC_DH.curie('proposal_dna'),
-                   model_uri=NMDC_DH.proposal_dna, domain=None, range=Optional[str])
+slots.dna_organisms = Slot(uri=NMDC_DH.dna_organisms, name="dna_organisms", curie=NMDC_DH.curie('dna_organisms'),
+                   model_uri=NMDC_DH.dna_organisms, domain=None, range=Optional[str])
 
-slots.dna_sample_format = Slot(uri=NMDC_DH.dna_sample_format, name="dna_sample_format", curie=NMDC_DH.curie('dna_sample_format'),
-                   model_uri=NMDC_DH.dna_sample_format, domain=None, range=Optional[str])
+slots.dna_project_contact = Slot(uri=NMDC_DH.dna_project_contact, name="dna_project_contact", curie=NMDC_DH.curie('dna_project_contact'),
+                   model_uri=NMDC_DH.dna_project_contact, domain=None, range=Optional[str])
 
 slots.dna_samp_ID = Slot(uri=NMDC_DH.dna_samp_ID, name="dna_samp_ID", curie=NMDC_DH.curie('dna_samp_ID'),
                    model_uri=NMDC_DH.dna_samp_ID, domain=None, range=Optional[str])
 
+slots.dna_sample_format = Slot(uri=NMDC_DH.dna_sample_format, name="dna_sample_format", curie=NMDC_DH.curie('dna_sample_format'),
+                   model_uri=NMDC_DH.dna_sample_format, domain=None, range=Optional[str])
+
 slots.dna_sample_name = Slot(uri=NMDC_DH.dna_sample_name, name="dna_sample_name", curie=NMDC_DH.curie('dna_sample_name'),
                    model_uri=NMDC_DH.dna_sample_name, domain=None, range=Optional[str])
-
-slots.dna_project_contact = Slot(uri=NMDC_DH.dna_project_contact, name="dna_project_contact", curie=NMDC_DH.curie('dna_project_contact'),
-                   model_uri=NMDC_DH.dna_project_contact, domain=None, range=Optional[str])
 
 slots.dna_seq_project = Slot(uri=NMDC_DH.dna_seq_project, name="dna_seq_project", curie=NMDC_DH.curie('dna_seq_project'),
                    model_uri=NMDC_DH.dna_seq_project, domain=None, range=Optional[str])
@@ -1838,14 +1843,8 @@ slots.dna_seq_project_PI = Slot(uri=NMDC_DH.dna_seq_project_PI, name="dna_seq_pr
 slots.dna_volume = Slot(uri=NMDC_DH.dna_volume, name="dna_volume", curie=NMDC_DH.curie('dna_volume'),
                    model_uri=NMDC_DH.dna_volume, domain=None, range=Optional[str])
 
-slots.dna_cont_well = Slot(uri=NMDC_DH.dna_cont_well, name="dna_cont_well", curie=NMDC_DH.curie('dna_cont_well'),
-                   model_uri=NMDC_DH.dna_cont_well, domain=None, range=Optional[str])
-
 slots.dnase_rna = Slot(uri=NMDC_DH.dnase_rna, name="dnase_rna", curie=NMDC_DH.curie('dnase_rna'),
                    model_uri=NMDC_DH.dnase_rna, domain=None, range=Optional[str])
-
-slots.dna_dnase = Slot(uri=NMDC_DH.dna_dnase, name="dna_dnase", curie=NMDC_DH.curie('dna_dnase'),
-                   model_uri=NMDC_DH.dna_dnase, domain=None, range=Optional[str])
 
 slots.EMSL_store_temp = Slot(uri=NMDC_DH.EMSL_store_temp, name="EMSL_store_temp", curie=NMDC_DH.curie('EMSL_store_temp'),
                    model_uri=NMDC_DH.EMSL_store_temp, domain=None, range=Optional[str])
@@ -1859,41 +1858,26 @@ slots.experimental_factor_other = Slot(uri=NMDC_DH.experimental_factor_other, na
 slots.filter_method = Slot(uri=NMDC_DH.filter_method, name="filter_method", curie=NMDC_DH.curie('filter_method'),
                    model_uri=NMDC_DH.filter_method, domain=None, range=Optional[str])
 
-slots.collection_date_inc = Slot(uri=NMDC_DH.collection_date_inc, name="collection_date_inc", curie=NMDC_DH.curie('collection_date_inc'),
-                   model_uri=NMDC_DH.collection_date_inc, domain=None, range=Optional[str])
-
-slots.collection_time_inc = Slot(uri=NMDC_DH.collection_time_inc, name="collection_time_inc", curie=NMDC_DH.curie('collection_time_inc'),
-                   model_uri=NMDC_DH.collection_time_inc, domain=None, range=Optional[str])
-
-slots.start_date_inc = Slot(uri=NMDC_DH.start_date_inc, name="start_date_inc", curie=NMDC_DH.curie('start_date_inc'),
-                   model_uri=NMDC_DH.start_date_inc, domain=None, range=Optional[str])
-
-slots.start_time_inc = Slot(uri=NMDC_DH.start_time_inc, name="start_time_inc", curie=NMDC_DH.curie('start_time_inc'),
-                   model_uri=NMDC_DH.start_time_inc, domain=None, range=Optional[str])
-
 slots.isotope_exposure = Slot(uri=NMDC_DH.isotope_exposure, name="isotope_exposure", curie=NMDC_DH.curie('isotope_exposure'),
                    model_uri=NMDC_DH.isotope_exposure, domain=None, range=Optional[str])
-
-slots.microbial_biomass_C = Slot(uri=NMDC_DH.microbial_biomass_C, name="microbial_biomass_C", curie=NMDC_DH.curie('microbial_biomass_C'),
-                   model_uri=NMDC_DH.microbial_biomass_C, domain=None, range=Optional[str])
 
 slots.micro_biomass_C_meth = Slot(uri=NMDC_DH.micro_biomass_C_meth, name="micro_biomass_C_meth", curie=NMDC_DH.curie('micro_biomass_C_meth'),
                    model_uri=NMDC_DH.micro_biomass_C_meth, domain=None, range=Optional[str])
 
-slots.microbial_biomass_N = Slot(uri=NMDC_DH.microbial_biomass_N, name="microbial_biomass_N", curie=NMDC_DH.curie('microbial_biomass_N'),
-                   model_uri=NMDC_DH.microbial_biomass_N, domain=None, range=Optional[str])
-
 slots.micro_biomass_N_meth = Slot(uri=NMDC_DH.micro_biomass_N_meth, name="micro_biomass_N_meth", curie=NMDC_DH.curie('micro_biomass_N_meth'),
                    model_uri=NMDC_DH.micro_biomass_N_meth, domain=None, range=Optional[str])
+
+slots.microbial_biomass_C = Slot(uri=NMDC_DH.microbial_biomass_C, name="microbial_biomass_C", curie=NMDC_DH.curie('microbial_biomass_C'),
+                   model_uri=NMDC_DH.microbial_biomass_C, domain=None, range=Optional[str])
+
+slots.microbial_biomass_N = Slot(uri=NMDC_DH.microbial_biomass_N, name="microbial_biomass_N", curie=NMDC_DH.curie('microbial_biomass_N'),
+                   model_uri=NMDC_DH.microbial_biomass_N, domain=None, range=Optional[str])
 
 slots.non_microb_biomass = Slot(uri=NMDC_DH.non_microb_biomass, name="non_microb_biomass", curie=NMDC_DH.curie('non_microb_biomass'),
                    model_uri=NMDC_DH.non_microb_biomass, domain=None, range=Optional[str])
 
 slots.non_microb_biomass_method = Slot(uri=NMDC_DH.non_microb_biomass_method, name="non_microb_biomass_method", curie=NMDC_DH.curie('non_microb_biomass_method'),
                    model_uri=NMDC_DH.non_microb_biomass_method, domain=None, range=Optional[str])
-
-slots.technical_reps = Slot(uri=NMDC_DH.technical_reps, name="technical_reps", curie=NMDC_DH.curie('technical_reps'),
-                   model_uri=NMDC_DH.technical_reps, domain=None, range=Optional[str])
 
 slots.org_nitro_method = Slot(uri=NMDC_DH.org_nitro_method, name="org_nitro_method", curie=NMDC_DH.curie('org_nitro_method'),
                    model_uri=NMDC_DH.org_nitro_method, domain=None, range=Optional[str])
@@ -1904,14 +1888,20 @@ slots.other_treatment = Slot(uri=NMDC_DH.other_treatment, name="other_treatment"
 slots.project_ID = Slot(uri=NMDC_DH.project_ID, name="project_ID", curie=NMDC_DH.curie('project_ID'),
                    model_uri=NMDC_DH.project_ID, domain=None, range=Optional[str])
 
+slots.proposal_dna = Slot(uri=NMDC_DH.proposal_dna, name="proposal_dna", curie=NMDC_DH.curie('proposal_dna'),
+                   model_uri=NMDC_DH.proposal_dna, domain=None, range=Optional[str])
+
+slots.proposal_rna = Slot(uri=NMDC_DH.proposal_rna, name="proposal_rna", curie=NMDC_DH.curie('proposal_rna'),
+                   model_uri=NMDC_DH.proposal_rna, domain=None, range=Optional[str])
+
 slots.replicate_number = Slot(uri=NMDC_DH.replicate_number, name="replicate_number", curie=NMDC_DH.curie('replicate_number'),
                    model_uri=NMDC_DH.replicate_number, domain=None, range=Optional[str])
 
-slots.rna_absorb2 = Slot(uri=NMDC_DH.rna_absorb2, name="rna_absorb2", curie=NMDC_DH.curie('rna_absorb2'),
-                   model_uri=NMDC_DH.rna_absorb2, domain=None, range=Optional[str])
-
 slots.rna_absorb1 = Slot(uri=NMDC_DH.rna_absorb1, name="rna_absorb1", curie=NMDC_DH.curie('rna_absorb1'),
                    model_uri=NMDC_DH.rna_absorb1, domain=None, range=Optional[str])
+
+slots.rna_absorb2 = Slot(uri=NMDC_DH.rna_absorb2, name="rna_absorb2", curie=NMDC_DH.curie('rna_absorb2'),
+                   model_uri=NMDC_DH.rna_absorb2, domain=None, range=Optional[str])
 
 slots.rna_collect_site = Slot(uri=NMDC_DH.rna_collect_site, name="rna_collect_site", curie=NMDC_DH.curie('rna_collect_site'),
                    model_uri=NMDC_DH.rna_collect_site, domain=None, range=Optional[str])
@@ -1919,32 +1909,32 @@ slots.rna_collect_site = Slot(uri=NMDC_DH.rna_collect_site, name="rna_collect_si
 slots.rna_concentration = Slot(uri=NMDC_DH.rna_concentration, name="rna_concentration", curie=NMDC_DH.curie('rna_concentration'),
                    model_uri=NMDC_DH.rna_concentration, domain=None, range=Optional[str])
 
-slots.rna_container_ID = Slot(uri=NMDC_DH.rna_container_ID, name="rna_container_ID", curie=NMDC_DH.curie('rna_container_ID'),
-                   model_uri=NMDC_DH.rna_container_ID, domain=None, range=Optional[str])
-
 slots.rna_cont_type = Slot(uri=NMDC_DH.rna_cont_type, name="rna_cont_type", curie=NMDC_DH.curie('rna_cont_type'),
                    model_uri=NMDC_DH.rna_cont_type, domain=None, range=Optional[str])
 
-slots.rna_organisms = Slot(uri=NMDC_DH.rna_organisms, name="rna_organisms", curie=NMDC_DH.curie('rna_organisms'),
-                   model_uri=NMDC_DH.rna_organisms, domain=None, range=Optional[str])
+slots.rna_cont_well = Slot(uri=NMDC_DH.rna_cont_well, name="rna_cont_well", curie=NMDC_DH.curie('rna_cont_well'),
+                   model_uri=NMDC_DH.rna_cont_well, domain=None, range=Optional[str])
+
+slots.rna_container_ID = Slot(uri=NMDC_DH.rna_container_ID, name="rna_container_ID", curie=NMDC_DH.curie('rna_container_ID'),
+                   model_uri=NMDC_DH.rna_container_ID, domain=None, range=Optional[str])
 
 slots.rna_isolate_meth = Slot(uri=NMDC_DH.rna_isolate_meth, name="rna_isolate_meth", curie=NMDC_DH.curie('rna_isolate_meth'),
                    model_uri=NMDC_DH.rna_isolate_meth, domain=None, range=Optional[str])
 
-slots.proposal_rna = Slot(uri=NMDC_DH.proposal_rna, name="proposal_rna", curie=NMDC_DH.curie('proposal_rna'),
-                   model_uri=NMDC_DH.proposal_rna, domain=None, range=Optional[str])
+slots.rna_organisms = Slot(uri=NMDC_DH.rna_organisms, name="rna_organisms", curie=NMDC_DH.curie('rna_organisms'),
+                   model_uri=NMDC_DH.rna_organisms, domain=None, range=Optional[str])
 
-slots.rna_sample_format = Slot(uri=NMDC_DH.rna_sample_format, name="rna_sample_format", curie=NMDC_DH.curie('rna_sample_format'),
-                   model_uri=NMDC_DH.rna_sample_format, domain=None, range=Optional[str])
+slots.rna_project_contact = Slot(uri=NMDC_DH.rna_project_contact, name="rna_project_contact", curie=NMDC_DH.curie('rna_project_contact'),
+                   model_uri=NMDC_DH.rna_project_contact, domain=None, range=Optional[str])
 
 slots.rna_samp_ID = Slot(uri=NMDC_DH.rna_samp_ID, name="rna_samp_ID", curie=NMDC_DH.curie('rna_samp_ID'),
                    model_uri=NMDC_DH.rna_samp_ID, domain=None, range=Optional[str])
 
+slots.rna_sample_format = Slot(uri=NMDC_DH.rna_sample_format, name="rna_sample_format", curie=NMDC_DH.curie('rna_sample_format'),
+                   model_uri=NMDC_DH.rna_sample_format, domain=None, range=Optional[str])
+
 slots.rna_sample_name = Slot(uri=NMDC_DH.rna_sample_name, name="rna_sample_name", curie=NMDC_DH.curie('rna_sample_name'),
                    model_uri=NMDC_DH.rna_sample_name, domain=None, range=Optional[str])
-
-slots.rna_project_contact = Slot(uri=NMDC_DH.rna_project_contact, name="rna_project_contact", curie=NMDC_DH.curie('rna_project_contact'),
-                   model_uri=NMDC_DH.rna_project_contact, domain=None, range=Optional[str])
 
 slots.rna_seq_project = Slot(uri=NMDC_DH.rna_seq_project, name="rna_seq_project", curie=NMDC_DH.curie('rna_seq_project'),
                    model_uri=NMDC_DH.rna_seq_project, domain=None, range=Optional[str])
@@ -1958,9 +1948,6 @@ slots.rna_seq_project_PI = Slot(uri=NMDC_DH.rna_seq_project_PI, name="rna_seq_pr
 slots.rna_volume = Slot(uri=NMDC_DH.rna_volume, name="rna_volume", curie=NMDC_DH.curie('rna_volume'),
                    model_uri=NMDC_DH.rna_volume, domain=None, range=Optional[str])
 
-slots.rna_cont_well = Slot(uri=NMDC_DH.rna_cont_well, name="rna_cont_well", curie=NMDC_DH.curie('rna_cont_well'),
-                   model_uri=NMDC_DH.rna_cont_well, domain=None, range=Optional[str])
-
 slots.sample_link = Slot(uri=NMDC_DH.sample_link, name="sample_link", curie=NMDC_DH.curie('sample_link'),
                    model_uri=NMDC_DH.sample_link, domain=None, range=Optional[str])
 
@@ -1969,6 +1956,15 @@ slots.sample_shipped = Slot(uri=NMDC_DH.sample_shipped, name="sample_shipped", c
 
 slots.sample_type = Slot(uri=NMDC_DH.sample_type, name="sample_type", curie=NMDC_DH.curie('sample_type'),
                    model_uri=NMDC_DH.sample_type, domain=None, range=Optional[str])
+
+slots.start_date_inc = Slot(uri=NMDC_DH.start_date_inc, name="start_date_inc", curie=NMDC_DH.curie('start_date_inc'),
+                   model_uri=NMDC_DH.start_date_inc, domain=None, range=Optional[str])
+
+slots.start_time_inc = Slot(uri=NMDC_DH.start_time_inc, name="start_time_inc", curie=NMDC_DH.curie('start_time_inc'),
+                   model_uri=NMDC_DH.start_time_inc, domain=None, range=Optional[str])
+
+slots.technical_reps = Slot(uri=NMDC_DH.technical_reps, name="technical_reps", curie=NMDC_DH.curie('technical_reps'),
+                   model_uri=NMDC_DH.technical_reps, domain=None, range=Optional[str])
 
 slots.has_unit = Slot(uri=NMDC_DH.has_unit, name="has unit", curie=NMDC_DH.curie('has_unit'),
                    model_uri=NMDC_DH.has_unit, domain=None, range=Optional[str])
@@ -2276,14 +2272,20 @@ slots.watering_regm = Slot(uri=MIXS['0000591'], name="watering_regm", curie=MIXS
 slots.soil_emsl_jgi_mg_analysis_type = Slot(uri=NMDC_DH.analysis_type, name="soil_emsl_jgi_mg_analysis_type", curie=NMDC_DH.curie('analysis_type'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_analysis_type, domain=SoilEmslJgiMg, range=Union[Union[str, "AnalysisTypeEnum"], List[Union[str, "AnalysisTypeEnum"]]])
 
+slots.soil_emsl_jgi_mg_collection_date_inc = Slot(uri=NMDC_DH.collection_date_inc, name="soil_emsl_jgi_mg_collection_date_inc", curie=NMDC_DH.curie('collection_date_inc'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_collection_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
+
 slots.soil_emsl_jgi_mg_collection_time = Slot(uri=NMDC_DH.collection_time, name="soil_emsl_jgi_mg_collection_time", curie=NMDC_DH.curie('collection_time'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_collection_time, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_dna_absorb2 = Slot(uri=NMDC_DH.dna_absorb2, name="soil_emsl_jgi_mg_dna_absorb2", curie=NMDC_DH.curie('dna_absorb2'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_absorb2, domain=SoilEmslJgiMg, range=Optional[str])
+slots.soil_emsl_jgi_mg_collection_time_inc = Slot(uri=NMDC_DH.collection_time_inc, name="soil_emsl_jgi_mg_collection_time_inc", curie=NMDC_DH.curie('collection_time_inc'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_collection_time_inc, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_dna_absorb1 = Slot(uri=NMDC_DH.dna_absorb1, name="soil_emsl_jgi_mg_dna_absorb1", curie=NMDC_DH.curie('dna_absorb1'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_absorb1, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_dna_absorb2 = Slot(uri=NMDC_DH.dna_absorb2, name="soil_emsl_jgi_mg_dna_absorb2", curie=NMDC_DH.curie('dna_absorb2'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_absorb2, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_dna_collect_site = Slot(uri=NMDC_DH.dna_collect_site, name="soil_emsl_jgi_mg_dna_collect_site", curie=NMDC_DH.curie('dna_collect_site'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_collect_site, domain=SoilEmslJgiMg, range=str)
@@ -2291,32 +2293,35 @@ slots.soil_emsl_jgi_mg_dna_collect_site = Slot(uri=NMDC_DH.dna_collect_site, nam
 slots.soil_emsl_jgi_mg_dna_concentration = Slot(uri=NMDC_DH.dna_concentration, name="soil_emsl_jgi_mg_dna_concentration", curie=NMDC_DH.curie('dna_concentration'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_concentration, domain=SoilEmslJgiMg, range=str)
 
-slots.soil_emsl_jgi_mg_dna_container_ID = Slot(uri=NMDC_DH.dna_container_ID, name="soil_emsl_jgi_mg_dna_container_ID", curie=NMDC_DH.curie('dna_container_ID'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_container_ID, domain=SoilEmslJgiMg, range=str)
-
 slots.soil_emsl_jgi_mg_dna_cont_type = Slot(uri=NMDC_DH.dna_cont_type, name="soil_emsl_jgi_mg_dna_cont_type", curie=NMDC_DH.curie('dna_cont_type'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_cont_type, domain=SoilEmslJgiMg, range=Union[str, "DnaContTypeEnum"])
 
-slots.soil_emsl_jgi_mg_dna_organisms = Slot(uri=NMDC_DH.dna_organisms, name="soil_emsl_jgi_mg_dna_organisms", curie=NMDC_DH.curie('dna_organisms'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_organisms, domain=SoilEmslJgiMg, range=Optional[str])
+slots.soil_emsl_jgi_mg_dna_cont_well = Slot(uri=NMDC_DH.dna_cont_well, name="soil_emsl_jgi_mg_dna_cont_well", curie=NMDC_DH.curie('dna_cont_well'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_cont_well, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_dna_container_ID = Slot(uri=NMDC_DH.dna_container_ID, name="soil_emsl_jgi_mg_dna_container_ID", curie=NMDC_DH.curie('dna_container_ID'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_container_ID, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_dna_dnase = Slot(uri=NMDC_DH.dna_dnase, name="soil_emsl_jgi_mg_dna_dnase", curie=NMDC_DH.curie('dna_dnase'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_dnase, domain=SoilEmslJgiMg, range=Union[str, "DnaDnaseEnum"])
 
 slots.soil_emsl_jgi_mg_dna_isolate_meth = Slot(uri=NMDC_DH.dna_isolate_meth, name="soil_emsl_jgi_mg_dna_isolate_meth", curie=NMDC_DH.curie('dna_isolate_meth'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_isolate_meth, domain=SoilEmslJgiMg, range=str)
 
-slots.soil_emsl_jgi_mg_proposal_dna = Slot(uri=NMDC_DH.proposal_dna, name="soil_emsl_jgi_mg_proposal_dna", curie=NMDC_DH.curie('proposal_dna'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_proposal_dna, domain=SoilEmslJgiMg, range=str)
+slots.soil_emsl_jgi_mg_dna_organisms = Slot(uri=NMDC_DH.dna_organisms, name="soil_emsl_jgi_mg_dna_organisms", curie=NMDC_DH.curie('dna_organisms'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_organisms, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_dna_sample_format = Slot(uri=NMDC_DH.dna_sample_format, name="soil_emsl_jgi_mg_dna_sample_format", curie=NMDC_DH.curie('dna_sample_format'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_sample_format, domain=SoilEmslJgiMg, range=Union[str, "DnaSampleFormatEnum"])
+slots.soil_emsl_jgi_mg_dna_project_contact = Slot(uri=NMDC_DH.dna_project_contact, name="soil_emsl_jgi_mg_dna_project_contact", curie=NMDC_DH.curie('dna_project_contact'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_project_contact, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_dna_samp_ID = Slot(uri=NMDC_DH.dna_samp_ID, name="soil_emsl_jgi_mg_dna_samp_ID", curie=NMDC_DH.curie('dna_samp_ID'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_samp_ID, domain=SoilEmslJgiMg, range=str)
 
+slots.soil_emsl_jgi_mg_dna_sample_format = Slot(uri=NMDC_DH.dna_sample_format, name="soil_emsl_jgi_mg_dna_sample_format", curie=NMDC_DH.curie('dna_sample_format'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_sample_format, domain=SoilEmslJgiMg, range=Union[str, "DnaSampleFormatEnum"])
+
 slots.soil_emsl_jgi_mg_dna_sample_name = Slot(uri=NMDC_DH.dna_sample_name, name="soil_emsl_jgi_mg_dna_sample_name", curie=NMDC_DH.curie('dna_sample_name'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_sample_name, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_dna_project_contact = Slot(uri=NMDC_DH.dna_project_contact, name="soil_emsl_jgi_mg_dna_project_contact", curie=NMDC_DH.curie('dna_project_contact'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_project_contact, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_dna_seq_project = Slot(uri=NMDC_DH.dna_seq_project, name="soil_emsl_jgi_mg_dna_seq_project", curie=NMDC_DH.curie('dna_seq_project'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_seq_project, domain=SoilEmslJgiMg, range=str)
@@ -2330,12 +2335,6 @@ slots.soil_emsl_jgi_mg_dna_seq_project_PI = Slot(uri=NMDC_DH.dna_seq_project_PI,
 slots.soil_emsl_jgi_mg_dna_volume = Slot(uri=NMDC_DH.dna_volume, name="soil_emsl_jgi_mg_dna_volume", curie=NMDC_DH.curie('dna_volume'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_volume, domain=SoilEmslJgiMg, range=str)
 
-slots.soil_emsl_jgi_mg_dna_cont_well = Slot(uri=NMDC_DH.dna_cont_well, name="soil_emsl_jgi_mg_dna_cont_well", curie=NMDC_DH.curie('dna_cont_well'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_cont_well, domain=SoilEmslJgiMg, range=str)
-
-slots.soil_emsl_jgi_mg_dna_dnase = Slot(uri=NMDC_DH.dna_dnase, name="soil_emsl_jgi_mg_dna_dnase", curie=NMDC_DH.curie('dna_dnase'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_dna_dnase, domain=SoilEmslJgiMg, range=Union[str, "DnaDnaseEnum"])
-
 slots.soil_emsl_jgi_mg_EMSL_store_temp = Slot(uri=NMDC_DH.EMSL_store_temp, name="soil_emsl_jgi_mg_EMSL_store_temp", curie=NMDC_DH.curie('EMSL_store_temp'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_EMSL_store_temp, domain=SoilEmslJgiMg, range=str)
 
@@ -2348,41 +2347,26 @@ slots.soil_emsl_jgi_mg_experimental_factor_other = Slot(uri=NMDC_DH.experimental
 slots.soil_emsl_jgi_mg_filter_method = Slot(uri=NMDC_DH.filter_method, name="soil_emsl_jgi_mg_filter_method", curie=NMDC_DH.curie('filter_method'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_filter_method, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_collection_date_inc = Slot(uri=NMDC_DH.collection_date_inc, name="soil_emsl_jgi_mg_collection_date_inc", curie=NMDC_DH.curie('collection_date_inc'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_collection_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_collection_time_inc = Slot(uri=NMDC_DH.collection_time_inc, name="soil_emsl_jgi_mg_collection_time_inc", curie=NMDC_DH.curie('collection_time_inc'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_collection_time_inc, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_start_date_inc = Slot(uri=NMDC_DH.start_date_inc, name="soil_emsl_jgi_mg_start_date_inc", curie=NMDC_DH.curie('start_date_inc'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_start_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_start_time_inc = Slot(uri=NMDC_DH.start_time_inc, name="soil_emsl_jgi_mg_start_time_inc", curie=NMDC_DH.curie('start_time_inc'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_start_time_inc, domain=SoilEmslJgiMg, range=Optional[str])
-
 slots.soil_emsl_jgi_mg_isotope_exposure = Slot(uri=NMDC_DH.isotope_exposure, name="soil_emsl_jgi_mg_isotope_exposure", curie=NMDC_DH.curie('isotope_exposure'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_isotope_exposure, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_microbial_biomass_C = Slot(uri=NMDC_DH.microbial_biomass_C, name="soil_emsl_jgi_mg_microbial_biomass_C", curie=NMDC_DH.curie('microbial_biomass_C'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_microbial_biomass_C, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_micro_biomass_C_meth = Slot(uri=NMDC_DH.micro_biomass_C_meth, name="soil_emsl_jgi_mg_micro_biomass_C_meth", curie=NMDC_DH.curie('micro_biomass_C_meth'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_micro_biomass_C_meth, domain=SoilEmslJgiMg, range=Optional[str])
 
-slots.soil_emsl_jgi_mg_microbial_biomass_N = Slot(uri=NMDC_DH.microbial_biomass_N, name="soil_emsl_jgi_mg_microbial_biomass_N", curie=NMDC_DH.curie('microbial_biomass_N'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_microbial_biomass_N, domain=SoilEmslJgiMg, range=Optional[str])
-
 slots.soil_emsl_jgi_mg_micro_biomass_N_meth = Slot(uri=NMDC_DH.micro_biomass_N_meth, name="soil_emsl_jgi_mg_micro_biomass_N_meth", curie=NMDC_DH.curie('micro_biomass_N_meth'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_micro_biomass_N_meth, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_microbial_biomass_C = Slot(uri=NMDC_DH.microbial_biomass_C, name="soil_emsl_jgi_mg_microbial_biomass_C", curie=NMDC_DH.curie('microbial_biomass_C'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_microbial_biomass_C, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_microbial_biomass_N = Slot(uri=NMDC_DH.microbial_biomass_N, name="soil_emsl_jgi_mg_microbial_biomass_N", curie=NMDC_DH.curie('microbial_biomass_N'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_microbial_biomass_N, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_non_microb_biomass = Slot(uri=NMDC_DH.non_microb_biomass, name="soil_emsl_jgi_mg_non_microb_biomass", curie=NMDC_DH.curie('non_microb_biomass'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_non_microb_biomass, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_non_microb_biomass_method = Slot(uri=NMDC_DH.non_microb_biomass_method, name="soil_emsl_jgi_mg_non_microb_biomass_method", curie=NMDC_DH.curie('non_microb_biomass_method'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_non_microb_biomass_method, domain=SoilEmslJgiMg, range=Optional[str])
-
-slots.soil_emsl_jgi_mg_technical_reps = Slot(uri=NMDC_DH.technical_reps, name="soil_emsl_jgi_mg_technical_reps", curie=NMDC_DH.curie('technical_reps'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_technical_reps, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_org_nitro_method = Slot(uri=NMDC_DH.org_nitro_method, name="soil_emsl_jgi_mg_org_nitro_method", curie=NMDC_DH.curie('org_nitro_method'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_org_nitro_method, domain=SoilEmslJgiMg, range=Optional[str])
@@ -2392,6 +2376,9 @@ slots.soil_emsl_jgi_mg_other_treatment = Slot(uri=NMDC_DH.other_treatment, name=
 
 slots.soil_emsl_jgi_mg_project_ID = Slot(uri=NMDC_DH.project_ID, name="soil_emsl_jgi_mg_project_ID", curie=NMDC_DH.curie('project_ID'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_project_ID, domain=SoilEmslJgiMg, range=str)
+
+slots.soil_emsl_jgi_mg_proposal_dna = Slot(uri=NMDC_DH.proposal_dna, name="soil_emsl_jgi_mg_proposal_dna", curie=NMDC_DH.curie('proposal_dna'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_proposal_dna, domain=SoilEmslJgiMg, range=str)
 
 slots.soil_emsl_jgi_mg_replicate_number = Slot(uri=NMDC_DH.replicate_number, name="soil_emsl_jgi_mg_replicate_number", curie=NMDC_DH.curie('replicate_number'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_replicate_number, domain=SoilEmslJgiMg, range=Optional[str])
@@ -2404,6 +2391,15 @@ slots.soil_emsl_jgi_mg_sample_shipped = Slot(uri=NMDC_DH.sample_shipped, name="s
 
 slots.soil_emsl_jgi_mg_sample_type = Slot(uri=NMDC_DH.sample_type, name="soil_emsl_jgi_mg_sample_type", curie=NMDC_DH.curie('sample_type'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_sample_type, domain=SoilEmslJgiMg, range=Union[str, "SampleTypeEnum"])
+
+slots.soil_emsl_jgi_mg_start_date_inc = Slot(uri=NMDC_DH.start_date_inc, name="soil_emsl_jgi_mg_start_date_inc", curie=NMDC_DH.curie('start_date_inc'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_start_date_inc, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_start_time_inc = Slot(uri=NMDC_DH.start_time_inc, name="soil_emsl_jgi_mg_start_time_inc", curie=NMDC_DH.curie('start_time_inc'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_start_time_inc, domain=SoilEmslJgiMg, range=Optional[str])
+
+slots.soil_emsl_jgi_mg_technical_reps = Slot(uri=NMDC_DH.technical_reps, name="soil_emsl_jgi_mg_technical_reps", curie=NMDC_DH.curie('technical_reps'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_technical_reps, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_ecosystem = Slot(uri="str(uriorcurie)", name="soil_emsl_jgi_mg_ecosystem", curie=None,
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_ecosystem, domain=SoilEmslJgiMg, range=Union[str, "EcosystemEnum"])
@@ -2445,7 +2441,7 @@ slots.soil_emsl_jgi_mg_biotic_regm = Slot(uri=MIXS['0001038'], name="soil_emsl_j
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_biotic_regm, domain=SoilEmslJgiMg, range=Optional[str])
 
 slots.soil_emsl_jgi_mg_biotic_relationship = Slot(uri=MIXS['0000028'], name="soil_emsl_jgi_mg_biotic_relationship", curie=MIXS.curie('0000028'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_biotic_relationship, domain=SoilEmslJgiMg, range=Union[str, "BioticRelationshipEnum"])
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_biotic_relationship, domain=SoilEmslJgiMg, range=Optional[Union[str, "BioticRelationshipEnum"]])
 
 slots.soil_emsl_jgi_mg_carb_nitro_ratio = Slot(uri=MIXS['0000310'], name="soil_emsl_jgi_mg_carb_nitro_ratio", curie=MIXS.curie('0000310'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_carb_nitro_ratio, domain=SoilEmslJgiMg, range=Optional[Union[dict, "QuantityValue"]])
@@ -2580,7 +2576,7 @@ slots.soil_emsl_jgi_mg_profile_position = Slot(uri=MIXS['0001084'], name="soil_e
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_profile_position, domain=SoilEmslJgiMg, range=Optional[Union[str, "ProfilePositionEnum"]])
 
 slots.soil_emsl_jgi_mg_rel_to_oxygen = Slot(uri=MIXS['0000015'], name="soil_emsl_jgi_mg_rel_to_oxygen", curie=MIXS.curie('0000015'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mg_rel_to_oxygen, domain=SoilEmslJgiMg, range=Union[str, "RelToOxygenEnum"])
+                   model_uri=NMDC_DH.soil_emsl_jgi_mg_rel_to_oxygen, domain=SoilEmslJgiMg, range=Optional[Union[str, "RelToOxygenEnum"]])
 
 slots.soil_emsl_jgi_mg_salinity = Slot(uri=MIXS['0000183'], name="soil_emsl_jgi_mg_salinity", curie=MIXS.curie('0000183'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mg_salinity, domain=SoilEmslJgiMg, range=Optional[Union[dict, "QuantityValue"]])
@@ -2684,11 +2680,14 @@ slots.soil_emsl_jgi_mg_watering_regm = Slot(uri=MIXS['0000591'], name="soil_emsl
 slots.soil_emsl_jgi_mt_dnase_rna = Slot(uri=NMDC_DH.dnase_rna, name="soil_emsl_jgi_mt_dnase_rna", curie=NMDC_DH.curie('dnase_rna'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_dnase_rna, domain=SoilEmslJgiMt, range=Union[str, "DnaseRnaEnum"])
 
-slots.soil_emsl_jgi_mt_rna_absorb2 = Slot(uri=NMDC_DH.rna_absorb2, name="soil_emsl_jgi_mt_rna_absorb2", curie=NMDC_DH.curie('rna_absorb2'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_absorb2, domain=SoilEmslJgiMt, range=Optional[str])
+slots.soil_emsl_jgi_mt_proposal_rna = Slot(uri=NMDC_DH.proposal_rna, name="soil_emsl_jgi_mt_proposal_rna", curie=NMDC_DH.curie('proposal_rna'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_proposal_rna, domain=SoilEmslJgiMt, range=str)
 
 slots.soil_emsl_jgi_mt_rna_absorb1 = Slot(uri=NMDC_DH.rna_absorb1, name="soil_emsl_jgi_mt_rna_absorb1", curie=NMDC_DH.curie('rna_absorb1'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_absorb1, domain=SoilEmslJgiMt, range=Optional[str])
+
+slots.soil_emsl_jgi_mt_rna_absorb2 = Slot(uri=NMDC_DH.rna_absorb2, name="soil_emsl_jgi_mt_rna_absorb2", curie=NMDC_DH.curie('rna_absorb2'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_absorb2, domain=SoilEmslJgiMt, range=Optional[str])
 
 slots.soil_emsl_jgi_mt_rna_collect_site = Slot(uri=NMDC_DH.rna_collect_site, name="soil_emsl_jgi_mt_rna_collect_site", curie=NMDC_DH.curie('rna_collect_site'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_collect_site, domain=SoilEmslJgiMt, range=str)
@@ -2696,32 +2695,32 @@ slots.soil_emsl_jgi_mt_rna_collect_site = Slot(uri=NMDC_DH.rna_collect_site, nam
 slots.soil_emsl_jgi_mt_rna_concentration = Slot(uri=NMDC_DH.rna_concentration, name="soil_emsl_jgi_mt_rna_concentration", curie=NMDC_DH.curie('rna_concentration'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_concentration, domain=SoilEmslJgiMt, range=str)
 
-slots.soil_emsl_jgi_mt_rna_container_ID = Slot(uri=NMDC_DH.rna_container_ID, name="soil_emsl_jgi_mt_rna_container_ID", curie=NMDC_DH.curie('rna_container_ID'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_container_ID, domain=SoilEmslJgiMt, range=str)
-
 slots.soil_emsl_jgi_mt_rna_cont_type = Slot(uri=NMDC_DH.rna_cont_type, name="soil_emsl_jgi_mt_rna_cont_type", curie=NMDC_DH.curie('rna_cont_type'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_cont_type, domain=SoilEmslJgiMt, range=Union[str, "RnaContTypeEnum"])
 
-slots.soil_emsl_jgi_mt_rna_organisms = Slot(uri=NMDC_DH.rna_organisms, name="soil_emsl_jgi_mt_rna_organisms", curie=NMDC_DH.curie('rna_organisms'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_organisms, domain=SoilEmslJgiMt, range=Optional[str])
+slots.soil_emsl_jgi_mt_rna_cont_well = Slot(uri=NMDC_DH.rna_cont_well, name="soil_emsl_jgi_mt_rna_cont_well", curie=NMDC_DH.curie('rna_cont_well'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_cont_well, domain=SoilEmslJgiMt, range=str)
+
+slots.soil_emsl_jgi_mt_rna_container_ID = Slot(uri=NMDC_DH.rna_container_ID, name="soil_emsl_jgi_mt_rna_container_ID", curie=NMDC_DH.curie('rna_container_ID'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_container_ID, domain=SoilEmslJgiMt, range=str)
 
 slots.soil_emsl_jgi_mt_rna_isolate_meth = Slot(uri=NMDC_DH.rna_isolate_meth, name="soil_emsl_jgi_mt_rna_isolate_meth", curie=NMDC_DH.curie('rna_isolate_meth'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_isolate_meth, domain=SoilEmslJgiMt, range=str)
 
-slots.soil_emsl_jgi_mt_proposal_rna = Slot(uri=NMDC_DH.proposal_rna, name="soil_emsl_jgi_mt_proposal_rna", curie=NMDC_DH.curie('proposal_rna'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_proposal_rna, domain=SoilEmslJgiMt, range=str)
+slots.soil_emsl_jgi_mt_rna_organisms = Slot(uri=NMDC_DH.rna_organisms, name="soil_emsl_jgi_mt_rna_organisms", curie=NMDC_DH.curie('rna_organisms'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_organisms, domain=SoilEmslJgiMt, range=Optional[str])
 
-slots.soil_emsl_jgi_mt_rna_sample_format = Slot(uri=NMDC_DH.rna_sample_format, name="soil_emsl_jgi_mt_rna_sample_format", curie=NMDC_DH.curie('rna_sample_format'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_sample_format, domain=SoilEmslJgiMt, range=Union[str, "RnaSampleFormatEnum"])
+slots.soil_emsl_jgi_mt_rna_project_contact = Slot(uri=NMDC_DH.rna_project_contact, name="soil_emsl_jgi_mt_rna_project_contact", curie=NMDC_DH.curie('rna_project_contact'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_project_contact, domain=SoilEmslJgiMt, range=str)
 
 slots.soil_emsl_jgi_mt_rna_samp_ID = Slot(uri=NMDC_DH.rna_samp_ID, name="soil_emsl_jgi_mt_rna_samp_ID", curie=NMDC_DH.curie('rna_samp_ID'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_samp_ID, domain=SoilEmslJgiMt, range=str)
 
+slots.soil_emsl_jgi_mt_rna_sample_format = Slot(uri=NMDC_DH.rna_sample_format, name="soil_emsl_jgi_mt_rna_sample_format", curie=NMDC_DH.curie('rna_sample_format'),
+                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_sample_format, domain=SoilEmslJgiMt, range=Union[str, "RnaSampleFormatEnum"])
+
 slots.soil_emsl_jgi_mt_rna_sample_name = Slot(uri=NMDC_DH.rna_sample_name, name="soil_emsl_jgi_mt_rna_sample_name", curie=NMDC_DH.curie('rna_sample_name'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_sample_name, domain=SoilEmslJgiMt, range=str)
-
-slots.soil_emsl_jgi_mt_rna_project_contact = Slot(uri=NMDC_DH.rna_project_contact, name="soil_emsl_jgi_mt_rna_project_contact", curie=NMDC_DH.curie('rna_project_contact'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_project_contact, domain=SoilEmslJgiMt, range=str)
 
 slots.soil_emsl_jgi_mt_rna_seq_project = Slot(uri=NMDC_DH.rna_seq_project, name="soil_emsl_jgi_mt_rna_seq_project", curie=NMDC_DH.curie('rna_seq_project'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_seq_project, domain=SoilEmslJgiMt, range=str)
@@ -2734,9 +2733,6 @@ slots.soil_emsl_jgi_mt_rna_seq_project_PI = Slot(uri=NMDC_DH.rna_seq_project_PI,
 
 slots.soil_emsl_jgi_mt_rna_volume = Slot(uri=NMDC_DH.rna_volume, name="soil_emsl_jgi_mt_rna_volume", curie=NMDC_DH.curie('rna_volume'),
                    model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_volume, domain=SoilEmslJgiMt, range=str)
-
-slots.soil_emsl_jgi_mt_rna_cont_well = Slot(uri=NMDC_DH.rna_cont_well, name="soil_emsl_jgi_mt_rna_cont_well", curie=NMDC_DH.curie('rna_cont_well'),
-                   model_uri=NMDC_DH.soil_emsl_jgi_mt_rna_cont_well, domain=SoilEmslJgiMt, range=str)
 
 slots.quantity_value_has_unit = Slot(uri="str(uriorcurie)", name="quantity value_has unit", curie=None,
                    model_uri=NMDC_DH.quantity_value_has_unit, domain=QuantityValue, range=Optional[str])

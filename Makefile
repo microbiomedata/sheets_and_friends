@@ -1,4 +1,7 @@
-nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs
+#nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
+#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for sujay
+nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's sandbox
+
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 .PHONY: all clean cogs_fetch
@@ -87,7 +90,12 @@ squeaky_clean: clean
 	rm -rf .cogs
 
 project: artifacts/nmdc_dh.yaml
-	poetry run gen-project --exclude shacl --exclude owl --dir $@ $< 2>> logs/gen-project.log
+	poetry run gen-project \
+		--exclude shacl \
+		--exclude owl \
+		--exclude excel \
+		--exclude java \
+		--dir $@ $< 2>> logs/gen-project.log
 
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
 	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log

@@ -1285,7 +1285,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "List any organisms known or suspected to grow in co-culture, as well as estimated % of the organism in that culture.",
         "guidance": "Pattern hint: {text}",
-        "examples": "expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles (1%)",
+        "examples": "expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles (1%)",
         "exportField": {
           "soil_emsl_jgi_mg": [
             {
@@ -2916,7 +2916,7 @@ var DATA = [
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
         "requirement": "required",
-        "description": "The vertical distance below local surface, e.g. For sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
+        "description": "The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.",
         "guidance": "All depths must be reported in meters. Provide the numerical portion only. | Pattern hint: {float}|{float}-{float}",
         "examples": "0-0.1; 1",
         "pattern": "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$|^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?-[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$",
@@ -3170,7 +3170,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "recommended",
+        "requirement": "",
         "description": "Description of relationship(s) between the subject organism and other organism(s) it is associated with. E.g., parasite on species X; mutualist with species Y. The target organism is the subject of the relationship, and the other organism(s) is the object",
         "guidance": "",
         "examples": "free living",
@@ -3198,7 +3198,7 @@ var DATA = [
         "dataStatus": null,
         "xs:minInclusive": "",
         "xs:maxInclusive": "",
-        "requirement": "recommended",
+        "requirement": "",
         "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments",
         "guidance": "",
         "examples": "aerobe",
@@ -3322,7 +3322,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "The time of sampling, either as an instance (single point) or interval.",
         "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33; 13:33:55",
+        "examples": "13:33 or 13:33:55",
         "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3344,7 +3344,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Date the incubation was harvested/collected/ended. Only relevant for incubation samples.",
         "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15; 2021-04; 2021",
+        "examples": "2021-04-15, 2021-04 and 2021 are all acceptable.",
         "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3366,7 +3366,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Time the incubation was harvested/collected/ended. Only relevant for incubation samples.",
         "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33; 13:33:55",
+        "examples": "13:33 or 13:33:55",
         "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3388,7 +3388,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Date the incubation was started. Only relevant for incubation samples.",
         "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15; 2021-04; 2021",
+        "examples": "2021-04-15, 2021-04 and 2021 are all acceptable.",
         "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3410,7 +3410,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Time the incubation was started. Only relevant for incubation samples.",
         "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33; 13:33:55",
+        "examples": "13:33 or 13:33:55",
         "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
         "exportField": {
           "soil_emsl_jgi_mg": [

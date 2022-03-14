@@ -740,14 +740,20 @@ slots:
   analysis_type:
     name: analysis_type
     from_schema: https://example.com/nmdc_dh
+  collection_date_inc:
+    name: collection_date_inc
+    from_schema: https://example.com/nmdc_dh
   collection_time:
     name: collection_time
     from_schema: https://example.com/nmdc_dh
-  dna_absorb2:
-    name: dna_absorb2
+  collection_time_inc:
+    name: collection_time_inc
     from_schema: https://example.com/nmdc_dh
   dna_absorb1:
     name: dna_absorb1
+    from_schema: https://example.com/nmdc_dh
+  dna_absorb2:
+    name: dna_absorb2
     from_schema: https://example.com/nmdc_dh
   dna_collect_site:
     name: dna_collect_site
@@ -755,32 +761,35 @@ slots:
   dna_concentration:
     name: dna_concentration
     from_schema: https://example.com/nmdc_dh
-  dna_container_ID:
-    name: dna_container_ID
-    from_schema: https://example.com/nmdc_dh
   dna_cont_type:
     name: dna_cont_type
     from_schema: https://example.com/nmdc_dh
-  dna_organisms:
-    name: dna_organisms
+  dna_cont_well:
+    name: dna_cont_well
+    from_schema: https://example.com/nmdc_dh
+  dna_container_ID:
+    name: dna_container_ID
+    from_schema: https://example.com/nmdc_dh
+  dna_dnase:
+    name: dna_dnase
     from_schema: https://example.com/nmdc_dh
   dna_isolate_meth:
     name: dna_isolate_meth
     from_schema: https://example.com/nmdc_dh
-  proposal_dna:
-    name: proposal_dna
+  dna_organisms:
+    name: dna_organisms
     from_schema: https://example.com/nmdc_dh
-  dna_sample_format:
-    name: dna_sample_format
+  dna_project_contact:
+    name: dna_project_contact
     from_schema: https://example.com/nmdc_dh
   dna_samp_ID:
     name: dna_samp_ID
     from_schema: https://example.com/nmdc_dh
+  dna_sample_format:
+    name: dna_sample_format
+    from_schema: https://example.com/nmdc_dh
   dna_sample_name:
     name: dna_sample_name
-    from_schema: https://example.com/nmdc_dh
-  dna_project_contact:
-    name: dna_project_contact
     from_schema: https://example.com/nmdc_dh
   dna_seq_project:
     name: dna_seq_project
@@ -794,14 +803,8 @@ slots:
   dna_volume:
     name: dna_volume
     from_schema: https://example.com/nmdc_dh
-  dna_cont_well:
-    name: dna_cont_well
-    from_schema: https://example.com/nmdc_dh
   dnase_rna:
     name: dnase_rna
-    from_schema: https://example.com/nmdc_dh
-  dna_dnase:
-    name: dna_dnase
     from_schema: https://example.com/nmdc_dh
   EMSL_store_temp:
     name: EMSL_store_temp
@@ -815,41 +818,26 @@ slots:
   filter_method:
     name: filter_method
     from_schema: https://example.com/nmdc_dh
-  collection_date_inc:
-    name: collection_date_inc
-    from_schema: https://example.com/nmdc_dh
-  collection_time_inc:
-    name: collection_time_inc
-    from_schema: https://example.com/nmdc_dh
-  start_date_inc:
-    name: start_date_inc
-    from_schema: https://example.com/nmdc_dh
-  start_time_inc:
-    name: start_time_inc
-    from_schema: https://example.com/nmdc_dh
   isotope_exposure:
     name: isotope_exposure
-    from_schema: https://example.com/nmdc_dh
-  microbial_biomass_C:
-    name: microbial_biomass_C
     from_schema: https://example.com/nmdc_dh
   micro_biomass_C_meth:
     name: micro_biomass_C_meth
     from_schema: https://example.com/nmdc_dh
-  microbial_biomass_N:
-    name: microbial_biomass_N
-    from_schema: https://example.com/nmdc_dh
   micro_biomass_N_meth:
     name: micro_biomass_N_meth
+    from_schema: https://example.com/nmdc_dh
+  microbial_biomass_C:
+    name: microbial_biomass_C
+    from_schema: https://example.com/nmdc_dh
+  microbial_biomass_N:
+    name: microbial_biomass_N
     from_schema: https://example.com/nmdc_dh
   non_microb_biomass:
     name: non_microb_biomass
     from_schema: https://example.com/nmdc_dh
   non_microb_biomass_method:
     name: non_microb_biomass_method
-    from_schema: https://example.com/nmdc_dh
-  technical_reps:
-    name: technical_reps
     from_schema: https://example.com/nmdc_dh
   org_nitro_method:
     name: org_nitro_method
@@ -860,14 +848,20 @@ slots:
   project_ID:
     name: project_ID
     from_schema: https://example.com/nmdc_dh
+  proposal_dna:
+    name: proposal_dna
+    from_schema: https://example.com/nmdc_dh
+  proposal_rna:
+    name: proposal_rna
+    from_schema: https://example.com/nmdc_dh
   replicate_number:
     name: replicate_number
     from_schema: https://example.com/nmdc_dh
-  rna_absorb2:
-    name: rna_absorb2
-    from_schema: https://example.com/nmdc_dh
   rna_absorb1:
     name: rna_absorb1
+    from_schema: https://example.com/nmdc_dh
+  rna_absorb2:
+    name: rna_absorb2
     from_schema: https://example.com/nmdc_dh
   rna_collect_site:
     name: rna_collect_site
@@ -875,32 +869,32 @@ slots:
   rna_concentration:
     name: rna_concentration
     from_schema: https://example.com/nmdc_dh
-  rna_container_ID:
-    name: rna_container_ID
-    from_schema: https://example.com/nmdc_dh
   rna_cont_type:
     name: rna_cont_type
     from_schema: https://example.com/nmdc_dh
-  rna_organisms:
-    name: rna_organisms
+  rna_cont_well:
+    name: rna_cont_well
+    from_schema: https://example.com/nmdc_dh
+  rna_container_ID:
+    name: rna_container_ID
     from_schema: https://example.com/nmdc_dh
   rna_isolate_meth:
     name: rna_isolate_meth
     from_schema: https://example.com/nmdc_dh
-  proposal_rna:
-    name: proposal_rna
+  rna_organisms:
+    name: rna_organisms
     from_schema: https://example.com/nmdc_dh
-  rna_sample_format:
-    name: rna_sample_format
+  rna_project_contact:
+    name: rna_project_contact
     from_schema: https://example.com/nmdc_dh
   rna_samp_ID:
     name: rna_samp_ID
     from_schema: https://example.com/nmdc_dh
+  rna_sample_format:
+    name: rna_sample_format
+    from_schema: https://example.com/nmdc_dh
   rna_sample_name:
     name: rna_sample_name
-    from_schema: https://example.com/nmdc_dh
-  rna_project_contact:
-    name: rna_project_contact
     from_schema: https://example.com/nmdc_dh
   rna_seq_project:
     name: rna_seq_project
@@ -914,9 +908,6 @@ slots:
   rna_volume:
     name: rna_volume
     from_schema: https://example.com/nmdc_dh
-  rna_cont_well:
-    name: rna_cont_well
-    from_schema: https://example.com/nmdc_dh
   sample_link:
     name: sample_link
     from_schema: https://example.com/nmdc_dh
@@ -925,6 +916,15 @@ slots:
     from_schema: https://example.com/nmdc_dh
   sample_type:
     name: sample_type
+    from_schema: https://example.com/nmdc_dh
+  start_date_inc:
+    name: start_date_inc
+    from_schema: https://example.com/nmdc_dh
+  start_time_inc:
+    name: start_time_inc
+    from_schema: https://example.com/nmdc_dh
+  technical_reps:
+    name: technical_reps
     from_schema: https://example.com/nmdc_dh
   has unit:
     name: has unit
@@ -3173,49 +3173,49 @@ classes:
     is_a: nmdc_dh_interface
     slots:
     - analysis_type
+    - collection_date_inc
     - collection_time
-    - dna_absorb2
+    - collection_time_inc
     - dna_absorb1
+    - dna_absorb2
     - dna_collect_site
     - dna_concentration
-    - dna_container_ID
     - dna_cont_type
-    - dna_organisms
+    - dna_cont_well
+    - dna_container_ID
+    - dna_dnase
     - dna_isolate_meth
-    - proposal_dna
-    - dna_sample_format
-    - dna_samp_ID
-    - dna_sample_name
+    - dna_organisms
     - dna_project_contact
+    - dna_samp_ID
+    - dna_sample_format
+    - dna_sample_name
     - dna_seq_project
     - dna_seq_project_name
     - dna_seq_project_PI
     - dna_volume
-    - dna_cont_well
-    - dna_dnase
     - EMSL_store_temp
     - env_package
     - experimental_factor_other
     - filter_method
-    - collection_date_inc
-    - collection_time_inc
-    - start_date_inc
-    - start_time_inc
     - isotope_exposure
-    - microbial_biomass_C
     - micro_biomass_C_meth
-    - microbial_biomass_N
     - micro_biomass_N_meth
+    - microbial_biomass_C
+    - microbial_biomass_N
     - non_microb_biomass
     - non_microb_biomass_method
-    - technical_reps
     - org_nitro_method
     - other_treatment
     - project_ID
+    - proposal_dna
     - replicate_number
     - sample_link
     - sample_shipped
     - sample_type
+    - start_date_inc
+    - start_time_inc
+    - technical_reps
     - ecosystem
     - ecosystem_category
     - ecosystem_subtype
@@ -3320,13 +3320,37 @@ classes:
             value: '3'
         description: Select all the data types associated or available for this biosample
         title: analysis/data type
+        examples:
+        - value: metagenomics; metabolomics; proteomics
         see_also:
         - MIxS:investigation_type
         multivalued: true
         range: analysis_type_enum
         required: true
+      collection_date_inc:
+        name: collection_date_inc
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: MIxS Inspired
+          dh:column_number:
+            tag: dh:column_number
+            value: '2'
+        description: Date the incubation was harvested/collected/ended. Only relevant
+          for incubation samples.
+        title: incubation collection date
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
+          only
+        comments:
+        - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
+          2021 are all acceptable.
         examples:
-        - value: metagenomics; metabolomics; proteomics
+        - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
+        see_also:
+        - MIxS:collection_date
+        string_serialization: '{date, arbitrary precision}'
+        recommended: true
       collection_time:
         name: collection_time
         annotations:
@@ -3335,7 +3359,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '4'
+            value: '1'
         description: The time of sampling, either as an instance (single point) or
           interval.
         title: collection time, GMT
@@ -3345,29 +3369,36 @@ classes:
         comments:
         - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
           https://www.worldtimebuddy.com/pst-to-gmt-converter'
+        examples:
+        - value: 13:33 or 13:33:55
         see_also:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
         recommended: true
-        examples:
-        - value: 13:33; 13:33:55
-      dna_absorb2:
-        name: dna_absorb2
+      collection_time_inc:
+        name: collection_time_inc
         annotations:
           dh:section_name:
             tag: dh:section_name
-            value: JGI-Metagenomics
+            value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '8'
-        description: 260/230 measurement of DNA sample purity
-        title: DNA absorbance 260/230
+            value: '3'
+        description: Time the incubation was harvested/collected/ended. Only relevant
+          for incubation samples.
+        title: incubation collection time, GMT
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
+          time only
         comments:
-        - Recommended value is between 1 and 3.
-        string_serialization: '{float}'
-        recommended: true
+        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
+          https://www.worldtimebuddy.com/pst-to-gmt-converter'
         examples:
-        - value: '2.02'
+        - value: 13:33 or 13:33:55
+        see_also:
+        - MIxS:collection_date
+        string_serialization: '{time, seconds optional}'
+        recommended: true
       dna_absorb1:
         name: dna_absorb1
         annotations:
@@ -3381,10 +3412,27 @@ classes:
         title: DNA absorbance 260/280
         comments:
         - Recommended value is between 1 and 3.
-        string_serialization: '{float}'
-        recommended: true
         examples:
         - value: '2.02'
+        string_serialization: '{float}'
+        recommended: true
+      dna_absorb2:
+        name: dna_absorb2
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metagenomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '8'
+        description: 260/230 measurement of DNA sample purity
+        title: DNA absorbance 260/230
+        comments:
+        - Recommended value is between 1 and 3.
+        examples:
+        - value: '2.02'
+        string_serialization: '{float}'
+        recommended: true
       dna_collect_site:
         name: dna_collect_site
         annotations:
@@ -3397,10 +3445,10 @@ classes:
         description: Provide information on the site your DNA sample was collected
           from
         title: DNA collection site
-        string_serialization: '{text}'
-        required: true
         examples:
         - value: untreated pond water
+        string_serialization: '{text}'
+        required: true
       dna_concentration:
         name: dna_concentration
         annotations:
@@ -3414,12 +3462,45 @@ classes:
         comments:
         - Units must be in ng/uL. Enter the numerical part only. Must be calculated
           using a fluorometric method. Acceptable values are 0-2000.
+        examples:
+        - value: '100'
         string_serialization: '{float}'
         required: true
         minimum_value: 0
         maximum_value: 2000
+      dna_cont_type:
+        name: dna_cont_type
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metagenomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '10'
+        description: Tube or plate (96-well)
+        title: DNA container type
         examples:
-        - value: '100'
+        - value: plate
+        range: dna_cont_type_enum
+        required: true
+      dna_cont_well:
+        name: dna_cont_well
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metagenomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '11'
+        title: DNA well number
+        comments:
+        - Required when 'plate' is selected for container type. Corner wells must
+          be blank. For partial plates, fill by columns. Leave blank if the sample
+          will be shipped in a tube.
+        examples:
+        - value: B2
+        string_serialization: '{96 well plate pos}'
+        required: true
       dna_container_ID:
         name: dna_container_ID
         annotations:
@@ -3433,25 +3514,41 @@ classes:
         comments:
         - Must be unique across all tubes and plates, and <20 characters. All samples
           in a plate should have the same plate label.
-        string_serialization: '{text < 20 characters}'
-        required: true
         examples:
         - value: Pond_MT_041618
-      dna_cont_type:
-        name: dna_cont_type
+        string_serialization: '{text < 20 characters}'
+        required: true
+      dna_dnase:
+        name: dna_dnase
         annotations:
           dh:section_name:
             tag: dh:section_name
             value: JGI-Metagenomics
           dh:column_number:
             tag: dh:column_number
-            value: '10'
-        description: Tube or plate (96-well)
-        title: DNA container type
-        range: dna_cont_type_enum
-        required: true
+            value: '13'
+        title: DNase treatment DNA
+        comments:
+        - Note DNAse treatment is required for all RNA samples.
         examples:
-        - value: plate
+        - value: 'no'
+        range: dna_dnase_enum
+        required: true
+      dna_isolate_meth:
+        name: dna_isolate_meth
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metagenomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '16'
+        description: Describe the method/protocol/kit used to extract DNA/RNA.
+        title: DNA isolation method
+        examples:
+        - value: phenol/chloroform extraction
+        string_serialization: '{text}'
+        required: true
       dna_organisms:
         name: dna_organisms
         annotations:
@@ -3464,58 +3561,28 @@ classes:
         description: List any organisms known or suspected to grow in co-culture,
           as well as estimated % of the organism in that culture.
         title: DNA expected organisms
+        examples:
+        - value: expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
+            (1%)
         string_serialization: '{text}'
         recommended: true
-        examples:
-        - value: expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles
-            (1%)
-      dna_isolate_meth:
-        name: dna_isolate_meth
+      dna_project_contact:
+        name: dna_project_contact
         annotations:
           dh:section_name:
             tag: dh:section_name
             value: JGI-Metagenomics
           dh:column_number:
             tag: dh:column_number
-            value: '16'
-        description: Describe the method/protocol/kit used to extract DNA/RNA.
-        title: DNA isolation method
-        string_serialization: '{text}'
-        required: true
-        examples:
-        - value: phenol/chloroform extraction
-      proposal_dna:
-        name: proposal_dna
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metagenomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '19'
-        title: DNA proposal ID
+            value: '18'
+        title: DNA seq project contact
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
+        examples:
+        - value: John Jones
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: '504000'
-      dna_sample_format:
-        name: dna_sample_format
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metagenomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '12'
-        description: Solution in which the DNA sample has been suspended
-        title: DNA sample format
-        range: dna_sample_format_enum
-        required: true
-        examples:
-        - value: Water
       dna_samp_ID:
         name: dna_samp_ID
         annotations:
@@ -3533,10 +3600,25 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        string_serialization: '{text}'
-        required: true
         examples:
         - value: '187654'
+        string_serialization: '{text}'
+        required: true
+      dna_sample_format:
+        name: dna_sample_format
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metagenomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '12'
+        description: Solution in which the DNA sample has been suspended
+        title: DNA sample format
+        examples:
+        - value: Water
+        range: dna_sample_format_enum
+        required: true
       dna_sample_name:
         name: dna_sample_name
         annotations:
@@ -3550,27 +3632,10 @@ classes:
           names must be unique across all JGI projects and contain a-z, A-Z, 0-9,
           - and _ only.
         title: DNA sample name
-        string_serialization: '{text}'
-        required: true
         examples:
         - value: JGI_pond_041618
-      dna_project_contact:
-        name: dna_project_contact
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metagenomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '18'
-        title: DNA seq project contact
-        comments:
-        - Do not edit these values. A template will be provided by NMDC in which these
-          values have been pre-filled.
         string_serialization: '{text}'
         required: true
-        examples:
-        - value: John Jones
       dna_seq_project:
         name: dna_seq_project
         annotations:
@@ -3584,10 +3649,10 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        string_serialization: '{text}'
-        required: true
         examples:
         - value: '1191234'
+        string_serialization: '{text}'
+        required: true
       dna_seq_project_name:
         name: dna_seq_project_name
         annotations:
@@ -3601,10 +3666,10 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        string_serialization: '{text}'
-        required: true
         examples:
         - value: JGI Pond metagenomics
+        string_serialization: '{text}'
+        required: true
       dna_seq_project_PI:
         name: dna_seq_project_PI
         annotations:
@@ -3618,10 +3683,10 @@ classes:
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
-        string_serialization: '{text}'
-        required: true
         examples:
         - value: Jane Johnson
+        string_serialization: '{text}'
+        required: true
       dna_volume:
         name: dna_volume
         annotations:
@@ -3635,46 +3700,12 @@ classes:
         comments:
         - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
           <25 by special permission only.
+        examples:
+        - value: '25'
         string_serialization: '{float}'
         required: true
         minimum_value: 0
         maximum_value: 1000
-        examples:
-        - value: '25'
-      dna_cont_well:
-        name: dna_cont_well
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metagenomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '11'
-        title: DNA well number
-        comments:
-        - Required when 'plate' is selected for container type. Corner wells must
-          be blank. For partial plates, fill by columns. Leave blank if the sample
-          will be shipped in a tube.
-        string_serialization: '{96 well plate pos}'
-        required: true
-        examples:
-        - value: B2
-      dna_dnase:
-        name: dna_dnase
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metagenomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '13'
-        title: DNase treatment DNA
-        comments:
-        - Note DNAse treatment is required for all RNA samples.
-        range: dna_dnase_enum
-        required: true
-        examples:
-        - value: 'no'
       EMSL_store_temp:
         name: EMSL_store_temp
         annotations:
@@ -3688,10 +3719,10 @@ classes:
         title: EMSL sample storage temperature, deg. C
         comments:
         - Enter a temperature in celsius. Numeric portion only.
-        string_serialization: '{float}'
-        required: true
         examples:
         - value: '-80'
+        string_serialization: '{float}'
+        required: true
       env_package:
         name: env_package
         annotations:
@@ -3704,10 +3735,10 @@ classes:
         description: Select the MIxS enviromental package that best describes the
           environment from which your sample was collected.
         title: environmental package
-        range: env_package_enum
-        required: true
         examples:
         - value: soil
+        range: env_package_enum
+        required: true
       experimental_factor_other:
         name: experimental_factor_other
         annotations:
@@ -3716,7 +3747,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '15'
+            value: '7'
           categorical_subsection:
             tag: categorical_subsection
             value: optional
@@ -3735,109 +3766,13 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '13'
+            value: '6'
         description: Type of filter used or how the sample was filtered
         title: filter method
         see_also:
         - MIxS:filter_type
         string_serialization: '{text}'
         recommended: true
-      collection_date_inc:
-        name: collection_date_inc
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: MIxS Inspired
-          dh:column_number:
-            tag: dh:column_number
-            value: '5'
-        description: Date the incubation was harvested/collected/ended. Only relevant
-          for incubation samples.
-        title: incubation collection date
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
-          only
-        comments:
-        - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
-          2021 are all acceptable.
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{date, arbitrary precision}'
-        recommended: true
-        examples:
-        - value: 2021-04-15; 2021-04; 2021
-      collection_time_inc:
-        name: collection_time_inc
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: MIxS Inspired
-          dh:column_number:
-            tag: dh:column_number
-            value: '6'
-        description: Time the incubation was harvested/collected/ended. Only relevant
-          for incubation samples.
-        title: incubation collection time, GMT
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
-          time only
-        comments:
-        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
-          https://www.worldtimebuddy.com/pst-to-gmt-converter'
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{time, seconds optional}'
-        recommended: true
-        examples:
-        - value: 13:33; 13:33:55
-      start_date_inc:
-        name: start_date_inc
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: MIxS Inspired
-          dh:column_number:
-            tag: dh:column_number
-            value: '7'
-        description: Date the incubation was started. Only relevant for incubation
-          samples.
-        title: incubation start date
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
-          only
-        comments:
-        - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
-          2021 are all acceptable.
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{date, arbitrary precision}'
-        recommended: true
-        examples:
-        - value: 2021-04-15; 2021-04; 2021
-      start_time_inc:
-        name: start_time_inc
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: MIxS Inspired
-          dh:column_number:
-            tag: dh:column_number
-            value: '8'
-        description: Time the incubation was started. Only relevant for incubation
-          samples.
-        title: incubation start time, GMT
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
-          time only
-        comments:
-        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
-          https://www.worldtimebuddy.com/pst-to-gmt-converter'
-        see_also:
-        - MIxS:collection_date
-        string_serialization: '{time, seconds optional}'
-        recommended: true
-        examples:
-        - value: 13:33; 13:33:55
       isotope_exposure:
         name: isotope_exposure
         annotations:
@@ -3846,7 +3781,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '26'
+            value: '16'
           categorical_subsection:
             tag: categorical_subsection
             value: treatment
@@ -3856,25 +3791,6 @@ classes:
         - MIxS:chem_administration
         string_serialization: '{termLabel} {[termID]}; {timestamp}'
         recommended: true
-      microbial_biomass_C:
-        name: microbial_biomass_C
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: MIxS Inspired
-          dh:column_number:
-            tag: dh:column_number
-            value: '20'
-          categorical_subsection:
-            tag: categorical_subsection
-            value: biogeochemistry
-        description: The part of the organic matter in the soil that constitutes living
-          microorganisms smaller than 5-10 micrometer. If you keep this, you would
-          need to have correction factors used for conversion to the final units
-        title: microbial biomass carbon
-        see_also:
-        - MIxS:microbial_biomass
-        string_serialization: '{float} {unit}'
       micro_biomass_C_meth:
         name: micro_biomass_C_meth
         annotations:
@@ -3883,7 +3799,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '21'
+            value: '11'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3895,25 +3811,6 @@ classes:
         - MIxS:micro_biomass_meth
         string_serialization: '{PMID}|{DOI}|{URL}'
         recommended: true
-      microbial_biomass_N:
-        name: microbial_biomass_N
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: MIxS Inspired
-          dh:column_number:
-            tag: dh:column_number
-            value: '22'
-          categorical_subsection:
-            tag: categorical_subsection
-            value: biogeochemistry
-        description: The part of the organic matter in the soil that constitutes living
-          microorganisms smaller than 5-10 micrometer. If you keep this, you would
-          need to have correction factors used for conversion to the final units
-        title: microbial biomass nitrogen
-        see_also:
-        - MIxS:microbial_biomass
-        string_serialization: '{float} {unit}'
       micro_biomass_N_meth:
         name: micro_biomass_N_meth
         annotations:
@@ -3922,7 +3819,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '23'
+            value: '13'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3933,6 +3830,44 @@ classes:
         see_also:
         - MIxS:micro_biomass_meth
         string_serialization: '{PMID}|{DOI}|{URL}'
+      microbial_biomass_C:
+        name: microbial_biomass_C
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: MIxS Inspired
+          dh:column_number:
+            tag: dh:column_number
+            value: '10'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: biogeochemistry
+        description: The part of the organic matter in the soil that constitutes living
+          microorganisms smaller than 5-10 micrometer. If you keep this, you would
+          need to have correction factors used for conversion to the final units
+        title: microbial biomass carbon
+        see_also:
+        - MIxS:microbial_biomass
+        string_serialization: '{float} {unit}'
+      microbial_biomass_N:
+        name: microbial_biomass_N
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: MIxS Inspired
+          dh:column_number:
+            tag: dh:column_number
+            value: '12'
+          categorical_subsection:
+            tag: categorical_subsection
+            value: biogeochemistry
+        description: The part of the organic matter in the soil that constitutes living
+          microorganisms smaller than 5-10 micrometer. If you keep this, you would
+          need to have correction factors used for conversion to the final units
+        title: microbial biomass nitrogen
+        see_also:
+        - MIxS:microbial_biomass
+        string_serialization: '{float} {unit}'
       non_microb_biomass:
         name: non_microb_biomass
         annotations:
@@ -3941,7 +3876,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '18'
+            value: '8'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3960,7 +3895,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '19'
+            value: '9'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -3971,20 +3906,6 @@ classes:
         see_also:
         - MIxS:microbial_biomass
         string_serialization: '{PMID}|{DOI}|{URL}'
-      technical_reps:
-        name: technical_reps
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: EMSL
-          dh:column_number:
-            tag: dh:column_number
-            value: '5'
-        description: If sending multiple technical replicates of the same sample,
-          indicate how many replicates are being sent
-        title: number technical replicate
-        string_serialization: '{integer}'
-        recommended: true
       org_nitro_method:
         name: org_nitro_method
         annotations:
@@ -3993,7 +3914,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '24'
+            value: '14'
           categorical_subsection:
             tag: categorical_subsection
             value: biogeochemistry
@@ -4012,7 +3933,7 @@ classes:
             value: MIxS Inspired
           dh:column_number:
             tag: dh:column_number
-            value: '25'
+            value: '15'
           categorical_subsection:
             tag: categorical_subsection
             value: treatment
@@ -4034,6 +3955,23 @@ classes:
             value: '1'
         description: Proposal IDs or names associated with dataset
         title: project ID
+        string_serialization: '{text}'
+        required: true
+      proposal_dna:
+        name: proposal_dna
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metagenomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '19'
+        title: DNA proposal ID
+        comments:
+        - Do not edit these values. A template will be provided by NMDC in which these
+          values have been pre-filled.
+        examples:
+        - value: '504000'
         string_serialization: '{text}'
         required: true
       replicate_number:
@@ -4069,10 +4007,10 @@ classes:
           from the field will link with the soil used in an incubation. The soil a
           plant was grown in links to the plant sample. An original culture sample
           was transferred to a new vial and generated a new sample)'
-        string_serialization: '{text}:{text}'
-        recommended: true
         examples:
         - value: IGSN:DSJ0284
+        string_serialization: '{text}:{text}'
+        recommended: true
       sample_shipped:
         name: sample_shipped
         annotations:
@@ -4100,10 +4038,72 @@ classes:
         title: sample type
         comments:
         - This can vary from 'environmental package' if the sample is an extraction.
-        range: sample_type_enum
-        required: true
         examples:
         - value: water extracted soil
+        range: sample_type_enum
+        required: true
+      start_date_inc:
+        name: start_date_inc
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: MIxS Inspired
+          dh:column_number:
+            tag: dh:column_number
+            value: '4'
+        description: Date the incubation was started. Only relevant for incubation
+          samples.
+        title: incubation start date
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
+          only
+        comments:
+        - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
+          2021 are all acceptable.
+        examples:
+        - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
+        see_also:
+        - MIxS:collection_date
+        string_serialization: '{date, arbitrary precision}'
+        recommended: true
+      start_time_inc:
+        name: start_time_inc
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: MIxS Inspired
+          dh:column_number:
+            tag: dh:column_number
+            value: '5'
+        description: Time the incubation was started. Only relevant for incubation
+          samples.
+        title: incubation start time, GMT
+        notes:
+        - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
+          time only
+        comments:
+        - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
+          https://www.worldtimebuddy.com/pst-to-gmt-converter'
+        examples:
+        - value: 13:33 or 13:33:55
+        see_also:
+        - MIxS:collection_date
+        string_serialization: '{time, seconds optional}'
+        recommended: true
+      technical_reps:
+        name: technical_reps
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: EMSL
+          dh:column_number:
+            tag: dh:column_number
+            value: '5'
+        description: If sending multiple technical replicates of the same sample,
+          indicate how many replicates are being sent
+        title: number technical replicate
+        string_serialization: '{integer}'
+        recommended: true
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -4220,7 +4220,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '20'
+          dh:column_number: '2'
           dh:section_name: MIxS
         description: Addition of fertilizers, pesticides, etc. - amount and time of
           applications
@@ -4249,7 +4249,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '12'
+          dh:column_number: '16'
           dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to varying
           temperatures; should include the temperature, treatment regimen including
@@ -4281,7 +4281,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '21'
+          dh:column_number: '3'
           dh:section_name: MIxS
         description: Aluminum saturation (esp. For tropical soils)
         title: extreme_unusual_properties/Al saturation
@@ -4305,7 +4305,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '22'
+          dh:column_number: '4'
           dh:section_name: MIxS
         description: Reference or method used in determining Al saturation
         title: extreme_unusual_properties/Al saturation method
@@ -4327,7 +4327,7 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:column_number: '23'
+          dh:column_number: '26'
           dh:section_name: MIxS (modified)
         description: Altitude is a term used to identify heights of objects such as
           airplanes, space shuttles, rockets, atmospheric balloons and heights of
@@ -4359,7 +4359,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '24'
+          dh:column_number: '5'
           dh:section_name: MIxS
         description: The average of all annual precipitation values known, or an estimated
           equivalent value derived by such methods as regional indexes or Isohyetal
@@ -4388,7 +4388,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '25'
+          dh:column_number: '6'
           dh:section_name: MIxS
         description: Mean annual temperature
         title: mean annual temperature
@@ -4412,7 +4412,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '11'
+          dh:column_number: '13'
           dh:section_name: MIxS (modified)
         description: Information about treatment(s) involving use of biotic factors,
           such as bacteria, viruses or fungi.
@@ -4435,9 +4435,8 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-          dh:column_number: '16'
           dh:section_name: MIxS (modified)
-          sntc_slot: samp_biotic_relationship
+          dh:column_number: '22'
         description: Description of relationship(s) between the subject organism and
           other organism(s) it is associated with. E.g., parasite on species X; mutualist
           with species Y. The target organism is the subject of the relationship,
@@ -4451,8 +4450,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: biotic_relationship_enum
-        recommended: true
-        required: true
       carb_nitro_ratio:
         name: carb_nitro_ratio
         aliases:
@@ -4464,7 +4461,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '64'
+          dh:column_number: '44'
           dh:section_name: MIxS
         description: Ratio of amount or concentrations of carbon to nitrogen
         title: carbon/nitrogen ratio
@@ -4487,7 +4484,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '13'
+          dh:column_number: '17'
           dh:section_name: MIxS (modified)
         description: List of chemical compounds administered to the host or site where
           sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter);
@@ -4515,7 +4512,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '14'
+          dh:column_number: '19'
           dh:section_name: MIxS (modified)
         description: Treatment involving an exposure to a particular climate; treatment
           regimen including how many times the treatment was repeated, how long each
@@ -4542,7 +4539,6 @@ classes:
             value: date and time
           dh:column_number: '3'
           dh:section_name: MIxS (modified)
-          sntc_slot: collection_date
         description: The date of sampling
         title: collection date
         examples:
@@ -4570,7 +4566,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '26'
+          dh:column_number: '7'
           dh:section_name: MIxS
         description: Whether or not crop is rotated, and if yes, rotation schedule
         title: history/crop rotation
@@ -4595,7 +4591,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '27'
+          dh:column_number: '8'
           dh:section_name: MIxS
         description: Present state of sample site
         title: current land use
@@ -4619,7 +4615,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '28'
+          dh:column_number: '9'
           dh:section_name: MIxS
         description: Vegetation classification from one or more standard classification
           systems, or agricultural crop
@@ -4645,7 +4641,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '29'
+          dh:column_number: '10'
           dh:section_name: MIxS
         description: Reference or method used in vegetation classification
         title: current vegetation method
@@ -4667,9 +4663,9 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:column_number: '9'
+          dh:column_number: '10'
           dh:section_name: MIxS (modified)
-        description: The vertical distance below local surface, e.g. For sediment
+        description: The vertical distance below local surface, e.g. for sediment
           or soil samples depth is measured from sediment or soil surface, respectively.
           Depth can be reported as an interval for subsurface samples.
         title: depth, meters
@@ -4698,7 +4694,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '30'
+          dh:column_number: '11'
           dh:section_name: MIxS
         description: Drainage classification from a standard system such as the USDA
           system
@@ -4720,8 +4716,8 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:column_number: '6'
           dh:section_name: MIxS (modified)
+          dh:column_number: '6'
         description: Elevation of the sampling site is its height above a fixed reference
           point, most commonly the mean sea level. Elevation is mainly used when referring
           to points on the earth's surface, while altitude is used for points above
@@ -4766,6 +4762,8 @@ classes:
         owner: soil MIMS
         range: string
         required: true
+        notes: range changed to enumeration late in makefile, so this is modified
+          (but "sample ID" anyway)
       env_local_scale:
         name: env_local_scale
         aliases:
@@ -4798,6 +4796,8 @@ classes:
         owner: soil MIMS
         range: string
         required: true
+        notes: range changed to enumeration late in makefile, so this is modified
+          (but "sample ID" anyway)
       env_medium:
         name: env_medium
         aliases:
@@ -4829,6 +4829,8 @@ classes:
         owner: soil MIMS
         range: string
         required: true
+        notes: range changed to enumeration late in makefile, so this is modified
+          (but "sample ID" anyway)
       experimental_factor:
         name: experimental_factor
         aliases:
@@ -4837,7 +4839,7 @@ classes:
           expected_value:
             tag: expected_value
             value: text or EFO and/or OBI
-          dh:column_number: '31'
+          dh:column_number: '12'
           dh:section_name: MIxS
         description: Experimental factors are essentially the variable aspects of
           an experiment design which can be used to describe an experiment, or set
@@ -4867,7 +4869,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '32'
+          dh:column_number: '13'
           dh:section_name: MIxS
         description: Unusual physical events that may have affected microbial populations
         title: history/extreme events
@@ -4891,7 +4893,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '33'
+          dh:column_number: '14'
           dh:section_name: MIxS
         description: Soil classification from the FAO World Reference Database for
           Soil Resources. The list can be found at http://www.fao.org/nr/land/sols/soil/wrb-soil-maps/reference-groups
@@ -4916,7 +4918,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '34'
+          dh:column_number: '15'
           dh:section_name: MIxS
         description: Historical and/or physical evidence of fire
         title: history/fire
@@ -4940,7 +4942,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '35'
+          dh:column_number: '16'
           dh:section_name: MIxS
         description: Historical and/or physical evidence of flooding
         title: history/flooding
@@ -4968,7 +4970,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '15'
+          dh:column_number: '20'
           dh:section_name: MIxS (modified)
         description: Use of conditions with differing gaseous environments; should
           include the name of gaseous compound, amount administered, treatment duration,
@@ -5024,7 +5026,6 @@ classes:
             value: '1'
           dh:column_number: '1'
           dh:section_name: MIxS (modified)
-          sntc_slot: growth_facility
         description: 'Type of facility/location where the sample was harvested; controlled
           vocabulary: growth chamber, open top chamber, glasshouse, experimental garden,
           field.'
@@ -5038,6 +5039,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: growth_facil_enum
+        notes: 'Removed from description: Alternatively use Crop Ontology (CO) terms'
         required: true
       heavy_metals:
         name: heavy_metals
@@ -5053,7 +5055,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '36'
+          dh:column_number: '17'
           dh:section_name: MIxS
         description: Heavy metals present in the sequenced sample and their concentrations.
           For multiple heavy metals and concentrations, add multiple copies of this
@@ -5080,7 +5082,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '37'
+          dh:column_number: '18'
           dh:section_name: MIxS
         description: Reference or method used in determining heavy metals
         title: extreme_unusual_properties/heavy metals method
@@ -5105,7 +5107,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '38'
+          dh:column_number: '19'
           dh:section_name: MIxS
         description: Reference or method used in determining the horizon
         title: horizon method
@@ -5133,7 +5135,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '16'
+          dh:column_number: '21'
           dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to varying
           degree of humidity; information about treatment involving use of growth
@@ -5190,8 +5192,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '17'
           dh:section_name: MIxS (modified)
+          dh:column_number: '23'
         description: Information about treatment(s) involving exposure to light, including
           both light intensity and quality.
         title: light regimen
@@ -5216,7 +5218,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '39'
+          dh:column_number: '20'
           dh:section_name: MIxS
         description: Link to digitized soil maps or other soil classification information
         title: link to classification information
@@ -5241,7 +5243,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '40'
+          dh:column_number: '21'
           dh:section_name: MIxS
         description: Link to climate resource
         title: link to climate information
@@ -5266,7 +5268,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '41'
+          dh:column_number: '22'
           dh:section_name: MIxS
         description: Soil classification based on local soil classification system
         title: soil_taxonomic/local classification
@@ -5291,7 +5293,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '42'
+          dh:column_number: '24'
           dh:section_name: MIxS
         description: Reference or method used in determining the local soil classification
         title: soil_taxonomic/local classification method
@@ -5316,7 +5318,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '63'
+          dh:column_number: '43'
           dh:section_name: MIxS
         description: Reference or method used in determining microbial biomass
         title: microbial biomass method
@@ -5344,7 +5346,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '62'
+          dh:column_number: '42'
           dh:section_name: MIxS
         description: The part of the organic matter in the soil that constitutes living
           microorganisms smaller than 5-10 micrometer. If you keep this, you would
@@ -5370,7 +5372,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '43'
+          dh:column_number: '24'
           dh:section_name: MIxS
         description: Any other measurement performed or parameter collected, that
           is not listed here
@@ -5399,7 +5401,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '65'
+          dh:column_number: '45'
           dh:section_name: MIxS
         description: Concentration of organic matter
         title: organic matter
@@ -5425,7 +5427,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '66'
+          dh:column_number: '46'
           dh:section_name: MIxS
         description: Concentration of organic nitrogen
         title: organic nitrogen
@@ -5448,7 +5450,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '44'
+          dh:column_number: '25'
           dh:section_name: MIxS
         description: Oxygenation status of sample
         title: oxygenation status of sample
@@ -5473,7 +5475,6 @@ classes:
             value: '1'
           dh:column_number: '27'
           dh:section_name: MIxS (modified)
-          sntc_slot: pH
         description: pH measurement of the sample, or liquid portion of sample, or
           aqueous phase of the fluid
         title: pH
@@ -5503,7 +5504,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '61'
+          dh:column_number: '41'
           dh:section_name: MIxS
         description: Reference or method used in determining ph
         title: pH method
@@ -5531,7 +5532,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '73'
+          dh:column_number: '53'
           dh:section_name: MIxS
         description: Concentration of phosphate
         title: phosphate
@@ -5554,7 +5555,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '45'
+          dh:column_number: '26'
           dh:section_name: MIxS
         description: Reference or method used in determining previous land use and
           dates
@@ -5580,7 +5581,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '46'
+          dh:column_number: '27'
           dh:section_name: MIxS
         description: Previous land use and dates
         title: history/previous land use
@@ -5605,7 +5606,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '47'
+          dh:column_number: '28'
           dh:section_name: MIxS
         description: Cross-sectional position in the hillslope where sample was collected.sample
           area position in relation to surrounding areas
@@ -5627,9 +5628,8 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-          dh:column_number: '17'
           dh:section_name: MIxS (modified)
-          sntc_slot: oxygen_relationship
+          dh:column_number: '23'
         description: Is this organism an aerobe, anaerobe? Please note that aerobic
           and anaerobic are valid descriptors for microbial environments
         title: relationship to oxygen
@@ -5641,8 +5641,7 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: rel_to_oxygen_enum
-        required: true
-        recommended: true
+        required: false
       salinity:
         name: salinity
         aliases:
@@ -5657,7 +5656,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '74'
+          dh:column_number: '54'
           dh:section_name: MIxS
         description: The total concentration of all dissolved salts in a liquid or
           solid sample. While salinity can be measured by a complete chemical analysis,
@@ -5685,7 +5684,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '75'
+          dh:column_number: '55'
           dh:section_name: MIxS
         description: Reference or method used in determining salinity
         title: salinity method
@@ -5707,9 +5706,8 @@ classes:
           expected_value:
             tag: expected_value
             value: device name
-          dh:column_number: '11'
+          dh:column_number: '14'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_collection_dev
         description: The device used to collect an environmental sample. This field
           accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO).
           This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).
@@ -5734,9 +5732,8 @@ classes:
           expected_value:
             tag: expected_value
             value: PMID,DOI,url , or text
-          dh:column_number: '12'
+          dh:column_number: '15'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_collection_method
         description: The method employed for collecting the sample.
         title: sample collection method
         examples:
@@ -5759,9 +5756,8 @@ classes:
           expected_value:
             tag: expected_value
             value: text
-          dh:column_number: '10'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_processing
+          dh:column_number: '12'
         description: A brief description of any processing applied to the sample during
           or after retrieving the sample from environment, or a link to the relevant
           protocol(s) performed.
@@ -5786,7 +5782,6 @@ classes:
             value: text
           dh:column_number: '2'
           dh:section_name: Sample ID
-          sntc_slot: sample_name
         description: A local identifier or name that for the material sample collected.
           Refers to the original material collected or to any derived sub-samples.
         title: sample name
@@ -5814,9 +5809,8 @@ classes:
           preferred_unit:
             tag: preferred_unit
             value: millliter, gram, milligram, liter
-          dh:column_number: '14'
+          dh:column_number: '18'
           dh:section_name: MIxS (modified)
-          sntc_slot: sample_collected
         description: The total amount or size (volume (ml), mass (g) or area (m2)
           ) of sample collected.
         title: amount or size of sample collected
@@ -5874,7 +5868,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '48'
+          dh:column_number: '29'
           dh:section_name: MIxS
         description: The average of all seasonal precipitation values known, or an
           estimated equivalent value derived by such methods as regional indexes or
@@ -5903,7 +5897,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '49'
+          dh:column_number: '30'
           dh:section_name: MIxS
         description: Mean seasonal temperature
         title: mean seasonal temperature
@@ -5985,7 +5979,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '10'
+          dh:column_number: '11'
           dh:section_name: MIxS (modified)
         description: Refers to the mesh/pore size used to retain the sample. Materials
           smaller than the size threshold are excluded from the sample
@@ -6013,7 +6007,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '19'
+          dh:column_number: '1'
           dh:section_name: MIxS
         description: The direction a slope faces. While looking down a slope use a
           compass to record the direction you are facing (direction or degrees); e.g.,
@@ -6043,7 +6037,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '50'
+          dh:column_number: '31'
           dh:section_name: MIxS
         description: Commonly called 'slope'. The angle between ground surface and
           a horizontal line (in percent). This is the direction that overland water
@@ -6069,7 +6063,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '51'
+          dh:column_number: '32'
           dh:section_name: MIxS
         description: Specific layer in the land area which measures parallel to the
           soil surface and possesses physical characteristics which differ from the
@@ -6095,7 +6089,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '52'
+          dh:column_number: '33'
           dh:section_name: MIxS
         description: The relative proportion of different grain sizes of mineral particles
           in a soil, as described using a standard system; express as % sand (50 um
@@ -6122,7 +6116,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '53'
+          dh:column_number: '34'
           dh:section_name: MIxS
         description: Reference or method used in determining soil texture
         title: soil texture method
@@ -6147,7 +6141,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '54'
+          dh:column_number: '35'
           dh:section_name: MIxS
         description: Description of the soil type or classification. This field accepts
           terms under soil (http://purl.obolibrary.org/obo/ENVO_00001998).  Multiple
@@ -6174,7 +6168,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '55'
+          dh:column_number: '36'
           dh:section_name: MIxS
         description: Reference or method used in determining soil series name or other
           lower-level classification
@@ -6200,7 +6194,6 @@ classes:
               for other material a unique arbitrary identifer'
           dh:column_number: '1'
           dh:section_name: Sample ID
-          sntc_slot: unique_ID
         description: A globally unique identifier assigned to the biological sample.
         title: globally unique ID
         examples:
@@ -6234,7 +6227,6 @@ classes:
             value: '1'
           dh:column_number: '2'
           dh:section_name: MIxS (modified)
-          sntc_slot: storage_condt
         description: Explain how the soil sample is stored (fresh/frozen/other).
         title: storage conditions
         examples:
@@ -6258,7 +6250,7 @@ classes:
           preferred_unit:
             tag: preferred_unit
             value: degree Celsius
-          dh:column_number: '56'
+          dh:column_number: '37'
           dh:section_name: MIxS
         description: Temperature of the sample at the time of sampling.
         title: temperature
@@ -6281,7 +6273,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '57'
+          dh:column_number: '38'
           dh:section_name: MIxS
         description: Note method(s) used for tilling
         title: history/tillage
@@ -6308,7 +6300,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '67'
+          dh:column_number: '47'
           dh:section_name: MIxS
         description: Total carbon content
         title: total carbon
@@ -6331,7 +6323,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '69'
+          dh:column_number: '49'
           dh:section_name: MIxS
         description: Reference or method used in determining the total nitrogen
         title: total nitrogen content method
@@ -6359,7 +6351,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '68'
+          dh:column_number: '48'
           dh:section_name: MIxS
         description: Total nitrogen content of the sample
         title: total nitrogen content
@@ -6383,7 +6375,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '71'
+          dh:column_number: '51'
           dh:section_name: MIxS
         description: Reference or method used in determining total organic carbon
         title: total organic carbon method
@@ -6411,7 +6403,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '70'
+          dh:column_number: '50'
           dh:section_name: MIxS
         description: 'Definition for soil: total organic carbon content of the soil,
           definition otherwise: total organic carbon content'
@@ -6439,7 +6431,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '72'
+          dh:column_number: '52'
           dh:section_name: MIxS
         description: 'Total phosphorus concentration in the sample, calculated by:
           total phosphorus = total dissolved phosphorus + particulate phosphorus'
@@ -6463,7 +6455,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '59'
+          dh:column_number: '40'
           dh:section_name: MIxS
         description: Reference or method used in determining the water content of
           soil
@@ -6492,7 +6484,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '58'
+          dh:column_number: '39'
           dh:section_name: MIxS
         description: Water content measurement
         title: water content
@@ -6519,7 +6511,7 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '18'
+          dh:column_number: '25'
           dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to watering
           frequencies, treatment regimen including how many times the treatment was
@@ -6551,24 +6543,24 @@ classes:
     from_schema: https://example.com/nmdc_dh
     slots:
     - dnase_rna
-    - rna_absorb2
+    - proposal_rna
     - rna_absorb1
+    - rna_absorb2
     - rna_collect_site
     - rna_concentration
-    - rna_container_ID
     - rna_cont_type
-    - rna_organisms
+    - rna_cont_well
+    - rna_container_ID
     - rna_isolate_meth
-    - proposal_rna
-    - rna_sample_format
-    - rna_samp_ID
-    - rna_sample_name
+    - rna_organisms
     - rna_project_contact
+    - rna_samp_ID
+    - rna_sample_format
+    - rna_sample_name
     - rna_seq_project
     - rna_seq_project_name
     - rna_seq_project_PI
     - rna_volume
-    - rna_cont_well
     slot_usage:
       dnase_rna:
         name: dnase_rna
@@ -6578,27 +6570,31 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '32'
+            value: '13'
         title: DNase treated
         comments:
         - Note DNAse treatment is required for all RNA samples.
+        examples:
+        - value: 'no'
         range: dnase_rna_enum
         required: true
-      rna_absorb2:
-        name: rna_absorb2
+      proposal_rna:
+        name: proposal_rna
         annotations:
           dh:section_name:
             tag: dh:section_name
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '27'
-        description: 260/230 measurement of RNA sample purity
-        title: RNA absorbance 260/230
+            value: '19'
+        title: RNA proposal ID
         comments:
-        - Recommended value is between 1 and 3.
-        string_serialization: '{float}'
-        recommended: true
+        - Do not edit these values. A template will be provided by NMDC in which these
+          values have been pre-filled.
+        examples:
+        - value: '504000'
+        string_serialization: '{text}'
+        required: true
       rna_absorb1:
         name: rna_absorb1
         annotations:
@@ -6607,11 +6603,30 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '26'
+            value: '7'
         description: 260/280 measurement of RNA sample purity
         title: RNA absorbance 260/280
         comments:
         - Recommended value is between 1 and 3.
+        examples:
+        - value: '2.02'
+        string_serialization: '{float}'
+        recommended: true
+      rna_absorb2:
+        name: rna_absorb2
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metatranscriptomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '8'
+        description: 260/230 measurement of RNA sample purity
+        title: RNA absorbance 260/230
+        comments:
+        - Recommended value is between 1 and 3.
+        examples:
+        - value: '2.02'
         string_serialization: '{float}'
         recommended: true
       rna_collect_site:
@@ -6622,10 +6637,12 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '34'
+            value: '15'
         description: Provide information on the site your RNA sample was collected
           from
         title: RNA collection site
+        examples:
+        - value: untreated pond water
         string_serialization: '{text}'
         required: true
       rna_concentration:
@@ -6636,30 +6653,17 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '24'
+            value: '5'
         title: RNA concentration in ng/ul
         comments:
         - Units must be in ng/uL. Enter the numerical part only. Must be calculated
           using a fluorometric method. Acceptable values are 0-2000.
+        examples:
+        - value: '100'
         string_serialization: '{float}'
         required: true
         minimum_value: 0
         maximum_value: 1000
-      rna_container_ID:
-        name: rna_container_ID
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metatranscriptomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '28'
-        title: RNA container label
-        comments:
-        - Must be unique across all tubes and plates, and <20 characters. All samples
-          in a plate should have the same plate label.
-        string_serialization: '{text}'
-        required: true
       rna_cont_type:
         name: rna_cont_type
         annotations:
@@ -6668,10 +6672,62 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '29'
+            value: '10'
         description: Tube or plate (96-well)
         title: RNA container type
+        examples:
+        - value: plate
         range: rna_cont_type_enum
+        required: true
+      rna_cont_well:
+        name: rna_cont_well
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metatranscriptomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '11'
+        title: RNA well number
+        comments:
+        - Required when 'plate' is selected for container type. Corner wells must
+          be blank. For partial plates, fill by columns. Leave blank if the sample
+          will be shipped in a tube.
+        examples:
+        - value: B2
+        string_serialization: '{96 well plate pos}'
+        required: true
+      rna_container_ID:
+        name: rna_container_ID
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metatranscriptomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '9'
+        title: RNA container label
+        comments:
+        - Must be unique across all tubes and plates, and <20 characters. All samples
+          in a plate should have the same plate label.
+        examples:
+        - value: Pond_MT_041618
+        string_serialization: '{text}'
+        required: true
+      rna_isolate_meth:
+        name: rna_isolate_meth
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metatranscriptomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '16'
+        description: Describe the method/protocol/kit used to extract DNA/RNA.
+        title: RNA isolation method
+        examples:
+        - value: phenol/chloroform extraction
+        string_serialization: '{text}'
         required: true
       rna_organisms:
         name: rna_organisms
@@ -6681,38 +6737,47 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '33'
+            value: '14'
         description: List any organisms known or suspected to grow in co-culture,
           as well as estimated % of the organism in that culture.
         title: RNA expected organisms
+        examples:
+        - value: expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
+            (1%)
         string_serialization: '{text}'
         recommended: true
-      rna_isolate_meth:
-        name: rna_isolate_meth
+      rna_project_contact:
+        name: rna_project_contact
         annotations:
           dh:section_name:
             tag: dh:section_name
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '35'
-        description: Describe the method/protocol/kit used to extract DNA/RNA.
-        title: RNA isolation method
-        string_serialization: '{text}'
-        required: true
-      proposal_rna:
-        name: proposal_rna
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metatranscriptomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '38'
-        title: RNA proposal ID
+            value: '18'
+        title: RNA seq project contact
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
+        examples:
+        - value: John Jones
+        string_serialization: '{text}'
+        required: true
+      rna_samp_ID:
+        name: rna_samp_ID
+        annotations:
+          dh:section_name:
+            tag: dh:section_name
+            value: JGI-Metatranscriptomics
+          dh:column_number:
+            tag: dh:column_number
+            value: '3'
+        title: RNA sample ID
+        comments:
+        - Do not edit these values. A template will be provided by NMDC in which these
+          values have been pre-filled.
+        examples:
+        - value: '187654'
         string_serialization: '{text}'
         required: true
       rna_sample_format:
@@ -6723,25 +6788,12 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '31'
+            value: '12'
         description: Solution in which the RNA sample has been suspended
         title: RNA sample format
+        examples:
+        - value: Water
         range: rna_sample_format_enum
-        required: true
-      rna_samp_ID:
-        name: rna_samp_ID
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metatranscriptomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '22'
-        title: RNA sample ID
-        comments:
-        - Do not edit these values. A template will be provided by NMDC in which these
-          values have been pre-filled.
-        string_serialization: '{text}'
         required: true
       rna_sample_name:
         name: rna_sample_name
@@ -6751,30 +6803,17 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '23'
+            value: '4'
         description: Give the RNA sample a name that is meaningful to you. Sample
           names must be unique across all JGI projects and contain a-z, A-Z, 0-9,
           - and _ only.
         title: RNA sample name
+        examples:
+        - value: JGI_pond_041618
         string_serialization: '{text}'
         required: true
         minimum_value: 0
         maximum_value: 2000
-      rna_project_contact:
-        name: rna_project_contact
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metatranscriptomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '37'
-        title: RNA seq project contact
-        comments:
-        - Do not edit these values. A template will be provided by NMDC in which these
-          values have been pre-filled.
-        string_serialization: '{text}'
-        required: true
       rna_seq_project:
         name: rna_seq_project
         annotations:
@@ -6783,11 +6822,13 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '20'
+            value: '1'
         title: RNA seq project ID
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
+        examples:
+        - value: '1191234'
         string_serialization: '{text}'
         required: true
       rna_seq_project_name:
@@ -6798,11 +6839,13 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '21'
+            value: '2'
         title: RNA seq project name
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
+        examples:
+        - value: JGI Pond metatranscriptomics
         string_serialization: '{text}'
         required: true
       rna_seq_project_PI:
@@ -6813,11 +6856,13 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '36'
+            value: '17'
         title: RNA seq project PI
         comments:
         - Do not edit these values. A template will be provided by NMDC in which these
           values have been pre-filled.
+        examples:
+        - value: Jane Johnson
         string_serialization: '{text}'
         required: true
       rna_volume:
@@ -6828,28 +6873,14 @@ classes:
             value: JGI-Metatranscriptomics
           dh:column_number:
             tag: dh:column_number
-            value: '25'
+            value: '6'
         title: RNA volume in ul
         comments:
         - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
           <25 by special permission only.
+        examples:
+        - value: '25'
         string_serialization: '{float}'
-        required: true
-      rna_cont_well:
-        name: rna_cont_well
-        annotations:
-          dh:section_name:
-            tag: dh:section_name
-            value: JGI-Metatranscriptomics
-          dh:column_number:
-            tag: dh:column_number
-            value: '30'
-        title: RNA well number
-        comments:
-        - Required when 'plate' is selected for container type. Corner wells must
-          be blank. For partial plates, fill by columns. Leave blank if the sample
-          will be shipped in a tube.
-        string_serialization: '{96 well plate pos}'
         required: true
   Sample ID:
     name: Sample ID
