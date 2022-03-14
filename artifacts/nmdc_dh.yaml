@@ -3346,7 +3346,7 @@ classes:
         - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
           2021 are all acceptable.
         examples:
-        - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
+        - value: 2021-04-15; 2021-04; 2021
         see_also:
         - MIxS:collection_date
         string_serialization: '{date, arbitrary precision}'
@@ -3370,7 +3370,7 @@ classes:
         - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
           https://www.worldtimebuddy.com/pst-to-gmt-converter'
         examples:
-        - value: 13:33 or 13:33:55
+        - value: 13:33; 13:33:55
         see_also:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
@@ -3394,7 +3394,7 @@ classes:
         - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
           https://www.worldtimebuddy.com/pst-to-gmt-converter'
         examples:
-        - value: 13:33 or 13:33:55
+        - value: 13:33; 13:33:55
         see_also:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
@@ -3562,7 +3562,7 @@ classes:
           as well as estimated % of the organism in that culture.
         title: DNA expected organisms
         examples:
-        - value: expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
+        - value: expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles
             (1%)
         string_serialization: '{text}'
         recommended: true
@@ -4061,7 +4061,7 @@ classes:
         - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and
           2021 are all acceptable.
         examples:
-        - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
+        - value: 2021-04-15; 2021-04; 2021
         see_also:
         - MIxS:collection_date
         string_serialization: '{date, arbitrary precision}'
@@ -4085,7 +4085,7 @@ classes:
         - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter:
           https://www.worldtimebuddy.com/pst-to-gmt-converter'
         examples:
-        - value: 13:33 or 13:33:55
+        - value: 13:33; 13:33:55
         see_also:
         - MIxS:collection_date
         string_serialization: '{time, seconds optional}'
@@ -6742,7 +6742,7 @@ classes:
           as well as estimated % of the organism in that culture.
         title: RNA expected organisms
         examples:
-        - value: expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
+        - value: expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles
             (1%)
         string_serialization: '{text}'
         recommended: true

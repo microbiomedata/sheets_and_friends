@@ -1285,7 +1285,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "List any organisms known or suspected to grow in co-culture, as well as estimated % of the organism in that culture.",
         "guidance": "Pattern hint: {text}",
-        "examples": "expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles (1%)",
+        "examples": "expected to contain bacteria (59%) fungi (30%), viruses (10%), tadpoles (1%)",
         "exportField": {
           "soil_emsl_jgi_mg": [
             {
@@ -3322,7 +3322,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "The time of sampling, either as an instance (single point) or interval.",
         "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33 or 13:33:55",
+        "examples": "13:33; 13:33:55",
         "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3344,7 +3344,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Date the incubation was harvested/collected/ended. Only relevant for incubation samples.",
         "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15, 2021-04 and 2021 are all acceptable.",
+        "examples": "2021-04-15; 2021-04; 2021",
         "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3366,7 +3366,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Time the incubation was harvested/collected/ended. Only relevant for incubation samples.",
         "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33 or 13:33:55",
+        "examples": "13:33; 13:33:55",
         "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3388,7 +3388,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Date the incubation was started. Only relevant for incubation samples.",
         "guidance": "Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021 are all acceptable. | Pattern hint: {date, arbitrary precision}",
-        "examples": "2021-04-15, 2021-04 and 2021 are all acceptable.",
+        "examples": "2021-04-15; 2021-04; 2021",
         "pattern": "^[12]\\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\\d|3[01]))?)?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
@@ -3410,7 +3410,7 @@ var DATA = [
         "requirement": "recommended",
         "description": "Time the incubation was started. Only relevant for incubation samples.",
         "guidance": "Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter | Pattern hint: {time, seconds optional}",
-        "examples": "13:33 or 13:33:55",
+        "examples": "13:33; 13:33:55",
         "pattern": "^([01]?\\d|2[0-3]|24(?=:00?:00?$)):([0-5]\\d)(:([0-5]\\d))?$",
         "exportField": {
           "soil_emsl_jgi_mg": [
