@@ -2491,12 +2491,11 @@ slots:
         value: The major environment type(s) where the sample was collected. Recommend
           subclasses of biome [ENVO:00000428]. Multiple terms can be separated by
           one or more pipes.
-    description: "Report the major environmental system the sample or specimen came\
-      \ from. The system(s) identified should have a coarse spatial grain, to provide\
-      \ the general environmental context of where the sampling was done (e.g. in\
-      \ the desert or a rainforest). We recommend using subclasses of EnvO\u2019s\
-      \ biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation\
-      \ about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS"
+    description: 'Report the major environmental system the sample or specimen came
+      from. The system(s) identified should have a coarse spatial grain, to provide
+      the general environmental context of where the sampling was done (e.g. in the
+      desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428.
+      EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS'
     title: broad-scale environmental context
     examples:
     - value: oceanic epipelagic zone biome [ENVO:01000033] for annotating a water
@@ -2518,13 +2517,12 @@ slots:
         tag: expected_value
         value: Environmental entities having causal influences upon the entity at
           time of sampling.
-    description: "Report the entity or entities which are in the sample or specimen\u2019\
-      s local vicinity and which you believe have significant causal influences on\
-      \ your sample or specimen. We recommend using EnvO terms which are of smaller\
-      \ spatial grain than your entry for env_broad_scale. Terms, such as anatomical\
-      \ sites, from other OBO Library ontologies which interoperate with EnvO (e.g.\
-      \ UBERON) are accepted in this field. EnvO documentation about how to use the\
-      \ field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS."
+    description: 'Report the entity or entities which are in the sample or specimen’s
+      local vicinity and which you believe have significant causal influences on your
+      sample or specimen. We recommend using EnvO terms which are of smaller spatial
+      grain than your entry for env_broad_scale. Terms, such as anatomical sites,
+      from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON)
+      are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.'
     title: local environmental context
     examples:
     - value: 'litter layer [ENVO:01000338]; Annotating a pooled sample taken from
@@ -4294,23 +4292,23 @@ slots:
       expected_value:
         tag: expected_value
         value: enumeration
-    description: "The assembly quality category is based on sets of criteria outlined\
-      \ for each assembly quality category. For MISAG/MIMAG; Finished: Single, validated,\
-      \ contiguous sequence per replicon without gaps or ambiguities with a consensus\
-      \ error rate equivalent to Q50 or better. High Quality Draft:Multiple fragments\
-      \ where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes\
-      \ and at least 18 tRNAs. Medium Quality Draft:Many fragments with little to\
-      \ no review of assembly other than reporting of standard assembly statistics.\
-      \ Low Quality Draft:Many fragments with little to no review of assembly other\
-      \ than reporting of standard assembly statistics. Assembly statistics include,\
-      \ but are not limited to total assembly size, number of contigs, contig N50/L50,\
-      \ and maximum contig length. For MIUVIG; Finished: Single, validated, contiguous\
-      \ sequence per replicon without gaps or ambiguities, with extensive manual review\
-      \ and editing to annotate putative gene functions and transcriptional units.\
-      \ High-quality draft genome: One or multiple fragments, totaling \u2265 90%\
-      \ of the expected genome or replicon sequence or predicted complete. Genome\
-      \ fragment(s): One or multiple fragments, totalling < 90% of the expected genome\
-      \ or replicon sequence, or for which no genome size could be estimated"
+    description: 'The assembly quality category is based on sets of criteria outlined
+      for each assembly quality category. For MISAG/MIMAG; Finished: Single, validated,
+      contiguous sequence per replicon without gaps or ambiguities with a consensus
+      error rate equivalent to Q50 or better. High Quality Draft:Multiple fragments
+      where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes
+      and at least 18 tRNAs. Medium Quality Draft:Many fragments with little to no
+      review of assembly other than reporting of standard assembly statistics. Low
+      Quality Draft:Many fragments with little to no review of assembly other than
+      reporting of standard assembly statistics. Assembly statistics include, but
+      are not limited to total assembly size, number of contigs, contig N50/L50, and
+      maximum contig length. For MIUVIG; Finished: Single, validated, contiguous sequence
+      per replicon without gaps or ambiguities, with extensive manual review and editing
+      to annotate putative gene functions and transcriptional units. High-quality
+      draft genome: One or multiple fragments, totaling ≥ 90% of the expected genome
+      or replicon sequence or predicted complete. Genome fragment(s): One or multiple
+      fragments, totalling < 90% of the expected genome or replicon sequence, or for
+      which no genome size could be estimated'
     title: assembly quality
     examples:
     - value: High-quality draft genome
@@ -5641,9 +5639,9 @@ slots:
       expected_value:
         tag: expected_value
         value: Taxonomy ID
-    description: "NCBI taxon id of the sample.  Maybe be a single taxon or mixed taxa\
-      \ sample. Use 'synthetic metagenome\u2019 for mock community/positive controls,\
-      \ or 'blank sample' for negative controls."
+    description: NCBI taxon id of the sample.  Maybe be a single taxon or mixed taxa
+      sample. Use 'synthetic metagenome’ for mock community/positive controls, or
+      'blank sample' for negative controls.
     title: Taxonomy ID of DNA sample
     examples:
     - value: Gut Metagenome [NCBI:txid749906]
@@ -6231,11 +6229,7 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_enum
-        annotations:
-          dh:column_number: '9'
-          dh:section_name: Sample ID
-        required: true
+        range: string
       ecosystem_category:
         name: ecosystem_category
         description: Ecosystem categories represent divisions within the ecosystem
@@ -6251,11 +6245,7 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_category_enum
-        annotations:
-          dh:column_number: '10'
-          dh:section_name: Sample ID
-        required: true
+        range: string
       ecosystem_subtype:
         name: ecosystem_subtype
         description: Ecosystem subtypes represent further subdivision of Ecosystem
@@ -6270,11 +6260,7 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_subtype_enum
-        annotations:
-          dh:column_number: '12'
-          dh:section_name: Sample ID
-        required: true
+        range: string
       ecosystem_type:
         name: ecosystem_type
         description: Ecosystem types represent things having common characteristics
@@ -6292,11 +6278,7 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: ecosystem_type_enum
-        annotations:
-          dh:column_number: '11'
-          dh:section_name: Sample ID
-        required: true
+        range: string
       specific_ecosystem:
         name: specific_ecosystem
         description: Specific ecosystems represent specific features of the environment
@@ -6310,11 +6292,7 @@ classes:
         - https://gold.jgi.doe.gov/help
         is_a: gold_path_field
         owner: biosample
-        range: specific_ecosystem_enum
-        annotations:
-          dh:column_number: '13'
-          dh:section_name: Sample ID
-        required: true
+        range: string
       agrochem_addition:
         name: agrochem_addition
         aliases:
@@ -6329,8 +6307,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '2'
-          dh:section_name: MIxS
         description: Addition of fertilizers, pesticides, etc. - amount and time of
           applications
         title: history/agrochemical additions
@@ -6358,8 +6334,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '16'
-          dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to varying
           temperatures; should include the temperature, treatment regimen including
           how many times the treatment was repeated, how long each treatment lasted,
@@ -6375,7 +6349,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       al_sat:
         name: al_sat
         aliases:
@@ -6390,8 +6363,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '3'
-          dh:section_name: MIxS
         description: Aluminum saturation (esp. For tropical soils)
         title: extreme_unusual_properties/Al saturation
         examples:
@@ -6414,8 +6385,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '4'
-          dh:section_name: MIxS
         description: Reference or method used in determining Al saturation
         title: extreme_unusual_properties/Al saturation method
         examples:
@@ -6436,8 +6405,6 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:column_number: '26'
-          dh:section_name: MIxS (modified)
         description: Altitude is a term used to identify heights of objects such as
           airplanes, space shuttles, rockets, atmospheric balloons and heights of
           places such as atmospheric layers and clouds. It is used to measure the
@@ -6453,7 +6420,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
       annual_precpt:
         name: annual_precpt
         aliases:
@@ -6468,8 +6434,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '5'
-          dh:section_name: MIxS
         description: The average of all annual precipitation values known, or an estimated
           equivalent value derived by such methods as regional indexes or Isohyetal
           maps.
@@ -6497,8 +6461,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '6'
-          dh:section_name: MIxS
         description: Mean annual temperature
         title: mean annual temperature
         examples:
@@ -6521,8 +6483,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '13'
-          dh:section_name: MIxS (modified)
         description: Information about treatment(s) involving use of biotic factors,
           such as bacteria, viruses or fungi.
         title: biotic regimen
@@ -6535,7 +6495,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
       biotic_relationship:
         name: biotic_relationship
         aliases:
@@ -6544,8 +6503,6 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-          dh:section_name: MIxS (modified)
-          dh:column_number: '22'
         description: Description of relationship(s) between the subject organism and
           other organism(s) it is associated with. E.g., parasite on species X; mutualist
           with species Y. The target organism is the subject of the relationship,
@@ -6570,8 +6527,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '44'
-          dh:section_name: MIxS
         description: Ratio of amount or concentrations of carbon to nitrogen
         title: carbon/nitrogen ratio
         examples:
@@ -6593,8 +6548,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '17'
-          dh:section_name: MIxS (modified)
         description: List of chemical compounds administered to the host or site where
           sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter);
           can include multiple compounds. For chemical entities of biological interest
@@ -6609,7 +6562,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       climate_environment:
         name: climate_environment
         aliases:
@@ -6621,8 +6573,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '19'
-          dh:section_name: MIxS (modified)
         description: Treatment involving an exposure to a particular climate; treatment
           regimen including how many times the treatment was repeated, how long each
           treatment lasted, and the start and end time of the entire treatment; can
@@ -6637,7 +6587,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       collection_date:
         name: collection_date
         aliases:
@@ -6646,24 +6595,21 @@ classes:
           expected_value:
             tag: expected_value
             value: date and time
-          dh:column_number: '3'
-          dh:section_name: MIxS (modified)
-        description: The date of sampling
+        description: 'The time of sampling, either as an instance (single point in
+          time) or interval. In case no exact time is available, the date/time can
+          be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00;
+          2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all
+          are ISO8601 compliant'
         title: collection date
         examples:
-        - value: 2021-04-15; 2021-04; 2021
+        - value: 2018-05-11T10:00:00+01:00; 2018-05-11
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000011
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: date
         required: true
-        notes:
-        - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date
-          only
-        - Use modified term (amended definition)
-        string_serialization: '{date, arbitrary precision}'
       crop_rotation:
         name: crop_rotation
         aliases:
@@ -6675,8 +6621,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '7'
-          dh:section_name: MIxS
         description: Whether or not crop is rotated, and if yes, rotation schedule
         title: history/crop rotation
         examples:
@@ -6700,8 +6644,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '8'
-          dh:section_name: MIxS
         description: Present state of sample site
         title: current land use
         examples:
@@ -6724,8 +6666,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '9'
-          dh:section_name: MIxS
         description: Vegetation classification from one or more standard classification
           systems, or agricultural crop
         title: current vegetation
@@ -6750,8 +6690,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '10'
-          dh:section_name: MIxS
         description: Reference or method used in vegetation classification
         title: current vegetation method
         examples:
@@ -6772,26 +6710,19 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:column_number: '10'
-          dh:section_name: MIxS (modified)
         description: The vertical distance below local surface, e.g. for sediment
           or soil samples depth is measured from sediment or soil surface, respectively.
           Depth can be reported as an interval for subsurface samples.
-        title: depth, meters
+        title: depth
         examples:
-        - value: 0-0.1; 1
+        - value: 10 meter
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
         slot_uri: MIXS:0000018
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: quantity value
         required: true
-        comments:
-        - All depths must be reported in meters. Provide the numerical portion only.
-        notes:
-        - Use modified term
-        string_serialization: '{float}|{float}-{float}'
       drainage_class:
         name: drainage_class
         aliases:
@@ -6803,8 +6734,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '11'
-          dh:section_name: MIxS
         description: Drainage classification from a standard system such as the USDA
           system
         title: drainage classification
@@ -6825,8 +6754,6 @@ classes:
           expected_value:
             tag: expected_value
             value: measurement value
-          dh:section_name: MIxS (modified)
-          dh:column_number: '6'
         description: Elevation of the sampling site is its height above a fixed reference
           point, most commonly the mean sea level. Elevation is mainly used when referring
           to points on the earth's surface, while altitude is used for points above
@@ -6851,14 +6778,12 @@ classes:
             value: The major environment type(s) where the sample was collected. Recommend
               subclasses of biome [ENVO:00000428]. Multiple terms can be separated
               by one or more pipes.
-          dh:column_number: '6'
-          dh:section_name: Sample ID
-        description: "Report the major environmental system the sample or specimen\
-          \ came from. The system(s) identified should have a coarse spatial grain,\
-          \ to provide the general environmental context of where the sampling was\
-          \ done (e.g. in the desert or a rainforest). We recommend using subclasses\
-          \ of EnvO\u2019s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428.\
-          \ EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS"
+        description: 'Report the major environmental system the sample or specimen
+          came from. The system(s) identified should have a coarse spatial grain,
+          to provide the general environmental context of where the sampling was done
+          (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s
+          biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation
+          about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS'
         title: broad-scale environmental context
         examples:
         - value: oceanic epipelagic zone biome [ENVO:01000033] for annotating a water
@@ -6871,8 +6796,6 @@ classes:
         owner: soil MIMS
         range: string
         required: true
-        notes: range changed to enumeration late in makefile, so this is modified
-          (but "sample ID" anyway)
       env_local_scale:
         name: env_local_scale
         aliases:
@@ -6882,15 +6805,13 @@ classes:
             tag: expected_value
             value: Environmental entities having causal influences upon the entity
               at time of sampling.
-          dh:column_number: '7'
-          dh:section_name: Sample ID
-        description: "Report the entity or entities which are in the sample or specimen\u2019\
-          s local vicinity and which you believe have significant causal influences\
-          \ on your sample or specimen. We recommend using EnvO terms which are of\
-          \ smaller spatial grain than your entry for env_broad_scale. Terms, such\
-          \ as anatomical sites, from other OBO Library ontologies which interoperate\
-          \ with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation\
-          \ about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS."
+        description: 'Report the entity or entities which are in the sample or specimen’s
+          local vicinity and which you believe have significant causal influences
+          on your sample or specimen. We recommend using EnvO terms which are of smaller
+          spatial grain than your entry for env_broad_scale. Terms, such as anatomical
+          sites, from other OBO Library ontologies which interoperate with EnvO (e.g.
+          UBERON) are accepted in this field. EnvO documentation about how to use
+          the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.'
         title: local environmental context
         examples:
         - value: 'litter layer [ENVO:01000338]; Annotating a pooled sample taken from
@@ -6905,8 +6826,6 @@ classes:
         owner: soil MIMS
         range: string
         required: true
-        notes: range changed to enumeration late in makefile, so this is modified
-          (but "sample ID" anyway)
       env_medium:
         name: env_medium
         aliases:
@@ -6916,8 +6835,6 @@ classes:
             tag: expected_value
             value: The material displaced by the entity at time of sampling. Recommend
               subclasses of environmental material [ENVO:00010483].
-          dh:column_number: '8'
-          dh:section_name: Sample ID
         description: 'Report the environmental material(s) immediately surrounding
           the sample or specimen at the time of sampling. We recommend using subclasses
           of ''environmental material'' (http://purl.obolibrary.org/obo/ENVO_00010483).
@@ -6938,8 +6855,6 @@ classes:
         owner: soil MIMS
         range: string
         required: true
-        notes: range changed to enumeration late in makefile, so this is modified
-          (but "sample ID" anyway)
       experimental_factor:
         name: experimental_factor
         aliases:
@@ -6948,8 +6863,6 @@ classes:
           expected_value:
             tag: expected_value
             value: text or EFO and/or OBI
-          dh:column_number: '12'
-          dh:section_name: MIxS
         description: Experimental factors are essentially the variable aspects of
           an experiment design which can be used to describe an experiment, or set
           of experiments, in an increasingly detailed manner. This field accepts ontology
@@ -6978,8 +6891,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '13'
-          dh:section_name: MIxS
         description: Unusual physical events that may have affected microbial populations
         title: history/extreme events
         examples:
@@ -7002,8 +6913,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '14'
-          dh:section_name: MIxS
         description: Soil classification from the FAO World Reference Database for
           Soil Resources. The list can be found at http://www.fao.org/nr/land/sols/soil/wrb-soil-maps/reference-groups
         title: soil_taxonomic/FAO classification
@@ -7027,8 +6936,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '15'
-          dh:section_name: MIxS
         description: Historical and/or physical evidence of fire
         title: history/fire
         examples:
@@ -7051,8 +6958,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '16'
-          dh:section_name: MIxS
         description: Historical and/or physical evidence of flooding
         title: history/flooding
         examples:
@@ -7079,8 +6984,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '20'
-          dh:section_name: MIxS (modified)
         description: Use of conditions with differing gaseous environments; should
           include the name of gaseous compound, amount administered, treatment duration,
           interval and total experimental duration; can include multiple gaseous environment
@@ -7095,7 +6998,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       geo_loc_name:
         name: geo_loc_name
         aliases:
@@ -7105,8 +7007,6 @@ classes:
             tag: expected_value
             value: 'country or sea name (INSDC or GAZ): region(GAZ), specific location
               name'
-          dh:column_number: '4'
-          dh:section_name: MIxS (modified)
         description: The geographical origin of the sample as defined by the country
           or sea name followed by specific region name. Country or sea names should
           be chosen from the INSDC country list (http://insdc.org/country.html), or
@@ -7116,7 +7016,7 @@ classes:
         - value: 'USA: Maryland, Bethesda'
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
-        string_serialization: '{text}: {text}, {text}'
+        string_serialization: '{term}: {term}, {text}'
         slot_uri: MIXS:0000010
         multivalued: false
         owner: soil MIMS
@@ -7133,11 +7033,9 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '1'
-          dh:section_name: MIxS (modified)
-        description: 'Type of facility/location where the sample was harvested; controlled
+        description: 'Type of facility where the sampled plant was grown; controlled
           vocabulary: growth chamber, open top chamber, glasshouse, experimental garden,
-          field.'
+          field. Alternatively use Crop Ontology (CO) terms, see http://www.cropontology.org/ontology/CO_715/Crop%20Research'
         title: growth facility
         examples:
         - value: Growth chamber [CO_715:0000189]
@@ -7147,9 +7045,7 @@ classes:
         slot_uri: MIXS:0001043
         multivalued: false
         owner: soil MIMS
-        range: growth_facil_enum
-        notes: 'Removed from description: Alternatively use Crop Ontology (CO) terms'
-        required: true
+        range: string
       heavy_metals:
         name: heavy_metals
         aliases:
@@ -7164,8 +7060,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '17'
-          dh:section_name: MIxS
         description: Heavy metals present in the sequenced sample and their concentrations.
           For multiple heavy metals and concentrations, add multiple copies of this
           field.
@@ -7191,8 +7085,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '18'
-          dh:section_name: MIxS
         description: Reference or method used in determining heavy metals
         title: extreme_unusual_properties/heavy metals method
         examples:
@@ -7216,8 +7108,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '19'
-          dh:section_name: MIxS
         description: Reference or method used in determining the horizon
         title: horizon method
         examples:
@@ -7244,8 +7134,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '21'
-          dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to varying
           degree of humidity; information about treatment involving use of growth
           hormones; should include amount of humidity administered, treatment regimen
@@ -7262,7 +7150,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
       lat_lon:
         name: lat_lon
         aliases:
@@ -7271,8 +7158,6 @@ classes:
           expected_value:
             tag: expected_value
             value: decimal degrees,  limit to 8 decimal points
-          dh:column_number: '5'
-          dh:section_name: MIxS (modified)
         description: The geographical origin of the sample as defined by latitude
           and longitude. The values should be reported in decimal degrees and in WGS84
           system
@@ -7281,7 +7166,7 @@ classes:
         - value: 50.586825 6.408977
         from_schema: http://w3id.org/mixs/terms
         is_a: environment field
-        string_serialization: (lat lon}
+        string_serialization: '{float} {float}'
         slot_uri: MIXS:0000009
         multivalued: false
         owner: soil MIMS
@@ -7301,8 +7186,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:section_name: MIxS (modified)
-          dh:column_number: '23'
         description: Information about treatment(s) involving exposure to light, including
           both light intensity and quality.
         title: light regimen
@@ -7315,7 +7198,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: string
-        recommended: true
       link_class_info:
         name: link_class_info
         aliases:
@@ -7327,8 +7209,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '20'
-          dh:section_name: MIxS
         description: Link to digitized soil maps or other soil classification information
         title: link to classification information
         examples:
@@ -7352,8 +7232,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '21'
-          dh:section_name: MIxS
         description: Link to climate resource
         title: link to climate information
         examples:
@@ -7377,8 +7255,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '22'
-          dh:section_name: MIxS
         description: Soil classification based on local soil classification system
         title: soil_taxonomic/local classification
         examples:
@@ -7402,8 +7278,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '24'
-          dh:section_name: MIxS
         description: Reference or method used in determining the local soil classification
         title: soil_taxonomic/local classification method
         examples:
@@ -7427,8 +7301,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '43'
-          dh:section_name: MIxS
         description: Reference or method used in determining microbial biomass
         title: microbial biomass method
         examples:
@@ -7455,8 +7327,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '42'
-          dh:section_name: MIxS
         description: The part of the organic matter in the soil that constitutes living
           microorganisms smaller than 5-10 micrometer. If you keep this, you would
           need to have correction factors used for conversion to the final units
@@ -7481,8 +7351,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '24'
-          dh:section_name: MIxS
         description: Any other measurement performed or parameter collected, that
           is not listed here
         title: miscellaneous parameter
@@ -7510,8 +7378,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '45'
-          dh:section_name: MIxS
         description: Concentration of organic matter
         title: organic matter
         examples:
@@ -7536,8 +7402,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '46'
-          dh:section_name: MIxS
         description: Concentration of organic nitrogen
         title: organic nitrogen
         examples:
@@ -7559,8 +7423,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '25'
-          dh:section_name: MIxS
         description: Oxygenation status of sample
         title: oxygenation status of sample
         examples:
@@ -7582,9 +7444,7 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '27'
-          dh:section_name: MIxS (modified)
-        description: pH measurement of the sample, or liquid portion of sample, or
+        description: Ph measurement of the sample, or liquid portion of sample, or
           aqueous phase of the fluid
         title: pH
         examples:
@@ -7594,14 +7454,8 @@ classes:
         slot_uri: MIXS:0001001
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: double
         required: false
-        maximum_value: '14'
-        minimum_value: '0'
-        notes:
-        - Use modified term
-        recommended: true
-        string_serialization: '{float}'
       ph_meth:
         name: ph_meth
         aliases:
@@ -7613,8 +7467,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '41'
-          dh:section_name: MIxS
         description: Reference or method used in determining ph
         title: pH method
         examples:
@@ -7641,8 +7493,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '53'
-          dh:section_name: MIxS
         description: Concentration of phosphate
         title: phosphate
         examples:
@@ -7664,8 +7514,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '26'
-          dh:section_name: MIxS
         description: Reference or method used in determining previous land use and
           dates
         title: history/previous land use method
@@ -7690,8 +7538,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '27'
-          dh:section_name: MIxS
         description: Previous land use and dates
         title: history/previous land use
         examples:
@@ -7715,8 +7561,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '28'
-          dh:section_name: MIxS
         description: Cross-sectional position in the hillslope where sample was collected.sample
           area position in relation to surrounding areas
         title: profile position
@@ -7737,8 +7581,6 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-          dh:section_name: MIxS (modified)
-          dh:column_number: '23'
         description: Is this organism an aerobe, anaerobe? Please note that aerobic
           and anaerobic are valid descriptors for microbial environments
         title: relationship to oxygen
@@ -7765,8 +7607,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '54'
-          dh:section_name: MIxS
         description: The total concentration of all dissolved salts in a liquid or
           solid sample. While salinity can be measured by a complete chemical analysis,
           this method is difficult and time consuming. More often, it is instead derived
@@ -7793,8 +7633,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '55'
-          dh:section_name: MIxS
         description: Reference or method used in determining salinity
         title: salinity method
         examples:
@@ -7815,8 +7653,6 @@ classes:
           expected_value:
             tag: expected_value
             value: device name
-          dh:column_number: '14'
-          dh:section_name: MIxS (modified)
         description: The device used to collect an environmental sample. This field
           accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO).
           This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).
@@ -7831,8 +7667,6 @@ classes:
         owner: soil MIMS
         range: string
         recommended: true
-        comments:
-        - Report dimensions and details when applicable
       samp_collec_method:
         name: samp_collec_method
         aliases:
@@ -7841,8 +7675,6 @@ classes:
           expected_value:
             tag: expected_value
             value: PMID,DOI,url , or text
-          dh:column_number: '15'
-          dh:section_name: MIxS (modified)
         description: The method employed for collecting the sample.
         title: sample collection method
         examples:
@@ -7855,8 +7687,6 @@ classes:
         owner: soil MIMS
         range: string
         recommended: true
-        comments:
-        - This can be a citation or description
       samp_mat_process:
         name: samp_mat_process
         aliases:
@@ -7865,8 +7695,6 @@ classes:
           expected_value:
             tag: expected_value
             value: text
-          dh:section_name: MIxS (modified)
-          dh:column_number: '12'
         description: A brief description of any processing applied to the sample during
           or after retrieving the sample from environment, or a link to the relevant
           protocol(s) performed.
@@ -7889,13 +7717,16 @@ classes:
           expected_value:
             tag: expected_value
             value: text
-          dh:column_number: '2'
-          dh:section_name: Sample ID
-        description: A local identifier or name that for the material sample collected.
-          Refers to the original material collected or to any derived sub-samples.
+        description: A local identifier or name that for the material sample used
+          for extracting nucleic acids, and subsequent sequencing. It can refer either
+          to the original material collected or to any derived sub-samples. It can
+          have any format, but we suggest that you make it concise, unique and consistent
+          within your lab, and as informative as possible. INSDC requires every sample
+          name from a single Submitter to be unique. Use of a globally unique identifier
+          for the field source_mat_id is recommended in addition to sample_name.
         title: sample name
         examples:
-        - value: Rock core CB1178(5-6) from NSW
+        - value: ISDsoil1
         from_schema: http://w3id.org/mixs/terms
         is_a: investigation field
         string_serialization: '{text}'
@@ -7904,9 +7735,6 @@ classes:
         owner: soil MIMS
         range: string
         required: true
-        comments:
-        - It can have any format, but we suggest that you make it concise, unique
-          and consistent within your lab, and as informative as possible.
       samp_size:
         name: samp_size
         aliases:
@@ -7918,24 +7746,18 @@ classes:
           preferred_unit:
             tag: preferred_unit
             value: millliter, gram, milligram, liter
-          dh:column_number: '18'
-          dh:section_name: MIxS (modified)
         description: The total amount or size (volume (ml), mass (g) or area (m2)
           ) of sample collected.
         title: amount or size of sample collected
         examples:
-        - value: 5 grams; 10 mL
+        - value: 5 liter
         from_schema: http://w3id.org/mixs/terms
         is_a: nucleic acid sequence source field
         slot_uri: MIXS:0000001
         multivalued: false
         owner: soil MIMS
-        range: string
+        range: quantity value
         recommended: true
-        comments:
-        - This refers to the TOTAL amount of sample collected from the experiment.
-          NOT the amount sent to each institution or collected for a specific analysis.
-        string_serialization: '{float} {unit}'
       samp_store_temp:
         name: samp_store_temp
         aliases:
@@ -7950,8 +7772,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '7'
-          dh:section_name: MIxS (modified)
         description: Temperature at which sample was stored, e.g. -80 degree Celsius
         title: sample storage temperature
         examples:
@@ -7962,7 +7782,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        required: true
       season_precpt:
         name: season_precpt
         aliases:
@@ -7977,8 +7796,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '29'
-          dh:section_name: MIxS
         description: The average of all seasonal precipitation values known, or an
           estimated equivalent value derived by such methods as regional indexes or
           Isohyetal maps.
@@ -8006,8 +7823,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '30'
-          dh:section_name: MIxS
         description: Mean seasonal temperature
         title: mean seasonal temperature
         examples:
@@ -8030,8 +7845,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '8'
-          dh:section_name: MIxS (modified)
         description: Collection design of pooled samples and/or sieve size and amount
           of sample sieved
         title: composite design/sieving
@@ -8045,7 +7858,6 @@ classes:
         owner: soil MIMS
         range: string
         required: false
-        recommended: true
       size_frac_low:
         name: size_frac_low
         aliases:
@@ -8060,8 +7872,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '9'
-          dh:section_name: MIxS (modified)
         description: Refers to the mesh/pore size used to pre-filter/pre-sort the
           sample. Materials larger than the size threshold are excluded from the sample
         title: size-fraction lower threshold
@@ -8073,7 +7883,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
       size_frac_up:
         name: size_frac_up
         aliases:
@@ -8088,8 +7897,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '11'
-          dh:section_name: MIxS (modified)
         description: Refers to the mesh/pore size used to retain the sample. Materials
           smaller than the size threshold are excluded from the sample
         title: size-fraction upper threshold
@@ -8101,7 +7908,6 @@ classes:
         multivalued: false
         owner: soil MIMS
         range: quantity value
-        recommended: true
       slope_aspect:
         name: slope_aspect
         aliases:
@@ -8116,8 +7922,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '1'
-          dh:section_name: MIxS
         description: The direction a slope faces. While looking down a slope use a
           compass to record the direction you are facing (direction or degrees); e.g.,
           nw or 315 degrees. This measure provides an indication of sun and wind exposure
@@ -8146,8 +7950,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '31'
-          dh:section_name: MIxS
         description: Commonly called 'slope'. The angle between ground surface and
           a horizontal line (in percent). This is the direction that overland water
           would flow. This measure is usually taken with a hand level meter or clinometer
@@ -8172,8 +7974,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '32'
-          dh:section_name: MIxS
         description: Specific layer in the land area which measures parallel to the
           soil surface and possesses physical characteristics which differ from the
           layers above and beneath
@@ -8198,8 +7998,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '33'
-          dh:section_name: MIxS
         description: The relative proportion of different grain sizes of mineral particles
           in a soil, as described using a standard system; express as % sand (50 um
           to 2 mm), silt (2 um to 50 um), and clay (<2 um) with textural name (e.g.,
@@ -8225,8 +8023,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '34'
-          dh:section_name: MIxS
         description: Reference or method used in determining soil texture
         title: soil texture method
         examples:
@@ -8250,8 +8046,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '35'
-          dh:section_name: MIxS
         description: Description of the soil type or classification. This field accepts
           terms under soil (http://purl.obolibrary.org/obo/ENVO_00001998).  Multiple
           terms can be separated by pipes.
@@ -8277,8 +8071,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '36'
-          dh:section_name: MIxS
         description: Reference or method used in determining soil series name or other
           lower-level classification
         title: soil type method
@@ -8301,28 +8093,30 @@ classes:
             tag: expected_value
             value: 'for cultures of microorganisms: identifiers for two culture collections;
               for other material a unique arbitrary identifer'
-          dh:column_number: '1'
-          dh:section_name: Sample ID
-        description: A globally unique identifier assigned to the biological sample.
-        title: globally unique ID
+        description: A unique identifier assigned to a material sample (as defined
+          by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular
+          digital record of a material sample) used for extracting nucleic acids,
+          and subsequent sequencing. The identifier can refer either to the original
+          material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher,
+          /bio_material, or /culture_collection may or may not share the same value
+          as the source_mat_id field. For instance, the /specimen_voucher qualifier
+          and source_mat_id may both contain 'UAM:Herps:14' , referring to both the
+          specimen voucher and sampled tissue with the same identifier. However, the
+          /culture_collection qualifier may refer to a value from an initial culture
+          (e.g. ATCC:11775) while source_mat_id would refer to an identifier from
+          some derived culture from which the nucleic acids were extracted (e.g. xatc123
+          or ark:/2154/R2).
+        title: source material identifiers
         examples:
-        - value: IGSN:AU1243
+        - value: MPI012345
         from_schema: http://w3id.org/mixs/terms
         is_a: nucleic acid sequence source field
-        string_serialization: '{text}:{text}'
+        string_serialization: '{text}'
         slot_uri: MIXS:0000026
         multivalued: false
         owner: soil MIMS
         range: string
         recommended: true
-        comments:
-        - Identifiers must be prefixed. IGSNs (http://www.geosamples.org/getigsn)
-          are unique and FAIR. UUIDs (https://www.uuidgenerator.net/) are globally
-          unique but not FAIR. These IDs enable linking to derrived analytes and subsamples.
-        identifier: true
-        notes:
-        - The source material IS the Globally Unique ID
-        required: true
       store_cond:
         name: store_cond
         aliases:
@@ -8334,9 +8128,8 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '2'
-          dh:section_name: MIxS (modified)
-        description: Explain how the soil sample is stored (fresh/frozen/other).
+        description: Explain how and for how long the soil sample was stored before
+          DNA extraction (fresh/frozen/other).
         title: storage conditions
         examples:
         - value: -20 degree Celsius freezer;P2Y10D
@@ -8346,8 +8139,8 @@ classes:
         slot_uri: MIXS:0000327
         multivalued: false
         owner: soil MIMS
-        range: store_cond_enum
-        required: true
+        range: string
+        required: false
       temp:
         name: temp
         aliases:
@@ -8359,8 +8152,6 @@ classes:
           preferred_unit:
             tag: preferred_unit
             value: degree Celsius
-          dh:column_number: '37'
-          dh:section_name: MIxS
         description: Temperature of the sample at the time of sampling.
         title: temperature
         examples:
@@ -8382,8 +8173,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '38'
-          dh:section_name: MIxS
         description: Note method(s) used for tilling
         title: history/tillage
         examples:
@@ -8409,8 +8198,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '47'
-          dh:section_name: MIxS
         description: Total carbon content
         title: total carbon
         examples:
@@ -8432,8 +8219,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '49'
-          dh:section_name: MIxS
         description: Reference or method used in determining the total nitrogen
         title: total nitrogen content method
         examples:
@@ -8460,8 +8245,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '48'
-          dh:section_name: MIxS
         description: Total nitrogen content of the sample
         title: total nitrogen content
         examples:
@@ -8484,8 +8267,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '51'
-          dh:section_name: MIxS
         description: Reference or method used in determining total organic carbon
         title: total organic carbon method
         examples:
@@ -8512,8 +8293,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '50'
-          dh:section_name: MIxS
         description: 'Definition for soil: total organic carbon content of the soil,
           definition otherwise: total organic carbon content'
         title: total organic carbon
@@ -8540,8 +8319,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '52'
-          dh:section_name: MIxS
         description: 'Total phosphorus concentration in the sample, calculated by:
           total phosphorus = total dissolved phosphorus + particulate phosphorus'
         title: total phosphorus
@@ -8564,8 +8341,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '40'
-          dh:section_name: MIxS
         description: Reference or method used in determining the water content of
           soil
         title: water content method
@@ -8593,8 +8368,6 @@ classes:
           occurrence:
             tag: occurrence
             value: '1'
-          dh:column_number: '39'
-          dh:section_name: MIxS
         description: Water content measurement
         title: water content
         examples:
@@ -8620,8 +8393,6 @@ classes:
           occurrence:
             tag: occurrence
             value: m
-          dh:column_number: '25'
-          dh:section_name: MIxS (modified)
         description: Information about treatment involving an exposure to watering
           frequencies, treatment regimen including how many times the treatment was
           repeated, how long each treatment lasted, and the start and end time of
@@ -8636,7 +8407,6 @@ classes:
         multivalued: true
         owner: soil MIMS
         range: string
-        recommended: true
   nmdc_dh_section:
     name: nmdc_dh_section
     description: A section (ie group if columns) within a DataHarmonizer interface
@@ -9185,24 +8955,23 @@ classes:
           expected_value:
             tag: expected_value
             value: enumeration
-        description: "The assembly quality category is based on sets of criteria outlined\
-          \ for each assembly quality category. For MISAG/MIMAG; Finished: Single,\
-          \ validated, contiguous sequence per replicon without gaps or ambiguities\
-          \ with a consensus error rate equivalent to Q50 or better. High Quality\
-          \ Draft:Multiple fragments where gaps span repetitive regions. Presence\
-          \ of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs. Medium Quality\
-          \ Draft:Many fragments with little to no review of assembly other than reporting\
-          \ of standard assembly statistics. Low Quality Draft:Many fragments with\
-          \ little to no review of assembly other than reporting of standard assembly\
-          \ statistics. Assembly statistics include, but are not limited to total\
-          \ assembly size, number of contigs, contig N50/L50, and maximum contig length.\
-          \ For MIUVIG; Finished: Single, validated, contiguous sequence per replicon\
-          \ without gaps or ambiguities, with extensive manual review and editing\
-          \ to annotate putative gene functions and transcriptional units. High-quality\
-          \ draft genome: One or multiple fragments, totaling \u2265 90% of the expected\
-          \ genome or replicon sequence or predicted complete. Genome fragment(s):\
-          \ One or multiple fragments, totalling < 90% of the expected genome or replicon\
-          \ sequence, or for which no genome size could be estimated"
+        description: 'The assembly quality category is based on sets of criteria outlined
+          for each assembly quality category. For MISAG/MIMAG; Finished: Single, validated,
+          contiguous sequence per replicon without gaps or ambiguities with a consensus
+          error rate equivalent to Q50 or better. High Quality Draft:Multiple fragments
+          where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA
+          genes and at least 18 tRNAs. Medium Quality Draft:Many fragments with little
+          to no review of assembly other than reporting of standard assembly statistics.
+          Low Quality Draft:Many fragments with little to no review of assembly other
+          than reporting of standard assembly statistics. Assembly statistics include,
+          but are not limited to total assembly size, number of contigs, contig N50/L50,
+          and maximum contig length. For MIUVIG; Finished: Single, validated, contiguous
+          sequence per replicon without gaps or ambiguities, with extensive manual
+          review and editing to annotate putative gene functions and transcriptional
+          units. High-quality draft genome: One or multiple fragments, totaling ≥
+          90% of the expected genome or replicon sequence or predicted complete. Genome
+          fragment(s): One or multiple fragments, totalling < 90% of the expected
+          genome or replicon sequence, or for which no genome size could be estimated'
         title: assembly quality
         examples:
         - value: High-quality draft genome
@@ -9763,12 +9532,12 @@ classes:
             value: The major environment type(s) where the sample was collected. Recommend
               subclasses of biome [ENVO:00000428]. Multiple terms can be separated
               by one or more pipes.
-        description: "Report the major environmental system the sample or specimen\
-          \ came from. The system(s) identified should have a coarse spatial grain,\
-          \ to provide the general environmental context of where the sampling was\
-          \ done (e.g. in the desert or a rainforest). We recommend using subclasses\
-          \ of EnvO\u2019s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428.\
-          \ EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS"
+        description: 'Report the major environmental system the sample or specimen
+          came from. The system(s) identified should have a coarse spatial grain,
+          to provide the general environmental context of where the sampling was done
+          (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s
+          biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation
+          about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS'
         title: broad-scale environmental context
         examples:
         - value: oceanic epipelagic zone biome [ENVO:01000033] for annotating a water
@@ -9790,13 +9559,13 @@ classes:
             tag: expected_value
             value: Environmental entities having causal influences upon the entity
               at time of sampling.
-        description: "Report the entity or entities which are in the sample or specimen\u2019\
-          s local vicinity and which you believe have significant causal influences\
-          \ on your sample or specimen. We recommend using EnvO terms which are of\
-          \ smaller spatial grain than your entry for env_broad_scale. Terms, such\
-          \ as anatomical sites, from other OBO Library ontologies which interoperate\
-          \ with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation\
-          \ about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS."
+        description: 'Report the entity or entities which are in the sample or specimen’s
+          local vicinity and which you believe have significant causal influences
+          on your sample or specimen. We recommend using EnvO terms which are of smaller
+          spatial grain than your entry for env_broad_scale. Terms, such as anatomical
+          sites, from other OBO Library ontologies which interoperate with EnvO (e.g.
+          UBERON) are accepted in this field. EnvO documentation about how to use
+          the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.'
         title: local environmental context
         examples:
         - value: 'litter layer [ENVO:01000338]; Annotating a pooled sample taken from
@@ -11143,9 +10912,9 @@ classes:
           expected_value:
             tag: expected_value
             value: Taxonomy ID
-        description: "NCBI taxon id of the sample.  Maybe be a single taxon or mixed\
-          \ taxa sample. Use 'synthetic metagenome\u2019 for mock community/positive\
-          \ controls, or 'blank sample' for negative controls."
+        description: NCBI taxon id of the sample.  Maybe be a single taxon or mixed
+          taxa sample. Use 'synthetic metagenome’ for mock community/positive controls,
+          or 'blank sample' for negative controls.
         title: Taxonomy ID of DNA sample
         examples:
         - value: Gut Metagenome [NCBI:txid749906]

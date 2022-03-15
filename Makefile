@@ -97,8 +97,9 @@ project: artifacts/nmdc_dh.yaml
 		--exclude java \
 		--dir $@ $< 2>> logs/gen-project.log
 
+# soil_emsl_jgi_mg
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
+	poetry run linkml2dataharmonizer --model_file $< --selected_class sediment_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
 	rm -rf artifacts/with_shuttles.yaml
 	rm -rf artifacts/with_sections_etc.yaml
