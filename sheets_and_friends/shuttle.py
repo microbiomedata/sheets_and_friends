@@ -1,21 +1,15 @@
 import logging
-
 from typing import List, Optional, Dict, Any
 
 import click
 import click_log
-
 import pandas as pd
-
+from linkml_runtime.dumpers import yaml_dumper
 from linkml_runtime.linkml_model import (
     SchemaDefinition,
     ClassDefinition,
 )
-
 from linkml_runtime.utils.schemaview import SchemaView
-
-from linkml_runtime.dumpers import yaml_dumper
-import pprint
 
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
@@ -111,7 +105,8 @@ class Shuttle:
                 current_slot = current_view.induced_slot(slot_name=i['slot'], class_name=i['source class'])
 
                 # https://github.com/microbiomedata/sheets_and_friends/issues/72
-                del current_slot['alias']
+                if 'alias' in current_slot:
+                    del current_slot['alias']
                 # current_yaml = yaml_dumper.dumps(current_slot)
                 # print(current_yaml)
 
