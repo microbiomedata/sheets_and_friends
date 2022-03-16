@@ -1,24 +1,15 @@
 import logging
-
 from typing import List, Optional, Dict, Any
 
 import click
 import click_log
-
 import pandas as pd
-
+from linkml_runtime.dumpers import yaml_dumper
 from linkml_runtime.linkml_model import (
     SchemaDefinition,
     ClassDefinition,
 )
-
 from linkml_runtime.utils.schemaview import SchemaView
-
-from linkml_runtime.dumpers import yaml_dumper
-
-
-
-import pprint
 
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
@@ -107,11 +98,44 @@ class Shuttle:
 
     def shuttle_slots(self):
         for k, v in self.sources_first.items():
+            print(type(v))
+            print(list(v.keys()))
+            # print(v['transactions']['source file or URL'])
+            # print(f"{k} {v}")
+            # mixs-source/model/schema/mixs.yaml
+            # {'transactions': [{'source class': 'soil MIMS', 'source file or URL': 'mixs-source/model/schema/mixs.yaml',
+            #                    'slot': 'core field', 'destination class': 'placeholder_class',
+            #                    'notes': 'placeholder for dependency'},
+            # etc., plus nmdc-schema
             logger.info(k)
             current_view = self.views_dict[k]
+            print(list(self.views_dict.keys()))
             for i in v['transactions']:
                 logger.info(i)
+                # print(i)
+                # {'source class': 'soil MIMS', 'source file or URL': 'mixs-source/model/schema/mixs.yaml',
+                # 'slot': 'core field', 'destination class': 'placeholder_class', 'notes': 'placeholder for dependency'}
                 current_slot = current_view.induced_slot(slot_name=i['slot'], class_name=i['source class'])
+
+                # inefficient to do this one slot at a time?
+                class_slot_dict = {
+                    "pending_ranges": set(),
+                    "pending_slots": set(),
+                    "exhausted_ranges": set(),
+                    "exhausted_slots": set(),
+                    "exhausted_enums": set(),
+                    "exhausted_types": set(),
+                }
+                # # inefficient to pass Sheet2LinkML a schema file name each time,
+                # # only for it to reopen the schema view each time?!
+
+                # exhausted_lite = Sheet2LinkML(path_to_yaml=source_schema)
+                # view_helper = exhausted_lite.make_view_helper(schema_alias=source_alias, class_name=source_class)
+                # slot_provenance = Sheet2LinkML.get_slot_provenance(slot_list=list_of_slots, helped_schema=view_helper)
+                # for i in slot_provenance["schema_other"]:
+                #     class_slot_dict["pending_slots"].add(i)
+                # for i in slot_provenance["class_induced"]:
+                #     class_slot_dict["pending_slots"].add(i)
 
                 # https://github.com/microbiomedata/sheets_and_friends/issues/72
                 if "alias" in current_slot:
@@ -130,6 +154,10 @@ class Shuttle:
                 self.destination_schema.slots[desired_slot_name] = current_slot
                 class_shortcut.slots.append(desired_slot_name)
                 class_shortcut.slot_usage[desired_slot_name] = current_slot
+
+    def exhaust_dependencies(self):
+        for some_class in self.destination_schema.classes:
+            pass
 
     def write_schema(self):
         yaml_dumper.dump(self.destination_schema, to_file=self.yaml_output)

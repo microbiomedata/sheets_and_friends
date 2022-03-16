@@ -53,34 +53,26 @@ for i in slot_provenance["class_induced"]:
 dependency_exhaustion = exhausted_lite.modular_exhaust_class(class_slot_dict, view_helper)
 
 # any slots requested by list_of_slots but not present in dependency_exhaustion['exhausted_slots']
-
 lost_slots = list(set(list_of_slots) - dependency_exhaustion['exhausted_slots'])
 lost_slots.sort()
-
+print("Lost slots: ")
 pprint.pprint(lost_slots)
+print("\n")
 
-# pprint.pprint(dependency_exhaustion['exhausted_enums'])
 for e_name in dependency_exhaustion['exhausted_enums']:
-    e_obj = view_helper['view'].get_enum(e_name)
-    destination_schema.enums[e_name] = e_obj
+    destination_schema.enums[e_name] = view_helper['view'].get_enum(e_name)
 
-# pprint.pprint(dependency_exhaustion['exhausted_ranges'])
 for c_name in dependency_exhaustion['exhausted_ranges']:
-    c_obj = view_helper['view'].get_class(c_name)
-    destination_schema.classes[c_name] = c_obj
+    destination_schema.classes[c_name] = view_helper['view'].get_class(c_name)
 
-# pprint.pprint(dependency_exhaustion['exhausted_types'])
-# refactor
+# refactor?
 for t_name in dependency_exhaustion['exhausted_types']:
-    t_obj = view_helper['view'].get_type(t_name)
-    destination_schema.types[t_name] = t_obj
+    destination_schema.types[t_name] = view_helper['view'].get_type(t_name)
 
 for pk, pv in dependency_exhaustion['prefixes'].items():
-    # print(f"{pk} {pv}")
     destination_schema.prefixes[pk] = pv
 
 for sk, sv in dependency_exhaustion['subsets'].items():
-    # print(f"{sk} {sv}")
     destination_schema.subsets[sk] = sv
 
 dumped = yaml_dumper.dumps(destination_schema)
