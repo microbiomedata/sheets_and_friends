@@ -138,7 +138,7 @@ class Shuttle:
                 #     class_slot_dict["pending_slots"].add(i)
 
                 # https://github.com/microbiomedata/sheets_and_friends/issues/72
-                if "alias" in current_slot:
+                if 'alias' in current_slot:
                     del current_slot['alias']
                 # current_yaml = yaml_dumper.dumps(current_slot)
                 # print(current_yaml)
