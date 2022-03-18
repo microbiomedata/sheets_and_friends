@@ -42,12 +42,13 @@ cogs_fetch: .cogs
 
 # .cogs/tracked/sections.tsv
 artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/new_terms.tsv \
-  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/placeholders_awaiting_auto_imp.tsv
+  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
 
+# was >>
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
-	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2>> logs/do_shuttle.log
+	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2> logs/do_shuttle.log
 
 artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
 	poetry run mod_by_path \
@@ -99,7 +100,7 @@ project: artifacts/nmdc_dh.yaml
 
 # soil_emsl_jgi_mg
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class sediment_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
+	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
 	rm -rf artifacts/with_shuttles.yaml
 	rm -rf artifacts/with_sections_etc.yaml
