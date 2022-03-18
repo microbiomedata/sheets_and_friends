@@ -50,20 +50,6 @@ artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tr
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
 	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2> logs/do_shuttle.log
 
-#artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
-#	poetry run mod_by_path \
-#		--config_tsv $< \
-#		--yaml_input $(word 2,$^) \
-#		--yaml_output $@  2>> logs/mod_by_path.log
-#
-#
-## was >>
-#add_sect_ord_pairs: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
-#	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
-#		--config_tsv $< \
-#		--yaml_input $(word 2,$^) \
-#		--yaml_output $@  2> logs/mod_by_path.log
-
 artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
 	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
 		--config_tsv $< \
