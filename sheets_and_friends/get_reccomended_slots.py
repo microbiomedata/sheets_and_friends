@@ -10,6 +10,7 @@ pd.set_option('display.max_columns', None)
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
 
+
 # yaml_input = "../mixs-source/model/schema/mixs.yaml"
 # source_class = 'soil MIMS'
 
@@ -45,8 +46,6 @@ def get_mixs_recommended_slots(yaml_input: str, source_class: str, tsv_output: s
 
     suggested_slot_names.sort()
 
-    # pprint.pprint(suggested_slot_names)
-
     lod = []
     for i in suggested_slot_names:
         lod.append({'source class': source_class,
@@ -55,11 +54,9 @@ def get_mixs_recommended_slots(yaml_input: str, source_class: str, tsv_output: s
                     'is_a parent': ss_dict[i].is_a,
                     'destination class': None, 'notes': None
                     })
-        # print(f"{i}\t{ss_dict[i].is_a}")
 
     df = pd.DataFrame(lod)
-
-    print(df)
+    df.to_csv(tsv_output, sep="\t", index=False)
 
 
 if __name__ == '__main__':

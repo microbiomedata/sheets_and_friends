@@ -4,7 +4,7 @@ nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's san
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
-.PHONY: all clean cogs_fetch
+.PHONY: all clean cogs_fetch add_sect_ord_pairs
 
 all: clean project docs/template/soil_emsl_jgi_mg/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
 
@@ -50,12 +50,25 @@ artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tr
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
 	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2> logs/do_shuttle.log
 
+#artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
+#	poetry run mod_by_path \
+#		--config_tsv $< \
+#		--yaml_input $(word 2,$^) \
+#		--yaml_output $@  2>> logs/mod_by_path.log
+#
+#
+## was >>
+#add_sect_ord_pairs: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
+#	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
+#		--config_tsv $< \
+#		--yaml_input $(word 2,$^) \
+#		--yaml_output $@  2> logs/mod_by_path.log
+
 artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
-	poetry run mod_by_path \
+	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
 		--yaml_output $@  2>> logs/mod_by_path.log
-
 
 # clean? cogs_fetch?
 artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_sections_etc.yaml
@@ -100,7 +113,7 @@ project: artifacts/nmdc_dh.yaml
 
 # soil_emsl_jgi_mg
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class sediment_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
+	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
 	rm -rf artifacts/with_shuttles.yaml
 	rm -rf artifacts/with_sections_etc.yaml
@@ -213,3 +226,9 @@ target/mods_lw.tsv:
 
 target/helped_valid.tsv:
 	poetry run python sheets_and_friends/column_update.py
+
+target/recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
+	poetry run python sheets_and_friends/get_reccomended_slots.py \
+		--yaml_input $< \
+		--source_class 'sediment MIMS' \
+		--tsv_output $@
