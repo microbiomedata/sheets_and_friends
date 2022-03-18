@@ -1,7 +1,10 @@
 from linkml_runtime import SchemaView
 
-mixs_file = "../mixs-source/model/schema/mixs.yaml"
-mixs_class = 'sediment MIMS'
+# mixs_file = "../mixs-source/model/schema/mixs.yaml"
+# mixs_class = 'soil MIMS'
+
+mixs_file = "../nmdc-schema/src/schema/nmdc.yaml"
+mixs_class = 'biosample'
 
 mixs_view = SchemaView(mixs_file)
 
@@ -21,4 +24,4 @@ suggested_slot_names.sort()
 # pprint.pprint(suggested_slot_names)
 
 for i in suggested_slot_names:
-    print(i)
+    print(f"{i}\t{ss_dict[i].is_a}")
