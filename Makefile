@@ -4,6 +4,8 @@ nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's san
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
+desired_interface = soil_emsl_jgi_mg
+
 .PHONY: all clean cogs_fetch add_sect_ord_pairs
 
 all: clean project docs/template/soil_emsl_jgi_mg/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
@@ -36,13 +38,14 @@ target/envo_labs.tsv: downloads/envo.owl bin/robot.jar
 .cogs/tracked/%: .cogs
 	poetry run cogs add $(subst .tsv,,$(subst .cogs/tracked/,,$@))
 	poetry run cogs fetch
+	sleep 10
 
 cogs_fetch: .cogs
 	poetry run cogs fetch
 
 # .cogs/tracked/sections.tsv
 artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/new_terms.tsv \
-  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv
+  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/dh_interfaces.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
 
@@ -99,7 +102,7 @@ project: artifacts/nmdc_dh.yaml
 
 # soil_emsl_jgi_mg
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
+	poetry run linkml2dataharmonizer --model_file $< --selected_class $(desired_interface) 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
 	rm -rf artifacts/with_shuttles.yaml
 	rm -rf artifacts/with_sections_etc.yaml
@@ -213,8 +216,14 @@ target/mods_lw.tsv:
 target/helped_valid.tsv:
 	poetry run python sheets_and_friends/column_update.py
 
-target/recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
+target/sed_mims_recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
 	poetry run python sheets_and_friends/get_reccomended_slots.py \
 		--yaml_input $< \
 		--source_class 'sediment MIMS' \
+		--tsv_output $@
+
+target/recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
+	poetry run python sheets_and_friends/get_reccomended_slots.py \
+		--yaml_input $< \
+		--source_mixin 'MIMS' \
 		--tsv_output $@
