@@ -1,19 +1,21 @@
 #nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
-#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for sujay
+#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for Sujay
 nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's sandbox
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
-desired_interface = soil_emsl_jgi_mg
+#desired_interface = soil_emsl_jgi_mt
+desired_interface = sediment_emsl_jgi_mg
 
 .PHONY: all clean cogs_fetch add_sect_ord_pairs
 
-all: clean project docs/template/soil_emsl_jgi_mg/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
+all: clean project docs/template/nmdc/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
 
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
-bin/robot.jar: bin
+# has bin as a dependency
+bin/robot.jar:
 	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -O $@ -i -
 
 # create new directory called bin if it doesn't already exist
@@ -67,9 +69,8 @@ artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_sect
 		--yaml_output $@  2>> logs/mod_by_path.log
 
 clean:
-	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
+	rm -rf DataHarmonizer/template/nmdc
 	rm -rf artifacts/*yaml
-	rm -rf bin/*
 	rm -rf docs/*
 	rm -rf logs/*log
 	rm -rf project/*py
@@ -91,6 +92,8 @@ clean:
 
 squeaky_clean: clean
 	rm -rf .cogs
+	rm -rf bin/*
+	rm -rf downloads/*
 
 project: artifacts/nmdc_dh.yaml
 	poetry run gen-project \
@@ -100,7 +103,6 @@ project: artifacts/nmdc_dh.yaml
 		--exclude java \
 		--dir $@ $< 2>> logs/gen-project.log
 
-# soil_emsl_jgi_mg
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
 	poetry run linkml2dataharmonizer --model_file $< --selected_class $(desired_interface) 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
@@ -160,21 +162,21 @@ target/soil-env_medium-indented.tsv
 		--data_tsv_out $@
 
 # this converts data.tsv to a data harmonizer main.html + main.js etc.
-DataHarmonizer/template/soil_emsl_jgi_mg/data.js: target/data_promoted.tsv
+DataHarmonizer/template/nmdc/data.js: target/data_promoted.tsv
 	-mkdir -p $(subst /data.js,,$@)
-	# copy target/data_promoted.tsv to DataHarmonizer/template/soil_emsl_jgi_mg/data.tsv
+	# copy target/data_promoted.tsv to DataHarmonizer/template/nmdc/data.tsv
 	# so we can generate the data.js in it's canonical place
 	cp $< $(subst .js,.tsv,$@)
 	# copy other files required by make_data.py
 	cp -r artifacts/for_data_harmonizer_template/* $(subst /data.js,,$@)
-	# generate DataHarmonizer/template/soil_emsl_jgi_mg/data.js
-	cd DataHarmonizer/template/soil_emsl_jgi_mg && poetry run python ../../script/make_data.py 2> make_data.log && cd -
+	# generate DataHarmonizer/template/nmdc/data.js
+	cd DataHarmonizer/template/nmdc && poetry run python ../../script/make_data.py 2> make_data.log && cd -
 
-docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg/data.js
+docs/template/nmdc/data.js: DataHarmonizer/template/nmdc/data.js
 	# move all of the DataHarmonizer submodule into docs/, for GH pages to see
 	cp -r DataHarmonizer/* docs
 	# restore the DataHarmonizer submodule to "the way we found it"
-	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
+	rm -rf DataHarmonizer/template/nmdc
 	# move in the main.js that Brandon and Mark have modified vs https://github.com/cidgoh/DataHarmonizer/blob/master/script/main.js
 	cp -r artifacts/for_data_harmonizer_scripts/* docs/script
 	# move artifacts, including the example valid data file into the docs directory (monitored by GH pages)
@@ -191,7 +193,7 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 	rm -rf docs/template/pha4ge
 	rm -rf docs/template/phac_dexa
 	rm -rf docs/template/reference_template.html
-	rm -rf docs/template/soil_emsl_jgi_mg/reference_template.html
+	rm -rf docs/template/nmdc/reference_template.html
 	#
 	# rm -rf docs/script/exampleInput docs/script/reference_template.html # how are these getting in there?
 
