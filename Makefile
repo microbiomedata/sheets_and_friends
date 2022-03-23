@@ -46,6 +46,8 @@ cogs_fetch: .cogs
 	poetry run cogs fetch
 
 # .cogs/tracked/sections.tsv
+# .cogs/tracked/mixins.tsv
+# .cogs/tracked/new_terms.tsv
 artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/new_terms.tsv \
   .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/dh_interfaces.tsv
 	poetry run cogs fetch
@@ -229,3 +231,7 @@ target/recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
 		--yaml_input $< \
 		--source_mixin 'MIMS' \
 		--tsv_output $@
+
+test.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/test.tsv
+	poetry run cogs fetch
+	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
