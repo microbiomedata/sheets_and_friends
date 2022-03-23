@@ -4,7 +4,6 @@ disjoint_enums:
   - animal_body_cond_enum
   - animal_sex_enum
   - arch_struc_enum
-  - assembly_qual_enum
   - assembly_software_enum
   - bin_param_enum
   - biol_stat_enum
@@ -64,16 +63,13 @@ disjoint_enums:
   - indoor_space_enum
   - indoor_surf_enum
   - int_wall_cond_enum
-  - lib_layout_enum
   - light_type_enum
   - lithology_enum
   - mag_cov_software_enum
   - mech_struc_enum
   - microb_start_count_enum
   - mode_transmission_enum
-  - neg_cont_type_enum
   - occup_document_enum
-  - organism_count_enum
   - plant_growth_med_enum
   - plant_reprod_crop_enum
   - plant_sex_enum
@@ -100,7 +96,6 @@ disjoint_enums:
   - samp_transport_cont_enum
   - samp_weather_enum
   - season_use_enum
-  - sediment_type_enum
   - shading_device_cond_enum
   - shading_device_type_enum
   - single_cell_lysis_appr_enum
@@ -120,7 +115,6 @@ disjoint_enums:
   - surf_material_enum
   - symbiont_host_role_enum
   - tax_ident_enum
-  - tidal_stage_enum
   - train_line_enum
   - train_stat_loc_enum
   - train_stop_loc_enum
@@ -161,18 +155,23 @@ disjoint_enums:
   - specific_ecosystem_enum
   - store_cond_enum
 shared_enums:
+  assembly_qual_enum:
+    intersection:
+    - Finished genome
+    - Genome fragment(s)
+    - High-quality draft genome
+    - Low-quality draft genome
+    - Medium-quality draft genome
+    mixs_only: []
+    nmdc_dh_only: []
   biotic_relationship_enum:
     intersection:
-    - free living
-    mixs_only:
     - commensal
+    - free living
     - parasite
     - symbiont
-    nmdc_dh_only:
-    - commensalism
-    - mutualism
-    - parasitism
-    - symbiotic
+    mixs_only: []
+    nmdc_dh_only: []
   cur_land_use_enum:
     intersection:
     - badlands
@@ -252,6 +251,32 @@ shared_enums:
     - Yermosols
     mixs_only: []
     nmdc_dh_only: []
+  lib_layout_enum:
+    intersection:
+    - other
+    - paired
+    - single
+    - vector
+    mixs_only: []
+    nmdc_dh_only: []
+  neg_cont_type_enum:
+    intersection:
+    - DNA-free PCR mix
+    - distilled water
+    - empty collection device
+    - empty collection tube
+    - phosphate buffer
+    - sterile swab
+    - sterile syringe
+    mixs_only: []
+    nmdc_dh_only: []
+  organism_count_enum:
+    intersection:
+    - ATP
+    - MPN
+    - other
+    mixs_only: []
+    nmdc_dh_only: []
   oxy_stat_samp_enum:
     intersection:
     - aerobic
@@ -279,6 +304,14 @@ shared_enums:
     - obligate anaerobe
     mixs_only: []
     nmdc_dh_only: []
+  sediment_type_enum:
+    intersection:
+    - biogenous
+    - cosmogenous
+    - hydrogenous
+    - lithogenous
+    mixs_only: []
+    nmdc_dh_only: []
   soil_horizon_enum:
     intersection:
     - A horizon
@@ -288,6 +321,14 @@ shared_enums:
     - O horizon
     - Permafrost
     - R layer
+    mixs_only: []
+    nmdc_dh_only: []
+  tidal_stage_enum:
+    intersection:
+    - ebb tide
+    - flood tide
+    - high tide
+    - low tide
     mixs_only: []
     nmdc_dh_only: []
   tillage_enum:
