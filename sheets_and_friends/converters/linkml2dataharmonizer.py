@@ -7,8 +7,6 @@ from typing import Any, Dict, List
 import pandas as pd
 from linkml_runtime.utils.schemaview import SchemaView
 
-import pprint
-
 logger = logging.getLogger(__name__)
 
 
@@ -110,42 +108,35 @@ class LinkML2DataHarmonizer:
 
         return {"required": req_from_usage, "recommended": rec_from_usage}
 
-    def _get_is_a_struct(
+    def _get_slot_groups(
             self, selected_class: str, default_section: str, as_a: str = "dictionary"
     ):
         relevant_slots = self.model_sv.class_induced_slots(selected_class)
-        isa_dict = {}
-        isa_set = set()
+        slot_groups_dict = {}
+        slot_groups_set = set()
 
         for i in relevant_slots:
             # block that adds appropriate section names to the data.tsv
-            ia_jsonobj = i.annotations
-            ijd = ia_jsonobj.__dict__
-            if i.annotations and "dh:section_name" in ijd:
-                relevant_isa = i.annotations._get("dh:section_name").value
-            elif i.is_a:
-                relevant_isa = i.is_a
-            else:
-                relevant_isa = "undef_sect"
-
-            isa_dict[i.name] = relevant_isa
-            isa_set.add(relevant_isa)
+            if i.slot_group:
+                slot_groups_dict[i.name] = i.slot_group
+                slot_groups_set.add(i.slot_group)
 
         if as_a == "set":
-            return isa_set
+            return slot_groups_set
 
-        return isa_dict
+        return slot_groups_dict
 
     def _get_section_list(self, selected_class: str, default_section: str):
         blank_row = {i: "" for i in self.table_columns()}
 
-        isa_set = self._get_is_a_struct(selected_class, default_section, as_a="set")
+        slot_group_set = self._get_slot_groups(selected_class, default_section, as_a="set")
 
-        isa_list = list(isa_set)
-        isa_list = [i for i in isa_list if i]
-        isa_list.sort()
+        slot_group_list = list(slot_group_set)
+        slot_group_list = [i for i in slot_group_list if i]
+        slot_group_list.sort()
+        
         section_list = []
-        for i in isa_list:
+        for i in slot_group_list:
             current_row = blank_row.copy()
             current_row["label"] = i
             section_list.append(current_row)
@@ -162,7 +153,7 @@ class LinkML2DataHarmonizer:
     ):
         blank_row = {i: "" for i in self.table_columns()}
 
-        isa_dict = self._get_is_a_struct(selected_class, default_section)
+        isa_dict = self._get_slot_groups(selected_class, default_section)
 
         term_names = list(isa_dict.keys())
         term_names.sort()
@@ -206,9 +197,10 @@ class LinkML2DataHarmonizer:
             # the int() is necessary to convert the column number from str type to int so
             # pandas can sort
             try:
-                current_row["column_number"] = int(
-                    current_sd.annotations._get("dh:column_number").value
-                )
+                current_row["column_number"] = int(current_sd.rank)
+            #     current_row["column_number"] = int(
+            #         current_sd.annotations._get("dh:column_number").value
+            #     )
             except AttributeError:
                 logger.info(f"No annotations associated with slot {current_sd.name}")
                 pass
@@ -372,13 +364,14 @@ class LinkML2DataHarmonizer:
         sl_temp_frame = pd.DataFrame(section_list)
 
         section_record_list = []
-        dh_section_name = self.model_sv.class_children('nmdc_dh_section')
+        dh_section_name = self.model_sv.slot_children("dh_section")
         for current_dhs in dh_section_name:
-            current_dhs_obj = self.model_sv.get_class(current_dhs)
-            sect_ord_anno = current_dhs_obj.annotations['dh_sect_ord'].value
-            section_record_list.append({'section': current_dhs, 'order': sect_ord_anno, "title": current_dhs})
+            current_dhs_obj = self.model_sv.get_slot(current_dhs)
+            sect_ord = current_dhs_obj.rank
+            sect_title = current_dhs_obj.title
+            section_record_list.append({"section": current_dhs, "order": sect_ord, "title": sect_title})
         section_frame = pd.DataFrame(section_record_list)
-
+        
         sections_with_orders = sl_temp_frame.merge(right=section_frame, how="left", left_on="label", right_on="section")
 
         sections_with_orders['order'] = sections_with_orders['order'].fillna(999)
