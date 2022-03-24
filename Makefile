@@ -1,17 +1,21 @@
 #nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
-#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for sujay
+#nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for Sujay
 nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's sandbox
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
-.PHONY: all clean cogs_fetch
+#desired_interface = soil_emsl_jgi_mt
+desired_interface = sediment_emsl_jgi_mg
 
-all: clean project docs/template/soil_emsl_jgi_mg/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
+.PHONY: all clean cogs_fetch add_sect_ord_pairs
+
+all: clean project docs/template/nmdc/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
 
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
-bin/robot.jar: bin
+# has bin as a dependency
+bin/robot.jar:
 	curl -s https://api.github.com/repos/ontodev/robot/releases/latest  | grep 'browser_download_url.*\.jar"' |  cut -d : -f 2,3 | tr -d \" | wget -O $@ -i -
 
 # create new directory called bin if it doesn't already exist
@@ -36,25 +40,28 @@ target/envo_labs.tsv: downloads/envo.owl bin/robot.jar
 .cogs/tracked/%: .cogs
 	poetry run cogs add $(subst .tsv,,$(subst .cogs/tracked/,,$@))
 	poetry run cogs fetch
+	sleep 10
 
 cogs_fetch: .cogs
 	poetry run cogs fetch
 
 # .cogs/tracked/sections.tsv
+# .cogs/tracked/mixins.tsv
+# .cogs/tracked/new_terms.tsv
 artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/new_terms.tsv \
-  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/placeholders_awaiting_auto_imp.tsv
+  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/dh_interfaces.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
 
+# was >>
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
-	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2>> logs/do_shuttle.log
+	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2> logs/do_shuttle.log
 
 artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
-	poetry run mod_by_path \
+	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
 		--yaml_output $@  2>> logs/mod_by_path.log
-
 
 # clean? cogs_fetch?
 artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_sections_etc.yaml
@@ -64,9 +71,8 @@ artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_sect
 		--yaml_output $@  2>> logs/mod_by_path.log
 
 clean:
-	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
+	rm -rf DataHarmonizer/template/nmdc
 	rm -rf artifacts/*yaml
-	rm -rf bin/*
 	rm -rf docs/*
 	rm -rf logs/*log
 	rm -rf project/*py
@@ -88,6 +94,8 @@ clean:
 
 squeaky_clean: clean
 	rm -rf .cogs
+	rm -rf bin/*
+	rm -rf downloads/*
 
 project: artifacts/nmdc_dh.yaml
 	poetry run gen-project \
@@ -98,7 +106,7 @@ project: artifacts/nmdc_dh.yaml
 		--dir $@ $< 2>> logs/gen-project.log
 
 target/data.tsv: artifacts/nmdc_dh.yaml .cogs/tracked/validation_converter.tsv
-	poetry run linkml2dataharmonizer --model_file $< --selected_class soil_emsl_jgi_mg 2> logs/linkml2dataharmonizer.log
+	poetry run linkml2dataharmonizer --model_file $< --selected_class $(desired_interface) 2> logs/linkml2dataharmonizer.log
 	rm -rf artifacts/from_sheets2linkml.yaml
 	rm -rf artifacts/with_shuttles.yaml
 	rm -rf artifacts/with_sections_etc.yaml
@@ -156,21 +164,21 @@ target/soil-env_medium-indented.tsv
 		--data_tsv_out $@
 
 # this converts data.tsv to a data harmonizer main.html + main.js etc.
-DataHarmonizer/template/soil_emsl_jgi_mg/data.js: target/data_promoted.tsv
+DataHarmonizer/template/nmdc/data.js: target/data_promoted.tsv
 	-mkdir -p $(subst /data.js,,$@)
-	# copy target/data_promoted.tsv to DataHarmonizer/template/soil_emsl_jgi_mg/data.tsv
+	# copy target/data_promoted.tsv to DataHarmonizer/template/nmdc/data.tsv
 	# so we can generate the data.js in it's canonical place
 	cp $< $(subst .js,.tsv,$@)
 	# copy other files required by make_data.py
 	cp -r artifacts/for_data_harmonizer_template/* $(subst /data.js,,$@)
-	# generate DataHarmonizer/template/soil_emsl_jgi_mg/data.js
-	cd DataHarmonizer/template/soil_emsl_jgi_mg && poetry run python ../../script/make_data.py 2> make_data.log && cd -
+	# generate DataHarmonizer/template/nmdc/data.js
+	cd DataHarmonizer/template/nmdc && poetry run python ../../script/make_data.py 2> make_data.log && cd -
 
-docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg/data.js
+docs/template/nmdc/data.js: DataHarmonizer/template/nmdc/data.js
 	# move all of the DataHarmonizer submodule into docs/, for GH pages to see
 	cp -r DataHarmonizer/* docs
 	# restore the DataHarmonizer submodule to "the way we found it"
-	rm -rf DataHarmonizer/template/soil_emsl_jgi_mg
+	rm -rf DataHarmonizer/template/nmdc
 	# move in the main.js that Brandon and Mark have modified vs https://github.com/cidgoh/DataHarmonizer/blob/master/script/main.js
 	cp -r artifacts/for_data_harmonizer_scripts/* docs/script
 	# move artifacts, including the example valid data file into the docs directory (monitored by GH pages)
@@ -187,7 +195,7 @@ docs/template/soil_emsl_jgi_mg/data.js: DataHarmonizer/template/soil_emsl_jgi_mg
 	rm -rf docs/template/pha4ge
 	rm -rf docs/template/phac_dexa
 	rm -rf docs/template/reference_template.html
-	rm -rf docs/template/soil_emsl_jgi_mg/reference_template.html
+	rm -rf docs/template/nmdc/reference_template.html
 	#
 	# rm -rf docs/script/exampleInput docs/script/reference_template.html # how are these getting in there?
 
@@ -211,3 +219,19 @@ target/mods_lw.tsv:
 
 target/helped_valid.tsv:
 	poetry run python sheets_and_friends/column_update.py
+
+target/sed_mims_recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
+	poetry run python sheets_and_friends/get_reccomended_slots.py \
+		--yaml_input $< \
+		--source_class 'sediment MIMS' \
+		--tsv_output $@
+
+target/recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
+	poetry run python sheets_and_friends/get_reccomended_slots.py \
+		--yaml_input $< \
+		--source_mixin 'MIMS' \
+		--tsv_output $@
+
+test.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/test.tsv
+	poetry run cogs fetch
+	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
