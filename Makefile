@@ -4,8 +4,10 @@ nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's san
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
+#desired_interface = minimal
+#desired_interface = sediment_emsl_jgi_mg
+desired_interface = soil_emsl_jgi_mg
 #desired_interface = soil_emsl_jgi_mt
-desired_interface = sediment_emsl_jgi_mg
 
 .PHONY: all clean cogs_fetch add_sect_ord_pairs
 
@@ -48,8 +50,9 @@ cogs_fetch: .cogs
 # .cogs/tracked/sections.tsv
 # .cogs/tracked/mixins.tsv
 # .cogs/tracked/new_terms.tsv
-artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/new_terms.tsv \
-  .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv .cogs/tracked/dh_interfaces.tsv
+# .cogs/tracked/dh_interfaces.tsv .cogs/tracked/mixins.tsv .cogs/tracked/mixin_slots.tsv
+artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/dh_interfaces.tsv \
+.cogs/tracked/mixins.tsv .cogs/tracked/mixin_slots.tsv .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
 
@@ -232,6 +235,8 @@ target/recommended_slots.tsv: mixs-source/model/schema/mixs.yaml
 		--source_mixin 'MIMS' \
 		--tsv_output $@
 
-test.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/test.tsv
+test.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/test.tsv .cogs/tracked/dh_interfaces.tsv \
+.cogs/tracked/mixins.tsv .cogs/tracked/mixin_slots.tsv
 	poetry run cogs fetch
-	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
+	rm -rf logs/sheets2linkml.log
+	poetry run sheets2linkml -o $@ $^ 2> logs/sheets2linkml.log
