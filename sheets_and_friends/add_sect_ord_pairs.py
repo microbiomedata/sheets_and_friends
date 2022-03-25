@@ -34,6 +34,8 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
             logger.warning(e)
 
     mod_rule_frame = pd.read_csv(config_tsv, sep="\t")
+    mod_rule_frame['class'] = mod_rule_frame['class'].str.split("|")
+    mod_rule_frame = mod_rule_frame.explode('class')
 
     mod_rule_lod = mod_rule_frame.to_dict(orient='records')
 
@@ -48,10 +50,10 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
             if 'annotations' not in slot_usage_extract:
                 # print(f"no annotations on {i['slot']} yet")
                 slot_usage_extract['annotations'] = {}
-            assign(obj=slot_usage_extract, path="annotations.dh:section_name",
-                   val={'tag': 'dh:section_name', 'value': i['section']})
-            assign(obj=slot_usage_extract, path="annotations.dh:column_number",
-                   val={'tag': 'dh:column_number', 'value': i['column_order']})
+            assign(obj=slot_usage_extract, path="slot_group",
+                   val=i['section'])
+            assign(obj=slot_usage_extract, path="rank",
+                   val=i['column_order'])
 
         except gc.PathAccessError as e:
             logger.warning(e)

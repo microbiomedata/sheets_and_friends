@@ -1,12 +1,16 @@
 #nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
 #nmdc_schemasheet_key = 136naXqmUlRZ_jR3Tr9Jgrb_FOiFP7FMJvgA95S_hZw0 #nmdc-dh-sheets-sandbox for Sujay
-nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's sandbox
+#nmdc_schemasheet_key = 1WkftrJV548wO5Oh1L-K6N1BNU03btRUm2D7jvlHc7Uc # Mark's sandbox
+nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # nmdc-dh-sheets-mam-non-anno
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
+#desired_interface = air
+desired_interface = biofilm
 #desired_interface = minimal
+#desired_interface = sediment
 #desired_interface = sediment_emsl_jgi_mg
-desired_interface = soil_emsl_jgi_mg
+#desired_interface = soil_emsl_jgi_mg
 #desired_interface = soil_emsl_jgi_mt
 
 .PHONY: all clean cogs_fetch add_sect_ord_pairs
@@ -52,7 +56,7 @@ cogs_fetch: .cogs
 # .cogs/tracked/new_terms.tsv
 # .cogs/tracked/dh_interfaces.tsv .cogs/tracked/mixins.tsv .cogs/tracked/mixin_slots.tsv
 artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tracked/dh_interfaces.tsv \
-.cogs/tracked/mixins.tsv .cogs/tracked/mixin_slots.tsv .cogs/tracked/enums.tsv .cogs/tracked/sections_as_classes.tsv
+.cogs/tracked/mixins.tsv .cogs/tracked/mixin_slots.tsv .cogs/tracked/enums.tsv .cogs/tracked/sections_as_slots.tsv
 	poetry run cogs fetch
 	poetry run sheets2linkml -o $@ $^ 2>> logs/sheets2linkml.log
 
@@ -60,14 +64,15 @@ artifacts/from_sheets2linkml.yaml: .cogs/tracked/schema_boilerplate.tsv .cogs/tr
 artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifacts/from_sheets2linkml.yaml
 	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2> logs/do_shuttle.log
 
-artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
-	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
-		--config_tsv $< \
-		--yaml_input $(word 2,$^) \
-		--yaml_output $@  2>> logs/mod_by_path.log
+#artifacts/with_sections_etc.yaml: .cogs/tracked/sections_columns_orders.tsv artifacts/with_shuttles.yaml
+#	poetry run python sheets_and_friends/add_sect_ord_pairs.py \
+#		--config_tsv $< \
+#		--yaml_input $(word 2,$^) \
+#		--yaml_output $@  2>> logs/mod_by_path.log
 
+# dependency 2 was artifacts/with_sections_etc.yaml
 # clean? cogs_fetch?
-artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_sections_etc.yaml
+artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shuttles.yaml
 	poetry run mod_by_path \
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
