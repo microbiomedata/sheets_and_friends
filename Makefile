@@ -6,12 +6,13 @@ nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # nmdc-dh-sh
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 #desired_interface = air
-desired_interface = biofilm
+#desired_interface = biofilm
 #desired_interface = minimal
 #desired_interface = sediment
 #desired_interface = sediment_emsl_jgi_mg
-#desired_interface = soil_emsl_jgi_mg
+desired_interface = soil_emsl_jgi_mg
 #desired_interface = soil_emsl_jgi_mt
+#desired_interface = water
 
 .PHONY: all clean cogs_fetch add_sect_ord_pairs
 

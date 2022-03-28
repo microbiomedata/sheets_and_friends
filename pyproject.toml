@@ -17,6 +17,7 @@ python = "^3.9"
 schemasheets = "^0.1.8"
 ## using submodule while waiting for schemasheets examples fix to be merged and published
 #linkml = "*"
+deepdiff = "^5.7.0"
 
 [tool.poetry.dev-dependencies]
 
