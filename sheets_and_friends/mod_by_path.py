@@ -44,6 +44,9 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
             logger.warning(e)
 
     mod_rule_frame = pd.read_csv(config_tsv, sep="\t")
+    mod_rule_frame['class'] = mod_rule_frame['class'].str.split("|")
+    mod_rule_frame = mod_rule_frame.explode('class')
+
     mod_rule_lod = mod_rule_frame.to_dict(orient='records')
 
     # todo break out overwrites first

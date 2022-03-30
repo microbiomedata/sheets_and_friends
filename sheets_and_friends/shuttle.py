@@ -17,6 +17,8 @@ from sheets_and_friends.converters.sheet2linkml import Sheet2LinkML
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
 
+pd.set_option('display.max_columns', None)
+
 
 @click.command()
 @click_log.simple_verbosity_option(logger)
@@ -66,6 +68,8 @@ class Shuttle:
 
     def get_slots_from_tsv(self):
         slots_frame = pd.read_csv(self.tsv_file, sep="\t")
+        slots_frame['destination class'] = slots_frame['destination class'].str.split("|")
+        slots_frame = slots_frame.explode('destination class')
         self.slots_lod = slots_frame.to_dict(orient='records')
 
     def prepare_dest_schema(self):
@@ -145,6 +149,8 @@ class Shuttle:
                 self.destination_schema.slots[desired_slot_name] = current_slot
                 class_shortcut.slots.append(desired_slot_name)
                 class_shortcut.slot_usage[desired_slot_name] = current_slot
+                class_shortcut.slot_usage[desired_slot_name].slot_group = i['section']
+                class_shortcut.slot_usage[desired_slot_name].rank = i['column order']
 
         logger.info("\n\n")
         for schema_fp, schema_v in exhaustion_helper.items():
