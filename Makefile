@@ -1,5 +1,5 @@
-#nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets
-nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # nmdc-dh-sheets-mam-non-anno
+#nmdc_schemasheet_key = 1RACmVPhqpfm2ELm152CzmiEy2sDmULmbN9G0qXK8NDs #nmdc-dh-sheets now incompatible
+nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # nmdc-dh-sheets-mam-non-anno... rename me!
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
