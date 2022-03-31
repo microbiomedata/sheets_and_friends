@@ -1,9 +1,9 @@
 [submodule "mixs-source"]
 	path = mixs-source
-	url = git@github.com:turbomam/mixs-source.git
+	url = https://github.com/turbomam/mixs-source.git
 [submodule "nmdc-schema"]
 	path = nmdc-schema
-	url = git@github.com:microbiomedata/nmdc-schema.git
+	url = https://github.com/microbiomedata/nmdc-schema.git
 [submodule "DataHarmonizer"]
 	path = DataHarmonizer
-	url = git@github.com:cidgoh/DataHarmonizer.git
+	url = https://github.com/cidgoh/DataHarmonizer.git
