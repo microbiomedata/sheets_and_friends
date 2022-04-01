@@ -1,5 +1,5 @@
 # Auto generated from nmdc_dh.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-03-30T16:03:42
+# Generation date: 2022-03-31T16:34:35
 # Schema: nmdc_dh
 #
 # id: https://example.com/nmdc_dh
@@ -13768,42 +13768,6 @@ class StoreCondEnum(EnumDefinitionImpl):
         name="StoreCondEnum",
     )
 
-class IndoorSurfEnum(EnumDefinitionImpl):
-
-    cabinet = PermissibleValue(text="cabinet")
-    ceiling = PermissibleValue(text="ceiling")
-    door = PermissibleValue(text="door")
-    shelving = PermissibleValue(text="shelving")
-    window = PermissibleValue(text="window")
-    wall = PermissibleValue(text="wall")
-
-    _defn = EnumDefinition(
-        name="IndoorSurfEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "counter top",
-                PermissibleValue(text="counter top") )
-        setattr(cls, "vent cover",
-                PermissibleValue(text="vent cover") )
-
-class SampFloorEnum(EnumDefinitionImpl):
-
-    basement = PermissibleValue(text="basement")
-    lobby = PermissibleValue(text="lobby")
-
-    _defn = EnumDefinition(
-        name="SampFloorEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "1st floor",
-                PermissibleValue(text="1st floor") )
-        setattr(cls, "2nd floor",
-                PermissibleValue(text="2nd floor") )
-
 class LightTypeEnum(EnumDefinitionImpl):
 
     none = PermissibleValue(text="none")
@@ -13823,116 +13787,24 @@ class LightTypeEnum(EnumDefinitionImpl):
         setattr(cls, "flourescent lights",
                 PermissibleValue(text="flourescent lights") )
 
-class TrainStopLocEnum(EnumDefinitionImpl):
+class TrainStatLocEnum(EnumDefinitionImpl):
 
-    end = PermissibleValue(text="end")
-    mid = PermissibleValue(text="mid")
-    downtown = PermissibleValue(text="downtown")
+    riverside = PermissibleValue(text="riverside")
 
     _defn = EnumDefinition(
-        name="TrainStopLocEnum",
-    )
-
-class WindowHorizPosEnum(EnumDefinitionImpl):
-
-    left = PermissibleValue(text="left")
-    middle = PermissibleValue(text="middle")
-    right = PermissibleValue(text="right")
-
-    _defn = EnumDefinition(
-        name="WindowHorizPosEnum",
-    )
-
-class CeilCondEnum(EnumDefinitionImpl):
-
-    new = PermissibleValue(text="new")
-    damaged = PermissibleValue(text="damaged")
-    rupture = PermissibleValue(text="rupture")
-
-    _defn = EnumDefinition(
-        name="CeilCondEnum",
+        name="TrainStatLocEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "visible wear",
-                PermissibleValue(text="visible wear") )
-        setattr(cls, "needs repair",
-                PermissibleValue(text="needs repair") )
-
-class BuildDocsEnum(EnumDefinitionImpl):
-
-    schedule = PermissibleValue(text="schedule")
-    sections = PermissibleValue(text="sections")
-    submittals = PermissibleValue(text="submittals")
-    windows = PermissibleValue(text="windows")
-
-    _defn = EnumDefinition(
-        name="BuildDocsEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "building information model",
-                PermissibleValue(text="building information model") )
-        setattr(cls, "commissioning report",
-                PermissibleValue(text="commissioning report") )
-        setattr(cls, "complaint logs",
-                PermissibleValue(text="complaint logs") )
-        setattr(cls, "contract administration",
-                PermissibleValue(text="contract administration") )
-        setattr(cls, "cost estimate",
-                PermissibleValue(text="cost estimate") )
-        setattr(cls, "janitorial schedules or logs",
-                PermissibleValue(text="janitorial schedules or logs") )
-        setattr(cls, "maintenance plans",
-                PermissibleValue(text="maintenance plans") )
-        setattr(cls, "shop drawings",
-                PermissibleValue(text="shop drawings") )
-        setattr(cls, "ventilation system",
-                PermissibleValue(text="ventilation system") )
-
-class WindowMatEnum(EnumDefinitionImpl):
-
-    clad = PermissibleValue(text="clad")
-    fiberglass = PermissibleValue(text="fiberglass")
-    metal = PermissibleValue(text="metal")
-    vinyl = PermissibleValue(text="vinyl")
-    wood = PermissibleValue(text="wood")
-
-    _defn = EnumDefinition(
-        name="WindowMatEnum",
-    )
-
-class VisMediaEnum(EnumDefinitionImpl):
-
-    photos = PermissibleValue(text="photos")
-    videos = PermissibleValue(text="videos")
-    interiors = PermissibleValue(text="interiors")
-    equipment = PermissibleValue(text="equipment")
-
-    _defn = EnumDefinition(
-        name="VisMediaEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "commonly of the building",
-                PermissibleValue(text="commonly of the building") )
-        setattr(cls, "site context (adjacent buildings, vegetation, terrain, streets)",
-                PermissibleValue(text="site context (adjacent buildings, vegetation, terrain, streets)") )
-        setattr(cls, "3D scans",
-                PermissibleValue(text="3D scans") )
-
-class ArchStrucEnum(EnumDefinitionImpl):
-
-    building = PermissibleValue(text="building")
-    shed = PermissibleValue(text="shed")
-    home = PermissibleValue(text="home")
-
-    _defn = EnumDefinition(
-        name="ArchStrucEnum",
-    )
+        setattr(cls, "south station above ground",
+                PermissibleValue(text="south station above ground") )
+        setattr(cls, "south station underground",
+                PermissibleValue(text="south station underground") )
+        setattr(cls, "south station amtrak",
+                PermissibleValue(text="south station amtrak") )
+        setattr(cls, "forest hills",
+                PermissibleValue(text="forest hills") )
 
 class RoomTypeEnum(EnumDefinitionImpl):
 
@@ -13977,189 +13849,6 @@ class RoomTypeEnum(EnumDefinitionImpl):
         setattr(cls, "data center",
                 PermissibleValue(text="data center") )
 
-class PresAnimalInsectEnum(EnumDefinitionImpl):
-
-    cat = PermissibleValue(text="cat")
-    dog = PermissibleValue(text="dog")
-    rodent = PermissibleValue(text="rodent")
-    snake = PermissibleValue(text="snake")
-
-    _defn = EnumDefinition(
-        name="PresAnimalInsectEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "other;{integer}",
-                PermissibleValue(text="other;{integer}") )
-
-class SurfMaterialEnum(EnumDefinitionImpl):
-
-    adobe = PermissibleValue(text="adobe")
-    carpet = PermissibleValue(text="carpet")
-    concrete = PermissibleValue(text="concrete")
-    glass = PermissibleValue(text="glass")
-    metal = PermissibleValue(text="metal")
-    paint = PermissibleValue(text="paint")
-    plastic = PermissibleValue(text="plastic")
-    stone = PermissibleValue(text="stone")
-    stucco = PermissibleValue(text="stucco")
-    tile = PermissibleValue(text="tile")
-    vinyl = PermissibleValue(text="vinyl")
-    wood = PermissibleValue(text="wood")
-
-    _defn = EnumDefinition(
-        name="SurfMaterialEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "cinder blocks",
-                PermissibleValue(text="cinder blocks") )
-        setattr(cls, "hay bales",
-                PermissibleValue(text="hay bales") )
-        setattr(cls, "stainless steel",
-                PermissibleValue(text="stainless steel") )
-
-class SubstructureTypeEnum(EnumDefinitionImpl):
-
-    crawlspace = PermissibleValue(text="crawlspace")
-    basement = PermissibleValue(text="basement")
-
-    _defn = EnumDefinition(
-        name="SubstructureTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "slab on grade",
-                PermissibleValue(text="slab on grade") )
-
-class SurfAirContEnum(EnumDefinitionImpl):
-
-    dust = PermissibleValue(text="dust")
-    radon = PermissibleValue(text="radon")
-    nutrients = PermissibleValue(text="nutrients")
-    biocides = PermissibleValue(text="biocides")
-
-    _defn = EnumDefinition(
-        name="SurfAirContEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "organic matter",
-                PermissibleValue(text="organic matter") )
-        setattr(cls, "particulate matter",
-                PermissibleValue(text="particulate matter") )
-        setattr(cls, "volatile organic compounds",
-                PermissibleValue(text="volatile organic compounds") )
-        setattr(cls, "biological contaminants",
-                PermissibleValue(text="biological contaminants") )
-
-class FloorWaterMoldEnum(EnumDefinitionImpl):
-
-    condensation = PermissibleValue(text="condensation")
-
-    _defn = EnumDefinition(
-        name="FloorWaterMoldEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "mold odor",
-                PermissibleValue(text="mold odor") )
-        setattr(cls, "wet floor",
-                PermissibleValue(text="wet floor") )
-        setattr(cls, "water stains",
-                PermissibleValue(text="water stains") )
-        setattr(cls, "wall discoloration",
-                PermissibleValue(text="wall discoloration") )
-        setattr(cls, "floor discoloration",
-                PermissibleValue(text="floor discoloration") )
-        setattr(cls, "ceiling discoloration",
-                PermissibleValue(text="ceiling discoloration") )
-        setattr(cls, "peeling paint or wallpaper",
-                PermissibleValue(text="peeling paint or wallpaper") )
-        setattr(cls, "bulging walls",
-                PermissibleValue(text="bulging walls") )
-
-class HeatDelivLocEnum(EnumDefinitionImpl):
-
-    north = PermissibleValue(text="north")
-    south = PermissibleValue(text="south")
-    east = PermissibleValue(text="east")
-    west = PermissibleValue(text="west")
-
-    _defn = EnumDefinition(
-        name="HeatDelivLocEnum",
-    )
-
-class SeasonUseEnum(EnumDefinitionImpl):
-
-    Spring = PermissibleValue(text="Spring")
-    Summer = PermissibleValue(text="Summer")
-    Fall = PermissibleValue(text="Fall")
-    Winter = PermissibleValue(text="Winter")
-
-    _defn = EnumDefinition(
-        name="SeasonUseEnum",
-    )
-
-class FloorStrucEnum(EnumDefinitionImpl):
-
-    balcony = PermissibleValue(text="balcony")
-    concrete = PermissibleValue(text="concrete")
-
-    _defn = EnumDefinition(
-        name="FloorStrucEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "floating floor",
-                PermissibleValue(text="floating floor") )
-        setattr(cls, "glass floor",
-                PermissibleValue(text="glass floor") )
-        setattr(cls, "raised floor",
-                PermissibleValue(text="raised floor") )
-        setattr(cls, "sprung floor",
-                PermissibleValue(text="sprung floor") )
-        setattr(cls, "wood-framed",
-                PermissibleValue(text="wood-framed") )
-
-class FloorCondEnum(EnumDefinitionImpl):
-
-    new = PermissibleValue(text="new")
-    damaged = PermissibleValue(text="damaged")
-    rupture = PermissibleValue(text="rupture")
-
-    _defn = EnumDefinition(
-        name="FloorCondEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "visible wear",
-                PermissibleValue(text="visible wear") )
-        setattr(cls, "needs repair",
-                PermissibleValue(text="needs repair") )
-
-class RoomLocEnum(EnumDefinitionImpl):
-
-    _defn = EnumDefinition(
-        name="RoomLocEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "corner room",
-                PermissibleValue(text="corner room") )
-        setattr(cls, "interior room",
-                PermissibleValue(text="interior room") )
-        setattr(cls, "exterior wall",
-                PermissibleValue(text="exterior wall") )
-
 class WallTextureEnum(EnumDefinitionImpl):
 
     knockdown = PermissibleValue(text="knockdown")
@@ -14194,344 +13883,37 @@ class WallTextureEnum(EnumDefinitionImpl):
         setattr(cls, "stomp knockdown",
                 PermissibleValue(text="stomp knockdown") )
 
-class DoorTypeEnum(EnumDefinitionImpl):
+class CeilFinishMatEnum(EnumDefinitionImpl):
 
-    composite = PermissibleValue(text="composite")
+    drywall = PermissibleValue(text="drywall")
+    tiles = PermissibleValue(text="tiles")
+    PVC = PermissibleValue(text="PVC")
+    plasterboard = PermissibleValue(text="plasterboard")
     metal = PermissibleValue(text="metal")
-    wooden = PermissibleValue(text="wooden")
+    fiberglass = PermissibleValue(text="fiberglass")
+    stucco = PermissibleValue(text="stucco")
+    wood = PermissibleValue(text="wood")
 
     _defn = EnumDefinition(
-        name="DoorTypeEnum",
-    )
-
-class ExtWindowOrientEnum(EnumDefinitionImpl):
-
-    north = PermissibleValue(text="north")
-    south = PermissibleValue(text="south")
-    east = PermissibleValue(text="east")
-    west = PermissibleValue(text="west")
-    northeast = PermissibleValue(text="northeast")
-    southeast = PermissibleValue(text="southeast")
-    southwest = PermissibleValue(text="southwest")
-    northwest = PermissibleValue(text="northwest")
-
-    _defn = EnumDefinition(
-        name="ExtWindowOrientEnum",
-    )
-
-class TrainLineEnum(EnumDefinitionImpl):
-
-    red = PermissibleValue(text="red")
-    green = PermissibleValue(text="green")
-    orange = PermissibleValue(text="orange")
-
-    _defn = EnumDefinition(
-        name="TrainLineEnum",
-    )
-
-class QuadPosEnum(EnumDefinitionImpl):
-
-    _defn = EnumDefinition(
-        name="QuadPosEnum",
+        name="CeilFinishMatEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "North side",
-                PermissibleValue(text="North side") )
-        setattr(cls, "West side",
-                PermissibleValue(text="West side") )
-        setattr(cls, "South side",
-                PermissibleValue(text="South side") )
-        setattr(cls, "East side",
-                PermissibleValue(text="East side") )
+        setattr(cls, "mineral fibre",
+                PermissibleValue(text="mineral fibre") )
+        setattr(cls, "mineral wool/calcium silicate",
+                PermissibleValue(text="mineral wool/calcium silicate") )
 
-class IndoorSpaceEnum(EnumDefinitionImpl):
+class WindowHorizPosEnum(EnumDefinitionImpl):
 
-    bedroom = PermissibleValue(text="bedroom")
-    office = PermissibleValue(text="office")
-    bathroom = PermissibleValue(text="bathroom")
-    foyer = PermissibleValue(text="foyer")
-    kitchen = PermissibleValue(text="kitchen")
-    hallway = PermissibleValue(text="hallway")
-    elevator = PermissibleValue(text="elevator")
+    left = PermissibleValue(text="left")
+    middle = PermissibleValue(text="middle")
+    right = PermissibleValue(text="right")
 
     _defn = EnumDefinition(
-        name="IndoorSpaceEnum",
+        name="WindowHorizPosEnum",
     )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "locker room",
-                PermissibleValue(text="locker room") )
-
-class CeilTypeEnum(EnumDefinitionImpl):
-
-    cathedral = PermissibleValue(text="cathedral")
-    dropped = PermissibleValue(text="dropped")
-    concave = PermissibleValue(text="concave")
-    coffered = PermissibleValue(text="coffered")
-    cove = PermissibleValue(text="cove")
-    stretched = PermissibleValue(text="stretched")
-
-    _defn = EnumDefinition(
-        name="CeilTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "barrel-shaped",
-                PermissibleValue(text="barrel-shaped") )
-
-class WindowLocEnum(EnumDefinitionImpl):
-
-    north = PermissibleValue(text="north")
-    south = PermissibleValue(text="south")
-    east = PermissibleValue(text="east")
-    west = PermissibleValue(text="west")
-
-    _defn = EnumDefinition(
-        name="WindowLocEnum",
-    )
-
-class IntWallCondEnum(EnumDefinitionImpl):
-
-    new = PermissibleValue(text="new")
-    damaged = PermissibleValue(text="damaged")
-    rupture = PermissibleValue(text="rupture")
-
-    _defn = EnumDefinition(
-        name="IntWallCondEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "visible wear",
-                PermissibleValue(text="visible wear") )
-        setattr(cls, "needs repair",
-                PermissibleValue(text="needs repair") )
-
-class TrainStatLocEnum(EnumDefinitionImpl):
-
-    riverside = PermissibleValue(text="riverside")
-
-    _defn = EnumDefinition(
-        name="TrainStatLocEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "south station above ground",
-                PermissibleValue(text="south station above ground") )
-        setattr(cls, "south station underground",
-                PermissibleValue(text="south station underground") )
-        setattr(cls, "south station amtrak",
-                PermissibleValue(text="south station amtrak") )
-        setattr(cls, "forest hills",
-                PermissibleValue(text="forest hills") )
-
-class FilterTypeEnum(EnumDefinitionImpl):
-
-    HEPA = PermissibleValue(text="HEPA")
-    electrostatic = PermissibleValue(text="electrostatic")
-
-    _defn = EnumDefinition(
-        name="FilterTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "particulate air filter",
-                PermissibleValue(text="particulate air filter") )
-        setattr(cls, "chemical air filter",
-                PermissibleValue(text="chemical air filter") )
-        setattr(cls, "low-MERV pleated media",
-                PermissibleValue(text="low-MERV pleated media") )
-        setattr(cls, "gas-phase or ultraviolet air treatments",
-                PermissibleValue(text="gas-phase or ultraviolet air treatments") )
-
-class DoorTypeWoodEnum(EnumDefinitionImpl):
-
-    battened = PermissibleValue(text="battened")
-    flush = PermissibleValue(text="flush")
-    louvered = PermissibleValue(text="louvered")
-
-    _defn = EnumDefinition(
-        name="DoorTypeWoodEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "bettened and ledged",
-                PermissibleValue(text="bettened and ledged") )
-        setattr(cls, "ledged and braced",
-                PermissibleValue(text="ledged and braced") )
-        setattr(cls, "ledged and framed",
-                PermissibleValue(text="ledged and framed") )
-        setattr(cls, "ledged, braced and frame",
-                PermissibleValue(text="ledged, braced and frame") )
-        setattr(cls, "framed and paneled",
-                PermissibleValue(text="framed and paneled") )
-        setattr(cls, "glashed or sash",
-                PermissibleValue(text="glashed or sash") )
-        setattr(cls, "wire gauged",
-                PermissibleValue(text="wire gauged") )
-
-class OccupDocumentEnum(EnumDefinitionImpl):
-
-    estimate = PermissibleValue(text="estimate")
-    videos = PermissibleValue(text="videos")
-
-    _defn = EnumDefinition(
-        name="OccupDocumentEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "automated count",
-                PermissibleValue(text="automated count") )
-        setattr(cls, "manual count",
-                PermissibleValue(text="manual count") )
-
-class DoorLocEnum(EnumDefinitionImpl):
-
-    north = PermissibleValue(text="north")
-    south = PermissibleValue(text="south")
-    east = PermissibleValue(text="east")
-    west = PermissibleValue(text="west")
-
-    _defn = EnumDefinition(
-        name="DoorLocEnum",
-    )
-
-class RelSampLocEnum(EnumDefinitionImpl):
-
-    _defn = EnumDefinition(
-        name="RelSampLocEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "edge of car",
-                PermissibleValue(text="edge of car") )
-        setattr(cls, "center of car",
-                PermissibleValue(text="center of car") )
-        setattr(cls, "under a seat",
-                PermissibleValue(text="under a seat") )
-
-class WindowCoverEnum(EnumDefinitionImpl):
-
-    blinds = PermissibleValue(text="blinds")
-    curtains = PermissibleValue(text="curtains")
-    none = PermissibleValue(text="none")
-
-    _defn = EnumDefinition(
-        name="WindowCoverEnum",
-    )
-
-class BuildOccupTypeEnum(EnumDefinitionImpl):
-
-    office = PermissibleValue(text="office")
-    market = PermissibleValue(text="market")
-    restaurant = PermissibleValue(text="restaurant")
-    residence = PermissibleValue(text="residence")
-    school = PermissibleValue(text="school")
-    residential = PermissibleValue(text="residential")
-    commercial = PermissibleValue(text="commercial")
-    airport = PermissibleValue(text="airport")
-
-    _defn = EnumDefinition(
-        name="BuildOccupTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "low rise",
-                PermissibleValue(text="low rise") )
-        setattr(cls, "high rise",
-                PermissibleValue(text="high rise") )
-        setattr(cls, "wood framed",
-                PermissibleValue(text="wood framed") )
-        setattr(cls, "health care",
-                PermissibleValue(text="health care") )
-        setattr(cls, "sports complex",
-                PermissibleValue(text="sports complex") )
-
-class GenderRestroomEnum(EnumDefinitionImpl):
-
-    female = PermissibleValue(text="female")
-    male = PermissibleValue(text="male")
-    unisex = PermissibleValue(text="unisex")
-
-    _defn = EnumDefinition(
-        name="GenderRestroomEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "all gender",
-                PermissibleValue(text="all gender") )
-        setattr(cls, "gender neurtral",
-                PermissibleValue(text="gender neurtral") )
-        setattr(cls, "male and female",
-                PermissibleValue(text="male and female") )
-
-class FurnitureEnum(EnumDefinitionImpl):
-
-    cabinet = PermissibleValue(text="cabinet")
-    chair = PermissibleValue(text="chair")
-    desks = PermissibleValue(text="desks")
-
-    _defn = EnumDefinition(
-        name="FurnitureEnum",
-    )
-
-class HeatCoolTypeEnum(EnumDefinitionImpl):
-
-    _defn = EnumDefinition(
-        name="HeatCoolTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "radiant system",
-                PermissibleValue(text="radiant system") )
-        setattr(cls, "heat pump",
-                PermissibleValue(text="heat pump") )
-        setattr(cls, "forced air system",
-                PermissibleValue(text="forced air system") )
-        setattr(cls, "steam forced heat",
-                PermissibleValue(text="steam forced heat") )
-        setattr(cls, "wood stove",
-                PermissibleValue(text="wood stove") )
-
-class BuildingSettingEnum(EnumDefinitionImpl):
-
-    urban = PermissibleValue(text="urban")
-    suburban = PermissibleValue(text="suburban")
-    exurban = PermissibleValue(text="exurban")
-    rural = PermissibleValue(text="rural")
-
-    _defn = EnumDefinition(
-        name="BuildingSettingEnum",
-    )
-
-class HandidnessEnum(EnumDefinitionImpl):
-
-    ambidexterity = PermissibleValue(text="ambidexterity")
-
-    _defn = EnumDefinition(
-        name="HandidnessEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "left handedness",
-                PermissibleValue(text="left handedness") )
-        setattr(cls, "mixed-handedness",
-                PermissibleValue(text="mixed-handedness") )
-        setattr(cls, "right handedness",
-                PermissibleValue(text="right handedness") )
 
 class DrawingsEnum(EnumDefinitionImpl):
 
@@ -14565,37 +13947,17 @@ class WindowVertPosEnum(EnumDefinitionImpl):
         name="WindowVertPosEnum",
     )
 
-class CeilTextureEnum(EnumDefinitionImpl):
+class WindowMatEnum(EnumDefinitionImpl):
 
-    knockdown = PermissibleValue(text="knockdown")
-    popcorn = PermissibleValue(text="popcorn")
-    smooth = PermissibleValue(text="smooth")
-    swirl = PermissibleValue(text="swirl")
+    clad = PermissibleValue(text="clad")
+    fiberglass = PermissibleValue(text="fiberglass")
+    metal = PermissibleValue(text="metal")
+    vinyl = PermissibleValue(text="vinyl")
+    wood = PermissibleValue(text="wood")
 
     _defn = EnumDefinition(
-        name="CeilTextureEnum",
+        name="WindowMatEnum",
     )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "crows feet",
-                PermissibleValue(text="crows feet") )
-        setattr(cls, "crows-foot stomp",
-                PermissibleValue(text="crows-foot stomp") )
-        setattr(cls, "double skip",
-                PermissibleValue(text="double skip") )
-        setattr(cls, "hawk and trowel",
-                PermissibleValue(text="hawk and trowel") )
-        setattr(cls, "orange peel",
-                PermissibleValue(text="orange peel") )
-        setattr(cls, "rosebud stomp",
-                PermissibleValue(text="rosebud stomp") )
-        setattr(cls, "Santa-Fe texture",
-                PermissibleValue(text="Santa-Fe texture") )
-        setattr(cls, "skip trowel",
-                PermissibleValue(text="skip trowel") )
-        setattr(cls, "stomp knockdown",
-                PermissibleValue(text="stomp knockdown") )
 
 class ShadingDeviceTypeEnum(EnumDefinitionImpl):
 
@@ -14629,93 +13991,113 @@ class ShadingDeviceTypeEnum(EnumDefinitionImpl):
         setattr(cls, "venetian awning",
                 PermissibleValue(text="venetian awning") )
 
-class RoomCondtEnum(EnumDefinitionImpl):
+class CeilTextureEnum(EnumDefinitionImpl):
 
-    new = PermissibleValue(text="new")
-    damaged = PermissibleValue(text="damaged")
-    rupture = PermissibleValue(text="rupture")
+    knockdown = PermissibleValue(text="knockdown")
+    popcorn = PermissibleValue(text="popcorn")
+    smooth = PermissibleValue(text="smooth")
+    swirl = PermissibleValue(text="swirl")
 
     _defn = EnumDefinition(
-        name="RoomCondtEnum",
+        name="CeilTextureEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "visible wear",
-                PermissibleValue(text="visible wear") )
-        setattr(cls, "needs repair",
-                PermissibleValue(text="needs repair") )
-        setattr(cls, "visible signs of mold/mildew",
-                PermissibleValue(text="visible signs of mold/mildew") )
+        setattr(cls, "crows feet",
+                PermissibleValue(text="crows feet") )
+        setattr(cls, "crows-foot stomp",
+                PermissibleValue(text="crows-foot stomp") )
+        setattr(cls, "double skip",
+                PermissibleValue(text="double skip") )
+        setattr(cls, "hawk and trowel",
+                PermissibleValue(text="hawk and trowel") )
+        setattr(cls, "orange peel",
+                PermissibleValue(text="orange peel") )
+        setattr(cls, "rosebud stomp",
+                PermissibleValue(text="rosebud stomp") )
+        setattr(cls, "Santa-Fe texture",
+                PermissibleValue(text="Santa-Fe texture") )
+        setattr(cls, "skip trowel",
+                PermissibleValue(text="skip trowel") )
+        setattr(cls, "stomp knockdown",
+                PermissibleValue(text="stomp knockdown") )
 
-class FreqCleanEnum(EnumDefinitionImpl):
+class WaterFeatTypeEnum(EnumDefinitionImpl):
 
-    Daily = PermissibleValue(text="Daily")
-    Weekly = PermissibleValue(text="Weekly")
-    Monthly = PermissibleValue(text="Monthly")
-    Quarterly = PermissibleValue(text="Quarterly")
-    Annually = PermissibleValue(text="Annually")
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="FreqCleanEnum",
-    )
-
-class WallConstTypeEnum(EnumDefinitionImpl):
-
-    _defn = EnumDefinition(
-        name="WallConstTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "frame construction",
-                PermissibleValue(text="frame construction") )
-        setattr(cls, "joisted masonry",
-                PermissibleValue(text="joisted masonry") )
-        setattr(cls, "light noncombustible",
-                PermissibleValue(text="light noncombustible") )
-        setattr(cls, "masonry noncombustible",
-                PermissibleValue(text="masonry noncombustible") )
-        setattr(cls, "modified fire resistive",
-                PermissibleValue(text="modified fire resistive") )
-        setattr(cls, "fire resistive",
-                PermissibleValue(text="fire resistive") )
-
-class DoorTypeMetalEnum(EnumDefinitionImpl):
-
-    collapsible = PermissibleValue(text="collapsible")
-    hollow = PermissibleValue(text="hollow")
+    fountain = PermissibleValue(text="fountain")
+    pool = PermissibleValue(text="pool")
+    stream = PermissibleValue(text="stream")
+    waterfall = PermissibleValue(text="waterfall")
 
     _defn = EnumDefinition(
-        name="DoorTypeMetalEnum",
+        name="WaterFeatTypeEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "corrugated steel",
-                PermissibleValue(text="corrugated steel") )
-        setattr(cls, "rolling shutters",
-                PermissibleValue(text="rolling shutters") )
-        setattr(cls, "steel plate",
-                PermissibleValue(text="steel plate") )
+        setattr(cls, "standing feature",
+                PermissibleValue(text="standing feature") )
 
-class SpecificEnum(EnumDefinitionImpl):
+class CeilTypeEnum(EnumDefinitionImpl):
 
-    operation = PermissibleValue(text="operation")
-    construction = PermissibleValue(text="construction")
-    bid = PermissibleValue(text="bid")
-    design = PermissibleValue(text="design")
-    photos = PermissibleValue(text="photos")
+    cathedral = PermissibleValue(text="cathedral")
+    dropped = PermissibleValue(text="dropped")
+    concave = PermissibleValue(text="concave")
+    coffered = PermissibleValue(text="coffered")
+    cove = PermissibleValue(text="cove")
+    stretched = PermissibleValue(text="stretched")
 
     _defn = EnumDefinition(
-        name="SpecificEnum",
+        name="CeilTypeEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "as built",
-                PermissibleValue(text="as built") )
+        setattr(cls, "barrel-shaped",
+                PermissibleValue(text="barrel-shaped") )
+
+class SurfAirContEnum(EnumDefinitionImpl):
+
+    dust = PermissibleValue(text="dust")
+    radon = PermissibleValue(text="radon")
+    nutrients = PermissibleValue(text="nutrients")
+    biocides = PermissibleValue(text="biocides")
+
+    _defn = EnumDefinition(
+        name="SurfAirContEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "organic matter",
+                PermissibleValue(text="organic matter") )
+        setattr(cls, "particulate matter",
+                PermissibleValue(text="particulate matter") )
+        setattr(cls, "volatile organic compounds",
+                PermissibleValue(text="volatile organic compounds") )
+        setattr(cls, "biological contaminants",
+                PermissibleValue(text="biological contaminants") )
+
+class IndoorSurfEnum(EnumDefinitionImpl):
+
+    cabinet = PermissibleValue(text="cabinet")
+    ceiling = PermissibleValue(text="ceiling")
+    door = PermissibleValue(text="door")
+    shelving = PermissibleValue(text="shelving")
+    window = PermissibleValue(text="window")
+    wall = PermissibleValue(text="wall")
+
+    _defn = EnumDefinition(
+        name="IndoorSurfEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "counter top",
+                PermissibleValue(text="counter top") )
+        setattr(cls, "vent cover",
+                PermissibleValue(text="vent cover") )
 
 class RoomSampPosEnum(EnumDefinitionImpl):
 
@@ -14744,6 +14126,43 @@ class RoomSampPosEnum(EnumDefinitionImpl):
         setattr(cls, "southwest corner",
                 PermissibleValue(text="southwest corner") )
 
+class FurnitureEnum(EnumDefinitionImpl):
+
+    cabinet = PermissibleValue(text="cabinet")
+    chair = PermissibleValue(text="chair")
+    desks = PermissibleValue(text="desks")
+
+    _defn = EnumDefinition(
+        name="FurnitureEnum",
+    )
+
+class DoorTypeWoodEnum(EnumDefinitionImpl):
+
+    battened = PermissibleValue(text="battened")
+    flush = PermissibleValue(text="flush")
+    louvered = PermissibleValue(text="louvered")
+
+    _defn = EnumDefinition(
+        name="DoorTypeWoodEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "bettened and ledged",
+                PermissibleValue(text="bettened and ledged") )
+        setattr(cls, "ledged and braced",
+                PermissibleValue(text="ledged and braced") )
+        setattr(cls, "ledged and framed",
+                PermissibleValue(text="ledged and framed") )
+        setattr(cls, "ledged, braced and frame",
+                PermissibleValue(text="ledged, braced and frame") )
+        setattr(cls, "framed and paneled",
+                PermissibleValue(text="framed and paneled") )
+        setattr(cls, "glashed or sash",
+                PermissibleValue(text="glashed or sash") )
+        setattr(cls, "wire gauged",
+                PermissibleValue(text="wire gauged") )
+
 class ExtWallOrientEnum(EnumDefinitionImpl):
 
     north = PermissibleValue(text="north")
@@ -14759,28 +14178,48 @@ class ExtWallOrientEnum(EnumDefinitionImpl):
         name="ExtWallOrientEnum",
     )
 
-class WeekdayEnum(EnumDefinitionImpl):
-
-    Monday = PermissibleValue(text="Monday")
-    Tuesday = PermissibleValue(text="Tuesday")
-    Wednesday = PermissibleValue(text="Wednesday")
-    Thursday = PermissibleValue(text="Thursday")
-    Friday = PermissibleValue(text="Friday")
-    Saturday = PermissibleValue(text="Saturday")
-    Sunday = PermissibleValue(text="Sunday")
+class QuadPosEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
-        name="WeekdayEnum",
+        name="QuadPosEnum",
     )
 
-class DoorCondEnum(EnumDefinitionImpl):
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "North side",
+                PermissibleValue(text="North side") )
+        setattr(cls, "West side",
+                PermissibleValue(text="West side") )
+        setattr(cls, "South side",
+                PermissibleValue(text="South side") )
+        setattr(cls, "East side",
+                PermissibleValue(text="East side") )
+
+class SpecificEnum(EnumDefinitionImpl):
+
+    operation = PermissibleValue(text="operation")
+    construction = PermissibleValue(text="construction")
+    bid = PermissibleValue(text="bid")
+    design = PermissibleValue(text="design")
+    photos = PermissibleValue(text="photos")
+
+    _defn = EnumDefinition(
+        name="SpecificEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "as built",
+                PermissibleValue(text="as built") )
+
+class ShadingDeviceCondEnum(EnumDefinitionImpl):
 
     damaged = PermissibleValue(text="damaged")
     new = PermissibleValue(text="new")
     rupture = PermissibleValue(text="rupture")
 
     _defn = EnumDefinition(
-        name="DoorCondEnum",
+        name="ShadingDeviceCondEnum",
     )
 
     @classmethod
@@ -14790,169 +14229,47 @@ class DoorCondEnum(EnumDefinitionImpl):
         setattr(cls, "visible wear",
                 PermissibleValue(text="visible wear") )
 
-class DoorDirectEnum(EnumDefinitionImpl):
+class DoorCompTypeEnum(EnumDefinitionImpl):
 
-    inward = PermissibleValue(text="inward")
-    outward = PermissibleValue(text="outward")
-    sideways = PermissibleValue(text="sideways")
-
-    _defn = EnumDefinition(
-        name="DoorDirectEnum",
-    )
-
-class WindowCondEnum(EnumDefinitionImpl):
-
-    damaged = PermissibleValue(text="damaged")
-    new = PermissibleValue(text="new")
-    rupture = PermissibleValue(text="rupture")
-
-    _defn = EnumDefinition(
-        name="WindowCondEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "needs repair",
-                PermissibleValue(text="needs repair") )
-        setattr(cls, "visible wear",
-                PermissibleValue(text="visible wear") )
-
-class SampWeatherEnum(EnumDefinitionImpl):
-
-    cloudy = PermissibleValue(text="cloudy")
-    foggy = PermissibleValue(text="foggy")
-    hail = PermissibleValue(text="hail")
-    rain = PermissibleValue(text="rain")
-    snow = PermissibleValue(text="snow")
-    sleet = PermissibleValue(text="sleet")
-    sunny = PermissibleValue(text="sunny")
-    windy = PermissibleValue(text="windy")
-
-    _defn = EnumDefinition(
-        name="SampWeatherEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "clear sky",
-                PermissibleValue(text="clear sky") )
-
-class WallLocEnum(EnumDefinitionImpl):
-
-    north = PermissibleValue(text="north")
-    south = PermissibleValue(text="south")
-    east = PermissibleValue(text="east")
-    west = PermissibleValue(text="west")
-
-    _defn = EnumDefinition(
-        name="WallLocEnum",
-    )
-
-class RoomConnectedEnum(EnumDefinitionImpl):
-
-    attic = PermissibleValue(text="attic")
-    bathroom = PermissibleValue(text="bathroom")
-    closet = PermissibleValue(text="closet")
-    elevator = PermissibleValue(text="elevator")
-    hallway = PermissibleValue(text="hallway")
-    kitchen = PermissibleValue(text="kitchen")
-    office = PermissibleValue(text="office")
-    stairwell = PermissibleValue(text="stairwell")
-
-    _defn = EnumDefinition(
-        name="RoomConnectedEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "conference room",
-                PermissibleValue(text="conference room") )
-        setattr(cls, "examining room",
-                PermissibleValue(text="examining room") )
-        setattr(cls, "mail room",
-                PermissibleValue(text="mail room") )
-
-class WindowTypeEnum(EnumDefinitionImpl):
-
-    _defn = EnumDefinition(
-        name="WindowTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "single-hung sash window",
-                PermissibleValue(text="single-hung sash window") )
-        setattr(cls, "horizontal sash window",
-                PermissibleValue(text="horizontal sash window") )
-        setattr(cls, "fixed window",
-                PermissibleValue(text="fixed window") )
-
-class DoorMatEnum(EnumDefinitionImpl):
-
-    aluminum = PermissibleValue(text="aluminum")
-    fiberboard = PermissibleValue(text="fiberboard")
-    fiberglass = PermissibleValue(text="fiberglass")
-    metal = PermissibleValue(text="metal")
-    vinyl = PermissibleValue(text="vinyl")
-    wood = PermissibleValue(text="wood")
-
-    _defn = EnumDefinition(
-        name="DoorMatEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "cellular PVC",
-                PermissibleValue(text="cellular PVC") )
-        setattr(cls, "engineered plastic",
-                PermissibleValue(text="engineered plastic") )
-        setattr(cls, "thermoplastic alloy",
-                PermissibleValue(text="thermoplastic alloy") )
-        setattr(cls, "wood/plastic composite",
-                PermissibleValue(text="wood/plastic composite") )
-
-class DoorMoveEnum(EnumDefinitionImpl):
-
-    collapsible = PermissibleValue(text="collapsible")
-    folding = PermissibleValue(text="folding")
     revolving = PermissibleValue(text="revolving")
     sliding = PermissibleValue(text="sliding")
-    swinging = PermissibleValue(text="swinging")
+    telescopic = PermissibleValue(text="telescopic")
 
     _defn = EnumDefinition(
-        name="DoorMoveEnum",
+        name="DoorCompTypeEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "rolling shutter",
-                PermissibleValue(text="rolling shutter") )
+        setattr(cls, "metal covered",
+                PermissibleValue(text="metal covered") )
 
-class WallFinishMatEnum(EnumDefinitionImpl):
+class ArchStrucEnum(EnumDefinitionImpl):
 
-    plaster = PermissibleValue(text="plaster")
-    tile = PermissibleValue(text="tile")
-    terrazzo = PermissibleValue(text="terrazzo")
-    wood = PermissibleValue(text="wood")
-    metal = PermissibleValue(text="metal")
-    masonry = PermissibleValue(text="masonry")
+    building = PermissibleValue(text="building")
+    shed = PermissibleValue(text="shed")
+    home = PermissibleValue(text="home")
 
     _defn = EnumDefinition(
-        name="WallFinishMatEnum",
+        name="ArchStrucEnum",
+    )
+
+class HandidnessEnum(EnumDefinitionImpl):
+
+    ambidexterity = PermissibleValue(text="ambidexterity")
+
+    _defn = EnumDefinition(
+        name="HandidnessEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "gypsum plaster",
-                PermissibleValue(text="gypsum plaster") )
-        setattr(cls, "veneer plaster",
-                PermissibleValue(text="veneer plaster") )
-        setattr(cls, "gypsum board",
-                PermissibleValue(text="gypsum board") )
-        setattr(cls, "stone facing",
-                PermissibleValue(text="stone facing") )
-        setattr(cls, "acoustical treatment",
-                PermissibleValue(text="acoustical treatment") )
+        setattr(cls, "left handedness",
+                PermissibleValue(text="left handedness") )
+        setattr(cls, "mixed-handedness",
+                PermissibleValue(text="mixed-handedness") )
+        setattr(cls, "right handedness",
+                PermissibleValue(text="right handedness") )
 
 class WallSurfTreatmentEnum(EnumDefinitionImpl):
 
@@ -14971,6 +14288,59 @@ class WallSurfTreatmentEnum(EnumDefinitionImpl):
                 PermissibleValue(text="wall paper") )
         setattr(cls, "no treatment",
                 PermissibleValue(text="no treatment") )
+
+class PresAnimalInsectEnum(EnumDefinitionImpl):
+
+    cat = PermissibleValue(text="cat")
+    dog = PermissibleValue(text="dog")
+    rodent = PermissibleValue(text="rodent")
+    snake = PermissibleValue(text="snake")
+
+    _defn = EnumDefinition(
+        name="PresAnimalInsectEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "other;{integer}",
+                PermissibleValue(text="other;{integer}") )
+
+class FloorCondEnum(EnumDefinitionImpl):
+
+    new = PermissibleValue(text="new")
+    damaged = PermissibleValue(text="damaged")
+    rupture = PermissibleValue(text="rupture")
+
+    _defn = EnumDefinition(
+        name="FloorCondEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "visible wear",
+                PermissibleValue(text="visible wear") )
+        setattr(cls, "needs repair",
+                PermissibleValue(text="needs repair") )
+
+class FilterTypeEnum(EnumDefinitionImpl):
+
+    HEPA = PermissibleValue(text="HEPA")
+    electrostatic = PermissibleValue(text="electrostatic")
+
+    _defn = EnumDefinition(
+        name="FilterTypeEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "particulate air filter",
+                PermissibleValue(text="particulate air filter") )
+        setattr(cls, "chemical air filter",
+                PermissibleValue(text="chemical air filter") )
+        setattr(cls, "low-MERV pleated media",
+                PermissibleValue(text="low-MERV pleated media") )
+        setattr(cls, "gas-phase or ultraviolet air treatments",
+                PermissibleValue(text="gas-phase or ultraviolet air treatments") )
 
 class FloorFinishMatEnum(EnumDefinitionImpl):
 
@@ -15005,51 +14375,40 @@ class FloorFinishMatEnum(EnumDefinitionImpl):
         setattr(cls, "clear finish",
                 PermissibleValue(text="clear finish") )
 
-class CeilFinishMatEnum(EnumDefinitionImpl):
+class BuildingSettingEnum(EnumDefinitionImpl):
 
-    drywall = PermissibleValue(text="drywall")
-    tiles = PermissibleValue(text="tiles")
-    PVC = PermissibleValue(text="PVC")
-    plasterboard = PermissibleValue(text="plasterboard")
-    metal = PermissibleValue(text="metal")
-    fiberglass = PermissibleValue(text="fiberglass")
-    stucco = PermissibleValue(text="stucco")
-    wood = PermissibleValue(text="wood")
+    urban = PermissibleValue(text="urban")
+    suburban = PermissibleValue(text="suburban")
+    exurban = PermissibleValue(text="exurban")
+    rural = PermissibleValue(text="rural")
 
     _defn = EnumDefinition(
-        name="CeilFinishMatEnum",
+        name="BuildingSettingEnum",
+    )
+
+class WindowTypeEnum(EnumDefinitionImpl):
+
+    _defn = EnumDefinition(
+        name="WindowTypeEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "mineral fibre",
-                PermissibleValue(text="mineral fibre") )
-        setattr(cls, "mineral wool/calcium silicate",
-                PermissibleValue(text="mineral wool/calcium silicate") )
+        setattr(cls, "single-hung sash window",
+                PermissibleValue(text="single-hung sash window") )
+        setattr(cls, "horizontal sash window",
+                PermissibleValue(text="horizontal sash window") )
+        setattr(cls, "fixed window",
+                PermissibleValue(text="fixed window") )
 
-class DoorCompTypeEnum(EnumDefinitionImpl):
-
-    revolving = PermissibleValue(text="revolving")
-    sliding = PermissibleValue(text="sliding")
-    telescopic = PermissibleValue(text="telescopic")
-
-    _defn = EnumDefinition(
-        name="DoorCompTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "metal covered",
-                PermissibleValue(text="metal covered") )
-
-class ShadingDeviceCondEnum(EnumDefinitionImpl):
+class WindowCondEnum(EnumDefinitionImpl):
 
     damaged = PermissibleValue(text="damaged")
     new = PermissibleValue(text="new")
     rupture = PermissibleValue(text="rupture")
 
     _defn = EnumDefinition(
-        name="ShadingDeviceCondEnum",
+        name="WindowCondEnum",
     )
 
     @classmethod
@@ -15059,21 +14418,274 @@ class ShadingDeviceCondEnum(EnumDefinitionImpl):
         setattr(cls, "visible wear",
                 PermissibleValue(text="visible wear") )
 
-class WaterFeatTypeEnum(EnumDefinitionImpl):
-
-    fountain = PermissibleValue(text="fountain")
-    pool = PermissibleValue(text="pool")
-    stream = PermissibleValue(text="stream")
-    waterfall = PermissibleValue(text="waterfall")
+class HeatCoolTypeEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
-        name="WaterFeatTypeEnum",
+        name="HeatCoolTypeEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "standing feature",
-                PermissibleValue(text="standing feature") )
+        setattr(cls, "radiant system",
+                PermissibleValue(text="radiant system") )
+        setattr(cls, "heat pump",
+                PermissibleValue(text="heat pump") )
+        setattr(cls, "forced air system",
+                PermissibleValue(text="forced air system") )
+        setattr(cls, "steam forced heat",
+                PermissibleValue(text="steam forced heat") )
+        setattr(cls, "wood stove",
+                PermissibleValue(text="wood stove") )
+
+class WallLocEnum(EnumDefinitionImpl):
+
+    north = PermissibleValue(text="north")
+    south = PermissibleValue(text="south")
+    east = PermissibleValue(text="east")
+    west = PermissibleValue(text="west")
+
+    _defn = EnumDefinition(
+        name="WallLocEnum",
+    )
+
+class WeekdayEnum(EnumDefinitionImpl):
+
+    Monday = PermissibleValue(text="Monday")
+    Tuesday = PermissibleValue(text="Tuesday")
+    Wednesday = PermissibleValue(text="Wednesday")
+    Thursday = PermissibleValue(text="Thursday")
+    Friday = PermissibleValue(text="Friday")
+    Saturday = PermissibleValue(text="Saturday")
+    Sunday = PermissibleValue(text="Sunday")
+
+    _defn = EnumDefinition(
+        name="WeekdayEnum",
+    )
+
+class SeasonUseEnum(EnumDefinitionImpl):
+
+    Spring = PermissibleValue(text="Spring")
+    Summer = PermissibleValue(text="Summer")
+    Fall = PermissibleValue(text="Fall")
+    Winter = PermissibleValue(text="Winter")
+
+    _defn = EnumDefinition(
+        name="SeasonUseEnum",
+    )
+
+class SurfMaterialEnum(EnumDefinitionImpl):
+
+    adobe = PermissibleValue(text="adobe")
+    carpet = PermissibleValue(text="carpet")
+    concrete = PermissibleValue(text="concrete")
+    glass = PermissibleValue(text="glass")
+    metal = PermissibleValue(text="metal")
+    paint = PermissibleValue(text="paint")
+    plastic = PermissibleValue(text="plastic")
+    stone = PermissibleValue(text="stone")
+    stucco = PermissibleValue(text="stucco")
+    tile = PermissibleValue(text="tile")
+    vinyl = PermissibleValue(text="vinyl")
+    wood = PermissibleValue(text="wood")
+
+    _defn = EnumDefinition(
+        name="SurfMaterialEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "cinder blocks",
+                PermissibleValue(text="cinder blocks") )
+        setattr(cls, "hay bales",
+                PermissibleValue(text="hay bales") )
+        setattr(cls, "stainless steel",
+                PermissibleValue(text="stainless steel") )
+
+class GenderRestroomEnum(EnumDefinitionImpl):
+
+    female = PermissibleValue(text="female")
+    male = PermissibleValue(text="male")
+    unisex = PermissibleValue(text="unisex")
+
+    _defn = EnumDefinition(
+        name="GenderRestroomEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "all gender",
+                PermissibleValue(text="all gender") )
+        setattr(cls, "gender neurtral",
+                PermissibleValue(text="gender neurtral") )
+        setattr(cls, "male and female",
+                PermissibleValue(text="male and female") )
+
+class IndoorSpaceEnum(EnumDefinitionImpl):
+
+    bedroom = PermissibleValue(text="bedroom")
+    office = PermissibleValue(text="office")
+    bathroom = PermissibleValue(text="bathroom")
+    foyer = PermissibleValue(text="foyer")
+    kitchen = PermissibleValue(text="kitchen")
+    hallway = PermissibleValue(text="hallway")
+    elevator = PermissibleValue(text="elevator")
+
+    _defn = EnumDefinition(
+        name="IndoorSpaceEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "locker room",
+                PermissibleValue(text="locker room") )
+
+class SubstructureTypeEnum(EnumDefinitionImpl):
+
+    crawlspace = PermissibleValue(text="crawlspace")
+    basement = PermissibleValue(text="basement")
+
+    _defn = EnumDefinition(
+        name="SubstructureTypeEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "slab on grade",
+                PermissibleValue(text="slab on grade") )
+
+class VisMediaEnum(EnumDefinitionImpl):
+
+    photos = PermissibleValue(text="photos")
+    videos = PermissibleValue(text="videos")
+    interiors = PermissibleValue(text="interiors")
+    equipment = PermissibleValue(text="equipment")
+
+    _defn = EnumDefinition(
+        name="VisMediaEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "commonly of the building",
+                PermissibleValue(text="commonly of the building") )
+        setattr(cls, "site context (adjacent buildings, vegetation, terrain, streets)",
+                PermissibleValue(text="site context (adjacent buildings, vegetation, terrain, streets)") )
+        setattr(cls, "3D scans",
+                PermissibleValue(text="3D scans") )
+
+class BuildOccupTypeEnum(EnumDefinitionImpl):
+
+    office = PermissibleValue(text="office")
+    market = PermissibleValue(text="market")
+    restaurant = PermissibleValue(text="restaurant")
+    residence = PermissibleValue(text="residence")
+    school = PermissibleValue(text="school")
+    residential = PermissibleValue(text="residential")
+    commercial = PermissibleValue(text="commercial")
+    airport = PermissibleValue(text="airport")
+
+    _defn = EnumDefinition(
+        name="BuildOccupTypeEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "low rise",
+                PermissibleValue(text="low rise") )
+        setattr(cls, "high rise",
+                PermissibleValue(text="high rise") )
+        setattr(cls, "wood framed",
+                PermissibleValue(text="wood framed") )
+        setattr(cls, "health care",
+                PermissibleValue(text="health care") )
+        setattr(cls, "sports complex",
+                PermissibleValue(text="sports complex") )
+
+class SampFloorEnum(EnumDefinitionImpl):
+
+    basement = PermissibleValue(text="basement")
+    lobby = PermissibleValue(text="lobby")
+
+    _defn = EnumDefinition(
+        name="SampFloorEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "1st floor",
+                PermissibleValue(text="1st floor") )
+        setattr(cls, "2nd floor",
+                PermissibleValue(text="2nd floor") )
+
+class SampWeatherEnum(EnumDefinitionImpl):
+
+    cloudy = PermissibleValue(text="cloudy")
+    foggy = PermissibleValue(text="foggy")
+    hail = PermissibleValue(text="hail")
+    rain = PermissibleValue(text="rain")
+    snow = PermissibleValue(text="snow")
+    sleet = PermissibleValue(text="sleet")
+    sunny = PermissibleValue(text="sunny")
+    windy = PermissibleValue(text="windy")
+
+    _defn = EnumDefinition(
+        name="SampWeatherEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "clear sky",
+                PermissibleValue(text="clear sky") )
+
+class RoomConnectedEnum(EnumDefinitionImpl):
+
+    attic = PermissibleValue(text="attic")
+    bathroom = PermissibleValue(text="bathroom")
+    closet = PermissibleValue(text="closet")
+    elevator = PermissibleValue(text="elevator")
+    hallway = PermissibleValue(text="hallway")
+    kitchen = PermissibleValue(text="kitchen")
+    office = PermissibleValue(text="office")
+    stairwell = PermissibleValue(text="stairwell")
+
+    _defn = EnumDefinition(
+        name="RoomConnectedEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "conference room",
+                PermissibleValue(text="conference room") )
+        setattr(cls, "examining room",
+                PermissibleValue(text="examining room") )
+        setattr(cls, "mail room",
+                PermissibleValue(text="mail room") )
+
+class WallFinishMatEnum(EnumDefinitionImpl):
+
+    plaster = PermissibleValue(text="plaster")
+    tile = PermissibleValue(text="tile")
+    terrazzo = PermissibleValue(text="terrazzo")
+    wood = PermissibleValue(text="wood")
+    metal = PermissibleValue(text="metal")
+    masonry = PermissibleValue(text="masonry")
+
+    _defn = EnumDefinition(
+        name="WallFinishMatEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "gypsum plaster",
+                PermissibleValue(text="gypsum plaster") )
+        setattr(cls, "veneer plaster",
+                PermissibleValue(text="veneer plaster") )
+        setattr(cls, "gypsum board",
+                PermissibleValue(text="gypsum board") )
+        setattr(cls, "stone facing",
+                PermissibleValue(text="stone facing") )
+        setattr(cls, "acoustical treatment",
+                PermissibleValue(text="acoustical treatment") )
 
 class MechStrucEnum(EnumDefinitionImpl):
 
@@ -15090,6 +14702,394 @@ class MechStrucEnum(EnumDefinitionImpl):
     _defn = EnumDefinition(
         name="MechStrucEnum",
     )
+
+class TrainLineEnum(EnumDefinitionImpl):
+
+    red = PermissibleValue(text="red")
+    green = PermissibleValue(text="green")
+    orange = PermissibleValue(text="orange")
+
+    _defn = EnumDefinition(
+        name="TrainLineEnum",
+    )
+
+class TrainStopLocEnum(EnumDefinitionImpl):
+
+    end = PermissibleValue(text="end")
+    mid = PermissibleValue(text="mid")
+    downtown = PermissibleValue(text="downtown")
+
+    _defn = EnumDefinition(
+        name="TrainStopLocEnum",
+    )
+
+class BuildDocsEnum(EnumDefinitionImpl):
+
+    schedule = PermissibleValue(text="schedule")
+    sections = PermissibleValue(text="sections")
+    submittals = PermissibleValue(text="submittals")
+    windows = PermissibleValue(text="windows")
+
+    _defn = EnumDefinition(
+        name="BuildDocsEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "building information model",
+                PermissibleValue(text="building information model") )
+        setattr(cls, "commissioning report",
+                PermissibleValue(text="commissioning report") )
+        setattr(cls, "complaint logs",
+                PermissibleValue(text="complaint logs") )
+        setattr(cls, "contract administration",
+                PermissibleValue(text="contract administration") )
+        setattr(cls, "cost estimate",
+                PermissibleValue(text="cost estimate") )
+        setattr(cls, "janitorial schedules or logs",
+                PermissibleValue(text="janitorial schedules or logs") )
+        setattr(cls, "maintenance plans",
+                PermissibleValue(text="maintenance plans") )
+        setattr(cls, "shop drawings",
+                PermissibleValue(text="shop drawings") )
+        setattr(cls, "ventilation system",
+                PermissibleValue(text="ventilation system") )
+
+class HeatDelivLocEnum(EnumDefinitionImpl):
+
+    north = PermissibleValue(text="north")
+    south = PermissibleValue(text="south")
+    east = PermissibleValue(text="east")
+    west = PermissibleValue(text="west")
+
+    _defn = EnumDefinition(
+        name="HeatDelivLocEnum",
+    )
+
+class ExtWindowOrientEnum(EnumDefinitionImpl):
+
+    north = PermissibleValue(text="north")
+    south = PermissibleValue(text="south")
+    east = PermissibleValue(text="east")
+    west = PermissibleValue(text="west")
+    northeast = PermissibleValue(text="northeast")
+    southeast = PermissibleValue(text="southeast")
+    southwest = PermissibleValue(text="southwest")
+    northwest = PermissibleValue(text="northwest")
+
+    _defn = EnumDefinition(
+        name="ExtWindowOrientEnum",
+    )
+
+class FreqCleanEnum(EnumDefinitionImpl):
+
+    Daily = PermissibleValue(text="Daily")
+    Weekly = PermissibleValue(text="Weekly")
+    Monthly = PermissibleValue(text="Monthly")
+    Quarterly = PermissibleValue(text="Quarterly")
+    Annually = PermissibleValue(text="Annually")
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="FreqCleanEnum",
+    )
+
+class OccupDocumentEnum(EnumDefinitionImpl):
+
+    estimate = PermissibleValue(text="estimate")
+    videos = PermissibleValue(text="videos")
+
+    _defn = EnumDefinition(
+        name="OccupDocumentEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "automated count",
+                PermissibleValue(text="automated count") )
+        setattr(cls, "manual count",
+                PermissibleValue(text="manual count") )
+
+class DoorTypeMetalEnum(EnumDefinitionImpl):
+
+    collapsible = PermissibleValue(text="collapsible")
+    hollow = PermissibleValue(text="hollow")
+
+    _defn = EnumDefinition(
+        name="DoorTypeMetalEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "corrugated steel",
+                PermissibleValue(text="corrugated steel") )
+        setattr(cls, "rolling shutters",
+                PermissibleValue(text="rolling shutters") )
+        setattr(cls, "steel plate",
+                PermissibleValue(text="steel plate") )
+
+class WindowCoverEnum(EnumDefinitionImpl):
+
+    blinds = PermissibleValue(text="blinds")
+    curtains = PermissibleValue(text="curtains")
+    none = PermissibleValue(text="none")
+
+    _defn = EnumDefinition(
+        name="WindowCoverEnum",
+    )
+
+class FloorWaterMoldEnum(EnumDefinitionImpl):
+
+    condensation = PermissibleValue(text="condensation")
+
+    _defn = EnumDefinition(
+        name="FloorWaterMoldEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "mold odor",
+                PermissibleValue(text="mold odor") )
+        setattr(cls, "wet floor",
+                PermissibleValue(text="wet floor") )
+        setattr(cls, "water stains",
+                PermissibleValue(text="water stains") )
+        setattr(cls, "wall discoloration",
+                PermissibleValue(text="wall discoloration") )
+        setattr(cls, "floor discoloration",
+                PermissibleValue(text="floor discoloration") )
+        setattr(cls, "ceiling discoloration",
+                PermissibleValue(text="ceiling discoloration") )
+        setattr(cls, "peeling paint or wallpaper",
+                PermissibleValue(text="peeling paint or wallpaper") )
+        setattr(cls, "bulging walls",
+                PermissibleValue(text="bulging walls") )
+
+class CeilCondEnum(EnumDefinitionImpl):
+
+    new = PermissibleValue(text="new")
+    damaged = PermissibleValue(text="damaged")
+    rupture = PermissibleValue(text="rupture")
+
+    _defn = EnumDefinition(
+        name="CeilCondEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "visible wear",
+                PermissibleValue(text="visible wear") )
+        setattr(cls, "needs repair",
+                PermissibleValue(text="needs repair") )
+
+class RoomLocEnum(EnumDefinitionImpl):
+
+    _defn = EnumDefinition(
+        name="RoomLocEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "corner room",
+                PermissibleValue(text="corner room") )
+        setattr(cls, "interior room",
+                PermissibleValue(text="interior room") )
+        setattr(cls, "exterior wall",
+                PermissibleValue(text="exterior wall") )
+
+class DoorMatEnum(EnumDefinitionImpl):
+
+    aluminum = PermissibleValue(text="aluminum")
+    fiberboard = PermissibleValue(text="fiberboard")
+    fiberglass = PermissibleValue(text="fiberglass")
+    metal = PermissibleValue(text="metal")
+    vinyl = PermissibleValue(text="vinyl")
+    wood = PermissibleValue(text="wood")
+
+    _defn = EnumDefinition(
+        name="DoorMatEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "cellular PVC",
+                PermissibleValue(text="cellular PVC") )
+        setattr(cls, "engineered plastic",
+                PermissibleValue(text="engineered plastic") )
+        setattr(cls, "thermoplastic alloy",
+                PermissibleValue(text="thermoplastic alloy") )
+        setattr(cls, "wood/plastic composite",
+                PermissibleValue(text="wood/plastic composite") )
+
+class IntWallCondEnum(EnumDefinitionImpl):
+
+    new = PermissibleValue(text="new")
+    damaged = PermissibleValue(text="damaged")
+    rupture = PermissibleValue(text="rupture")
+
+    _defn = EnumDefinition(
+        name="IntWallCondEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "visible wear",
+                PermissibleValue(text="visible wear") )
+        setattr(cls, "needs repair",
+                PermissibleValue(text="needs repair") )
+
+class RelSampLocEnum(EnumDefinitionImpl):
+
+    _defn = EnumDefinition(
+        name="RelSampLocEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "edge of car",
+                PermissibleValue(text="edge of car") )
+        setattr(cls, "center of car",
+                PermissibleValue(text="center of car") )
+        setattr(cls, "under a seat",
+                PermissibleValue(text="under a seat") )
+
+class FloorStrucEnum(EnumDefinitionImpl):
+
+    balcony = PermissibleValue(text="balcony")
+    concrete = PermissibleValue(text="concrete")
+
+    _defn = EnumDefinition(
+        name="FloorStrucEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "floating floor",
+                PermissibleValue(text="floating floor") )
+        setattr(cls, "glass floor",
+                PermissibleValue(text="glass floor") )
+        setattr(cls, "raised floor",
+                PermissibleValue(text="raised floor") )
+        setattr(cls, "sprung floor",
+                PermissibleValue(text="sprung floor") )
+        setattr(cls, "wood-framed",
+                PermissibleValue(text="wood-framed") )
+
+class DoorTypeEnum(EnumDefinitionImpl):
+
+    composite = PermissibleValue(text="composite")
+    metal = PermissibleValue(text="metal")
+    wooden = PermissibleValue(text="wooden")
+
+    _defn = EnumDefinition(
+        name="DoorTypeEnum",
+    )
+
+class DoorCondEnum(EnumDefinitionImpl):
+
+    damaged = PermissibleValue(text="damaged")
+    new = PermissibleValue(text="new")
+    rupture = PermissibleValue(text="rupture")
+
+    _defn = EnumDefinition(
+        name="DoorCondEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "needs repair",
+                PermissibleValue(text="needs repair") )
+        setattr(cls, "visible wear",
+                PermissibleValue(text="visible wear") )
+
+class DoorMoveEnum(EnumDefinitionImpl):
+
+    collapsible = PermissibleValue(text="collapsible")
+    folding = PermissibleValue(text="folding")
+    revolving = PermissibleValue(text="revolving")
+    sliding = PermissibleValue(text="sliding")
+    swinging = PermissibleValue(text="swinging")
+
+    _defn = EnumDefinition(
+        name="DoorMoveEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "rolling shutter",
+                PermissibleValue(text="rolling shutter") )
+
+class DoorLocEnum(EnumDefinitionImpl):
+
+    north = PermissibleValue(text="north")
+    south = PermissibleValue(text="south")
+    east = PermissibleValue(text="east")
+    west = PermissibleValue(text="west")
+
+    _defn = EnumDefinition(
+        name="DoorLocEnum",
+    )
+
+class WallConstTypeEnum(EnumDefinitionImpl):
+
+    _defn = EnumDefinition(
+        name="WallConstTypeEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "frame construction",
+                PermissibleValue(text="frame construction") )
+        setattr(cls, "joisted masonry",
+                PermissibleValue(text="joisted masonry") )
+        setattr(cls, "light noncombustible",
+                PermissibleValue(text="light noncombustible") )
+        setattr(cls, "masonry noncombustible",
+                PermissibleValue(text="masonry noncombustible") )
+        setattr(cls, "modified fire resistive",
+                PermissibleValue(text="modified fire resistive") )
+        setattr(cls, "fire resistive",
+                PermissibleValue(text="fire resistive") )
+
+class DoorDirectEnum(EnumDefinitionImpl):
+
+    inward = PermissibleValue(text="inward")
+    outward = PermissibleValue(text="outward")
+    sideways = PermissibleValue(text="sideways")
+
+    _defn = EnumDefinition(
+        name="DoorDirectEnum",
+    )
+
+class WindowLocEnum(EnumDefinitionImpl):
+
+    north = PermissibleValue(text="north")
+    south = PermissibleValue(text="south")
+    east = PermissibleValue(text="east")
+    west = PermissibleValue(text="west")
+
+    _defn = EnumDefinition(
+        name="WindowLocEnum",
+    )
+
+class RoomCondtEnum(EnumDefinitionImpl):
+
+    new = PermissibleValue(text="new")
+    damaged = PermissibleValue(text="damaged")
+    rupture = PermissibleValue(text="rupture")
+
+    _defn = EnumDefinition(
+        name="RoomCondtEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "visible wear",
+                PermissibleValue(text="visible wear") )
+        setattr(cls, "needs repair",
+                PermissibleValue(text="needs repair") )
+        setattr(cls, "visible signs of mold/mildew",
+                PermissibleValue(text="visible signs of mold/mildew") )
 
 class SampCollectPointEnum(EnumDefinitionImpl):
 
@@ -15135,6 +15135,88 @@ class AddRecovMethodEnum(EnumDefinitionImpl):
                 PermissibleValue(text="Not Applicable") )
         setattr(cls, "other;{timestamp}",
                 PermissibleValue(text="other;{timestamp}") )
+
+class HcrEnum(EnumDefinitionImpl):
+
+    Coalbed = PermissibleValue(text="Coalbed")
+    Shale = PermissibleValue(text="Shale")
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="HcrEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "Oil Reservoir",
+                PermissibleValue(text="Oil Reservoir") )
+        setattr(cls, "Gas Reservoir",
+                PermissibleValue(text="Gas Reservoir") )
+        setattr(cls, "Oil Sand",
+                PermissibleValue(text="Oil Sand") )
+        setattr(cls, "Tight Oil Reservoir",
+                PermissibleValue(text="Tight Oil Reservoir") )
+        setattr(cls, "Tight Gas Reservoir",
+                PermissibleValue(text="Tight Gas Reservoir") )
+
+class HcProducedEnum(EnumDefinitionImpl):
+
+    Oil = PermissibleValue(text="Oil")
+    Gas = PermissibleValue(text="Gas")
+    Bitumen = PermissibleValue(text="Bitumen")
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="HcProducedEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "Gas-Condensate",
+                PermissibleValue(text="Gas-Condensate") )
+        setattr(cls, "Coalbed Methane",
+                PermissibleValue(text="Coalbed Methane") )
+
+class DeposEnvEnum(EnumDefinitionImpl):
+
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="DeposEnvEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "Continental - Alluvial",
+                PermissibleValue(text="Continental - Alluvial") )
+        setattr(cls, "Continental - Aeolian",
+                PermissibleValue(text="Continental - Aeolian") )
+        setattr(cls, "Continental - Fluvial",
+                PermissibleValue(text="Continental - Fluvial") )
+        setattr(cls, "Continental - Lacustrine",
+                PermissibleValue(text="Continental - Lacustrine") )
+        setattr(cls, "Transitional - Deltaic",
+                PermissibleValue(text="Transitional - Deltaic") )
+        setattr(cls, "Transitional - Tidal",
+                PermissibleValue(text="Transitional - Tidal") )
+        setattr(cls, "Transitional - Lagoonal",
+                PermissibleValue(text="Transitional - Lagoonal") )
+        setattr(cls, "Transitional - Beach",
+                PermissibleValue(text="Transitional - Beach") )
+        setattr(cls, "Transitional - Lake",
+                PermissibleValue(text="Transitional - Lake") )
+        setattr(cls, "Marine - Shallow",
+                PermissibleValue(text="Marine - Shallow") )
+        setattr(cls, "Marine - Deep",
+                PermissibleValue(text="Marine - Deep") )
+        setattr(cls, "Marine - Reef",
+                PermissibleValue(text="Marine - Reef") )
+        setattr(cls, "Other - Evaporite",
+                PermissibleValue(text="Other - Evaporite") )
+        setattr(cls, "Other - Glacial",
+                PermissibleValue(text="Other - Glacial") )
+        setattr(cls, "Other - Volcanic",
+                PermissibleValue(text="Other - Volcanic") )
 
 class SampSubtypeEnum(EnumDefinitionImpl):
 
@@ -15189,69 +15271,15 @@ class OxyStatSampEnum(EnumDefinitionImpl):
         name="OxyStatSampEnum",
     )
 
-class DeposEnvEnum(EnumDefinitionImpl):
+class OrganismCountEnum(EnumDefinitionImpl):
 
+    ATP = PermissibleValue(text="ATP")
+    MPN = PermissibleValue(text="MPN")
     other = PermissibleValue(text="other")
 
     _defn = EnumDefinition(
-        name="DeposEnvEnum",
+        name="OrganismCountEnum",
     )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "Continental - Alluvial",
-                PermissibleValue(text="Continental - Alluvial") )
-        setattr(cls, "Continental - Aeolian",
-                PermissibleValue(text="Continental - Aeolian") )
-        setattr(cls, "Continental - Fluvial",
-                PermissibleValue(text="Continental - Fluvial") )
-        setattr(cls, "Continental - Lacustrine",
-                PermissibleValue(text="Continental - Lacustrine") )
-        setattr(cls, "Transitional - Deltaic",
-                PermissibleValue(text="Transitional - Deltaic") )
-        setattr(cls, "Transitional - Tidal",
-                PermissibleValue(text="Transitional - Tidal") )
-        setattr(cls, "Transitional - Lagoonal",
-                PermissibleValue(text="Transitional - Lagoonal") )
-        setattr(cls, "Transitional - Beach",
-                PermissibleValue(text="Transitional - Beach") )
-        setattr(cls, "Transitional - Lake",
-                PermissibleValue(text="Transitional - Lake") )
-        setattr(cls, "Marine - Shallow",
-                PermissibleValue(text="Marine - Shallow") )
-        setattr(cls, "Marine - Deep",
-                PermissibleValue(text="Marine - Deep") )
-        setattr(cls, "Marine - Reef",
-                PermissibleValue(text="Marine - Reef") )
-        setattr(cls, "Other - Evaporite",
-                PermissibleValue(text="Other - Evaporite") )
-        setattr(cls, "Other - Glacial",
-                PermissibleValue(text="Other - Glacial") )
-        setattr(cls, "Other - Volcanic",
-                PermissibleValue(text="Other - Volcanic") )
-
-class HcrEnum(EnumDefinitionImpl):
-
-    Coalbed = PermissibleValue(text="Coalbed")
-    Shale = PermissibleValue(text="Shale")
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="HcrEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "Oil Reservoir",
-                PermissibleValue(text="Oil Reservoir") )
-        setattr(cls, "Gas Reservoir",
-                PermissibleValue(text="Gas Reservoir") )
-        setattr(cls, "Oil Sand",
-                PermissibleValue(text="Oil Sand") )
-        setattr(cls, "Tight Oil Reservoir",
-                PermissibleValue(text="Tight Oil Reservoir") )
-        setattr(cls, "Tight Gas Reservoir",
-                PermissibleValue(text="Tight Gas Reservoir") )
 
 class LithologyEnum(EnumDefinitionImpl):
 
@@ -15273,51 +15301,6 @@ class LithologyEnum(EnumDefinitionImpl):
         name="LithologyEnum",
     )
 
-class OrganismCountEnum(EnumDefinitionImpl):
-
-    ATP = PermissibleValue(text="ATP")
-    MPN = PermissibleValue(text="MPN")
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="OrganismCountEnum",
-    )
-
-class HcProducedEnum(EnumDefinitionImpl):
-
-    Oil = PermissibleValue(text="Oil")
-    Gas = PermissibleValue(text="Gas")
-    Bitumen = PermissibleValue(text="Bitumen")
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="HcProducedEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "Gas-Condensate",
-                PermissibleValue(text="Gas-Condensate") )
-        setattr(cls, "Coalbed Methane",
-                PermissibleValue(text="Coalbed Methane") )
-
-class SampDisStageEnum(EnumDefinitionImpl):
-
-    dissemination = PermissibleValue(text="dissemination")
-    infection = PermissibleValue(text="infection")
-    inoculation = PermissibleValue(text="inoculation")
-    penetration = PermissibleValue(text="penetration")
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="SampDisStageEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "growth and reproduction",
-                PermissibleValue(text="growth and reproduction") )
-
 class SampCaptStatusEnum(EnumDefinitionImpl):
 
     other = PermissibleValue(text="other")
@@ -15336,6 +15319,23 @@ class SampCaptStatusEnum(EnumDefinitionImpl):
                 PermissibleValue(text="farm sample") )
         setattr(cls, "market sample",
                 PermissibleValue(text="market sample") )
+
+class SampDisStageEnum(EnumDefinitionImpl):
+
+    dissemination = PermissibleValue(text="dissemination")
+    infection = PermissibleValue(text="infection")
+    inoculation = PermissibleValue(text="inoculation")
+    penetration = PermissibleValue(text="penetration")
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="SampDisStageEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "growth and reproduction",
+                PermissibleValue(text="growth and reproduction") )
 
 class BiolStatEnum(EnumDefinitionImpl):
 
@@ -15376,25 +15376,41 @@ class TidalStageEnum(EnumDefinitionImpl):
         setattr(cls, "high tide",
                 PermissibleValue(text="high tide") )
 
-class DrainageClassEnum(EnumDefinitionImpl):
+class TillageEnum(EnumDefinitionImpl):
 
-    poorly = PermissibleValue(text="poorly")
-    well = PermissibleValue(text="well")
+    drill = PermissibleValue(text="drill")
+    chisel = PermissibleValue(text="chisel")
+    tined = PermissibleValue(text="tined")
+    mouldboard = PermissibleValue(text="mouldboard")
 
     _defn = EnumDefinition(
-        name="DrainageClassEnum",
+        name="TillageEnum",
     )
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "very poorly",
-                PermissibleValue(text="very poorly") )
-        setattr(cls, "somewhat poorly",
-                PermissibleValue(text="somewhat poorly") )
-        setattr(cls, "moderately well",
-                PermissibleValue(text="moderately well") )
-        setattr(cls, "excessively drained",
-                PermissibleValue(text="excessively drained") )
+        setattr(cls, "cutting disc",
+                PermissibleValue(text="cutting disc") )
+        setattr(cls, "ridge till",
+                PermissibleValue(text="ridge till") )
+        setattr(cls, "strip tillage",
+                PermissibleValue(text="strip tillage") )
+        setattr(cls, "zonal tillage",
+                PermissibleValue(text="zonal tillage") )
+        setattr(cls, "disc plough",
+                PermissibleValue(text="disc plough") )
+
+class ProfilePositionEnum(EnumDefinitionImpl):
+
+    summit = PermissibleValue(text="summit")
+    shoulder = PermissibleValue(text="shoulder")
+    backslope = PermissibleValue(text="backslope")
+    footslope = PermissibleValue(text="footslope")
+    toeslope = PermissibleValue(text="toeslope")
+
+    _defn = EnumDefinition(
+        name="ProfilePositionEnum",
+    )
 
 class FaoClassEnum(EnumDefinitionImpl):
 
@@ -15429,30 +15445,6 @@ class FaoClassEnum(EnumDefinitionImpl):
         name="FaoClassEnum",
     )
 
-class TillageEnum(EnumDefinitionImpl):
-
-    drill = PermissibleValue(text="drill")
-    chisel = PermissibleValue(text="chisel")
-    tined = PermissibleValue(text="tined")
-    mouldboard = PermissibleValue(text="mouldboard")
-
-    _defn = EnumDefinition(
-        name="TillageEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "cutting disc",
-                PermissibleValue(text="cutting disc") )
-        setattr(cls, "ridge till",
-                PermissibleValue(text="ridge till") )
-        setattr(cls, "strip tillage",
-                PermissibleValue(text="strip tillage") )
-        setattr(cls, "zonal tillage",
-                PermissibleValue(text="zonal tillage") )
-        setattr(cls, "disc plough",
-                PermissibleValue(text="disc plough") )
-
 class SoilHorizonEnum(EnumDefinitionImpl):
 
     Permafrost = PermissibleValue(text="Permafrost")
@@ -15475,6 +15467,26 @@ class SoilHorizonEnum(EnumDefinitionImpl):
                 PermissibleValue(text="C horizon") )
         setattr(cls, "R layer",
                 PermissibleValue(text="R layer") )
+
+class DrainageClassEnum(EnumDefinitionImpl):
+
+    poorly = PermissibleValue(text="poorly")
+    well = PermissibleValue(text="well")
+
+    _defn = EnumDefinition(
+        name="DrainageClassEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "very poorly",
+                PermissibleValue(text="very poorly") )
+        setattr(cls, "somewhat poorly",
+                PermissibleValue(text="somewhat poorly") )
+        setattr(cls, "moderately well",
+                PermissibleValue(text="moderately well") )
+        setattr(cls, "excessively drained",
+                PermissibleValue(text="excessively drained") )
 
 class CurLandUseEnum(EnumDefinitionImpl):
 
@@ -15547,17 +15559,42 @@ class CurLandUseEnum(EnumDefinitionImpl):
         setattr(cls, "crop trees (nuts,fruit,christmas trees,nursery trees)",
                 PermissibleValue(text="crop trees (nuts,fruit,christmas trees,nursery trees)") )
 
-class ProfilePositionEnum(EnumDefinitionImpl):
+class PlantGrowthMedEnum(EnumDefinitionImpl):
 
-    summit = PermissibleValue(text="summit")
-    shoulder = PermissibleValue(text="shoulder")
-    backslope = PermissibleValue(text="backslope")
-    footslope = PermissibleValue(text="footslope")
-    toeslope = PermissibleValue(text="toeslope")
+    perlite = PermissibleValue(text="perlite")
+    pumice = PermissibleValue(text="pumice")
+    sand = PermissibleValue(text="sand")
+    soil = PermissibleValue(text="soil")
+    vermiculite = PermissibleValue(text="vermiculite")
+    water = PermissibleValue(text="water")
 
     _defn = EnumDefinition(
-        name="ProfilePositionEnum",
+        name="PlantGrowthMedEnum",
     )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "other artificial liquid medium",
+                PermissibleValue(text="other artificial liquid medium") )
+        setattr(cls, "other artificial solid medium",
+                PermissibleValue(text="other artificial solid medium") )
+        setattr(cls, "peat moss",
+                PermissibleValue(text="peat moss") )
+
+class GrowthHabitEnum(EnumDefinitionImpl):
+
+    erect = PermissibleValue(text="erect")
+    spreading = PermissibleValue(text="spreading")
+    prostrate = PermissibleValue(text="prostrate")
+
+    _defn = EnumDefinition(
+        name="GrowthHabitEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "semi-erect",
+                PermissibleValue(text="semi-erect") )
 
 class PlantSexEnum(EnumDefinitionImpl):
 
@@ -15595,43 +15632,6 @@ class PlantSexEnum(EnumDefinitionImpl):
         name="PlantSexEnum",
     )
 
-class GrowthHabitEnum(EnumDefinitionImpl):
-
-    erect = PermissibleValue(text="erect")
-    spreading = PermissibleValue(text="spreading")
-    prostrate = PermissibleValue(text="prostrate")
-
-    _defn = EnumDefinition(
-        name="GrowthHabitEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "semi-erect",
-                PermissibleValue(text="semi-erect") )
-
-class PlantGrowthMedEnum(EnumDefinitionImpl):
-
-    perlite = PermissibleValue(text="perlite")
-    pumice = PermissibleValue(text="pumice")
-    sand = PermissibleValue(text="sand")
-    soil = PermissibleValue(text="soil")
-    vermiculite = PermissibleValue(text="vermiculite")
-    water = PermissibleValue(text="water")
-
-    _defn = EnumDefinition(
-        name="PlantGrowthMedEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "other artificial liquid medium",
-                PermissibleValue(text="other artificial liquid medium") )
-        setattr(cls, "other artificial solid medium",
-                PermissibleValue(text="other artificial solid medium") )
-        setattr(cls, "peat moss",
-                PermissibleValue(text="peat moss") )
-
 class HostSexEnum(EnumDefinitionImpl):
 
     female = PermissibleValue(text="female")
@@ -15642,6 +15642,25 @@ class HostSexEnum(EnumDefinitionImpl):
     _defn = EnumDefinition(
         name="HostSexEnum",
     )
+
+class SrKerogTypeEnum(EnumDefinitionImpl):
+
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="SrKerogTypeEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "Type I",
+                PermissibleValue(text="Type I") )
+        setattr(cls, "Type II",
+                PermissibleValue(text="Type II") )
+        setattr(cls, "Type III",
+                PermissibleValue(text="Type III") )
+        setattr(cls, "Type IV",
+                PermissibleValue(text="Type IV") )
 
 class SrGeolAgeEnum(EnumDefinitionImpl):
 
@@ -15668,18 +15687,6 @@ class SrGeolAgeEnum(EnumDefinitionImpl):
         name="SrGeolAgeEnum",
     )
 
-class SampMdEnum(EnumDefinitionImpl):
-
-    DF = PermissibleValue(text="DF")
-    RT = PermissibleValue(text="RT")
-    KB = PermissibleValue(text="KB")
-    MSL = PermissibleValue(text="MSL")
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="SampMdEnum",
-    )
-
 class SrLithologyEnum(EnumDefinitionImpl):
 
     Clastic = PermissibleValue(text="Clastic")
@@ -15690,6 +15697,18 @@ class SrLithologyEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="SrLithologyEnum",
+    )
+
+class SampMdEnum(EnumDefinitionImpl):
+
+    DF = PermissibleValue(text="DF")
+    RT = PermissibleValue(text="RT")
+    KB = PermissibleValue(text="KB")
+    MSL = PermissibleValue(text="MSL")
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="SampMdEnum",
     )
 
 class SrDepEnvEnum(EnumDefinitionImpl):
@@ -15703,25 +15722,6 @@ class SrDepEnvEnum(EnumDefinitionImpl):
     _defn = EnumDefinition(
         name="SrDepEnvEnum",
     )
-
-class SrKerogTypeEnum(EnumDefinitionImpl):
-
-    other = PermissibleValue(text="other")
-
-    _defn = EnumDefinition(
-        name="SrKerogTypeEnum",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "Type I",
-                PermissibleValue(text="Type I") )
-        setattr(cls, "Type II",
-                PermissibleValue(text="Type II") )
-        setattr(cls, "Type III",
-                PermissibleValue(text="Type III") )
-        setattr(cls, "Type IV",
-                PermissibleValue(text="Type IV") )
 
 class SedimentTypeEnum(EnumDefinitionImpl):
 
@@ -17403,6 +17403,9 @@ slots.ecosystem_type = Slot(uri=NMDC_DH.ecosystem_type, name="ecosystem_type", c
 slots.specific_ecosystem = Slot(uri=NMDC_DH.specific_ecosystem, name="specific_ecosystem", curie=NMDC_DH.curie('specific_ecosystem'),
                    model_uri=NMDC_DH.specific_ecosystem, domain=None, range=Optional[str])
 
+slots.has_unit = Slot(uri=NMDC_DH.has_unit, name="has unit", curie=NMDC_DH.curie('has_unit'),
+                   model_uri=NMDC_DH.has_unit, domain=None, range=Optional[str])
+
 slots.core_field = Slot(uri=NMDC_DH.core_field, name="core field", curie=NMDC_DH.curie('core_field'),
                    model_uri=NMDC_DH.core_field, domain=None, range=Optional[str])
 
@@ -17412,23 +17415,20 @@ slots.has_numeric_value = Slot(uri=NMDC_DH.has_numeric_value, name="has numeric 
 slots.has_raw_value = Slot(uri=NMDC_DH.has_raw_value, name="has raw value", curie=NMDC_DH.curie('has_raw_value'),
                    model_uri=NMDC_DH.has_raw_value, domain=None, range=Optional[str])
 
-slots.has_unit = Slot(uri=NMDC_DH.has_unit, name="has unit", curie=NMDC_DH.curie('has_unit'),
-                   model_uri=NMDC_DH.has_unit, domain=None, range=Optional[str])
-
-slots.investigation_field = Slot(uri=NMDC_DH.investigation_field, name="investigation field", curie=NMDC_DH.curie('investigation_field'),
-                   model_uri=NMDC_DH.investigation_field, domain=None, range=Optional[str])
+slots.environment_field = Slot(uri=NMDC_DH.environment_field, name="environment field", curie=NMDC_DH.curie('environment_field'),
+                   model_uri=NMDC_DH.environment_field, domain=None, range=Optional[str])
 
 slots.nucleic_acid_sequence_source_field = Slot(uri=NMDC_DH.nucleic_acid_sequence_source_field, name="nucleic acid sequence source field", curie=NMDC_DH.curie('nucleic_acid_sequence_source_field'),
                    model_uri=NMDC_DH.nucleic_acid_sequence_source_field, domain=None, range=Optional[str])
 
-slots.environment_field = Slot(uri=NMDC_DH.environment_field, name="environment field", curie=NMDC_DH.curie('environment_field'),
-                   model_uri=NMDC_DH.environment_field, domain=None, range=Optional[str])
-
-slots.gold_path_field = Slot(uri=NMDC_DH.gold_path_field, name="gold_path_field", curie=NMDC_DH.curie('gold_path_field'),
-                   model_uri=NMDC_DH.gold_path_field, domain=None, range=Optional[str])
+slots.investigation_field = Slot(uri=NMDC_DH.investigation_field, name="investigation field", curie=NMDC_DH.curie('investigation_field'),
+                   model_uri=NMDC_DH.investigation_field, domain=None, range=Optional[str])
 
 slots.attribute = Slot(uri=NMDC_DH.attribute, name="attribute", curie=NMDC_DH.curie('attribute'),
                    model_uri=NMDC_DH.attribute, domain=None, range=Optional[str])
+
+slots.gold_path_field = Slot(uri=NMDC_DH.gold_path_field, name="gold_path_field", curie=NMDC_DH.curie('gold_path_field'),
+                   model_uri=NMDC_DH.gold_path_field, domain=None, range=Optional[str])
 
 slots.quantityValue__has_unit = Slot(uri="str(uriorcurie)", name="quantityValue__has_unit", curie=None,
                    model_uri=NMDC_DH.quantityValue__has_unit, domain=None, range=Optional[str])
