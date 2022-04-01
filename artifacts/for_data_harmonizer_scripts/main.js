@@ -13,8 +13,11 @@
  */
 const VERSION = '0.15.1';
 const VERSION_TEXT = 'DataHarmonizer provenance: v' + VERSION;
+//const TEMPLATES = {
+//  'NMDC Development DH Interface': {'folder': 'nmdc', 'status': 'published'}
+//};
 const TEMPLATES = {
-  'NMDC Development DH Interface': {'folder': 'nmdc', 'status': 'published'}
+  'NMDC Development DH Interface': {'folder': 'soil_emsl_jgi_mg', 'status': 'published'}
 };
 // Currently selected cell range[row,col,row2,col2]
 CURRENT_SELECTION = [null,null,null,null];
