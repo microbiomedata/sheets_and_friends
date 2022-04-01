@@ -23,7 +23,7 @@ html, body {
 }
 
 /* Toolbar */
-#header-row {
+.data-harmonizer-header {
     visibility: hidden;
 }
 .dropdown-item:hover {
@@ -45,6 +45,16 @@ html, body {
     z-index: 5000;
 }
 
+/* Specify headers modal */
+#specify-headers-comparison-row {
+	overflow-x: auto;
+}
+#expected-headers-div, #actual-headers-div {
+	white-space: pre;
+}
+#specify-headers-err-msg {
+	display: none;
+}
 
 /* Getting started modal */
 .carousel-control-prev-icon {
@@ -65,40 +75,28 @@ html, body {
 }
 
 /* Grid */
-#grid {
-	width: 100%;
+.data-harmonizer-grid {
 	overflow: hidden;
 }
-#grid .secondary-header-cell:hover {
+.data-harmonizer-grid .secondary-header-cell:hover {
 	cursor: pointer;
 }
-#grid td.invalid-cell {
+.data-harmonizer-grid td.invalid-cell {
 	background-color: #ffcccb !important;
 }
-#grid td.empty-invalid-cell {
+.data-harmonizer-grid td.empty-invalid-cell {
 	background-color: #ff91a4 !important;
 }
-#grid .htAutocompleteArrow {
+.data-harmonizer-grid .htAutocompleteArrow {
 	color: gray;
 }
-
-/* To left align 1st and second row headers, uncomment this.
-Otherwise first two rows of column headers are centered.*/
-#grid th {
-	text-align: left; 
+.data-harmonizer-grid th {
+	text-align: left;
 }
-
-/* To center 2nd row headers, uncomment this style. */
-#grid thead > tr:nth-child(2) > th div.relative {
-	text-align: center;
-}
-
-
-
-#grid th.required {
+.data-harmonizer-grid th.required {
 	background-color:yellow;
 }
-#grid th.recommended {
+.data-harmonizer-grid th.recommended {
 	background-color:plum;
 }
 
@@ -119,30 +117,25 @@ Otherwise first two rows of column headers are centered.*/
 }
 
 /* Fixed col */
-#grid th.overlayEdge {
+.data-harmonizer-grid th.overlayEdge {
 	border-right: medium solid gray;
 }
-#grid table.htCore > tbody > tr td:nth-child(2) {
+.data-harmonizer-grid table.htCore > tbody > tr td:nth-child(2) {
 	border-right: medium solid gray;
   	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-#add-rows-input {max-width:5rem}
+.add-rows-input {max-width:5rem !important}
 
 /* Below grid */
-#footer-row {
+.data-harmonizer-footer {
     visibility: hidden;
 }
 
+#data-harmonizer-toolbar-inset {visibility: hidden}
 
-/* Specify headers modal */
+.field-description-text select {min-width: 95%}
 
-
-#specify-headers-err-msg {
-	display: none;
-}
-
- 
 #field-mapping-container {
 	overflow-x: scroll; 
 	padding-bottom: 1rem;
@@ -153,6 +146,7 @@ Otherwise first two rows of column headers are centered.*/
 	white-space: nowrap;
 }
 
+#field-mapping col {border-left: 2px solid black}
 #field-mapping col:first-child {background: #FF0}
 #field-mapping col:nth-child(2n+3) {background: #CCC}
 
