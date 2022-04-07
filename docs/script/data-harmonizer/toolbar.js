@@ -6,10 +6,8 @@ DataHarmonizerToolbar = {
 	 * Wire up user controls which only need to happen once on load of page.
 	 */
 	init: function (dh, dhToolbar) {
-
+		const self = this; //For anonymous button functions etc.
 		this.dh = dh;
-		this.dhToolbar = dhToolbar;
-		//self = this;
 
 		$('#version-dropdown-item').text('version ' + VERSION);
 
@@ -17,9 +15,9 @@ DataHarmonizerToolbar = {
 		this.templateOptions(dh);
 
 		// Enable template to be loaded dynamically
-		$('#select-template-load').on('click', (e) => {
-			this.dh.useTemplate($('#select-template').val());
-			this.refresh();
+		$('#select-template-load').on('click', async function () {
+			await self.dh.useTemplate($('#select-template').val());
+			await self.refresh();
 		})
 		// Triggers show/hide of draft templates
 		$("#view-template-drafts").on('change', this.templateOptions(dh));
@@ -130,6 +128,19 @@ DataHarmonizerToolbar = {
 			}
 		});
 
+		// Settings -> Show ... columns
+		const showColsSelectors = [
+			'#show-all-cols-dropdown-item', 
+			'#show-required-cols-dropdown-item',
+			'#show-recommended-cols-dropdown-item',
+			'.show-section-dropdown-item',
+		];
+
+		$(dhToolbar).on('click', showColsSelectors.join(','), function(e) {
+			//self.dh.runBehindLoadingScreen(self.dh.changeColVisibility, [e.target.id]);
+			self.dh.changeColVisibility(e.target.id);
+		});
+
 		// Settings -> Jump to...
 		const $jumpToInput = $('#jump-to-input');
 		$jumpToInput.bind('focus', () => void $jumpToInput.autocomplete('search'));
@@ -199,7 +210,7 @@ DataHarmonizerToolbar = {
 		});
 
 		// Validate
-		$('#validate-btn').on('click', this.validate);
+		$('#validate-btn').on('click', () => {self.validate()} );
 
 		// Settings -> Show ... rows
 		const showRowsSelectors = [
@@ -209,19 +220,18 @@ DataHarmonizerToolbar = {
 		];
 		$(showRowsSelectors.join(',')).click((e) => {
 			//dh.runBehindLoadingScreen(dh.changeRowVisibility, [e.target.id]);
-			dh.changeRowVisibility(e.target.id);
+			self.dh.changeRowVisibility(e.target.id);
 		});
 
 
 	},
 
-	validate: function() {
-		//self.dh.runBehindLoadingScreen(() => {
-			self.dh.validate();
-		//});
+	validate: async function() {
+
+		await this.dh.runBehindLoadingScreen(this.dh.validate);
 
 		// If any rows have error, show this.
-		if (Object.keys(self.dh.invalid_cells).length > 0) {
+		if (Object.keys(this.dh.invalid_cells).length > 0) {
 			$('#next-error-button').show();
 			$('#no-error-button').hide();
 		}
@@ -232,8 +242,7 @@ DataHarmonizerToolbar = {
 	},
 
 	refresh: function () {
-		self = this;
-
+		const self = this;
 		$('#select-template').val(this.dh.template_path);
 		$('#template_name_display').text(this.dh.template_path);
 		$('#file_name_display').text('');
@@ -261,19 +270,6 @@ DataHarmonizerToolbar = {
 			section_ptr ++;
 		}
 
-		// Settings -> Show ... columns
-		const showColsSelectors = [
-			'#show-all-cols-dropdown-item', 
-			'#show-required-cols-dropdown-item',
-			'#show-recommended-cols-dropdown-item',
-			'.show-section-dropdown-item',
-		];
-
-		$(showColsSelectors.join(',')).off().on('click', function(e) {
-			//self.dh.runBehindLoadingScreen(self.dh.changeColVisibility, [e.target.id]);
-			self.dh.changeColVisibility(e.target.id);
-		});
-
 		// Settings -> Jump to...
 		$('#jump-to-input').autocomplete({
 			source: Object.keys(columnCoordinates),
@@ -297,7 +293,7 @@ DataHarmonizerToolbar = {
 	 * Show available templates, with sensitivity to "view draft template" checkbox
 	 */
 	templateOptions: function (dh) {
-		self = this;
+		const self = this;
 		// Select menu for available templates
 		const select = $("#select-template");
 		select.empty();
