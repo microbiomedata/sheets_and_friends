@@ -9,6 +9,25 @@ desired_interface = soil_emsl_jgi_mg
 
 all: clean project docs/template/nmdc/data.js artifacts/nmdc_dh_vs_mixs_enums.yaml
 
+docs/template/nmdc_dh/schema.js: clean artifacts/nmdc_dh.yaml
+	# omitting project generation step
+	# should probably add a schema validation step
+	rm -rf DataHarmonizer/template/menu.js
+	rm -rf DataHarmonizer/template/MIxS/schema.js
+	rm -rf DataHarmonizer/template/nmdc_dh/schema.js
+	rm -rf DataHarmonizer/template/nmdc_dh/source/nmdc_dh.yaml
+	rm -rf DataHarmonizer/template/MIxS
+	rm -rf DataHarmonizer/template/canada_covid19
+	rm -rf DataHarmonizer/template/gisaid
+	rm -rf DataHarmonizer/template/grdi
+	rm -rf DataHarmonizer/template/pha4ge
+	rm -rf DataHarmonizer/template/phac_dexa
+	rm -rf artifacts/from_sheets2linkml.yaml artifacts/with_shuttles.yaml docs/script/linkml.py
+	cp artifacts/nmdc_dh.yaml DataHarmonizer/template/nmdc_dh/source
+	# generalize this?
+	cd DataHarmonizer/template/nmdc_dh ; poetry run python ../../script/linkml.py --input source/nmdc_dh.yaml
+	cp -r DataHarmonizer/linkml.html DataHarmonizer/linkml.js DataHarmonizer/main.css DataHarmonizer/libraries DataHarmonizer/script DataHarmonizer/template docs
+
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
