@@ -31,4 +31,3 @@ modifications_and_validation = "sheets_and_friends.modifications_and_validation:
 linkml2dataharmonizer = "sheets_and_friends.converters.commands:linkml2dataharmonizer"
 promote_to_select = "sheets_and_friends.converters.commands:promote_to_select"
 compare_enums = "sheets_and_friends.compare_enums:compare_enums"
-add_regex_validators = "sheets_and_friends.regex_validators:add_regex_validators"
