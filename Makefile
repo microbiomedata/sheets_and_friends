@@ -53,11 +53,17 @@ artifacts/with_shuttles.yaml: .cogs/tracked/import_slots_regardless.tsv artifact
 	poetry run do_shuttle --config_tsv $< --yaml_output $@ --recipient_model $(word 2,$^) 2> logs/do_shuttle.log
 
 # clean? cogs_fetch?
-artifacts/nmdc_dh.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shuttles.yaml
+artifacts/slots_modified.yaml: .cogs/tracked/modifications_long.tsv artifacts/with_shuttles.yaml
 	poetry run mod_by_path \
 		--config_tsv $< \
 		--yaml_input $(word 2,$^) \
 		--yaml_output $@  2>> logs/mod_by_path.log
+
+artifacts/nmdc_dh.yaml: .cogs/tracked/validation_converter.tsv artifacts/slots_modified.yaml
+	poetry run add_regex_validators \
+		--config_tsv $< \
+		--yaml_input $(word 2,$^) \
+		--yaml_output $@  2>> logs/regex_validation.log
 
 clean:
 	rm -rf DataHarmonizer/template/nmdc
