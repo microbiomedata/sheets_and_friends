@@ -27,6 +27,7 @@ docs/template/nmdc_dh/schema.js: clean artifacts/nmdc_dh.yaml
 	# generalize this?
 	cd DataHarmonizer/template/nmdc_dh ; poetry run python ../../script/linkml.py --input source/nmdc_dh.yaml
 	cp -r DataHarmonizer/linkml.html DataHarmonizer/linkml.js DataHarmonizer/main.css DataHarmonizer/libraries DataHarmonizer/script DataHarmonizer/template docs
+	cp artifacts/for_data_harmonizer_scripts/linkml.js docs
 
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
