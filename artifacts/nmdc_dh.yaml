@@ -409,28 +409,6 @@ enums:
         text: lyophilized
       other:
         text: other
-  tillage_enum:
-    name: tillage_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      drill:
-        text: drill
-      cutting disc:
-        text: cutting disc
-      ridge till:
-        text: ridge till
-      strip tillage:
-        text: strip tillage
-      zonal tillage:
-        text: zonal tillage
-      chisel:
-        text: chisel
-      tined:
-        text: tined
-      mouldboard:
-        text: mouldboard
-      disc plough:
-        text: disc plough
   cur_land_use_enum:
     name: cur_land_use_enum
     from_schema: http://w3id.org/mixs/terms
@@ -506,24 +484,20 @@ enums:
         text: swamp (permanent or semi-permanent water body dominated by woody plants)
       crop trees (nuts,fruit,christmas trees,nursery trees):
         text: crop trees (nuts,fruit,christmas trees,nursery trees)
-  soil_horizon_enum:
-    name: soil_horizon_enum
+  profile_position_enum:
+    name: profile_position_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      O horizon:
-        text: O horizon
-      A horizon:
-        text: A horizon
-      E horizon:
-        text: E horizon
-      B horizon:
-        text: B horizon
-      C horizon:
-        text: C horizon
-      R layer:
-        text: R layer
-      Permafrost:
-        text: Permafrost
+      summit:
+        text: summit
+      shoulder:
+        text: shoulder
+      backslope:
+        text: backslope
+      footslope:
+        text: footslope
+      toeslope:
+        text: toeslope
   drainage_class_enum:
     name: drainage_class_enum
     from_schema: http://w3id.org/mixs/terms
@@ -596,20 +570,46 @@ enums:
         text: Vertisols
       Yermosols:
         text: Yermosols
-  profile_position_enum:
-    name: profile_position_enum
+  tillage_enum:
+    name: tillage_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      summit:
-        text: summit
-      shoulder:
-        text: shoulder
-      backslope:
-        text: backslope
-      footslope:
-        text: footslope
-      toeslope:
-        text: toeslope
+      drill:
+        text: drill
+      cutting disc:
+        text: cutting disc
+      ridge till:
+        text: ridge till
+      strip tillage:
+        text: strip tillage
+      zonal tillage:
+        text: zonal tillage
+      chisel:
+        text: chisel
+      tined:
+        text: tined
+      mouldboard:
+        text: mouldboard
+      disc plough:
+        text: disc plough
+  soil_horizon_enum:
+    name: soil_horizon_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      O horizon:
+        text: O horizon
+      A horizon:
+        text: A horizon
+      E horizon:
+        text: E horizon
+      B horizon:
+        text: B horizon
+      C horizon:
+        text: C horizon
+      R layer:
+        text: R layer
+      Permafrost:
+        text: Permafrost
   organism_count_enum:
     name: organism_count_enum
     from_schema: http://w3id.org/mixs/terms
@@ -628,96 +628,6 @@ enums:
         text: aerobic
       anaerobic:
         text: anaerobic
-      other:
-        text: other
-  samp_subtype_enum:
-    name: samp_subtype_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      oil phase:
-        text: oil phase
-      water phase:
-        text: water phase
-      biofilm:
-        text: biofilm
-      not applicable:
-        text: not applicable
-      other:
-        text: other
-  hc_produced_enum:
-    name: hc_produced_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Oil:
-        text: Oil
-      Gas-Condensate:
-        text: Gas-Condensate
-      Gas:
-        text: Gas
-      Bitumen:
-        text: Bitumen
-      Coalbed Methane:
-        text: Coalbed Methane
-      other:
-        text: other
-  hcr_geol_age_enum:
-    name: hcr_geol_age_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Archean:
-        text: Archean
-      Cambrian:
-        text: Cambrian
-      Carboniferous:
-        text: Carboniferous
-      Cenozoic:
-        text: Cenozoic
-      Cretaceous:
-        text: Cretaceous
-      Devonian:
-        text: Devonian
-      Jurassic:
-        text: Jurassic
-      Mesozoic:
-        text: Mesozoic
-      Neogene:
-        text: Neogene
-      Ordovician:
-        text: Ordovician
-      Paleogene:
-        text: Paleogene
-      Paleozoic:
-        text: Paleozoic
-      Permian:
-        text: Permian
-      Precambrian:
-        text: Precambrian
-      Proterozoic:
-        text: Proterozoic
-      Silurian:
-        text: Silurian
-      Triassic:
-        text: Triassic
-      other:
-        text: other
-  hcr_enum:
-    name: hcr_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Oil Reservoir:
-        text: Oil Reservoir
-      Gas Reservoir:
-        text: Gas Reservoir
-      Oil Sand:
-        text: Oil Sand
-      Coalbed:
-        text: Coalbed
-      Shale:
-        text: Shale
-      Tight Oil Reservoir:
-        text: Tight Oil Reservoir
-      Tight Gas Reservoir:
-        text: Tight Gas Reservoir
       other:
         text: other
   lithology_enum:
@@ -786,18 +696,94 @@ enums:
         text: Other - Volcanic
       other:
         text: other
-  samp_capt_status_enum:
-    name: samp_capt_status_enum
+  samp_subtype_enum:
+    name: samp_subtype_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      active surveillance in response to an outbreak:
-        text: active surveillance in response to an outbreak
-      active surveillance not initiated by an outbreak:
-        text: active surveillance not initiated by an outbreak
-      farm sample:
-        text: farm sample
-      market sample:
-        text: market sample
+      oil phase:
+        text: oil phase
+      water phase:
+        text: water phase
+      biofilm:
+        text: biofilm
+      not applicable:
+        text: not applicable
+      other:
+        text: other
+  hc_produced_enum:
+    name: hc_produced_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Oil:
+        text: Oil
+      Gas-Condensate:
+        text: Gas-Condensate
+      Gas:
+        text: Gas
+      Bitumen:
+        text: Bitumen
+      Coalbed Methane:
+        text: Coalbed Methane
+      other:
+        text: other
+  hcr_enum:
+    name: hcr_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Oil Reservoir:
+        text: Oil Reservoir
+      Gas Reservoir:
+        text: Gas Reservoir
+      Oil Sand:
+        text: Oil Sand
+      Coalbed:
+        text: Coalbed
+      Shale:
+        text: Shale
+      Tight Oil Reservoir:
+        text: Tight Oil Reservoir
+      Tight Gas Reservoir:
+        text: Tight Gas Reservoir
+      other:
+        text: other
+  hcr_geol_age_enum:
+    name: hcr_geol_age_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Archean:
+        text: Archean
+      Cambrian:
+        text: Cambrian
+      Carboniferous:
+        text: Carboniferous
+      Cenozoic:
+        text: Cenozoic
+      Cretaceous:
+        text: Cretaceous
+      Devonian:
+        text: Devonian
+      Jurassic:
+        text: Jurassic
+      Mesozoic:
+        text: Mesozoic
+      Neogene:
+        text: Neogene
+      Ordovician:
+        text: Ordovician
+      Paleogene:
+        text: Paleogene
+      Paleozoic:
+        text: Paleozoic
+      Permian:
+        text: Permian
+      Precambrian:
+        text: Precambrian
+      Proterozoic:
+        text: Proterozoic
+      Silurian:
+        text: Silurian
+      Triassic:
+        text: Triassic
       other:
         text: other
   samp_dis_stage_enum:
@@ -814,6 +800,20 @@ enums:
         text: inoculation
       penetration:
         text: penetration
+      other:
+        text: other
+  samp_capt_status_enum:
+    name: samp_capt_status_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      active surveillance in response to an outbreak:
+        text: active surveillance in response to an outbreak
+      active surveillance not initiated by an outbreak:
+        text: active surveillance not initiated by an outbreak
+      farm sample:
+        text: farm sample
+      market sample:
+        text: market sample
       other:
         text: other
   biol_stat_enum:
@@ -860,114 +860,22 @@ enums:
         text: hydrogenous
       lithogenous:
         text: lithogenous
-  room_loc_enum:
-    name: room_loc_enum
+  light_type_enum:
+    name: light_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      corner room:
-        text: corner room
-      interior room:
-        text: interior room
-      exterior wall:
-        text: exterior wall
-  door_loc_enum:
-    name: door_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  substructure_type_enum:
-    name: substructure_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      crawlspace:
-        text: crawlspace
-      slab on grade:
-        text: slab on grade
-      basement:
-        text: basement
-  surf_air_cont_enum:
-    name: surf_air_cont_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      dust:
-        text: dust
-      organic matter:
-        text: organic matter
-      particulate matter:
-        text: particulate matter
-      volatile organic compounds:
-        text: volatile organic compounds
-      biological contaminants:
-        text: biological contaminants
-      radon:
-        text: radon
-      nutrients:
-        text: nutrients
-      biocides:
-        text: biocides
-  build_docs_enum:
-    name: build_docs_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      building information model:
-        text: building information model
-      commissioning report:
-        text: commissioning report
-      complaint logs:
-        text: complaint logs
-      contract administration:
-        text: contract administration
-      cost estimate:
-        text: cost estimate
-      janitorial schedules or logs:
-        text: janitorial schedules or logs
-      maintenance plans:
-        text: maintenance plans
-      schedule:
-        text: schedule
-      sections:
-        text: sections
-      shop drawings:
-        text: shop drawings
-      submittals:
-        text: submittals
-      ventilation system:
-        text: ventilation system
-      windows:
-        text: windows
-  train_line_enum:
-    name: train_line_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      red:
-        text: red
-      green:
-        text: green
-      orange:
-        text: orange
-  door_cond_enum:
-    name: door_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
-  heat_deliv_loc_enum:
-    name: heat_deliv_loc_enum
+      natural light:
+        text: natural light
+      electric light:
+        text: electric light
+      desk lamp:
+        text: desk lamp
+      flourescent lights:
+        text: flourescent lights
+      none:
+        text: none
+  ext_wall_orient_enum:
+    name: ext_wall_orient_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
       north:
@@ -978,98 +886,24 @@ enums:
         text: east
       west:
         text: west
-  door_mat_enum:
-    name: door_mat_enum
+      northeast:
+        text: northeast
+      southeast:
+        text: southeast
+      southwest:
+        text: southwest
+      northwest:
+        text: northwest
+  door_type_enum:
+    name: door_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      aluminum:
-        text: aluminum
-      cellular PVC:
-        text: cellular PVC
-      engineered plastic:
-        text: engineered plastic
-      fiberboard:
-        text: fiberboard
-      fiberglass:
-        text: fiberglass
+      composite:
+        text: composite
       metal:
         text: metal
-      thermoplastic alloy:
-        text: thermoplastic alloy
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-      wood/plastic composite:
-        text: wood/plastic composite
-  door_direct_enum:
-    name: door_direct_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      inward:
-        text: inward
-      outward:
-        text: outward
-      sideways:
-        text: sideways
-  train_stop_loc_enum:
-    name: train_stop_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      end:
-        text: end
-      mid:
-        text: mid
-      downtown:
-        text: downtown
-  furniture_enum:
-    name: furniture_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cabinet:
-        text: cabinet
-      chair:
-        text: chair
-      desks:
-        text: desks
-  shading_device_cond_enum:
-    name: shading_device_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
-  rel_samp_loc_enum:
-    name: rel_samp_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      edge of car:
-        text: edge of car
-      center of car:
-        text: center of car
-      under a seat:
-        text: under a seat
-  heat_cool_type_enum:
-    name: heat_cool_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      radiant system:
-        text: radiant system
-      heat pump:
-        text: heat pump
-      forced air system:
-        text: forced air system
-      steam forced heat:
-        text: steam forced heat
-      wood stove:
-        text: wood stove
+      wooden:
+        text: wooden
   indoor_space_enum:
     name: indoor_space_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1090,174 +924,88 @@ enums:
         text: hallway
       elevator:
         text: elevator
-  wall_finish_mat_enum:
-    name: wall_finish_mat_enum
+  window_mat_enum:
+    name: window_mat_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      plaster:
-        text: plaster
-      gypsum plaster:
-        text: gypsum plaster
-      veneer plaster:
-        text: veneer plaster
-      gypsum board:
-        text: gypsum board
-      tile:
-        text: tile
-      terrazzo:
-        text: terrazzo
-      stone facing:
-        text: stone facing
-      acoustical treatment:
-        text: acoustical treatment
+      clad:
+        text: clad
+      fiberglass:
+        text: fiberglass
+      metal:
+        text: metal
+      vinyl:
+        text: vinyl
       wood:
         text: wood
-      metal:
-        text: metal
-      masonry:
-        text: masonry
-  window_horiz_pos_enum:
-    name: window_horiz_pos_enum
+  samp_floor_enum:
+    name: samp_floor_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      left:
-        text: left
-      middle:
-        text: middle
-      right:
-        text: right
-  window_loc_enum:
-    name: window_loc_enum
+      1st floor:
+        text: 1st floor
+      2nd floor:
+        text: 2nd floor
+      basement:
+        text: basement
+      lobby:
+        text: lobby
+  substructure_type_enum:
+    name: substructure_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  floor_struc_enum:
-    name: floor_struc_enum
+      crawlspace:
+        text: crawlspace
+      slab on grade:
+        text: slab on grade
+      basement:
+        text: basement
+  window_type_enum:
+    name: window_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      balcony:
-        text: balcony
-      floating floor:
-        text: floating floor
-      glass floor:
-        text: glass floor
-      raised floor:
-        text: raised floor
-      sprung floor:
-        text: sprung floor
-      wood-framed:
-        text: wood-framed
-      concrete:
-        text: concrete
-  handidness_enum:
-    name: handidness_enum
+      single-hung sash window:
+        text: single-hung sash window
+      horizontal sash window:
+        text: horizontal sash window
+      fixed window:
+        text: fixed window
+  mech_struc_enum:
+    name: mech_struc_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      ambidexterity:
-        text: ambidexterity
-      left handedness:
-        text: left handedness
-      mixed-handedness:
-        text: mixed-handedness
-      right handedness:
-        text: right handedness
-  floor_finish_mat_enum:
-    name: floor_finish_mat_enum
+      subway:
+        text: subway
+      coach:
+        text: coach
+      carriage:
+        text: carriage
+      elevator:
+        text: elevator
+      escalator:
+        text: escalator
+      boat:
+        text: boat
+      train:
+        text: train
+      car:
+        text: car
+      bus:
+        text: bus
+  shading_device_cond_enum:
+    name: shading_device_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      tile:
-        text: tile
-      wood strip or parquet:
-        text: wood strip or parquet
-      carpet:
-        text: carpet
-      rug:
-        text: rug
-      laminate wood:
-        text: laminate wood
-      lineoleum:
-        text: lineoleum
-      vinyl composition tile:
-        text: vinyl composition tile
-      sheet vinyl:
-        text: sheet vinyl
-      stone:
-        text: stone
-      bamboo:
-        text: bamboo
-      cork:
-        text: cork
-      terrazo:
-        text: terrazo
-      concrete:
-        text: concrete
-      none;specify unfinished:
-        text: none;specify unfinished
-      sealed:
-        text: sealed
-      clear finish:
-        text: clear finish
-      paint:
-        text: paint
-  door_type_metal_enum:
-    name: door_type_metal_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      collapsible:
-        text: collapsible
-      corrugated steel:
-        text: corrugated steel
-      hollow:
-        text: hollow
-      rolling shutters:
-        text: rolling shutters
-      steel plate:
-        text: steel plate
-  door_type_enum:
-    name: door_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      composite:
-        text: composite
-      metal:
-        text: metal
-      wooden:
-        text: wooden
-  shading_device_type_enum:
-    name: shading_device_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bahama shutters:
-        text: bahama shutters
-      exterior roll blind:
-        text: exterior roll blind
-      gambrel awning:
-        text: gambrel awning
-      hood awning:
-        text: hood awning
-      porchroller awning:
-        text: porchroller awning
-      sarasota shutters:
-        text: sarasota shutters
-      slatted aluminum:
-        text: slatted aluminum
-      solid aluminum awning:
-        text: solid aluminum awning
-      sun screen:
-        text: sun screen
-      tree:
-        text: tree
-      trellis:
-        text: trellis
-      venetian awning:
-        text: venetian awning
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
   surf_material_enum:
     name: surf_material_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1292,46 +1040,166 @@ enums:
         text: vinyl
       wood:
         text: wood
-  light_type_enum:
-    name: light_type_enum
+  window_cond_enum:
+    name: window_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      natural light:
-        text: natural light
-      electric light:
-        text: electric light
-      desk lamp:
-        text: desk lamp
-      flourescent lights:
-        text: flourescent lights
-      none:
-        text: none
-  window_mat_enum:
-    name: window_mat_enum
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
+  door_comp_type_enum:
+    name: door_comp_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      clad:
-        text: clad
-      fiberglass:
-        text: fiberglass
-      metal:
-        text: metal
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-  season_use_enum:
-    name: season_use_enum
+      metal covered:
+        text: metal covered
+      revolving:
+        text: revolving
+      sliding:
+        text: sliding
+      telescopic:
+        text: telescopic
+  rel_samp_loc_enum:
+    name: rel_samp_loc_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      Spring:
-        text: Spring
-      Summer:
-        text: Summer
-      Fall:
-        text: Fall
-      Winter:
-        text: Winter
+      edge of car:
+        text: edge of car
+      center of car:
+        text: center of car
+      under a seat:
+        text: under a seat
+  gender_restroom_enum:
+    name: gender_restroom_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      all gender:
+        text: all gender
+      female:
+        text: female
+      gender neurtral:
+        text: gender neurtral
+      male:
+        text: male
+      male and female:
+        text: male and female
+      unisex:
+        text: unisex
+  window_horiz_pos_enum:
+    name: window_horiz_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      left:
+        text: left
+      middle:
+        text: middle
+      right:
+        text: right
+  wall_const_type_enum:
+    name: wall_const_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      frame construction:
+        text: frame construction
+      joisted masonry:
+        text: joisted masonry
+      light noncombustible:
+        text: light noncombustible
+      masonry noncombustible:
+        text: masonry noncombustible
+      modified fire resistive:
+        text: modified fire resistive
+      fire resistive:
+        text: fire resistive
+  freq_clean_enum:
+    name: freq_clean_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Daily:
+        text: Daily
+      Weekly:
+        text: Weekly
+      Monthly:
+        text: Monthly
+      Quarterly:
+        text: Quarterly
+      Annually:
+        text: Annually
+      other:
+        text: other
+  train_stop_loc_enum:
+    name: train_stop_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      end:
+        text: end
+      mid:
+        text: mid
+      downtown:
+        text: downtown
+  wall_loc_enum:
+    name: wall_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  pres_animal_insect_enum:
+    name: pres_animal_insect_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cat:
+        text: cat
+      dog:
+        text: dog
+      rodent:
+        text: rodent
+      snake:
+        text: snake
+      other;{integer}:
+        text: other;{integer}
+  int_wall_cond_enum:
+    name: int_wall_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+  room_condt_enum:
+    name: room_condt_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+      visible signs of mold/mildew:
+        text: visible signs of mold/mildew
   weekday_enum:
     name: weekday_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1350,80 +1218,118 @@ enums:
         text: Saturday
       Sunday:
         text: Sunday
-  wall_surf_treatment_enum:
-    name: wall_surf_treatment_enum
+  floor_cond_enum:
+    name: floor_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      painted:
-        text: painted
-      wall paper:
-        text: wall paper
-      no treatment:
-        text: no treatment
-      paneling:
-        text: paneling
-      stucco:
-        text: stucco
-      fabric:
-        text: fabric
-  window_type_enum:
-    name: window_type_enum
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+  door_cond_enum:
+    name: door_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      single-hung sash window:
-        text: single-hung sash window
-      horizontal sash window:
-        text: horizontal sash window
-      fixed window:
-        text: fixed window
-  specific_enum:
-    name: specific_enum
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
+  door_mat_enum:
+    name: door_mat_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      operation:
-        text: operation
-      as built:
-        text: as built
-      construction:
-        text: construction
-      bid:
-        text: bid
-      design:
-        text: design
-      photos:
-        text: photos
-  samp_weather_enum:
-    name: samp_weather_enum
+      aluminum:
+        text: aluminum
+      cellular PVC:
+        text: cellular PVC
+      engineered plastic:
+        text: engineered plastic
+      fiberboard:
+        text: fiberboard
+      fiberglass:
+        text: fiberglass
+      metal:
+        text: metal
+      thermoplastic alloy:
+        text: thermoplastic alloy
+      vinyl:
+        text: vinyl
+      wood:
+        text: wood
+      wood/plastic composite:
+        text: wood/plastic composite
+  build_docs_enum:
+    name: build_docs_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      clear sky:
-        text: clear sky
-      cloudy:
-        text: cloudy
-      foggy:
-        text: foggy
-      hail:
-        text: hail
-      rain:
-        text: rain
-      snow:
-        text: snow
-      sleet:
-        text: sleet
-      sunny:
-        text: sunny
-      windy:
-        text: windy
-  arch_struc_enum:
-    name: arch_struc_enum
+      building information model:
+        text: building information model
+      commissioning report:
+        text: commissioning report
+      complaint logs:
+        text: complaint logs
+      contract administration:
+        text: contract administration
+      cost estimate:
+        text: cost estimate
+      janitorial schedules or logs:
+        text: janitorial schedules or logs
+      maintenance plans:
+        text: maintenance plans
+      schedule:
+        text: schedule
+      sections:
+        text: sections
+      shop drawings:
+        text: shop drawings
+      submittals:
+        text: submittals
+      ventilation system:
+        text: ventilation system
+      windows:
+        text: windows
+  heat_cool_type_enum:
+    name: heat_cool_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      building:
-        text: building
-      shed:
-        text: shed
-      home:
-        text: home
+      radiant system:
+        text: radiant system
+      heat pump:
+        text: heat pump
+      forced air system:
+        text: forced air system
+      steam forced heat:
+        text: steam forced heat
+      wood stove:
+        text: wood stove
+  door_move_enum:
+    name: door_move_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      collapsible:
+        text: collapsible
+      folding:
+        text: folding
+      revolving:
+        text: revolving
+      rolling shutter:
+        text: rolling shutter
+      sliding:
+        text: sliding
+      swinging:
+        text: swinging
   quad_pos_enum:
     name: quad_pos_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1436,272 +1342,6 @@ enums:
         text: South side
       East side:
         text: East side
-  freq_clean_enum:
-    name: freq_clean_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Daily:
-        text: Daily
-      Weekly:
-        text: Weekly
-      Monthly:
-        text: Monthly
-      Quarterly:
-        text: Quarterly
-      Annually:
-        text: Annually
-      other:
-        text: other
-  building_setting_enum:
-    name: building_setting_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      urban:
-        text: urban
-      suburban:
-        text: suburban
-      exurban:
-        text: exurban
-      rural:
-        text: rural
-  ceil_cond_enum:
-    name: ceil_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-  room_samp_pos_enum:
-    name: room_samp_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north corner:
-        text: north corner
-      south corner:
-        text: south corner
-      west corner:
-        text: west corner
-      east corner:
-        text: east corner
-      northeast corner:
-        text: northeast corner
-      northwest corner:
-        text: northwest corner
-      southeast corner:
-        text: southeast corner
-      southwest corner:
-        text: southwest corner
-      center:
-        text: center
-  drawings_enum:
-    name: drawings_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      operation:
-        text: operation
-      as built:
-        text: as built
-      construction:
-        text: construction
-      bid:
-        text: bid
-      design:
-        text: design
-      building navigation map:
-        text: building navigation map
-      diagram:
-        text: diagram
-      sketch:
-        text: sketch
-  window_cond_enum:
-    name: window_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
-  window_cover_enum:
-    name: window_cover_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      blinds:
-        text: blinds
-      curtains:
-        text: curtains
-      none:
-        text: none
-  water_feat_type_enum:
-    name: water_feat_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      fountain:
-        text: fountain
-      pool:
-        text: pool
-      standing feature:
-        text: standing feature
-      stream:
-        text: stream
-      waterfall:
-        text: waterfall
-  room_condt_enum:
-    name: room_condt_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-      visible signs of mold/mildew:
-        text: visible signs of mold/mildew
-  int_wall_cond_enum:
-    name: int_wall_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-  ceil_type_enum:
-    name: ceil_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cathedral:
-        text: cathedral
-      dropped:
-        text: dropped
-      concave:
-        text: concave
-      barrel-shaped:
-        text: barrel-shaped
-      coffered:
-        text: coffered
-      cove:
-        text: cove
-      stretched:
-        text: stretched
-  door_type_wood_enum:
-    name: door_type_wood_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bettened and ledged:
-        text: bettened and ledged
-      battened:
-        text: battened
-      ledged and braced:
-        text: ledged and braced
-      ledged and framed:
-        text: ledged and framed
-      ledged, braced and frame:
-        text: ledged, braced and frame
-      framed and paneled:
-        text: framed and paneled
-      glashed or sash:
-        text: glashed or sash
-      flush:
-        text: flush
-      louvered:
-        text: louvered
-      wire gauged:
-        text: wire gauged
-  window_vert_pos_enum:
-    name: window_vert_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bottom:
-        text: bottom
-      middle:
-        text: middle
-      top:
-        text: top
-      low:
-        text: low
-      high:
-        text: high
-  pres_animal_insect_enum:
-    name: pres_animal_insect_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cat:
-        text: cat
-      dog:
-        text: dog
-      rodent:
-        text: rodent
-      snake:
-        text: snake
-      other;{integer}:
-        text: other;{integer}
-  ceil_finish_mat_enum:
-    name: ceil_finish_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      drywall:
-        text: drywall
-      mineral fibre:
-        text: mineral fibre
-      tiles:
-        text: tiles
-      PVC:
-        text: PVC
-      plasterboard:
-        text: plasterboard
-      metal:
-        text: metal
-      fiberglass:
-        text: fiberglass
-      stucco:
-        text: stucco
-      mineral wool/calcium silicate:
-        text: mineral wool/calcium silicate
-      wood:
-        text: wood
-  ext_wall_orient_enum:
-    name: ext_wall_orient_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-      northeast:
-        text: northeast
-      southeast:
-        text: southeast
-      southwest:
-        text: southwest
-      northwest:
-        text: northwest
   vis_media_enum:
     name: vis_media_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1720,126 +1360,54 @@ enums:
         text: equipment
       3D scans:
         text: 3D scans
-  ceil_texture_enum:
-    name: ceil_texture_enum
+  door_type_metal_enum:
+    name: door_type_metal_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      crows feet:
-        text: crows feet
-      crows-foot stomp:
-        text: crows-foot stomp
-      double skip:
-        text: double skip
-      hawk and trowel:
-        text: hawk and trowel
-      knockdown:
-        text: knockdown
-      popcorn:
-        text: popcorn
-      orange peel:
-        text: orange peel
-      rosebud stomp:
-        text: rosebud stomp
-      Santa-Fe texture:
-        text: Santa-Fe texture
-      skip trowel:
-        text: skip trowel
-      smooth:
-        text: smooth
-      stomp knockdown:
-        text: stomp knockdown
-      swirl:
-        text: swirl
-  occup_document_enum:
-    name: occup_document_enum
+      collapsible:
+        text: collapsible
+      corrugated steel:
+        text: corrugated steel
+      hollow:
+        text: hollow
+      rolling shutters:
+        text: rolling shutters
+      steel plate:
+        text: steel plate
+  building_setting_enum:
+    name: building_setting_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      automated count:
-        text: automated count
-      estimate:
-        text: estimate
-      manual count:
-        text: manual count
-      videos:
-        text: videos
-  filter_type_enum:
-    name: filter_type_enum
+      urban:
+        text: urban
+      suburban:
+        text: suburban
+      exurban:
+        text: exurban
+      rural:
+        text: rural
+  door_direct_enum:
+    name: door_direct_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      particulate air filter:
-        text: particulate air filter
-      chemical air filter:
-        text: chemical air filter
-      low-MERV pleated media:
-        text: low-MERV pleated media
-      HEPA:
-        text: HEPA
-      electrostatic:
-        text: electrostatic
-      gas-phase or ultraviolet air treatments:
-        text: gas-phase or ultraviolet air treatments
-  floor_water_mold_enum:
-    name: floor_water_mold_enum
+      inward:
+        text: inward
+      outward:
+        text: outward
+      sideways:
+        text: sideways
+  season_use_enum:
+    name: season_use_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      mold odor:
-        text: mold odor
-      wet floor:
-        text: wet floor
-      water stains:
-        text: water stains
-      wall discoloration:
-        text: wall discoloration
-      floor discoloration:
-        text: floor discoloration
-      ceiling discoloration:
-        text: ceiling discoloration
-      peeling paint or wallpaper:
-        text: peeling paint or wallpaper
-      bulging walls:
-        text: bulging walls
-      condensation:
-        text: condensation
-  samp_floor_enum:
-    name: samp_floor_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      1st floor:
-        text: 1st floor
-      2nd floor:
-        text: 2nd floor
-      basement:
-        text: basement
-      lobby:
-        text: lobby
-  wall_loc_enum:
-    name: wall_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  wall_const_type_enum:
-    name: wall_const_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      frame construction:
-        text: frame construction
-      joisted masonry:
-        text: joisted masonry
-      light noncombustible:
-        text: light noncombustible
-      masonry noncombustible:
-        text: masonry noncombustible
-      modified fire resistive:
-        text: modified fire resistive
-      fire resistive:
-        text: fire resistive
+      Spring:
+        text: Spring
+      Summer:
+        text: Summer
+      Fall:
+        text: Fall
+      Winter:
+        text: Winter
   wall_texture_enum:
     name: wall_texture_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1872,24 +1440,308 @@ enums:
         text: stomp knockdown
       swirl:
         text: swirl
-  door_move_enum:
-    name: door_move_enum
+  ceil_finish_mat_enum:
+    name: ceil_finish_mat_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      collapsible:
-        text: collapsible
-      folding:
-        text: folding
-      revolving:
-        text: revolving
-      rolling shutter:
-        text: rolling shutter
-      sliding:
-        text: sliding
-      swinging:
-        text: swinging
-  floor_cond_enum:
-    name: floor_cond_enum
+      drywall:
+        text: drywall
+      mineral fibre:
+        text: mineral fibre
+      tiles:
+        text: tiles
+      PVC:
+        text: PVC
+      plasterboard:
+        text: plasterboard
+      metal:
+        text: metal
+      fiberglass:
+        text: fiberglass
+      stucco:
+        text: stucco
+      mineral wool/calcium silicate:
+        text: mineral wool/calcium silicate
+      wood:
+        text: wood
+  train_stat_loc_enum:
+    name: train_stat_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      south station above ground:
+        text: south station above ground
+      south station underground:
+        text: south station underground
+      south station amtrak:
+        text: south station amtrak
+      forest hills:
+        text: forest hills
+      riverside:
+        text: riverside
+  train_line_enum:
+    name: train_line_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      red:
+        text: red
+      green:
+        text: green
+      orange:
+        text: orange
+  door_type_wood_enum:
+    name: door_type_wood_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bettened and ledged:
+        text: bettened and ledged
+      battened:
+        text: battened
+      ledged and braced:
+        text: ledged and braced
+      ledged and framed:
+        text: ledged and framed
+      ledged, braced and frame:
+        text: ledged, braced and frame
+      framed and paneled:
+        text: framed and paneled
+      glashed or sash:
+        text: glashed or sash
+      flush:
+        text: flush
+      louvered:
+        text: louvered
+      wire gauged:
+        text: wire gauged
+  door_loc_enum:
+    name: door_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  ext_window_orient_enum:
+    name: ext_window_orient_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+      northeast:
+        text: northeast
+      southeast:
+        text: southeast
+      southwest:
+        text: southwest
+      northwest:
+        text: northwest
+  arch_struc_enum:
+    name: arch_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      building:
+        text: building
+      shed:
+        text: shed
+      home:
+        text: home
+  ceil_texture_enum:
+    name: ceil_texture_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      crows feet:
+        text: crows feet
+      crows-foot stomp:
+        text: crows-foot stomp
+      double skip:
+        text: double skip
+      hawk and trowel:
+        text: hawk and trowel
+      knockdown:
+        text: knockdown
+      popcorn:
+        text: popcorn
+      orange peel:
+        text: orange peel
+      rosebud stomp:
+        text: rosebud stomp
+      Santa-Fe texture:
+        text: Santa-Fe texture
+      skip trowel:
+        text: skip trowel
+      smooth:
+        text: smooth
+      stomp knockdown:
+        text: stomp knockdown
+      swirl:
+        text: swirl
+  wall_surf_treatment_enum:
+    name: wall_surf_treatment_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      painted:
+        text: painted
+      wall paper:
+        text: wall paper
+      no treatment:
+        text: no treatment
+      paneling:
+        text: paneling
+      stucco:
+        text: stucco
+      fabric:
+        text: fabric
+  build_occup_type_enum:
+    name: build_occup_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      office:
+        text: office
+      market:
+        text: market
+      restaurant:
+        text: restaurant
+      residence:
+        text: residence
+      school:
+        text: school
+      residential:
+        text: residential
+      commercial:
+        text: commercial
+      low rise:
+        text: low rise
+      high rise:
+        text: high rise
+      wood framed:
+        text: wood framed
+      health care:
+        text: health care
+      airport:
+        text: airport
+      sports complex:
+        text: sports complex
+  floor_struc_enum:
+    name: floor_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      balcony:
+        text: balcony
+      floating floor:
+        text: floating floor
+      glass floor:
+        text: glass floor
+      raised floor:
+        text: raised floor
+      sprung floor:
+        text: sprung floor
+      wood-framed:
+        text: wood-framed
+      concrete:
+        text: concrete
+  window_loc_enum:
+    name: window_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  heat_deliv_loc_enum:
+    name: heat_deliv_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  room_connected_enum:
+    name: room_connected_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      attic:
+        text: attic
+      bathroom:
+        text: bathroom
+      closet:
+        text: closet
+      conference room:
+        text: conference room
+      elevator:
+        text: elevator
+      examining room:
+        text: examining room
+      hallway:
+        text: hallway
+      kitchen:
+        text: kitchen
+      mail room:
+        text: mail room
+      office:
+        text: office
+      stairwell:
+        text: stairwell
+  window_cover_enum:
+    name: window_cover_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      blinds:
+        text: blinds
+      curtains:
+        text: curtains
+      none:
+        text: none
+  occup_document_enum:
+    name: occup_document_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      automated count:
+        text: automated count
+      estimate:
+        text: estimate
+      manual count:
+        text: manual count
+      videos:
+        text: videos
+  indoor_surf_enum:
+    name: indoor_surf_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cabinet:
+        text: cabinet
+      ceiling:
+        text: ceiling
+      counter top:
+        text: counter top
+      door:
+        text: door
+      shelving:
+        text: shelving
+      vent cover:
+        text: vent cover
+      window:
+        text: window
+      wall:
+        text: wall
+  ceil_cond_enum:
+    name: ceil_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
       new:
@@ -1902,28 +1754,182 @@ enums:
         text: damaged
       rupture:
         text: rupture
-  mech_struc_enum:
-    name: mech_struc_enum
+  water_feat_type_enum:
+    name: water_feat_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      subway:
-        text: subway
-      coach:
-        text: coach
-      carriage:
-        text: carriage
-      elevator:
-        text: elevator
-      escalator:
-        text: escalator
-      boat:
-        text: boat
-      train:
-        text: train
-      car:
-        text: car
-      bus:
-        text: bus
+      fountain:
+        text: fountain
+      pool:
+        text: pool
+      standing feature:
+        text: standing feature
+      stream:
+        text: stream
+      waterfall:
+        text: waterfall
+  window_vert_pos_enum:
+    name: window_vert_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bottom:
+        text: bottom
+      middle:
+        text: middle
+      top:
+        text: top
+      low:
+        text: low
+      high:
+        text: high
+  filter_type_enum:
+    name: filter_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      particulate air filter:
+        text: particulate air filter
+      chemical air filter:
+        text: chemical air filter
+      low-MERV pleated media:
+        text: low-MERV pleated media
+      HEPA:
+        text: HEPA
+      electrostatic:
+        text: electrostatic
+      gas-phase or ultraviolet air treatments:
+        text: gas-phase or ultraviolet air treatments
+  room_samp_pos_enum:
+    name: room_samp_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north corner:
+        text: north corner
+      south corner:
+        text: south corner
+      west corner:
+        text: west corner
+      east corner:
+        text: east corner
+      northeast corner:
+        text: northeast corner
+      northwest corner:
+        text: northwest corner
+      southeast corner:
+        text: southeast corner
+      southwest corner:
+        text: southwest corner
+      center:
+        text: center
+  shading_device_type_enum:
+    name: shading_device_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bahama shutters:
+        text: bahama shutters
+      exterior roll blind:
+        text: exterior roll blind
+      gambrel awning:
+        text: gambrel awning
+      hood awning:
+        text: hood awning
+      porchroller awning:
+        text: porchroller awning
+      sarasota shutters:
+        text: sarasota shutters
+      slatted aluminum:
+        text: slatted aluminum
+      solid aluminum awning:
+        text: solid aluminum awning
+      sun screen:
+        text: sun screen
+      tree:
+        text: tree
+      trellis:
+        text: trellis
+      venetian awning:
+        text: venetian awning
+  samp_weather_enum:
+    name: samp_weather_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      clear sky:
+        text: clear sky
+      cloudy:
+        text: cloudy
+      foggy:
+        text: foggy
+      hail:
+        text: hail
+      rain:
+        text: rain
+      snow:
+        text: snow
+      sleet:
+        text: sleet
+      sunny:
+        text: sunny
+      windy:
+        text: windy
+  surf_air_cont_enum:
+    name: surf_air_cont_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      dust:
+        text: dust
+      organic matter:
+        text: organic matter
+      particulate matter:
+        text: particulate matter
+      volatile organic compounds:
+        text: volatile organic compounds
+      biological contaminants:
+        text: biological contaminants
+      radon:
+        text: radon
+      nutrients:
+        text: nutrients
+      biocides:
+        text: biocides
+  furniture_enum:
+    name: furniture_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cabinet:
+        text: cabinet
+      chair:
+        text: chair
+      desks:
+        text: desks
+  ceil_type_enum:
+    name: ceil_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cathedral:
+        text: cathedral
+      dropped:
+        text: dropped
+      concave:
+        text: concave
+      barrel-shaped:
+        text: barrel-shaped
+      coffered:
+        text: coffered
+      cove:
+        text: cove
+      stretched:
+        text: stretched
+  handidness_enum:
+    name: handidness_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      ambidexterity:
+        text: ambidexterity
+      left handedness:
+        text: left handedness
+      mixed-handedness:
+        text: mixed-handedness
+      right handedness:
+        text: right handedness
   room_type_enum:
     name: room_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1978,144 +1984,138 @@ enums:
         text: cafe
       warehouse:
         text: warehouse
-  ext_window_orient_enum:
-    name: ext_window_orient_enum
+  wall_finish_mat_enum:
+    name: wall_finish_mat_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-      northeast:
-        text: northeast
-      southeast:
-        text: southeast
-      southwest:
-        text: southwest
-      northwest:
-        text: northwest
-  indoor_surf_enum:
-    name: indoor_surf_enum
+      plaster:
+        text: plaster
+      gypsum plaster:
+        text: gypsum plaster
+      veneer plaster:
+        text: veneer plaster
+      gypsum board:
+        text: gypsum board
+      tile:
+        text: tile
+      terrazzo:
+        text: terrazzo
+      stone facing:
+        text: stone facing
+      acoustical treatment:
+        text: acoustical treatment
+      wood:
+        text: wood
+      metal:
+        text: metal
+      masonry:
+        text: masonry
+  floor_finish_mat_enum:
+    name: floor_finish_mat_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      cabinet:
-        text: cabinet
-      ceiling:
-        text: ceiling
-      counter top:
-        text: counter top
-      door:
-        text: door
-      shelving:
-        text: shelving
-      vent cover:
-        text: vent cover
-      window:
-        text: window
-      wall:
-        text: wall
-  door_comp_type_enum:
-    name: door_comp_type_enum
+      tile:
+        text: tile
+      wood strip or parquet:
+        text: wood strip or parquet
+      carpet:
+        text: carpet
+      rug:
+        text: rug
+      laminate wood:
+        text: laminate wood
+      lineoleum:
+        text: lineoleum
+      vinyl composition tile:
+        text: vinyl composition tile
+      sheet vinyl:
+        text: sheet vinyl
+      stone:
+        text: stone
+      bamboo:
+        text: bamboo
+      cork:
+        text: cork
+      terrazo:
+        text: terrazo
+      concrete:
+        text: concrete
+      none;specify unfinished:
+        text: none;specify unfinished
+      sealed:
+        text: sealed
+      clear finish:
+        text: clear finish
+      paint:
+        text: paint
+  specific_enum:
+    name: specific_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      metal covered:
-        text: metal covered
-      revolving:
-        text: revolving
-      sliding:
-        text: sliding
-      telescopic:
-        text: telescopic
-  gender_restroom_enum:
-    name: gender_restroom_enum
+      operation:
+        text: operation
+      as built:
+        text: as built
+      construction:
+        text: construction
+      bid:
+        text: bid
+      design:
+        text: design
+      photos:
+        text: photos
+  room_loc_enum:
+    name: room_loc_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      all gender:
-        text: all gender
-      female:
-        text: female
-      gender neurtral:
-        text: gender neurtral
-      male:
-        text: male
-      male and female:
-        text: male and female
-      unisex:
-        text: unisex
-  room_connected_enum:
-    name: room_connected_enum
+      corner room:
+        text: corner room
+      interior room:
+        text: interior room
+      exterior wall:
+        text: exterior wall
+  drawings_enum:
+    name: drawings_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      attic:
-        text: attic
-      bathroom:
-        text: bathroom
-      closet:
-        text: closet
-      conference room:
-        text: conference room
-      elevator:
-        text: elevator
-      examining room:
-        text: examining room
-      hallway:
-        text: hallway
-      kitchen:
-        text: kitchen
-      mail room:
-        text: mail room
-      office:
-        text: office
-      stairwell:
-        text: stairwell
-  train_stat_loc_enum:
-    name: train_stat_loc_enum
+      operation:
+        text: operation
+      as built:
+        text: as built
+      construction:
+        text: construction
+      bid:
+        text: bid
+      design:
+        text: design
+      building navigation map:
+        text: building navigation map
+      diagram:
+        text: diagram
+      sketch:
+        text: sketch
+  floor_water_mold_enum:
+    name: floor_water_mold_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      south station above ground:
-        text: south station above ground
-      south station underground:
-        text: south station underground
-      south station amtrak:
-        text: south station amtrak
-      forest hills:
-        text: forest hills
-      riverside:
-        text: riverside
-  build_occup_type_enum:
-    name: build_occup_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      office:
-        text: office
-      market:
-        text: market
-      restaurant:
-        text: restaurant
-      residence:
-        text: residence
-      school:
-        text: school
-      residential:
-        text: residential
-      commercial:
-        text: commercial
-      low rise:
-        text: low rise
-      high rise:
-        text: high rise
-      wood framed:
-        text: wood framed
-      health care:
-        text: health care
-      airport:
-        text: airport
-      sports complex:
-        text: sports complex
+      mold odor:
+        text: mold odor
+      wet floor:
+        text: wet floor
+      water stains:
+        text: water stains
+      wall discoloration:
+        text: wall discoloration
+      floor discoloration:
+        text: floor discoloration
+      ceiling discoloration:
+        text: ceiling discoloration
+      peeling paint or wallpaper:
+        text: peeling paint or wallpaper
+      bulging walls:
+        text: bulging walls
+      condensation:
+        text: condensation
   growth_habit_enum:
     name: growth_habit_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2128,28 +2128,6 @@ enums:
         text: spreading
       prostrate:
         text: prostrate
-  plant_growth_med_enum:
-    name: plant_growth_med_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      other artificial liquid medium:
-        text: other artificial liquid medium
-      other artificial solid medium:
-        text: other artificial solid medium
-      peat moss:
-        text: peat moss
-      perlite:
-        text: perlite
-      pumice:
-        text: pumice
-      sand:
-        text: sand
-      soil:
-        text: soil
-      vermiculite:
-        text: vermiculite
-      water:
-        text: water
   plant_sex_enum:
     name: plant_sex_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2212,6 +2190,46 @@ enums:
         text: Trioecious
       Unisexual:
         text: Unisexual
+  plant_growth_med_enum:
+    name: plant_growth_med_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      other artificial liquid medium:
+        text: other artificial liquid medium
+      other artificial solid medium:
+        text: other artificial solid medium
+      peat moss:
+        text: peat moss
+      perlite:
+        text: perlite
+      pumice:
+        text: pumice
+      sand:
+        text: sand
+      soil:
+        text: soil
+      vermiculite:
+        text: vermiculite
+      water:
+        text: water
+  samp_collect_point_enum:
+    name: samp_collect_point_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      well:
+        text: well
+      test well:
+        text: test well
+      drilling rig:
+        text: drilling rig
+      wellhead:
+        text: wellhead
+      separator:
+        text: separator
+      storage tank:
+        text: storage tank
+      other:
+        text: other
   add_recov_method_enum:
     name: add_recov_method_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2232,24 +2250,6 @@ enums:
         text: Not Applicable
       other;{timestamp}:
         text: other;{timestamp}
-  samp_collect_point_enum:
-    name: samp_collect_point_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      well:
-        text: well
-      test well:
-        text: test well
-      drilling rig:
-        text: drilling rig
-      wellhead:
-        text: wellhead
-      separator:
-        text: separator
-      storage tank:
-        text: storage tank
-      other:
-        text: other
   host_sex_enum:
     name: host_sex_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2262,18 +2262,46 @@ enums:
         text: male
       neuter:
         text: neuter
-  sr_lithology_enum:
-    name: sr_lithology_enum
+  sr_dep_env_enum:
+    name: sr_dep_env_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      Clastic:
-        text: Clastic
-      Carbonate:
-        text: Carbonate
-      Coal:
-        text: Coal
-      Biosilicieous:
-        text: Biosilicieous
+      Lacustine:
+        text: Lacustine
+      Fluvioldeltaic:
+        text: Fluvioldeltaic
+      Fluviomarine:
+        text: Fluviomarine
+      Marine:
+        text: Marine
+      other:
+        text: other
+  samp_md_enum:
+    name: samp_md_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      DF:
+        text: DF
+      RT:
+        text: RT
+      KB:
+        text: KB
+      MSL:
+        text: MSL
+      other:
+        text: other
+  sr_kerog_type_enum:
+    name: sr_kerog_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Type I:
+        text: Type I
+      Type II:
+        text: Type II
+      Type III:
+        text: Type III
+      Type IV:
+        text: Type IV
       other:
         text: other
   sr_geol_age_enum:
@@ -2316,46 +2344,18 @@ enums:
         text: Triassic
       other:
         text: other
-  samp_md_enum:
-    name: samp_md_enum
+  sr_lithology_enum:
+    name: sr_lithology_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      DF:
-        text: DF
-      RT:
-        text: RT
-      KB:
-        text: KB
-      MSL:
-        text: MSL
-      other:
-        text: other
-  sr_dep_env_enum:
-    name: sr_dep_env_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Lacustine:
-        text: Lacustine
-      Fluvioldeltaic:
-        text: Fluvioldeltaic
-      Fluviomarine:
-        text: Fluviomarine
-      Marine:
-        text: Marine
-      other:
-        text: other
-  sr_kerog_type_enum:
-    name: sr_kerog_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Type I:
-        text: Type I
-      Type II:
-        text: Type II
-      Type III:
-        text: Type III
-      Type IV:
-        text: Type IV
+      Clastic:
+        text: Clastic
+      Carbonate:
+        text: Carbonate
+      Coal:
+        text: Coal
+      Biosilicieous:
+        text: Biosilicieous
       other:
         text: other
 slots:
@@ -2395,6 +2395,7 @@ slots:
     string_serialization: '{float} {unit}'
     slot_group: EMSL
     required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   EMSL_store_temp:
     name: EMSL_store_temp
     rank: 4
@@ -2553,6 +2554,7 @@ slots:
     string_serialization: '{text < 20 characters}'
     slot_group: JGI-Metagenomics
     required: true
+    pattern: ^.{1,20}$
   dna_cont_type:
     name: dna_cont_type
     rank: 10
@@ -2578,6 +2580,7 @@ slots:
     string_serialization: '{96 well plate pos}'
     slot_group: JGI-Metagenomics
     required: true
+    pattern: ^[A-H](0?[1-9]$)|(^1[0-2])$
   dna_sample_format:
     name: dna_sample_format
     rank: 12
@@ -2820,6 +2823,7 @@ slots:
     string_serialization: '{96 well plate pos}'
     slot_group: JGI-Metatranscriptomics
     required: true
+    pattern: ^[A-H](0?[1-9]$)|(^1[0-2])$
   rna_sample_format:
     name: rna_sample_format
     rank: 12
@@ -2935,6 +2939,7 @@ slots:
     string_serialization: '{time, seconds optional}'
     slot_group: MIxS Inspired
     recommended: true
+    pattern: ^([01]?\d|2[0-3]|24(?=:00?:00?$)):([0-5]\d)(:([0-5]\d))?$
   collection_date_inc:
     name: collection_date_inc
     rank: 2
@@ -2954,6 +2959,7 @@ slots:
     string_serialization: '{date, arbitrary precision}'
     slot_group: MIxS Inspired
     recommended: true
+    pattern: ^[12]\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\d|3[01]))?)?$
   collection_time_inc:
     name: collection_time_inc
     rank: 3
@@ -2973,6 +2979,7 @@ slots:
     string_serialization: '{time, seconds optional}'
     slot_group: MIxS Inspired
     recommended: true
+    pattern: ^([01]?\d|2[0-3]|24(?=:00?:00?$)):([0-5]\d)(:([0-5]\d))?$
   start_date_inc:
     name: start_date_inc
     rank: 4
@@ -2991,6 +2998,7 @@ slots:
     string_serialization: '{date, arbitrary precision}'
     slot_group: MIxS Inspired
     recommended: true
+    pattern: ^[12]\d{3}(?:(?:-(?:0[1-9]|1[0-2]))(?:-(?:0[1-9]|[12]\d|3[01]))?)?$
   start_time_inc:
     name: start_time_inc
     rank: 5
@@ -3009,6 +3017,7 @@ slots:
     string_serialization: '{time, seconds optional}'
     slot_group: MIxS Inspired
     recommended: true
+    pattern: ^([01]?\d|2[0-3]|24(?=:00?:00?$)):([0-5]\d)(:([0-5]\d))?$
   filter_method:
     name: filter_method
     rank: 6
@@ -3044,6 +3053,7 @@ slots:
     - MIxS:biomass|microbial_biomass
     string_serialization: '{text};{float} {unit}'
     slot_group: MIxS Inspired
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   non_microb_biomass_method:
     name: non_microb_biomass_method
     rank: 9
@@ -3068,6 +3078,7 @@ slots:
     - MIxS:microbial_biomass
     string_serialization: '{float} {unit}'
     slot_group: MIxS Inspired
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   micro_biomass_C_meth:
     name: micro_biomass_C_meth
     rank: 11
@@ -3093,6 +3104,7 @@ slots:
     - MIxS:microbial_biomass
     string_serialization: '{float} {unit}'
     slot_group: MIxS Inspired
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   micro_biomass_N_meth:
     name: micro_biomass_N_meth
     rank: 13
@@ -3140,6 +3152,7 @@ slots:
     string_serialization: '{termLabel} {[termID]}; {timestamp}'
     slot_group: MIxS Inspired
     recommended: true
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]; ([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
   analysis_type:
     name: analysis_type
     rank: 3
@@ -3184,6 +3197,7 @@ slots:
     string_serialization: '{text}:{text}'
     slot_group: Sample ID
     recommended: true
+    pattern: '[^\:\n\r]+\:[^\:\n\r]+'
   Sample ID:
     name: Sample ID
     rank: 1
@@ -3260,6 +3274,7 @@ slots:
     slot_uri: MIXS:0000647
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   agrochem_addition:
     name: agrochem_addition
     aliases:
@@ -3284,6 +3299,7 @@ slots:
     slot_uri: MIXS:0000639
     multivalued: true
     range: string
+    pattern: ^\S+.*\S+;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+;([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
   al_sat:
     name: al_sat
     aliases:
@@ -3307,6 +3323,7 @@ slots:
     slot_uri: MIXS:0000607
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   al_sat_meth:
     name: al_sat_meth
     aliases:
@@ -3352,6 +3369,7 @@ slots:
     slot_uri: MIXS:0000644
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   annual_temp:
     name: annual_temp
     aliases:
@@ -3375,6 +3393,7 @@ slots:
     slot_uri: MIXS:0000642
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   crop_rotation:
     name: crop_rotation
     aliases:
@@ -3608,6 +3627,7 @@ slots:
     slot_uri: MIXS:0000652
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   heavy_metals_meth:
     name: heavy_metals_meth
     aliases:
@@ -3756,6 +3776,7 @@ slots:
     slot_uri: MIXS:0000752
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   oxy_stat_samp:
     name: oxy_stat_samp
     aliases:
@@ -3818,6 +3839,7 @@ slots:
     slot_uri: MIXS:0000315
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+;([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
   profile_position:
     name: profile_position
     aliases:
@@ -3863,6 +3885,7 @@ slots:
     slot_uri: MIXS:0000645
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   season_temp:
     name: season_temp
     aliases:
@@ -3886,6 +3909,7 @@ slots:
     slot_uri: MIXS:0000643
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   slope_gradient:
     name: slope_gradient
     aliases:
@@ -3911,6 +3935,7 @@ slots:
     slot_uri: MIXS:0000646
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   soil_horizon:
     name: soil_horizon
     aliases:
@@ -3956,6 +3981,7 @@ slots:
     slot_uri: MIXS:0000335
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   soil_texture_meth:
     name: soil_texture_meth
     aliases:
@@ -4000,6 +4026,7 @@ slots:
     slot_uri: MIXS:0000332
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   soil_type_meth:
     name: soil_type_meth
     aliases:
@@ -4042,6 +4069,7 @@ slots:
     slot_uri: MIXS:0000113
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tillage:
     name: tillage
     aliases:
@@ -4085,6 +4113,7 @@ slots:
     slot_uri: MIXS:0000185
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   water_cont_soil_meth:
     name: water_cont_soil_meth
     aliases:
@@ -4152,6 +4181,7 @@ slots:
     slot_uri: MIXS:0000650
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   micro_biomass_meth:
     name: micro_biomass_meth
     aliases:
@@ -4193,6 +4223,7 @@ slots:
     slot_uri: MIXS:0000310
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   org_matter:
     name: org_matter
     aliases:
@@ -4216,6 +4247,7 @@ slots:
     slot_uri: MIXS:0000204
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   org_nitro:
     name: org_nitro
     aliases:
@@ -4239,6 +4271,7 @@ slots:
     slot_uri: MIXS:0000205
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_carb:
     name: tot_carb
     aliases:
@@ -4262,6 +4295,7 @@ slots:
     slot_uri: MIXS:0000525
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_nitro_content:
     name: tot_nitro_content
     aliases:
@@ -4285,6 +4319,7 @@ slots:
     slot_uri: MIXS:0000530
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_nitro_cont_meth:
     name: tot_nitro_cont_meth
     aliases:
@@ -4330,6 +4365,7 @@ slots:
     slot_uri: MIXS:0000533
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_org_c_meth:
     name: tot_org_c_meth
     aliases:
@@ -4375,6 +4411,7 @@ slots:
     slot_uri: MIXS:0000117
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   phosphate:
     name: phosphate
     aliases:
@@ -4398,6 +4435,7 @@ slots:
     slot_uri: MIXS:0000505
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   salinity:
     name: salinity
     aliases:
@@ -4426,6 +4464,7 @@ slots:
     slot_uri: MIXS:0000183
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   salinity_meth:
     name: salinity_meth
     aliases:
@@ -4553,6 +4592,7 @@ slots:
     slot_uri: MIXS:0000009
     multivalued: false
     range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? [-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$
   elev:
     name: elev
     aliases:
@@ -4573,6 +4613,7 @@ slots:
     slot_uri: MIXS:0000093
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   samp_store_temp:
     name: samp_store_temp
     aliases:
@@ -4596,6 +4637,7 @@ slots:
     slot_uri: MIXS:0000110
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   sieving:
     name: sieving
     aliases:
@@ -4642,6 +4684,7 @@ slots:
     slot_uri: MIXS:0000735
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   depth:
     name: depth
     aliases:
@@ -4661,6 +4704,7 @@ slots:
     slot_uri: MIXS:0000018
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   size_frac_up:
     name: size_frac_up
     aliases:
@@ -4685,6 +4729,7 @@ slots:
     slot_uri: MIXS:0000736
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   samp_mat_process:
     name: samp_mat_process
     aliases:
@@ -4837,6 +4882,7 @@ slots:
     slot_uri: MIXS:0000001
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   climate_environment:
     name: climate_environment
     aliases:
@@ -4961,6 +5007,8 @@ slots:
     slot_uri: MIXS:0000569
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?
+      \S+$
   rel_to_oxygen:
     name: rel_to_oxygen
     aliases:
@@ -5028,6 +5076,7 @@ slots:
     slot_uri: MIXS:0000094
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ph:
     name: ph
     aliases:
@@ -5073,6 +5122,7 @@ slots:
     slot_uri: MIXS:0000421
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   alkyl_diethers:
     name: alkyl_diethers
     aliases:
@@ -5096,6 +5146,7 @@ slots:
     slot_uri: MIXS:0000490
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   aminopept_act:
     name: aminopept_act
     aliases:
@@ -5119,6 +5170,7 @@ slots:
     slot_uri: MIXS:0000172
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ammonium:
     name: ammonium
     aliases:
@@ -5142,6 +5194,7 @@ slots:
     slot_uri: MIXS:0000427
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   bacteria_carb_prod:
     name: bacteria_carb_prod
     aliases:
@@ -5165,6 +5218,7 @@ slots:
     slot_uri: MIXS:0000173
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   biomass:
     name: biomass
     aliases:
@@ -5190,6 +5244,7 @@ slots:
     slot_uri: MIXS:0000174
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   bishomohopanol:
     name: bishomohopanol
     aliases:
@@ -5213,6 +5268,7 @@ slots:
     slot_uri: MIXS:0000175
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   bromide:
     name: bromide
     aliases:
@@ -5236,6 +5292,7 @@ slots:
     slot_uri: MIXS:0000176
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   calcium:
     name: calcium
     aliases:
@@ -5259,6 +5316,7 @@ slots:
     slot_uri: MIXS:0000432
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   chloride:
     name: chloride
     aliases:
@@ -5282,6 +5340,7 @@ slots:
     slot_uri: MIXS:0000429
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   chlorophyll:
     name: chlorophyll
     aliases:
@@ -5305,6 +5364,7 @@ slots:
     slot_uri: MIXS:0000177
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   density:
     name: density
     aliases:
@@ -5329,6 +5389,7 @@ slots:
     slot_uri: MIXS:0000435
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diether_lipids:
     name: diether_lipids
     aliases:
@@ -5354,6 +5415,7 @@ slots:
     slot_uri: MIXS:0000178
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_carb_dioxide:
     name: diss_carb_dioxide
     aliases:
@@ -5378,6 +5440,7 @@ slots:
     slot_uri: MIXS:0000436
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_hydrogen:
     name: diss_hydrogen
     aliases:
@@ -5401,6 +5464,7 @@ slots:
     slot_uri: MIXS:0000179
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_inorg_carb:
     name: diss_inorg_carb
     aliases:
@@ -5425,6 +5489,7 @@ slots:
     slot_uri: MIXS:0000434
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_org_carb:
     name: diss_org_carb
     aliases:
@@ -5449,6 +5514,7 @@ slots:
     slot_uri: MIXS:0000433
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_org_nitro:
     name: diss_org_nitro
     aliases:
@@ -5473,6 +5539,7 @@ slots:
     slot_uri: MIXS:0000162
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_oxygen:
     name: diss_oxygen
     aliases:
@@ -5496,6 +5563,7 @@ slots:
     slot_uri: MIXS:0000119
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   glucosidase_act:
     name: glucosidase_act
     aliases:
@@ -5519,6 +5587,7 @@ slots:
     slot_uri: MIXS:0000137
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   magnesium:
     name: magnesium
     aliases:
@@ -5543,6 +5612,7 @@ slots:
     slot_uri: MIXS:0000431
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   mean_frict_vel:
     name: mean_frict_vel
     aliases:
@@ -5566,6 +5636,7 @@ slots:
     slot_uri: MIXS:0000498
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   mean_peak_frict_vel:
     name: mean_peak_frict_vel
     aliases:
@@ -5589,6 +5660,7 @@ slots:
     slot_uri: MIXS:0000502
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   methane:
     name: methane
     aliases:
@@ -5612,6 +5684,7 @@ slots:
     slot_uri: MIXS:0000101
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   n_alkanes:
     name: n_alkanes
     aliases:
@@ -5636,6 +5709,7 @@ slots:
     slot_uri: MIXS:0000503
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   nitrate:
     name: nitrate
     aliases:
@@ -5659,6 +5733,7 @@ slots:
     slot_uri: MIXS:0000425
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   nitrite:
     name: nitrite
     aliases:
@@ -5682,6 +5757,7 @@ slots:
     slot_uri: MIXS:0000426
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   nitro:
     name: nitro
     aliases:
@@ -5705,6 +5781,7 @@ slots:
     slot_uri: MIXS:0000504
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   org_carb:
     name: org_carb
     aliases:
@@ -5728,6 +5805,7 @@ slots:
     slot_uri: MIXS:0000508
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   organism_count:
     name: organism_count
     aliases:
@@ -5778,6 +5856,7 @@ slots:
     slot_uri: MIXS:0000515
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   particle_class:
     name: particle_class
     aliases:
@@ -5804,6 +5883,7 @@ slots:
     slot_uri: MIXS:0000206
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   perturbation:
     name: perturbation
     aliases:
@@ -5851,6 +5931,7 @@ slots:
     slot_uri: MIXS:0000516
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   phaeopigments:
     name: phaeopigments
     aliases:
@@ -5875,6 +5956,7 @@ slots:
     slot_uri: MIXS:0000180
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   phosplipid_fatt_acid:
     name: phosplipid_fatt_acid
     aliases:
@@ -5899,6 +5981,7 @@ slots:
     slot_uri: MIXS:0000181
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   porosity:
     name: porosity
     aliases:
@@ -5947,6 +6030,7 @@ slots:
     slot_uri: MIXS:0000430
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   pressure:
     name: pressure
     aliases:
@@ -5970,6 +6054,7 @@ slots:
     slot_uri: MIXS:0000412
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   redox_potential:
     name: redox_potential
     aliases:
@@ -5994,6 +6079,7 @@ slots:
     slot_uri: MIXS:0000182
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   samp_store_loc:
     name: samp_store_loc
     aliases:
@@ -6058,6 +6144,7 @@ slots:
     slot_uri: MIXS:0000184
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   sulfate:
     name: sulfate
     aliases:
@@ -6081,6 +6168,7 @@ slots:
     slot_uri: MIXS:0000423
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tidal_stage:
     name: tidal_stage
     aliases:
@@ -6124,6 +6212,7 @@ slots:
     slot_uri: MIXS:0000634
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   turbidity:
     name: turbidity
     aliases:
@@ -6148,6 +6237,7 @@ slots:
     slot_uri: MIXS:0000191
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   air particulate matter concentration:
     name: air particulate matter concentration
     aliases:
@@ -6174,6 +6264,7 @@ slots:
     slot_uri: MIXS:0000108
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   barometric_press:
     name: barometric_press
     aliases:
@@ -6198,6 +6289,7 @@ slots:
     slot_uri: MIXS:0000096
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   carb_dioxide:
     name: carb_dioxide
     aliases:
@@ -6221,6 +6313,7 @@ slots:
     slot_uri: MIXS:0000097
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   carb_monoxide:
     name: carb_monoxide
     aliases:
@@ -6244,6 +6337,7 @@ slots:
     slot_uri: MIXS:0000098
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   humidity:
     name: humidity
     aliases:
@@ -6267,6 +6361,7 @@ slots:
     slot_uri: MIXS:0000100
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   oxygen:
     name: oxygen
     aliases:
@@ -6290,6 +6385,7 @@ slots:
     slot_uri: MIXS:0000104
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   pollutants:
     name: pollutants
     aliases:
@@ -6316,6 +6412,7 @@ slots:
     slot_uri: MIXS:0000107
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   solar_irradiance:
     name: solar_irradiance
     aliases:
@@ -6341,6 +6438,7 @@ slots:
     slot_uri: MIXS:0000112
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ventilation_rate:
     name: ventilation_rate
     aliases:
@@ -6364,6 +6462,7 @@ slots:
     slot_uri: MIXS:0000114
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ventilation_type:
     name: ventilation_type
     aliases:
@@ -6411,6 +6510,7 @@ slots:
     slot_uri: MIXS:0000115
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   wind_direction:
     name: wind_direction
     aliases:
@@ -6455,6 +6555,7 @@ slots:
     slot_uri: MIXS:0000118
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   abs_air_humidity:
     name: abs_air_humidity
     aliases:
@@ -6479,6 +6580,7 @@ slots:
     slot_uri: MIXS:0000122
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   address:
     name: address
     aliases:
@@ -6568,6 +6670,7 @@ slots:
     slot_uri: MIXS:0000124
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   amount_light:
     name: amount_light
     aliases:
@@ -6592,6 +6695,7 @@ slots:
     slot_uri: MIXS:0000140
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   arch_struc:
     name: arch_struc
     aliases:
@@ -6637,6 +6741,7 @@ slots:
     slot_uri: MIXS:0000141
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   avg_occup:
     name: avg_occup
     aliases:
@@ -6682,6 +6787,7 @@ slots:
     slot_uri: MIXS:0000142
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   bathroom_count:
     name: bathroom_count
     aliases:
@@ -6806,6 +6912,7 @@ slots:
     slot_uri: MIXS:0000145
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   built_struc_set:
     name: built_struc_set
     aliases:
@@ -6873,6 +6980,7 @@ slots:
     slot_uri: MIXS:0000148
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ceil_cond:
     name: ceil_cond
     aliases:
@@ -6981,6 +7089,7 @@ slots:
     slot_uri: MIXS:0000143
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ceil_type:
     name: ceil_type
     aliases:
@@ -7086,6 +7195,7 @@ slots:
     slot_uri: MIXS:0000129
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   door_comp_type:
     name: door_comp_type
     aliases:
@@ -7229,6 +7339,7 @@ slots:
     slot_uri: MIXS:0000158
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   door_type:
     name: door_type
     aliases:
@@ -7394,6 +7505,7 @@ slots:
     slot_uri: MIXS:0000144
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   exp_pipe:
     name: exp_pipe
     aliases:
@@ -7538,6 +7650,7 @@ slots:
     slot_uri: MIXS:0000164
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   floor_area:
     name: floor_area
     aliases:
@@ -7561,6 +7674,7 @@ slots:
     slot_uri: MIXS:0000165
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   floor_cond:
     name: floor_cond
     aliases:
@@ -7667,6 +7781,7 @@ slots:
     slot_uri: MIXS:0000166
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   floor_water_mold:
     name: floor_water_mold
     aliases:
@@ -7912,6 +8027,7 @@ slots:
     slot_uri: MIXS:0000167
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   indoor_space:
     name: indoor_space
     aliases:
@@ -7976,6 +8092,7 @@ slots:
     slot_uri: MIXS:0000168
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   int_wall_cond:
     name: int_wall_cond
     aliases:
@@ -8265,6 +8382,7 @@ slots:
     slot_uri: MIXS:0000121
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   rel_humidity_out:
     name: rel_humidity_out
     aliases:
@@ -8288,6 +8406,7 @@ slots:
     slot_uri: MIXS:0000188
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   rel_samp_loc:
     name: rel_samp_loc
     aliases:
@@ -8331,6 +8450,7 @@ slots:
     slot_uri: MIXS:0000169
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   room_architec_elem:
     name: room_architec_elem
     aliases:
@@ -8831,6 +8951,7 @@ slots:
     slot_uri: MIXS:0000829
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   season_use:
     name: season_use
     aliases:
@@ -9021,6 +9142,7 @@ slots:
     slot_uri: MIXS:0000214
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   substructure_type:
     name: substructure_type
     aliases:
@@ -9085,6 +9207,7 @@ slots:
     slot_uri: MIXS:0000123
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   surf_material:
     name: surf_material
     aliases:
@@ -9128,6 +9251,7 @@ slots:
     slot_uri: MIXS:0000128
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   surf_moisture_ph:
     name: surf_moisture_ph
     aliases:
@@ -9171,6 +9295,7 @@ slots:
     slot_uri: MIXS:0000125
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   temp_out:
     name: temp_out
     aliases:
@@ -9194,6 +9319,7 @@ slots:
     slot_uri: MIXS:0000197
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   train_line:
     name: train_line
     aliases:
@@ -9317,6 +9443,7 @@ slots:
     slot_uri: MIXS:0000198
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   wall_const_type:
     name: wall_const_type
     aliases:
@@ -9381,6 +9508,7 @@ slots:
     slot_uri: MIXS:0000221
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   wall_loc:
     name: wall_loc
     aliases:
@@ -9466,6 +9594,7 @@ slots:
     slot_uri: MIXS:0000222
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   wall_water_mold:
     name: wall_water_mold
     aliases:
@@ -9510,6 +9639,7 @@ slots:
     slot_uri: MIXS:0000223
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   water_feat_type:
     name: water_feat_type
     aliases:
@@ -9819,6 +9949,7 @@ slots:
     slot_uri: MIXS:0001097
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   bac_prod:
     name: bac_prod
     aliases:
@@ -9842,6 +9973,7 @@ slots:
     slot_uri: MIXS:0000683
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   bac_resp:
     name: bac_resp
     aliases:
@@ -9865,6 +9997,7 @@ slots:
     slot_uri: MIXS:0000684
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   conduc:
     name: conduc
     aliases:
@@ -9888,6 +10021,7 @@ slots:
     slot_uri: MIXS:0000692
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_inorg_nitro:
     name: diss_inorg_nitro
     aliases:
@@ -9911,6 +10045,7 @@ slots:
     slot_uri: MIXS:0000698
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_inorg_phosp:
     name: diss_inorg_phosp
     aliases:
@@ -9934,6 +10069,7 @@ slots:
     slot_uri: MIXS:0000106
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   down_par:
     name: down_par
     aliases:
@@ -9959,6 +10095,7 @@ slots:
     slot_uri: MIXS:0000703
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   fluor:
     name: fluor
     aliases:
@@ -9982,6 +10119,7 @@ slots:
     slot_uri: MIXS:0000704
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   light_intensity:
     name: light_intensity
     aliases:
@@ -10005,6 +10143,7 @@ slots:
     slot_uri: MIXS:0000706
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   part_org_nitro:
     name: part_org_nitro
     aliases:
@@ -10028,6 +10167,7 @@ slots:
     slot_uri: MIXS:0000719
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   photon_flux:
     name: photon_flux
     aliases:
@@ -10051,6 +10191,7 @@ slots:
     slot_uri: MIXS:0000725
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   primary_prod:
     name: primary_prod
     aliases:
@@ -10075,6 +10216,7 @@ slots:
     slot_uri: MIXS:0000728
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   soluble_react_phosp:
     name: soluble_react_phosp
     aliases:
@@ -10098,6 +10240,7 @@ slots:
     slot_uri: MIXS:0000738
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   suspend_part_matter:
     name: suspend_part_matter
     aliases:
@@ -10121,6 +10264,7 @@ slots:
     slot_uri: MIXS:0000741
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_diss_nitro:
     name: tot_diss_nitro
     aliases:
@@ -10145,6 +10289,7 @@ slots:
     slot_uri: MIXS:0000744
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_inorg_nitro:
     name: tot_inorg_nitro
     aliases:
@@ -10168,6 +10313,7 @@ slots:
     slot_uri: MIXS:0000745
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_part_carb:
     name: tot_part_carb
     aliases:
@@ -10191,6 +10337,7 @@ slots:
     slot_uri: MIXS:0000747
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   water_current:
     name: water_current
     aliases:
@@ -10214,6 +10361,7 @@ slots:
     slot_uri: MIXS:0000203
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ances_data:
     name: ances_data
     aliases:
@@ -10543,6 +10691,7 @@ slots:
     slot_uri: MIXS:0000255
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   host_common_name:
     name: host_common_name
     aliases:
@@ -10587,6 +10736,7 @@ slots:
     slot_uri: MIXS:0000257
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   host_genotype:
     name: host_genotype
     aliases:
@@ -10631,6 +10781,7 @@ slots:
     slot_uri: MIXS:0000264
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   host_length:
     name: host_length
     aliases:
@@ -10654,6 +10805,7 @@ slots:
     slot_uri: MIXS:0000256
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   host_life_stage:
     name: host_life_stage
     aliases:
@@ -10698,6 +10850,7 @@ slots:
     slot_uri: MIXS:0000874
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   host_subspecf_genlin:
     name: host_subspecf_genlin
     aliases:
@@ -10790,6 +10943,7 @@ slots:
     slot_uri: MIXS:0000263
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   host_wet_mass:
     name: host_wet_mass
     aliases:
@@ -10813,6 +10967,7 @@ slots:
     slot_uri: MIXS:0000567
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   mechanical_damage:
     name: mechanical_damage
     aliases:
@@ -11035,6 +11190,7 @@ slots:
     slot_uri: MIXS:0001060
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   radiation_regm:
     name: radiation_regm
     aliases:
@@ -11136,6 +11292,7 @@ slots:
     slot_uri: MIXS:0000577
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   root_med_macronutr:
     name: root_med_macronutr
     aliases:
@@ -11161,6 +11318,7 @@ slots:
     slot_uri: MIXS:0000578
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   root_med_micronutr:
     name: root_med_micronutr
     aliases:
@@ -11186,6 +11344,7 @@ slots:
     slot_uri: MIXS:0000579
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   root_med_ph:
     name: root_med_ph
     aliases:
@@ -11231,6 +11390,7 @@ slots:
     slot_uri: MIXS:0000581
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   root_med_solid:
     name: root_med_solid
     aliases:
@@ -11279,6 +11439,7 @@ slots:
     slot_uri: MIXS:0000580
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   salt_regm:
     name: salt_regm
     aliases:
@@ -11532,6 +11693,7 @@ slots:
     slot_uri: MIXS:0000157
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   aromatics_pc:
     name: aromatics_pc
     aliases:
@@ -11560,6 +11722,7 @@ slots:
     slot_uri: MIXS:0000133
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   asphaltenes_pc:
     name: asphaltenes_pc
     aliases:
@@ -11588,6 +11751,7 @@ slots:
     slot_uri: MIXS:0000135
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   basin:
     name: basin
     aliases:
@@ -11632,6 +11796,7 @@ slots:
     slot_uri: MIXS:0000153
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   biochem_oxygen_dem:
     name: biochem_oxygen_dem
     aliases:
@@ -11657,6 +11822,7 @@ slots:
     slot_uri: MIXS:0000653
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   biocide:
     name: biocide
     aliases:
@@ -11728,6 +11894,7 @@ slots:
     slot_uri: MIXS:0000258
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   blood_press_syst:
     name: blood_press_syst
     aliases:
@@ -11751,6 +11918,7 @@ slots:
     slot_uri: MIXS:0000259
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   chem_oxygen_dem:
     name: chem_oxygen_dem
     aliases:
@@ -11776,6 +11944,7 @@ slots:
     slot_uri: MIXS:0000656
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   chem_treat_method:
     name: chem_treat_method
     aliases:
@@ -11871,6 +12040,7 @@ slots:
     slot_uri: MIXS:0000139
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   diss_oxygen_fluid:
     name: diss_oxygen_fluid
     aliases:
@@ -11895,6 +12065,7 @@ slots:
     slot_uri: MIXS:0000438
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   efficiency_percent:
     name: efficiency_percent
     aliases:
@@ -11918,6 +12089,7 @@ slots:
     slot_uri: MIXS:0000657
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   emulsions:
     name: emulsions
     aliases:
@@ -11944,6 +12116,7 @@ slots:
     slot_uri: MIXS:0000660
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   ethylbenzene:
     name: ethylbenzene
     aliases:
@@ -11967,6 +12140,7 @@ slots:
     slot_uri: MIXS:0000155
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   field:
     name: field
     aliases:
@@ -12013,6 +12187,7 @@ slots:
     slot_uri: MIXS:0000661
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   gravidity:
     name: gravidity
     aliases:
@@ -12106,6 +12281,7 @@ slots:
     slot_uri: MIXS:0000406
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   hcr_geol_age:
     name: hcr_geol_age
     aliases:
@@ -12220,6 +12396,7 @@ slots:
     slot_uri: MIXS:0000888
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   host_body_site:
     name: host_body_site
     aliases:
@@ -12244,6 +12421,7 @@ slots:
     slot_uri: MIXS:0000867
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   host_body_temp:
     name: host_body_temp
     aliases:
@@ -12267,6 +12445,7 @@ slots:
     slot_uri: MIXS:0000274
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   host_color:
     name: host_color
     aliases:
@@ -12482,6 +12661,7 @@ slots:
     slot_uri: MIXS:0000662
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   inorg_particles:
     name: inorg_particles
     aliases:
@@ -12507,6 +12687,7 @@ slots:
     slot_uri: MIXS:0000664
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   iw_bt_date_well:
     name: iw_bt_date_well
     aliases:
@@ -12552,6 +12733,7 @@ slots:
     slot_uri: MIXS:0000455
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   lithology:
     name: lithology
     aliases:
@@ -12629,6 +12811,7 @@ slots:
     slot_uri: MIXS:0000665
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   owc_tvdss:
     name: owc_tvdss
     aliases:
@@ -12652,6 +12835,7 @@ slots:
     slot_uri: MIXS:0000405
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   permeability:
     name: permeability
     aliases:
@@ -12703,6 +12887,7 @@ slots:
     slot_uri: MIXS:0000127
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   pre_treatment:
     name: pre_treatment
     aliases:
@@ -12771,6 +12956,7 @@ slots:
     slot_uri: MIXS:0000452
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   prod_start_date:
     name: prod_start_date
     aliases:
@@ -12863,6 +13049,7 @@ slots:
     slot_uri: MIXS:0000134
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   samp_collect_point:
     name: samp_collect_point
     aliases:
@@ -12968,6 +13155,7 @@ slots:
     slot_uri: MIXS:0000463
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   samp_store_dur:
     name: samp_store_dur
     aliases:
@@ -13088,6 +13276,7 @@ slots:
     slot_uri: MIXS:0000998
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   samp_well_name:
     name: samp_well_name
     aliases:
@@ -13137,6 +13326,7 @@ slots:
     slot_uri: MIXS:0000131
     multivalued: false
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   secondary_treatment:
     name: secondary_treatment
     aliases:
@@ -13203,6 +13393,7 @@ slots:
     slot_uri: MIXS:0000669
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   sodium:
     name: sodium
     aliases:
@@ -13226,6 +13417,7 @@ slots:
     slot_uri: MIXS:0000428
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   soluble_inorg_mat:
     name: soluble_inorg_mat
     aliases:
@@ -13251,6 +13443,7 @@ slots:
     slot_uri: MIXS:0000672
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   soluble_org_mat:
     name: soluble_org_mat
     aliases:
@@ -13276,6 +13469,7 @@ slots:
     slot_uri: MIXS:0000673
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   sr_dep_env:
     name: sr_dep_env
     aliases:
@@ -13386,6 +13580,7 @@ slots:
     slot_uri: MIXS:0000407
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   sulfide:
     name: sulfide
     aliases:
@@ -13409,6 +13604,7 @@ slots:
     slot_uri: MIXS:0000424
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   suspend_solids:
     name: suspend_solids
     aliases:
@@ -13435,6 +13631,7 @@ slots:
     slot_uri: MIXS:0000150
     multivalued: true
     range: string
+    pattern: ^\S*;[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tan:
     name: tan
     aliases:
@@ -13461,6 +13658,7 @@ slots:
     slot_uri: MIXS:0000120
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tertiary_treatment:
     name: tertiary_treatment
     aliases:
@@ -13506,6 +13704,7 @@ slots:
     slot_uri: MIXS:0000154
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_iron:
     name: tot_iron
     aliases:
@@ -13529,6 +13728,7 @@ slots:
     slot_uri: MIXS:0000105
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_nitro:
     name: tot_nitro
     aliases:
@@ -13554,6 +13754,7 @@ slots:
     slot_uri: MIXS:0000102
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_phosphate:
     name: tot_phosphate
     aliases:
@@ -13577,6 +13778,7 @@ slots:
     slot_uri: MIXS:0000689
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tot_sulfur:
     name: tot_sulfur
     aliases:
@@ -13600,6 +13802,7 @@ slots:
     slot_uri: MIXS:0000419
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tvdss_of_hcr_press:
     name: tvdss_of_hcr_press
     aliases:
@@ -13624,6 +13827,7 @@ slots:
     slot_uri: MIXS:0000397
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   tvdss_of_hcr_temp:
     name: tvdss_of_hcr_temp
     aliases:
@@ -13648,6 +13852,7 @@ slots:
     slot_uri: MIXS:0000394
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   vfa:
     name: vfa
     aliases:
@@ -13671,6 +13876,7 @@ slots:
     slot_uri: MIXS:0000152
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   vfa_fw:
     name: vfa_fw
     aliases:
@@ -13694,6 +13900,7 @@ slots:
     slot_uri: MIXS:0000408
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   viscosity:
     name: viscosity
     aliases:
@@ -13766,6 +13973,7 @@ slots:
     slot_uri: MIXS:0000454
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   water_prod_rate:
     name: water_prod_rate
     aliases:
@@ -13789,6 +13997,7 @@ slots:
     slot_uri: MIXS:0000453
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   win:
     name: win
     aliases:
@@ -13836,6 +14045,7 @@ slots:
     slot_uri: MIXS:0000156
     multivalued: false
     range: quantity value
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)? \S+$
   source_mat_id:
     name: source_mat_id
     aliases:
@@ -13916,6 +14126,7 @@ slots:
     slot_uri: MIXS:0000012
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   env_local_scale:
     name: env_local_scale
     aliases:
@@ -13944,6 +14155,7 @@ slots:
     slot_uri: MIXS:0000013
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   env_medium:
     name: env_medium
     aliases:
@@ -13971,6 +14183,7 @@ slots:
     slot_uri: MIXS:0000014
     multivalued: false
     range: string
+    pattern: ^\S+.*\S+ \[ENVO:\d+\]$
   ecosystem:
     name: ecosystem
     description: An ecosystem is a combination of a physical environment (abiotic
@@ -14042,27 +14255,27 @@ slots:
     see_also:
     - https://gold.jgi.doe.gov/help
     is_a: gold_path_field
+  has unit:
+    name: has unit
+    description: Example "m"
+    from_schema: http://w3id.org/mixs/ranges
   core field:
     name: core field
     description: basic fields
     from_schema: http://w3id.org/mixs/terms
     abstract: true
-  has unit:
-    name: has unit
-    description: Example "m"
-    from_schema: http://w3id.org/mixs/ranges
-  has raw value:
-    name: has raw value
-    from_schema: http://w3id.org/mixs/ranges
-    string_serialization: '{has numeric value} {has unit}'
-  has numeric value:
-    name: has numeric value
-    from_schema: http://w3id.org/mixs/ranges
-    range: double
   nucleic acid sequence source field:
     name: nucleic acid sequence source field
     from_schema: http://w3id.org/mixs/terms
     abstract: true
+  has numeric value:
+    name: has numeric value
+    from_schema: http://w3id.org/mixs/ranges
+    range: double
+  has raw value:
+    name: has raw value
+    from_schema: http://w3id.org/mixs/ranges
+    string_serialization: '{has numeric value} {has unit}'
   environment field:
     name: environment field
     description: field describing environmental aspect of a sample
