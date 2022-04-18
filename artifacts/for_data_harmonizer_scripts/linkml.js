@@ -26,7 +26,6 @@ DataHarmonizer.updateParentState = function () {
     const columnCoordinates = this.overrideGetColumnCoordinates();
     const INVALID_CELLS = this.invalid_cells;
     window.parent.postMessage({ type: 'update', INVALID_CELLS, columnCoordinates }, "*");
-    console.log('UpdateParentState', INVALID_CELLS, columnCoordinates);
 };
 
 /**
@@ -54,13 +53,11 @@ DataHarmonizer.processFileChange = function (file) {
 const setupMessageInterface = (dh) => {
     const params = new URLSearchParams(location.search);
     if (params.get('minified') || false) {
-        console.log("Setting up message interface");
-        $('#data-harmonizer-toolbar').css('display', 'none');
-
-        dh.updateParentState();
+        console.log("minified=true; Setting up DataHarmonizer message interface...");
+        // Toolbar and modals share a common parent, so this is a hack to only hide the toolbar.
+        $('#data-harmonizer-toolbar-inset').children().slice(0, 6).attr('style', 'display:none !important');
 
         window.addEventListener("message", async (event) => {
-            console.log('child received event', event.data.type);
             switch (event.data.type) {
                 case 'setupTemplate':
                     dh.setupTemplate(event.data.folder);
@@ -109,8 +106,12 @@ const setupMessageInterface = (dh) => {
 
 /************************** APPLICATION LAUNCH ********************/
 
+let dh = new Object(DataHarmonizer);
+let toolbar = new Object(DataHarmonizerToolbar);
+setupMessageInterface(dh);
+
+/** Once DOM has loaded, set up the interface */
 $(document).ready(async () => {
-    console.log('Override successful!')
 	const myDHGrid = document.getElementById('data-harmonizer-grid');
 	const myDHToolbar = document.getElementById('data-harmonizer-toolbar');
 	const myDHFooter = document.getElementById('data-harmonizer-footer');
@@ -119,9 +120,6 @@ $(document).ready(async () => {
 	// to loading it dynamically from a separate html file.
 	$(myDHToolbar).append($('#data-harmonizer-toolbar-inset'));
 	$('#data-harmonizer-toolbar-inset').css('visibility','visible');
-
-	let dh = new Object(DataHarmonizer);
-	let toolbar = new Object(DataHarmonizerToolbar);
 
 	// Note: TEMPLATES contains templates/menu.js object. It is only required 
 	// if using dh.getTemplate() below without specifying a template.
@@ -134,7 +132,7 @@ $(document).ready(async () => {
 	// Hardcode URL here if desired. Expecting a file path relative to app's template folder.
 	await dh.useTemplate(template_path)
 	
-	await toolbar.refresh(); 
+    await toolbar.refresh();
 
-    setupMessageInterface(dh);
+    dh.updateParentState();
 });
