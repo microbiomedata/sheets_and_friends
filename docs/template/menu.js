@@ -84,12 +84,8 @@ const TEMPLATES = {
       "name": "samp_id_new_terms_mixin",
       "status": "published"
     },
-    "soli_mixs_inspired_mixin": {
-      "name": "soli_mixs_inspired_mixin",
-      "status": "published"
-    },
-    "built_envsediment": {
-      "name": "built_envsediment",
+    "soil_mixs_inspired_mixin": {
+      "name": "soil_mixs_inspired_mixin",
       "status": "published"
     },
     "quantity value": {

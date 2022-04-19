@@ -1011,6 +1011,15 @@ let DataHarmonizer = {
 				new_field['title'] = new_field['name'];
 			}
 
+			// The presence of a min/max value implies that this field is numeric
+			// and should be validated as such. But a lot of slots don't define
+			// a `range` along with `minimum_value` or `maximum_value`. This is a 
+			// hack to get the validation to work even though this should really
+			// be handled by defining an appropriate `range` in the schema.
+			if ('minimum_value' in new_field || 'maximum_value' in new_field) {
+				new_field.range = 'float'
+			}
+
 			new_field.datatype = null;
 			switch (new_field.range) {
 				// LinkML typically translates "string" to "uri":"xsd:string" but
@@ -1201,13 +1210,45 @@ let DataHarmonizer = {
 	 * @return {String} HTML string describing field.
 	 */
 	getComment: function (field) {
-	  let ret = `<p><strong>Label</strong>: ${field.title}</p>
-	<p><strong>Description</strong>: ${field.description}</p>`;
-	  //if (field.guidance) 
-	  //  ret += `<p><strong>Guidance</strong>: ${field.guidance}</p>`;
-	  if (field.comments && field.comments.length) {
-		ret += `<p><strong>Guidance</strong>: </p><p>${field.comments.join('</p>\n<p>')}</p>`;
+	  let ret = `<p><strong>Label</strong>: ${field.title}</p>`;
+
+	  if (field.description) {
+		ret += `<p><strong>Description</strong>: ${field.description}</p>`;
 	  }
+
+	  let guidance = [];
+	  if (field.comments && field.comments.length) {
+		guidance = guidance.concat(field.comments);
+	  }
+	  if (field.pattern) {
+		guidance.push('Pattern as regular expression: ' + field.pattern);
+	  }
+	  if (field.string_serialization) {
+		guidance.push('Pattern hint: ' + field.string_serialization);
+	  }
+	  const hasMinValue = field.minimum_value != null;
+	  const hasMaxValue = field.maximum_value != null;
+	  if (hasMinValue || hasMaxValue) {
+		  let paragraph = 'Value should be '
+		  if (hasMinValue && hasMaxValue) {
+			  paragraph += `between ${field.minimum_value} and ${field.maximum_value}.`
+		  } else if (hasMinValue) {
+			  paragraph += `greater than ${field.minimum_value}.`
+		  } else if (hasMaxValue) {
+			  paragraph += `less than ${field.maximum_value}.`
+		  }
+		  guidance.push(paragraph);
+	  }
+	  if (guidance.length) {
+		guidance[0] = '<strong>Guidance</strong>: ' + guidance[0]
+		const renderedParagraphs = guidance
+		  .map(function (paragraph) {
+		    return '<p>' + paragraph + '</p>';
+		  })
+		  .join('\n');
+		ret += renderedParagraphs;
+	  }
+
 	  if (field.examples) {
 		// Ignoring all but linkml .value now (which can be empty):
 		let examples = [];
