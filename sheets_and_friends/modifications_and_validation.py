@@ -12,6 +12,7 @@ from glom import glom, assign
 import glom.core as gc
 
 from linkml_runtime.utils.schemaview import SchemaView
+from linkml_runtime.loaders import yaml_loader
 
 import pprint
 
@@ -22,9 +23,10 @@ click_log.basic_config(logger)
 @click.command()
 @click_log.simple_verbosity_option(logger)
 @click.option("--yaml_input", type=click.Path(exists=True), required=True)
-@click.option("--config_tsv", type=click.Path(exists=True), required=True)
+@click.option("--modifications_config_tsv", type=click.Path(exists=True), required=True)
+@click.option("--validation_config_tsv", type=click.Path(exists=True), required=True)
 @click.option("--yaml_output", type=click.Path(), required=True)
-def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
+def modifications_and_validation(yaml_input: str, modifications_config_tsv: str, validation_config_tsv: str, yaml_output: str):
     """
     :param yaml_input:
     :param config_tsv:
@@ -43,7 +45,7 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
         except yaml.YAMLError as e:
             logger.warning(e)
 
-    mod_rule_frame = pd.read_csv(config_tsv, sep="\t")
+    mod_rule_frame = pd.read_csv(modifications_config_tsv, sep="\t")
     mod_rule_frame['class'] = mod_rule_frame['class'].str.split("|")
     mod_rule_frame = mod_rule_frame.explode('class')
 
@@ -106,9 +108,53 @@ def mod_by_path(yaml_input: str, config_tsv: str, yaml_output: str):
         except gc.PathAccessError as e:
             logger.warning(e)
 
+    # ============== apply validation rules ============== #
+    # ==================================================== #
+
+    # fetch validation_converter sheet as pd df
+    validation_rules_df = pd.read_csv(validation_config_tsv, sep="\t", header=0)
+
+    # loop through all induced slots associated with all classes from 
+    # from the schema_dict and modify slots in place
+    for class_name, class_defn in schema_dict["classes"].items():
+
+        # check if the slot_usage key exists in each class definition
+        if "slot_usage" in class_defn:
+
+            # loop over slot_usage items from each of the classes
+            for _, slot_defn in schema_dict["classes"][class_name][
+                "slot_usage"
+            ].items():
+
+                # when slot range in filtered list from validation_converter
+                if "range" in slot_defn and (
+                    slot_defn["range"]
+                    in validation_rules_df[
+                        validation_rules_df["to_type"] == "DH pattern regex"
+                    ]["from_val"].to_list()
+                ):
+                    slot_defn["pattern"] = validation_rules_df[
+                        validation_rules_df["from_val"] == slot_defn["range"]
+                    ]["to_val"].to_list()[0]
+
+                # when slot string_serialization in filtered list
+                # from validation_converter
+                if "string_serialization" in slot_defn and (
+                    slot_defn["string_serialization"]
+                    in validation_rules_df[
+                        validation_rules_df["to_type"] == "DH pattern regex"
+                    ]["from_val"].to_list()
+                ):
+                    slot_defn["pattern"] = validation_rules_df[
+                        validation_rules_df["from_val"]
+                        == slot_defn["string_serialization"]
+                    ]["to_val"].to_list()[0]
+
+    # ==================================================== #
+
     with open(yaml_output, 'w') as outfile:
         yaml.dump(schema_dict, outfile, default_flow_style=False, sort_keys=False)
 
 
 if __name__ == '__main__':
-    mod_by_path()
+    modifications_and_validation()
