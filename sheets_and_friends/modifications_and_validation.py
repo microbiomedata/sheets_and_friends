@@ -12,6 +12,7 @@ from glom import glom, assign
 import glom.core as gc
 
 from linkml_runtime.utils.schemaview import SchemaView
+from linkml_runtime.loaders import yaml_loader
 
 import pprint
 
@@ -113,32 +114,41 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # fetch validation_converter sheet as pd df
     validation_rules_df = pd.read_csv(validation_config_tsv, sep="\t", header=0)
 
-    # loop through all slots in the schema_dict
-    # and modify slots in place
-    for _, slot_defn in schema_dict["slots"].items():
+    # loop through all induced slots associated with all classes from 
+    # from the schema_dict and modify slots in place
+    for class_name, class_defn in schema_dict["classes"].items():
 
-        # when slot range in filtered list from validation_converter
-        if "range" in slot_defn and (
-            slot_defn["range"]
-            in validation_rules_df[
-                validation_rules_df["to_type"] == "DH pattern regex"
-            ]["from_val"].to_list()
-        ):
-            slot_defn["pattern"] = validation_rules_df[
-                validation_rules_df["from_val"] == slot_defn["range"]
-            ]["to_val"].to_list()[0]
+        # check if the slot_usage key exists in each class definition
+        if "slot_usage" in class_defn:
 
-        # when slot string_serialization in filtered list
-        # from validation_converter
-        if "string_serialization" in slot_defn and (
-            slot_defn["string_serialization"]
-            in validation_rules_df[
-                validation_rules_df["to_type"] == "DH pattern regex"
-            ]["from_val"].to_list()
-        ):
-            slot_defn["pattern"] = validation_rules_df[
-                validation_rules_df["from_val"] == slot_defn["string_serialization"]
-            ]["to_val"].to_list()[0]
+            # loop over slot_usage items from each of the classes
+            for _, slot_defn in schema_dict["classes"][class_name][
+                "slot_usage"
+            ].items():
+
+                # when slot range in filtered list from validation_converter
+                if "range" in slot_defn and (
+                    slot_defn["range"]
+                    in validation_rules_df[
+                        validation_rules_df["to_type"] == "DH pattern regex"
+                    ]["from_val"].to_list()
+                ):
+                    slot_defn["pattern"] = validation_rules_df[
+                        validation_rules_df["from_val"] == slot_defn["range"]
+                    ]["to_val"].to_list()[0]
+
+                # when slot string_serialization in filtered list
+                # from validation_converter
+                if "string_serialization" in slot_defn and (
+                    slot_defn["string_serialization"]
+                    in validation_rules_df[
+                        validation_rules_df["to_type"] == "DH pattern regex"
+                    ]["from_val"].to_list()
+                ):
+                    slot_defn["pattern"] = validation_rules_df[
+                        validation_rules_df["from_val"]
+                        == slot_defn["string_serialization"]
+                    ]["to_val"].to_list()[0]
 
     # ==================================================== #
 
