@@ -28,9 +28,7 @@ docs/template/nmdc_dh/schema.js: clean artifacts/nmdc_dh.yaml
 	cd DataHarmonizer/template/nmdc_dh ; poetry run python ../../script/linkml.py --input source/nmdc_dh.yaml
 	cp -r DataHarmonizer/linkml.html DataHarmonizer/linkml.js DataHarmonizer/main.css DataHarmonizer/libraries DataHarmonizer/script DataHarmonizer/template docs
 	cp artifacts/for_data_harmonizer_scripts/linkml.js docs
-	# remove once https://github.com/cidgoh/DataHarmonizer/pull/299 is merged
-	wget -O docs/script/data-harmonizer/index.js https://raw.githubusercontent.com/pkalita-lbl/DataHarmonizer/min-max-guidance/script/data-harmonizer/index.js
-
+	
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 # https://stackoverflow.com/questions/10121182/multi-line-bash-commands-in-makefile
 # https://stackoverflow.com/questions/1078524/how-to-specify-the-download-location-with-wget
