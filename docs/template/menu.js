@@ -2,95 +2,118 @@ const TEMPLATES = {
   "nmdc_dh": {
     "air": {
       "name": "air",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "biofilm": {
       "name": "biofilm",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "built_env": {
       "name": "built_env",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "hcr-cores": {
       "name": "hcr-cores",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "hcr-fluids-swabs": {
       "name": "hcr-fluids-swabs",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "host-associated": {
       "name": "host-associated",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "misc-envs": {
       "name": "misc-envs",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "plant-associated": {
       "name": "plant-associated",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "sediment": {
       "name": "sediment",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "soil": {
       "name": "soil",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "soil_emsl": {
       "name": "soil_emsl",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "soil_emsl_jgi_mg": {
       "name": "soil_emsl_jgi_mg",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "soil_emsl_jgi_mt": {
       "name": "soil_emsl_jgi_mt",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "soil_jgi_mg": {
       "name": "soil_jgi_mg",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "soil_jgi_mt": {
       "name": "soil_jgi_mt",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "wastewater_sludge": {
       "name": "wastewater_sludge",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "water": {
       "name": "water",
-      "status": "published"
+      "status": "published",
+      "display": true
     },
     "emsl_mixin": {
       "name": "emsl_mixin",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "jgi_mg_mixin": {
       "name": "jgi_mg_mixin",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "jgi_mt_mixin": {
       "name": "jgi_mt_mixin",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "samp_id_new_terms_mixin": {
       "name": "samp_id_new_terms_mixin",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "soil_mixs_inspired_mixin": {
       "name": "soil_mixs_inspired_mixin",
-      "status": "published"
+      "status": "published",
+      "display": false
     },
     "quantity value": {
       "name": "quantity value",
-      "status": "published"
+      "status": "published",
+      "display": false
     }
   }
 }
