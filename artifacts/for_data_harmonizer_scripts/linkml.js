@@ -97,6 +97,10 @@ const setupMessageInterface = (dh) => {
                     dh.hot.loadData(event.data.data);
                     break;
 
+                case 'showReference':
+                    dh.renderReference();
+                    break;
+
                 default:
                     console.log('Unknown Type', event.data.type);
             }
@@ -121,7 +125,7 @@ $(document).ready(async () => {
 	$(myDHToolbar).append($('#data-harmonizer-toolbar-inset'));
 	$('#data-harmonizer-toolbar-inset').css('visibility','visible');
 
-	// Note: TEMPLATES contains templates/menu.js object. It is only required 
+	// Note: TEMPLATES contains templates/menu.js object. It is only required
 	// if using dh.getTemplate() below without specifying a template.
 	await dh.init(myDHGrid, myDHFooter, TEMPLATES);
 
@@ -131,7 +135,7 @@ $(document).ready(async () => {
 	let template_path = dh.getTemplate();
 	// Hardcode URL here if desired. Expecting a file path relative to app's template folder.
 	await dh.useTemplate(template_path)
-	
+
     await toolbar.refresh();
 
     dh.updateParentState();
