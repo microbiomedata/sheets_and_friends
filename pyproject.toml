@@ -27,8 +27,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 do_shuttle = "sheets_and_friends.shuttle:do_shuttle"
-mod_by_path = "sheets_and_friends.mod_by_path:mod_by_path"
+modifications_and_validation = "sheets_and_friends.modifications_and_validation:modifications_and_validation"
 linkml2dataharmonizer = "sheets_and_friends.converters.commands:linkml2dataharmonizer"
 promote_to_select = "sheets_and_friends.converters.commands:promote_to_select"
 compare_enums = "sheets_and_friends.compare_enums:compare_enums"
-
