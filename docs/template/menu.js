@@ -1,5 +1,5 @@
 const TEMPLATES = {
-  "nmdc_dh": {
+  "nmdc_submission_schema": {
     "air": {
       "name": "air",
       "status": "published",
@@ -120,13 +120,13 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
-    "agent": {
-      "name": "agent",
+    "attribute value": {
+      "name": "attribute value",
       "status": "published",
       "display": false
     },
-    "attribute value": {
-      "name": "attribute value",
+    "agent": {
+      "name": "agent",
       "status": "published",
       "display": false
     },
