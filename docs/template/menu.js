@@ -120,11 +120,6 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
-    "activity": {
-      "name": "activity",
-      "status": "published",
-      "display": false
-    },
     "attribute value": {
       "name": "attribute value",
       "status": "published",
@@ -132,6 +127,11 @@ const TEMPLATES = {
     },
     "agent": {
       "name": "agent",
+      "status": "published",
+      "display": false
+    },
+    "activity": {
+      "name": "activity",
       "status": "published",
       "display": false
     }
