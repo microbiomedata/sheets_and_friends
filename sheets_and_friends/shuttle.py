@@ -128,7 +128,7 @@ class Shuttle:
                     exhaustion_helper[i['source file or URL']][i['source class']][i['destination class']].append(
                         current_slot.is_a)
                 for current_mixin in current_slot.mixins:
-                    print(current_mixin)
+                    # print(current_mixin)
                     exhaustion_helper[i['source file or URL']][i['source class']][i['destination class']].append(
                         current_mixin)
 
@@ -168,13 +168,13 @@ class Shuttle:
                         "exhausted_types": set(),
                     }
 
-                    logger.info(pprint.pformat(class_slot_dict))
+                    # logger.info(pprint.pformat(class_slot_dict))
 
                     # inefficient to repeat this reading and overwriting
                     exhausted_lite = Sheet2LinkML(path_to_yaml=schema_fp)
                     view_helper = exhausted_lite.make_view_helper(schema_alias=source_class, class_name=source_class)
                     dependency_exhaustion = exhausted_lite.modular_exhaust_class(class_slot_dict, view_helper)
-                    logger.info(pprint.pformat(dependency_exhaustion))
+                    # logger.info(pprint.pformat(dependency_exhaustion))
 
                     for e_name in dependency_exhaustion['exhausted_enums']:
                         self.destination_schema.enums[e_name] = view_helper['view'].get_enum(e_name)

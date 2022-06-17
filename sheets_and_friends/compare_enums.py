@@ -19,7 +19,7 @@ click_log.basic_config(logger)
 @click.command()
 @click_log.simple_verbosity_option(logger)
 @click.option("--left_model", type=click.Path(exists=True), required=True)
-@click.option("--right_model", type=click.Path(exists=True), required=True)
+@click.option("--right_model", required=True)
 @click.option("--yaml_output", type=click.Path(), required=True)
 def compare_enums(left_model: str, right_model: str, yaml_output: str):
     """
@@ -37,6 +37,7 @@ def compare_enums(left_model: str, right_model: str, yaml_output: str):
 
     enum_comparison = EnumComparison()
     for i in comparison:
+        # todo switch to schemaview from URLs if possible
         basename = get_schema_basename(i)
         enum_comparison.add_view(basename, i)
         enum_comparison.get_enum_names(basename)

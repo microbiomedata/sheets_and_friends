@@ -32,4 +32,4 @@ for i in cis:
     # print(f"{i.name} {i.range} {i.string_serialization}")
 
 df = pd.DataFrame(lod)
-df.to_csv("retabulate_ranges_etc.tsv", sep="\t", index=False)
+df.to_csv("target/retabulate_ranges_etc.tsv", sep="\t", index=False)

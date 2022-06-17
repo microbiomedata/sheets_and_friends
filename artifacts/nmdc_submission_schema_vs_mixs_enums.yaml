@@ -1,5 +1,6 @@
 disjoint_enums:
   mixs_only:
+  - add_recov_method_enum
   - animal_body_cond_enum
   - animal_sex_enum
   - assembly_qual_enum
@@ -30,6 +31,7 @@ disjoint_enums:
   - plant_reprod_crop_enum
   - pred_genome_struc_enum
   - pred_genome_type_enum
+  - pres_animal_insect_enum
   - route_transmission_enum
   - samp_loc_condition_enum
   - samp_purpose_enum
@@ -69,18 +71,6 @@ disjoint_enums:
   - specific_ecosystem_enum
   - store_cond_enum
 shared_enums:
-  add_recov_method_enum:
-    intersection:
-    - Dump Flood
-    - Gas Injection
-    - Not Applicable
-    - Polymer Addition
-    - Surfactant Addition
-    - Wag Immiscible Injection
-    - Water Injection
-    - other;{timestamp}
-    mixs_only: []
-    nmdc_submission_schema_only: []
   arch_struc_enum:
     intersection:
     - building
@@ -221,7 +211,7 @@ shared_enums:
     - oil waste areas
     - pastureland (grasslands used for livestock grazing)
     - permanent snow or ice
-    - rainforest (evergreen forest receiving >406 cm annual rainfall)
+    - rainforest (evergreen forest receiving greater than 406 cm annual rainfall)
     - rangeland
     - roads/railroads
     - rock
@@ -450,7 +440,8 @@ shared_enums:
     - cork
     - laminate wood
     - lineoleum
-    - none;specify unfinished
+    - none
+    - none or unfinished
     - paint
     - rug
     - sealed
@@ -736,15 +727,6 @@ shared_enums:
     - Trimonoecious
     - Trioecious
     - Unisexual
-    mixs_only: []
-    nmdc_submission_schema_only: []
-  pres_animal_insect_enum:
-    intersection:
-    - cat
-    - dog
-    - other;{integer}
-    - rodent
-    - snake
     mixs_only: []
     nmdc_submission_schema_only: []
   profile_position_enum:
