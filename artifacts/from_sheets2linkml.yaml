@@ -14,15 +14,15 @@ prefixes:
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
   qud:
     prefix_prefix: qud
     prefix_reference: http://example.org/qud/
   UO:
     prefix_prefix: UO
     prefix_reference: http://purl.obolibrary.org/obo/UO_
-  xsd:
-    prefix_prefix: xsd
-    prefix_reference: http://www.w3.org/2001/XMLSchema#
 default_prefix: nmdc_dh
 default_range: string
 types:

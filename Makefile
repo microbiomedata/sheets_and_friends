@@ -5,7 +5,7 @@ credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
 .PHONY: all clean cogs_fetch project squeaky_clean
 
-all: clean artifacts/nmdc_submission_schema.yaml artifacts/mndc_dh_generated.yaml \
+all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml \
 docs/template/nmdc_submission_schema/schema.js \
 artifacts/nmdc_submission_schema_vs_mixs_enums.yaml
 
@@ -106,7 +106,7 @@ project: artifacts/nmdc_submission_schema.yaml
 		--exclude java \
 		--dir $@ $< 2>> logs/gen-project.log
 
-artifacts/mndc_dh_generated.yaml: artifacts/nmdc_submission_schema.yaml
+artifacts/nmdc_submission_schema_generated.yaml: artifacts/nmdc_submission_schema.yaml
 	poetry run gen-linkml --format yaml $< > $@
 
 # todo add enum_name when ready
