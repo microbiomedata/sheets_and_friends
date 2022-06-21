@@ -1,0 +1,242 @@
+slot	class_curie	packages_consensus	label
+env_broad_scale	ENVO:01000041	air|water	neritic sea surface microlayer biome
+env_broad_scale	ENVO:01000049	host-associated	marine coral reef biome
+env_broad_scale	ENVO:01000123	host-associated|water	marine sponge reef biome
+env_broad_scale	ENVO:01000854	host-associated|water	tropical marine coral reef biome
+env_broad_scale	ENVO:01000181	plant-associated|sediment|soil	mangrove biome
+env_broad_scale	ENVO:01000054	sediment	marine basaltic hydrothermal vent biome
+env_broad_scale	ENVO:01000024	sediment	marine benthic biome
+env_broad_scale	ENVO:01000053	sediment	marine ultramafic hydrothermal vent biome
+env_broad_scale	ENVO:01000045	sediment|water	epeiric sea biome
+env_broad_scale	ENVO:01000020	sediment|water	estuarine biome
+env_broad_scale	ENVO:00000873	sediment|water	freshwater biome
+env_broad_scale	ENVO:01000252	sediment|water	freshwater lake biome
+env_broad_scale	ENVO:01000253	sediment|water	freshwater river biome
+env_broad_scale	ENVO:01000127	sediment|water	marine cold seep biome
+env_broad_scale	ENVO:01000028	sediment|water	marine hadal zone biome
+env_broad_scale	ENVO:01000030	sediment|water	marine hydrothermal vent biome
+env_broad_scale	ENVO:01000025	sediment|water	marine neritic benthic zone biome
+env_broad_scale	ENVO:01000029	sediment|water	marine reef biome
+env_broad_scale	ENVO:01000022	sediment|water	marine salt marsh biome
+env_broad_scale	ENVO:01000050	sediment|water	marine subtidal rocky reef biome
+env_broad_scale	ENVO:01001230	sediment|water	tropical marginal sea biome
+env_broad_scale	ENVO:01001835	soil	alpine biome
+env_broad_scale	ENVO:01001505	soil	alpine tundra biome
+env_broad_scale	ENVO:01000219	soil	anthropogenic terrestrial biome
+env_broad_scale	ENVO:01001838	soil	arid biome
+env_broad_scale	ENVO:01000190	soil	flooded savanna biome
+env_broad_scale	ENVO:01001833	soil	mediterranean biome
+env_broad_scale	ENVO:01000229	soil	mediterranean savanna biome
+env_broad_scale	ENVO:01000217	soil	mediterranean shrubland biome
+env_broad_scale	ENVO:01000208	soil	mediterranean woodland biome
+env_broad_scale	ENVO:01001836	soil	montane biome
+env_broad_scale	ENVO:01000223	soil	montane savanna biome
+env_broad_scale	ENVO:01000216	soil	montane shrubland biome
+env_broad_scale	ENVO:01000339	soil	polar biome
+env_broad_scale	ENVO:01000247	soil	rangeland biome
+env_broad_scale	ENVO:01000178	soil	savanna biome
+env_broad_scale	ENVO:01000176	soil	shrubland biome
+env_broad_scale	ENVO:01001837	soil	subalpine biome
+env_broad_scale	ENVO:01001834	soil	subpolar biome
+env_broad_scale	ENVO:01001832	soil	subtropical biome
+env_broad_scale	ENVO:01000187	soil	subtropical savanna biome
+env_broad_scale	ENVO:01000213	soil	subtropical shrubland biome
+env_broad_scale	ENVO:01000222	soil	subtropical woodland biome
+env_broad_scale	ENVO:01001831	soil	temperate biome
+env_broad_scale	ENVO:01000189	soil	temperate savanna biome
+env_broad_scale	ENVO:01000215	soil	temperate shrubland biome
+env_broad_scale	ENVO:01000221	soil	temperate woodland biome
+env_broad_scale	ENVO:01001830	soil	tropical biome
+env_broad_scale	ENVO:01000188	soil	tropical savanna biome
+env_broad_scale	ENVO:01000214	soil	tropical shrubland biome
+env_broad_scale	ENVO:01000220	soil	tropical woodland biome
+env_broad_scale	ENVO:01000180	soil	tundra biome
+env_broad_scale	ENVO:01000249	soil	urban biome
+env_broad_scale	ENVO:01000246	soil	village biome
+env_broad_scale	ENVO:01000175	soil	woodland biome
+env_broad_scale	ENVO:00002030	water	aquatic biome
+env_broad_scale	ENVO:01000027	water	marine abyssal zone biome
+env_broad_scale	ENVO:01000026	water	marine bathyal zone biome
+env_broad_scale	ENVO:00000447	water	marine biome
+env_broad_scale	ENVO:01000051	water	marine black smoker biome
+env_broad_scale	ENVO:01000023	water	marine pelagic biome
+env_broad_scale	ENVO:01000858	water	marine upwelling biome
+env_broad_scale	ENVO:01000052	water	marine white smoker biome
+env_broad_scale	ENVO:01000047	water	mediterranean sea biome
+env_broad_scale	ENVO:01000042	water	neritic epipelagic zone biome
+env_broad_scale	ENVO:01000043	water	neritic mesopelagic zone biome
+env_broad_scale	ENVO:01000032	water	neritic pelagic zone biome
+env_broad_scale	ENVO:01000048	water	ocean biome
+env_broad_scale	ENVO:01000038	water	oceanic abyssopelagic zone biome
+env_broad_scale	ENVO:01000037	water	oceanic bathypelagic zone biome
+env_broad_scale	ENVO:01000040	water	oceanic benthopelagic zone biome
+env_broad_scale	ENVO:01000035	water	oceanic epipelagic zone biome
+env_broad_scale	ENVO:01000039	water	oceanic hadal pelagic zone biome
+env_broad_scale	ENVO:01000036	water	oceanic mesopelagic zone biome
+env_broad_scale	ENVO:01000033	water	oceanic pelagic zone biome
+env_broad_scale	ENVO:01000034	water	oceanic sea surface microlayer biome
+env_broad_scale	ENVO:01000857	water	temperate mediterranean sea biome
+env_broad_scale	ENVO:01000859	water	tropical marine upwelling biome
+env_local_scale	ENVO:01000924	built-environment	plumbing drain
+env_local_scale	ENVO:00002185	hcr-cores|hcr-fluids-swabs	oil reservoir
+env_local_scale	ENVO:00002063	hcr-cores|hcr-fluids-swabs	oil seep
+env_local_scale	ENVO:01000003	hcr-cores|hcr-fluids-swabs	oil well
+env_local_scale	ENVO:2000004	host-associted|water	algal bloom
+env_local_scale	ENVO:00000150	host-associted|water	coral reef
+env_local_scale	ENVO:01000058	host-associted|water	kelp forest
+env_local_scale	ENVO:00000046	plant-associated	hedge
+env_local_scale	ENVO:00000114	plant-associated|soil	agricultural field
+env_local_scale	ENVO:00000011	plant-associated|soil	garden
+env_local_scale	ENVO:00000283	plant-associated|soil	ridge
+env_local_scale	ENVO:00000314	sediment	alluvial fan
+env_local_scale	ENVO:00000406	sediment	mid-ocean ridge
+env_local_scale	ENVO:00000264	sediment	seamount
+env_local_scale	ENVO:00000277	sediment|soil	dry lake
+env_local_scale	ENVO:01000995	sediment|soil	dry river
+env_local_scale	ENVO:00000128	sediment|soil	dry valley
+env_local_scale	ENVO:03000117	sediment|soil|water	channel
+env_local_scale	ENVO:01000687	sediment|soil|water	coast
+env_local_scale	ENVO:00000382	sediment|soil|water	lake shore
+env_local_scale	ENVO:00000068	sediment|soil|water	tunnel
+env_local_scale	ENVO:00000141	sediment|water	bank
+env_local_scale	ENVO:00000234	sediment|water	bayou
+env_local_scale	ENVO:00000101	sediment|water	delta
+env_local_scale	ENVO:00000045	sediment|water	estuary
+env_local_scale	ENVO:00000020	sediment|water	lake
+env_local_scale	ENVO:01000105	sediment|water	marine benthic feature
+env_local_scale	ENVO:00000329	sediment|water	phreatic zone
+env_local_scale	ENVO:00000033	sediment|water	pond
+env_local_scale	ENVO:00000022	sediment|water	river
+env_local_scale	ENVO:00000304	sediment|water	shore
+env_local_scale	ENVO:01000669	soil	active geological fault
+env_local_scale	ENVO:00000087	soil	cliff
+env_local_scale	ENVO:00000170	soil	dune
+env_local_scale	ENVO:00000083	soil	hill
+env_local_scale	ENVO:01000333	soil	hillside
+env_local_scale	ENVO:00000516	soil	hummock
+env_local_scale	ENVO:01001071	soil	impact crater
+env_local_scale	ENVO:00000174	soil	isthmus
+env_local_scale	ENVO:00000175	soil	karst
+env_local_scale	ENVO:01000437	soil	lava field
+env_local_scale	ENVO:00000179	soil	mesa
+env_local_scale	ENVO:00000081	soil	mountain
+env_local_scale	ENVO:00000305	soil	peninsula
+env_local_scale	ENVO:00000086	soil	plain
+env_local_scale	ENVO:00000182	soil	plateau
+env_local_scale	ENVO:00002000	soil	slope
+env_local_scale	ENVO:00000420	soil	tombolo
+env_local_scale	ENVO:01000664	soil	tuff cone
+env_local_scale	ENVO:00000100	soil	valley
+env_local_scale	ENVO:01000670	soil	vein
+env_local_scale	ENVO:00000247	soil	volcano
+env_local_scale	ENVO:00000444	soil	woodland clearing
+env_local_scale	ENVO:00000091	soil|water	beach
+env_local_scale	ENVO:00000169	soil|water	canyon
+env_local_scale	ENVO:00000067	soil|water	cave
+env_local_scale	ENVO:00000248	soil|water	glacial valley
+env_local_scale	ENVO:00000146	soil|water	snow field
+env_local_scale	ENVO:00000032	water	bay
+env_local_scale	ENVO:00000014	water	canal
+env_local_scale	ENVO:02000049	water	coastal water body
+env_local_scale	ENVO:00000138	water	cove
+env_local_scale	ENVO:00000039	water	fjord
+env_local_scale	ENVO:01000713	water	flash flood
+env_local_scale	ENVO:00000050	water	geyser
+env_local_scale	ENVO:00000051	water	hot spring
+env_local_scale	ENVO:01000353	water	marine mesoscale eddy field
+env_local_scale	ENVO:01001336	water	marine tidal flow
+env_local_scale	ENVO:00001996	water	mine drainage
+env_local_scale	ENVO:00000025	water	reservoir
+env_local_scale	ENVO:00000130	water	rocky reef
+env_local_scale	ENVO:00000027	water	spring
+env_local_scale	ENVO:00000394	water	strait
+env_local_scale	ENVO:00000023	water	stream
+env_local_scale	ENVO:00000317	water	tidal pool
+env_local_scale	ENVO:00000061	water	underground water body
+env_local_scale	ENVO:00000040	water	waterfall
+env_local_scale	ENVO:00000026	water	well
+env_medium	ENVO:00002234	soil	acrisol
+env_medium	ENVO:00002259	soil	agricultural soil
+env_medium	ENVO:00002233	soil	albeluvisol
+env_medium	ENVO:00002231	soil	alisol
+env_medium	ENVO:00002871	soil	alluvial soil
+env_medium	ENVO:00005758	soil	alluvial swamp soil
+env_medium	ENVO:00005741	soil	alpine soil
+env_medium	ENVO:00002232	soil	andosol
+env_medium	ENVO:00002230	soil	anthrosol
+env_medium	ENVO:00002229	soil	arenosol
+env_medium	ENVO:01001616	soil	bare soil
+env_medium	ENVO:00005770	soil	beech forest soil
+env_medium	ENVO:00005789	soil	bluegrass field soil
+env_medium	ENVO:00005760	soil	burned soil
+env_medium	ENVO:00002239	soil	calcisol
+env_medium	ENVO:00002235	soil	cambisol
+env_medium	ENVO:01000427	soil	carbon nanotube enriched soil
+env_medium	ENVO:00002237	soil	chernozem
+env_medium	ENVO:00005747	soil	compost soil
+env_medium	ENVO:00002116	soil	contaminated soil
+env_medium	ENVO:00002236	soil	cryosol
+env_medium	ENVO:00002260	soil	dune soil
+env_medium	ENVO:00002238	soil	durisol
+env_medium	ENVO:00005787	soil	eucalyptus forest soil
+env_medium	ENVO:00002246	soil	ferralsol
+env_medium	ENVO:00002273	soil	fluvisol
+env_medium	ENVO:00002261	soil	forest soil
+env_medium	ENVO:01001528	soil	friable-frozen soil
+env_medium	ENVO:01001638	soil	frost-susceptible soil
+env_medium	ENVO:00005765	soil	frozen compost soil
+env_medium	ENVO:01001526	soil	frozen soil
+env_medium	ENVO:00002244	soil	gleysol
+env_medium	ENVO:00005750	soil	grassland soil
+env_medium	ENVO:00005780	soil	greenhouse soil
+env_medium	ENVO:00002245	soil	gypsisol
+env_medium	ENVO:00002243	soil	histosol
+env_medium	ENVO:00005763	soil	humus-rich acidic ash soil
+env_medium	ENVO:00005751	soil	jungle soil
+env_medium	ENVO:00002240	soil	kastanozem
+env_medium	ENVO:00002241	soil	leptosol
+env_medium	ENVO:00005766	soil	limed soil
+env_medium	ENVO:00002242	soil	lixisol
+env_medium	ENVO:00002258	soil	loam
+env_medium	ENVO:00002248	soil	luvisol
+env_medium	ENVO:00005767	soil	manured soil
+env_medium	ENVO:00005761	soil	meadow soil
+env_medium	ENVO:00005769	soil	mountain forest soil
+env_medium	ENVO:00005771	soil	muddy soil
+env_medium	ENVO:00002247	soil	nitisol
+env_medium	ENVO:00005772	soil	orchard soil
+env_medium	ENVO:00005782	soil	ornithogenic soil
+env_medium	ENVO:00005740	soil	paddy field soil
+env_medium	ENVO:00003088	soil	pantothenate enriched soil
+env_medium	ENVO:00005773	soil	pasture soil
+env_medium	ENVO:00005774	soil	peat soil
+env_medium	ENVO:00005776	soil	peaty paddy field soil
+env_medium	ENVO:00002249	soil	phaeozem
+env_medium	ENVO:00002251	soil	planosol
+env_medium	ENVO:01001527	soil	plastic-frozen soil
+env_medium	ENVO:00002250	soil	plinthosol
+env_medium	ENVO:00002257	soil	podzol
+env_medium	ENVO:00003093	soil	poly-beta-hydroxybutyrate enriched soil
+env_medium	ENVO:00005764	soil	pond soil
+env_medium	ENVO:00003095	soil	quinate enriched soil
+env_medium	ENVO:00002256	soil	regosol
+env_medium	ENVO:00005788	soil	rubber plantation soil
+env_medium	ENVO:00003083	soil	sarcosine enriched soil
+env_medium	ENVO:00005746	soil	savanna soil
+env_medium	ENVO:00003085	soil	skatole enriched soil
+env_medium	ENVO:00002252	soil	solonchak
+env_medium	ENVO:00002255	soil	solonetz
+env_medium	ENVO:00002274	soil	stagnosol
+env_medium	ENVO:00005777	soil	steppe soil
+env_medium	ENVO:02000059	soil	surface soil
+env_medium	ENVO:00002275	soil	technosol
+env_medium	ENVO:00003091	soil	threonine enriched soil
+env_medium	ENVO:00003084	soil	trimethylamine enriched soil
+env_medium	ENVO:00005778	soil	tropical soil
+env_medium	ENVO:01001397	soil	ultisol
+env_medium	ENVO:00002253	soil	umbrisol
+env_medium	ENVO:00005786	soil	upland soil
+env_medium	ENVO:00005753	soil	urea enriched soil
+env_medium	ENVO:00002254	soil	vertisol
+env_medium	ENVO:01001841	soil	volcanic soil
+env_medium	ENVO:00002146	soil	xylene contaminated soil

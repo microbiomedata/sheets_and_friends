@@ -1,0 +1,2 @@
+                                * [i] ENVO:00000446 ! terrestrial biome
+                                        * [i] ENVO:01000248 ! dense settlement biome

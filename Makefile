@@ -2,6 +2,8 @@ nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # sheets-for
 
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 
+bisample_sqlite = /Users/MAM/biosample_basex.db
+
 # todo: gen-linkml expects the schema to be provided as a filesystem path
 #   now that the nmdc-schema submodule had been removed, people running this makefile
 #   will have to provide a path to the nmdc.yaml file
@@ -13,7 +15,7 @@ mixs_schema_path = https://raw.githubusercontent.com/GenomicsStandardsConsortium
 
 RUN = poetry run
 
-.PHONY: all clean cogs_fetch project squeaky_clean
+.PHONY: all clean cogs_fetch project squeaky_clean artifacts_prep oak_stuff
 
 all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml \
 docs/template/nmdc_submission_schema/schema.js \
@@ -26,7 +28,7 @@ docs/template/nmdc_submission_schema/schema.js:
 	# are envo and gold subsets still applied to *soil* templates?
 	rm -rf DataHarmonizer/template/nmdc_submission_schema
 	rm -rf DataHarmonizer/template/nmdc_dh
-	mkdir -p DataHarmonizer/template/nmdc_submission_schema/source
+	mkdir --predicates DataHarmonizer/template/nmdc_submission_schema/source
 	cp artifacts/nmdc_submission_schema.yaml DataHarmonizer/template/nmdc_submission_schema/source
 	# generalize this?
 	cd DataHarmonizer/template/nmdc_submission_schema ; $(RUN) python ../../script/linkml.py --input source/nmdc_submission_schema.yaml
@@ -129,7 +131,8 @@ artifacts/nmdc_submission_schema_vs_mixs_enums.yaml: artifacts/nmdc_submission_s
 #   sheets-for-nmdc-submission-schema
 #   https://docs.google.com/spreadsheets/d/1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8/edit#gid=993240342
 
-target/triad_restacked.tsv: .cogs/tracked/envo_terms_for_mixs_env_triad.tsv
+ artifacts/triad_restacked.tsv: .cogs/tracked/envo_terms_for_mixs_env_triad.tsv
+ 	# where did I source envo_terms_for_mixs_env_triad ?
 	$(RUN) python sheets_and_friends/restack.py \
 		--tsv_in $< \
 		--tsv_out $@ \
@@ -138,28 +141,74 @@ target/triad_restacked.tsv: .cogs/tracked/envo_terms_for_mixs_env_triad.tsv
 		--sort_key packages_consensus \
 		--sort_key label
 
-oak_stuff:
-	$(RUN) runoak --help
-	$(RUN) runoak tree --help
-	$(RUN) runoak -i sqlite:obo:envo tree ENVO:01000181  ENVO:01001835  ENVO:01001505  ENVO:01000219  ENVO:01001838  \
-		ENVO:01000190  ENVO:01001833  ENVO:01000229  ENVO:01000217  ENVO:01000208  ENVO:01001836  ENVO:01000223  \
-		ENVO:01000216  ENVO:01000339  ENVO:01000247  ENVO:01000178  ENVO:01000176  ENVO:01001837  ENVO:01001834  \
-		ENVO:01001832  ENVO:01000187  ENVO:01000213  ENVO:01000222  ENVO:01001831  ENVO:01000189  ENVO:01000215  \
-		ENVO:01000221  ENVO:01001830  ENVO:01000188  ENVO:01000214  ENVO:01000220  ENVO:01000180  ENVO:01000249  \
-		ENVO:01000246  ENVO:01000175 \
-		-p i \
-		--output target/curated_soli_ebs_tree.txt
-	$(RUN) runoak -i sqlite:obo:envo tree ENVO:01000181  ENVO:01001835  ENVO:01001505  ENVO:01000219  ENVO:01001838  \
-		ENVO:01000190  ENVO:01001833  ENVO:01000229  ENVO:01000217  ENVO:01000208  ENVO:01001836  ENVO:01000223  \
-		ENVO:01000216  ENVO:01000339  ENVO:01000247  ENVO:01000178  ENVO:01000176  ENVO:01001837  ENVO:01001834  \
-		ENVO:01001832  ENVO:01000187  ENVO:01000213  ENVO:01000222  ENVO:01001831  ENVO:01000189  ENVO:01000215  \
-		ENVO:01000221  ENVO:01001830  ENVO:01000188  ENVO:01000214  ENVO:01000220  ENVO:01000180  ENVO:01000249  \
-		ENVO:01000246  ENVO:01000175 \
-		-p i \
-		--output target/gapfilled_curated_soli_ebs_tree.txt
+artifacts_prep:
+	rm -rf artifacts/*
+	echo placeholder > artifacts/placeholder
+
+oak_stuff: artifacts_prep artifacts/triad_restacked.tsv
+	# allowed packages from mixs spreadsheet (or yaml?)
+	curl -o artifacts/mixs6_packages_final_clean.tsv \
+		-L "https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?gid=750683809&format=tsv"
+	tail -n +2 artifacts/mixs6_packages_final_clean.tsv | cut -f1 | sort | uniq > artifacts/mixs6_sheet_env_packages.txt
+
+	# also check mixs and submission portal schemas (classes done, don't see a relevant enum ny more) or sheets?
+	$(RUN) python sheets_and_friends/envs_from_schema.py > artifacts/mixs6_yaml_env_package_classes.txt
+
+	# observed
+	$(RUN) sqlite3 $(bisample_sqlite) < sql/observed_env_packages.sql >  artifacts/observed_env_packages.tsv
+
+	# ontologically suggested ebs values
 	# https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS
 		# env_broad_scale
 		# We recommend using subclasses of ENVO’s biome class: http://purl.obolibrary.org/obo/ENVO_00000428
-	$(RUN) runoak -i sqlite:obo:envo tree --down --output target/biome_tree_down.txt ENVO:00000428
-	- $(RUN) runoak -i sqlite:obo:envo descendants ENVO:00000428 | runoak tree
-	$(RUN) runoak -i sqlite:obo:envo descendants ENVO:00000428 --output target/biome_descendants.txt
+#	$(RUN) runoak --help
+#	$(RUN) runoak tree --help
+	$(RUN) runoak \
+		--input sqlite:obo:envo descendants \
+		--predicates i ENVO:00000428 | runoak \
+		--input sqlite:obo:envo tree \
+		--gap-fill \
+		--predicates i - > artifacts/suggested_broad_scales.txt
+
+	# NMDC curated suggestions for soil
+	# make sure env package value are legal
+	# make sure envo ids and labels match
+	$(RUN) runoak \
+		--input sqlite:obo:envo tree \
+		--predicates i \
+		--gap-fill `grep soil artifacts/triad_restacked.tsv | grep env_broad_scale | cut -f2 | tr '\n' ' '` \
+		--output  artifacts/gapfilled_curated_soil_ebs_tree.txt
+
+	# also run without gap fill to suggest additional terms
+	$(RUN) runoak \
+		--input sqlite:obo:envo tree \
+		--predicates i \
+		--no-gap-fill `grep soil artifacts/triad_restacked.tsv | grep env_broad_scale | cut -f2 | tr '\n' ' '` \
+		--output  artifacts/curated_soil_ebs_tree.txt
+	cat artifacts/curated_soil_ebs_tree.txt | \
+	grep -v '\] \*\*' | \
+	grep -v 'BFO:0000001' | \
+	grep -v 'BFO:0000002' | \
+	grep -v 'BFO:0000004' | \
+	grep -v 'BFO:0000040' | \
+	grep -v 'ENVO:00000428' | \
+	grep -v 'ENVO:01000254' | \
+	grep -v 'ENVO:01001110' | \
+	grep -v 'RO:0002577' | \
+	egrep -v 'environment$$' > artifacts/possible_additions.txt
+
+
+	# observed
+	# -- takes ~ 1 minute
+      	#-- masks some error cases without directly solving them
+      	#--   (see having statements)
+      	#-- also masks large number of blank/null env_broad_scale values
+	$(RUN) sqlite3 $(bisample_sqlite) < sql/selected_observed_soil_broad_scales.sql >  artifacts/selected_observed_soil_broad_scales.tsv
+
+	# annotate the observations
+	# runoak set-apikey [OPTIONS] KEYVAL
+	tail -n +2 artifacts/selected_observed_soil_broad_scales.tsv | cut -f1 > artifacts/soil_broad_scales_to_annotate.txt
+	$(RUN) runoak \
+		--input bioportal:envo annotate \
+		--text-file artifacts/soil_broad_scales_to_annotate.txt \
+		--output-type csv | tee artifacts/soil_broad_scales_annotated.tsv

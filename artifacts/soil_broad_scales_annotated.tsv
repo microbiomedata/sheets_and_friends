@@ -1,0 +1,532 @@
+predicate_id	object_id	object_label	object_source	confidence	match_string	is_longest_match	matches_whole_text	match_type	info	subject_start	subject_end	subject_label	subject_source	subject_text_id
+None	ENVO:01000245	cropland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	19	CROPLAND BIOME	envo:cropland biome	None
+None	ENVO:00000296	rice field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:01000311	cultivated environment	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:00000117	plantation	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:00000115	orchard	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:00000116	vineyard	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:00000011	garden	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	13	CROPLAND	envo:cropland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	15	19	BIOME	envo:cropland biome	None
+None	ENVO:01000245	cropland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	14	CROPLAND BIOME	cropland biome	None
+None	ENVO:00000296	rice field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:01000311	cultivated environment	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:00000117	plantation	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:00000115	orchard	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:00000116	vineyard	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:00000011	garden	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	8	CROPLAND	cropland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	14	BIOME	cropland biome	None
+None	ENVO:01000249	urban biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	11	URBAN BIOME	urban biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	11	BIOME	urban biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	6	FOREST	forest	None
+None	ENVO:01000180	tundra biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	12	TUNDRA BIOME	tundra biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	12	BIOME	tundra biome	None
+None	ENVO:00000446	terrestrial biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	17	TERRESTRIAL BIOME	terrestrial biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	17	BIOME	terrestrial biome	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	4	SOIL	soil	None
+None	ENVO:01000193	temperate grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	25	TEMPERATE GRASSLAND BIOME	temperate grassland biome	None
+None	ENVO:01001811	temperate grassland	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	19	TEMPERATE GRASSLAND	temperate grassland biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate grassland biome	None
+None	ENVO:01000177	grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	25	GRASSLAND BIOME	temperate grassland biome	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland biome	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland biome	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland biome	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland biome	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	21	25	BIOME	temperate grassland biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	12	FOREST BIOME	forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	FOREST	forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	12	BIOME	forest biome	None
+None	ENVO:01000194	montane grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	23	MONTANE GRASSLAND BIOME	montane grassland biome	None
+None	ENVO:01001808	montane grassland	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	17	MONTANE GRASSLAND	montane grassland biome	None
+None	ENVO:01000342	montane	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	7	MONTANE	montane grassland biome	None
+None	ENVO:01000177	grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	9	23	GRASSLAND BIOME	montane grassland biome	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	montane grassland biome	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	montane grassland biome	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	montane grassland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	montane grassland biome	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	montane grassland biome	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	montane grassland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	23	BIOME	montane grassland biome	None
+None	ENVO:01001805	temperate forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	16	TEMPERATE FOREST	temperate forest	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	FOREST	temperate forest	None
+None	ENVO:01001811	temperate grassland	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	19	TEMPERATE GRASSLAND	temperate grassland	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate grassland	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	GRASSLAND	temperate grassland	None
+None	ENVO:00000873	freshwater biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	16	FRESHWATER BIOME	freshwater biome	None
+None	ENVO:00002011	fresh water	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	10	FRESHWATER	freshwater biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	12	16	BIOME	freshwater biome	None
+None	ENVO:00002261	forest soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	11	FOREST SOIL	forest soil	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	FOREST	forest soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	11	SOIL	forest soil	None
+None	PATO:0001305	increased temperature	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	3	HOT	hot springs	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	13	TROPICAL	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000226	subtropical moist broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	58	SUBTROPICAL MOIST BROADLEAF FOREST BIOME	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01001802	subtropical moist broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	52	SUBTROPICAL MOIST BROADLEAF FOREST	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000205	subtropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	29	SUBTROPICAL	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000197	broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	37	58	BROADLEAF FOREST BIOME	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000430	broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	37	52	BROADLEAF FOREST	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	47	58	FOREST BIOME	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	47	52	FOREST	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	54	58	BIOME	envo:tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate broadleaf and mixed forests	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	6	DESERT	desert	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	6	DESERT	desert	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	6	DESERT	desert	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	6	DESERT	desert	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	6	DESERT	desert	None
+None	ENVO:01000179	desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	12	DESERT BIOME	desert biome	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert biome	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert biome	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert biome	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	DESERT	desert biome	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	12	BIOME	desert biome	None
+None	ENVO:00000134	permafrost	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	10	PERMAFROST	permafrost	None
+None	ENVO:01000250	subpolar coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	13	BOREAL FOREST	boreal forest	None
+None	ENVO:01000251	subpolar	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	BOREAL	boreal forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	13	FOREST	boreal forest	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	15	SHRUBLAND BIOME	shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	SHRUBLAND	shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	15	BIOME	shrubland biome	None
+None	ENVO:00000232	fen	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	3	FEN	fen	None
+None	ENVO:01000214	tropical shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	24	TROPICAL SHRUBLAND BIOME	tropical shrubland biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	24	SHRUBLAND BIOME	tropical shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	SHRUBLAND	tropical shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	20	24	BIOME	tropical shrubland biome	None
+None	ENVO:01000228	tropical moist broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	37	TROPICAL MOIST BROADLEAF FOREST BIOME	tropical moist broadleaf forest biome	None
+None	ENVO:01001800	tropical moist broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	31	TROPICAL MOIST BROADLEAF FOREST	tropical moist broadleaf forest biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical moist broadleaf forest biome	None
+None	ENVO:01000197	broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	16	37	BROADLEAF FOREST BIOME	tropical moist broadleaf forest biome	None
+None	ENVO:01000430	broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	16	31	BROADLEAF FOREST	tropical moist broadleaf forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	26	37	FOREST BIOME	tropical moist broadleaf forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	31	FOREST	tropical moist broadleaf forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	33	37	BIOME	tropical moist broadleaf forest biome	None
+None	ENVO:01000196	coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	23	CONIFEROUS FOREST BIOME	coniferous forest biome	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	12	23	FOREST BIOME	coniferous forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	FOREST	coniferous forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	23	BIOME	coniferous forest biome	None
+None	ENVO:01000186	polar desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	18	POLAR DESERT BIOME	polar desert biome	None
+None	ENVO:01000238	polar	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	5	POLAR	polar desert biome	None
+None	ENVO:01000179	desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	18	DESERT BIOME	polar desert biome	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert biome	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert biome	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert biome	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	12	DESERT	polar desert biome	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	18	BIOME	polar desert biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate grasslands	None
+None	ENVO:01000195	flooded grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	23	FLOODED GRASSLAND BIOME	flooded grassland biome	None
+None	ENVO:01001807	flooded grassland	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	17	FLOODED GRASSLAND	flooded grassland biome	None
+None	ENVO:01000177	grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	9	23	GRASSLAND BIOME	flooded grassland biome	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	flooded grassland biome	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	flooded grassland biome	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	flooded grassland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	flooded grassland biome	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	flooded grassland biome	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	GRASSLAND	flooded grassland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	23	BIOME	flooded grassland biome	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	13	17	PAMPA	argentinean pampa	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	13	17	PAMPA	argentinean pampa	None
+None	ENVO:00000134	permafrost	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	10	PERMAFROST	permafrost biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	12	16	BIOME	permafrost biome	None
+None	ENVO:01000024	marine benthic biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	20	MARINE BENTHIC BIOME	marine benthic biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	16	20	BIOME	marine benthic biome	None
+None	ENVO:00000887	large river biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	17	LARGE RIVER BIOME	large river biome	None
+None	PATO:0000586	increased size	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	5	LARGE	large river biome	None
+None	ENVO:00000022	river	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	11	RIVER	large river biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	17	BIOME	large river biome	None
+None	PCO:1000004	microbial community	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	19	MICROBIAL COMMUNITY	microbial community	None
+None	ENVO:01000238	polar	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	5	POLAR	polar desert	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	12	DESERT	polar desert	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	DESERT	polar desert	None
+None	ENVO:01000017	sand	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	4	SAND	sand	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	9	13	BIOME	tundrar biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate coniferous forests	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	13	FOREST	spruce forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	12	FOREST	beech forest	None
+None	ENVO:01000177	grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	15	GRASSLAND BIOME	grassland biome	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland biome	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland biome	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland biome	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland biome	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	15	BIOME	grassland biome	None
+None	NCBITaxon:2	Bacteria	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	8	BACTERIA	bacteria	None
+None	ENVO:01001341	marine tidal flow zone	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	22	MARINE TIDAL FLOW ZONE	marine tidal flow zone	None
+None	ENVO:01001336	marine tidal flow	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	17	MARINE TIDAL FLOW	marine tidal flow zone	None
+None	ENVO:01001333	marine tidal flow process	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	17	TIDAL FLOW	marine tidal flow zone	None
+None	ENVO:01000696	mass wasting flow	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	14	17	FLOW	marine tidal flow zone	None
+None	ENVO:00005742	arable soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	11	ARABLE SOIL	arable soil microcosm	None
+None	ENVO:01001184	arable	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	ARABLE	arable soil microcosm	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	11	SOIL	arable soil microcosm	None
+None	ENVO:01000621	microcosm	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	21	MICROCOSM	arable soil microcosm	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	GRASSLAND	grassland	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	GRASSLAND	grassland	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	GRASSLAND	grassland	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	GRASSLAND	grassland	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	GRASSLAND	grassland	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	GRASSLAND	grassland	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate deciduous forest	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	26	DECIDUOUS FOREST	temperate deciduous forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	21	26	FOREST	temperate deciduous forest	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	hyperarid desert	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	hyperarid desert	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	hyperarid desert	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	16	DESERT	hyperarid desert	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	hyperarid desert	None
+None	ENVO:01000230	arid	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	4	ARID	arid desert	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	11	DESERT	arid desert	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	11	DESERT	arid desert	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	11	DESERT	arid desert	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	11	DESERT	arid desert	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	11	DESERT	arid desert	None
+None	ENVO:01000247	rangeland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	15	RANGELAND BIOME	rangeland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	15	BIOME	rangeland biome	None
+None	ENVO:01000211	temperate coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	33	TEMPERATE CONIFEROUS FOREST BIOME	temperate coniferous forest biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate coniferous forest biome	None
+None	ENVO:01000196	coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	33	CONIFEROUS FOREST BIOME	temperate coniferous forest biome	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	27	CONIFEROUS FOREST	temperate coniferous forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	22	33	FOREST BIOME	temperate coniferous forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	22	27	FOREST	temperate coniferous forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	29	33	BIOME	temperate coniferous forest biome	None
+None	ENVO:01000219	anthropogenic terrestrial biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	31	ANTHROPOGENIC TERRESTRIAL BIOME	anthropogenic terrestrial biome	None
+None	ENVO:00000446	terrestrial biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	15	31	TERRESTRIAL BIOME	anthropogenic terrestrial biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	27	31	BIOME	anthropogenic terrestrial biome	None
+None	ENVO:01000250	subpolar coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	32	SUBPOLAR CONIFEROUS FOREST BIOME	subpolar coniferous forest biome	None
+None	ENVO:01000251	subpolar	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	SUBPOLAR	subpolar coniferous forest biome	None
+None	ENVO:01000196	coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	32	CONIFEROUS FOREST BIOME	subpolar coniferous forest biome	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	subpolar coniferous forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	21	32	FOREST BIOME	subpolar coniferous forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	21	26	FOREST	subpolar coniferous forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	28	32	BIOME	subpolar coniferous forest biome	None
+None	ENVO:00000115	orchard	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	7	ORCHARD	orchard	None
+None	ENVO:01000221	temperate woodland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	24	TEMPERATE WOODLAND BIOME	temperate woodland biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate woodland biome	None
+None	ENVO:01000175	woodland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	24	WOODLAND BIOME	temperate woodland biome	None
+None	ENVO:00000301	chaparral area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	18	WOODLAND	temperate woodland biome	None
+None	ENVO:00000057	mangrove swamp	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	18	WOODLAND	temperate woodland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	20	24	BIOME	temperate woodland biome	None
+None	ENVO:01000339	polar biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	11	POLAR BIOME	polar biome	None
+None	ENVO:01000238	polar	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	5	POLAR	polar biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	11	BIOME	polar biome	None
+None	ENVO:01000251	subpolar	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	5	10	BOREAL	sub-boreal spruce biogeoclimatic zone	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	37	51	SHRUBLAND BIOME	temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	37	45	SHRUBLAND	temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	47	51	BIOME	temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:00005750	grassland soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	14	GRASSLAND SOIL	grassland soil	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland soil	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland soil	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland soil	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland soil	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland soil	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	9	GRASSLAND	grassland soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	14	SOIL	grassland soil	None
+None	ENVO:00005802	bulk soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	9	BULK SOIL	bulk soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	9	SOIL	bulk soil	None
+None	ENVO:00002030	aquatic biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	13	AQUATIC BIOME	aquatic biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	9	13	BIOME	aquatic biome	None
+None	ENVO:00000439	dell	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00000169	canyon	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00000418	ria	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00000248	glacial valley	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00000104	undersea feature	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00000100	valley	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00000184	hanging valley	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	VALLEY	mezquital valley field soil	None
+None	ENVO:00005755	field soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	18	27	FIELD SOIL	mezquital valley field soil	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	18	22	FIELD	mezquital valley field soil	None
+None	ENVO:01000352	field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	18	22	FIELD	mezquital valley field soil	None
+None	UBERON:0007688	anlage	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	18	22	FIELD	mezquital valley field soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	24	27	SOIL	mezquital valley field soil	None
+None	ENVO:01000022	marine salt marsh biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	23	MARINE SALT MARSH BIOME	marine salt marsh biome	None
+None	ENVO:00000054	saline marsh	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	17	SALT MARSH	marine salt marsh biome	None
+None	CHEBI:24866	salt	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	11	SALT	marine salt marsh biome	None
+None	ENVO:01000681	sodium chloride salt	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	11	SALT	marine salt marsh biome	None
+None	ENVO:01001209	wetland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	13	17	MARSH	marine salt marsh biome	None
+None	ENVO:01000190	flooded savanna biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	13	17	MARSH	marine salt marsh biome	None
+None	ENVO:00000035	marsh	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	17	MARSH	marine salt marsh biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	23	BIOME	marine salt marsh biome	None
+None	ENVO:01000215	temperate shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	25	TEMPERATE SHRUBLAND BIOME	temperate shrubland biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	25	SHRUBLAND BIOME	temperate shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	19	SHRUBLAND	temperate shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	21	25	BIOME	temperate shrubland biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	22	27	FOREST	sclerophyll eucalypt forest	None
+None	ENVO:01000216	montane shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	23	MONTANE SHRUBLAND BIOME	montane shrubland biome	None
+None	ENVO:01000342	montane	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	7	MONTANE	montane shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	9	23	SHRUBLAND BIOME	montane shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	17	SHRUBLAND	montane shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	23	BIOME	montane shrubland biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	10	TAIGA	envo:taiga	None
+None	ENVO:01000250	subpolar coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	10	TAIGA	envo:taiga	None
+None	ENVO:01000183	tropical desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	21	TROPICAL DESERT BIOME	tropical desert biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical desert biome	None
+None	ENVO:01000179	desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	21	DESERT BIOME	tropical desert biome	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	15	DESERT	tropical desert biome	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	15	DESERT	tropical desert biome	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	15	DESERT	tropical desert biome	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	15	DESERT	tropical desert biome	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	15	DESERT	tropical desert biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	17	21	BIOME	tropical desert biome	None
+None	ENVO:00000044	peatland	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	8	PEATLAND	peatland	None
+None	ENVO:01001209	wetland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	8	PEATLAND	peatland	None
+None	ENVO:00002259	agricultural soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	17	AGRICULTURAL SOIL	agricultural soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	17	SOIL	agricultural soil	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	11	FOREST	pine forest	None
+None	ENVO:01000628	plant litter	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	11	LEAF LITTER	leaf litter	None
+None	PO:0025034	leaf	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	4	LEAF	leaf litter	None
+None	ENVO:03500005	anthropogenic litter	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	11	LITTER	leaf litter	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	13	TROPICAL	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000209	subtropical coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	53	SUBTROPICAL CONIFEROUS FOREST BIOME	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000205	subtropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	29	SUBTROPICAL	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000196	coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	31	53	CONIFEROUS FOREST BIOME	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	47	CONIFEROUS FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	42	53	FOREST BIOME	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	42	47	FOREST	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	49	53	BIOME	envo:tropical and subtropical coniferous forest biome	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	16	SOIL	terrestrial soil	None
+None	ENVO:01000430	broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	26	BROADLEAF FOREST	deciduous/broadleaf forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	21	26	FOREST	deciduous/broadleaf forest	None
+None	ENVO:00002007	sediment	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	8	SEDIMENT	sediment	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical and subtropical grasslands, savannas, and shrubland biome	None
+None	ENVO:01000205	subtropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	24	SUBTROPICAL	tropical and subtropical grasslands, savannas, and shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	52	66	SHRUBLAND BIOME	tropical and subtropical grasslands, savannas, and shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	52	60	SHRUBLAND	tropical and subtropical grasslands, savannas, and shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	62	66	BIOME	tropical and subtropical grasslands, savannas, and shrubland biome	None
+None	ENVO:01001804	subtropical forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	18	SUBTROPICAL FOREST	subtropical forest	None
+None	ENVO:01000205	subtropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	11	SUBTROPICAL	subtropical forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	13	18	FOREST	subtropical forest	None
+None	ENVO:00002985	oil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	3	OIL	oil-contaminated soil	None
+None	FOODON:03310387	oil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	3	OIL	oil-contaminated soil	None
+None	ENVO:00002116	contaminated soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	5	21	CONTAMINATED SOIL	oil-contaminated soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	18	21	SOIL	oil-contaminated soil	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	9	TEMPERATE	temperate	None
+None	ENVO:01000342	montane	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	7	MONTANE	montane grasslands and shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	24	38	SHRUBLAND BIOME	montane grasslands and shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	24	32	SHRUBLAND	montane grasslands and shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	34	38	BIOME	montane grasslands and shrubland biome	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	12	15	SOIL	ascocarpic soil	None
+None	ENVO:00005801	rhizosphere	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	24	RHIZOSPHERE	agricultural rhizosphere	None
+None	ENVO:00000296	rice field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	10	RICE PADDY	rice paddy soils	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate broadleaf and mixed forest biome	None
+None	ENVO:01000198	mixed forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	25	42	MIXED FOREST BIOME	temperate broadleaf and mixed forest biome	None
+None	ENVO:01000431	mixed forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	25	36	MIXED FOREST	temperate broadleaf and mixed forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	31	42	FOREST BIOME	temperate broadleaf and mixed forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	31	36	FOREST	temperate broadleaf and mixed forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	38	42	BIOME	temperate broadleaf and mixed forest biome	None
+None	ENVO:01000199	mediterranean forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	26	MEDITERRANEAN FOREST BIOME	mediterranean forest biome	None
+None	ENVO:01001791	mediterranean forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	20	MEDITERRANEAN FOREST	mediterranean forest biome	None
+None	ENVO:01000207	mediterranean	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	13	MEDITERRANEAN	mediterranean forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	15	26	FOREST BIOME	mediterranean forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	15	20	FOREST	mediterranean forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	22	26	BIOME	mediterranean forest biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	9	SHRUBLAND	shrubland	None
+None	ENVO:01000620	mesocosm	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	MESOCOSM	mesocosm with annual plant community	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	FOREST	forest steppe	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	13	STEPPE	forest steppe	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	17	CONIFEROUS FOREST	coniferous forest	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	FOREST	coniferous forest	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000209	subtropical coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	48	SUBTROPICAL CONIFEROUS FOREST BIOME	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000205	subtropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	24	SUBTROPICAL	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000196	coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	26	48	CONIFEROUS FOREST BIOME	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	42	CONIFEROUS FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	37	48	FOREST BIOME	tropical and subtropical coniferous forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	37	42	FOREST	tropical and subtropical coniferous forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	44	48	BIOME	tropical and subtropical coniferous forest biome	None
+None	ENVO:00005774	peat soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	9	PEAT SOIL	peat soil	None
+None	ENVO:00005774	peat soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	4	PEAT	peat soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	9	SOIL	peat soil	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	14	TEMPERATE	envo:temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:01000176	shrubland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	42	56	SHRUBLAND BIOME	envo:temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	42	50	SHRUBLAND	envo:temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	52	56	BIOME	envo:temperate grasslands, savannas, and shrubland biome	None
+None	ENVO:01001785	land	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	9	LAND	crop land	None
+None	ENVO:01000635	planetary landmass	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	9	LAND	crop land	None
+None	ENVO:00005774	peat soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	16	PEAT SOIL	arctic peat soil	None
+None	ENVO:00005774	peat soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	11	PEAT	arctic peat soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	16	SOIL	arctic peat soil	None
+None	ENVO:01000340	alpine	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	ALPINE	alpine meadow and alpine scrub	None
+None	ENVO:01000340	alpine	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	19	24	ALPINE	alpine meadow and alpine scrub	None
+None	ENVO:00000108	meadow ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	13	MEADOW	alpine meadow and alpine scrub	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	30	SCRUB	alpine meadow and alpine scrub	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	26	30	SCRUB	alpine meadow and alpine scrub	None
+None	ENVO:01000210	tropical coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	32	TROPICAL CONIFEROUS FOREST BIOME	tropical coniferous forest biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical coniferous forest biome	None
+None	ENVO:01000196	coniferous forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	32	CONIFEROUS FOREST BIOME	tropical coniferous forest biome	None
+None	ENVO:01000399	tropical needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:01000383	temperate evergreen needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:01000390	temperate mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:01000401	tropical mixed needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:01000386	temperate deciduous needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:01000433	needleleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:00000109	woodland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	26	CONIFEROUS FOREST	tropical coniferous forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	21	32	FOREST BIOME	tropical coniferous forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	21	26	FOREST	tropical coniferous forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	28	32	BIOME	tropical coniferous forest biome	None
+None	ENVO:00000446	terrestrial biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	17	TERRESTRIAL BIOME	terrestrial biome [envo:00000446]	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	13	17	BIOME	terrestrial biome [envo:00000446]	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	4	SOIL	soil bacteria	None
+None	NCBITaxon:2	Bacteria	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	13	BACTERIA	soil bacteria	None
+None	ENVO:00000266	pasture	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	7	PASTURE	pasture	None
+None	ENVO:01000230	arid	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	4	ARID	arid steppe	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	11	STEPPE	arid steppe	None
+None	ENVO:01000313	anthropogenic environment	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	25	ANTHROPOGENIC ENVIRONMENT	anthropogenic environment	None
+None	ENVO:01000254	environmental system	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	15	25	ENVIRONMENT	anthropogenic environment	None
+None	ENVO:01000192	tropical grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	24	TROPICAL GRASSLAND BIOME	tropical grassland biome	None
+None	ENVO:01001806	tropical grassland	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	18	TROPICAL GRASSLAND	tropical grassland biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical grassland biome	None
+None	ENVO:01000177	grassland biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	24	GRASSLAND BIOME	tropical grassland biome	None
+None	ENVO:00000261	savanna	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	GRASSLAND	tropical grassland biome	None
+None	ENVO:00000260	prairie	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	GRASSLAND	tropical grassland biome	None
+None	ENVO:00000262	steppe	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	GRASSLAND	tropical grassland biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	GRASSLAND	tropical grassland biome	None
+None	ENVO:00000444	woodland clearing	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	GRASSLAND	tropical grassland biome	None
+None	ENVO:01001206	grassland ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	10	18	GRASSLAND	tropical grassland biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	20	24	BIOME	tropical grassland biome	None
+None	ENVO:01000200	tropical broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	31	TROPICAL BROADLEAF FOREST BIOME	tropical broadleaf forest biome	None
+None	ENVO:01001792	tropical broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	25	TROPICAL BROADLEAF FOREST	tropical broadleaf forest biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical broadleaf forest biome	None
+None	ENVO:01000197	broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	31	BROADLEAF FOREST BIOME	tropical broadleaf forest biome	None
+None	ENVO:01000430	broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	10	25	BROADLEAF FOREST	tropical broadleaf forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	20	31	FOREST BIOME	tropical broadleaf forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	20	25	FOREST	tropical broadleaf forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	27	31	BIOME	tropical broadleaf forest biome	None
+None	ENVO:01000204	tropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	8	TROPICAL	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000226	subtropical moist broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	53	SUBTROPICAL MOIST BROADLEAF FOREST BIOME	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01001802	subtropical moist broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	47	SUBTROPICAL MOIST BROADLEAF FOREST	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000205	subtropical	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	24	SUBTROPICAL	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000197	broadleaf forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	32	53	BROADLEAF FOREST BIOME	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000430	broadleaf forest	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	32	47	BROADLEAF FOREST	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000174	forest biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	42	53	FOREST BIOME	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:00000111	forested area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	42	47	FOREST	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	49	53	BIOME	tropical and subtropical moist broadleaf forest biome	None
+None	ENVO:01000182	temperate desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	22	TEMPERATE DESERT BIOME	temperate desert biome	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate desert biome	None
+None	ENVO:01000179	desert biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	22	DESERT BIOME	temperate desert biome	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	temperate desert biome	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	temperate desert biome	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	temperate desert biome	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	11	16	DESERT	temperate desert biome	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	11	16	DESERT	temperate desert biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	18	22	BIOME	temperate desert biome	None
+None	ENVO:00000296	rice field	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	10	RICE PADDY	rice paddy	None
+None	ENVO:00005802	bulk soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	23	31	BULK SOIL	ectomycorrhizospheric bulk soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	28	31	SOIL	ectomycorrhizospheric bulk soil	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert soil	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert soil	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert soil	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	DESERT	desert soil	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	11	SOIL	desert soil	None
+None	ENVO:00000151	sabkha	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00000291	drainage basin	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00002277	back-arc basin	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00000195	sinkhole	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00000104	undersea feature	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00000165	asphalt lake	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00000311	kettle	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	SYN	None	1	5	BASIN	basin	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	10	FIELD	test field	None
+None	ENVO:01000352	field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	6	10	FIELD	test field	None
+None	UBERON:0007688	anlage	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	10	FIELD	test field	None
+None	ENVO:01001044	soil environment	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	16	SOIL ENVIRONMENT	soil environment	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	4	SOIL	soil environment	None
+None	ENVO:01000254	environmental system	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	6	16	ENVIRONMENT	soil environment	None
+None	ENVO:00000418	ria	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	3	RIA	ria de aveiro	None
+None	ENVO:00000475	inlet	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	3	RIA	ria de aveiro	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	13	FIELD	organic field	None
+None	ENVO:01000352	field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	9	13	FIELD	organic field	None
+None	UBERON:0007688	anlage	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	9	13	FIELD	organic field	None
+None	ENVO:01000739	habitat	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	7	HABITAT	habitat	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	23	26	SOIL	ectomycorrhizospheric soil	None
+None	ENVO:01000248	dense settlement biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	22	DENSE SETTLEMENT BIOME	dense settlement biome	None
+None	ENVO:01000658	dense settlement	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	16	DENSE SETTLEMENT	dense settlement biome	None
+None	PATO:0001485	condensed	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	5	DENSE	dense settlement biome	None
+None	PATO:0001164	dense	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	5	DENSE	dense settlement biome	None
+None	ENVO:00000062	populated place	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	16	SETTLEMENT	dense settlement biome	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	18	22	BIOME	dense settlement biome	None
+None	ENVO:00000114	agricultural field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	14	18	FIELD	conventional field	None
+None	ENVO:01000352	field	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	14	18	FIELD	conventional field	None
+None	UBERON:0007688	anlage	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	14	18	FIELD	conventional field	None
+None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	5	BIOME	biome	None
+None	ENVO:00000091	beach	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	5	BEACH	beach sediment	None
+None	ENVO:00002007	sediment	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	7	14	SEDIMENT	beach sediment	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	12	15	SOIL	artificial soil	None
+None	ENVO:01000340	alpine	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	ALPINE	alpine meadow	None
+None	ENVO:00000108	meadow ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	13	MEADOW	alpine meadow	None
+None	ENVO:01000206	temperate	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	9	TEMPERATE	temperate urban	None
+None	ENVO:00000078	farm	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	5	8	FARM	pig farm (juvenile pig)	None
+None	ENVO:00000078	farm	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	5	8	FARM	pig farm (adult pig)	None
+None	ENVO:00002011	fresh water	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	10	FRESHWATER	freshwater stream	None
+None	ENVO:00000041	tidal creek	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000029	watercourse	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000517	lost stream	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000153	headwater	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000023	stream	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000272	confluence	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000152	anabranch	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000427	meander	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000385	stream mouth	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000069	distributary	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000495	tributary	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	12	17	STREAM	freshwater stream	None
+None	ENVO:00000173	rocky desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert and xeric shrubland	None
+None	ENVO:00000315	bajada	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert and xeric shrubland	None
+None	ENVO:00000183	stony desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert and xeric shrubland	None
+None	ENVO:01001357	desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	DESERT	desert and xeric shrubland	None
+None	ENVO:00000172	sandy desert	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	6	DESERT	desert and xeric shrubland	None
+None	ENVO:00000300	scrubland area	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	18	26	SHRUBLAND	desert and xeric shrubland	None
+None	ENVO:01000340	alpine	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	6	ALPINE	alpine meadow soil	None
+None	ENVO:00005761	meadow soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	8	18	MEADOW SOIL	alpine meadow soil	None
+None	ENVO:00000108	meadow ecosystem	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	8	13	MEADOW	alpine meadow soil	None
+None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	15	18	SOIL	alpine meadow soil	None
