@@ -28,7 +28,7 @@ docs/template/nmdc_submission_schema/schema.js:
 	# are envo and gold subsets still applied to *soil* templates?
 	rm -rf DataHarmonizer/template/nmdc_submission_schema
 	rm -rf DataHarmonizer/template/nmdc_dh
-	mkdir --predicates DataHarmonizer/template/nmdc_submission_schema/source
+	mkdir -p DataHarmonizer/template/nmdc_submission_schema/source
 	cp artifacts/nmdc_submission_schema.yaml DataHarmonizer/template/nmdc_submission_schema/source
 	# generalize this?
 	cd DataHarmonizer/template/nmdc_submission_schema ; $(RUN) python ../../script/linkml.py --input source/nmdc_submission_schema.yaml
@@ -145,7 +145,7 @@ artifacts_prep:
 	rm -rf artifacts/*
 	echo placeholder > artifacts/placeholder
 
-oak_stuff: artifacts_prep artifacts/triad_restacked.tsv
+oak_stuff:  artifacts/triad_restacked.tsv
 	# allowed packages from mixs spreadsheet (or yaml?)
 	curl -o artifacts/mixs6_packages_final_clean.tsv \
 		-L "https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?gid=750683809&format=tsv"
@@ -169,6 +169,19 @@ oak_stuff: artifacts_prep artifacts/triad_restacked.tsv
 		--input sqlite:obo:envo tree \
 		--gap-fill \
 		--predicates i - > artifacts/suggested_broad_scales.txt
+
+	# are there any terms whose label contains 'biome' but aren't subclasses of ENVO:00000428 ?
+	$(RUN) runoak \
+		--input sqlite:obo:envo descendants \
+		--predicates i ENVO:00000428 | sort > artifacts/biome_subclasses.txt
+	$(RUN) runoak --input sqlite:obo:envo search 't~biome' | grep -v obsolete | sort > artifacts/biome_label.txt
+	- diff \
+ 		--new-line-format="" \
+ 		--unchanged-line-format="" artifacts/biome_subclasses.txt artifacts/biome_label.txt > artifacts/biome_subclasses_vs_label.txt
+	- diff \
+		--new-line-format="" \
+		--unchanged-line-format=""  artifacts/biome_label.txt artifacts/biome_subclasses.txt > artifacts/biome_label_vs_subclasses.txt
+	cat artifacts/biome_label.txt artifacts/biome_subclasses.txt | sort | uniq > artifacts/biome_label_and_subclasses.txt
 
 	# NMDC curated suggestions for soil
 	# make sure env package value are legal
@@ -212,3 +225,4 @@ oak_stuff: artifacts_prep artifacts/triad_restacked.tsv
 		--input bioportal:envo annotate \
 		--text-file artifacts/soil_broad_scales_to_annotate.txt \
 		--output-type csv | tee artifacts/soil_broad_scales_annotated.tsv
+

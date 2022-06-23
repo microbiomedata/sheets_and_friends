@@ -77,13 +77,13 @@ env_broad_scale	ENVO:01000033	water	oceanic pelagic zone biome
 env_broad_scale	ENVO:01000034	water	oceanic sea surface microlayer biome
 env_broad_scale	ENVO:01000857	water	temperate mediterranean sea biome
 env_broad_scale	ENVO:01000859	water	tropical marine upwelling biome
-env_local_scale	ENVO:01000924	built-environment	plumbing drain
-env_local_scale	ENVO:00002185	hcr-cores|hcr-fluids-swabs	oil reservoir
-env_local_scale	ENVO:00002063	hcr-cores|hcr-fluids-swabs	oil seep
-env_local_scale	ENVO:01000003	hcr-cores|hcr-fluids-swabs	oil well
-env_local_scale	ENVO:2000004	host-associted|water	algal bloom
-env_local_scale	ENVO:00000150	host-associted|water	coral reef
-env_local_scale	ENVO:01000058	host-associted|water	kelp forest
+env_local_scale	ENVO:01000924	built environment	plumbing drain
+env_local_scale	ENVO:2000004	host-associated|water	algal bloom
+env_local_scale	ENVO:00000150	host-associated|water	coral reef
+env_local_scale	ENVO:01000058	host-associated|water	kelp forest
+env_local_scale	ENVO:00002185	hydrocarbon resources-cores|hydrocarbon resources-fluids_swabs	oil reservoir
+env_local_scale	ENVO:00002063	hydrocarbon resources-cores|hydrocarbon resources-fluids_swabs	oil seep
+env_local_scale	ENVO:01000003	hydrocarbon resources-cores|hydrocarbon resources-fluids_swabs	oil well
 env_local_scale	ENVO:00000046	plant-associated	hedge
 env_local_scale	ENVO:00000114	plant-associated|soil	agricultural field
 env_local_scale	ENVO:00000011	plant-associated|soil	garden
