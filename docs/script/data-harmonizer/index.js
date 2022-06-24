@@ -22,7 +22,7 @@
  *
  */
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 const VERSION_TEXT = 'DataHarmonizer provenance: v' + VERSION;
 
 let DataHarmonizer = {
@@ -872,7 +872,7 @@ let DataHarmonizer = {
 	getColumns: function () {
 		let ret = [];
 		for (let field of this.getFields()) {
-		const col = {};
+		let col = {};
 		if (field.required) {
 			col.required = field.required;
 		}
@@ -939,7 +939,7 @@ let DataHarmonizer = {
 	  const fields = this.getFields();
 	  this.hot.updateSettings({
 		afterBeginEditing: function(row, col) {
-		  if (fields[col].multivalued === true) {
+		  if (fields[col].flatVocabulary && fields[col].multivalued === true) {
 			const value = this.getDataAtCell(row, col);
 			let selections = value && value.split(';') || [];
 			selections = selections.map(x => x.trim());
