@@ -21,6 +21,8 @@ docs/template/nmdc_submission_schema/schema.js:
 	cp -r DataHarmonizer/main.html DataHarmonizer/main.js DataHarmonizer/main.css DataHarmonizer/libraries DataHarmonizer/script DataHarmonizer/template docs
 	cp artifacts/for_data_harmonizer_scripts/GoldEcosystemTree.js docs/template/nmdc_submission_schema
 	cp artifacts/for_data_harmonizer_scripts/ConfigureFieldSettings.js docs/template/nmdc_submission_schema
+	cp artifacts/for_data_harmonizer_template/export.js artifacts/for_data_harmonizer_template/reference_template.html docs/template/nmdc_submission_schema
+
 
 .cogs:
 	$(RUN) cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
