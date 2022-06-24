@@ -22,6 +22,9 @@ oaklib = "^0.1.22"
 flake8 = "^4.0.1"
 autoflake = "^1.4"
 mypy = "^0.961"
+typer = "^0.4.1"
+strsimpy = "^0.2.1"
+matplotlib = "^3.5.2"
 
 [tool.poetry.dev-dependencies]
 
@@ -32,6 +35,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 do_shuttle = "sheets_and_friends.shuttle:do_shuttle"
 modifications_and_validation = "sheets_and_friends.modifications_and_validation:modifications_and_validation"
-linkml2dataharmonizer = "sheets_and_friends.converters.commands:linkml2dataharmonizer"
-promote_to_select = "sheets_and_friends.converters.commands:promote_to_select"
+#linkml2dataharmonizer = "sheets_and_friends.converters.commands:linkml2dataharmonizer"
+#promote_to_select = "sheets_and_friends.converters.commands:promote_to_select"
 compare_enums = "sheets_and_friends.compare_enums:compare_enums"

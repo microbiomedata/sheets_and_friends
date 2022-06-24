@@ -1,7 +1,7 @@
 name: nmdc_submission_schema
 description: Schema for creating Data Harmonizer interfaces for biosamples based on
   MIxS and other standards
-id: TEMP
+id: https://example.com/nmdc_submission_schema
 imports:
 - linkml:types
 prefixes:
@@ -14,15 +14,15 @@ prefixes:
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
-  xsd:
-    prefix_prefix: xsd
-    prefix_reference: http://www.w3.org/2001/XMLSchema#
   UO:
     prefix_prefix: UO
     prefix_reference: http://purl.obolibrary.org/obo/UO_
   qud:
     prefix_prefix: qud
     prefix_reference: http://example.org/qud/
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
 default_prefix: nmdc_sub_scheme
 default_range: string
 types:
@@ -30,7 +30,7 @@ types:
     name: unit
     todos:
     - why isn't this picked up from the nmdc.yaml import?
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     mappings:
     - qud:Unit
     - UO:0000000
@@ -39,7 +39,7 @@ types:
 enums:
   analysis_type_enum:
     name: analysis_type_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       metabolomics:
         text: metabolomics
@@ -53,7 +53,7 @@ enums:
         text: natural organic matter
   biotic_relationship_enum:
     name: biotic_relationship_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       commensalism:
         text: commensalism
@@ -73,7 +73,7 @@ enums:
         text: symbiotic
   dna_cont_type_enum:
     name: dna_cont_type_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       plate:
         text: plate
@@ -81,7 +81,7 @@ enums:
         text: tube
   dna_dnase_enum:
     name: dna_dnase_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       'no':
         text: 'no'
@@ -89,7 +89,7 @@ enums:
         text: 'yes'
   dna_sample_format_enum:
     name: dna_sample_format_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       10 mM Tris-HCl:
         text: 10 mM Tris-HCl
@@ -113,7 +113,7 @@ enums:
         text: Water
   dnase_rna_enum:
     name: dnase_rna_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       'no':
         text: 'no'
@@ -121,7 +121,7 @@ enums:
         text: 'yes'
   ecosystem_category_enum:
     name: ecosystem_category_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       Terrestrial:
         text: Terrestrial
@@ -129,13 +129,13 @@ enums:
         - https://github.com/microbiomedata/sheets_and_friends/issues/22
   ecosystem_enum:
     name: ecosystem_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       Environmental:
         text: Environmental
   ecosystem_subtype_enum:
     name: ecosystem_subtype_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       Biocrust:
         text: Biocrust
@@ -181,13 +181,13 @@ enums:
         text: Wetlands
   ecosystem_type_enum:
     name: ecosystem_type_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       Soil:
         text: Soil
   env_package_enum:
     name: env_package_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       soil:
         text: soil
@@ -196,7 +196,7 @@ enums:
           here
   growth_facil_enum:
     name: growth_facil_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       experimental_garden:
         text: experimental_garden
@@ -224,7 +224,7 @@ enums:
         text: other
   rel_to_oxygen_enum:
     name: rel_to_oxygen_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       aerobe:
         text: aerobe
@@ -246,7 +246,7 @@ enums:
         text: obligate anaerobe
   rna_cont_type_enum:
     name: rna_cont_type_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       plate:
         text: plate
@@ -254,7 +254,7 @@ enums:
         text: tube
   rna_sample_format_enum:
     name: rna_sample_format_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       10 mM Tris-HCl:
         text: 10 mM Tris-HCl
@@ -278,7 +278,7 @@ enums:
         text: Water
   sample_type_enum:
     name: sample_type_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       soil:
         text: soil
@@ -286,7 +286,7 @@ enums:
         text: water_extract_soil
   specific_ecosystem_enum:
     name: specific_ecosystem_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       Agricultural:
         text: Agricultural
@@ -338,7 +338,7 @@ enums:
         text: Uranium contaminated
   store_cond_enum:
     name: store_cond_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       fresh:
         text: fresh
@@ -355,7 +355,7 @@ enums:
         text: other
   env_broad_scale_soil_enum:
     name: env_broad_scale_soil_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       alpine biome [ENVO:01001835]:
         text: alpine biome [ENVO:01001835]
@@ -439,7 +439,7 @@ enums:
         text: ____tropical savanna biome [ENVO:01000188]
   env_local_scale_soil_enum:
     name: env_local_scale_soil_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       active geological fault [ENVO:01000669]:
         text: active geological fault [ENVO:01000669]
@@ -517,7 +517,7 @@ enums:
         text: woodland clearing [ENVO:00000444]
   env_medium_soil_enum:
     name: env_medium_soil_enum
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     permissible_values:
       agricultural soil [ENVO:00002259]:
         text: agricultural soil [ENVO:00002259]
@@ -693,12 +693,12 @@ slots:
   dh_section:
     name: dh_section
     description: A section (ie group if columns) within a DataHarmonizer interface
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
   project_ID:
     name: project_ID
     description: Proposal IDs or names associated with dataset
     title: project ID
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '1'
     string_serialization: '{text}'
     slot_group: EMSL
@@ -711,7 +711,7 @@ slots:
     - This can vary from 'environmental package' if the sample is an extraction.
     examples:
     - value: water extracted soil
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '2'
     slot_group: EMSL
     range: sample_type_enum
@@ -721,7 +721,7 @@ slots:
     description: The total amount or size (volume (ml), mass (g) or area (m2) ) of
       sample sent to EMSL
     title: sample shipped amount
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '3'
     string_serialization: '{float} {unit}'
     slot_group: EMSL
@@ -734,7 +734,7 @@ slots:
     - Enter a temperature in celsius. Numeric portion only.
     examples:
     - value: '-80'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '4'
     string_serialization: '{float}'
     slot_group: EMSL
@@ -744,7 +744,7 @@ slots:
     description: If sending multiple technical replicates of the same sample, indicate
       how many replicates are being sent
     title: number technical replicate
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '5'
     string_serialization: '{integer}'
     slot_group: EMSL
@@ -755,7 +755,7 @@ slots:
     title: replicate number
     comments:
     - This will guide staff in ensuring your samples are block & randomized correctly
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '6'
     string_serialization: '{integer}'
     slot_group: EMSL
@@ -768,7 +768,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: '1191234'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '1'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -781,7 +781,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: JGI Pond metagenomics
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '2'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -798,7 +798,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: '187654'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '3'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -810,7 +810,7 @@ slots:
     title: DNA sample name
     examples:
     - value: JGI_pond_041618
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '4'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -823,7 +823,7 @@ slots:
       a fluorometric method. Acceptable values are 0-2000.
     examples:
     - value: '100'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '5'
     string_serialization: '{float}'
     slot_group: JGI-Metagenomics
@@ -838,7 +838,7 @@ slots:
       <25 by special permission only.
     examples:
     - value: '25'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '6'
     string_serialization: '{float}'
     slot_group: JGI-Metagenomics
@@ -853,7 +853,7 @@ slots:
     - Recommended value is between 1 and 3.
     examples:
     - value: '2.02'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '7'
     string_serialization: '{float}'
     slot_group: JGI-Metagenomics
@@ -866,7 +866,7 @@ slots:
     - Recommended value is between 1 and 3.
     examples:
     - value: '2.02'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '8'
     string_serialization: '{float}'
     slot_group: JGI-Metagenomics
@@ -879,7 +879,7 @@ slots:
       in a plate should have the same plate label.
     examples:
     - value: Pond_MT_041618
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '9'
     string_serialization: '{text < 20 characters}'
     slot_group: JGI-Metagenomics
@@ -890,7 +890,7 @@ slots:
     title: DNA container type
     examples:
     - value: plate
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '10'
     slot_group: JGI-Metagenomics
     range: dna_cont_type_enum
@@ -904,7 +904,7 @@ slots:
       in a tube.
     examples:
     - value: B2
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '11'
     string_serialization: '{96 well plate pos}'
     slot_group: JGI-Metagenomics
@@ -915,7 +915,7 @@ slots:
     title: DNA sample format
     examples:
     - value: Water
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '12'
     slot_group: JGI-Metagenomics
     range: dna_sample_format_enum
@@ -927,7 +927,7 @@ slots:
     - Note DNAse treatment is required for all RNA samples.
     examples:
     - value: 'no'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '13'
     slot_group: JGI-Metagenomics
     range: dna_dnase_enum
@@ -940,7 +940,7 @@ slots:
     examples:
     - value: expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
         (1%)
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '14'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -951,7 +951,7 @@ slots:
     title: DNA collection site
     examples:
     - value: untreated pond water
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '15'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -962,7 +962,7 @@ slots:
     title: DNA isolation method
     examples:
     - value: phenol/chloroform extraction
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '16'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -975,7 +975,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: Jane Johnson
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '17'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -988,7 +988,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: John Jones
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '18'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -1001,7 +1001,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: '504000'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '19'
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
@@ -1014,7 +1014,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: '1191234'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '1'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1027,7 +1027,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: JGI Pond metatranscriptomics
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '2'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1040,7 +1040,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: '187654'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '3'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1052,7 +1052,7 @@ slots:
     title: RNA sample name
     examples:
     - value: JGI_pond_041618
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '4'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1067,7 +1067,7 @@ slots:
       a fluorometric method. Acceptable values are 0-2000.
     examples:
     - value: '100'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '5'
     string_serialization: '{float}'
     slot_group: JGI-Metatranscriptomics
@@ -1082,7 +1082,7 @@ slots:
       <25 by special permission only.
     examples:
     - value: '25'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '6'
     string_serialization: '{float}'
     slot_group: JGI-Metatranscriptomics
@@ -1095,7 +1095,7 @@ slots:
     - Recommended value is between 1 and 3.
     examples:
     - value: '2.02'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '7'
     string_serialization: '{float}'
     slot_group: JGI-Metatranscriptomics
@@ -1108,7 +1108,7 @@ slots:
     - Recommended value is between 1 and 3.
     examples:
     - value: '2.02'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '8'
     string_serialization: '{float}'
     slot_group: JGI-Metatranscriptomics
@@ -1121,7 +1121,7 @@ slots:
       in a plate should have the same plate label.
     examples:
     - value: Pond_MT_041618
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '9'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1132,7 +1132,7 @@ slots:
     title: RNA container type
     examples:
     - value: plate
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '10'
     slot_group: JGI-Metatranscriptomics
     range: rna_cont_type_enum
@@ -1146,7 +1146,7 @@ slots:
       in a tube.
     examples:
     - value: B2
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '11'
     string_serialization: '{96 well plate pos}'
     slot_group: JGI-Metatranscriptomics
@@ -1157,7 +1157,7 @@ slots:
     title: RNA sample format
     examples:
     - value: Water
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '12'
     slot_group: JGI-Metatranscriptomics
     range: rna_sample_format_enum
@@ -1169,7 +1169,7 @@ slots:
     - Note DNAse treatment is required for all RNA samples.
     examples:
     - value: 'no'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '13'
     slot_group: JGI-Metatranscriptomics
     range: dnase_rna_enum
@@ -1182,7 +1182,7 @@ slots:
     examples:
     - value: expected to contain microbes (59%) fungi (30%), viruses (10%), tadpoles
         (1%)
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '14'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1193,7 +1193,7 @@ slots:
     title: RNA collection site
     examples:
     - value: untreated pond water
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '15'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1204,7 +1204,7 @@ slots:
     title: RNA isolation method
     examples:
     - value: phenol/chloroform extraction
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '16'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1217,7 +1217,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: Jane Johnson
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '17'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1230,7 +1230,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: John Jones
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '18'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1243,7 +1243,7 @@ slots:
       values have been pre-filled.
     examples:
     - value: '504000'
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '19'
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
@@ -1259,7 +1259,7 @@ slots:
     - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
     examples:
     - value: 13:33 or 13:33:55
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:collection_date
     rank: '1'
@@ -1278,7 +1278,7 @@ slots:
       are all acceptable.
     examples:
     - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:collection_date
     rank: '2'
@@ -1297,7 +1297,7 @@ slots:
     - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
     examples:
     - value: 13:33 or 13:33:55
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:collection_date
     rank: '3'
@@ -1315,7 +1315,7 @@ slots:
       are all acceptable.
     examples:
     - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:collection_date
     rank: '4'
@@ -1333,7 +1333,7 @@ slots:
     - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
     examples:
     - value: 13:33 or 13:33:55
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:collection_date
     rank: '5'
@@ -1344,7 +1344,7 @@ slots:
     name: filter_method
     description: Type of filter used or how the sample was filtered
     title: filter method
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:filter_type
     rank: '6'
@@ -1356,7 +1356,7 @@ slots:
     description: Other details about your sample that you feel can't be accurately
       represented in the available columns.
     title: experimental factor- other
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:experimental_factor|additional_info
     rank: '7'
@@ -1369,7 +1369,7 @@ slots:
       measured, e.g.insect, plant, total. Can include multiple measurements separated
       by ;
     title: non-microbial biomass
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:biomass|microbial_biomass
     rank: '8'
@@ -1381,7 +1381,7 @@ slots:
     title: non-microbial biomass method
     comments:
     - required if "non-microbial biomass" is provided
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:microbial_biomass
     rank: '9'
@@ -1393,7 +1393,7 @@ slots:
       microorganisms smaller than 5-10 micrometer. If you keep this, you would need
       to have correction factors used for conversion to the final units
     title: microbial biomass carbon
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:microbial_biomass
     rank: '10'
@@ -1405,7 +1405,7 @@ slots:
     title: microbial biomass carbon method
     comments:
     - required if "microbial_biomass_C" is provided
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:micro_biomass_meth
     rank: '11'
@@ -1417,7 +1417,7 @@ slots:
       microorganisms smaller than 5-10 micrometer. If you keep this, you would need
       to have correction factors used for conversion to the final units
     title: microbial biomass nitrogen
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:microbial_biomass
     rank: '12'
@@ -1429,7 +1429,7 @@ slots:
     title: microbial biomass nitrogen method
     comments:
     - required if "microbial_biomass_N" is provided
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:micro_biomass_meth
     rank: '13'
@@ -1441,7 +1441,7 @@ slots:
     title: organic nitrogen method
     comments:
     - required if "org_nitro" is provided
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:org_nitro|tot_nitro_cont_meth
     rank: '14'
@@ -1452,7 +1452,7 @@ slots:
     description: Other treatments applied to your samples that are not applicable
       to the provided fields
     title: other treatments
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:additional_info
     rank: '15'
@@ -1463,7 +1463,7 @@ slots:
     name: isotope_exposure
     description: List isotope exposure or addition applied to your sample.
     title: isotope exposure/addition
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:chem_administration
     rank: '16'
@@ -1476,7 +1476,7 @@ slots:
     title: analysis/data type
     examples:
     - value: metagenomics; metabolomics; proteomics
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     see_also:
     - MIxS:investigation_type
     rank: '3'
@@ -1491,7 +1491,7 @@ slots:
     title: environmental package
     examples:
     - value: soil
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '4'
     slot_group: Sample ID
     required: true
@@ -1508,64 +1508,64 @@ slots:
       to a new vial and generated a new sample)'
     examples:
     - value: IGSN:DSJ0284
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '5'
     string_serialization: '{text}:{text}'
     slot_group: Sample ID
     recommended: true
   Sample ID:
     name: Sample ID
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '1'
     is_a: dh_section
   EMSL:
     name: EMSL
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '2'
     is_a: dh_section
   JGI-Metagenomics:
     name: JGI-Metagenomics
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '3'
     is_a: dh_section
   JGI-Metatranscriptomics:
     name: JGI-Metatranscriptomics
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '4'
     is_a: dh_section
   MIxS:
     name: MIxS
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '5'
     is_a: dh_section
   MIxS (modified):
     name: MIxS (modified)
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '6'
     is_a: dh_section
   MIxS Inspired:
     name: MIxS Inspired
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '7'
     is_a: dh_section
   MIxS investigation:
     name: MIxS investigation
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '8'
     is_a: dh_section
   MIxS NASSF:
     name: MIxS NASSF
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '9'
     is_a: dh_section
   MIxS core:
     name: MIxS core
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '10'
     is_a: dh_section
   Bioscales:
     name: Bioscales
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     rank: '11'
     is_a: dh_section
 classes:
@@ -1574,63 +1574,63 @@ classes:
     description: One DataHarmonizer interface, for the specified combination of a
       checklist, enviornmental_package, and various standards, user facilities or
       analysis types
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
   air:
     name: air
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   biofilm:
     name: biofilm
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   built_env:
     name: built_env
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   hcr-cores:
     name: hcr-cores
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
   hcr-fluids-swabs:
     name: hcr-fluids-swabs
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
   host-associated:
     name: host-associated
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   misc-envs:
     name: misc-envs
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
   plant-associated:
     name: plant-associated
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   sediment:
     name: sediment
     description: sediment dev
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   soil:
     name: soil
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
     - soil_mixs_inspired_mixin
   soil_emsl:
     name: soil_emsl
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
@@ -1641,7 +1641,7 @@ classes:
     description: A dh_section, with metadata in compliance with the MIxS soil MIMS
       standard for metagenomes, EMSL biosample expectations, and JGI expectations
       for JGI metagenomics studies
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
@@ -1650,7 +1650,7 @@ classes:
     - soil_mixs_inspired_mixin
   soil_emsl_jgi_mt:
     name: soil_emsl_jgi_mt
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
@@ -1659,7 +1659,7 @@ classes:
     - soil_mixs_inspired_mixin
   soil_jgi_mg:
     name: soil_jgi_mg
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
@@ -1667,7 +1667,7 @@ classes:
     - soil_mixs_inspired_mixin
   soil_jgi_mt:
     name: soil_jgi_mt
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
@@ -1675,25 +1675,25 @@ classes:
     - soil_mixs_inspired_mixin
   wastewater_sludge:
     name: wastewater_sludge
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   water:
     name: water
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   bioscales:
     name: bioscales
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
   emsl_mixin:
     name: emsl_mixin
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     mixin: true
     slots:
     - EMSL_store_temp
@@ -1704,7 +1704,7 @@ classes:
     - technical_reps
   jgi_mg_mixin:
     name: jgi_mg_mixin
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     mixin: true
     slots:
     - dna_absorb1
@@ -1728,7 +1728,7 @@ classes:
     - proposal_dna
   jgi_mt_mixin:
     name: jgi_mt_mixin
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     mixin: true
     slots:
     - dnase_rna
@@ -1752,7 +1752,7 @@ classes:
     - rna_volume
   samp_id_new_terms_mixin:
     name: samp_id_new_terms_mixin
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     mixin: true
     slots:
     - analysis_type
@@ -1760,7 +1760,7 @@ classes:
     - sample_link
   soil_mixs_inspired_mixin:
     name: soil_mixs_inspired_mixin
-    from_schema: TEMP
+    from_schema: https://example.com/nmdc_submission_schema
     mixin: true
     slots:
     - collection_date_inc

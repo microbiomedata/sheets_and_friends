@@ -1,31 +1,17 @@
 nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # sheets-for-nmdc-submission-schema, was nmdc-dh-sheets-mam-non-anno
-
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
-
 bisample_sqlite = /Users/MAM/biosample_basex.db
-
-# todo: gen-linkml expects the schema to be provided as a filesystem path
-#   now that the nmdc-schema submodule had been removed, people running this makefile
-#   will have to provide a path to the nmdc.yaml file
-#   which will provide relative paths to its imports
-#   can this be solved by bundling teh YAML files in the nmdc-schema PyPI package?
-nmdc_schema_filepath = /Users/MAM/Documents/gitrepos/nmdc-schema/src/schema/nmdc.yaml
-#mixs_schema_filepath = /Users/MAM/Documents/gitrepos/mixs/model/schema/mixs.yaml
 mixs_schema_path = https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/model/schema/mixs.yaml
-
 RUN = poetry run
 
-.PHONY: all clean cogs_fetch project squeaky_clean artifacts_prep oak_stuff
+.PHONY: all clean cogs_fetch squeaky_clean oak_stuff
 
 all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml \
 docs/template/nmdc_submission_schema/schema.js \
-artifacts/nmdc_submission_schema_vs_mixs_enums.yaml
+artifacts/nmdc_submission_schema_vs_mixs_enums.yaml \
+oak_stuff
 
 docs/template/nmdc_submission_schema/schema.js:
-	# omitting project generation step
-	# has project been silently broken for a long time?
-	# should probably add a schema validation step
-	# are envo and gold subsets still applied to *soil* templates?
 	rm -rf DataHarmonizer/template/nmdc_submission_schema
 	rm -rf DataHarmonizer/template/nmdc_dh
 	mkdir -p DataHarmonizer/template/nmdc_submission_schema/source
@@ -67,7 +53,6 @@ artifacts/nmdc_submission_schema.yaml: .cogs/tracked/modifications_long.tsv .cog
 
 clean:
 	rm -rf DataHarmonizer/template/MIxS
-	rm -rf DataHarmonizer/template/MIxS/schema.js
 	rm -rf DataHarmonizer/template/canada_covid19
 	rm -rf DataHarmonizer/template/gisaid
 	rm -rf DataHarmonizer/template/grdi
@@ -79,44 +64,19 @@ clean:
 	rm -rf DataHarmonizer/template/pha4ge
 	rm -rf DataHarmonizer/template/phac_dexa
 	rm -rf artifacts/*yaml
-	rm -rf artifacts/from_sheets2linkml.yaml artifacts/with_shuttles.yaml docs/script/linkml.py
+	rm -rf artifacts/*tsv
+	rm -rf artifacts/*txt
 	rm -rf docs/*
 	rm -rf logs/*log
-	rm -rf project/*py
-	rm -rf project/docs/*
-	rm -rf project/excel/*
-	rm -rf project/graphql/*
-	rm -rf project/java/*
-	rm -rf project/jsonld/*
-	rm -rf project/jsonschema/*
-	rm -rf project/owl/*
-	rm -rf project/prefixmap/*
-	rm -rf project/protobuf/*
-	rm -rf project/shacl/*
-	rm -rf project/shex/*
-	rm -rf project/sqlschema/*
-	rm -rf target/*log
-	rm -rf target/*tsv
-	rm -rf target/*txt
-	rm -rf target/compare_enums.yaml
 
 squeaky_clean: clean
 	rm -rf .cogs
 	rm -rf bin/*
 	rm -rf downloads/*
 
-project: artifacts/nmdc_submission_schema.yaml
-	$(RUN) gen-project \
-		--exclude shacl \
-		--exclude owl \
-		--exclude excel \
-		--exclude java \
-		--dir $@ $< 2>> logs/gen-project.log
-
 # todo these last two steps do QC
-#  they require on the presence of certain files in teh local filesystem and cloud be omitted from `make all`
-artifacts/nmdc_submission_schema_generated.yaml:
-	$(RUN) gen-linkml --format yaml $(nmdc_schema_filepath) > $@
+artifacts/nmdc_submission_schema_generated.yaml: artifacts/nmdc_submission_schema.yaml
+	$(RUN) gen-linkml --format yaml $< > $@
 
 # todo add enum_name when ready
 artifacts/nmdc_submission_schema_vs_mixs_enums.yaml: artifacts/nmdc_submission_schema.yaml
@@ -141,11 +101,9 @@ artifacts/nmdc_submission_schema_vs_mixs_enums.yaml: artifacts/nmdc_submission_s
 		--sort_key packages_consensus \
 		--sort_key label
 
-artifacts_prep:
-	rm -rf artifacts/*
-	echo placeholder > artifacts/placeholder
-
 oak_stuff:  artifacts/triad_restacked.tsv
+	# todo break this up into smaller rules
+	# todo better name = triad stuff?
 	# allowed packages from mixs spreadsheet (or yaml?)
 	curl -o artifacts/mixs6_packages_final_clean.tsv \
 		-L "https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?gid=750683809&format=tsv"
