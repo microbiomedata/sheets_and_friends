@@ -125,13 +125,13 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
-    "agent": {
-      "name": "agent",
+    "activity": {
+      "name": "activity",
       "status": "published",
       "display": false
     },
-    "activity": {
-      "name": "activity",
+    "agent": {
+      "name": "agent",
       "status": "published",
       "display": false
     }

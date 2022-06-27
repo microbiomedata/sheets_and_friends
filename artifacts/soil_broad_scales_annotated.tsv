@@ -492,8 +492,8 @@ None	ENVO:01000739	habitat	https://data.bioontology.org/ontologies/ENVO	None	Non
 None	ENVO:00001998	soil	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	23	26	SOIL	ectomycorrhizospheric soil	None
 None	ENVO:01000248	dense settlement biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	True	PREF	None	1	22	DENSE SETTLEMENT BIOME	dense settlement biome	None
 None	ENVO:01000658	dense settlement	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	16	DENSE SETTLEMENT	dense settlement biome	None
-None	PATO:0001485	condensed	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	5	DENSE	dense settlement biome	None
 None	PATO:0001164	dense	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	1	5	DENSE	dense settlement biome	None
+None	PATO:0001485	condensed	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	1	5	DENSE	dense settlement biome	None
 None	ENVO:00000062	populated place	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	7	16	SETTLEMENT	dense settlement biome	None
 None	ENVO:00000428	biome	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	PREF	None	18	22	BIOME	dense settlement biome	None
 None	UBERON:0007688	anlage	https://data.bioontology.org/ontologies/ENVO	None	None	None	None	SYN	None	14	18	FIELD	conventional field	None
