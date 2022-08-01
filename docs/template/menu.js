@@ -10,6 +10,11 @@ const TEMPLATES = {
       "status": "published",
       "display": true
     },
+    "bioscales": {
+      "name": "bioscales",
+      "status": "published",
+      "display": true
+    },
     "built_env": {
       "name": "built_env",
       "status": "published",
@@ -85,11 +90,6 @@ const TEMPLATES = {
       "status": "published",
       "display": true
     },
-    "bioscales": {
-      "name": "bioscales",
-      "status": "published",
-      "display": true
-    },
     "emsl_mixin": {
       "name": "emsl_mixin",
       "status": "published",
@@ -115,6 +115,11 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
+    "agent": {
+      "name": "agent",
+      "status": "published",
+      "display": false
+    },
     "quantity value": {
       "name": "quantity value",
       "status": "published",
@@ -122,11 +127,6 @@ const TEMPLATES = {
     },
     "attribute value": {
       "name": "attribute value",
-      "status": "published",
-      "display": false
-    },
-    "agent": {
-      "name": "agent",
       "status": "published",
       "display": false
     },
