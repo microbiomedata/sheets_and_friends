@@ -115,6 +115,11 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
+    "attribute value": {
+      "name": "attribute value",
+      "status": "published",
+      "display": false
+    },
     "agent": {
       "name": "agent",
       "status": "published",
@@ -122,11 +127,6 @@ const TEMPLATES = {
     },
     "quantity value": {
       "name": "quantity value",
-      "status": "published",
-      "display": false
-    },
-    "attribute value": {
-      "name": "attribute value",
       "status": "published",
       "display": false
     },

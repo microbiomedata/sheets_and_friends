@@ -8,8 +8,8 @@ RUN = poetry run
 
 all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml \
 docs/template/nmdc_submission_schema/schema.js \
-artifacts/nmdc_submission_schema_vs_mixs_enums.yaml \
-oak_stuff
+artifacts/nmdc_submission_schema_vs_mixs_enums.yaml
+#oak_stuff
 
 docs/template/nmdc_submission_schema/schema.js:
 	rm -rf DataHarmonizer/template/nmdc_submission_schema
