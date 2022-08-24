@@ -4,25 +4,16 @@ bisample_sqlite = /Users/MAM/biosample_basex.db
 mixs_schema_path = https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/model/schema/mixs.yaml
 RUN = poetry run
 
-.PHONY: all clean cogs_fetch squeaky_clean oak_stuff
+.PHONY: all clean cogs_fetch squeaky_clean oak_stuff copy-dist-to-docs prepare-dh-dist
 
-all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml \
-docs/template/nmdc_submission_schema/schema.js \
-artifacts/nmdc_submission_schema_vs_mixs_enums.yaml
-#oak_stuff
+all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml
 
-docs/template/nmdc_submission_schema/schema.js:
-	rm -rf DataHarmonizer/template/nmdc_submission_schema
-	rm -rf DataHarmonizer/template/nmdc_dh
-	mkdir -p DataHarmonizer/template/nmdc_submission_schema/source
-	cp artifacts/nmdc_submission_schema.yaml DataHarmonizer/template/nmdc_submission_schema/source
-	# generalize this?
-	cd DataHarmonizer/template/nmdc_submission_schema ; $(RUN) python ../../script/linkml.py --input source/nmdc_submission_schema.yaml
-	cp -r DataHarmonizer/main.html DataHarmonizer/main.js DataHarmonizer/main.css DataHarmonizer/libraries DataHarmonizer/script DataHarmonizer/template docs
-	cp artifacts/for_data_harmonizer_scripts/GoldEcosystemTree.js docs/template/nmdc_submission_schema
-	cp artifacts/for_data_harmonizer_scripts/ConfigureFieldSettings.js docs/template/nmdc_submission_schema
-	cp artifacts/for_data_harmonizer_template/export.js artifacts/for_data_harmonizer_template/reference_template.html docs/template/nmdc_submission_schema
+prepare-dh-dist:
+	$(RUN) gen-linkml artifacts/nmdc_submission_schema.yaml --format json > nmdc_dh/schemas/nmdc_submission_schema.json
+	cd nmdc_dh ; echo "export default { base: '/sheets_and_friends/' }" > vite.config.js ; npm run build
 
+copy-dist-to-docs: prepare-dh-dist
+	cp -R nmdc_dh/dist/* docs
 
 .cogs:
 	$(RUN) cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
@@ -54,17 +45,6 @@ artifacts/nmdc_submission_schema.yaml: .cogs/tracked/modifications_long.tsv .cog
 		--yaml_output $@ 2>> logs/modifications_and_validation.log
 
 clean:
-	rm -rf DataHarmonizer/template/MIxS
-	rm -rf DataHarmonizer/template/canada_covid19
-	rm -rf DataHarmonizer/template/gisaid
-	rm -rf DataHarmonizer/template/grdi
-	rm -rf DataHarmonizer/template/menu.js
-	rm -rf DataHarmonizer/template/monkeypox
-	rm -rf DataHarmonizer/template/nmdc
-	rm -rf DataHarmonizer/template/nmdc_submission_schema/schema.js
-	rm -rf DataHarmonizer/template/nmdc_submission_schema/source/nmdc_submission_schema.yaml
-	rm -rf DataHarmonizer/template/pha4ge
-	rm -rf DataHarmonizer/template/phac_dexa
 	rm -rf artifacts/*yaml
 	rm -rf artifacts/*tsv
 	rm -rf artifacts/*txt
