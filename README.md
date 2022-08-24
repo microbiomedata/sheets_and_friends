@@ -56,3 +56,22 @@ _TODO: how to keep these up to date?_
 - Create an [issue](https://github.com/microbiomedata/sheets_and_friends/issues) if something isn't behaving the way you expect
 - Try the `Save as...` and `Export to...` options from the DataHarmonizer File menu. Note the differences in the column headers.
 
+
+
+## Alternative pure-Javascript build process
+
+1. from the root of the repo: `npm init data-harmonizer  artifacts/nmdc_submission_schema.yaml`
+    - What would you like your new project to be called?
+    - choice of name not important, but don't forget it. `nmdc_dh` suggested.
+    - follow the directiosn to select the schema classes that should be included as DH templates.
+2. `cd nmdc_dh`
+3. `npm run dev`
+    - starts a testing web server and displays the local address that should be visited
+    - vist, browse, test with some sample data, and then terminate with Control-C
+4. cat or copy to `nmdc_dh/vite.config.js`: `export default { base: '/sheets_and_friends/' }`
+5. `npm run build`
+    - may get some warnings when minifying css
+6. `rm -rf ../docs/*`
+7. `cp -R dist/* ../docs`
+8. git add, commit and push
+
