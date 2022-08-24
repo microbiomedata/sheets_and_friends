@@ -4,9 +4,12 @@ bisample_sqlite = /Users/MAM/biosample_basex.db
 mixs_schema_path = https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/model/schema/mixs.yaml
 RUN = poetry run
 
-.PHONY: all clean cogs_fetch squeaky_clean oak_stuff copy-dist-to-docs prepare-dh-dist
+.PHONY: all clean cogs_fetch squeaky_clean oak_stuff copy-dist-to-docs prepare-dh-dist unnecessaries
 
-all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml
+all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml copy-dist-to-docs ditch-unnecessaries
+
+ditch-unnecessaries:
+	rm -rf artifacts/from_sheets2linkml.yaml artifacts/nmdc_submission_schema_generated.yaml artifacts/with_shuttles.yaml
 
 prepare-dh-dist:
 	$(RUN) gen-linkml artifacts/nmdc_submission_schema.yaml --format json > nmdc_dh/schemas/nmdc_submission_schema.json
