@@ -65,6 +65,11 @@ const TEMPLATES = {
       "status": "published",
       "display": true
     },
+    "soil_emsl_jgi_mg_mt": {
+      "name": "soil_emsl_jgi_mg_mt",
+      "status": "published",
+      "display": true
+    },
     "soil_emsl_jgi_mt": {
       "name": "soil_emsl_jgi_mt",
       "status": "published",
@@ -72,6 +77,11 @@ const TEMPLATES = {
     },
     "soil_jgi_mg": {
       "name": "soil_jgi_mg",
+      "status": "published",
+      "display": true
+    },
+    "soil_jgi_mg_mt": {
+      "name": "soil_jgi_mg_mt",
       "status": "published",
       "display": true
     },
@@ -87,11 +97,6 @@ const TEMPLATES = {
     },
     "water": {
       "name": "water",
-      "status": "published",
-      "display": true
-    },
-    "soil_emsl_jgi_mg_mt": {
-      "name": "soil_emsl_jgi_mg_mt",
       "status": "published",
       "display": true
     },
@@ -120,8 +125,13 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
-    "soil_jgi_mg_mt": {
-      "name": "soil_jgi_mg_mt",
+    " soil": {
+      "name": " soil",
+      "status": "published",
+      "display": false
+    },
+    "soil_jgi_mt ": {
+      "name": "soil_jgi_mt ",
       "status": "published",
       "display": false
     },
@@ -130,8 +140,18 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
+    "soil_jgi_mt soil_jgi_mt": {
+      "name": "soil_jgi_mt soil_jgi_mt",
+      "status": "published",
+      "display": false
+    },
     "quantity value": {
       "name": "quantity value",
+      "status": "published",
+      "display": false
+    },
+    "activity": {
+      "name": "activity",
       "status": "published",
       "display": false
     },
@@ -142,11 +162,6 @@ const TEMPLATES = {
     },
     "agent": {
       "name": "agent",
-      "status": "published",
-      "display": false
-    },
-    "activity": {
-      "name": "activity",
       "status": "published",
       "display": false
     }
