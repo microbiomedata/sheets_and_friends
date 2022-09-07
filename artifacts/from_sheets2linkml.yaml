@@ -17,12 +17,12 @@ prefixes:
   qud:
     prefix_prefix: qud
     prefix_reference: http://example.org/qud/
-  xsd:
-    prefix_prefix: xsd
-    prefix_reference: http://www.w3.org/2001/XMLSchema#
   UO:
     prefix_prefix: UO
     prefix_reference: http://purl.obolibrary.org/obo/UO_
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
 default_prefix: nmdc_sub_scheme
 default_range: string
 types:
@@ -1693,6 +1693,16 @@ classes:
     is_a: dh_interface
     mixins:
     - samp_id_new_terms_mixin
+  soil_emsl_jgi_mg_mt:
+    name: soil_emsl_jgi_mg_mt
+    from_schema: https://example.com/nmdc_submission_schema
+    is_a: dh_interface
+    mixins:
+    - samp_id_new_terms_mixin
+    - emsl_mixin
+    - jgi_mg_mixin
+    - jgi_mt_mixin
+    - soil_mixs_inspired_mixin
   emsl_mixin:
     name: emsl_mixin
     from_schema: https://example.com/nmdc_submission_schema

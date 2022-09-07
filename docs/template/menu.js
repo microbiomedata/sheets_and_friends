@@ -1,46 +1,4 @@
 const TEMPLATES = {
-  "canada_covid19": {
-    "CanCOGeN Covid-19": {
-      "name": "CanCOGeN Covid-19",
-      "status": "published",
-      "display": true
-    }
-  },
-  "gisaid": {
-    "GISAID": {
-      "name": "GISAID",
-      "status": "published",
-      "display": true
-    }
-  },
-  "pha4ge": {
-    "PHA4GE": {
-      "name": "PHA4GE",
-      "status": "published",
-      "display": true
-    }
-  },
-  "grdi": {
-    "GRDI": {
-      "name": "GRDI",
-      "status": "published",
-      "display": true
-    }
-  },
-  "phac_dexa": {
-    "PHAC Dexa": {
-      "name": "PHAC Dexa",
-      "status": "published",
-      "display": true
-    }
-  },
-  "monkeypox": {
-    "Monkeypox": {
-      "name": "Monkeypox",
-      "status": "published",
-      "display": true
-    }
-  },
   "nmdc_submission_schema": {
     "air": {
       "name": "air",
@@ -132,6 +90,11 @@ const TEMPLATES = {
       "status": "published",
       "display": true
     },
+    "soil_emsl_jgi_mg_mt": {
+      "name": "soil_emsl_jgi_mg_mt",
+      "status": "published",
+      "display": true
+    },
     "emsl_mixin": {
       "name": "emsl_mixin",
       "status": "published",
@@ -157,8 +120,13 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
-    "attribute value": {
-      "name": "attribute value",
+    "soil_jgi_mg_mt": {
+      "name": "soil_jgi_mg_mt",
+      "status": "published",
+      "display": false
+    },
+    "": {
+      "name": "",
       "status": "published",
       "display": false
     },
@@ -167,13 +135,18 @@ const TEMPLATES = {
       "status": "published",
       "display": false
     },
-    "activity": {
-      "name": "activity",
+    "attribute value": {
+      "name": "attribute value",
       "status": "published",
       "display": false
     },
     "agent": {
       "name": "agent",
+      "status": "published",
+      "display": false
+    },
+    "activity": {
+      "name": "activity",
       "status": "published",
       "display": false
     }
