@@ -6,16 +6,21 @@ RUN = poetry run
 
 .PHONY: all clean cogs_fetch squeaky_clean oak_stuff copy-dist-to-docs prepare-dh-dist unnecessaries
 
-all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml copy-dist-to-docs ditch-unnecessaries
+all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml ditch-unnecessaries
+
+#copy-dist-to-docs
 
 ditch-unnecessaries:
 	rm -rf artifacts/from_sheets2linkml.yaml artifacts/nmdc_submission_schema_generated.yaml artifacts/with_shuttles.yaml
 
 prepare-dh-dist:
+	mkdir -p nmdc_dh/schemas
 	$(RUN) gen-linkml artifacts/nmdc_submission_schema.yaml --format json > nmdc_dh/schemas/nmdc_submission_schema.json
-	cd nmdc_dh ; echo "export default { base: '/sheets_and_friends/' }" > vite.config.js ; npm run build
+	npm init data-harmonizer artifacts/nmdc_submission_schema.yaml
 
-copy-dist-to-docs: prepare-dh-dist
+
+copy-dist-to-docs:
+	cd nmdc_dh ; echo "export default { base: '/sheets_and_friends/' }" > vite.config.js ; npm run build
 	cp -R nmdc_dh/dist/* docs
 
 .cogs:
