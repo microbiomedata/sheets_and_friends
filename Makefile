@@ -6,9 +6,17 @@ RUN = poetry run
 
 .PHONY: all clean cogs_fetch squeaky_clean oak_stuff copy-dist-to-docs prepare-dh-dist unnecessaries
 
-all: clean artifacts/nmdc_submission_schema.yaml artifacts/nmdc_submission_schema_generated.yaml ditch-unnecessaries
+all: \
+clean \
+artifacts/nmdc_submission_schema.yaml \
+artifacts/nmdc_submission_schema_generated.yaml \
+artifacts/nmdc_submission_schema.json \
+ditch-unnecessaries
 
 #copy-dist-to-docs
+
+artifacts/nmdc_submission_schema.json: artifacts/nmdc_submission_schema.yaml
+	$(RUN) gen-linkml $< --format json > $@
 
 ditch-unnecessaries:
 	rm -rf artifacts/from_sheets2linkml.yaml artifacts/nmdc_submission_schema_generated.yaml artifacts/with_shuttles.yaml
