@@ -1,0 +1,4 @@
+named_things:
+- name: a
+- id: '1'
+  name: b

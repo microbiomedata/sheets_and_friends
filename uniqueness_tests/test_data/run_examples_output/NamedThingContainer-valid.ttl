@@ -1,0 +1,10 @@
+@prefix uniqueness_tests: <http://example.com/uniqueness_tests/> .
+
+[] a uniqueness_tests:NamedThingContainer ;
+    uniqueness_tests:named_things [ a uniqueness_tests:NamedThing ;
+            uniqueness_tests:id "1" ;
+            uniqueness_tests:name "a" ],
+        [ a uniqueness_tests:NamedThing ;
+            uniqueness_tests:id "2" ;
+            uniqueness_tests:name "b" ] .
+
