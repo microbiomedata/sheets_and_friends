@@ -12,6 +12,13 @@ classes:
     slots:
       - id
       - name
+    unique_keys:
+      id_uk:
+        unique_key_slots:
+          - id
+      name_uk:
+        unique_key_slots:
+          - name
   NamedThingContainer:
     slots:
       - named_things
@@ -22,7 +29,7 @@ slots:
     domain: NamedThing
     range: string
     required: true
-    identifier: true
+  #    identifier: true
   name:
     description: The name of a thing
     domain: NamedThing

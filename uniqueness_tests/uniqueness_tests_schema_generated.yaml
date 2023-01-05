@@ -1,0 +1,53 @@
+name: uniqueness_tests
+id: uniqueness_tests
+imports:
+- linkml:types
+prefixes:
+  uniqueness_tests:
+    prefix_prefix: uniqueness_tests
+    prefix_reference: http://example.com/uniqueness_tests/
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
+default_prefix: uniqueness_tests
+slots:
+  id:
+    name: id
+    description: The unique identifier for a thing
+    domain: NamedThing
+    range: string
+    required: true
+  name:
+    name: name
+    description: The name of a thing
+    domain: NamedThing
+    range: string
+    required: true
+  named_things:
+    name: named_things
+    description: A list of named things
+    domain: NamedThingContainer
+    multivalued: true
+    range: NamedThing
+    inlined_as_list: true
+classes:
+  NamedThing:
+    name: NamedThing
+    slots:
+    - id
+    - name
+    unique_keys:
+      id_uk:
+        unique_key_name: id_uk
+        unique_key_slots:
+        - id
+      name_uk:
+        unique_key_name: name_uk
+        unique_key_slots:
+        - name
+  NamedThingContainer:
+    name: NamedThingContainer
+    slots:
+    - named_things
+    tree_root: true
+source_file: uniqueness_tests_schema.yaml
