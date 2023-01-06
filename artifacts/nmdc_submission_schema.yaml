@@ -5,24 +5,24 @@ id: https://example.com/nmdc_submission_schema
 imports:
 - linkml:types
 prefixes:
-  UO:
-    prefix_prefix: UO
-    prefix_reference: http://purl.obolibrary.org/obo/UO_
-  linkml:
-    prefix_prefix: linkml
-    prefix_reference: https://w3id.org/linkml/
-  mixs.vocab:
-    prefix_prefix: mixs.vocab
-    prefix_reference: https://w3id.org/mixs/vocab/
   nmdc_sub_scheme:
     prefix_prefix: nmdc_sub_scheme
     prefix_reference: https://example.com/nmdc_sub_scheme/
+  mixs.vocab:
+    prefix_prefix: mixs.vocab
+    prefix_reference: https://w3id.org/mixs/vocab/
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
   qud:
     prefix_prefix: qud
     prefix_reference: http://qudt.org/1.1/schema/qudt#
   xsd:
     prefix_prefix: xsd
     prefix_reference: http://www.w3.org/2001/XMLSchema#
+  UO:
+    prefix_prefix: UO
+    prefix_reference: http://purl.obolibrary.org/obo/UO_
   MIXS:
     prefix_prefix: MIXS
     prefix_reference: https://w3id.org/mixs/terms/
@@ -318,344 +318,6 @@ enums:
     permissible_values:
       Soil:
         text: Soil
-  env_broad_scale_soil_enum:
-    name: env_broad_scale_soil_enum
-    from_schema: https://example.com/nmdc_submission_schema
-    permissible_values:
-      ______mediterranean savanna biome [ENVO:01000229]:
-        text: ______mediterranean savanna biome [ENVO:01000229]
-      ____flooded savanna biome [ENVO:01000190]:
-        text: ____flooded savanna biome [ENVO:01000190]
-      ____mediterranean savanna biome [ENVO:01000229]:
-        text: ____mediterranean savanna biome [ENVO:01000229]
-      ____mediterranean shrubland biome [ENVO:01000217]:
-        text: ____mediterranean shrubland biome [ENVO:01000217]
-      ____mediterranean woodland biome [ENVO:01000208]:
-        text: ____mediterranean woodland biome [ENVO:01000208]
-      ____montane savanna biome [ENVO:01000223]:
-        text: ____montane savanna biome [ENVO:01000223]
-      ____subtropical savanna biome [ENVO:01000187]:
-        text: ____subtropical savanna biome [ENVO:01000187]
-      ____temperate savanna biome [ENVO:01000189]:
-        text: ____temperate savanna biome [ENVO:01000189]
-      ____tropical savanna biome [ENVO:01000188]:
-        text: ____tropical savanna biome [ENVO:01000188]
-      __alpine tundra biome [ENVO:01001505]:
-        text: __alpine tundra biome [ENVO:01001505]
-      __mediterranean biome [ENVO:01001833]:
-        text: __mediterranean biome [ENVO:01001833]
-      __montane savanna biome [ENVO:01000223]:
-        text: __montane savanna biome [ENVO:01000223]
-      __montane shrubland biome [ENVO:01000216]:
-        text: __montane shrubland biome [ENVO:01000216]
-      __rangeland biome [ENVO:01000247]:
-        text: __rangeland biome [ENVO:01000247]
-      __savanna biome [ENVO:01000178]:
-        text: __savanna biome [ENVO:01000178]
-      __subtropical savanna biome [ENVO:01000187]:
-        text: __subtropical savanna biome [ENVO:01000187]
-      __subtropical shrubland biome [ENVO:01000213]:
-        text: __subtropical shrubland biome [ENVO:01000213]
-      __subtropical woodland biome [ENVO:01000222]:
-        text: __subtropical woodland biome [ENVO:01000222]
-      __temperate savanna biome [ENVO:01000189]:
-        text: __temperate savanna biome [ENVO:01000189]
-      __temperate shrubland biome [ENVO:01000215]:
-        text: __temperate shrubland biome [ENVO:01000215]
-      __temperate woodland biome [ENVO:01000221]:
-        text: __temperate woodland biome [ENVO:01000221]
-      __tropical savanna biome [ENVO:01000188]:
-        text: __tropical savanna biome [ENVO:01000188]
-      __tropical shrubland biome [ENVO:01000214]:
-        text: __tropical shrubland biome [ENVO:01000214]
-      __tropical woodland biome [ENVO:01000220]:
-        text: __tropical woodland biome [ENVO:01000220]
-      __village biome [ENVO:01000246]:
-        text: __village biome [ENVO:01000246]
-      alpine biome [ENVO:01001835]:
-        text: alpine biome [ENVO:01001835]
-      anthropogenic terrestrial biome [ENVO:01000219]:
-        text: anthropogenic terrestrial biome [ENVO:01000219]
-      arid biome [ENVO:01001838]:
-        text: arid biome [ENVO:01001838]
-      mangrove biome [ENVO:01000181]:
-        text: mangrove biome [ENVO:01000181]
-      montane biome [ENVO:01001836]:
-        text: montane biome [ENVO:01001836]
-      polar biome [ENVO:01000339]:
-        text: polar biome [ENVO:01000339]
-      shrubland biome [ENVO:01000176]:
-        text: shrubland biome [ENVO:01000176]
-      subalpine biome [ENVO:01001837]:
-        text: subalpine biome [ENVO:01001837]
-      subpolar biome [ENVO:01001834]:
-        text: subpolar biome [ENVO:01001834]
-      subtropical biome [ENVO:01001832]:
-        text: subtropical biome [ENVO:01001832]
-      temperate biome [ENVO:01001831]:
-        text: temperate biome [ENVO:01001831]
-      tropical biome [ENVO:01001830]:
-        text: tropical biome [ENVO:01001830]
-      tundra biome [ENVO:01000180]:
-        text: tundra biome [ENVO:01000180]
-      urban biome [ENVO:01000249]:
-        text: urban biome [ENVO:01000249]
-      woodland biome [ENVO:01000175]:
-        text: woodland biome [ENVO:01000175]
-  env_local_scale_soil_enum:
-    name: env_local_scale_soil_enum
-    from_schema: https://example.com/nmdc_submission_schema
-    permissible_values:
-      __canyon [ENVO:00000169]:
-        text: __canyon [ENVO:00000169]
-      __cliff [ENVO:00000087]:
-        text: __cliff [ENVO:00000087]
-      __dry valley [ENVO:00000128]:
-        text: __dry valley [ENVO:00000128]
-      __dune [ENVO:00000170]:
-        text: __dune [ENVO:00000170]
-      __glacial valley [ENVO:00000248]:
-        text: __glacial valley [ENVO:00000248]
-      __hillside [ENVO:01000333]:
-        text: __hillside [ENVO:01000333]
-      __tunnel [ENVO:00000068]:
-        text: __tunnel [ENVO:00000068]
-      active geological fault [ENVO:01000669]:
-        text: active geological fault [ENVO:01000669]
-      agricultural field [ENVO:00000114]:
-        text: agricultural field [ENVO:00000114]
-      beach [ENVO:00000091]:
-        text: beach [ENVO:00000091]
-      cave [ENVO:00000067]:
-        text: cave [ENVO:00000067]
-      channel [ENVO:03000117]:
-        text: channel [ENVO:03000117]
-      coast [ENVO:01000687]:
-        text: coast [ENVO:01000687]
-      dry lake [ENVO:00000277]:
-        text: dry lake [ENVO:00000277]
-      dry river [ENVO:01000995]:
-        text: dry river [ENVO:01000995]
-      garden [ENVO:00000011]:
-        text: garden [ENVO:00000011]
-      hill [ENVO:00000083]:
-        text: hill [ENVO:00000083]
-      hummock [ENVO:00000516]:
-        text: hummock [ENVO:00000516]
-      impact crater [ENVO:01001071]:
-        text: impact crater [ENVO:01001071]
-      isthmus [ENVO:00000174]:
-        text: isthmus [ENVO:00000174]
-      karst [ENVO:00000175]:
-        text: karst [ENVO:00000175]
-      lake shore [ENVO:00000382]:
-        text: lake shore [ENVO:00000382]
-      lava field [ENVO:01000437]:
-        text: lava field [ENVO:01000437]
-      mesa [ENVO:00000179]:
-        text: mesa [ENVO:00000179]
-      mountain [ENVO:00000081]:
-        text: mountain [ENVO:00000081]
-      peatland [ENVO:00000044]:
-        text: peatland [ENVO:00000044]
-      peninsula [ENVO:00000305]:
-        text: peninsula [ENVO:00000305]
-      plain [ENVO:00000086]:
-        text: plain [ENVO:00000086]
-      plateau [ENVO:00000182]:
-        text: plateau [ENVO:00000182]
-      ridge [ENVO:00000283]:
-        text: ridge [ENVO:00000283]
-      slope [ENVO:00002000]:
-        text: slope [ENVO:00002000]
-      snow field [ENVO:00000146]:
-        text: snow field [ENVO:00000146]
-      tombolo [ENVO:00000420]:
-        text: tombolo [ENVO:00000420]
-      tuff cone [ENVO:01000664]:
-        text: tuff cone [ENVO:01000664]
-      valley [ENVO:00000100]:
-        text: valley [ENVO:00000100]
-      vein [ENVO:01000670]:
-        text: vein [ENVO:01000670]
-      volcano [ENVO:00000247]:
-        text: volcano [ENVO:00000247]
-      woodland clearing [ENVO:00000444]:
-        text: woodland clearing [ENVO:00000444]
-  env_medium_soil_enum:
-    name: env_medium_soil_enum
-    from_schema: https://example.com/nmdc_submission_schema
-    permissible_values:
-      ____peaty paddy field soil [ENVO:00005776]:
-        text: ____peaty paddy field soil [ENVO:00005776]
-      __acrisol [ENVO:00002234]:
-        text: __acrisol [ENVO:00002234]
-      __alluvial swamp soil [ENVO:00005758]:
-        text: __alluvial swamp soil [ENVO:00005758]
-      __beech forest soil [ENVO:00005770]:
-        text: __beech forest soil [ENVO:00005770]
-      __bluegrass field soil [ENVO:00005789]:
-        text: __bluegrass field soil [ENVO:00005789]
-      __cryosol [ENVO:00002236]:
-        text: __cryosol [ENVO:00002236]
-      __eucalyptus forest soil [ENVO:00005787]:
-        text: __eucalyptus forest soil [ENVO:00005787]
-      __friable-frozen soil [ENVO:01001528]:
-        text: __friable-frozen soil [ENVO:01001528]
-      __frozen compost soil [ENVO:00005765]:
-        text: __frozen compost soil [ENVO:00005765]
-      __mountain forest soil [ENVO:00005769]:
-        text: __mountain forest soil [ENVO:00005769]
-      __paddy field soil [ENVO:00005740]:
-        text: __paddy field soil [ENVO:00005740]
-      __plastic-frozen soil [ENVO:01001527]:
-        text: __plastic-frozen soil [ENVO:01001527]
-      __rubber plantation soil [ENVO:00005788]:
-        text: __rubber plantation soil [ENVO:00005788]
-      __savanna soil [ENVO:00005746]:
-        text: __savanna soil [ENVO:00005746]
-      __steppe soil [ENVO:00005777]:
-        text: __steppe soil [ENVO:00005777]
-      __volcanic soil [ENVO:01001841]:
-        text: __volcanic soil [ENVO:01001841]
-      __xylene contaminated soil [ENVO:00002146]:
-        text: __xylene contaminated soil [ENVO:00002146]
-      agricultural soil [ENVO:00002259]:
-        text: agricultural soil [ENVO:00002259]
-      albeluvisol [ENVO:00002233]:
-        text: albeluvisol [ENVO:00002233]
-      alisol [ENVO:00002231]:
-        text: alisol [ENVO:00002231]
-      alluvial soil [ENVO:00002871]:
-        text: alluvial soil [ENVO:00002871]
-      alpine soil [ENVO:00005741]:
-        text: alpine soil [ENVO:00005741]
-      andosol [ENVO:00002232]:
-        text: andosol [ENVO:00002232]
-      anthrosol [ENVO:00002230]:
-        text: anthrosol [ENVO:00002230]
-      arenosol [ENVO:00002229]:
-        text: arenosol [ENVO:00002229]
-      bare soil [ENVO:01001616]:
-        text: bare soil [ENVO:01001616]
-      burned soil [ENVO:00005760]:
-        text: burned soil [ENVO:00005760]
-      calcisol [ENVO:00002239]:
-        text: calcisol [ENVO:00002239]
-      cambisol [ENVO:00002235]:
-        text: cambisol [ENVO:00002235]
-      carbon nanotube enriched soil [ENVO:01000427]:
-        text: carbon nanotube enriched soil [ENVO:01000427]
-      chernozem [ENVO:00002237]:
-        text: chernozem [ENVO:00002237]
-      compost soil [ENVO:00005747]:
-        text: compost soil [ENVO:00005747]
-      contaminated soil [ENVO:00002116]:
-        text: contaminated soil [ENVO:00002116]
-      dune soil [ENVO:00002260]:
-        text: dune soil [ENVO:00002260]
-      durisol [ENVO:00002238]:
-        text: durisol [ENVO:00002238]
-      ferralsol [ENVO:00002246]:
-        text: ferralsol [ENVO:00002246]
-      fluvisol [ENVO:00002273]:
-        text: fluvisol [ENVO:00002273]
-      forest soil [ENVO:00002261]:
-        text: forest soil [ENVO:00002261]
-      frost-susceptible soil [ENVO:01001638]:
-        text: frost-susceptible soil [ENVO:01001638]
-      frozen soil [ENVO:01001526]:
-        text: frozen soil [ENVO:01001526]
-      gleysol [ENVO:00002244]:
-        text: gleysol [ENVO:00002244]
-      grassland soil [ENVO:00005750]:
-        text: grassland soil [ENVO:00005750]
-      greenhouse soil [ENVO:00005780]:
-        text: greenhouse soil [ENVO:00005780]
-      gypsisol [ENVO:00002245]:
-        text: gypsisol [ENVO:00002245]
-      histosol [ENVO:00002243]:
-        text: histosol [ENVO:00002243]
-      humus-rich acidic ash soil [ENVO:00005763]:
-        text: humus-rich acidic ash soil [ENVO:00005763]
-      jungle soil [ENVO:00005751]:
-        text: jungle soil [ENVO:00005751]
-      kastanozem [ENVO:00002240]:
-        text: kastanozem [ENVO:00002240]
-      leptosol [ENVO:00002241]:
-        text: leptosol [ENVO:00002241]
-      limed soil [ENVO:00005766]:
-        text: limed soil [ENVO:00005766]
-      lixisol [ENVO:00002242]:
-        text: lixisol [ENVO:00002242]
-      loam [ENVO:00002258]:
-        text: loam [ENVO:00002258]
-      luvisol [ENVO:00002248]:
-        text: luvisol [ENVO:00002248]
-      manured soil [ENVO:00005767]:
-        text: manured soil [ENVO:00005767]
-      meadow soil [ENVO:00005761]:
-        text: meadow soil [ENVO:00005761]
-      muddy soil [ENVO:00005771]:
-        text: muddy soil [ENVO:00005771]
-      nitisol [ENVO:00002247]:
-        text: nitisol [ENVO:00002247]
-      orchard soil [ENVO:00005772]:
-        text: orchard soil [ENVO:00005772]
-      ornithogenic soil [ENVO:00005782]:
-        text: ornithogenic soil [ENVO:00005782]
-      pantothenate enriched soil [ENVO:00003088]:
-        text: pantothenate enriched soil [ENVO:00003088]
-      pasture soil [ENVO:00005773]:
-        text: pasture soil [ENVO:00005773]
-      peat soil [ENVO:00005774]:
-        text: peat soil [ENVO:00005774]
-      phaeozem [ENVO:00002249]:
-        text: phaeozem [ENVO:00002249]
-      planosol [ENVO:00002251]:
-        text: planosol [ENVO:00002251]
-      plinthosol [ENVO:00002250]:
-        text: plinthosol [ENVO:00002250]
-      podzol [ENVO:00002257]:
-        text: podzol [ENVO:00002257]
-      poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]:
-        text: poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]
-      pond soil [ENVO:00005764]:
-        text: pond soil [ENVO:00005764]
-      quinate enriched soil [ENVO:00003095]:
-        text: quinate enriched soil [ENVO:00003095]
-      regosol [ENVO:00002256]:
-        text: regosol [ENVO:00002256]
-      sarcosine enriched soil [ENVO:00003083]:
-        text: sarcosine enriched soil [ENVO:00003083]
-      skatole enriched soil [ENVO:00003085]:
-        text: skatole enriched soil [ENVO:00003085]
-      solonchak [ENVO:00002252]:
-        text: solonchak [ENVO:00002252]
-      solonetz [ENVO:00002255]:
-        text: solonetz [ENVO:00002255]
-      stagnosol [ENVO:00002274]:
-        text: stagnosol [ENVO:00002274]
-      surface soil [ENVO:02000059]:
-        text: surface soil [ENVO:02000059]
-      technosol [ENVO:00002275]:
-        text: technosol [ENVO:00002275]
-      threonine enriched soil [ENVO:00003091]:
-        text: threonine enriched soil [ENVO:00003091]
-      trimethylamine enriched soil [ENVO:00003084]:
-        text: trimethylamine enriched soil [ENVO:00003084]
-      tropical soil [ENVO:00005778]:
-        text: tropical soil [ENVO:00005778]
-      ultisol [ENVO:01001397]:
-        text: ultisol [ENVO:01001397]
-      umbrisol [ENVO:00002253]:
-        text: umbrisol [ENVO:00002253]
-      upland soil [ENVO:00005786]:
-        text: upland soil [ENVO:00005786]
-      urea enriched soil [ENVO:00005753]:
-        text: urea enriched soil [ENVO:00005753]
-      vertisol [ENVO:00002254]:
-        text: vertisol [ENVO:00002254]
   env_package_enum:
     name: env_package_enum
     from_schema: https://example.com/nmdc_submission_schema
@@ -775,10 +437,10 @@ enums:
         text: Desert
       Farm:
         text: Farm
-      Forest Soil:
-        text: Forest Soil
       Forest soil:
         text: Forest soil
+      Forest Soil:
+        text: Forest Soil
       Grasslands:
         text: Grasslands
       Meadow:
@@ -824,6 +486,460 @@ enums:
         text: lyophilized
       other:
         text: other
+  env_broad_scale_soil_enum:
+    name: env_broad_scale_soil_enum
+    from_schema: https://example.com/nmdc_submission_schema
+    permissible_values:
+      alpine biome [ENVO:01001835]:
+        text: alpine biome [ENVO:01001835]
+      __alpine tundra biome [ENVO:01001505]:
+        text: __alpine tundra biome [ENVO:01001505]
+      anthropogenic terrestrial biome [ENVO:01000219]:
+        text: anthropogenic terrestrial biome [ENVO:01000219]
+      __rangeland biome [ENVO:01000247]:
+        text: __rangeland biome [ENVO:01000247]
+      __village biome [ENVO:01000246]:
+        text: __village biome [ENVO:01000246]
+      arid biome [ENVO:01001838]:
+        text: arid biome [ENVO:01001838]
+      mangrove biome [ENVO:01000181]:
+        text: mangrove biome [ENVO:01000181]
+      montane biome [ENVO:01001836]:
+        text: montane biome [ENVO:01001836]
+      __montane savanna biome [ENVO:01000223]:
+        text: __montane savanna biome [ENVO:01000223]
+      __montane shrubland biome [ENVO:01000216]:
+        text: __montane shrubland biome [ENVO:01000216]
+      polar biome [ENVO:01000339]:
+        text: polar biome [ENVO:01000339]
+      shrubland biome [ENVO:01000176]:
+        text: shrubland biome [ENVO:01000176]
+      __subtropical shrubland biome [ENVO:01000213]:
+        text: __subtropical shrubland biome [ENVO:01000213]
+      ____mediterranean shrubland biome [ENVO:01000217]:
+        text: ____mediterranean shrubland biome [ENVO:01000217]
+      __temperate shrubland biome [ENVO:01000215]:
+        text: __temperate shrubland biome [ENVO:01000215]
+      __tropical shrubland biome [ENVO:01000214]:
+        text: __tropical shrubland biome [ENVO:01000214]
+      subalpine biome [ENVO:01001837]:
+        text: subalpine biome [ENVO:01001837]
+      subpolar biome [ENVO:01001834]:
+        text: subpolar biome [ENVO:01001834]
+      subtropical biome [ENVO:01001832]:
+        text: subtropical biome [ENVO:01001832]
+      __mediterranean biome [ENVO:01001833]:
+        text: __mediterranean biome [ENVO:01001833]
+      ____mediterranean savanna biome [ENVO:01000229]:
+        text: ____mediterranean savanna biome [ENVO:01000229]
+      ____mediterranean woodland biome [ENVO:01000208]:
+        text: ____mediterranean woodland biome [ENVO:01000208]
+      __subtropical savanna biome [ENVO:01000187]:
+        text: __subtropical savanna biome [ENVO:01000187]
+      __subtropical woodland biome [ENVO:01000222]:
+        text: __subtropical woodland biome [ENVO:01000222]
+      temperate biome [ENVO:01001831]:
+        text: temperate biome [ENVO:01001831]
+      __temperate savanna biome [ENVO:01000189]:
+        text: __temperate savanna biome [ENVO:01000189]
+      __temperate woodland biome [ENVO:01000221]:
+        text: __temperate woodland biome [ENVO:01000221]
+      tropical biome [ENVO:01001830]:
+        text: tropical biome [ENVO:01001830]
+      __tropical savanna biome [ENVO:01000188]:
+        text: __tropical savanna biome [ENVO:01000188]
+      __tropical woodland biome [ENVO:01000220]:
+        text: __tropical woodland biome [ENVO:01000220]
+      tundra biome [ENVO:01000180]:
+        text: tundra biome [ENVO:01000180]
+      urban biome [ENVO:01000249]:
+        text: urban biome [ENVO:01000249]
+      woodland biome [ENVO:01000175]:
+        text: woodland biome [ENVO:01000175]
+      __savanna biome [ENVO:01000178]:
+        text: __savanna biome [ENVO:01000178]
+      ____flooded savanna biome [ENVO:01000190]:
+        text: ____flooded savanna biome [ENVO:01000190]
+      ____montane savanna biome [ENVO:01000223]:
+        text: ____montane savanna biome [ENVO:01000223]
+      ____subtropical savanna biome [ENVO:01000187]:
+        text: ____subtropical savanna biome [ENVO:01000187]
+      ______mediterranean savanna biome [ENVO:01000229]:
+        text: ______mediterranean savanna biome [ENVO:01000229]
+      ____temperate savanna biome [ENVO:01000189]:
+        text: ____temperate savanna biome [ENVO:01000189]
+      ____tropical savanna biome [ENVO:01000188]:
+        text: ____tropical savanna biome [ENVO:01000188]
+  env_local_scale_soil_enum:
+    name: env_local_scale_soil_enum
+    from_schema: https://example.com/nmdc_submission_schema
+    permissible_values:
+      active geological fault [ENVO:01000669]:
+        text: active geological fault [ENVO:01000669]
+      agricultural field [ENVO:00000114]:
+        text: agricultural field [ENVO:00000114]
+      beach [ENVO:00000091]:
+        text: beach [ENVO:00000091]
+      cave [ENVO:00000067]:
+        text: cave [ENVO:00000067]
+      channel [ENVO:03000117]:
+        text: channel [ENVO:03000117]
+      __tunnel [ENVO:00000068]:
+        text: __tunnel [ENVO:00000068]
+      coast [ENVO:01000687]:
+        text: coast [ENVO:01000687]
+      dry lake [ENVO:00000277]:
+        text: dry lake [ENVO:00000277]
+      dry river [ENVO:01000995]:
+        text: dry river [ENVO:01000995]
+      garden [ENVO:00000011]:
+        text: garden [ENVO:00000011]
+      hill [ENVO:00000083]:
+        text: hill [ENVO:00000083]
+      __dune [ENVO:00000170]:
+        text: __dune [ENVO:00000170]
+      hummock [ENVO:00000516]:
+        text: hummock [ENVO:00000516]
+      impact crater [ENVO:01001071]:
+        text: impact crater [ENVO:01001071]
+      isthmus [ENVO:00000174]:
+        text: isthmus [ENVO:00000174]
+      karst [ENVO:00000175]:
+        text: karst [ENVO:00000175]
+      lake shore [ENVO:00000382]:
+        text: lake shore [ENVO:00000382]
+      lava field [ENVO:01000437]:
+        text: lava field [ENVO:01000437]
+      mesa [ENVO:00000179]:
+        text: mesa [ENVO:00000179]
+      mountain [ENVO:00000081]:
+        text: mountain [ENVO:00000081]
+      peatland [ENVO:00000044]:
+        text: peatland [ENVO:00000044]
+      peninsula [ENVO:00000305]:
+        text: peninsula [ENVO:00000305]
+      plain [ENVO:00000086]:
+        text: plain [ENVO:00000086]
+      plateau [ENVO:00000182]:
+        text: plateau [ENVO:00000182]
+      ridge [ENVO:00000283]:
+        text: ridge [ENVO:00000283]
+      slope [ENVO:00002000]:
+        text: slope [ENVO:00002000]
+      __cliff [ENVO:00000087]:
+        text: __cliff [ENVO:00000087]
+      __hillside [ENVO:01000333]:
+        text: __hillside [ENVO:01000333]
+      snow field [ENVO:00000146]:
+        text: snow field [ENVO:00000146]
+      tombolo [ENVO:00000420]:
+        text: tombolo [ENVO:00000420]
+      tuff cone [ENVO:01000664]:
+        text: tuff cone [ENVO:01000664]
+      valley [ENVO:00000100]:
+        text: valley [ENVO:00000100]
+      __canyon [ENVO:00000169]:
+        text: __canyon [ENVO:00000169]
+      __dry valley [ENVO:00000128]:
+        text: __dry valley [ENVO:00000128]
+      __glacial valley [ENVO:00000248]:
+        text: __glacial valley [ENVO:00000248]
+      vein [ENVO:01000670]:
+        text: vein [ENVO:01000670]
+      volcano [ENVO:00000247]:
+        text: volcano [ENVO:00000247]
+      woodland clearing [ENVO:00000444]:
+        text: woodland clearing [ENVO:00000444]
+  env_medium_soil_enum:
+    name: env_medium_soil_enum
+    from_schema: https://example.com/nmdc_submission_schema
+    permissible_values:
+      agricultural soil [ENVO:00002259]:
+        text: agricultural soil [ENVO:00002259]
+      __bluegrass field soil [ENVO:00005789]:
+        text: __bluegrass field soil [ENVO:00005789]
+      __paddy field soil [ENVO:00005740]:
+        text: __paddy field soil [ENVO:00005740]
+      ____peaty paddy field soil [ENVO:00005776]:
+        text: ____peaty paddy field soil [ENVO:00005776]
+      __rubber plantation soil [ENVO:00005788]:
+        text: __rubber plantation soil [ENVO:00005788]
+      albeluvisol [ENVO:00002233]:
+        text: albeluvisol [ENVO:00002233]
+      alisol [ENVO:00002231]:
+        text: alisol [ENVO:00002231]
+      alluvial soil [ENVO:00002871]:
+        text: alluvial soil [ENVO:00002871]
+      __alluvial swamp soil [ENVO:00005758]:
+        text: __alluvial swamp soil [ENVO:00005758]
+      alpine soil [ENVO:00005741]:
+        text: alpine soil [ENVO:00005741]
+      andosol [ENVO:00002232]:
+        text: andosol [ENVO:00002232]
+      __volcanic soil [ENVO:01001841]:
+        text: __volcanic soil [ENVO:01001841]
+      anthrosol [ENVO:00002230]:
+        text: anthrosol [ENVO:00002230]
+      arenosol [ENVO:00002229]:
+        text: arenosol [ENVO:00002229]
+      bare soil [ENVO:01001616]:
+        text: bare soil [ENVO:01001616]
+      burned soil [ENVO:00005760]:
+        text: burned soil [ENVO:00005760]
+      calcisol [ENVO:00002239]:
+        text: calcisol [ENVO:00002239]
+      cambisol [ENVO:00002235]:
+        text: cambisol [ENVO:00002235]
+      carbon nanotube enriched soil [ENVO:01000427]:
+        text: carbon nanotube enriched soil [ENVO:01000427]
+      chernozem [ENVO:00002237]:
+        text: chernozem [ENVO:00002237]
+      compost soil [ENVO:00005747]:
+        text: compost soil [ENVO:00005747]
+      __frozen compost soil [ENVO:00005765]:
+        text: __frozen compost soil [ENVO:00005765]
+      contaminated soil [ENVO:00002116]:
+        text: contaminated soil [ENVO:00002116]
+      __xylene contaminated soil [ENVO:00002146]:
+        text: __xylene contaminated soil [ENVO:00002146]
+      dune soil [ENVO:00002260]:
+        text: dune soil [ENVO:00002260]
+      durisol [ENVO:00002238]:
+        text: durisol [ENVO:00002238]
+      ferralsol [ENVO:00002246]:
+        text: ferralsol [ENVO:00002246]
+      fluvisol [ENVO:00002273]:
+        text: fluvisol [ENVO:00002273]
+      forest soil [ENVO:00002261]:
+        text: forest soil [ENVO:00002261]
+      __beech forest soil [ENVO:00005770]:
+        text: __beech forest soil [ENVO:00005770]
+      __eucalyptus forest soil [ENVO:00005787]:
+        text: __eucalyptus forest soil [ENVO:00005787]
+      __mountain forest soil [ENVO:00005769]:
+        text: __mountain forest soil [ENVO:00005769]
+      frost-susceptible soil [ENVO:01001638]:
+        text: frost-susceptible soil [ENVO:01001638]
+      frozen soil [ENVO:01001526]:
+        text: frozen soil [ENVO:01001526]
+      __cryosol [ENVO:00002236]:
+        text: __cryosol [ENVO:00002236]
+      __friable-frozen soil [ENVO:01001528]:
+        text: __friable-frozen soil [ENVO:01001528]
+      __plastic-frozen soil [ENVO:01001527]:
+        text: __plastic-frozen soil [ENVO:01001527]
+      gleysol [ENVO:00002244]:
+        text: gleysol [ENVO:00002244]
+      grassland soil [ENVO:00005750]:
+        text: grassland soil [ENVO:00005750]
+      __savanna soil [ENVO:00005746]:
+        text: __savanna soil [ENVO:00005746]
+      __steppe soil [ENVO:00005777]:
+        text: __steppe soil [ENVO:00005777]
+      greenhouse soil [ENVO:00005780]:
+        text: greenhouse soil [ENVO:00005780]
+      gypsisol [ENVO:00002245]:
+        text: gypsisol [ENVO:00002245]
+      histosol [ENVO:00002243]:
+        text: histosol [ENVO:00002243]
+      humus-rich acidic ash soil [ENVO:00005763]:
+        text: humus-rich acidic ash soil [ENVO:00005763]
+      jungle soil [ENVO:00005751]:
+        text: jungle soil [ENVO:00005751]
+      kastanozem [ENVO:00002240]:
+        text: kastanozem [ENVO:00002240]
+      leptosol [ENVO:00002241]:
+        text: leptosol [ENVO:00002241]
+      limed soil [ENVO:00005766]:
+        text: limed soil [ENVO:00005766]
+      lixisol [ENVO:00002242]:
+        text: lixisol [ENVO:00002242]
+      loam [ENVO:00002258]:
+        text: loam [ENVO:00002258]
+      luvisol [ENVO:00002248]:
+        text: luvisol [ENVO:00002248]
+      manured soil [ENVO:00005767]:
+        text: manured soil [ENVO:00005767]
+      meadow soil [ENVO:00005761]:
+        text: meadow soil [ENVO:00005761]
+      muddy soil [ENVO:00005771]:
+        text: muddy soil [ENVO:00005771]
+      nitisol [ENVO:00002247]:
+        text: nitisol [ENVO:00002247]
+      orchard soil [ENVO:00005772]:
+        text: orchard soil [ENVO:00005772]
+      ornithogenic soil [ENVO:00005782]:
+        text: ornithogenic soil [ENVO:00005782]
+      pantothenate enriched soil [ENVO:00003088]:
+        text: pantothenate enriched soil [ENVO:00003088]
+      pasture soil [ENVO:00005773]:
+        text: pasture soil [ENVO:00005773]
+      peat soil [ENVO:00005774]:
+        text: peat soil [ENVO:00005774]
+      phaeozem [ENVO:00002249]:
+        text: phaeozem [ENVO:00002249]
+      planosol [ENVO:00002251]:
+        text: planosol [ENVO:00002251]
+      plinthosol [ENVO:00002250]:
+        text: plinthosol [ENVO:00002250]
+      podzol [ENVO:00002257]:
+        text: podzol [ENVO:00002257]
+      poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]:
+        text: poly-beta-hydroxybutyrate enriched soil [ENVO:00003093]
+      pond soil [ENVO:00005764]:
+        text: pond soil [ENVO:00005764]
+      quinate enriched soil [ENVO:00003095]:
+        text: quinate enriched soil [ENVO:00003095]
+      regosol [ENVO:00002256]:
+        text: regosol [ENVO:00002256]
+      sarcosine enriched soil [ENVO:00003083]:
+        text: sarcosine enriched soil [ENVO:00003083]
+      skatole enriched soil [ENVO:00003085]:
+        text: skatole enriched soil [ENVO:00003085]
+      solonchak [ENVO:00002252]:
+        text: solonchak [ENVO:00002252]
+      solonetz [ENVO:00002255]:
+        text: solonetz [ENVO:00002255]
+      stagnosol [ENVO:00002274]:
+        text: stagnosol [ENVO:00002274]
+      surface soil [ENVO:02000059]:
+        text: surface soil [ENVO:02000059]
+      technosol [ENVO:00002275]:
+        text: technosol [ENVO:00002275]
+      threonine enriched soil [ENVO:00003091]:
+        text: threonine enriched soil [ENVO:00003091]
+      trimethylamine enriched soil [ENVO:00003084]:
+        text: trimethylamine enriched soil [ENVO:00003084]
+      tropical soil [ENVO:00005778]:
+        text: tropical soil [ENVO:00005778]
+      ultisol [ENVO:01001397]:
+        text: ultisol [ENVO:01001397]
+      __acrisol [ENVO:00002234]:
+        text: __acrisol [ENVO:00002234]
+      umbrisol [ENVO:00002253]:
+        text: umbrisol [ENVO:00002253]
+      upland soil [ENVO:00005786]:
+        text: upland soil [ENVO:00005786]
+      urea enriched soil [ENVO:00005753]:
+        text: urea enriched soil [ENVO:00005753]
+      vertisol [ENVO:00002254]:
+        text: vertisol [ENVO:00002254]
+  quad_pos_enum:
+    name: quad_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      North side:
+        text: North side
+      West side:
+        text: West side
+      South side:
+        text: South side
+      East side:
+        text: East side
+  door_loc_enum:
+    name: door_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  samp_floor_enum:
+    name: samp_floor_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      1st floor:
+        text: 1st floor
+      2nd floor:
+        text: 2nd floor
+      basement:
+        text: basement
+      lobby:
+        text: lobby
+  wall_const_type_enum:
+    name: wall_const_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      frame construction:
+        text: frame construction
+      joisted masonry:
+        text: joisted masonry
+      light noncombustible:
+        text: light noncombustible
+      masonry noncombustible:
+        text: masonry noncombustible
+      modified fire resistive:
+        text: modified fire resistive
+      fire resistive:
+        text: fire resistive
+  mech_struc_enum:
+    name: mech_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      subway:
+        text: subway
+      coach:
+        text: coach
+      carriage:
+        text: carriage
+      elevator:
+        text: elevator
+      escalator:
+        text: escalator
+      boat:
+        text: boat
+      train:
+        text: train
+      car:
+        text: car
+      bus:
+        text: bus
+  occup_document_enum:
+    name: occup_document_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      automated count:
+        text: automated count
+      estimate:
+        text: estimate
+      manual count:
+        text: manual count
+      videos:
+        text: videos
+  filter_type_enum:
+    name: filter_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      particulate air filter:
+        text: particulate air filter
+      chemical air filter:
+        text: chemical air filter
+      low-MERV pleated media:
+        text: low-MERV pleated media
+      HEPA:
+        text: HEPA
+      electrostatic:
+        text: electrostatic
+      gas-phase or ultraviolet air treatments:
+        text: gas-phase or ultraviolet air treatments
+  door_cond_enum:
+    name: door_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
   door_type_wood_enum:
     name: door_type_wood_enum
     from_schema: http://w3id.org/mixs/terms
@@ -848,58 +964,6 @@ enums:
         text: louvered
       wire gauged:
         text: wire gauged
-  substructure_type_enum:
-    name: substructure_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      crawlspace:
-        text: crawlspace
-      slab on grade:
-        text: slab on grade
-      basement:
-        text: basement
-  surf_air_cont_enum:
-    name: surf_air_cont_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      dust:
-        text: dust
-      organic matter:
-        text: organic matter
-      particulate matter:
-        text: particulate matter
-      volatile organic compounds:
-        text: volatile organic compounds
-      biological contaminants:
-        text: biological contaminants
-      radon:
-        text: radon
-      nutrients:
-        text: nutrients
-      biocides:
-        text: biocides
-  window_horiz_pos_enum:
-    name: window_horiz_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      left:
-        text: left
-      middle:
-        text: middle
-      right:
-        text: right
-  building_setting_enum:
-    name: building_setting_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      urban:
-        text: urban
-      suburban:
-        text: suburban
-      exurban:
-        text: exurban
-      rural:
-        text: rural
   window_cond_enum:
     name: window_cond_enum
     from_schema: http://w3id.org/mixs/terms
@@ -914,6 +978,162 @@ enums:
         text: rupture
       visible wear:
         text: visible wear
+  room_loc_enum:
+    name: room_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      corner room:
+        text: corner room
+      interior room:
+        text: interior room
+      exterior wall:
+        text: exterior wall
+  specific_enum:
+    name: specific_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      operation:
+        text: operation
+      as built:
+        text: as built
+      construction:
+        text: construction
+      bid:
+        text: bid
+      design:
+        text: design
+      photos:
+        text: photos
+  ceil_type_enum:
+    name: ceil_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cathedral:
+        text: cathedral
+      dropped:
+        text: dropped
+      concave:
+        text: concave
+      barrel-shaped:
+        text: barrel-shaped
+      coffered:
+        text: coffered
+      cove:
+        text: cove
+      stretched:
+        text: stretched
+  floor_water_mold_enum:
+    name: floor_water_mold_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      mold odor:
+        text: mold odor
+      wet floor:
+        text: wet floor
+      water stains:
+        text: water stains
+      wall discoloration:
+        text: wall discoloration
+      floor discoloration:
+        text: floor discoloration
+      ceiling discoloration:
+        text: ceiling discoloration
+      peeling paint or wallpaper:
+        text: peeling paint or wallpaper
+      bulging walls:
+        text: bulging walls
+      condensation:
+        text: condensation
+  door_mat_enum:
+    name: door_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      aluminum:
+        text: aluminum
+      cellular PVC:
+        text: cellular PVC
+      engineered plastic:
+        text: engineered plastic
+      fiberboard:
+        text: fiberboard
+      fiberglass:
+        text: fiberglass
+      metal:
+        text: metal
+      thermoplastic alloy:
+        text: thermoplastic alloy
+      vinyl:
+        text: vinyl
+      wood:
+        text: wood
+      wood/plastic composite:
+        text: wood/plastic composite
+  train_stop_loc_enum:
+    name: train_stop_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      end:
+        text: end
+      mid:
+        text: mid
+      downtown:
+        text: downtown
+  window_loc_enum:
+    name: window_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  wall_finish_mat_enum:
+    name: wall_finish_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      plaster:
+        text: plaster
+      gypsum plaster:
+        text: gypsum plaster
+      veneer plaster:
+        text: veneer plaster
+      gypsum board:
+        text: gypsum board
+      tile:
+        text: tile
+      terrazzo:
+        text: terrazzo
+      stone facing:
+        text: stone facing
+      acoustical treatment:
+        text: acoustical treatment
+      wood:
+        text: wood
+      metal:
+        text: metal
+      masonry:
+        text: masonry
+  weekday_enum:
+    name: weekday_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Monday:
+        text: Monday
+      Tuesday:
+        text: Tuesday
+      Wednesday:
+        text: Wednesday
+      Thursday:
+        text: Thursday
+      Friday:
+        text: Friday
+      Saturday:
+        text: Saturday
+      Sunday:
+        text: Sunday
   build_occup_type_enum:
     name: build_occup_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -944,94 +1164,168 @@ enums:
         text: airport
       sports complex:
         text: sports complex
-  door_mat_enum:
-    name: door_mat_enum
+  door_comp_type_enum:
+    name: door_comp_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      aluminum:
-        text: aluminum
-      cellular PVC:
-        text: cellular PVC
-      engineered plastic:
-        text: engineered plastic
-      fiberboard:
-        text: fiberboard
-      fiberglass:
-        text: fiberglass
-      metal:
-        text: metal
-      thermoplastic alloy:
-        text: thermoplastic alloy
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-      wood/plastic composite:
-        text: wood/plastic composite
-  ceil_cond_enum:
-    name: ceil_cond_enum
+      metal covered:
+        text: metal covered
+      revolving:
+        text: revolving
+      sliding:
+        text: sliding
+      telescopic:
+        text: telescopic
+  light_type_enum:
+    name: light_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-  floor_struc_enum:
-    name: floor_struc_enum
+      natural light:
+        text: natural light
+      electric light:
+        text: electric light
+      desk lamp:
+        text: desk lamp
+      flourescent lights:
+        text: flourescent lights
+      none:
+        text: none
+  surf_air_cont_enum:
+    name: surf_air_cont_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      balcony:
-        text: balcony
-      floating floor:
-        text: floating floor
-      glass floor:
-        text: glass floor
-      raised floor:
-        text: raised floor
-      sprung floor:
-        text: sprung floor
-      wood-framed:
-        text: wood-framed
-      concrete:
-        text: concrete
-  indoor_surf_enum:
-    name: indoor_surf_enum
+      dust:
+        text: dust
+      organic matter:
+        text: organic matter
+      particulate matter:
+        text: particulate matter
+      volatile organic compounds:
+        text: volatile organic compounds
+      biological contaminants:
+        text: biological contaminants
+      radon:
+        text: radon
+      nutrients:
+        text: nutrients
+      biocides:
+        text: biocides
+  train_stat_loc_enum:
+    name: train_stat_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      south station above ground:
+        text: south station above ground
+      south station underground:
+        text: south station underground
+      south station amtrak:
+        text: south station amtrak
+      forest hills:
+        text: forest hills
+      riverside:
+        text: riverside
+  gender_restroom_enum:
+    name: gender_restroom_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      all gender:
+        text: all gender
+      female:
+        text: female
+      gender neurtral:
+        text: gender neurtral
+      male:
+        text: male
+      male and female:
+        text: male and female
+      unisex:
+        text: unisex
+  handidness_enum:
+    name: handidness_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      ambidexterity:
+        text: ambidexterity
+      left handedness:
+        text: left handedness
+      mixed-handedness:
+        text: mixed-handedness
+      right handedness:
+        text: right handedness
+  wall_surf_treatment_enum:
+    name: wall_surf_treatment_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      painted:
+        text: painted
+      wall paper:
+        text: wall paper
+      no treatment:
+        text: no treatment
+      paneling:
+        text: paneling
+      stucco:
+        text: stucco
+      fabric:
+        text: fabric
+  train_line_enum:
+    name: train_line_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      red:
+        text: red
+      green:
+        text: green
+      orange:
+        text: orange
+  shading_device_type_enum:
+    name: shading_device_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bahama shutters:
+        text: bahama shutters
+      exterior roll blind:
+        text: exterior roll blind
+      gambrel awning:
+        text: gambrel awning
+      hood awning:
+        text: hood awning
+      porchroller awning:
+        text: porchroller awning
+      sarasota shutters:
+        text: sarasota shutters
+      slatted aluminum:
+        text: slatted aluminum
+      solid aluminum awning:
+        text: solid aluminum awning
+      sun screen:
+        text: sun screen
+      tree:
+        text: tree
+      trellis:
+        text: trellis
+      venetian awning:
+        text: venetian awning
+  substructure_type_enum:
+    name: substructure_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      crawlspace:
+        text: crawlspace
+      slab on grade:
+        text: slab on grade
+      basement:
+        text: basement
+  furniture_enum:
+    name: furniture_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
       cabinet:
         text: cabinet
-      ceiling:
-        text: ceiling
-      counter top:
-        text: counter top
-      door:
-        text: door
-      shelving:
-        text: shelving
-      vent cover:
-        text: vent cover
-      window:
-        text: window
-      wall:
-        text: wall
-  occup_document_enum:
-    name: occup_document_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      automated count:
-        text: automated count
-      estimate:
-        text: estimate
-      manual count:
-        text: manual count
-      videos:
-        text: videos
+      chair:
+        text: chair
+      desks:
+        text: desks
   indoor_space_enum:
     name: indoor_space_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1052,108 +1346,40 @@ enums:
         text: hallway
       elevator:
         text: elevator
-  light_type_enum:
-    name: light_type_enum
+  season_use_enum:
+    name: season_use_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      natural light:
-        text: natural light
-      electric light:
-        text: electric light
-      desk lamp:
-        text: desk lamp
-      flourescent lights:
-        text: flourescent lights
-      none:
-        text: none
-  arch_struc_enum:
-    name: arch_struc_enum
+      Spring:
+        text: Spring
+      Summer:
+        text: Summer
+      Fall:
+        text: Fall
+      Winter:
+        text: Winter
+  indoor_surf_enum:
+    name: indoor_surf_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      building:
-        text: building
-      shed:
-        text: shed
-      home:
-        text: home
-  ceil_type_enum:
-    name: ceil_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cathedral:
-        text: cathedral
-      dropped:
-        text: dropped
-      concave:
-        text: concave
-      barrel-shaped:
-        text: barrel-shaped
-      coffered:
-        text: coffered
-      cove:
-        text: cove
-      stretched:
-        text: stretched
-  window_vert_pos_enum:
-    name: window_vert_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bottom:
-        text: bottom
-      middle:
-        text: middle
-      top:
-        text: top
-      low:
-        text: low
-      high:
-        text: high
-  door_move_enum:
-    name: door_move_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      collapsible:
-        text: collapsible
-      folding:
-        text: folding
-      revolving:
-        text: revolving
-      rolling shutter:
-        text: rolling shutter
-      sliding:
-        text: sliding
-      swinging:
-        text: swinging
-  door_loc_enum:
-    name: door_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  wall_surf_treatment_enum:
-    name: wall_surf_treatment_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      painted:
-        text: painted
-      wall paper:
-        text: wall paper
-      no treatment:
-        text: no treatment
-      paneling:
-        text: paneling
-      stucco:
-        text: stucco
-      fabric:
-        text: fabric
-  int_wall_cond_enum:
-    name: int_wall_cond_enum
+      cabinet:
+        text: cabinet
+      ceiling:
+        text: ceiling
+      counter top:
+        text: counter top
+      door:
+        text: door
+      shelving:
+        text: shelving
+      vent cover:
+        text: vent cover
+      window:
+        text: window
+      wall:
+        text: wall
+  ceil_cond_enum:
+    name: ceil_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
       new:
@@ -1166,6 +1392,70 @@ enums:
         text: damaged
       rupture:
         text: rupture
+  arch_struc_enum:
+    name: arch_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      building:
+        text: building
+      shed:
+        text: shed
+      home:
+        text: home
+  build_docs_enum:
+    name: build_docs_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      building information model:
+        text: building information model
+      commissioning report:
+        text: commissioning report
+      complaint logs:
+        text: complaint logs
+      contract administration:
+        text: contract administration
+      cost estimate:
+        text: cost estimate
+      janitorial schedules or logs:
+        text: janitorial schedules or logs
+      maintenance plans:
+        text: maintenance plans
+      schedule:
+        text: schedule
+      sections:
+        text: sections
+      shop drawings:
+        text: shop drawings
+      submittals:
+        text: submittals
+      ventilation system:
+        text: ventilation system
+      windows:
+        text: windows
+  water_feat_type_enum:
+    name: water_feat_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      fountain:
+        text: fountain
+      pool:
+        text: pool
+      standing feature:
+        text: standing feature
+      stream:
+        text: stream
+      waterfall:
+        text: waterfall
+  rel_samp_loc_enum:
+    name: rel_samp_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      edge of car:
+        text: edge of car
+      center of car:
+        text: center of car
+      under a seat:
+        text: under a seat
   ceil_texture_enum:
     name: ceil_texture_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1196,6 +1486,280 @@ enums:
         text: stomp knockdown
       swirl:
         text: swirl
+  ext_wall_orient_enum:
+    name: ext_wall_orient_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+      northeast:
+        text: northeast
+      southeast:
+        text: southeast
+      southwest:
+        text: southwest
+      northwest:
+        text: northwest
+  room_condt_enum:
+    name: room_condt_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+      visible signs of mold/mildew:
+        text: visible signs of mold/mildew
+  surf_material_enum:
+    name: surf_material_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      adobe:
+        text: adobe
+      carpet:
+        text: carpet
+      cinder blocks:
+        text: cinder blocks
+      concrete:
+        text: concrete
+      hay bales:
+        text: hay bales
+      glass:
+        text: glass
+      metal:
+        text: metal
+      paint:
+        text: paint
+      plastic:
+        text: plastic
+      stainless steel:
+        text: stainless steel
+      stone:
+        text: stone
+      stucco:
+        text: stucco
+      tile:
+        text: tile
+      vinyl:
+        text: vinyl
+      wood:
+        text: wood
+  door_type_metal_enum:
+    name: door_type_metal_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      collapsible:
+        text: collapsible
+      corrugated steel:
+        text: corrugated steel
+      hollow:
+        text: hollow
+      rolling shutters:
+        text: rolling shutters
+      steel plate:
+        text: steel plate
+  int_wall_cond_enum:
+    name: int_wall_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+  door_type_enum:
+    name: door_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      composite:
+        text: composite
+      metal:
+        text: metal
+      wooden:
+        text: wooden
+  window_type_enum:
+    name: window_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      single-hung sash window:
+        text: single-hung sash window
+      horizontal sash window:
+        text: horizontal sash window
+      fixed window:
+        text: fixed window
+  shading_device_cond_enum:
+    name: shading_device_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
+  building_setting_enum:
+    name: building_setting_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      urban:
+        text: urban
+      suburban:
+        text: suburban
+      exurban:
+        text: exurban
+      rural:
+        text: rural
+  wall_texture_enum:
+    name: wall_texture_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      crows feet:
+        text: crows feet
+      crows-foot stomp:
+        text: crows-foot stomp
+      ? ''
+      : text: ''
+      double skip:
+        text: double skip
+      hawk and trowel:
+        text: hawk and trowel
+      knockdown:
+        text: knockdown
+      popcorn:
+        text: popcorn
+      orange peel:
+        text: orange peel
+      rosebud stomp:
+        text: rosebud stomp
+      Santa-Fe texture:
+        text: Santa-Fe texture
+      skip trowel:
+        text: skip trowel
+      smooth:
+        text: smooth
+      stomp knockdown:
+        text: stomp knockdown
+      swirl:
+        text: swirl
+  window_horiz_pos_enum:
+    name: window_horiz_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      left:
+        text: left
+      middle:
+        text: middle
+      right:
+        text: right
+  floor_finish_mat_enum:
+    name: floor_finish_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      tile:
+        text: tile
+      wood strip or parquet:
+        text: wood strip or parquet
+      carpet:
+        text: carpet
+      rug:
+        text: rug
+      laminate wood:
+        text: laminate wood
+      lineoleum:
+        text: lineoleum
+      vinyl composition tile:
+        text: vinyl composition tile
+      sheet vinyl:
+        text: sheet vinyl
+      stone:
+        text: stone
+      bamboo:
+        text: bamboo
+      cork:
+        text: cork
+      terrazo:
+        text: terrazo
+      concrete:
+        text: concrete
+      none:
+        text: none
+      sealed:
+        text: sealed
+      clear finish:
+        text: clear finish
+      paint:
+        text: paint
+      none or unfinished:
+        text: none or unfinished
+  samp_weather_enum:
+    name: samp_weather_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      clear sky:
+        text: clear sky
+      cloudy:
+        text: cloudy
+      foggy:
+        text: foggy
+      hail:
+        text: hail
+      rain:
+        text: rain
+      snow:
+        text: snow
+      sleet:
+        text: sleet
+      sunny:
+        text: sunny
+      windy:
+        text: windy
+  heat_cool_type_enum:
+    name: heat_cool_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      radiant system:
+        text: radiant system
+      heat pump:
+        text: heat pump
+      forced air system:
+        text: forced air system
+      steam forced heat:
+        text: steam forced heat
+      wood stove:
+        text: wood stove
+  heat_deliv_loc_enum:
+    name: heat_deliv_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
   room_type_enum:
     name: room_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1250,328 +1814,30 @@ enums:
         text: cafe
       warehouse:
         text: warehouse
-  filter_type_enum:
-    name: filter_type_enum
+  floor_cond_enum:
+    name: floor_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      particulate air filter:
-        text: particulate air filter
-      chemical air filter:
-        text: chemical air filter
-      low-MERV pleated media:
-        text: low-MERV pleated media
-      HEPA:
-        text: HEPA
-      electrostatic:
-        text: electrostatic
-      gas-phase or ultraviolet air treatments:
-        text: gas-phase or ultraviolet air treatments
-  furniture_enum:
-    name: furniture_enum
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+  window_cover_enum:
+    name: window_cover_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      cabinet:
-        text: cabinet
-      chair:
-        text: chair
-      desks:
-        text: desks
-  mech_struc_enum:
-    name: mech_struc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      subway:
-        text: subway
-      coach:
-        text: coach
-      carriage:
-        text: carriage
-      elevator:
-        text: elevator
-      escalator:
-        text: escalator
-      boat:
-        text: boat
-      train:
-        text: train
-      car:
-        text: car
-      bus:
-        text: bus
-  door_comp_type_enum:
-    name: door_comp_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      metal covered:
-        text: metal covered
-      revolving:
-        text: revolving
-      sliding:
-        text: sliding
-      telescopic:
-        text: telescopic
-  season_use_enum:
-    name: season_use_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Spring:
-        text: Spring
-      Summer:
-        text: Summer
-      Fall:
-        text: Fall
-      Winter:
-        text: Winter
-  samp_weather_enum:
-    name: samp_weather_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      clear sky:
-        text: clear sky
-      cloudy:
-        text: cloudy
-      foggy:
-        text: foggy
-      hail:
-        text: hail
-      rain:
-        text: rain
-      snow:
-        text: snow
-      sleet:
-        text: sleet
-      sunny:
-        text: sunny
-      windy:
-        text: windy
-  weekday_enum:
-    name: weekday_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Monday:
-        text: Monday
-      Tuesday:
-        text: Tuesday
-      Wednesday:
-        text: Wednesday
-      Thursday:
-        text: Thursday
-      Friday:
-        text: Friday
-      Saturday:
-        text: Saturday
-      Sunday:
-        text: Sunday
-  window_mat_enum:
-    name: window_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      clad:
-        text: clad
-      fiberglass:
-        text: fiberglass
-      metal:
-        text: metal
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-  train_line_enum:
-    name: train_line_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      red:
-        text: red
-      green:
-        text: green
-      orange:
-        text: orange
-  quad_pos_enum:
-    name: quad_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      North side:
-        text: North side
-      West side:
-        text: West side
-      South side:
-        text: South side
-      East side:
-        text: East side
-  window_loc_enum:
-    name: window_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  door_type_metal_enum:
-    name: door_type_metal_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      collapsible:
-        text: collapsible
-      corrugated steel:
-        text: corrugated steel
-      hollow:
-        text: hollow
-      rolling shutters:
-        text: rolling shutters
-      steel plate:
-        text: steel plate
-  heat_cool_type_enum:
-    name: heat_cool_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      radiant system:
-        text: radiant system
-      heat pump:
-        text: heat pump
-      forced air system:
-        text: forced air system
-      steam forced heat:
-        text: steam forced heat
-      wood stove:
-        text: wood stove
-  specific_enum:
-    name: specific_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      operation:
-        text: operation
-      as built:
-        text: as built
-      construction:
-        text: construction
-      bid:
-        text: bid
-      design:
-        text: design
-      photos:
-        text: photos
-  wall_texture_enum:
-    name: wall_texture_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      crows feet:
-        text: crows feet
-      crows-foot stomp:
-        text: crows-foot stomp
-      ? ''
-      : text: ''
-      double skip:
-        text: double skip
-      hawk and trowel:
-        text: hawk and trowel
-      knockdown:
-        text: knockdown
-      popcorn:
-        text: popcorn
-      orange peel:
-        text: orange peel
-      rosebud stomp:
-        text: rosebud stomp
-      Santa-Fe texture:
-        text: Santa-Fe texture
-      skip trowel:
-        text: skip trowel
-      smooth:
-        text: smooth
-      stomp knockdown:
-        text: stomp knockdown
-      swirl:
-        text: swirl
-  samp_floor_enum:
-    name: samp_floor_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      1st floor:
-        text: 1st floor
-      2nd floor:
-        text: 2nd floor
-      basement:
-        text: basement
-      lobby:
-        text: lobby
-  ext_wall_orient_enum:
-    name: ext_wall_orient_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-      northeast:
-        text: northeast
-      southeast:
-        text: southeast
-      southwest:
-        text: southwest
-      northwest:
-        text: northwest
-  room_loc_enum:
-    name: room_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      corner room:
-        text: corner room
-      interior room:
-        text: interior room
-      exterior wall:
-        text: exterior wall
-  water_feat_type_enum:
-    name: water_feat_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      fountain:
-        text: fountain
-      pool:
-        text: pool
-      standing feature:
-        text: standing feature
-      stream:
-        text: stream
-      waterfall:
-        text: waterfall
-  window_type_enum:
-    name: window_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      single-hung sash window:
-        text: single-hung sash window
-      horizontal sash window:
-        text: horizontal sash window
-      fixed window:
-        text: fixed window
-  drawings_enum:
-    name: drawings_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      operation:
-        text: operation
-      as built:
-        text: as built
-      construction:
-        text: construction
-      bid:
-        text: bid
-      design:
-        text: design
-      building navigation map:
-        text: building navigation map
-      diagram:
-        text: diagram
-      sketch:
-        text: sketch
+      blinds:
+        text: blinds
+      curtains:
+        text: curtains
+      none:
+        text: none
   room_samp_pos_enum:
     name: room_samp_pos_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1594,22 +1860,68 @@ enums:
         text: southwest corner
       center:
         text: center
-  room_condt_enum:
-    name: room_condt_enum
+  vis_media_enum:
+    name: vis_media_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-      visible signs of mold/mildew:
-        text: visible signs of mold/mildew
+      photos:
+        text: photos
+      videos:
+        text: videos
+      commonly of the building:
+        text: commonly of the building
+      site context (adjacent buildings, vegetation, terrain, streets):
+        text: site context (adjacent buildings, vegetation, terrain, streets)
+      interiors:
+        text: interiors
+      equipment:
+        text: equipment
+      3D scans:
+        text: 3D scans
+  floor_struc_enum:
+    name: floor_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      balcony:
+        text: balcony
+      floating floor:
+        text: floating floor
+      glass floor:
+        text: glass floor
+      raised floor:
+        text: raised floor
+      sprung floor:
+        text: sprung floor
+      wood-framed:
+        text: wood-framed
+      concrete:
+        text: concrete
+  freq_clean_enum:
+    name: freq_clean_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Daily:
+        text: Daily
+      Weekly:
+        text: Weekly
+      Monthly:
+        text: Monthly
+      Quarterly:
+        text: Quarterly
+      Annually:
+        text: Annually
+      other:
+        text: other
+  door_direct_enum:
+    name: door_direct_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      inward:
+        text: inward
+      outward:
+        text: outward
+      sideways:
+        text: sideways
   room_connected_enum:
     name: room_connected_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1636,352 +1948,6 @@ enums:
         text: office
       stairwell:
         text: stairwell
-  freq_clean_enum:
-    name: freq_clean_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Daily:
-        text: Daily
-      Weekly:
-        text: Weekly
-      Monthly:
-        text: Monthly
-      Quarterly:
-        text: Quarterly
-      Annually:
-        text: Annually
-      other:
-        text: other
-  vis_media_enum:
-    name: vis_media_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      photos:
-        text: photos
-      videos:
-        text: videos
-      commonly of the building:
-        text: commonly of the building
-      site context (adjacent buildings, vegetation, terrain, streets):
-        text: site context (adjacent buildings, vegetation, terrain, streets)
-      interiors:
-        text: interiors
-      equipment:
-        text: equipment
-      3D scans:
-        text: 3D scans
-  train_stop_loc_enum:
-    name: train_stop_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      end:
-        text: end
-      mid:
-        text: mid
-      downtown:
-        text: downtown
-  handidness_enum:
-    name: handidness_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      ambidexterity:
-        text: ambidexterity
-      left handedness:
-        text: left handedness
-      mixed-handedness:
-        text: mixed-handedness
-      right handedness:
-        text: right handedness
-  rel_samp_loc_enum:
-    name: rel_samp_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      edge of car:
-        text: edge of car
-      center of car:
-        text: center of car
-      under a seat:
-        text: under a seat
-  surf_material_enum:
-    name: surf_material_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      adobe:
-        text: adobe
-      carpet:
-        text: carpet
-      cinder blocks:
-        text: cinder blocks
-      concrete:
-        text: concrete
-      hay bales:
-        text: hay bales
-      glass:
-        text: glass
-      metal:
-        text: metal
-      paint:
-        text: paint
-      plastic:
-        text: plastic
-      stainless steel:
-        text: stainless steel
-      stone:
-        text: stone
-      stucco:
-        text: stucco
-      tile:
-        text: tile
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-  heat_deliv_loc_enum:
-    name: heat_deliv_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  gender_restroom_enum:
-    name: gender_restroom_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      all gender:
-        text: all gender
-      female:
-        text: female
-      gender neurtral:
-        text: gender neurtral
-      male:
-        text: male
-      male and female:
-        text: male and female
-      unisex:
-        text: unisex
-  door_type_enum:
-    name: door_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      composite:
-        text: composite
-      metal:
-        text: metal
-      wooden:
-        text: wooden
-  window_cover_enum:
-    name: window_cover_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      blinds:
-        text: blinds
-      curtains:
-        text: curtains
-      none:
-        text: none
-  build_docs_enum:
-    name: build_docs_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      building information model:
-        text: building information model
-      commissioning report:
-        text: commissioning report
-      complaint logs:
-        text: complaint logs
-      contract administration:
-        text: contract administration
-      cost estimate:
-        text: cost estimate
-      janitorial schedules or logs:
-        text: janitorial schedules or logs
-      maintenance plans:
-        text: maintenance plans
-      schedule:
-        text: schedule
-      sections:
-        text: sections
-      shop drawings:
-        text: shop drawings
-      submittals:
-        text: submittals
-      ventilation system:
-        text: ventilation system
-      windows:
-        text: windows
-  floor_cond_enum:
-    name: floor_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-  train_stat_loc_enum:
-    name: train_stat_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      south station above ground:
-        text: south station above ground
-      south station underground:
-        text: south station underground
-      south station amtrak:
-        text: south station amtrak
-      forest hills:
-        text: forest hills
-      riverside:
-        text: riverside
-  floor_finish_mat_enum:
-    name: floor_finish_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      tile:
-        text: tile
-      wood strip or parquet:
-        text: wood strip or parquet
-      carpet:
-        text: carpet
-      rug:
-        text: rug
-      laminate wood:
-        text: laminate wood
-      lineoleum:
-        text: lineoleum
-      vinyl composition tile:
-        text: vinyl composition tile
-      sheet vinyl:
-        text: sheet vinyl
-      stone:
-        text: stone
-      bamboo:
-        text: bamboo
-      cork:
-        text: cork
-      terrazo:
-        text: terrazo
-      concrete:
-        text: concrete
-      none:
-        text: none
-      sealed:
-        text: sealed
-      clear finish:
-        text: clear finish
-      paint:
-        text: paint
-      none or unfinished:
-        text: none or unfinished
-  wall_finish_mat_enum:
-    name: wall_finish_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      plaster:
-        text: plaster
-      gypsum plaster:
-        text: gypsum plaster
-      veneer plaster:
-        text: veneer plaster
-      gypsum board:
-        text: gypsum board
-      tile:
-        text: tile
-      terrazzo:
-        text: terrazzo
-      stone facing:
-        text: stone facing
-      acoustical treatment:
-        text: acoustical treatment
-      wood:
-        text: wood
-      metal:
-        text: metal
-      masonry:
-        text: masonry
-  door_direct_enum:
-    name: door_direct_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      inward:
-        text: inward
-      outward:
-        text: outward
-      sideways:
-        text: sideways
-  door_cond_enum:
-    name: door_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
-  wall_const_type_enum:
-    name: wall_const_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      frame construction:
-        text: frame construction
-      joisted masonry:
-        text: joisted masonry
-      light noncombustible:
-        text: light noncombustible
-      masonry noncombustible:
-        text: masonry noncombustible
-      modified fire resistive:
-        text: modified fire resistive
-      fire resistive:
-        text: fire resistive
-  wall_loc_enum:
-    name: wall_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  floor_water_mold_enum:
-    name: floor_water_mold_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      mold odor:
-        text: mold odor
-      wet floor:
-        text: wet floor
-      water stains:
-        text: water stains
-      wall discoloration:
-        text: wall discoloration
-      floor discoloration:
-        text: floor discoloration
-      ceiling discoloration:
-        text: ceiling discoloration
-      peeling paint or wallpaper:
-        text: peeling paint or wallpaper
-      bulging walls:
-        text: bulging walls
-      condensation:
-        text: condensation
   ext_window_orient_enum:
     name: ext_window_orient_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2002,34 +1968,6 @@ enums:
         text: southwest
       northwest:
         text: northwest
-  shading_device_type_enum:
-    name: shading_device_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bahama shutters:
-        text: bahama shutters
-      exterior roll blind:
-        text: exterior roll blind
-      gambrel awning:
-        text: gambrel awning
-      hood awning:
-        text: hood awning
-      porchroller awning:
-        text: porchroller awning
-      sarasota shutters:
-        text: sarasota shutters
-      slatted aluminum:
-        text: slatted aluminum
-      solid aluminum awning:
-        text: solid aluminum awning
-      sun screen:
-        text: sun screen
-      tree:
-        text: tree
-      trellis:
-        text: trellis
-      venetian awning:
-        text: venetian awning
   ceil_finish_mat_enum:
     name: ceil_finish_mat_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2054,20 +1992,82 @@ enums:
         text: mineral wool/calcium silicate
       wood:
         text: wood
-  shading_device_cond_enum:
-    name: shading_device_cond_enum
+  wall_loc_enum:
+    name: wall_loc_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  window_mat_enum:
+    name: window_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      clad:
+        text: clad
+      fiberglass:
+        text: fiberglass
+      metal:
+        text: metal
+      vinyl:
+        text: vinyl
+      wood:
+        text: wood
+  window_vert_pos_enum:
+    name: window_vert_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bottom:
+        text: bottom
+      middle:
+        text: middle
+      top:
+        text: top
+      low:
+        text: low
+      high:
+        text: high
+  drawings_enum:
+    name: drawings_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      operation:
+        text: operation
+      as built:
+        text: as built
+      construction:
+        text: construction
+      bid:
+        text: bid
+      design:
+        text: design
+      building navigation map:
+        text: building navigation map
+      diagram:
+        text: diagram
+      sketch:
+        text: sketch
+  door_move_enum:
+    name: door_move_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      collapsible:
+        text: collapsible
+      folding:
+        text: folding
+      revolving:
+        text: revolving
+      rolling shutter:
+        text: rolling shutter
+      sliding:
+        text: sliding
+      swinging:
+        text: swinging
   host_sex_enum:
     name: host_sex_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2080,20 +2080,6 @@ enums:
         text: male
       neuter:
         text: neuter
-  sr_dep_env_enum:
-    name: sr_dep_env_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Lacustine:
-        text: Lacustine
-      Fluvioldeltaic:
-        text: Fluvioldeltaic
-      Fluviomarine:
-        text: Fluviomarine
-      Marine:
-        text: Marine
-      other:
-        text: other
   sr_kerog_type_enum:
     name: sr_kerog_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2108,18 +2094,18 @@ enums:
         text: Type IV
       other:
         text: other
-  sr_lithology_enum:
-    name: sr_lithology_enum
+  samp_md_enum:
+    name: samp_md_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      Clastic:
-        text: Clastic
-      Carbonate:
-        text: Carbonate
-      Coal:
-        text: Coal
-      Biosilicieous:
-        text: Biosilicieous
+      DF:
+        text: DF
+      RT:
+        text: RT
+      KB:
+        text: KB
+      MSL:
+        text: MSL
       other:
         text: other
   sr_geol_age_enum:
@@ -2162,18 +2148,32 @@ enums:
         text: Triassic
       other:
         text: other
-  samp_md_enum:
-    name: samp_md_enum
+  sr_lithology_enum:
+    name: sr_lithology_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      DF:
-        text: DF
-      RT:
-        text: RT
-      KB:
-        text: KB
-      MSL:
-        text: MSL
+      Clastic:
+        text: Clastic
+      Carbonate:
+        text: Carbonate
+      Coal:
+        text: Coal
+      Biosilicieous:
+        text: Biosilicieous
+      other:
+        text: other
+  sr_dep_env_enum:
+    name: sr_dep_env_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Lacustine:
+        text: Lacustine
+      Fluvioldeltaic:
+        text: Fluvioldeltaic
+      Fluviomarine:
+        text: Fluviomarine
+      Marine:
+        text: Marine
       other:
         text: other
   samp_collect_point_enum:
@@ -2192,6 +2192,16 @@ enums:
         text: separator
       storage tank:
         text: storage tank
+      other:
+        text: other
+  organism_count_enum:
+    name: organism_count_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      ATP:
+        text: ATP
+      MPN:
+        text: MPN
       other:
         text: other
   hcr_geol_age_enum:
@@ -2234,18 +2244,14 @@ enums:
         text: Triassic
       other:
         text: other
-  samp_subtype_enum:
-    name: samp_subtype_enum
+  oxy_stat_samp_enum:
+    name: oxy_stat_samp_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      oil phase:
-        text: oil phase
-      water phase:
-        text: water phase
-      biofilm:
-        text: biofilm
-      not applicable:
-        text: not applicable
+      aerobic:
+        text: aerobic
+      anaerobic:
+        text: anaerobic
       other:
         text: other
   hc_produced_enum:
@@ -2264,44 +2270,18 @@ enums:
         text: Coalbed Methane
       other:
         text: other
-  organism_count_enum:
-    name: organism_count_enum
+  samp_subtype_enum:
+    name: samp_subtype_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      ATP:
-        text: ATP
-      MPN:
-        text: MPN
-      other:
-        text: other
-  lithology_enum:
-    name: lithology_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Basement:
-        text: Basement
-      Chalk:
-        text: Chalk
-      Chert:
-        text: Chert
-      Coal:
-        text: Coal
-      Conglomerate:
-        text: Conglomerate
-      Diatomite:
-        text: Diatomite
-      Dolomite:
-        text: Dolomite
-      Limestone:
-        text: Limestone
-      Sandstone:
-        text: Sandstone
-      Shale:
-        text: Shale
-      Siltstone:
-        text: Siltstone
-      Volcanic:
-        text: Volcanic
+      oil phase:
+        text: oil phase
+      water phase:
+        text: water phase
+      biofilm:
+        text: biofilm
+      not applicable:
+        text: not applicable
       other:
         text: other
   depos_env_enum:
@@ -2340,6 +2320,36 @@ enums:
         text: Other - Volcanic
       other:
         text: other
+  lithology_enum:
+    name: lithology_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Basement:
+        text: Basement
+      Chalk:
+        text: Chalk
+      Chert:
+        text: Chert
+      Coal:
+        text: Coal
+      Conglomerate:
+        text: Conglomerate
+      Diatomite:
+        text: Diatomite
+      Dolomite:
+        text: Dolomite
+      Limestone:
+        text: Limestone
+      Sandstone:
+        text: Sandstone
+      Shale:
+        text: Shale
+      Siltstone:
+        text: Siltstone
+      Volcanic:
+        text: Volcanic
+      other:
+        text: other
   hcr_enum:
     name: hcr_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2360,36 +2370,6 @@ enums:
         text: Tight Gas Reservoir
       other:
         text: other
-  oxy_stat_samp_enum:
-    name: oxy_stat_samp_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      aerobic:
-        text: aerobic
-      anaerobic:
-        text: anaerobic
-      other:
-        text: other
-  biol_stat_enum:
-    name: biol_stat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      wild:
-        text: wild
-      natural:
-        text: natural
-      semi-natural:
-        text: semi-natural
-      inbred line:
-        text: inbred line
-      breeder's line:
-        text: breeder's line
-      hybrid:
-        text: hybrid
-      clonal selection:
-        text: clonal selection
-      mutant:
-        text: mutant
   samp_dis_stage_enum:
     name: samp_dis_stage_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2420,6 +2400,26 @@ enums:
         text: market sample
       other:
         text: other
+  biol_stat_enum:
+    name: biol_stat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      wild:
+        text: wild
+      natural:
+        text: natural
+      semi-natural:
+        text: semi-natural
+      inbred line:
+        text: inbred line
+      breeder's line:
+        text: breeder's line
+      hybrid:
+        text: hybrid
+      clonal selection:
+        text: clonal selection
+      mutant:
+        text: mutant
   tidal_stage_enum:
     name: tidal_stage_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2615,38 +2615,6 @@ enums:
         text: swamp (permanent or semi-permanent water body dominated by woody plants)
       crop trees (nuts,fruit,christmas trees,nursery trees):
         text: crop trees (nuts,fruit,christmas trees,nursery trees)
-  profile_position_enum:
-    name: profile_position_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      summit:
-        text: summit
-      shoulder:
-        text: shoulder
-      backslope:
-        text: backslope
-      footslope:
-        text: footslope
-      toeslope:
-        text: toeslope
-  soil_horizon_enum:
-    name: soil_horizon_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      O horizon:
-        text: O horizon
-      A horizon:
-        text: A horizon
-      E horizon:
-        text: E horizon
-      B horizon:
-        text: B horizon
-      C horizon:
-        text: C horizon
-      R layer:
-        text: R layer
-      Permafrost:
-        text: Permafrost
   fao_class_enum:
     name: fao_class_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2703,6 +2671,54 @@ enums:
         text: Vertisols
       Yermosols:
         text: Yermosols
+  profile_position_enum:
+    name: profile_position_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      summit:
+        text: summit
+      shoulder:
+        text: shoulder
+      backslope:
+        text: backslope
+      footslope:
+        text: footslope
+      toeslope:
+        text: toeslope
+  drainage_class_enum:
+    name: drainage_class_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      very poorly:
+        text: very poorly
+      poorly:
+        text: poorly
+      somewhat poorly:
+        text: somewhat poorly
+      moderately well:
+        text: moderately well
+      well:
+        text: well
+      excessively drained:
+        text: excessively drained
+  soil_horizon_enum:
+    name: soil_horizon_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      O horizon:
+        text: O horizon
+      A horizon:
+        text: A horizon
+      E horizon:
+        text: E horizon
+      B horizon:
+        text: B horizon
+      C horizon:
+        text: C horizon
+      R layer:
+        text: R layer
+      Permafrost:
+        text: Permafrost
   tillage_enum:
     name: tillage_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2725,33 +2741,43 @@ enums:
         text: mouldboard
       disc plough:
         text: disc plough
-  drainage_class_enum:
-    name: drainage_class_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      very poorly:
-        text: very poorly
-      poorly:
-        text: poorly
-      somewhat poorly:
-        text: somewhat poorly
-      moderately well:
-        text: moderately well
-      well:
-        text: well
-      excessively drained:
-        text: excessively drained
 slots:
-  Bioscales:
-    name: Bioscales
+  dh_section:
+    name: dh_section
+    description: A section (ie group if columns) within a DataHarmonizer interface
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 11
-    is_a: dh_section
-  EMSL:
-    name: EMSL
+  project_ID:
+    name: project_ID
+    description: Proposal IDs or names associated with dataset
+    title: project ID
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 1
+    string_serialization: '{text}'
+    slot_group: EMSL
+    required: true
+  sample_type:
+    name: sample_type
+    description: Type of sample being submitted
+    title: sample type
+    comments:
+    - This can vary from 'environmental package' if the sample is an extraction.
+    examples:
+    - value: water extracted soil
     from_schema: https://example.com/nmdc_submission_schema
     rank: 2
-    is_a: dh_section
+    slot_group: EMSL
+    range: sample_type_enum
+    required: true
+  sample_shipped:
+    name: sample_shipped
+    description: The total amount or size (volume (ml), mass (g) or area (m2) ) of
+      sample sent to EMSL
+    title: sample shipped amount
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 3
+    string_serialization: '{float} {unit}'
+    slot_group: EMSL
+    required: true
   EMSL_store_temp:
     name: EMSL_store_temp
     description: Temperature at which the sample sent to EMSL should be stored
@@ -2765,125 +2791,112 @@ slots:
     string_serialization: '{float}'
     slot_group: EMSL
     required: true
-  JGI-Metagenomics:
-    name: JGI-Metagenomics
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 3
-    is_a: dh_section
-  JGI-Metatranscriptomics:
-    name: JGI-Metatranscriptomics
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 4
-    is_a: dh_section
-  MIxS:
-    name: MIxS
+  technical_reps:
+    name: technical_reps
+    description: If sending multiple technical replicates of the same sample, indicate
+      how many replicates are being sent
+    title: number technical replicate
     from_schema: https://example.com/nmdc_submission_schema
     rank: 5
-    is_a: dh_section
-  MIxS (modified):
-    name: MIxS (modified)
+    string_serialization: '{integer}'
+    slot_group: EMSL
+    recommended: true
+  replicate_number:
+    name: replicate_number
+    description: If sending biological replicates, indicate the rep number here.
+    title: replicate number
+    comments:
+    - This will guide staff in ensuring your samples are block & randomized correctly
     from_schema: https://example.com/nmdc_submission_schema
     rank: 6
-    is_a: dh_section
-  MIxS Inspired:
-    name: MIxS Inspired
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 7
-    is_a: dh_section
-  MIxS NASSF:
-    name: MIxS NASSF
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 9
-    is_a: dh_section
-  MIxS core:
-    name: MIxS core
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 10
-    is_a: dh_section
-  MIxS investigation:
-    name: MIxS investigation
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 8
-    is_a: dh_section
-  Sample ID:
-    name: Sample ID
+    string_serialization: '{integer}'
+    slot_group: EMSL
+    recommended: true
+  dna_seq_project:
+    name: dna_seq_project
+    title: DNA seq project ID
+    comments:
+    - Do not edit these values. A template will be provided by NMDC in which these
+      values have been pre-filled.
+    examples:
+    - value: '1191234'
     from_schema: https://example.com/nmdc_submission_schema
     rank: 1
-    is_a: dh_section
-  analysis_type:
-    name: analysis_type
-    description: Select all the data types associated or available for this biosample
-    title: analysis/data type
-    examples:
-    - value: metagenomics; metabolomics; proteomics
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:investigation_type
-    rank: 3
-    multivalued: true
-    slot_group: Sample ID
-    range: analysis_type_enum
+    string_serialization: '{text}'
+    slot_group: JGI-Metagenomics
     required: true
-  collection_date_inc:
-    name: collection_date_inc
-    description: Date the incubation was harvested/collected/ended. Only relevant
-      for incubation samples.
-    title: incubation collection date
-    notes:
-    - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date only
+  dna_seq_project_name:
+    name: dna_seq_project_name
+    title: DNA seq project name
     comments:
-    - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021
-      are all acceptable.
+    - Do not edit these values. A template will be provided by NMDC in which these
+      values have been pre-filled.
     examples:
-    - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
+    - value: JGI Pond metagenomics
     from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:collection_date
     rank: 2
-    string_serialization: '{date, arbitrary precision}'
-    slot_group: MIxS Inspired
-    recommended: true
-  collection_time:
-    name: collection_time
-    description: The time of sampling, either as an instance (single point) or interval.
-    title: collection time, GMT
-    notes:
-    - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
-      time only
+    string_serialization: '{text}'
+    slot_group: JGI-Metagenomics
+    required: true
+  dna_samp_ID:
+    name: dna_samp_ID
+    title: DNA sample ID
+    todos:
+    - Removed identifier = TRUE from dna_samp_ID in JGI_sample_slots, as a class can't
+      have two identifiers. How to force uniqueness? Moot because that column will
+      be prefilled?
     comments:
-    - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
+    - Do not edit these values. A template will be provided by NMDC in which these
+      values have been pre-filled.
     examples:
-    - value: 13:33 or 13:33:55
+    - value: '187654'
     from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:collection_date
-    rank: 1
-    string_serialization: '{time, seconds optional}'
-    slot_group: MIxS Inspired
-    recommended: true
-  collection_time_inc:
-    name: collection_time_inc
-    description: Time the incubation was harvested/collected/ended. Only relevant
-      for incubation samples.
-    title: incubation collection time, GMT
-    notes:
-    - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
-      time only
-    comments:
-    - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
-    examples:
-    - value: 13:33 or 13:33:55
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:collection_date
     rank: 3
-    string_serialization: '{time, seconds optional}'
-    slot_group: MIxS Inspired
-    recommended: true
-  dh_section:
-    name: dh_section
-    description: A section (ie group if columns) within a DataHarmonizer interface
+    string_serialization: '{text}'
+    slot_group: JGI-Metagenomics
+    required: true
+  dna_sample_name:
+    name: dna_sample_name
+    description: Give the DNA sample a name that is meaningful to you. Sample names
+      must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.
+    title: DNA sample name
+    examples:
+    - value: JGI_pond_041618
     from_schema: https://example.com/nmdc_submission_schema
+    rank: 4
+    string_serialization: '{text}'
+    slot_group: JGI-Metagenomics
+    required: true
+  dna_concentration:
+    name: dna_concentration
+    title: DNA concentration in ng/ul
+    comments:
+    - Units must be in ng/uL. Enter the numerical part only. Must be calculated using
+      a fluorometric method. Acceptable values are 0-2000.
+    examples:
+    - value: '100'
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 5
+    string_serialization: '{float}'
+    slot_group: JGI-Metagenomics
+    required: true
+    minimum_value: 0
+    maximum_value: 2000
+  dna_volume:
+    name: dna_volume
+    title: DNA volume in ul
+    comments:
+    - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
+      <25 by special permission only.
+    examples:
+    - value: '25'
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 6
+    string_serialization: '{float}'
+    slot_group: JGI-Metagenomics
+    required: true
+    minimum_value: 0
+    maximum_value: 1000
   dna_absorb1:
     name: dna_absorb1
     description: 260/280 measurement of DNA sample purity
@@ -2910,57 +2923,6 @@ slots:
     string_serialization: '{float}'
     slot_group: JGI-Metagenomics
     recommended: true
-  dna_collect_site:
-    name: dna_collect_site
-    description: Provide information on the site your DNA sample was collected from
-    title: DNA collection site
-    examples:
-    - value: untreated pond water
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 15
-    string_serialization: '{text}'
-    slot_group: JGI-Metagenomics
-    required: true
-  dna_concentration:
-    name: dna_concentration
-    title: DNA concentration in ng/ul
-    comments:
-    - Units must be in ng/uL. Enter the numerical part only. Must be calculated using
-      a fluorometric method. Acceptable values are 0-2000.
-    examples:
-    - value: '100'
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 5
-    string_serialization: '{float}'
-    slot_group: JGI-Metagenomics
-    required: true
-    minimum_value: 0
-    maximum_value: 2000
-  dna_cont_type:
-    name: dna_cont_type
-    description: Tube or plate (96-well)
-    title: DNA container type
-    examples:
-    - value: plate
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 10
-    slot_group: JGI-Metagenomics
-    range: dna_cont_type_enum
-    required: true
-  dna_cont_well:
-    name: dna_cont_well
-    title: DNA well number
-    comments:
-    - Required when 'plate' is selected for container type. Corner wells must be blank.
-      For partial plates, fill by columns. Leave blank if the sample will be shipped
-      in a tube.
-    examples:
-    - value: B2
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 11
-    string_serialization: '{96 well plate pos}'
-    slot_group: JGI-Metagenomics
-    required: true
   dna_container_ID:
     name: dna_container_ID
     title: DNA container label
@@ -2974,6 +2936,46 @@ slots:
     string_serialization: '{text < 20 characters}'
     slot_group: JGI-Metagenomics
     required: true
+  dna_cont_type:
+    name: dna_cont_type
+    description: Tube or plate (96-well)
+    title: DNA container type
+    examples:
+    - value: plate
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 10
+    slot_group: JGI-Metagenomics
+    range: dna_cont_type_enum
+    required: true
+  dna_cont_well:
+    name: dna_cont_well
+    title: DNA plate position
+    comments:
+    - Required when 'plate' is selected for container type.
+    - Leave blank if the sample will be shipped in a tube.
+    - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will not
+      pass validation.
+    - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+    examples:
+    - value: B2
+    from_schema: https://microbiomedata/schema/jgi_metagenomics
+    rank: 11
+    string_serialization: '{96 well plate pos}'
+    slot_group: JGI-Metagenomics
+    required: false
+    recommended: true
+    pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
+  dna_sample_format:
+    name: dna_sample_format
+    description: Solution in which the DNA sample has been suspended
+    title: DNA sample format
+    examples:
+    - value: Water
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 12
+    slot_group: JGI-Metagenomics
+    range: dna_sample_format_enum
+    required: true
   dna_dnase:
     name: dna_dnase
     title: DNase treatment DNA
@@ -2985,17 +2987,6 @@ slots:
     rank: 13
     slot_group: JGI-Metagenomics
     range: dna_dnase_enum
-    required: true
-  dna_isolate_meth:
-    name: dna_isolate_meth
-    description: Describe the method/protocol/kit used to extract DNA/RNA.
-    title: DNA isolation method
-    examples:
-    - value: phenol/chloroform extraction
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 16
-    string_serialization: '{text}'
-    slot_group: JGI-Metagenomics
     required: true
   dna_organisms:
     name: dna_organisms
@@ -3010,69 +3001,25 @@ slots:
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
     recommended: true
-  dna_project_contact:
-    name: dna_project_contact
-    title: DNA seq project contact
-    comments:
-    - Do not edit these values. A template will be provided by NMDC in which these
-      values have been pre-filled.
+  dna_collect_site:
+    name: dna_collect_site
+    description: Provide information on the site your DNA sample was collected from
+    title: DNA collection site
     examples:
-    - value: John Jones
+    - value: untreated pond water
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 18
+    rank: 15
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
     required: true
-  dna_samp_ID:
-    name: dna_samp_ID
-    title: DNA sample ID
-    todos:
-    - Removed identifier = TRUE from dna_samp_ID in JGI_sample_slots, as a class can't
-      have two identifiers. How to force uniqueness? Moot because that column will
-      be prefilled?
-    comments:
-    - Do not edit these values. A template will be provided by NMDC in which these
-      values have been pre-filled.
+  dna_isolate_meth:
+    name: dna_isolate_meth
+    description: Describe the method/protocol/kit used to extract DNA/RNA.
+    title: DNA isolation method
     examples:
-    - value: '187654'
+    - value: phenol/chloroform extraction
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 3
-    string_serialization: '{text}'
-    slot_group: JGI-Metagenomics
-    required: true
-  dna_sample_format:
-    name: dna_sample_format
-    description: Solution in which the DNA sample has been suspended
-    title: DNA sample format
-    examples:
-    - value: Water
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 12
-    slot_group: JGI-Metagenomics
-    range: dna_sample_format_enum
-    required: true
-  dna_sample_name:
-    name: dna_sample_name
-    description: Give the DNA sample a name that is meaningful to you. Sample names
-      must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.
-    title: DNA sample name
-    examples:
-    - value: JGI_pond_041618
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 4
-    string_serialization: '{text}'
-    slot_group: JGI-Metagenomics
-    required: true
-  dna_seq_project:
-    name: dna_seq_project
-    title: DNA seq project ID
-    comments:
-    - Do not edit these values. A template will be provided by NMDC in which these
-      values have been pre-filled.
-    examples:
-    - value: '1191234'
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 1
+    rank: 16
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
     required: true
@@ -3089,195 +3036,18 @@ slots:
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
     required: true
-  dna_seq_project_name:
-    name: dna_seq_project_name
-    title: DNA seq project name
+  dna_project_contact:
+    name: dna_project_contact
+    title: DNA seq project contact
     comments:
     - Do not edit these values. A template will be provided by NMDC in which these
       values have been pre-filled.
     examples:
-    - value: JGI Pond metagenomics
+    - value: John Jones
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 2
+    rank: 18
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
-    required: true
-  dna_volume:
-    name: dna_volume
-    title: DNA volume in ul
-    comments:
-    - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
-      <25 by special permission only.
-    examples:
-    - value: '25'
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 6
-    string_serialization: '{float}'
-    slot_group: JGI-Metagenomics
-    required: true
-    minimum_value: 0
-    maximum_value: 1000
-  dnase_rna:
-    name: dnase_rna
-    title: DNase treated
-    comments:
-    - Note DNAse treatment is required for all RNA samples.
-    examples:
-    - value: 'no'
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 13
-    slot_group: JGI-Metatranscriptomics
-    range: dnase_rna_enum
-    required: true
-  env_package:
-    name: env_package
-    description: Select the MIxS enviromental package that best describes the environment
-      from which your sample was collected.
-    title: environmental package
-    examples:
-    - value: soil
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 4
-    slot_group: Sample ID
-    required: true
-  experimental_factor_other:
-    name: experimental_factor_other
-    description: Other details about your sample that you feel can't be accurately
-      represented in the available columns.
-    title: experimental factor- other
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:experimental_factor|additional_info
-    rank: 7
-    string_serialization: '{text}'
-    slot_group: MIxS Inspired
-    recommended: true
-  filter_method:
-    name: filter_method
-    description: Type of filter used or how the sample was filtered
-    title: filter method
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:filter_type
-    rank: 6
-    string_serialization: '{text}'
-    slot_group: MIxS Inspired
-    recommended: true
-  isotope_exposure:
-    name: isotope_exposure
-    description: List isotope exposure or addition applied to your sample.
-    title: isotope exposure/addition
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:chem_administration
-    rank: 16
-    string_serialization: '{termLabel} {[termID]}; {timestamp}'
-    slot_group: MIxS Inspired
-    recommended: true
-  micro_biomass_C_meth:
-    name: micro_biomass_C_meth
-    description: Reference or method used in determining microbial biomass
-    title: microbial biomass carbon method
-    comments:
-    - required if "microbial_biomass_C" is provided
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:micro_biomass_meth
-    rank: 11
-    string_serialization: '{PMID}|{DOI}|{URL}'
-    slot_group: MIxS Inspired
-  micro_biomass_N_meth:
-    name: micro_biomass_N_meth
-    description: Reference or method used in determining microbial biomass nitrogen
-    title: microbial biomass nitrogen method
-    comments:
-    - required if "microbial_biomass_N" is provided
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:micro_biomass_meth
-    rank: 13
-    string_serialization: '{PMID}|{DOI}|{URL}'
-    slot_group: MIxS Inspired
-  microbial_biomass_C:
-    name: microbial_biomass_C
-    description: The part of the organic matter in the soil that constitutes living
-      microorganisms smaller than 5-10 micrometer. If you keep this, you would need
-      to have correction factors used for conversion to the final units
-    title: microbial biomass carbon
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:microbial_biomass
-    rank: 10
-    string_serialization: '{float} {unit}'
-    slot_group: MIxS Inspired
-  microbial_biomass_N:
-    name: microbial_biomass_N
-    description: The part of the organic matter in the soil that constitutes living
-      microorganisms smaller than 5-10 micrometer. If you keep this, you would need
-      to have correction factors used for conversion to the final units
-    title: microbial biomass nitrogen
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:microbial_biomass
-    rank: 12
-    string_serialization: '{float} {unit}'
-    slot_group: MIxS Inspired
-  non_microb_biomass:
-    name: non_microb_biomass
-    description: Amount of biomass; should include the name for the part of biomass
-      measured, e.g.insect, plant, total. Can include multiple measurements separated
-      by ;
-    title: non-microbial biomass
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:biomass|microbial_biomass
-    rank: 8
-    string_serialization: '{text};{float} {unit}'
-    slot_group: MIxS Inspired
-  non_microb_biomass_method:
-    name: non_microb_biomass_method
-    description: Reference or method used in determining biomass
-    title: non-microbial biomass method
-    comments:
-    - required if "non-microbial biomass" is provided
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:microbial_biomass
-    rank: 9
-    string_serialization: '{PMID}|{DOI}|{URL}'
-    slot_group: MIxS Inspired
-  org_nitro_method:
-    name: org_nitro_method
-    description: Method used for obtaining organic nitrogen
-    title: organic nitrogen method
-    comments:
-    - required if "org_nitro" is provided
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:org_nitro|tot_nitro_cont_meth
-    rank: 14
-    string_serialization: '{PMID}|{DOI}|{URL}'
-    slot_group: MIxS Inspired
-  other_treatment:
-    name: other_treatment
-    description: Other treatments applied to your samples that are not applicable
-      to the provided fields
-    title: other treatments
-    from_schema: https://example.com/nmdc_submission_schema
-    see_also:
-    - MIxS:additional_info
-    rank: 15
-    string_serialization: '{text}'
-    slot_group: MIxS Inspired
-    recommended: true
-  project_ID:
-    name: project_ID
-    description: Proposal IDs or names associated with dataset
-    title: project ID
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 1
-    string_serialization: '{text}'
-    slot_group: EMSL
     required: true
   proposal_dna:
     name: proposal_dna
@@ -3292,30 +3062,87 @@ slots:
     string_serialization: '{text}'
     slot_group: JGI-Metagenomics
     required: true
-  proposal_rna:
-    name: proposal_rna
-    title: RNA proposal ID
+  rna_seq_project:
+    name: rna_seq_project
+    title: RNA seq project ID
     comments:
     - Do not edit these values. A template will be provided by NMDC in which these
       values have been pre-filled.
     examples:
-    - value: '504000'
+    - value: '1191234'
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 19
+    rank: 1
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  replicate_number:
-    name: replicate_number
-    description: If sending biological replicates, indicate the rep number here.
-    title: replicate number
+  rna_seq_project_name:
+    name: rna_seq_project_name
+    title: RNA seq project name
     comments:
-    - This will guide staff in ensuring your samples are block & randomized correctly
+    - Do not edit these values. A template will be provided by NMDC in which these
+      values have been pre-filled.
+    examples:
+    - value: JGI Pond metatranscriptomics
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 2
+    string_serialization: '{text}'
+    slot_group: JGI-Metatranscriptomics
+    required: true
+  rna_samp_ID:
+    name: rna_samp_ID
+    title: RNA sample ID
+    comments:
+    - Do not edit these values. A template will be provided by NMDC in which these
+      values have been pre-filled.
+    examples:
+    - value: '187654'
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 3
+    string_serialization: '{text}'
+    slot_group: JGI-Metatranscriptomics
+    required: true
+  rna_sample_name:
+    name: rna_sample_name
+    description: Give the RNA sample a name that is meaningful to you. Sample names
+      must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.
+    title: RNA sample name
+    examples:
+    - value: JGI_pond_041618
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 4
+    string_serialization: '{text}'
+    slot_group: JGI-Metatranscriptomics
+    required: true
+    minimum_value: 0
+    maximum_value: 2000
+  rna_concentration:
+    name: rna_concentration
+    title: RNA concentration in ng/ul
+    comments:
+    - Units must be in ng/uL. Enter the numerical part only. Must be calculated using
+      a fluorometric method. Acceptable values are 0-2000.
+    examples:
+    - value: '100'
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 5
+    string_serialization: '{float}'
+    slot_group: JGI-Metatranscriptomics
+    required: true
+    minimum_value: 0
+    maximum_value: 1000
+  rna_volume:
+    name: rna_volume
+    title: RNA volume in ul
+    comments:
+    - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
+      <25 by special permission only.
+    examples:
+    - value: '25'
     from_schema: https://example.com/nmdc_submission_schema
     rank: 6
-    string_serialization: '{integer}'
-    slot_group: EMSL
-    recommended: true
+    string_serialization: '{float}'
+    slot_group: JGI-Metatranscriptomics
+    required: true
   rna_absorb1:
     name: rna_absorb1
     description: 260/280 measurement of RNA sample purity
@@ -3342,32 +3169,19 @@ slots:
     string_serialization: '{float}'
     slot_group: JGI-Metatranscriptomics
     recommended: true
-  rna_collect_site:
-    name: rna_collect_site
-    description: Provide information on the site your RNA sample was collected from
-    title: RNA collection site
+  rna_container_ID:
+    name: rna_container_ID
+    title: RNA container label
+    comments:
+    - Must be unique across all tubes and plates, and <20 characters. All samples
+      in a plate should have the same plate label.
     examples:
-    - value: untreated pond water
+    - value: Pond_MT_041618
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 15
+    rank: 9
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  rna_concentration:
-    name: rna_concentration
-    title: RNA concentration in ng/ul
-    comments:
-    - Units must be in ng/uL. Enter the numerical part only. Must be calculated using
-      a fluorometric method. Acceptable values are 0-2000.
-    examples:
-    - value: '100'
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 5
-    string_serialization: '{float}'
-    slot_group: JGI-Metatranscriptomics
-    required: true
-    minimum_value: 0
-    maximum_value: 1000
   rna_cont_type:
     name: rna_cont_type
     description: Tube or plate (96-well)
@@ -3393,29 +3207,28 @@ slots:
     string_serialization: '{96 well plate pos}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  rna_container_ID:
-    name: rna_container_ID
-    title: RNA container label
-    comments:
-    - Must be unique across all tubes and plates, and <20 characters. All samples
-      in a plate should have the same plate label.
+  rna_sample_format:
+    name: rna_sample_format
+    description: Solution in which the RNA sample has been suspended
+    title: RNA sample format
     examples:
-    - value: Pond_MT_041618
+    - value: Water
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 9
-    string_serialization: '{text}'
+    rank: 12
     slot_group: JGI-Metatranscriptomics
+    range: rna_sample_format_enum
     required: true
-  rna_isolate_meth:
-    name: rna_isolate_meth
-    description: Describe the method/protocol/kit used to extract DNA/RNA.
-    title: RNA isolation method
+  dnase_rna:
+    name: dnase_rna
+    title: DNase treated
+    comments:
+    - Note DNAse treatment is required for all RNA samples.
     examples:
-    - value: phenol/chloroform extraction
+    - value: 'no'
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 16
-    string_serialization: '{text}'
+    rank: 13
     slot_group: JGI-Metatranscriptomics
+    range: dnase_rna_enum
     required: true
   rna_organisms:
     name: rna_organisms
@@ -3430,67 +3243,25 @@ slots:
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     recommended: true
-  rna_project_contact:
-    name: rna_project_contact
-    title: RNA seq project contact
-    comments:
-    - Do not edit these values. A template will be provided by NMDC in which these
-      values have been pre-filled.
+  rna_collect_site:
+    name: rna_collect_site
+    description: Provide information on the site your RNA sample was collected from
+    title: RNA collection site
     examples:
-    - value: John Jones
+    - value: untreated pond water
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 18
+    rank: 15
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  rna_samp_ID:
-    name: rna_samp_ID
-    title: RNA sample ID
-    comments:
-    - Do not edit these values. A template will be provided by NMDC in which these
-      values have been pre-filled.
+  rna_isolate_meth:
+    name: rna_isolate_meth
+    description: Describe the method/protocol/kit used to extract DNA/RNA.
+    title: RNA isolation method
     examples:
-    - value: '187654'
+    - value: phenol/chloroform extraction
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 3
-    string_serialization: '{text}'
-    slot_group: JGI-Metatranscriptomics
-    required: true
-  rna_sample_format:
-    name: rna_sample_format
-    description: Solution in which the RNA sample has been suspended
-    title: RNA sample format
-    examples:
-    - value: Water
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 12
-    slot_group: JGI-Metatranscriptomics
-    range: rna_sample_format_enum
-    required: true
-  rna_sample_name:
-    name: rna_sample_name
-    description: Give the RNA sample a name that is meaningful to you. Sample names
-      must be unique across all JGI projects and contain a-z, A-Z, 0-9, - and _ only.
-    title: RNA sample name
-    examples:
-    - value: JGI_pond_041618
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 4
-    string_serialization: '{text}'
-    slot_group: JGI-Metatranscriptomics
-    required: true
-    minimum_value: 0
-    maximum_value: 2000
-  rna_seq_project:
-    name: rna_seq_project
-    title: RNA seq project ID
-    comments:
-    - Do not edit these values. A template will be provided by NMDC in which these
-      values have been pre-filled.
-    examples:
-    - value: '1191234'
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 1
+    rank: 16
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
@@ -3507,73 +3278,88 @@ slots:
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  rna_seq_project_name:
-    name: rna_seq_project_name
-    title: RNA seq project name
+  rna_project_contact:
+    name: rna_project_contact
+    title: RNA seq project contact
     comments:
     - Do not edit these values. A template will be provided by NMDC in which these
       values have been pre-filled.
     examples:
-    - value: JGI Pond metatranscriptomics
+    - value: John Jones
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 2
+    rank: 18
     string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  rna_volume:
-    name: rna_volume
-    title: RNA volume in ul
+  proposal_rna:
+    name: proposal_rna
+    title: RNA proposal ID
     comments:
-    - Units must be in uL. Enter the numerical part only. Value must 0-1000. Values
-      <25 by special permission only.
+    - Do not edit these values. A template will be provided by NMDC in which these
+      values have been pre-filled.
     examples:
-    - value: '25'
+    - value: '504000'
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 6
-    string_serialization: '{float}'
+    rank: 19
+    string_serialization: '{text}'
     slot_group: JGI-Metatranscriptomics
     required: true
-  sample_link:
-    name: sample_link
-    description: A unique identifier to assign parent-child, subsample, or sibling
-      samples. This is relevant when a sample or other material was used to generate
-      the new sample.
-    title: sample linkage
+  collection_time:
+    name: collection_time
+    description: The time of sampling, either as an instance (single point) or interval.
+    title: collection time, GMT
+    notes:
+    - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
+      time only
     comments:
-    - 'This field allows multiple entries separated by ; (Examples: Soil collected
-      from the field will link with the soil used in an incubation. The soil a plant
-      was grown in links to the plant sample. An original culture sample was transferred
-      to a new vial and generated a new sample)'
+    - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
     examples:
-    - value: IGSN:DSJ0284
+    - value: 13:33 or 13:33:55
     from_schema: https://example.com/nmdc_submission_schema
-    rank: 5
-    string_serialization: '{text}:{text}'
-    slot_group: Sample ID
+    see_also:
+    - MIxS:collection_date
+    rank: 1
+    string_serialization: '{time, seconds optional}'
+    slot_group: MIxS Inspired
     recommended: true
-  sample_shipped:
-    name: sample_shipped
-    description: The total amount or size (volume (ml), mass (g) or area (m2) ) of
-      sample sent to EMSL
-    title: sample shipped amount
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 3
-    string_serialization: '{float} {unit}'
-    slot_group: EMSL
-    required: true
-  sample_type:
-    name: sample_type
-    description: Type of sample being submitted
-    title: sample type
+  collection_date_inc:
+    name: collection_date_inc
+    description: Date the incubation was harvested/collected/ended. Only relevant
+      for incubation samples.
+    title: incubation collection date
+    notes:
+    - MIxS collection_date accepts (truncated) ISO8601. DH taking arb prec date only
     comments:
-    - This can vary from 'environmental package' if the sample is an extraction.
+    - Date should be formatted as YYYY(-MM(-DD)). Ie, 2021-04-15, 2021-04 and 2021
+      are all acceptable.
     examples:
-    - value: water extracted soil
+    - value: 2021-04-15, 2021-04 and 2021 are all acceptable.
     from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:collection_date
     rank: 2
-    slot_group: EMSL
-    range: sample_type_enum
-    required: true
+    string_serialization: '{date, arbitrary precision}'
+    slot_group: MIxS Inspired
+    recommended: true
+  collection_time_inc:
+    name: collection_time_inc
+    description: Time the incubation was harvested/collected/ended. Only relevant
+      for incubation samples.
+    title: incubation collection time, GMT
+    notes:
+    - MIxS collection_date accepts (truncated) ISO8601. DH taking seconds optional
+      time only
+    comments:
+    - 'Time should be entered as HH:MM(:SS) in GMT. See here for a converter: https://www.worldtimebuddy.com/pst-to-gmt-converter'
+    examples:
+    - value: 13:33 or 13:33:55
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:collection_date
+    rank: 3
+    string_serialization: '{time, seconds optional}'
+    slot_group: MIxS Inspired
+    recommended: true
   start_date_inc:
     name: start_date_inc
     description: Date the incubation was started. Only relevant for incubation samples.
@@ -3610,16 +3396,234 @@ slots:
     string_serialization: '{time, seconds optional}'
     slot_group: MIxS Inspired
     recommended: true
-  technical_reps:
-    name: technical_reps
-    description: If sending multiple technical replicates of the same sample, indicate
-      how many replicates are being sent
-    title: number technical replicate
+  filter_method:
+    name: filter_method
+    description: Type of filter used or how the sample was filtered
+    title: filter method
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:filter_type
+    rank: 6
+    string_serialization: '{text}'
+    slot_group: MIxS Inspired
+    recommended: true
+  experimental_factor_other:
+    name: experimental_factor_other
+    description: Other details about your sample that you feel can't be accurately
+      represented in the available columns.
+    title: experimental factor- other
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:experimental_factor|additional_info
+    rank: 7
+    string_serialization: '{text}'
+    slot_group: MIxS Inspired
+    recommended: true
+  non_microb_biomass:
+    name: non_microb_biomass
+    description: Amount of biomass; should include the name for the part of biomass
+      measured, e.g.insect, plant, total. Can include multiple measurements separated
+      by ;
+    title: non-microbial biomass
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:biomass|microbial_biomass
+    rank: 8
+    string_serialization: '{text};{float} {unit}'
+    slot_group: MIxS Inspired
+  non_microb_biomass_method:
+    name: non_microb_biomass_method
+    description: Reference or method used in determining biomass
+    title: non-microbial biomass method
+    comments:
+    - required if "non-microbial biomass" is provided
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:microbial_biomass
+    rank: 9
+    string_serialization: '{PMID}|{DOI}|{URL}'
+    slot_group: MIxS Inspired
+  microbial_biomass_C:
+    name: microbial_biomass_C
+    description: The part of the organic matter in the soil that constitutes living
+      microorganisms smaller than 5-10 micrometer. If you keep this, you would need
+      to have correction factors used for conversion to the final units
+    title: microbial biomass carbon
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:microbial_biomass
+    rank: 10
+    string_serialization: '{float} {unit}'
+    slot_group: MIxS Inspired
+  micro_biomass_C_meth:
+    name: micro_biomass_C_meth
+    description: Reference or method used in determining microbial biomass
+    title: microbial biomass carbon method
+    comments:
+    - required if "microbial_biomass_C" is provided
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:micro_biomass_meth
+    rank: 11
+    string_serialization: '{PMID}|{DOI}|{URL}'
+    slot_group: MIxS Inspired
+  microbial_biomass_N:
+    name: microbial_biomass_N
+    description: The part of the organic matter in the soil that constitutes living
+      microorganisms smaller than 5-10 micrometer. If you keep this, you would need
+      to have correction factors used for conversion to the final units
+    title: microbial biomass nitrogen
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:microbial_biomass
+    rank: 12
+    string_serialization: '{float} {unit}'
+    slot_group: MIxS Inspired
+  micro_biomass_N_meth:
+    name: micro_biomass_N_meth
+    description: Reference or method used in determining microbial biomass nitrogen
+    title: microbial biomass nitrogen method
+    comments:
+    - required if "microbial_biomass_N" is provided
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:micro_biomass_meth
+    rank: 13
+    string_serialization: '{PMID}|{DOI}|{URL}'
+    slot_group: MIxS Inspired
+  org_nitro_method:
+    name: org_nitro_method
+    description: Method used for obtaining organic nitrogen
+    title: organic nitrogen method
+    comments:
+    - required if "org_nitro" is provided
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:org_nitro|tot_nitro_cont_meth
+    rank: 14
+    string_serialization: '{PMID}|{DOI}|{URL}'
+    slot_group: MIxS Inspired
+  other_treatment:
+    name: other_treatment
+    description: Other treatments applied to your samples that are not applicable
+      to the provided fields
+    title: other treatments
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:additional_info
+    rank: 15
+    string_serialization: '{text}'
+    slot_group: MIxS Inspired
+    recommended: true
+  isotope_exposure:
+    name: isotope_exposure
+    description: List isotope exposure or addition applied to your sample.
+    title: isotope exposure/addition
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:chem_administration
+    rank: 16
+    string_serialization: '{termLabel} {[termID]}; {timestamp}'
+    slot_group: MIxS Inspired
+    recommended: true
+  analysis_type:
+    name: analysis_type
+    description: Select all the data types associated or available for this biosample
+    title: analysis/data type
+    examples:
+    - value: metagenomics; metabolomics; proteomics
+    from_schema: https://example.com/nmdc_submission_schema
+    see_also:
+    - MIxS:investigation_type
+    rank: 3
+    multivalued: true
+    slot_group: Sample ID
+    range: analysis_type_enum
+    required: true
+  env_package:
+    name: env_package
+    description: Select the MIxS enviromental package that best describes the environment
+      from which your sample was collected.
+    title: environmental package
+    examples:
+    - value: soil
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 4
+    slot_group: Sample ID
+    required: true
+  sample_link:
+    name: sample_link
+    description: A unique identifier to assign parent-child, subsample, or sibling
+      samples. This is relevant when a sample or other material was used to generate
+      the new sample.
+    title: sample linkage
+    comments:
+    - 'This field allows multiple entries separated by ; (Examples: Soil collected
+      from the field will link with the soil used in an incubation. The soil a plant
+      was grown in links to the plant sample. An original culture sample was transferred
+      to a new vial and generated a new sample)'
+    examples:
+    - value: IGSN:DSJ0284
     from_schema: https://example.com/nmdc_submission_schema
     rank: 5
-    string_serialization: '{integer}'
-    slot_group: EMSL
+    string_serialization: '{text}:{text}'
+    slot_group: Sample ID
     recommended: true
+  Sample ID:
+    name: Sample ID
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 1
+    is_a: dh_section
+  EMSL:
+    name: EMSL
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 2
+    is_a: dh_section
+  JGI-Metagenomics:
+    name: JGI-Metagenomics
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 3
+    is_a: dh_section
+  JGI-Metatranscriptomics:
+    name: JGI-Metatranscriptomics
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 4
+    is_a: dh_section
+  MIxS:
+    name: MIxS
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 5
+    is_a: dh_section
+  MIxS (modified):
+    name: MIxS (modified)
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 6
+    is_a: dh_section
+  MIxS Inspired:
+    name: MIxS Inspired
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 7
+    is_a: dh_section
+  MIxS investigation:
+    name: MIxS investigation
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 8
+    is_a: dh_section
+  MIxS NASSF:
+    name: MIxS NASSF
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 9
+    is_a: dh_section
+  MIxS core:
+    name: MIxS core
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 10
+    is_a: dh_section
+  Bioscales:
+    name: Bioscales
+    from_schema: https://example.com/nmdc_submission_schema
+    rank: 11
+    is_a: dh_section
   air particulate matter concentration:
     name: air particulate matter concentration
     annotations:
@@ -14614,33 +14618,29 @@ slots:
     is_a: attribute
     multivalued: false
     range: QuantityValue
-  has raw value:
-    name: has raw value
-    from_schema: http://w3id.org/mixs/ranges
-    string_serialization: '{has numeric value} {has unit}'
-    owner: quantity value
-  core field:
-    name: core field
-    description: basic fields
-    from_schema: http://w3id.org/mixs/terms
-    abstract: true
-  has numeric value:
-    name: has numeric value
-    from_schema: http://w3id.org/mixs/ranges
-    owner: quantity value
-    range: double
   has unit:
     name: has unit
     description: Example "m"
     from_schema: http://w3id.org/mixs/ranges
     owner: quantity value
+  has numeric value:
+    name: has numeric value
+    from_schema: http://w3id.org/mixs/ranges
+    owner: quantity value
+    range: double
+  core field:
+    name: core field
+    description: basic fields
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
+  has raw value:
+    name: has raw value
+    from_schema: http://w3id.org/mixs/ranges
+    string_serialization: '{has numeric value} {has unit}'
+    owner: quantity value
   environment field:
     name: environment field
     description: field describing environmental aspect of a sample
-    from_schema: http://w3id.org/mixs/terms
-    abstract: true
-  nucleic acid sequence source field:
-    name: nucleic acid sequence source field
     from_schema: http://w3id.org/mixs/terms
     abstract: true
   investigation field:
@@ -14648,6 +14648,29 @@ slots:
     description: field describing aspect of the investigation/study to which the sample
       belongs
     from_schema: http://w3id.org/mixs/terms
+    abstract: true
+  nucleic acid sequence source field:
+    name: nucleic acid sequence source field
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
+  gold_path_field:
+    name: gold_path_field
+    description: This is a grouping for any of the gold path fields
+    from_schema: https://microbiomedata/schema
+    is_a: attribute
+    abstract: true
+    range: string
+  attribute:
+    name: attribute
+    description: 'A attribute of a biosample. Examples: depth, habitat, material.
+      For NMDC, attributes SHOULD be mapped to terms within a MIxS template'
+    from_schema: https://microbiomedata/schema/core
+    aliases:
+    - field
+    - property
+    - template field
+    - key
+    - characteristic
     abstract: true
   id:
     name: id
@@ -14667,29 +14690,27 @@ slots:
     from_schema: https://microbiomedata/schema/basic_slots
     multivalued: false
     identifier: true
-  has_unit:
-    name: has_unit
-    description: Links a QuantityValue to a unit
-    from_schema: https://microbiomedata/schema/core
-    aliases:
-    - scale
+  was_generated_by:
+    name: was_generated_by
+    from_schema: https://microbiomedata/schema/prov
     mappings:
-    - qud:unit
-    - schema:unitCode
-    range: unit
-  name:
-    name: name
-    description: A human readable label for an entity
-    from_schema: https://microbiomedata/schema/basic_slots
+    - prov:wasGeneratedBy
+    range: Activity
+  has_numeric_value:
+    name: has_numeric_value
+    description: Links a quantity value to a number
+    from_schema: https://microbiomedata/schema/core
+    mappings:
+    - qud:quantityValue
+    - schema:value
     multivalued: false
-    range: string
-  gold_path_field:
-    name: gold_path_field
-    description: This is a grouping for any of the gold path fields
-    from_schema: https://microbiomedata/schema
-    is_a: attribute
-    abstract: true
-    range: string
+    range: float
+  was_associated_with:
+    name: was_associated_with
+    from_schema: https://microbiomedata/schema/prov
+    mappings:
+    - prov:wasAssociatedWith
+    range: Agent
   has_raw_value:
     name: has_raw_value
     description: The value that was specified for an annotation in raw form, i.e.
@@ -14699,30 +14720,6 @@ slots:
     multivalued: false
     range: string
     required: false
-  used:
-    name: used
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:used
-    domain: Activity
-  was_generated_by:
-    name: was_generated_by
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:wasGeneratedBy
-    range: Activity
-  attribute:
-    name: attribute
-    description: 'A attribute of a biosample. Examples: depth, habitat, material.
-      For NMDC, attributes SHOULD be mapped to terms within a MIxS template'
-    from_schema: https://microbiomedata/schema/core
-    aliases:
-    - field
-    - property
-    - template field
-    - key
-    - characteristic
-    abstract: true
   ended_at_time:
     name: ended_at_time
     notes:
@@ -14739,18 +14736,6 @@ slots:
     mappings:
     - prov:actedOnBehalfOf
     range: Agent
-  has_maximum_numeric_value:
-    name: has_maximum_numeric_value
-    description: The maximum value part, expressed as number, of the quantity value
-      when the value covers a range.
-    from_schema: https://microbiomedata/schema/core
-    is_a: has_numeric_value
-  was_informed_by:
-    name: was_informed_by
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:wasInformedBy
-    range: Activity
   started_at_time:
     name: started_at_time
     notes:
@@ -14761,21 +14746,40 @@ slots:
     - prov:startedAtTime
     range: datetime
     pattern: ^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
-  was_associated_with:
-    name: was_associated_with
+  has_maximum_numeric_value:
+    name: has_maximum_numeric_value
+    description: The maximum value part, expressed as number, of the quantity value
+      when the value covers a range.
+    from_schema: https://microbiomedata/schema/core
+    is_a: has_numeric_value
+  has_unit:
+    name: has_unit
+    description: Links a QuantityValue to a unit
+    from_schema: https://microbiomedata/schema/core
+    aliases:
+    - scale
+    mappings:
+    - qud:unit
+    - schema:unitCode
+    range: unit
+  name:
+    name: name
+    description: A human readable label for an entity
+    from_schema: https://microbiomedata/schema/basic_slots
+    multivalued: false
+    range: string
+  used:
+    name: used
     from_schema: https://microbiomedata/schema/prov
     mappings:
-    - prov:wasAssociatedWith
-    range: Agent
-  has_numeric_value:
-    name: has_numeric_value
-    description: Links a quantity value to a number
-    from_schema: https://microbiomedata/schema/core
+    - prov:used
+    domain: Activity
+  was_informed_by:
+    name: was_informed_by
+    from_schema: https://microbiomedata/schema/prov
     mappings:
-    - qud:quantityValue
-    - schema:value
-    multivalued: false
-    range: float
+    - prov:wasInformedBy
+    range: Activity
   has_minimum_numeric_value:
     name: has_minimum_numeric_value
     description: The minimum value part, expressed as number, of the quantity value
@@ -14783,6 +14787,12 @@ slots:
     from_schema: https://microbiomedata/schema/core
     is_a: has_numeric_value
 classes:
+  dh_interface:
+    name: dh_interface
+    description: One DataHarmonizer interface, for the specified combination of a
+      checklist, enviornmental_package, and various standards, user facilities or
+      analysis types
+    from_schema: https://example.com/nmdc_submission_schema
   air:
     name: air
     from_schema: https://example.com/nmdc_submission_schema
@@ -26124,23 +26134,6 @@ classes:
         slot_group: Sample ID
         range: string
         required: true
-  dh_interface:
-    name: dh_interface
-    description: One DataHarmonizer interface, for the specified combination of a
-      checklist, enviornmental_package, and various standards, user facilities or
-      analysis types
-    from_schema: https://example.com/nmdc_submission_schema
-  emsl_mixin:
-    name: emsl_mixin
-    from_schema: https://example.com/nmdc_submission_schema
-    mixin: true
-    slots:
-    - EMSL_store_temp
-    - project_ID
-    - replicate_number
-    - sample_shipped
-    - sample_type
-    - technical_reps
   hcr-cores:
     name: hcr-cores
     from_schema: https://example.com/nmdc_submission_schema
@@ -35475,54 +35468,6 @@ classes:
         slot_group: Sample ID
         range: string
         required: true
-  jgi_mg_mixin:
-    name: jgi_mg_mixin
-    from_schema: https://example.com/nmdc_submission_schema
-    mixin: true
-    slots:
-    - dna_absorb1
-    - dna_absorb2
-    - dna_collect_site
-    - dna_concentration
-    - dna_cont_type
-    - dna_cont_well
-    - dna_container_ID
-    - dna_dnase
-    - dna_isolate_meth
-    - dna_organisms
-    - dna_project_contact
-    - dna_samp_ID
-    - dna_sample_format
-    - dna_sample_name
-    - dna_seq_project
-    - dna_seq_project_PI
-    - dna_seq_project_name
-    - dna_volume
-    - proposal_dna
-  jgi_mt_mixin:
-    name: jgi_mt_mixin
-    from_schema: https://example.com/nmdc_submission_schema
-    mixin: true
-    slots:
-    - dnase_rna
-    - proposal_rna
-    - rna_absorb1
-    - rna_absorb2
-    - rna_collect_site
-    - rna_concentration
-    - rna_cont_type
-    - rna_cont_well
-    - rna_container_ID
-    - rna_isolate_meth
-    - rna_organisms
-    - rna_project_contact
-    - rna_samp_ID
-    - rna_sample_format
-    - rna_sample_name
-    - rna_seq_project
-    - rna_seq_project_PI
-    - rna_seq_project_name
-    - rna_volume
   misc-envs:
     name: misc-envs
     from_schema: https://example.com/nmdc_submission_schema
@@ -40865,14 +40810,6 @@ classes:
         slot_group: Sample ID
         range: string
         required: true
-  samp_id_new_terms_mixin:
-    name: samp_id_new_terms_mixin
-    from_schema: https://example.com/nmdc_submission_schema
-    mixin: true
-    slots:
-    - analysis_type
-    - env_package
-    - sample_link
   sediment:
     name: sediment
     description: sediment dev
@@ -52205,6 +52142,7 @@ classes:
     - tot_nitro_cont_meth
     - tot_org_c_meth
     - water_cont_soil_meth
+    - dna_cont_well
     - ecosystem
     - ecosystem_category
     - ecosystem_subtype
@@ -54681,6 +54619,28 @@ classes:
         slot_group: MIxS
         range: string
         required: false
+      dna_cont_well:
+        name: dna_cont_well
+        title: DNA plate position
+        comments:
+        - Required when 'plate' is selected for container type.
+        - Leave blank if the sample will be shipped in a tube.
+        - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will
+          not pass validation.
+        - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+        examples:
+        - value: B2
+        from_schema: https://microbiomedata/schema/jgi_metagenomics
+        rank: 11
+        string_serialization: '{96 well plate pos}'
+        owner: Biosample
+        domain_of:
+        - Biosample
+        slot_group: JGI-Metagenomics
+        range: string
+        required: false
+        recommended: true
+        pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -65513,27 +65473,6 @@ classes:
         slot_group: Sample ID
         range: specific_ecosystem_enum
         required: true
-  soil_mixs_inspired_mixin:
-    name: soil_mixs_inspired_mixin
-    from_schema: https://example.com/nmdc_submission_schema
-    mixin: true
-    slots:
-    - collection_date_inc
-    - collection_time
-    - collection_time_inc
-    - experimental_factor_other
-    - filter_method
-    - isotope_exposure
-    - micro_biomass_C_meth
-    - micro_biomass_N_meth
-    - microbial_biomass_C
-    - microbial_biomass_N
-    - non_microb_biomass
-    - non_microb_biomass_method
-    - org_nitro_method
-    - other_treatment
-    - start_date_inc
-    - start_time_inc
   wastewater_sludge:
     name: wastewater_sludge
     from_schema: https://example.com/nmdc_submission_schema
@@ -70912,6 +70851,94 @@ classes:
         slot_group: Sample ID
         range: string
         required: true
+  emsl_mixin:
+    name: emsl_mixin
+    from_schema: https://example.com/nmdc_submission_schema
+    mixin: true
+    slots:
+    - EMSL_store_temp
+    - project_ID
+    - replicate_number
+    - sample_shipped
+    - sample_type
+    - technical_reps
+  jgi_mg_mixin:
+    name: jgi_mg_mixin
+    from_schema: https://example.com/nmdc_submission_schema
+    mixin: true
+    slots:
+    - dna_absorb1
+    - dna_absorb2
+    - dna_collect_site
+    - dna_concentration
+    - dna_cont_type
+    - dna_cont_well
+    - dna_container_ID
+    - dna_dnase
+    - dna_isolate_meth
+    - dna_organisms
+    - dna_project_contact
+    - dna_samp_ID
+    - dna_sample_format
+    - dna_sample_name
+    - dna_seq_project
+    - dna_seq_project_PI
+    - dna_seq_project_name
+    - dna_volume
+    - proposal_dna
+  jgi_mt_mixin:
+    name: jgi_mt_mixin
+    from_schema: https://example.com/nmdc_submission_schema
+    mixin: true
+    slots:
+    - dnase_rna
+    - proposal_rna
+    - rna_absorb1
+    - rna_absorb2
+    - rna_collect_site
+    - rna_concentration
+    - rna_cont_type
+    - rna_cont_well
+    - rna_container_ID
+    - rna_isolate_meth
+    - rna_organisms
+    - rna_project_contact
+    - rna_samp_ID
+    - rna_sample_format
+    - rna_sample_name
+    - rna_seq_project
+    - rna_seq_project_PI
+    - rna_seq_project_name
+    - rna_volume
+  samp_id_new_terms_mixin:
+    name: samp_id_new_terms_mixin
+    from_schema: https://example.com/nmdc_submission_schema
+    mixin: true
+    slots:
+    - analysis_type
+    - env_package
+    - sample_link
+  soil_mixs_inspired_mixin:
+    name: soil_mixs_inspired_mixin
+    from_schema: https://example.com/nmdc_submission_schema
+    mixin: true
+    slots:
+    - collection_date_inc
+    - collection_time
+    - collection_time_inc
+    - experimental_factor_other
+    - filter_method
+    - isotope_exposure
+    - micro_biomass_C_meth
+    - micro_biomass_N_meth
+    - microbial_biomass_C
+    - microbial_biomass_N
+    - non_microb_biomass
+    - non_microb_biomass_method
+    - org_nitro_method
+    - other_treatment
+    - start_date_inc
+    - start_time_inc
   ? ''
   : name: ''
     slots:
@@ -70968,28 +70995,20 @@ classes:
         name: has raw value
         from_schema: http://w3id.org/mixs/ranges
         string_serialization: '{has numeric value} {has unit}'
-  Agent:
-    name: Agent
-    description: a provence-generating agent
+  Activity:
+    name: Activity
+    description: a provence-generating activity
     from_schema: https://microbiomedata/schema/prov
     mappings:
-    - prov:Agent
+    - prov:Activity
     slots:
-    - acted_on_behalf_of
+    - id
+    - name
+    - started_at_time
+    - ended_at_time
     - was_informed_by
-  AttributeValue:
-    name: AttributeValue
-    description: The value for any value of a attribute for a sample. This object
-      can hold both the un-normalized atomic value and the structured value
-    from_schema: https://microbiomedata/schema/core
-    slots:
-    - has_raw_value
-    - was_generated_by
-    slot_usage:
-      type:
-        name: type
-        description: An optional string that specified the type of object.
-        required: false
+    - was_associated_with
+    - used
   QuantityValue:
     name: QuantityValue
     description: A simple quantity, e.g. 2cm
@@ -71021,18 +71040,26 @@ classes:
         - QuantityValue
         - IntegerValue
         range: double
-  Activity:
-    name: Activity
-    description: a provence-generating activity
+  AttributeValue:
+    name: AttributeValue
+    description: The value for any value of a attribute for a sample. This object
+      can hold both the un-normalized atomic value and the structured value
+    from_schema: https://microbiomedata/schema/core
+    slots:
+    - has_raw_value
+    - was_generated_by
+    slot_usage:
+      type:
+        name: type
+        description: An optional string that specified the type of object.
+        required: false
+  Agent:
+    name: Agent
+    description: a provence-generating agent
     from_schema: https://microbiomedata/schema/prov
     mappings:
-    - prov:Activity
+    - prov:Agent
     slots:
-    - id
-    - name
-    - started_at_time
-    - ended_at_time
+    - acted_on_behalf_of
     - was_informed_by
-    - was_associated_with
-    - used
 source_file: artifacts/from_sheets2linkml.yaml

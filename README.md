@@ -74,6 +74,7 @@ From the root of the repo: `npm init data-harmonizer  artifacts/nmdc_submission_
     - starts a testing web server and displays the local address that should be visited
     - vist, browse, test with some sample data, and then terminate with Control-C
 1. cat or copy to `nmdc_dh/vite.config.js`: `export default { base: '/sheets_and_friends/' }`
+   2. `echo "export default { base: '/sheets_and_friends/' }" >> vite.config.js `
 1. `npm run build`
     - may get some warnings when minifying css
 1. `rm -rf ../docs/*`
