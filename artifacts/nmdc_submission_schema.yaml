@@ -848,6 +848,106 @@ enums:
         text: louvered
       wire gauged:
         text: wire gauged
+  train_stop_loc_enum:
+    name: train_stop_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      end:
+        text: end
+      mid:
+        text: mid
+      downtown:
+        text: downtown
+  vis_media_enum:
+    name: vis_media_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      photos:
+        text: photos
+      videos:
+        text: videos
+      commonly of the building:
+        text: commonly of the building
+      site context (adjacent buildings, vegetation, terrain, streets):
+        text: site context (adjacent buildings, vegetation, terrain, streets)
+      interiors:
+        text: interiors
+      equipment:
+        text: equipment
+      3D scans:
+        text: 3D scans
+  door_type_enum:
+    name: door_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      composite:
+        text: composite
+      metal:
+        text: metal
+      wooden:
+        text: wooden
+  rel_samp_loc_enum:
+    name: rel_samp_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      edge of car:
+        text: edge of car
+      center of car:
+        text: center of car
+      under a seat:
+        text: under a seat
+  wall_const_type_enum:
+    name: wall_const_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      frame construction:
+        text: frame construction
+      joisted masonry:
+        text: joisted masonry
+      light noncombustible:
+        text: light noncombustible
+      masonry noncombustible:
+        text: masonry noncombustible
+      modified fire resistive:
+        text: modified fire resistive
+      fire resistive:
+        text: fire resistive
+  light_type_enum:
+    name: light_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      natural light:
+        text: natural light
+      electric light:
+        text: electric light
+      desk lamp:
+        text: desk lamp
+      flourescent lights:
+        text: flourescent lights
+      none:
+        text: none
+  heat_deliv_loc_enum:
+    name: heat_deliv_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  arch_struc_enum:
+    name: arch_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      building:
+        text: building
+      shed:
+        text: shed
+      home:
+        text: home
   substructure_type_enum:
     name: substructure_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -858,50 +958,18 @@ enums:
         text: slab on grade
       basement:
         text: basement
-  surf_air_cont_enum:
-    name: surf_air_cont_enum
+  room_loc_enum:
+    name: room_loc_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      dust:
-        text: dust
-      organic matter:
-        text: organic matter
-      particulate matter:
-        text: particulate matter
-      volatile organic compounds:
-        text: volatile organic compounds
-      biological contaminants:
-        text: biological contaminants
-      radon:
-        text: radon
-      nutrients:
-        text: nutrients
-      biocides:
-        text: biocides
-  window_horiz_pos_enum:
-    name: window_horiz_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      left:
-        text: left
-      middle:
-        text: middle
-      right:
-        text: right
-  building_setting_enum:
-    name: building_setting_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      urban:
-        text: urban
-      suburban:
-        text: suburban
-      exurban:
-        text: exurban
-      rural:
-        text: rural
-  window_cond_enum:
-    name: window_cond_enum
+      corner room:
+        text: corner room
+      interior room:
+        text: interior room
+      exterior wall:
+        text: exterior wall
+  door_cond_enum:
+    name: door_cond_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
       damaged:
@@ -914,6 +982,474 @@ enums:
         text: rupture
       visible wear:
         text: visible wear
+  ceil_type_enum:
+    name: ceil_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cathedral:
+        text: cathedral
+      dropped:
+        text: dropped
+      concave:
+        text: concave
+      barrel-shaped:
+        text: barrel-shaped
+      coffered:
+        text: coffered
+      cove:
+        text: cove
+      stretched:
+        text: stretched
+  room_samp_pos_enum:
+    name: room_samp_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north corner:
+        text: north corner
+      south corner:
+        text: south corner
+      west corner:
+        text: west corner
+      east corner:
+        text: east corner
+      northeast corner:
+        text: northeast corner
+      northwest corner:
+        text: northwest corner
+      southeast corner:
+        text: southeast corner
+      southwest corner:
+        text: southwest corner
+      center:
+        text: center
+  train_line_enum:
+    name: train_line_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      red:
+        text: red
+      green:
+        text: green
+      orange:
+        text: orange
+  samp_weather_enum:
+    name: samp_weather_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      clear sky:
+        text: clear sky
+      cloudy:
+        text: cloudy
+      foggy:
+        text: foggy
+      hail:
+        text: hail
+      rain:
+        text: rain
+      snow:
+        text: snow
+      sleet:
+        text: sleet
+      sunny:
+        text: sunny
+      windy:
+        text: windy
+  floor_finish_mat_enum:
+    name: floor_finish_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      tile:
+        text: tile
+      wood strip or parquet:
+        text: wood strip or parquet
+      carpet:
+        text: carpet
+      rug:
+        text: rug
+      laminate wood:
+        text: laminate wood
+      lineoleum:
+        text: lineoleum
+      vinyl composition tile:
+        text: vinyl composition tile
+      sheet vinyl:
+        text: sheet vinyl
+      stone:
+        text: stone
+      bamboo:
+        text: bamboo
+      cork:
+        text: cork
+      terrazo:
+        text: terrazo
+      concrete:
+        text: concrete
+      none:
+        text: none
+      sealed:
+        text: sealed
+      clear finish:
+        text: clear finish
+      paint:
+        text: paint
+      none or unfinished:
+        text: none or unfinished
+  ext_wall_orient_enum:
+    name: ext_wall_orient_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+      northeast:
+        text: northeast
+      southeast:
+        text: southeast
+      southwest:
+        text: southwest
+      northwest:
+        text: northwest
+  door_move_enum:
+    name: door_move_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      collapsible:
+        text: collapsible
+      folding:
+        text: folding
+      revolving:
+        text: revolving
+      rolling shutter:
+        text: rolling shutter
+      sliding:
+        text: sliding
+      swinging:
+        text: swinging
+  wall_surf_treatment_enum:
+    name: wall_surf_treatment_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      painted:
+        text: painted
+      wall paper:
+        text: wall paper
+      no treatment:
+        text: no treatment
+      paneling:
+        text: paneling
+      stucco:
+        text: stucco
+      fabric:
+        text: fabric
+  floor_water_mold_enum:
+    name: floor_water_mold_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      mold odor:
+        text: mold odor
+      wet floor:
+        text: wet floor
+      water stains:
+        text: water stains
+      wall discoloration:
+        text: wall discoloration
+      floor discoloration:
+        text: floor discoloration
+      ceiling discoloration:
+        text: ceiling discoloration
+      peeling paint or wallpaper:
+        text: peeling paint or wallpaper
+      bulging walls:
+        text: bulging walls
+      condensation:
+        text: condensation
+  floor_cond_enum:
+    name: floor_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+  door_comp_type_enum:
+    name: door_comp_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      metal covered:
+        text: metal covered
+      revolving:
+        text: revolving
+      sliding:
+        text: sliding
+      telescopic:
+        text: telescopic
+  drawings_enum:
+    name: drawings_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      operation:
+        text: operation
+      as built:
+        text: as built
+      construction:
+        text: construction
+      bid:
+        text: bid
+      design:
+        text: design
+      building navigation map:
+        text: building navigation map
+      diagram:
+        text: diagram
+      sketch:
+        text: sketch
+  water_feat_type_enum:
+    name: water_feat_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      fountain:
+        text: fountain
+      pool:
+        text: pool
+      standing feature:
+        text: standing feature
+      stream:
+        text: stream
+      waterfall:
+        text: waterfall
+  window_cover_enum:
+    name: window_cover_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      blinds:
+        text: blinds
+      curtains:
+        text: curtains
+      none:
+        text: none
+  wall_texture_enum:
+    name: wall_texture_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      crows feet:
+        text: crows feet
+      crows-foot stomp:
+        text: crows-foot stomp
+      ? ''
+      : text: ''
+      double skip:
+        text: double skip
+      hawk and trowel:
+        text: hawk and trowel
+      knockdown:
+        text: knockdown
+      popcorn:
+        text: popcorn
+      orange peel:
+        text: orange peel
+      rosebud stomp:
+        text: rosebud stomp
+      Santa-Fe texture:
+        text: Santa-Fe texture
+      skip trowel:
+        text: skip trowel
+      smooth:
+        text: smooth
+      stomp knockdown:
+        text: stomp knockdown
+      swirl:
+        text: swirl
+  building_setting_enum:
+    name: building_setting_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      urban:
+        text: urban
+      suburban:
+        text: suburban
+      exurban:
+        text: exurban
+      rural:
+        text: rural
+  door_direct_enum:
+    name: door_direct_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      inward:
+        text: inward
+      outward:
+        text: outward
+      sideways:
+        text: sideways
+  door_type_metal_enum:
+    name: door_type_metal_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      collapsible:
+        text: collapsible
+      corrugated steel:
+        text: corrugated steel
+      hollow:
+        text: hollow
+      rolling shutters:
+        text: rolling shutters
+      steel plate:
+        text: steel plate
+  handidness_enum:
+    name: handidness_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      ambidexterity:
+        text: ambidexterity
+      left handedness:
+        text: left handedness
+      mixed-handedness:
+        text: mixed-handedness
+      right handedness:
+        text: right handedness
+  shading_device_cond_enum:
+    name: shading_device_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
+  surf_material_enum:
+    name: surf_material_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      adobe:
+        text: adobe
+      carpet:
+        text: carpet
+      cinder blocks:
+        text: cinder blocks
+      concrete:
+        text: concrete
+      hay bales:
+        text: hay bales
+      glass:
+        text: glass
+      metal:
+        text: metal
+      paint:
+        text: paint
+      plastic:
+        text: plastic
+      stainless steel:
+        text: stainless steel
+      stone:
+        text: stone
+      stucco:
+        text: stucco
+      tile:
+        text: tile
+      vinyl:
+        text: vinyl
+      wood:
+        text: wood
+  freq_clean_enum:
+    name: freq_clean_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Daily:
+        text: Daily
+      Weekly:
+        text: Weekly
+      Monthly:
+        text: Monthly
+      Quarterly:
+        text: Quarterly
+      Annually:
+        text: Annually
+      other:
+        text: other
+  door_loc_enum:
+    name: door_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  occup_document_enum:
+    name: occup_document_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      automated count:
+        text: automated count
+      estimate:
+        text: estimate
+      manual count:
+        text: manual count
+      videos:
+        text: videos
+  furniture_enum:
+    name: furniture_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      cabinet:
+        text: cabinet
+      chair:
+        text: chair
+      desks:
+        text: desks
+  wall_loc_enum:
+    name: wall_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  mech_struc_enum:
+    name: mech_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      subway:
+        text: subway
+      coach:
+        text: coach
+      carriage:
+        text: carriage
+      elevator:
+        text: elevator
+      escalator:
+        text: escalator
+      boat:
+        text: boat
+      train:
+        text: train
+      car:
+        text: car
+      bus:
+        text: bus
   build_occup_type_enum:
     name: build_occup_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -944,228 +1480,56 @@ enums:
         text: airport
       sports complex:
         text: sports complex
-  door_mat_enum:
-    name: door_mat_enum
+  samp_floor_enum:
+    name: samp_floor_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      aluminum:
-        text: aluminum
-      cellular PVC:
-        text: cellular PVC
-      engineered plastic:
-        text: engineered plastic
-      fiberboard:
-        text: fiberboard
-      fiberglass:
-        text: fiberglass
+      1st floor:
+        text: 1st floor
+      2nd floor:
+        text: 2nd floor
+      basement:
+        text: basement
+      lobby:
+        text: lobby
+  window_cond_enum:
+    name: window_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      damaged:
+        text: damaged
+      needs repair:
+        text: needs repair
+      new:
+        text: new
+      rupture:
+        text: rupture
+      visible wear:
+        text: visible wear
+  ceil_finish_mat_enum:
+    name: ceil_finish_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      drywall:
+        text: drywall
+      mineral fibre:
+        text: mineral fibre
+      tiles:
+        text: tiles
+      PVC:
+        text: PVC
+      plasterboard:
+        text: plasterboard
       metal:
         text: metal
-      thermoplastic alloy:
-        text: thermoplastic alloy
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-      wood/plastic composite:
-        text: wood/plastic composite
-  ceil_cond_enum:
-    name: ceil_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-  floor_struc_enum:
-    name: floor_struc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      balcony:
-        text: balcony
-      floating floor:
-        text: floating floor
-      glass floor:
-        text: glass floor
-      raised floor:
-        text: raised floor
-      sprung floor:
-        text: sprung floor
-      wood-framed:
-        text: wood-framed
-      concrete:
-        text: concrete
-  indoor_surf_enum:
-    name: indoor_surf_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cabinet:
-        text: cabinet
-      ceiling:
-        text: ceiling
-      counter top:
-        text: counter top
-      door:
-        text: door
-      shelving:
-        text: shelving
-      vent cover:
-        text: vent cover
-      window:
-        text: window
-      wall:
-        text: wall
-  occup_document_enum:
-    name: occup_document_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      automated count:
-        text: automated count
-      estimate:
-        text: estimate
-      manual count:
-        text: manual count
-      videos:
-        text: videos
-  indoor_space_enum:
-    name: indoor_space_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bedroom:
-        text: bedroom
-      office:
-        text: office
-      bathroom:
-        text: bathroom
-      foyer:
-        text: foyer
-      kitchen:
-        text: kitchen
-      locker room:
-        text: locker room
-      hallway:
-        text: hallway
-      elevator:
-        text: elevator
-  light_type_enum:
-    name: light_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      natural light:
-        text: natural light
-      electric light:
-        text: electric light
-      desk lamp:
-        text: desk lamp
-      flourescent lights:
-        text: flourescent lights
-      none:
-        text: none
-  arch_struc_enum:
-    name: arch_struc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      building:
-        text: building
-      shed:
-        text: shed
-      home:
-        text: home
-  ceil_type_enum:
-    name: ceil_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cathedral:
-        text: cathedral
-      dropped:
-        text: dropped
-      concave:
-        text: concave
-      barrel-shaped:
-        text: barrel-shaped
-      coffered:
-        text: coffered
-      cove:
-        text: cove
-      stretched:
-        text: stretched
-  window_vert_pos_enum:
-    name: window_vert_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      bottom:
-        text: bottom
-      middle:
-        text: middle
-      top:
-        text: top
-      low:
-        text: low
-      high:
-        text: high
-  door_move_enum:
-    name: door_move_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      collapsible:
-        text: collapsible
-      folding:
-        text: folding
-      revolving:
-        text: revolving
-      rolling shutter:
-        text: rolling shutter
-      sliding:
-        text: sliding
-      swinging:
-        text: swinging
-  door_loc_enum:
-    name: door_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  wall_surf_treatment_enum:
-    name: wall_surf_treatment_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      painted:
-        text: painted
-      wall paper:
-        text: wall paper
-      no treatment:
-        text: no treatment
-      paneling:
-        text: paneling
+      fiberglass:
+        text: fiberglass
       stucco:
         text: stucco
-      fabric:
-        text: fabric
-  int_wall_cond_enum:
-    name: int_wall_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
+      mineral wool/calcium silicate:
+        text: mineral wool/calcium silicate
+      wood:
+        text: wood
   ceil_texture_enum:
     name: ceil_texture_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1196,6 +1560,32 @@ enums:
         text: stomp knockdown
       swirl:
         text: swirl
+  season_use_enum:
+    name: season_use_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Spring:
+        text: Spring
+      Summer:
+        text: Summer
+      Fall:
+        text: Fall
+      Winter:
+        text: Winter
+  int_wall_cond_enum:
+    name: int_wall_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
   room_type_enum:
     name: room_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1250,118 +1640,6 @@ enums:
         text: cafe
       warehouse:
         text: warehouse
-  filter_type_enum:
-    name: filter_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      particulate air filter:
-        text: particulate air filter
-      chemical air filter:
-        text: chemical air filter
-      low-MERV pleated media:
-        text: low-MERV pleated media
-      HEPA:
-        text: HEPA
-      electrostatic:
-        text: electrostatic
-      gas-phase or ultraviolet air treatments:
-        text: gas-phase or ultraviolet air treatments
-  furniture_enum:
-    name: furniture_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      cabinet:
-        text: cabinet
-      chair:
-        text: chair
-      desks:
-        text: desks
-  mech_struc_enum:
-    name: mech_struc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      subway:
-        text: subway
-      coach:
-        text: coach
-      carriage:
-        text: carriage
-      elevator:
-        text: elevator
-      escalator:
-        text: escalator
-      boat:
-        text: boat
-      train:
-        text: train
-      car:
-        text: car
-      bus:
-        text: bus
-  door_comp_type_enum:
-    name: door_comp_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      metal covered:
-        text: metal covered
-      revolving:
-        text: revolving
-      sliding:
-        text: sliding
-      telescopic:
-        text: telescopic
-  season_use_enum:
-    name: season_use_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Spring:
-        text: Spring
-      Summer:
-        text: Summer
-      Fall:
-        text: Fall
-      Winter:
-        text: Winter
-  samp_weather_enum:
-    name: samp_weather_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      clear sky:
-        text: clear sky
-      cloudy:
-        text: cloudy
-      foggy:
-        text: foggy
-      hail:
-        text: hail
-      rain:
-        text: rain
-      snow:
-        text: snow
-      sleet:
-        text: sleet
-      sunny:
-        text: sunny
-      windy:
-        text: windy
-  weekday_enum:
-    name: weekday_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Monday:
-        text: Monday
-      Tuesday:
-        text: Tuesday
-      Wednesday:
-        text: Wednesday
-      Thursday:
-        text: Thursday
-      Friday:
-        text: Friday
-      Saturday:
-        text: Saturday
-      Sunday:
-        text: Sunday
   window_mat_enum:
     name: window_mat_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1376,240 +1654,6 @@ enums:
         text: vinyl
       wood:
         text: wood
-  train_line_enum:
-    name: train_line_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      red:
-        text: red
-      green:
-        text: green
-      orange:
-        text: orange
-  quad_pos_enum:
-    name: quad_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      North side:
-        text: North side
-      West side:
-        text: West side
-      South side:
-        text: South side
-      East side:
-        text: East side
-  window_loc_enum:
-    name: window_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  door_type_metal_enum:
-    name: door_type_metal_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      collapsible:
-        text: collapsible
-      corrugated steel:
-        text: corrugated steel
-      hollow:
-        text: hollow
-      rolling shutters:
-        text: rolling shutters
-      steel plate:
-        text: steel plate
-  heat_cool_type_enum:
-    name: heat_cool_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      radiant system:
-        text: radiant system
-      heat pump:
-        text: heat pump
-      forced air system:
-        text: forced air system
-      steam forced heat:
-        text: steam forced heat
-      wood stove:
-        text: wood stove
-  specific_enum:
-    name: specific_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      operation:
-        text: operation
-      as built:
-        text: as built
-      construction:
-        text: construction
-      bid:
-        text: bid
-      design:
-        text: design
-      photos:
-        text: photos
-  wall_texture_enum:
-    name: wall_texture_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      crows feet:
-        text: crows feet
-      crows-foot stomp:
-        text: crows-foot stomp
-      ? ''
-      : text: ''
-      double skip:
-        text: double skip
-      hawk and trowel:
-        text: hawk and trowel
-      knockdown:
-        text: knockdown
-      popcorn:
-        text: popcorn
-      orange peel:
-        text: orange peel
-      rosebud stomp:
-        text: rosebud stomp
-      Santa-Fe texture:
-        text: Santa-Fe texture
-      skip trowel:
-        text: skip trowel
-      smooth:
-        text: smooth
-      stomp knockdown:
-        text: stomp knockdown
-      swirl:
-        text: swirl
-  samp_floor_enum:
-    name: samp_floor_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      1st floor:
-        text: 1st floor
-      2nd floor:
-        text: 2nd floor
-      basement:
-        text: basement
-      lobby:
-        text: lobby
-  ext_wall_orient_enum:
-    name: ext_wall_orient_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-      northeast:
-        text: northeast
-      southeast:
-        text: southeast
-      southwest:
-        text: southwest
-      northwest:
-        text: northwest
-  room_loc_enum:
-    name: room_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      corner room:
-        text: corner room
-      interior room:
-        text: interior room
-      exterior wall:
-        text: exterior wall
-  water_feat_type_enum:
-    name: water_feat_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      fountain:
-        text: fountain
-      pool:
-        text: pool
-      standing feature:
-        text: standing feature
-      stream:
-        text: stream
-      waterfall:
-        text: waterfall
-  window_type_enum:
-    name: window_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      single-hung sash window:
-        text: single-hung sash window
-      horizontal sash window:
-        text: horizontal sash window
-      fixed window:
-        text: fixed window
-  drawings_enum:
-    name: drawings_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      operation:
-        text: operation
-      as built:
-        text: as built
-      construction:
-        text: construction
-      bid:
-        text: bid
-      design:
-        text: design
-      building navigation map:
-        text: building navigation map
-      diagram:
-        text: diagram
-      sketch:
-        text: sketch
-  room_samp_pos_enum:
-    name: room_samp_pos_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north corner:
-        text: north corner
-      south corner:
-        text: south corner
-      west corner:
-        text: west corner
-      east corner:
-        text: east corner
-      northeast corner:
-        text: northeast corner
-      northwest corner:
-        text: northwest corner
-      southeast corner:
-        text: southeast corner
-      southwest corner:
-        text: southwest corner
-      center:
-        text: center
-  room_condt_enum:
-    name: room_condt_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-      visible signs of mold/mildew:
-        text: visible signs of mold/mildew
   room_connected_enum:
     name: room_connected_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1636,118 +1680,6 @@ enums:
         text: office
       stairwell:
         text: stairwell
-  freq_clean_enum:
-    name: freq_clean_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Daily:
-        text: Daily
-      Weekly:
-        text: Weekly
-      Monthly:
-        text: Monthly
-      Quarterly:
-        text: Quarterly
-      Annually:
-        text: Annually
-      other:
-        text: other
-  vis_media_enum:
-    name: vis_media_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      photos:
-        text: photos
-      videos:
-        text: videos
-      commonly of the building:
-        text: commonly of the building
-      site context (adjacent buildings, vegetation, terrain, streets):
-        text: site context (adjacent buildings, vegetation, terrain, streets)
-      interiors:
-        text: interiors
-      equipment:
-        text: equipment
-      3D scans:
-        text: 3D scans
-  train_stop_loc_enum:
-    name: train_stop_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      end:
-        text: end
-      mid:
-        text: mid
-      downtown:
-        text: downtown
-  handidness_enum:
-    name: handidness_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      ambidexterity:
-        text: ambidexterity
-      left handedness:
-        text: left handedness
-      mixed-handedness:
-        text: mixed-handedness
-      right handedness:
-        text: right handedness
-  rel_samp_loc_enum:
-    name: rel_samp_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      edge of car:
-        text: edge of car
-      center of car:
-        text: center of car
-      under a seat:
-        text: under a seat
-  surf_material_enum:
-    name: surf_material_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      adobe:
-        text: adobe
-      carpet:
-        text: carpet
-      cinder blocks:
-        text: cinder blocks
-      concrete:
-        text: concrete
-      hay bales:
-        text: hay bales
-      glass:
-        text: glass
-      metal:
-        text: metal
-      paint:
-        text: paint
-      plastic:
-        text: plastic
-      stainless steel:
-        text: stainless steel
-      stone:
-        text: stone
-      stucco:
-        text: stucco
-      tile:
-        text: tile
-      vinyl:
-        text: vinyl
-      wood:
-        text: wood
-  heat_deliv_loc_enum:
-    name: heat_deliv_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
   gender_restroom_enum:
     name: gender_restroom_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1764,26 +1696,300 @@ enums:
         text: male and female
       unisex:
         text: unisex
-  door_type_enum:
-    name: door_type_enum
+  window_loc_enum:
+    name: window_loc_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      composite:
-        text: composite
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+  quad_pos_enum:
+    name: quad_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      North side:
+        text: North side
+      West side:
+        text: West side
+      South side:
+        text: South side
+      East side:
+        text: East side
+  door_mat_enum:
+    name: door_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      aluminum:
+        text: aluminum
+      cellular PVC:
+        text: cellular PVC
+      engineered plastic:
+        text: engineered plastic
+      fiberboard:
+        text: fiberboard
+      fiberglass:
+        text: fiberglass
       metal:
         text: metal
-      wooden:
-        text: wooden
-  window_cover_enum:
-    name: window_cover_enum
+      thermoplastic alloy:
+        text: thermoplastic alloy
+      vinyl:
+        text: vinyl
+      wood:
+        text: wood
+      wood/plastic composite:
+        text: wood/plastic composite
+  weekday_enum:
+    name: weekday_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      blinds:
-        text: blinds
-      curtains:
-        text: curtains
-      none:
-        text: none
+      Monday:
+        text: Monday
+      Tuesday:
+        text: Tuesday
+      Wednesday:
+        text: Wednesday
+      Thursday:
+        text: Thursday
+      Friday:
+        text: Friday
+      Saturday:
+        text: Saturday
+      Sunday:
+        text: Sunday
+  ceil_cond_enum:
+    name: ceil_cond_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+  room_condt_enum:
+    name: room_condt_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      new:
+        text: new
+      visible wear:
+        text: visible wear
+      needs repair:
+        text: needs repair
+      damaged:
+        text: damaged
+      rupture:
+        text: rupture
+      visible signs of mold/mildew:
+        text: visible signs of mold/mildew
+  ext_window_orient_enum:
+    name: ext_window_orient_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      north:
+        text: north
+      south:
+        text: south
+      east:
+        text: east
+      west:
+        text: west
+      northeast:
+        text: northeast
+      southeast:
+        text: southeast
+      southwest:
+        text: southwest
+      northwest:
+        text: northwest
+  surf_air_cont_enum:
+    name: surf_air_cont_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      dust:
+        text: dust
+      organic matter:
+        text: organic matter
+      particulate matter:
+        text: particulate matter
+      volatile organic compounds:
+        text: volatile organic compounds
+      biological contaminants:
+        text: biological contaminants
+      radon:
+        text: radon
+      nutrients:
+        text: nutrients
+      biocides:
+        text: biocides
+  specific_enum:
+    name: specific_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      operation:
+        text: operation
+      as built:
+        text: as built
+      construction:
+        text: construction
+      bid:
+        text: bid
+      design:
+        text: design
+      photos:
+        text: photos
+  filter_type_enum:
+    name: filter_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      particulate air filter:
+        text: particulate air filter
+      chemical air filter:
+        text: chemical air filter
+      low-MERV pleated media:
+        text: low-MERV pleated media
+      HEPA:
+        text: HEPA
+      electrostatic:
+        text: electrostatic
+      gas-phase or ultraviolet air treatments:
+        text: gas-phase or ultraviolet air treatments
+  window_vert_pos_enum:
+    name: window_vert_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bottom:
+        text: bottom
+      middle:
+        text: middle
+      top:
+        text: top
+      low:
+        text: low
+      high:
+        text: high
+  floor_struc_enum:
+    name: floor_struc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      balcony:
+        text: balcony
+      floating floor:
+        text: floating floor
+      glass floor:
+        text: glass floor
+      raised floor:
+        text: raised floor
+      sprung floor:
+        text: sprung floor
+      wood-framed:
+        text: wood-framed
+      concrete:
+        text: concrete
+  indoor_space_enum:
+    name: indoor_space_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      bedroom:
+        text: bedroom
+      office:
+        text: office
+      bathroom:
+        text: bathroom
+      foyer:
+        text: foyer
+      kitchen:
+        text: kitchen
+      locker room:
+        text: locker room
+      hallway:
+        text: hallway
+      elevator:
+        text: elevator
+  wall_finish_mat_enum:
+    name: wall_finish_mat_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      plaster:
+        text: plaster
+      gypsum plaster:
+        text: gypsum plaster
+      veneer plaster:
+        text: veneer plaster
+      gypsum board:
+        text: gypsum board
+      tile:
+        text: tile
+      terrazzo:
+        text: terrazzo
+      stone facing:
+        text: stone facing
+      acoustical treatment:
+        text: acoustical treatment
+      wood:
+        text: wood
+      metal:
+        text: metal
+      masonry:
+        text: masonry
+  window_type_enum:
+    name: window_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      single-hung sash window:
+        text: single-hung sash window
+      horizontal sash window:
+        text: horizontal sash window
+      fixed window:
+        text: fixed window
+  heat_cool_type_enum:
+    name: heat_cool_type_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      radiant system:
+        text: radiant system
+      heat pump:
+        text: heat pump
+      forced air system:
+        text: forced air system
+      steam forced heat:
+        text: steam forced heat
+      wood stove:
+        text: wood stove
+  train_stat_loc_enum:
+    name: train_stat_loc_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      south station above ground:
+        text: south station above ground
+      south station underground:
+        text: south station underground
+      south station amtrak:
+        text: south station amtrak
+      forest hills:
+        text: forest hills
+      riverside:
+        text: riverside
+  window_horiz_pos_enum:
+    name: window_horiz_pos_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      left:
+        text: left
+      middle:
+        text: middle
+      right:
+        text: right
   build_docs_enum:
     name: build_docs_enum
     from_schema: http://w3id.org/mixs/terms
@@ -1814,194 +2020,26 @@ enums:
         text: ventilation system
       windows:
         text: windows
-  floor_cond_enum:
-    name: floor_cond_enum
+  indoor_surf_enum:
+    name: indoor_surf_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      new:
-        text: new
-      visible wear:
-        text: visible wear
-      needs repair:
-        text: needs repair
-      damaged:
-        text: damaged
-      rupture:
-        text: rupture
-  train_stat_loc_enum:
-    name: train_stat_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      south station above ground:
-        text: south station above ground
-      south station underground:
-        text: south station underground
-      south station amtrak:
-        text: south station amtrak
-      forest hills:
-        text: forest hills
-      riverside:
-        text: riverside
-  floor_finish_mat_enum:
-    name: floor_finish_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      tile:
-        text: tile
-      wood strip or parquet:
-        text: wood strip or parquet
-      carpet:
-        text: carpet
-      rug:
-        text: rug
-      laminate wood:
-        text: laminate wood
-      lineoleum:
-        text: lineoleum
-      vinyl composition tile:
-        text: vinyl composition tile
-      sheet vinyl:
-        text: sheet vinyl
-      stone:
-        text: stone
-      bamboo:
-        text: bamboo
-      cork:
-        text: cork
-      terrazo:
-        text: terrazo
-      concrete:
-        text: concrete
-      none:
-        text: none
-      sealed:
-        text: sealed
-      clear finish:
-        text: clear finish
-      paint:
-        text: paint
-      none or unfinished:
-        text: none or unfinished
-  wall_finish_mat_enum:
-    name: wall_finish_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      plaster:
-        text: plaster
-      gypsum plaster:
-        text: gypsum plaster
-      veneer plaster:
-        text: veneer plaster
-      gypsum board:
-        text: gypsum board
-      tile:
-        text: tile
-      terrazzo:
-        text: terrazzo
-      stone facing:
-        text: stone facing
-      acoustical treatment:
-        text: acoustical treatment
-      wood:
-        text: wood
-      metal:
-        text: metal
-      masonry:
-        text: masonry
-  door_direct_enum:
-    name: door_direct_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      inward:
-        text: inward
-      outward:
-        text: outward
-      sideways:
-        text: sideways
-  door_cond_enum:
-    name: door_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
-  wall_const_type_enum:
-    name: wall_const_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      frame construction:
-        text: frame construction
-      joisted masonry:
-        text: joisted masonry
-      light noncombustible:
-        text: light noncombustible
-      masonry noncombustible:
-        text: masonry noncombustible
-      modified fire resistive:
-        text: modified fire resistive
-      fire resistive:
-        text: fire resistive
-  wall_loc_enum:
-    name: wall_loc_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-  floor_water_mold_enum:
-    name: floor_water_mold_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      mold odor:
-        text: mold odor
-      wet floor:
-        text: wet floor
-      water stains:
-        text: water stains
-      wall discoloration:
-        text: wall discoloration
-      floor discoloration:
-        text: floor discoloration
-      ceiling discoloration:
-        text: ceiling discoloration
-      peeling paint or wallpaper:
-        text: peeling paint or wallpaper
-      bulging walls:
-        text: bulging walls
-      condensation:
-        text: condensation
-  ext_window_orient_enum:
-    name: ext_window_orient_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      north:
-        text: north
-      south:
-        text: south
-      east:
-        text: east
-      west:
-        text: west
-      northeast:
-        text: northeast
-      southeast:
-        text: southeast
-      southwest:
-        text: southwest
-      northwest:
-        text: northwest
+      cabinet:
+        text: cabinet
+      ceiling:
+        text: ceiling
+      counter top:
+        text: counter top
+      door:
+        text: door
+      shelving:
+        text: shelving
+      vent cover:
+        text: vent cover
+      window:
+        text: window
+      wall:
+        text: wall
   shading_device_type_enum:
     name: shading_device_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2030,44 +2068,6 @@ enums:
         text: trellis
       venetian awning:
         text: venetian awning
-  ceil_finish_mat_enum:
-    name: ceil_finish_mat_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      drywall:
-        text: drywall
-      mineral fibre:
-        text: mineral fibre
-      tiles:
-        text: tiles
-      PVC:
-        text: PVC
-      plasterboard:
-        text: plasterboard
-      metal:
-        text: metal
-      fiberglass:
-        text: fiberglass
-      stucco:
-        text: stucco
-      mineral wool/calcium silicate:
-        text: mineral wool/calcium silicate
-      wood:
-        text: wood
-  shading_device_cond_enum:
-    name: shading_device_cond_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      damaged:
-        text: damaged
-      needs repair:
-        text: needs repair
-      new:
-        text: new
-      rupture:
-        text: rupture
-      visible wear:
-        text: visible wear
   host_sex_enum:
     name: host_sex_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2080,6 +2080,20 @@ enums:
         text: male
       neuter:
         text: neuter
+  samp_md_enum:
+    name: samp_md_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      DF:
+        text: DF
+      RT:
+        text: RT
+      KB:
+        text: KB
+      MSL:
+        text: MSL
+      other:
+        text: other
   sr_dep_env_enum:
     name: sr_dep_env_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2092,20 +2106,6 @@ enums:
         text: Fluviomarine
       Marine:
         text: Marine
-      other:
-        text: other
-  sr_kerog_type_enum:
-    name: sr_kerog_type_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      Type I:
-        text: Type I
-      Type II:
-        text: Type II
-      Type III:
-        text: Type III
-      Type IV:
-        text: Type IV
       other:
         text: other
   sr_lithology_enum:
@@ -2162,18 +2162,18 @@ enums:
         text: Triassic
       other:
         text: other
-  samp_md_enum:
-    name: samp_md_enum
+  sr_kerog_type_enum:
+    name: sr_kerog_type_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      DF:
-        text: DF
-      RT:
-        text: RT
-      KB:
-        text: KB
-      MSL:
-        text: MSL
+      Type I:
+        text: Type I
+      Type II:
+        text: Type II
+      Type III:
+        text: Type III
+      Type IV:
+        text: Type IV
       other:
         text: other
   samp_collect_point_enum:
@@ -2194,58 +2194,24 @@ enums:
         text: storage tank
       other:
         text: other
-  hcr_geol_age_enum:
-    name: hcr_geol_age_enum
+  hcr_enum:
+    name: hcr_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      Archean:
-        text: Archean
-      Cambrian:
-        text: Cambrian
-      Carboniferous:
-        text: Carboniferous
-      Cenozoic:
-        text: Cenozoic
-      Cretaceous:
-        text: Cretaceous
-      Devonian:
-        text: Devonian
-      Jurassic:
-        text: Jurassic
-      Mesozoic:
-        text: Mesozoic
-      Neogene:
-        text: Neogene
-      Ordovician:
-        text: Ordovician
-      Paleogene:
-        text: Paleogene
-      Paleozoic:
-        text: Paleozoic
-      Permian:
-        text: Permian
-      Precambrian:
-        text: Precambrian
-      Proterozoic:
-        text: Proterozoic
-      Silurian:
-        text: Silurian
-      Triassic:
-        text: Triassic
-      other:
-        text: other
-  samp_subtype_enum:
-    name: samp_subtype_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      oil phase:
-        text: oil phase
-      water phase:
-        text: water phase
-      biofilm:
-        text: biofilm
-      not applicable:
-        text: not applicable
+      Oil Reservoir:
+        text: Oil Reservoir
+      Gas Reservoir:
+        text: Gas Reservoir
+      Oil Sand:
+        text: Oil Sand
+      Coalbed:
+        text: Coalbed
+      Shale:
+        text: Shale
+      Tight Oil Reservoir:
+        text: Tight Oil Reservoir
+      Tight Gas Reservoir:
+        text: Tight Gas Reservoir
       other:
         text: other
   hc_produced_enum:
@@ -2262,16 +2228,6 @@ enums:
         text: Bitumen
       Coalbed Methane:
         text: Coalbed Methane
-      other:
-        text: other
-  organism_count_enum:
-    name: organism_count_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      ATP:
-        text: ATP
-      MPN:
-        text: MPN
       other:
         text: other
   lithology_enum:
@@ -2340,24 +2296,28 @@ enums:
         text: Other - Volcanic
       other:
         text: other
-  hcr_enum:
-    name: hcr_enum
+  samp_subtype_enum:
+    name: samp_subtype_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      Oil Reservoir:
-        text: Oil Reservoir
-      Gas Reservoir:
-        text: Gas Reservoir
-      Oil Sand:
-        text: Oil Sand
-      Coalbed:
-        text: Coalbed
-      Shale:
-        text: Shale
-      Tight Oil Reservoir:
-        text: Tight Oil Reservoir
-      Tight Gas Reservoir:
-        text: Tight Gas Reservoir
+      oil phase:
+        text: oil phase
+      water phase:
+        text: water phase
+      biofilm:
+        text: biofilm
+      not applicable:
+        text: not applicable
+      other:
+        text: other
+  organism_count_enum:
+    name: organism_count_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      ATP:
+        text: ATP
+      MPN:
+        text: MPN
       other:
         text: other
   oxy_stat_samp_enum:
@@ -2368,6 +2328,46 @@ enums:
         text: aerobic
       anaerobic:
         text: anaerobic
+      other:
+        text: other
+  hcr_geol_age_enum:
+    name: hcr_geol_age_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      Archean:
+        text: Archean
+      Cambrian:
+        text: Cambrian
+      Carboniferous:
+        text: Carboniferous
+      Cenozoic:
+        text: Cenozoic
+      Cretaceous:
+        text: Cretaceous
+      Devonian:
+        text: Devonian
+      Jurassic:
+        text: Jurassic
+      Mesozoic:
+        text: Mesozoic
+      Neogene:
+        text: Neogene
+      Ordovician:
+        text: Ordovician
+      Paleogene:
+        text: Paleogene
+      Paleozoic:
+        text: Paleozoic
+      Permian:
+        text: Permian
+      Precambrian:
+        text: Precambrian
+      Proterozoic:
+        text: Proterozoic
+      Silurian:
+        text: Silurian
+      Triassic:
+        text: Triassic
       other:
         text: other
   biol_stat_enum:
@@ -2432,6 +2432,18 @@ enums:
         text: flood tide
       high tide:
         text: high tide
+  growth_habit_enum:
+    name: growth_habit_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      erect:
+        text: erect
+      semi-erect:
+        text: semi-erect
+      spreading:
+        text: spreading
+      prostrate:
+        text: prostrate
   plant_growth_med_enum:
     name: plant_growth_med_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2516,18 +2528,6 @@ enums:
         text: Trioecious
       Unisexual:
         text: Unisexual
-  growth_habit_enum:
-    name: growth_habit_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      erect:
-        text: erect
-      semi-erect:
-        text: semi-erect
-      spreading:
-        text: spreading
-      prostrate:
-        text: prostrate
   sediment_type_enum:
     name: sediment_type_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2615,20 +2615,6 @@ enums:
         text: swamp (permanent or semi-permanent water body dominated by woody plants)
       crop trees (nuts,fruit,christmas trees,nursery trees):
         text: crop trees (nuts,fruit,christmas trees,nursery trees)
-  profile_position_enum:
-    name: profile_position_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      summit:
-        text: summit
-      shoulder:
-        text: shoulder
-      backslope:
-        text: backslope
-      footslope:
-        text: footslope
-      toeslope:
-        text: toeslope
   soil_horizon_enum:
     name: soil_horizon_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2647,6 +2633,58 @@ enums:
         text: R layer
       Permafrost:
         text: Permafrost
+  drainage_class_enum:
+    name: drainage_class_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      very poorly:
+        text: very poorly
+      poorly:
+        text: poorly
+      somewhat poorly:
+        text: somewhat poorly
+      moderately well:
+        text: moderately well
+      well:
+        text: well
+      excessively drained:
+        text: excessively drained
+  profile_position_enum:
+    name: profile_position_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      summit:
+        text: summit
+      shoulder:
+        text: shoulder
+      backslope:
+        text: backslope
+      footslope:
+        text: footslope
+      toeslope:
+        text: toeslope
+  tillage_enum:
+    name: tillage_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      drill:
+        text: drill
+      cutting disc:
+        text: cutting disc
+      ridge till:
+        text: ridge till
+      strip tillage:
+        text: strip tillage
+      zonal tillage:
+        text: zonal tillage
+      chisel:
+        text: chisel
+      tined:
+        text: tined
+      mouldboard:
+        text: mouldboard
+      disc plough:
+        text: disc plough
   fao_class_enum:
     name: fao_class_enum
     from_schema: http://w3id.org/mixs/terms
@@ -2703,44 +2741,6 @@ enums:
         text: Vertisols
       Yermosols:
         text: Yermosols
-  tillage_enum:
-    name: tillage_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      drill:
-        text: drill
-      cutting disc:
-        text: cutting disc
-      ridge till:
-        text: ridge till
-      strip tillage:
-        text: strip tillage
-      zonal tillage:
-        text: zonal tillage
-      chisel:
-        text: chisel
-      tined:
-        text: tined
-      mouldboard:
-        text: mouldboard
-      disc plough:
-        text: disc plough
-  drainage_class_enum:
-    name: drainage_class_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      very poorly:
-        text: very poorly
-      poorly:
-        text: poorly
-      somewhat poorly:
-        text: somewhat poorly
-      moderately well:
-        text: moderately well
-      well:
-        text: well
-      excessively drained:
-        text: excessively drained
 slots:
   Bioscales:
     name: Bioscales
@@ -2946,20 +2946,6 @@ slots:
     rank: 10
     slot_group: JGI-Metagenomics
     range: dna_cont_type_enum
-    required: true
-  dna_cont_well:
-    name: dna_cont_well
-    title: DNA well number
-    comments:
-    - Required when 'plate' is selected for container type. Corner wells must be blank.
-      For partial plates, fill by columns. Leave blank if the sample will be shipped
-      in a tube.
-    examples:
-    - value: B2
-    from_schema: https://example.com/nmdc_submission_schema
-    rank: 11
-    string_serialization: '{96 well plate pos}'
-    slot_group: JGI-Metagenomics
     required: true
   dna_container_ID:
     name: dna_container_ID
@@ -14360,6 +14346,24 @@ slots:
     slot_uri: MIXS:0000747
     multivalued: false
     range: quantity value
+  dna_cont_well:
+    name: dna_cont_well
+    title: DNA plate position
+    comments:
+    - Required when 'plate' is selected for container type.
+    - Leave blank if the sample will be shipped in a tube.
+    - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will not
+      pass validation.
+    - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+    examples:
+    - value: B2
+    from_schema: https://microbiomedata/schema/jgi_metagenomics
+    rank: 11
+    string_serialization: '{96 well plate pos}'
+    slot_group: JGI-Metagenomics
+    required: false
+    recommended: true
+    pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
   ammonium_nitrogen:
     name: ammonium_nitrogen
     annotations:
@@ -14619,11 +14623,6 @@ slots:
     from_schema: http://w3id.org/mixs/ranges
     string_serialization: '{has numeric value} {has unit}'
     owner: quantity value
-  core field:
-    name: core field
-    description: basic fields
-    from_schema: http://w3id.org/mixs/terms
-    abstract: true
   has numeric value:
     name: has numeric value
     from_schema: http://w3id.org/mixs/ranges
@@ -14634,13 +14633,14 @@ slots:
     description: Example "m"
     from_schema: http://w3id.org/mixs/ranges
     owner: quantity value
+  core field:
+    name: core field
+    description: basic fields
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
   environment field:
     name: environment field
     description: field describing environmental aspect of a sample
-    from_schema: http://w3id.org/mixs/terms
-    abstract: true
-  nucleic acid sequence source field:
-    name: nucleic acid sequence source field
     from_schema: http://w3id.org/mixs/terms
     abstract: true
   investigation field:
@@ -14649,6 +14649,38 @@ slots:
       belongs
     from_schema: http://w3id.org/mixs/terms
     abstract: true
+  nucleic acid sequence source field:
+    name: nucleic acid sequence source field
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
+  attribute:
+    name: attribute
+    description: 'A attribute of a biosample. Examples: depth, habitat, material.
+      For NMDC, attributes SHOULD be mapped to terms within a MIxS template'
+    from_schema: https://microbiomedata/schema/core
+    aliases:
+    - field
+    - property
+    - template field
+    - key
+    - characteristic
+    abstract: true
+  gold_path_field:
+    name: gold_path_field
+    description: This is a grouping for any of the gold path fields
+    from_schema: https://microbiomedata/schema
+    is_a: attribute
+    abstract: true
+    range: string
+  has_numeric_value:
+    name: has_numeric_value
+    description: Links a quantity value to a number
+    from_schema: https://microbiomedata/schema/core
+    mappings:
+    - qud:quantityValue
+    - schema:value
+    multivalued: false
+    range: float
   id:
     name: id
     description: A unique identifier for a thing. Must be either a CURIE shorthand
@@ -14667,6 +14699,36 @@ slots:
     from_schema: https://microbiomedata/schema/basic_slots
     multivalued: false
     identifier: true
+  was_associated_with:
+    name: was_associated_with
+    from_schema: https://microbiomedata/schema/prov
+    mappings:
+    - prov:wasAssociatedWith
+    range: Agent
+  has_maximum_numeric_value:
+    name: has_maximum_numeric_value
+    description: The maximum value part, expressed as number, of the quantity value
+      when the value covers a range.
+    from_schema: https://microbiomedata/schema/core
+    is_a: has_numeric_value
+  name:
+    name: name
+    description: A human readable label for an entity
+    from_schema: https://microbiomedata/schema/basic_slots
+    multivalued: false
+    range: string
+  was_informed_by:
+    name: was_informed_by
+    from_schema: https://microbiomedata/schema/prov
+    mappings:
+    - prov:wasInformedBy
+    range: Activity
+  acted_on_behalf_of:
+    name: acted_on_behalf_of
+    from_schema: https://microbiomedata/schema/prov
+    mappings:
+    - prov:actedOnBehalfOf
+    range: Agent
   has_unit:
     name: has_unit
     description: Links a QuantityValue to a unit
@@ -14677,28 +14739,6 @@ slots:
     - qud:unit
     - schema:unitCode
     range: unit
-  name:
-    name: name
-    description: A human readable label for an entity
-    from_schema: https://microbiomedata/schema/basic_slots
-    multivalued: false
-    range: string
-  gold_path_field:
-    name: gold_path_field
-    description: This is a grouping for any of the gold path fields
-    from_schema: https://microbiomedata/schema
-    is_a: attribute
-    abstract: true
-    range: string
-  has_raw_value:
-    name: has_raw_value
-    description: The value that was specified for an annotation in raw form, i.e.
-      a string. E.g. "2 cm" or "2-4 cm"
-    from_schema: https://microbiomedata/schema/core
-    domain: AttributeValue
-    multivalued: false
-    range: string
-    required: false
   used:
     name: used
     from_schema: https://microbiomedata/schema/prov
@@ -14711,18 +14751,12 @@ slots:
     mappings:
     - prov:wasGeneratedBy
     range: Activity
-  attribute:
-    name: attribute
-    description: 'A attribute of a biosample. Examples: depth, habitat, material.
-      For NMDC, attributes SHOULD be mapped to terms within a MIxS template'
+  has_minimum_numeric_value:
+    name: has_minimum_numeric_value
+    description: The minimum value part, expressed as number, of the quantity value
+      when the value covers a range.
     from_schema: https://microbiomedata/schema/core
-    aliases:
-    - field
-    - property
-    - template field
-    - key
-    - characteristic
-    abstract: true
+    is_a: has_numeric_value
   ended_at_time:
     name: ended_at_time
     notes:
@@ -14733,24 +14767,15 @@ slots:
     - prov:endedAtTime
     range: datetime
     pattern: ^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
-  acted_on_behalf_of:
-    name: acted_on_behalf_of
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:actedOnBehalfOf
-    range: Agent
-  has_maximum_numeric_value:
-    name: has_maximum_numeric_value
-    description: The maximum value part, expressed as number, of the quantity value
-      when the value covers a range.
+  has_raw_value:
+    name: has_raw_value
+    description: The value that was specified for an annotation in raw form, i.e.
+      a string. E.g. "2 cm" or "2-4 cm"
     from_schema: https://microbiomedata/schema/core
-    is_a: has_numeric_value
-  was_informed_by:
-    name: was_informed_by
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:wasInformedBy
-    range: Activity
+    domain: AttributeValue
+    multivalued: false
+    range: string
+    required: false
   started_at_time:
     name: started_at_time
     notes:
@@ -14761,27 +14786,6 @@ slots:
     - prov:startedAtTime
     range: datetime
     pattern: ^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
-  was_associated_with:
-    name: was_associated_with
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:wasAssociatedWith
-    range: Agent
-  has_numeric_value:
-    name: has_numeric_value
-    description: Links a quantity value to a number
-    from_schema: https://microbiomedata/schema/core
-    mappings:
-    - qud:quantityValue
-    - schema:value
-    multivalued: false
-    range: float
-  has_minimum_numeric_value:
-    name: has_minimum_numeric_value
-    description: The minimum value part, expressed as number, of the quantity value
-      when the value covers a range.
-    from_schema: https://microbiomedata/schema/core
-    is_a: has_numeric_value
 classes:
   air:
     name: air
@@ -49519,6 +49523,7 @@ classes:
     - tot_nitro_cont_meth
     - tot_org_c_meth
     - water_cont_soil_meth
+    - dna_cont_well
     - ecosystem
     - ecosystem_category
     - ecosystem_subtype
@@ -51995,6 +52000,28 @@ classes:
         slot_group: MIxS
         range: string
         required: false
+      dna_cont_well:
+        name: dna_cont_well
+        title: DNA plate position
+        comments:
+        - Required when 'plate' is selected for container type.
+        - Leave blank if the sample will be shipped in a tube.
+        - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will
+          not pass validation.
+        - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+        examples:
+        - value: B2
+        from_schema: https://microbiomedata/schema/jgi_metagenomics
+        rank: 11
+        string_serialization: '{96 well plate pos}'
+        owner: Biosample
+        domain_of:
+        - Biosample
+        slot_group: JGI-Metagenomics
+        range: string
+        required: false
+        recommended: true
+        pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -52205,6 +52232,7 @@ classes:
     - tot_nitro_cont_meth
     - tot_org_c_meth
     - water_cont_soil_meth
+    - dna_cont_well
     - ecosystem
     - ecosystem_category
     - ecosystem_subtype
@@ -54681,6 +54709,28 @@ classes:
         slot_group: MIxS
         range: string
         required: false
+      dna_cont_well:
+        name: dna_cont_well
+        title: DNA plate position
+        comments:
+        - Required when 'plate' is selected for container type.
+        - Leave blank if the sample will be shipped in a tube.
+        - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will
+          not pass validation.
+        - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+        examples:
+        - value: B2
+        from_schema: https://microbiomedata/schema/jgi_metagenomics
+        rank: 11
+        string_serialization: '{96 well plate pos}'
+        owner: Biosample
+        domain_of:
+        - Biosample
+        slot_group: JGI-Metagenomics
+        range: string
+        required: false
+        recommended: true
+        pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -57574,6 +57624,7 @@ classes:
     - tot_nitro_cont_meth
     - tot_org_c_meth
     - water_cont_soil_meth
+    - dna_cont_well
     - ecosystem
     - ecosystem_category
     - ecosystem_subtype
@@ -60050,6 +60101,28 @@ classes:
         slot_group: MIxS
         range: string
         required: false
+      dna_cont_well:
+        name: dna_cont_well
+        title: DNA plate position
+        comments:
+        - Required when 'plate' is selected for container type.
+        - Leave blank if the sample will be shipped in a tube.
+        - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will
+          not pass validation.
+        - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+        examples:
+        - value: B2
+        from_schema: https://microbiomedata/schema/jgi_metagenomics
+        rank: 11
+        string_serialization: '{96 well plate pos}'
+        owner: Biosample
+        domain_of:
+        - Biosample
+        slot_group: JGI-Metagenomics
+        range: string
+        required: false
+        recommended: true
+        pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -60259,6 +60332,7 @@ classes:
     - tot_nitro_cont_meth
     - tot_org_c_meth
     - water_cont_soil_meth
+    - dna_cont_well
     - ecosystem
     - ecosystem_category
     - ecosystem_subtype
@@ -62735,6 +62809,28 @@ classes:
         slot_group: MIxS
         range: string
         required: false
+      dna_cont_well:
+        name: dna_cont_well
+        title: DNA plate position
+        comments:
+        - Required when 'plate' is selected for container type.
+        - Leave blank if the sample will be shipped in a tube.
+        - JGI will not process samples in corner wells, so A1, A12, H1 and H12 will
+          not pass validation.
+        - For partial plates, fill by columns, like B1-G1,A2-H2,A3-D3 (NOT A2-A11,B1-B8).
+        examples:
+        - value: B2
+        from_schema: https://microbiomedata/schema/jgi_metagenomics
+        rank: 11
+        string_serialization: '{96 well plate pos}'
+        owner: Biosample
+        domain_of:
+        - Biosample
+        slot_group: JGI-Metagenomics
+        range: string
+        required: false
+        recommended: true
+        pattern: ^(?!A1|A12|H1|H12)(([A-H][1-9])|([A-H]1[0-2]))$
       ecosystem:
         name: ecosystem
         description: An ecosystem is a combination of a physical environment (abiotic
@@ -70968,28 +71064,6 @@ classes:
         name: has raw value
         from_schema: http://w3id.org/mixs/ranges
         string_serialization: '{has numeric value} {has unit}'
-  Agent:
-    name: Agent
-    description: a provence-generating agent
-    from_schema: https://microbiomedata/schema/prov
-    mappings:
-    - prov:Agent
-    slots:
-    - acted_on_behalf_of
-    - was_informed_by
-  AttributeValue:
-    name: AttributeValue
-    description: The value for any value of a attribute for a sample. This object
-      can hold both the un-normalized atomic value and the structured value
-    from_schema: https://microbiomedata/schema/core
-    slots:
-    - has_raw_value
-    - was_generated_by
-    slot_usage:
-      type:
-        name: type
-        description: An optional string that specified the type of object.
-        required: false
   QuantityValue:
     name: QuantityValue
     description: A simple quantity, e.g. 2cm
@@ -71021,6 +71095,28 @@ classes:
         - QuantityValue
         - IntegerValue
         range: double
+  AttributeValue:
+    name: AttributeValue
+    description: The value for any value of a attribute for a sample. This object
+      can hold both the un-normalized atomic value and the structured value
+    from_schema: https://microbiomedata/schema/core
+    slots:
+    - has_raw_value
+    - was_generated_by
+    slot_usage:
+      type:
+        name: type
+        description: An optional string that specified the type of object.
+        required: false
+  Agent:
+    name: Agent
+    description: a provence-generating agent
+    from_schema: https://microbiomedata/schema/prov
+    mappings:
+    - prov:Agent
+    slots:
+    - acted_on_behalf_of
+    - was_informed_by
   Activity:
     name: Activity
     description: a provence-generating activity

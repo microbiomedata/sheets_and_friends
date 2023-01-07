@@ -24,7 +24,7 @@ source_alias = "mixs"
 source_class = "soil MIMS"
 source_schema = "../mixs-source/model/schema/mixs.yaml"
 
-destination_schema = SchemaDefinition(name="destination_schema", id="http://example.com/destination_schema")
+destination_schema = SchemaDefinition(name="destination_schema", id="https://example.com/destination_schema")
 destination_class = ClassDefinition(name="destination_class")
 destination_schema.classes['destination_class'] = destination_class
 

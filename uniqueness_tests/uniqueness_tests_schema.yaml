@@ -3,7 +3,7 @@ id: uniqueness_tests
 default_prefix: uniqueness_tests
 source_file: uniqueness_tests.yaml
 prefixes:
-  uniqueness_tests: http://example.com/uniqueness_tests/
+  uniqueness_tests: https://example.com/uniqueness_tests/
   linkml: https://w3id.org/linkml/
 imports:
   - linkml:types

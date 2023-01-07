@@ -114,7 +114,7 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # fetch validation_converter sheet as pd df
     validation_rules_df = pd.read_csv(validation_config_tsv, sep="\t", header=0)
 
-    # loop through all induced slots associated with all classes from 
+    # loop through all induced slots associated with all classes
     # from the schema_dict and modify slots in place
     for class_name, class_defn in schema_dict["classes"].items():
 

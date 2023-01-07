@@ -5,7 +5,7 @@ imports:
 prefixes:
   uniqueness_tests:
     prefix_prefix: uniqueness_tests
-    prefix_reference: http://example.com/uniqueness_tests/
+    prefix_reference: https://example.com/uniqueness_tests/
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
