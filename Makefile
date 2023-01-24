@@ -1,4 +1,4 @@
-nmdc_schemasheet_key = 1cMlPKgjZh-v21aMYCm9x1TxzE5BwGQptBQcvuaYAtC8 # sheets-for-nmdc-submission-schema, was nmdc-dh-sheets-mam-non-anno
+nmdc_schemasheet_key = 1_TSuvEUX68g_o3r1d9wvOYMMbZ3vO4eluvAd2wNJoSU # sheets-for-nmdc-submission-schema, was nmdc-dh-sheets-mam-non-anno
 credentials_file = local/nmdc-dh-sheets-0b754bedc29d.json
 bisample_sqlite = /Users/MAM/biosample_basex.db
 mixs_schema_path = https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/model/schema/mixs.yaml
@@ -16,7 +16,7 @@ ditch-unnecessaries
 #copy-dist-to-docs
 
 artifacts/nmdc_submission_schema.json: artifacts/nmdc_submission_schema.yaml
-	$(RUN) gen-linkml $< --format json > $@
+	$(RUN) gen-linkml $< --format json --materialize-patterns --materialize-attributes > $@
 
 ditch-unnecessaries:
 	rm -rf artifacts/from_sheets2linkml.yaml artifacts/nmdc_submission_schema_generated.yaml artifacts/with_shuttles.yaml
