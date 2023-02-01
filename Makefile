@@ -6,7 +6,8 @@ RUN = poetry run
 
 all: clean artifacts/mixs_subset.yaml
 	rm -rf artifacts/from_sheets2linkml.yaml
-	yq -i 'del(.classes.placeholder_class)' $(word 2,$^)
+	yq -i 'del(.classes.Biosample)' $(word 2,$^)
+	yq -i 'del(.classes.OmicsProcesing)' $(word 2,$^)
 
 .cogs:
 	$(RUN) cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)

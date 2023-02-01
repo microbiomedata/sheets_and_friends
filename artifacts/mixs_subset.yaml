@@ -35,18 +35,62 @@ subsets:
     description: A combination of a checklist and a package
     from_schema: http://w3id.org/mixs/terms
 enums:
-  tidal_stage_enum:
-    name: tidal_stage_enum
+  fao_class_enum:
+    name: fao_class_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      low tide:
-        text: low tide
-      ebb tide:
-        text: ebb tide
-      flood tide:
-        text: flood tide
-      high tide:
-        text: high tide
+      Acrisols:
+        text: Acrisols
+      Andosols:
+        text: Andosols
+      Arenosols:
+        text: Arenosols
+      Cambisols:
+        text: Cambisols
+      Chernozems:
+        text: Chernozems
+      Ferralsols:
+        text: Ferralsols
+      Fluvisols:
+        text: Fluvisols
+      Gleysols:
+        text: Gleysols
+      Greyzems:
+        text: Greyzems
+      Gypsisols:
+        text: Gypsisols
+      Histosols:
+        text: Histosols
+      Kastanozems:
+        text: Kastanozems
+      Lithosols:
+        text: Lithosols
+      Luvisols:
+        text: Luvisols
+      Nitosols:
+        text: Nitosols
+      Phaeozems:
+        text: Phaeozems
+      Planosols:
+        text: Planosols
+      Podzols:
+        text: Podzols
+      Podzoluvisols:
+        text: Podzoluvisols
+      Rankers:
+        text: Rankers
+      Regosols:
+        text: Regosols
+      Rendzinas:
+        text: Rendzinas
+      Solonchaks:
+        text: Solonchaks
+      Solonetz:
+        text: Solonetz
+      Vertisols:
+        text: Vertisols
+      Yermosols:
+        text: Yermosols
   cur_land_use_enum:
     name: cur_land_use_enum
     from_schema: http://w3id.org/mixs/terms
@@ -121,6 +165,20 @@ enums:
         text: swamp (permanent or semi-permanent water body dominated by woody plants)
       crop trees (nuts,fruit,christmas trees,nursery trees):
         text: crop trees (nuts,fruit,christmas trees,nursery trees)
+  profile_position_enum:
+    name: profile_position_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      summit:
+        text: summit
+      shoulder:
+        text: shoulder
+      backslope:
+        text: backslope
+      footslope:
+        text: footslope
+      toeslope:
+        text: toeslope
   oxy_stat_samp_enum:
     name: oxy_stat_samp_enum
     from_schema: http://w3id.org/mixs/terms
@@ -131,62 +189,56 @@ enums:
         text: anaerobic
       other:
         text: other
-  fao_class_enum:
-    name: fao_class_enum
+  tidal_stage_enum:
+    name: tidal_stage_enum
     from_schema: http://w3id.org/mixs/terms
     permissible_values:
-      Acrisols:
-        text: Acrisols
-      Andosols:
-        text: Andosols
-      Arenosols:
-        text: Arenosols
-      Cambisols:
-        text: Cambisols
-      Chernozems:
-        text: Chernozems
-      Ferralsols:
-        text: Ferralsols
-      Fluvisols:
-        text: Fluvisols
-      Gleysols:
-        text: Gleysols
-      Greyzems:
-        text: Greyzems
-      Gypsisols:
-        text: Gypsisols
-      Histosols:
-        text: Histosols
-      Kastanozems:
-        text: Kastanozems
-      Lithosols:
-        text: Lithosols
-      Luvisols:
-        text: Luvisols
-      Nitosols:
-        text: Nitosols
-      Phaeozems:
-        text: Phaeozems
-      Planosols:
-        text: Planosols
-      Podzols:
-        text: Podzols
-      Podzoluvisols:
-        text: Podzoluvisols
-      Rankers:
-        text: Rankers
-      Regosols:
-        text: Regosols
-      Rendzinas:
-        text: Rendzinas
-      Solonchaks:
-        text: Solonchaks
-      Solonetz:
-        text: Solonetz
-      Vertisols:
-        text: Vertisols
-      Yermosols:
-        text: Yermosols
+      low tide:
+        text: low tide
+      ebb tide:
+        text: ebb tide
+      flood tide:
+        text: flood tide
+      high tide:
+        text: high tide
+  biotic_relationship_enum:
+    name: biotic_relationship_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      free living:
+        text: free living
+      parasite:
+        text: parasite
+      commensal:
+        text: commensal
+      symbiont:
+        text: symbiont
+  organism_count_enum:
+    name: organism_count_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      ATP:
+        text: ATP
+      MPN:
+        text: MPN
+      other:
+        text: other
+  drainage_class_enum:
+    name: drainage_class_enum
+    from_schema: http://w3id.org/mixs/terms
+    permissible_values:
+      very poorly:
+        text: very poorly
+      poorly:
+        text: poorly
+      somewhat poorly:
+        text: somewhat poorly
+      moderately well:
+        text: moderately well
+      well:
+        text: well
+      excessively drained:
+        text: excessively drained
   tillage_enum:
     name: tillage_enum
     from_schema: http://w3id.org/mixs/terms
@@ -209,58 +261,6 @@ enums:
         text: mouldboard
       disc plough:
         text: disc plough
-  biotic_relationship_enum:
-    name: biotic_relationship_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      free living:
-        text: free living
-      parasite:
-        text: parasite
-      commensal:
-        text: commensal
-      symbiont:
-        text: symbiont
-  drainage_class_enum:
-    name: drainage_class_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      very poorly:
-        text: very poorly
-      poorly:
-        text: poorly
-      somewhat poorly:
-        text: somewhat poorly
-      moderately well:
-        text: moderately well
-      well:
-        text: well
-      excessively drained:
-        text: excessively drained
-  profile_position_enum:
-    name: profile_position_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      summit:
-        text: summit
-      shoulder:
-        text: shoulder
-      backslope:
-        text: backslope
-      footslope:
-        text: footslope
-      toeslope:
-        text: toeslope
-  organism_count_enum:
-    name: organism_count_enum
-    from_schema: http://w3id.org/mixs/terms
-    permissible_values:
-      ATP:
-        text: ATP
-      MPN:
-        text: MPN
-      other:
-        text: other
 slots:
   agrochem_addition:
     name: agrochem_addition
@@ -2936,28 +2936,171 @@ slots:
     slot_uri: MIXS:0000591
     multivalued: true
     range: string
-  environment field:
-    name: environment field
-    description: field describing environmental aspect of a sample
+  chimera_check:
+    name: chimera_check
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: name and version of software, parameters used
+    description: Tool(s) used for chimera checking, including version number and parameters, to discover and remove chimeric sequences. A chimeric sequence is comprised of two or more phylogenetically distinct parent sequences.
+    title: chimera check software
+    examples:
+      - value: uchime;v4.1;default parameters
     from_schema: http://w3id.org/mixs/terms
-    abstract: true
-  has unit:
-    name: has unit
-    description: Example "m"
-    from_schema: http://w3id.org/mixs/ranges
-    owner: quantity value
-  nucleic acid sequence source field:
-    name: nucleic acid sequence source field
+    aliases:
+      - chimera check software
+    is_a: sequencing field
+    string_serialization: '{software};{version};{parameters}'
+    slot_uri: MIXS:0000052
+    multivalued: false
+    range: string
+  nucl_acid_amp:
+    name: nucl_acid_amp
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: PMID, DOI or URL
+    description: A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids
+    title: nucleic acid amplification
+    examples:
+      - value: https://phylogenomics.me/protocols/16s-pcr-protocol/
     from_schema: http://w3id.org/mixs/terms
-    abstract: true
+    aliases:
+      - nucleic acid amplification
+    is_a: sequencing field
+    string_serialization: '{PMID}|{DOI}|{URL}'
+    slot_uri: MIXS:0000038
+    multivalued: false
+    range: string
+  nucl_acid_ext:
+    name: nucl_acid_ext
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: PMID, DOI or URL
+    description: A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample
+    title: nucleic acid extraction
+    examples:
+      - value: https://mobio.com/media/wysiwyg/pdfs/protocols/12888.pdf
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - nucleic acid extraction
+    is_a: sequencing field
+    string_serialization: '{PMID}|{DOI}|{URL}'
+    slot_uri: MIXS:0000037
+    multivalued: false
+    range: string
+  pcr_cond:
+    name: pcr_cond
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: initial denaturation:degrees_minutes;annealing:degrees_minutes;elongation:degrees_minutes;final elongation:degrees_minutes;total cycles
+    description: Description of reaction conditions and components of PCR in the form of 'initial denaturation:94degC_1.5min; annealing=...'
+    title: pcr conditions
+    examples:
+      - value: initial denaturation:94_3;annealing:50_1;elongation:72_1.5;final elongation:72_10;35
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - pcr conditions
+    is_a: sequencing field
+    string_serialization: initial denaturation:degrees_minutes;annealing:degrees_minutes;elongation:degrees_minutes;final elongation:degrees_minutes;total cycles
+    slot_uri: MIXS:0000049
+    multivalued: false
+    range: string
+  pcr_primers:
+    name: pcr_primers
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: 'FWD: forward primer sequence;REV:reverse primer sequence'
+    description: PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters
+    title: pcr primers
+    examples:
+      - value: FWD:GTGCCAGCMGCCGCGGTAA;REV:GGACTACHVGGGTWTCTAAT
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - pcr primers
+    is_a: sequencing field
+    string_serialization: FWD:{dna};REV:{dna}
+    slot_uri: MIXS:0000046
+    multivalued: false
+    range: string
+  seq_meth:
+    name: seq_meth
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: Text or OBI
+    description: Sequencing machine used. Where possible the term should be taken from the OBI list of DNA sequencers (http://purl.obolibrary.org/obo/OBI_0400103).
+    title: sequencing method
+    examples:
+      - value: 454 Genome Sequencer FLX [OBI:0000702]
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - sequencing method
+    is_a: sequencing field
+    string_serialization: '{termLabel} {[termID]}|{text}'
+    slot_uri: MIXS:0000050
+    multivalued: false
+    range: string
+  seq_quality_check:
+    name: seq_quality_check
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: none or manually edited
+    description: Indicate if the sequence has been called by automatic systems (none) or undergone a manual editing procedure (e.g. by inspecting the raw data or chromatograms). Applied only for sequences that are not submitted to SRA,ENA or DRA
+    title: sequence quality check
+    examples:
+      - value: none
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - sequence quality check
+    is_a: sequencing field
+    string_serialization: '[none|manually edited]'
+    slot_uri: MIXS:0000051
+    multivalued: false
+    range: string
+  target_gene:
+    name: target_gene
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: gene name
+    description: Targeted gene or locus name for marker gene studies
+    title: target gene
+    examples:
+      - value: 16S rRNA, 18S rRNA, nif, amoA, rpo
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - target gene
+    is_a: sequencing field
+    string_serialization: '{text}'
+    slot_uri: MIXS:0000044
+    multivalued: false
+    range: string
+  target_subfragment:
+    name: target_subfragment
+    annotations:
+      expected_value:
+        tag: expected_value
+        value: gene fragment name
+    description: Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like V6 on 16S rRNA
+    title: target subfragment
+    examples:
+      - value: V6, V9, ITS
+    from_schema: http://w3id.org/mixs/terms
+    aliases:
+      - target subfragment
+    is_a: sequencing field
+    string_serialization: '{text}'
+    slot_uri: MIXS:0000045
+    multivalued: false
+    range: string
   core field:
     name: core field
     description: basic fields
-    from_schema: http://w3id.org/mixs/terms
-    abstract: true
-  investigation field:
-    name: investigation field
-    description: field describing aspect of the investigation/study to which the sample belongs
     from_schema: http://w3id.org/mixs/terms
     abstract: true
   has numeric value:
@@ -2965,11 +3108,34 @@ slots:
     from_schema: http://w3id.org/mixs/ranges
     owner: quantity value
     range: double
+  has unit:
+    name: has unit
+    description: Example "m"
+    from_schema: http://w3id.org/mixs/ranges
+    owner: quantity value
+  environment field:
+    name: environment field
+    description: field describing environmental aspect of a sample
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
   has raw value:
     name: has raw value
     from_schema: http://w3id.org/mixs/ranges
     string_serialization: '{has numeric value} {has unit}'
     owner: quantity value
+  nucleic acid sequence source field:
+    name: nucleic acid sequence source field
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
+  investigation field:
+    name: investigation field
+    description: field describing aspect of the investigation/study to which the sample belongs
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
+  sequencing field:
+    name: sequencing field
+    from_schema: http://w3id.org/mixs/terms
+    abstract: true
 classes:
   quantity value:
     name: quantity value
