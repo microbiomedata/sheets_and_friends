@@ -5,6 +5,8 @@ RUN = poetry run
 .PHONY: all clean cogs_fetch squeaky_clean
 
 all: clean artifacts/mixs_subset.yaml
+	# this won't be a legal LinkML schema,
+	# but the slot definitions and enums will be legal when dropped into nmdc-schema's mixs.yaml
 	rm -rf artifacts/from_sheets2linkml.yaml
 	sed -i.bak 's/quantity value/QuantityValue/' $(word 2,$^)
 	sed -i.bak 's/range: string/range: TextValue/' $(word 2,$^)
@@ -14,13 +16,11 @@ all: clean artifacts/mixs_subset.yaml
 	yq -i '.slots.env_medium.range |= "ControlledIdentifiedTermValue"' $(word 2,$^)
 	yq -i 'del(.classes.Biosample)' $(word 2,$^)
 	yq -i 'del(.classes.OmicsProcesing)' $(word 2,$^)
+	yq -i 'del(.enums.[].name)' $(word 2,$^)
+	yq -i 'del(.slots.[].name)' $(word 2,$^)
 	yq -i 'del(.slots.has_numeric_value)' $(word 2,$^)
 	yq -i 'del(.slots.has_raw_value)' $(word 2,$^)
 	yq -i 'del(.slots.has_unit)' $(word 2,$^)
-
-	#sed -E -i.bak 's/^\s+name:.*$//' $(word 2,$^)
-
-
 
 .cogs:
 	$(RUN) cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
