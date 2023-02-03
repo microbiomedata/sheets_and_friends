@@ -18,9 +18,9 @@ all: clean artifacts/mixs_subset.yaml
 	yq -i 'del(.classes.OmicsProcesing)' $(word 2,$^)
 	yq -i 'del(.enums.[].name)' $(word 2,$^)
 	yq -i 'del(.slots.[].name)' $(word 2,$^)
-	yq -i 'del(.slots.has_numeric_value)' $(word 2,$^)
-	yq -i 'del(.slots.has_raw_value)' $(word 2,$^)
-	yq -i 'del(.slots.has_unit)' $(word 2,$^)
+#	yq -i 'del(.slots.has_numeric_value)' $(word 2,$^)
+#	yq -i 'del(.slots.has_raw_value)' $(word 2,$^)
+#	yq -i 'del(.slots.has_unit)' $(word 2,$^)
 
 .cogs:
 	$(RUN) cogs connect -k $(nmdc_schemasheet_key) -c $(credentials_file)
