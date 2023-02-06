@@ -29,7 +29,7 @@ jobs:
         working-directory: web
 
       - name: Build project
-        run: npm run build --base ${{ github.event.repository.name }}
+        run: npm run build -- --base /${{ github.event.repository.name }}/
         working-directory: web
 
       - name: Upload artifact
