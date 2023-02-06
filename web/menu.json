@@ -1,0 +1,84 @@
+{
+  "nmdc_submission_schema": {
+    "air": {
+      "name": "air",
+      "status": "published",
+      "display": true
+    },
+    "biofilm": {
+      "name": "biofilm",
+      "status": "published",
+      "display": true
+    },
+    "bioscales": {
+      "name": "bioscales",
+      "status": "published",
+      "display": true
+    },
+    "built_env": {
+      "name": "built_env",
+      "status": "published",
+      "display": true
+    },
+    "emsl": {
+      "name": "emsl",
+      "status": "published",
+      "display": true
+    },
+    "hcr-cores": {
+      "name": "hcr-cores",
+      "status": "published",
+      "display": true
+    },
+    "hcr-fluids-swabs": {
+      "name": "hcr-fluids-swabs",
+      "status": "published",
+      "display": true
+    },
+    "host-associated": {
+      "name": "host-associated",
+      "status": "published",
+      "display": true
+    },
+    "jgi_mg": {
+      "name": "jgi_mg",
+      "status": "published",
+      "display": true
+    },
+    "jgi_mt": {
+      "name": "jgi_mt",
+      "status": "published",
+      "display": true
+    },
+    "misc-envs": {
+      "name": "misc-envs",
+      "status": "published",
+      "display": true
+    },
+    "plant-associated": {
+      "name": "plant-associated",
+      "status": "published",
+      "display": true
+    },
+    "sediment": {
+      "name": "sediment",
+      "status": "published",
+      "display": true
+    },
+    "soil": {
+      "name": "soil",
+      "status": "published",
+      "display": true
+    },
+    "wastewater_sludge": {
+      "name": "wastewater_sludge",
+      "status": "published",
+      "display": true
+    },
+    "water": {
+      "name": "water",
+      "status": "published",
+      "display": true
+    }
+  }
+}

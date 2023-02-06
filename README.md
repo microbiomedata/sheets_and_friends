@@ -44,40 +44,20 @@ one-time, post-cloning submodule steps:
 
 _TODO: how to keep these up to date?_
 
-## running
-- `make all`
-- Navigate to the `DataHarmonizer` directory and double-click on `main.html` to open it in your browser
-- Add `?template=soil_emsl_jgi_mg` to the right-hand side of the address bar and hit enter
-- Get a valid data file to start with, either
-  - https://microbiomedata.github.io/sheets_and_friends/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_example_data.tsv
-  - `DataHarmonizer/template/soil_emsl_jgi_mg/exampleInput/soil_emsl_jgi_mg_export.tsv`
-- Use File->Open in the DataHarmonizer menu to load the valid data
-- Click the Validate button
-- Play around with the example values and try validating again
-- Double-click on a column header for information about the validation requirements
-- Create an [issue](https://github.com/microbiomedata/sheets_and_friends/issues) if something isn't behaving the way you expect
-- Try the `Save as...` and `Export to...` options from the DataHarmonizer File menu. Note the differences in the column headers.
+## Web Interface
 
+A lightweight DataHarmonizer interface is available to test schema changes. The web interface
+relies on its own separate copy of the schema. To sync any changes you have made to the schema:
 
+```shell
+make web/schemas/nmdc_submission_schema.json
+```
 
-## Alternative pure-Javascript build process
+Additionally, if you added or removed classes, update `web/menu.json` as needed.
 
-### Initial setup
+To run the interface:
 
-From the root of the repo: `npm init data-harmonizer  artifacts/nmdc_submission_schema.yaml`
-- What would you like your new project to be called?
-- choice of name not important, but don't forget it. `nmdc_dh` suggested.
-- follow the directions to select the schema classes that should be included as DH templates.
-
-1. `cd nmdc_dh`
-1. `npm run dev`
-    - starts a testing web server and displays the local address that should be visited
-    - vist, browse, test with some sample data, and then terminate with Control-C
-1. cat or copy to `nmdc_dh/vite.config.js`: `export default { base: '/sheets_and_friends/' }`
-   2. `echo "export default { base: '/sheets_and_friends/' }" >> vite.config.js `
-1. `npm run build`
-    - may get some warnings when minifying css
-1. `rm -rf ../docs/*`
-1. `cp -R dist/* ../docs`
-1. git add, commit and push
-
+```shell
+cd web
+npm run dev
+```

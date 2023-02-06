@@ -60,6 +60,9 @@ artifacts/nmdc_submission_schema.yaml: .cogs/tracked/modifications_long.tsv .cog
 		--validation_config_tsv $(word 2,$^) \
 		--yaml_output $@ 2>> logs/modifications_and_validation.log
 
+web/schemas/nmdc_submission_schema.json: artifacts/nmdc_submission_schema.json
+	cp $< $@
+
 clean:
 	rm -rf artifacts/*yaml
 	rm -rf artifacts/*tsv
