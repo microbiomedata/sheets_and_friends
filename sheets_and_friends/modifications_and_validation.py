@@ -12,9 +12,6 @@ from glom import glom, assign
 import glom.core as gc
 
 from linkml_runtime.utils.schemaview import SchemaView
-from linkml_runtime.loaders import yaml_loader
-
-import pprint
 
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
@@ -26,7 +23,8 @@ click_log.basic_config(logger)
 @click.option("--modifications_config_tsv", type=click.Path(exists=True), required=True)
 @click.option("--validation_config_tsv", type=click.Path(exists=True), required=True)
 @click.option("--yaml_output", type=click.Path(), required=True)
-def modifications_and_validation(yaml_input: str, modifications_config_tsv: str, validation_config_tsv: str, yaml_output: str):
+def modifications_and_validation(yaml_input: str, modifications_config_tsv: str, validation_config_tsv: str,
+                                 yaml_output: str):
     """
     :param yaml_input:
     :param config_tsv:
@@ -53,20 +51,77 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
 
     # todo break out overwrites first
     for i in mod_rule_lod:
+
+        pre_base_spec = f"classes.{i['class']}"
+        pre_base_dict = glom(schema_dict, pre_base_spec)
+        if "slot_usage" not in pre_base_dict:
+            assign(obj=pre_base_dict, path="slot_usage", val={})
+
+        with_usage_spec = f"classes.{i['class']}.slot_usage"
+        with_usage_dict = glom(schema_dict, with_usage_spec)
+        if i['slot'] not in with_usage_dict:
+            assign(obj=with_usage_dict, path=i['slot'], val={})
+
         base_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
         try:
             logger.info(f"{i['slot']} {i['action']} {i['target']} {i['value']}")
             slot_usage_extract = glom(schema_dict, base_path)
-            # update_path = None
-            if i['action'] == "replace_attribute" and i['target'] != "" and i['target'] is not None:
-                update_path = i['target']
-                fiddled_value = i['value']
-                from_meta = meta_view.get_slot(i['target'])
-                fm_range = from_meta.range
-                # update_path in ["identifier", "required", "recommended"]:
-                if fm_range == "boolean":
-                    fiddled_value = bool(i['value'])
-                assign(obj=slot_usage_extract, path=update_path, val=fiddled_value)
+
+            if i['action'] == "add_attribute" and i['target'] != "" and i['target'] is not None:
+
+                # todo abort if slot is not multivalued
+                #   alert use that value is being split on pipes
+
+                cv_path = i['target']
+
+                values_list = i['value'].split("|")
+                values_list = [x.strip() for x in values_list]
+
+                target_already_present = cv_path in slot_usage_extract
+                if target_already_present:
+                    current_value = glom(slot_usage_extract, cv_path)
+                    target_is_list = type(current_value) == list
+                    if target_is_list:
+                        augmented_list = current_value + values_list
+                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
+                    else:
+                        augmented_list = [current_value] + values_list
+                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
+                else:
+                    assign(obj=slot_usage_extract, path=i['target'], val=values_list)
+
+
+            elif i['action'] == "add_example" and i['target'] == "examples":
+                cv_path = i['target']
+
+                examples_list = i['value'].split("|")
+                examples_list = [x.strip() for x in examples_list]
+                assembled_list = []
+                for example_item in examples_list:
+                    assembled_list.append({'value': example_item})
+
+                target_already_present = cv_path in slot_usage_extract
+                if target_already_present:
+                    current_value = glom(slot_usage_extract, cv_path)
+                    target_is_list = type(current_value) == list
+                    if target_is_list:
+                        augmented_list = current_value + assembled_list
+                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
+                    else:
+                        augmented_list = [current_value] + assembled_list
+                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
+                else:
+                    assign(obj=slot_usage_extract, path=i['target'], val=assembled_list)
+
+
+            elif i['action'] == "overwrite_examples" and i['target'] == "examples":
+                examples_list = i['value'].split("|")
+                examples_list = [x.strip() for x in examples_list]
+                assembled_list = []
+                for example_item in examples_list:
+                    assembled_list.append({'value': example_item})
+                assign(obj=slot_usage_extract, path=i['target'], val=assembled_list)
+
             elif i['action'] == "replace_annotation" and i['target'] != "" and i['target'] is not None:
                 if "annotations" in slot_usage_extract:
                     update_path = f"annotations.{i['target']}"
@@ -74,37 +129,18 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
                 else:
                     update_path = f"annotations"
                     assign(obj=slot_usage_extract, path=update_path, val={i['target']: i['value']})
+
+            elif i['action'] == "replace_attribute" and i['target'] != "" and i['target'] is not None:
+                update_path = i['target']
+                fiddled_value = i['value']
+                from_meta = meta_view.get_slot(i['target'])
+                fm_range = from_meta.range
+                if fm_range == "boolean":
+                    fiddled_value = bool(i['value'])
+                assign(obj=slot_usage_extract, path=update_path, val=fiddled_value)
+
             # todo refactor
-            elif i['action'] == "add_example" and i['target'] == "examples":
-                cv_path = i['target']
-                try:
-                    current_value = glom(slot_usage_extract, cv_path)
-                    current_type = type(current_value)
-                    if current_type != list:
-                        current_value = list(current_value)
-                    current_value.append({'value': i['value']})
-                    logger.info(current_value)
-                except gc.PathAccessError as e:
-                    logger.info(e)
-                    current_value = [{'value': i['value']}]
-                assign(obj=slot_usage_extract, path=i['target'], val=current_value)
-            elif i['action'] == "overwrite_examples" and i['target'] == "examples":
-                assign(obj=slot_usage_extract, path=i['target'], val=[{'value': i['value']}])
-            elif i['action'] == "add_attribute" and i['target'] != "" and i['target'] is not None:
-                cv_path = i['target']
-                try:
-                    current_value = glom(slot_usage_extract, cv_path)
-                    current_type = type(current_value)
-                    if current_type != list:
-                        current_value = list(current_value)
-                    current_value.append(i['value'])
-                except gc.PathAccessError as e:
-                    logger.debug(e)
-                    current_value = [i['value']]
-                # logger.info(pprint.pformat(current_value))
-                assign(obj=slot_usage_extract, path=cv_path, val=current_value)
-            # if update_path:
-            #     assign(obj=schema_dict, path=base_path, val=slot_usage_extract)
+
         except gc.PathAccessError as e:
             logger.warning(e)
 
@@ -128,27 +164,27 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
 
                 # when slot range in filtered list from validation_converter
                 if "range" in slot_defn and (
-                    slot_defn["range"]
-                    in validation_rules_df[
-                        validation_rules_df["to_type"] == "DH pattern regex"
-                    ]["from_val"].to_list()
+                        slot_defn["range"]
+                        in validation_rules_df[
+                            validation_rules_df["to_type"] == "DH pattern regex"
+                        ]["from_val"].to_list()
                 ):
                     slot_defn["pattern"] = validation_rules_df[
                         validation_rules_df["from_val"] == slot_defn["range"]
-                    ]["to_val"].to_list()[0]
+                        ]["to_val"].to_list()[0]
 
                 # when slot string_serialization in filtered list
                 # from validation_converter
                 if "string_serialization" in slot_defn and (
-                    slot_defn["string_serialization"]
-                    in validation_rules_df[
-                        validation_rules_df["to_type"] == "DH pattern regex"
-                    ]["from_val"].to_list()
+                        slot_defn["string_serialization"]
+                        in validation_rules_df[
+                            validation_rules_df["to_type"] == "DH pattern regex"
+                        ]["from_val"].to_list()
                 ):
                     slot_defn["pattern"] = validation_rules_df[
                         validation_rules_df["from_val"]
                         == slot_defn["string_serialization"]
-                    ]["to_val"].to_list()[0]
+                        ]["to_val"].to_list()[0]
 
     # ==================================================== #
 
