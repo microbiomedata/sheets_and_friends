@@ -6,7 +6,9 @@ import click
 import click_log
 import pandas as pd
 
-import yaml
+# import yaml
+
+from ruamel.yaml import YAML
 
 from glom import glom, assign
 import glom.core as gc
@@ -35,13 +37,18 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # todo be defensive
     # parameterize?
 
+    yaml = YAML()
+
     meta_view = SchemaView("https://w3id.org/linkml/meta")
 
-    with open(yaml_input, 'r') as stream:
-        try:
-            schema_dict = yaml.safe_load(stream)
-        except yaml.YAMLError as e:
-            logger.warning(e)
+    with open('src/schema/nmdc.yaml') as f:
+        schema_dict = yaml.load(f)
+
+    # with open(yaml_input, 'r') as stream:
+    #     try:
+    #         schema_dict = yaml.safe_load(stream)
+    #     except yaml.YAMLError as e:
+    #         logger.warning(e)
 
     mod_rule_frame = pd.read_csv(modifications_config_tsv, sep="\t")
     mod_rule_frame['class'] = mod_rule_frame['class'].str.split("|")
@@ -188,7 +195,10 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
 
     # ==================================================== #
 
-    with open(yaml_output, 'w') as outfile:
+    # with open(yaml_output, 'w') as outfile:
+    #     yaml.dump(schema_dict, outfile, default_flow_style=False, sort_keys=False)
+
+    with open(yaml_output, 'w') as f:
         yaml.dump(schema_dict, outfile, default_flow_style=False, sort_keys=False)
 
 
