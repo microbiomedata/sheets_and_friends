@@ -199,7 +199,7 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     #     yaml.dump(schema_dict, outfile, default_flow_style=False, sort_keys=False)
 
     with open(yaml_output, 'w') as f:
-        yaml.dump(schema_dict, outfile, default_flow_style=False, sort_keys=False)
+        yaml.dump(schema_dict, f, default_flow_style=False, sort_keys=False)
 
 
 if __name__ == '__main__':
