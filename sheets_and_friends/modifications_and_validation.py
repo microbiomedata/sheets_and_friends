@@ -1,19 +1,17 @@
-import logging
-
-# from typing import List, Optional, Dict, Any
-
 import click
 import click_log
+import glom.core as gc
+import logging
 import pandas as pd
-
-# import yaml
-
+import yaml
+from glom import glom, Assign
+from linkml_runtime.dumpers import yaml_dumper
+from linkml_runtime.linkml_model import SlotDefinition
+from linkml_runtime.utils.schemaview import SchemaView
+from pprint import pformat
 from ruamel.yaml import YAML
 
-from glom import glom, assign
-import glom.core as gc
-
-from linkml_runtime.utils.schemaview import SchemaView
+# from typing import List, Optional, Dict, Any
 
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
@@ -37,116 +35,155 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # todo be defensive
     # parameterize?
 
-    yaml = YAML()
-
     meta_view = SchemaView("https://w3id.org/linkml/meta")
 
-    with open('src/schema/nmdc.yaml') as f:
-        schema_dict = yaml.load(f)
+    # yaml = YAML()
+    # with open('src/schema/nmdc.yaml') as f:
+    #     schema_dict = yaml.load(f)
 
-    # with open(yaml_input, 'r') as stream:
-    #     try:
-    #         schema_dict = yaml.safe_load(stream)
-    #     except yaml.YAMLError as e:
-    #         logger.warning(e)
+    with open(yaml_input, 'r') as stream:
+        try:
+            schema_dict = yaml.safe_load(stream)
+        except yaml.YAMLError as e:
+            logger.warning(e)
 
     mod_rule_frame = pd.read_csv(modifications_config_tsv, sep="\t")
     mod_rule_frame['class'] = mod_rule_frame['class'].str.split("|")
     mod_rule_frame = mod_rule_frame.explode('class')
-
     mod_rule_lod = mod_rule_frame.to_dict(orient='records')
 
     # todo break out overwrites first
     for i in mod_rule_lod:
 
-        pre_base_spec = f"classes.{i['class']}"
-        pre_base_dict = glom(schema_dict, pre_base_spec)
-        if "slot_usage" not in pre_base_dict:
-            assign(obj=pre_base_dict, path="slot_usage", val={})
-
-        with_usage_spec = f"classes.{i['class']}.slot_usage"
-        with_usage_dict = glom(schema_dict, with_usage_spec)
-        if i['slot'] not in with_usage_dict:
-            assign(obj=with_usage_dict, path=i['slot'], val={})
-
         base_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
+
+        logger.warning("\nstarting a new modification rule\n")
+        logger.warning(i)
+
+        logger.warning(f"checking if {i['class']} has a slot_usage block")
+        class_query = f"classes.{i['class']}"
+        logger.warning(f"{class_query = }")
+        class_results_dict = glom(schema_dict, class_query)
+        if "slot_usage" not in class_results_dict:
+            logger.warning(f"slot_usage missing from {i['class']}")
+            add_usage_path = f"classes.{i['class']}.slot_usage"
+            # logger.warning(f"{add_usage_path = }")
+            add_usage_dict = {"placeholder": {"name": "placeholder"}}
+            # logger.warning(f"{add_usage_dict = }")
+            glom(schema_dict, Assign(add_usage_path, add_usage_dict))
+            logger.warning(pformat(schema_dict['classes'][i['class']]['slot_usage']))
+        else:
+            logger.warning(f"slot_usage already present in {i['class']}")
+            slot_usage = schema_dict['classes'][i['class']]['slot_usage']
+            if len(slot_usage.keys()) > 1 and "placeholder" in slot_usage.keys():
+                del slot_usage['placeholder']
+
+        logger.warning(f"checking if {i['slot']} is mentioned in {i['class']}'s slot_usage")
+        usage_query = f"classes.{i['class']}.slot_usage"
+        logger.warning(f"{usage_query = }")
+        usage_dict = glom(schema_dict, usage_query)
+        logger.warning(usage_dict)
+        if i['slot'] not in usage_dict:
+            logger.warning(f"Adding {i['slot']} to {i['class']}'s slot_usage")
+            add_slot_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
+            # add_slot_dict = {"name": {i['slot']}}
+            add_slot_dict = {"name": f"{i['slot']}"}
+            glom(schema_dict, Assign(add_slot_path, add_slot_dict))
+            logger.warning(pformat(schema_dict['classes'][i['class']]['slot_usage'][i['slot']]))
+        else:
+            logger.warning(f"{i['slot']} already present in {i['class']}'s slot_usage")
+
         try:
             logger.info(f"{i['slot']} {i['action']} {i['target']} {i['value']}")
             slot_usage_extract = glom(schema_dict, base_path)
 
             if i['action'] == "add_attribute" and i['target'] != "" and i['target'] is not None:
-
                 # todo abort if slot is not multivalued
                 #   alert use that value is being split on pipes
-
                 cv_path = i['target']
-
                 values_list = i['value'].split("|")
                 values_list = [x.strip() for x in values_list]
-
                 target_already_present = cv_path in slot_usage_extract
+
                 if target_already_present:
                     current_value = glom(slot_usage_extract, cv_path)
                     target_is_list = type(current_value) == list
                     if target_is_list:
                         augmented_list = current_value + values_list
-                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
                     else:
                         augmented_list = [current_value] + values_list
-                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
                 else:
-                    assign(obj=slot_usage_extract, path=i['target'], val=values_list)
-
+                    augmented_list = values_list
+                glom(schema_dict, Assign(f"{base_path}.{i['target']}", augmented_list))
 
             elif i['action'] == "add_example" and i['target'] == "examples":
+                logger.warning("overwrite_examples")
                 cv_path = i['target']
-
                 examples_list = i['value'].split("|")
                 examples_list = [x.strip() for x in examples_list]
                 assembled_list = []
                 for example_item in examples_list:
                     assembled_list.append({'value': example_item})
-
+                logger.warning(f"assembled_list: {assembled_list}")
                 target_already_present = cv_path in slot_usage_extract
                 if target_already_present:
                     current_value = glom(slot_usage_extract, cv_path)
                     target_is_list = type(current_value) == list
                     if target_is_list:
+                        logger.warning(f"a list of examples is already present: {current_value}")
                         augmented_list = current_value + assembled_list
-                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
-                    else:
-                        augmented_list = [current_value] + assembled_list
-                        assign(obj=slot_usage_extract, path=i['target'], val=augmented_list)
-                else:
-                    assign(obj=slot_usage_extract, path=i['target'], val=assembled_list)
+                        logger.warning(f"augmented_list: {augmented_list}")
 
+                    else:
+                        logger.warning(f"a scalar example is already present: {current_value}")
+                        augmented_list = [current_value] + assembled_list
+                        logger.warning(f"augmented_list: {augmented_list}")
+
+                else:
+                    augmented_list = assembled_list
+                glom(schema_dict, Assign(f"{base_path}.{i['target']}", augmented_list))
 
             elif i['action'] == "overwrite_examples" and i['target'] == "examples":
+                logger.warning("overwrite_examples")
                 examples_list = i['value'].split("|")
                 examples_list = [x.strip() for x in examples_list]
                 assembled_list = []
                 for example_item in examples_list:
                     assembled_list.append({'value': example_item})
-                assign(obj=slot_usage_extract, path=i['target'], val=assembled_list)
+                logger.warning(f"assembled_list: {assembled_list}")
+                glom(schema_dict, Assign(f"{base_path}.{i['target']}", assembled_list))
 
             elif i['action'] == "replace_annotation" and i['target'] != "" and i['target'] is not None:
+                logger.warning("replace_annotation")
                 if "annotations" in slot_usage_extract:
                     update_path = f"annotations.{i['target']}"
-                    assign(obj=slot_usage_extract, path=update_path, val=i['value'])
+                    logger.warning(f"update_path: {update_path}")
+                    logger.warning(f"value: {value}")
+                    glom(schema_dict, Assign(f"{base_path}.{i['target']}", i['value']))
                 else:
                     update_path = f"annotations"
-                    assign(obj=slot_usage_extract, path=update_path, val={i['target']: i['value']})
+                    logger.warning(f"update_path: {update_path}")
+                    logger.warning(f"target: {target}")
+                    logger.warning(f"value: {value}")
+                    glom(schema_dict, Assign(f"{base_path}.{i['target']}", {i['target']: i['value']}))
 
             elif i['action'] == "replace_attribute" and i['target'] != "" and i['target'] is not None:
+                logger.warning("replace_attribute")
                 update_path = i['target']
+                logger.warning(f"update_path: {update_path}")
                 fiddled_value = i['value']
+                logger.warning(f"fiddled_value: {fiddled_value}")
                 from_meta = meta_view.get_slot(i['target'])
                 fm_range = from_meta.range
                 if fm_range == "boolean":
                     fiddled_value = bool(i['value'])
-                assign(obj=slot_usage_extract, path=update_path, val=fiddled_value)
+                glom(schema_dict, Assign(f"{base_path}.{i['target']}", fiddled_value))
+                # assign(obj=slot_usage_extract, path=update_path, val=fiddled_value)
 
-            # todo refactor
+            else:
+                logger.warning(f"no action for {i['action']}")
+
+        # todo refactor
 
         except gc.PathAccessError as e:
             logger.warning(e)
@@ -157,7 +194,7 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # fetch validation_converter sheet as pd df
     validation_rules_df = pd.read_csv(validation_config_tsv, sep="\t", header=0)
 
-    # loop through all induced slots associated with all classes from
+    # loop through all induced slots associated with all classes
     # from the schema_dict and modify slots in place
     for class_name, class_defn in schema_dict["classes"].items():
 
@@ -192,11 +229,6 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
                         validation_rules_df["from_val"]
                         == slot_defn["string_serialization"]
                         ]["to_val"].to_list()[0]
-
-    # ==================================================== #
-
-    # with open(yaml_output, 'w') as outfile:
-    #     yaml.dump(schema_dict, outfile, default_flow_style=False, sort_keys=False)
 
     with open(yaml_output, 'w') as f:
         yaml.dump(schema_dict, f)
