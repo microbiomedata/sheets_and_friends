@@ -150,12 +150,14 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
                 if "annotations" in slot_usage_extract:
                     logger.warning("annotations already present")
                     update_path = f"annotations.{i['target']}"
+                    logger.warning(f"base_path: {base_path}")
                     logger.warning(f"update_path: {update_path}")
                     logger.warning(f"value: {i['value']}")
-                    glom(schema_dict, Assign(f"{base_path}.{i['target']}", i['value']))
+                    glom(schema_dict, Assign(f"{base_path}.annotations.{i['target']}", i['value']))
                 else:
                     logger.warning("annotations not present")
                     update_path = f"annotations"
+                    logger.warning(f"base_path: {base_path}")
                     logger.warning(f"update_path: {update_path}")
                     logger.warning(f"target: {i['target']}")
                     logger.warning(f"value: {i['value']}")
