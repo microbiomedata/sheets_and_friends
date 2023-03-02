@@ -33,9 +33,9 @@ def do_shuttle(recipient_model: str, config_tsv: str, yaml_output: str):
     :param yaml_output:
     :return:
     """
-
     shuttle = Shuttle()
     shuttle.tsv_file = config_tsv
+
     shuttle.recipient_model_fp = recipient_model
     shuttle.get_slots_from_tsv()
     shuttle.prepare_dest_schema()
@@ -108,7 +108,6 @@ class Shuttle:
         for k, v in self.sources_first.items():
             current_view = self.views_dict[k]
             for i in v['transactions']:
-                logger.info(i)
                 # {'source class': 'soil MIMS', 'source file or URL': 'mixs-source/model/schema/mixs.yaml',
                 # 'slot': 'core field', 'destination class': 'placeholder_class', 'notes': 'placeholder for dependency'}
 
@@ -168,13 +167,10 @@ class Shuttle:
                         "exhausted_types": set(),
                     }
 
-                    # logger.info(pprint.pformat(class_slot_dict))
-
                     # inefficient to repeat this reading and overwriting
                     exhausted_lite = Sheet2LinkML(path_to_yaml=schema_fp)
                     view_helper = exhausted_lite.make_view_helper(schema_alias=source_class, class_name=source_class)
                     dependency_exhaustion = exhausted_lite.modular_exhaust_class(class_slot_dict, view_helper)
-                    # logger.info(pprint.pformat(dependency_exhaustion))
 
                     for e_name in dependency_exhaustion['exhausted_enums']:
                         self.destination_schema.enums[e_name] = view_helper['view'].get_enum(e_name)

@@ -57,12 +57,7 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
 
         base_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
 
-        logger.warning("\nstarting a new modification rule\n")
-        logger.warning(i)
-
-        logger.warning(f"checking if {i['class']} has a slot_usage block")
         class_query = f"classes.{i['class']}"
-        logger.warning(f"{class_query = }")
         class_results_dict = glom(schema_dict, class_query)
         if "slot_usage" not in class_results_dict:
             logger.warning(f"slot_usage missing from {i['class']}")
@@ -78,11 +73,8 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
             if len(slot_usage.keys()) > 1 and "placeholder" in slot_usage.keys():
                 del slot_usage['placeholder']
 
-        logger.warning(f"checking if {i['slot']} is mentioned in {i['class']}'s slot_usage")
         usage_query = f"classes.{i['class']}.slot_usage"
-        logger.warning(f"{usage_query = }")
         usage_dict = glom(schema_dict, usage_query)
-        logger.warning(usage_dict)
         if i['slot'] not in usage_dict:
             logger.warning(f"Adding {i['slot']} to {i['class']}'s slot_usage")
             add_slot_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
