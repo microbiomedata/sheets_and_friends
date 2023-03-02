@@ -148,15 +148,17 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
             elif i['action'] == "replace_annotation" and i['target'] != "" and i['target'] is not None:
                 logger.warning("replace_annotation")
                 if "annotations" in slot_usage_extract:
+                    logger.warning("annotations already present")
                     update_path = f"annotations.{i['target']}"
                     logger.warning(f"update_path: {update_path}")
-                    logger.warning(f"value: {value}")
+                    logger.warning(f"value: {i['value']}")
                     glom(schema_dict, Assign(f"{base_path}.{i['target']}", i['value']))
                 else:
+                    logger.warning("annotations not present")
                     update_path = f"annotations"
                     logger.warning(f"update_path: {update_path}")
-                    logger.warning(f"target: {target}")
-                    logger.warning(f"value: {value}")
+                    logger.warning(f"target: {i['target']}")
+                    logger.warning(f"value: {i['value']}")
                     glom(schema_dict, Assign(f"{base_path}.{i['target']}", {i['target']: i['value']}))
 
             elif i['action'] == "replace_attribute" and i['target'] != "" and i['target'] is not None:
