@@ -190,12 +190,15 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # fetch validation_converter sheet as pd df
     validation_rules_df = pd.read_csv(validation_config_tsv, sep="\t", header=0)
 
+    # logger.warning(f"validation_rules_df: {validation_rules_df}")
+
     # loop through all induced slots associated with all classes
     # from the schema_dict and modify slots in place
+
     for class_name, class_defn in schema_dict["classes"].items():
 
         # check if the slot_usage key exists in each class definition
-        if "slot_usage" in class_defn:
+        if "slot_usage" in class_defn and len(class_defn["slot_usage"]) > 0:
 
             # loop over slot_usage items from each of the classes
             for _, slot_defn in schema_dict["classes"][class_name][
