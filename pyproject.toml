@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sheets_and_friends"
-version = "0.1.10"
+version = "0.2.0"
 description = "Create a LinkML model with as-is imported slots, imported but modified slots (via yq), or newly minted slots (via schemasheets)"
 authors = ["Mark Andrew Miller <MAM@lbl.gov>"]
 license = "MIT"
@@ -20,6 +20,7 @@ autoflake = "^1.7.8"
 black = "^23.1.0"
 flake8 = "^4.0.1"
 mypy = "^0.961"
+linkml = "^1.4.6"
 
 
 [build-system]

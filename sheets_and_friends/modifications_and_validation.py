@@ -57,12 +57,7 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
 
         base_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
 
-        logger.warning("\nstarting a new modification rule\n")
-        logger.warning(i)
-
-        logger.warning(f"checking if {i['class']} has a slot_usage block")
         class_query = f"classes.{i['class']}"
-        logger.warning(f"{class_query = }")
         class_results_dict = glom(schema_dict, class_query)
         if "slot_usage" not in class_results_dict:
             logger.warning(f"slot_usage missing from {i['class']}")
@@ -78,11 +73,8 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
             if len(slot_usage.keys()) > 1 and "placeholder" in slot_usage.keys():
                 del slot_usage['placeholder']
 
-        logger.warning(f"checking if {i['slot']} is mentioned in {i['class']}'s slot_usage")
         usage_query = f"classes.{i['class']}.slot_usage"
-        logger.warning(f"{usage_query = }")
         usage_dict = glom(schema_dict, usage_query)
-        logger.warning(usage_dict)
         if i['slot'] not in usage_dict:
             logger.warning(f"Adding {i['slot']} to {i['class']}'s slot_usage")
             add_slot_path = f"classes.{i['class']}.slot_usage.{i['slot']}"
@@ -156,15 +148,19 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
             elif i['action'] == "replace_annotation" and i['target'] != "" and i['target'] is not None:
                 logger.warning("replace_annotation")
                 if "annotations" in slot_usage_extract:
+                    logger.warning("annotations already present")
                     update_path = f"annotations.{i['target']}"
+                    logger.warning(f"base_path: {base_path}")
                     logger.warning(f"update_path: {update_path}")
-                    logger.warning(f"value: {value}")
-                    glom(schema_dict, Assign(f"{base_path}.{i['target']}", i['value']))
+                    logger.warning(f"value: {i['value']}")
+                    glom(schema_dict, Assign(f"{base_path}.annotations.{i['target']}", i['value']))
                 else:
+                    logger.warning("annotations not present")
                     update_path = f"annotations"
+                    logger.warning(f"base_path: {base_path}")
                     logger.warning(f"update_path: {update_path}")
-                    logger.warning(f"target: {target}")
-                    logger.warning(f"value: {value}")
+                    logger.warning(f"target: {i['target']}")
+                    logger.warning(f"value: {i['value']}")
                     glom(schema_dict, Assign(f"{base_path}.{i['target']}", {i['target']: i['value']}))
 
             elif i['action'] == "replace_attribute" and i['target'] != "" and i['target'] is not None:
@@ -194,12 +190,15 @@ def modifications_and_validation(yaml_input: str, modifications_config_tsv: str,
     # fetch validation_converter sheet as pd df
     validation_rules_df = pd.read_csv(validation_config_tsv, sep="\t", header=0)
 
+    # logger.warning(f"validation_rules_df: {validation_rules_df}")
+
     # loop through all induced slots associated with all classes
     # from the schema_dict and modify slots in place
+
     for class_name, class_defn in schema_dict["classes"].items():
 
         # check if the slot_usage key exists in each class definition
-        if "slot_usage" in class_defn:
+        if "slot_usage" in class_defn and len(class_defn["slot_usage"]) > 0:
 
             # loop over slot_usage items from each of the classes
             for _, slot_defn in schema_dict["classes"][class_name][
