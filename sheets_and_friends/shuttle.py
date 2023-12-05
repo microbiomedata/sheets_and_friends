@@ -172,10 +172,10 @@ class Shuttle:
                     view_helper = exhausted_lite.make_view_helper(schema_alias=source_class, class_name=source_class)
                     dependency_exhaustion = exhausted_lite.modular_exhaust_class(class_slot_dict, view_helper)
 
-                    for e_name in dependency_exhaustion['exhausted_enums']:
+                    for e_name in sorted(dependency_exhaustion['exhausted_enums']):
                         self.destination_schema.enums[e_name] = view_helper['view'].get_enum(e_name)
 
-                    for c_name in dependency_exhaustion['exhausted_ranges']:
+                    for c_name in sorted(dependency_exhaustion['exhausted_ranges']):
                         self.destination_schema.classes[c_name] = view_helper['view'].get_class(c_name)
 
                     # # refactor?
@@ -195,7 +195,7 @@ class Shuttle:
                     for ssk, ssv in dependency_exhaustion['subsets'].items():
                         self.destination_schema.subsets[ssk] = ssv
 
-                    for s_name in dependency_exhaustion['exhausted_slots']:
+                    for s_name in sorted(dependency_exhaustion['exhausted_slots']):
                         self.destination_schema.slots[s_name] = view_helper['view'].get_slot(s_name)
 
     def exhaust_dependencies(self):
