@@ -7,17 +7,13 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+click = "^8.0.0"
 click_log = "0.4.0"
 glom = "^23.1.1"
-click = "^8.0.0"
-
-# 1.4.5 required for merging schema modules form URLs wiht SchemaView?
 linkml-runtime = "^1.4.0"
-
-pandas = "^1.3.4"
+pandas = ">=1.3.4"
 pandasql = "^0.7.3"
 pygsheets = "^2.0.5"
-
 #schemasheets = "^0.1.21"
 ##schemasheets = { path = "/home/mark/gitrepos/schemasheets", develop = true }
 
