@@ -4,6 +4,7 @@ version = "0.5.2"
 description = "Enhance a LinkML model with imported and optionally modified slots"
 authors = ["Mark Andrew Miller <MAM@lbl.gov>"]
 license = "MIT"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
