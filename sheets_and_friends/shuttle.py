@@ -48,10 +48,6 @@ def do_shuttle(recipient_model: str, config_tsv: str, yaml_output: str):
     shuttle.write_schema()
 
 
-if __name__ == '__main__':
-    do_shuttle()
-
-
 class Shuttle:
     def __init__(self):
         self.yaml_output: Optional[str] = None
@@ -178,16 +174,9 @@ class Shuttle:
                     for c_name in sorted(dependency_exhaustion['exhausted_ranges']):
                         self.destination_schema.classes[c_name] = view_helper['view'].get_class(c_name)
 
-                    # # refactor?
-                    # # ValueError: Conflicting URIs (https://w3id.org/linkml/types, https://example.com/nmdc_dh) for item: string
-                    # #   from gen-project
-                    # for t_name in dependency_exhaustion['exhausted_types']:
-                    #     have_types = self.destination_schema.types
-                    #     # always empty
-                    #     print(have_types)
-                    #     # ht_names = [i.name for i in have_types]
-                    #     # if t_name not in ht_names:
-                    #     #     self.destination_schema.types[t_name] = view_helper['view'].get_type(t_name)
+                    for t_name in dependency_exhaustion['exhausted_types']:
+                        if t_name not in self.destination_schema.types:
+                            self.destination_schema.types[t_name] = view_helper['view'].get_type(t_name)
 
                     for pk, pv in dependency_exhaustion['prefixes'].items():
                         self.destination_schema.prefixes[pk] = pv
@@ -204,3 +193,7 @@ class Shuttle:
 
     def write_schema(self):
         yaml_dumper.dump(self.destination_schema, to_file=self.yaml_output)
+
+
+if __name__ == '__main__':
+    do_shuttle()

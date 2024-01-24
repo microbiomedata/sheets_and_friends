@@ -310,24 +310,24 @@ files = [
 
 [[package]]
 name = "curies"
-version = "0.4.5"
+version = "0.7.6"
 description = "Idiomatic conversion between URIs and compact URIs (CURIEs)."
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "curies-0.4.5-py3-none-any.whl", hash = "sha256:73281f6616ec47c8d46d842def7a2021416c9ac10f580f9116125abf4bd2f943"},
-    {file = "curies-0.4.5.tar.gz", hash = "sha256:c01626183b520db1b4af6a1fd41ee6d02462fea4ce54d8c5a528e5782268589c"},
+    {file = "curies-0.7.6-py3-none-any.whl", hash = "sha256:3307e757e47ed4384edb705c73cad40ad5e688e2dea263a60e6a5e5a6c33105d"},
+    {file = "curies-0.7.6.tar.gz", hash = "sha256:f86da3539cee349249f5b64db99651053649551920b9fe945c150719c8b9b40e"},
 ]
 
 [package.dependencies]
+pydantic = "*"
 pytrie = "*"
 requests = "*"
 
 [package.extras]
-bioregistry = ["bioregistry (>=0.5.136)"]
-docs = ["sphinx", "sphinx-autodoc-typehints", "sphinx-automodapi", "sphinx-rtd-theme"]
-fastapi = ["fastapi", "httpx"]
-flask = ["flask"]
+docs = ["sphinx", "sphinx-automodapi", "sphinx-rtd-theme"]
+fastapi = ["defusedxml", "fastapi", "httpx", "python-multipart", "uvicorn"]
+flask = ["defusedxml", "flask"]
 pandas = ["pandas"]
 rdflib = ["rdflib"]
 tests = ["coverage", "pytest"]
@@ -982,25 +982,26 @@ linkml-runtime = ">=1.1.6"
 
 [[package]]
 name = "linkml-runtime"
-version = "1.5.0"
+version = "1.6.3"
 description = "Runtime environment for LinkML, the Linked open data modeling language"
 optional = false
 python-versions = ">=3.7.6,<4.0.0"
 files = [
-    {file = "linkml_runtime-1.5.0-py3-none-any.whl", hash = "sha256:ddc3d224d9db39be2df33a02718cd75462942009454aca7f828b726129357a37"},
-    {file = "linkml_runtime-1.5.0.tar.gz", hash = "sha256:dd80aec72f6d3226b39415cf4aa8cdda482dc73fcc227f938c6fff72afd80b20"},
+    {file = "linkml_runtime-1.6.3-py3-none-any.whl", hash = "sha256:08f616302ce493be775104c87bd5a2ec0eb2c67624e611a3f7e28c978d08a4d1"},
+    {file = "linkml_runtime-1.6.3.tar.gz", hash = "sha256:88e3d0b776055723d187128c03527145dc1ffdc2d2a69e89f8aabce203d418a3"},
 ]
 
 [package.dependencies]
 click = "*"
-curies = ">=0.4.0,<0.5.0"
+curies = ">=0.5.4"
 deprecated = "*"
 hbreader = "*"
 json-flattener = ">=0.1.9"
-jsonasobj2 = ">=1.0.4,<2.0.0"
+jsonasobj2 = ">=1.0.4,<2.dev0"
 jsonschema = ">=3.2.0"
 prefixcommons = ">=0.1.12"
 prefixmaps = ">=0.1.4"
+pydantic = ">=1.10.2,<3.0.0"
 pyyaml = "*"
 rdflib = ">=6.0.0"
 requests = "*"
