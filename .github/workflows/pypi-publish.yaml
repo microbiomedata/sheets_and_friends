@@ -12,20 +12,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.9
+      - name: Install poetry
+        run: pipx install poetry
 
-      - name: Install Poetry
-        run: pipx install poetry==1.7.1
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'poetry'
 
       - name: Add dynamic versioning plugin
-        run: poetry self add "poetry-dynamic-versioning[plugin]"
+        run: pipx inject poetry "poetry-dynamic-versioning[plugin]"
 
       - name: Build source and wheel archives
-        run: |
-          poetry build
+        run: poetry build
 
       - name: Publish distribution 📦 to PyPI
         uses: pypa/gh-action-pypi-publish@v1.5.0
