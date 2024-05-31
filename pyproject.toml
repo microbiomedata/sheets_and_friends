@@ -18,16 +18,15 @@ pygsheets = "^2.0.5"
 #schemasheets = "^0.1.21"
 ##schemasheets = { path = "/home/mark/gitrepos/schemasheets", develop = true }
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 autoflake = "^1.7.8"
 black = "^23.1.0"
 flake8 = "^4.0.1"
 mypy = "^0.961"
 linkml = "^1.4.0"
 
-
-[tool.poetry.group.dev.dependencies]
-#deptry = "^0.8.0"
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
