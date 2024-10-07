@@ -134,6 +134,15 @@ def replace_attribute_handler(schema_dict, base_path, target, value):
                     fiddled_value = False
                 else:
                     logger.warning(f"While setting ${full_target}, boolean value not recognized: {value}")
+            else:
+                # Attempt to preserve the original type of the value
+                try:
+                    fiddled_value = int(value)
+                except ValueError:
+                    try:
+                        fiddled_value = float(value)
+                    except ValueError:
+                        fiddled_value = value
             glom(schema_dict, Assign(full_target, fiddled_value))
         else:
             # If this is not the last element of the target path, we need to ensure that the
